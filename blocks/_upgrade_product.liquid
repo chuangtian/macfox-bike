@@ -1,0 +1,93 @@
+{% liquid
+  assign bk_stts = block.settings
+  assign product = bk_stts.product
+  assign product_meta = product.metafields.custom.info_citation.value
+
+  assign default_variant = product.selected_or_first_available_variant
+  assign default_image = default_variant.featured_image | default: product.featured_image
+
+  assign default_color = blank
+  if product.options_by_name.color != null
+    assign color_index = product.options_by_name.color.position | minus: 1
+    assign default_color = default_variant.options[color_index]
+  endif
+%}
+
+<a
+  class="cs-home-carousel-upgrade-box"
+  href="{{ product.url }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="relative flex flex-col items-start justify-end">
+    <h3 class="text-[#f2cb04]! text-[25px]! md:text-6xl! font-extrabold! italic!">
+      {{ product_meta.concise_name }}
+    </h3>
+    <img
+      class="carousel-upgrade-product-img relative z-10"
+      src="{{ default_image | image_url }}"
+      alt="{{ product_meta.concise_name | default: product.title }}"
+      width="{{ default_image.width }}"
+      height="{{ default_image.height }}"
+    >
+  </div>
+
+  {% if product != blank and product.options_by_name.color != null %}
+    <div class="carousel-upgrade-colors" data-block-id="{{ block.id }}">
+      {% for color in product.options_by_name.color.values %}
+        {% assign color_key = color | replace: ' ', '_' | downcase %}
+        {% assign color_value = product.metafields.custom.colors.value | map: color_key | first %}
+        {% assign option = 'option' | append: product.options_by_name.color.position %}
+        {% assign current_variant = product.variants | where: option, color | first %}
+        <div
+          class="carousel-upgrade-color-item {% if color == default_color %}active{% elsif default_color == blank and forloop.first %}active{% endif %}"
+          data-img="{{ current_variant.featured_image.src | image_url }}"
+          data-alt="{{ current_variant.featured_image.alt | default: product.title }}"
+          title="{{ color }}"
+        >
+          <div style="background-color: {{ color_value }};"></div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div
+    class="params-container flex items-center justify-center"
+    data-parameter="{{ bk_stts.parameter | escape }}"
+  ></div>
+
+  {% if section.settings.show_ul %}
+    <div class="ul-icon">
+      <img
+        class="w-full! h-auto!"
+        src="https://macfoxbike.com/cdn/shop/files/1_965d3f60-75cf-439d-9631-c8c9e5988b8d.png?v=1764828110"
+        alt="UL Certification"
+        width="200"
+        height="241"
+      >
+    </div>
+  {% endif %}
+</a>
+
+{% schema %}
+{
+  "name": "产品卡片",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "选择产品"
+    },
+    {
+      "type": "textarea",
+      "id": "parameter",
+      "label": "参数",
+      "default": "[{\"key\":\"Peak Power\",\"value\":\"750W\"},{\"key\":\"Max Range\",\"value\":\"76 MILES\"},{\"key\":\"TopSpeed\",\"value\":\"25 MPH\"}]"
+    }
+  ],
+  "presets": [
+    {
+      "name": "产品卡片"
+    }
+  ]
+}
+{% endschema %}

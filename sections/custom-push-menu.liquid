@@ -1,0 +1,171 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div
+  id="cs-push-menu"
+>
+  <div
+    class="cs-push-menu-wrapper"
+    style="background-color: {{ se_stts.bg_color }};"
+  >
+    <div
+      class="cs-push-menu-heading"
+      style="background-color: {{ se_stts.bg_color }};"
+    >
+      <p>{{ se_stts.title }}</p>
+      <div id="off-btn">{{ se_stts.close_icon }}</div>
+    </div>
+    <nav>
+      {% for bl in se_blocks %}
+        {% case bl.type %}
+          {% when 'base_item' %}
+            <a class="expand_item_btn" href="{{ bl.settings.lik }}">{{ bl.settings.title }}</a>
+          {% when 'expand_item' %}
+            <div class="expand_item {% if bl.settings.is_expand %}border-b! border-b-[#282828]! {% endif %}">
+              <a
+                class="expand_item_btn{% if bl.settings.is_expand %} bg-[#1e1e1e]! {% endif %}"
+                href="{% if bl.settings.lik != nil %}{{ bl.settings.lik }}{% else %} # {% endif %}"
+                onclick="return false;"
+                data-status="{% if bl.settings.is_expand %} 1 {% else %} 0 {% endif %}"
+              >
+                <span>
+                  {{ bl.settings.title }}
+                </span>
+                <div class="{% if bl.settings.is_expand %}rotate-0{% else %}rotate-180{% endif %} expand_icon">
+                  {{ se_stts.expand_icon }}
+                </div>
+              </a>
+              <ul class="{% if bl.settings.is_expand %} h-auto pb-[10px]! {% else %} h-0 {% endif %}">
+                {% for lik in bl.settings.liks.links %}
+                  <li>
+                    <a href="{{ lik.url }}">{{ lik.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% when 'custom_item' %}
+            <div class="custom_item">
+              <span>{{ bl.settings.title }}</span>
+              <div>{{ bl.settings.content }}</div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </nav>
+  </div>
+  <div id="curtain"></div>
+</div>
+
+<script type="module" src="{{ 'custom-push-menu.min.js' |  asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Custom Push Menu",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "html",
+      "id": "close_icon",
+      "label": "关闭按钮",
+      "default": "<svg width='100%' height='100%' viewBox='0 0 65 66' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M52.8 65.5H13.2C6.70002 65.5 1.40002 60.2 1.40002 53.7V13.2C1.40002 6.69999 6.70002 1.39999 13.2 1.39999H52.7C59.2 1.39999 64.5 6.69999 64.5 13.2V53.7C64.5 60.3 59.3 65.5 52.8 65.5Z' fill='#1E1E1E' stroke='#666666' stroke-width='0.9603' stroke-miterlimit='10'></path><path d='M21.7001 22L44.3001 45' stroke='#828282' stroke-width='3.8412' stroke-miterlimit='10'></path><path d='M44.3001 22L21.7001 45' stroke='#828282' stroke-width='3.8412' stroke-miterlimit='10'></path></svg>"
+    },
+    {
+      "type": "html",
+      "id": "expand_icon",
+      "label": "拓展元素图标",
+      "default": "<svg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M7.4 3.7C7.2 3.7 6.9 3.8 6.8 4L1.1 9.6C0.8 9.9 0.8 10.5 1.1 10.8C1.4 11.1 2 11.1 2.3 10.8L7.3 5.8L12.5 11C12.8 11.3 13.4 11.3 13.7 11C14 10.7 14 10.1 13.7 9.8L8 3.9C7.8 3.8 7.6 3.7 7.4 3.7Z' fill='white'/></svg>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "base_item",
+      "name": "Base Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "base item"
+        },
+        {
+          "type": "url",
+          "id": "lik",
+          "label": "链接"
+        }
+      ]
+    },
+    {
+      "type": "expand_item",
+      "name": "Expand Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "expand item"
+        },
+        {
+          "type": "url",
+          "id": "lik",
+          "label": "主链接"
+        },
+        {
+          "type": "link_list",
+          "id": "liks",
+          "label": "链接列表"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_expand",
+          "label": "是否默认展开",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "custom_item",
+      "name": "Custom Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Need help?"
+        },
+        {
+          "type": "html",
+          "id": "content",
+          "label": "内容"
+        }
+      ]
+    },
+    {
+      "type": "account",
+      "name": "Account",
+      "limit": 1
+    },
+    {
+      "type": "currency",
+      "name": "Currency",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Push Menu",
+      "category": "Custom Header"
+    }
+  ]
+}
+{% endschema %}

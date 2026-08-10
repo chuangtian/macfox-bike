@@ -1,0 +1,123 @@
+{%- if predictive_search.performed -%}
+  <div id="predictive-search-results">
+    {%- if predictive_search.resources.products.size > 0 -%}
+      <div class="search-list-prompt">
+        <h3 id="predictive-search-products" class="cs-search-item-title">Products</h3>
+        <ul class=" flex flex-col" role="listbox" aria-labelledby="predictive-search-products">
+          {%- for p in predictive_search.resources.products -%}
+            <li class="!py-4 {%  unless forloop.last %} !border-b-[#515151] !border-b-1 {% endunless %}" role="option">
+              <a class="flex w-full group" href="{{ p.url }}">
+                {% if p.variants.first.image != null %}
+                  <img
+                    class="w-[20%] h-auto rounded-sm"
+                    src="{{ p.variants.first.image.src |  image_url  }}"
+                    width="{{ p.variants.first.image.width }}"
+                    height="{{ p.variants.first.image.height }}"
+                    alt="{{ p.variants.first.image.alt }}"
+                  >
+                {% else %}
+                  <img
+                    class="w-[20%] h-auto rounded-sm"
+                    src="{{ p.featured_image |  image_url  }}"
+                    width="{{ p.featured_image.width }}"
+                    height="{{ p.featured_image.height }}"
+                    alt="{{ p.featured_image.alt }}"
+                  >
+                {% endif %}
+
+                <div class="flex flex-col !pl-[15px] md:!pl-6">
+                  <span class=" !text-[#eaeaea] !font-medium !text-[14px] md:!text-xl !leading-[1.4] group-hover:!text-[#f2cb04] group-active:!text-[#f2cb04] !mb-[5px] md:!mb-3 line-clamp-1">
+                    {{- p.title -}}
+                  </span>
+                  <div class="flex gap-x-4">
+                    <span class=" !text-[#eaeaea] !font-medium !text-[14px] md:!text-xl">
+                      {{- p.price | money_with_currency -}}
+                    </span>
+                    <span class=" !text-[#828282] !font-medium !text-[14px] md:!text-xl line-through">
+                      {{- p.compare_at_price | money_with_currency -}}
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+
+        {% if predictive_search.resources.collections.size > 0 %}
+        <div class="search-list-prompt">
+          <h3 id="predictive-search-collections" class="cs-search-item-title">Collections</h3>
+          <ul class="!pt-2" role="listbox" aria-labelledby="predictive-search-collections">
+            {%- for col in predictive_search.resources.collections -%}
+              <li class="!py-[8px] md:!py-3" role="option">
+                <a
+                  class=" !text-[#eaeaea] !font-medium !text-[14px] md:!text-xl !leading-[1.4] line-clamp-1 hover:!text-[#f2cb04] active:!text-[#f2cb04] group !underline flex items-center transition-all w-fit"
+                  href="{{ col.url }}"
+                >
+                  {{ col.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+    {% endif %}
+
+    {%- if predictive_search.resources.articles.size > 0 -%}
+      <div class="search-list-prompt">
+        <h3 id="predictive-search-articles" class="cs-search-item-title">Articles</h3>
+        <ul class=" flex flex-col" role="listbox" aria-labelledby="predictive-search-articles">
+          {%- for a in predictive_search.resources.articles -%}
+            <li class="!py-4" role="option">
+              <a class="flex w-full group" href="{{ a.url }}">
+                <img
+                  class="w-[20%] h-auto aspect-4/3 object-cover rounded-sm"
+                  src="{{ a.image.src |  image_url  }}"
+                  width="{{ a.image.width }}"
+                  height="{{ a.image.height }}"
+                  alt="{{ a.image.alt }}"
+                >
+                <div class="flex flex-col !pl-[15px] md:!pl-6">
+                  <span class="!text-[#eaeaea] !font-medium !text-[14px] md:!text-xl !leading-[1.4] group-hover:!text-[#f2cb04] group-active:!text-[#f2cb04] line-clamp-2">
+                    {{- a.title -}}
+                  </span>
+                </div>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+
+    {%- if predictive_search.resources.pages.size > 0 -%}
+      <div class="search-list-prompt">
+        <h3 id="predictive-search-pages" class="cs-search-item-title">Pages</h3>
+        <ul class="!pt-2" role="listbox" aria-labelledby="predictive-search-pages">
+          {%- for page in predictive_search.resources.pages -%}
+            <li class="!py-[8px] md:!py-3" role="option">
+              <a
+                class=" !text-[#eaeaea] !font-medium !text-[14px] md:!text-xl !leading-[1.4] line-clamp-1 hover:!text-[#f2cb04] active:!text-[#f2cb04] group !underline flex items-center transition-all w-fit"
+                href="{{ page.url }}"
+              >
+                <span class="!block h-[15px] md:h-5 w-fit !mr-[10px] md:!mr-3">
+                  <svg
+                    class="fill-white group-hover:fill-[#f2cb04] group-active:fill-[#f2cb04] h-full w-auto"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 163 163"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M43.8 87.5H93.8C97.3 87.5 100.1 84.7 100.1 81.2C100.1 77.7 97.3 75 93.8 75H43.8C40.3 75 37.5 77.8 37.5 81.3C37.5 84.8 40.2 87.5 43.8 87.5ZM137.5 0H25C11.3 0 0 11.3 0 25V137.5C0 151.3 11.3 162.5 25 162.5H137.5C151.3 162.5 162.5 151.2 162.5 137.5V25C162.5 11.3 151.3 0 137.5 0ZM150 137.5C150 144.4 144.4 150 137.5 150H25C18.1 150 12.5 144.4 12.5 137.5V25C12.5 18.1 18.1 12.5 25 12.5H137.5C144.4 12.5 150 18.1 150 25V137.5ZM118.8 37.5H43.8C40.3 37.5 37.5 40.2 37.5 43.8C37.5 47.4 40.2 50.1 43.8 50.1H118.8C122.3 50.1 125.1 47.4 125.1 43.8C125.1 40.2 122.3 37.5 118.8 37.5ZM106.3 112.5H43.8C40.3 112.5 37.5 115.3 37.5 118.8C37.5 122.3 40.2 125.1 43.8 125.1H106.3C109.8 125.1 112.6 122.3 112.6 118.8C112.5 115.3 109.8 112.5 106.3 112.5Z" />
+                  </svg>
+                </span>
+                {{ page.title }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+
+
+  </div>
+{%- endif -%}

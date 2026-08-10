@@ -1,0 +1,178 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-home-why-box flex justify-center !mx-auto relative items-center h-screen w-fit">
+  <div class="cs-home-why-title xl:size-[70vh] lg:size-[55vh] md:size-[60vw]  size-[85vw]  flex flex-col items-center justify-center rounded-full">
+    <h2 class="cs-home-why-title-h2 sm:!text-6xl !text-[26px] text-center !leading-[1.4] !font-bold relative z-[999999]">
+      {{ se_stts.title }}
+    </h2>
+  </div>
+  {% if se_stts.title != blank %}
+    {% for block in se_blocks %}
+      {% if block.type == 'item' %}
+        <div class="cs-home-why-item gradient-border absolute z-10  xl:w-[65%] lg:w-1/2 md:w-[30vw] w-[90vw]">
+          <div class="gradient-border-inner sm:!py-6 md:!py-6 md:!px-7 !py-[15px] !px-[15px] xs:h-36 md:h-52">
+            <div class="flex items-center md:!pb-5 pb-3">
+              <div class="svg-container md:!size-9 size-[18px] flex-shrink-0">{{ block.settings.icon_svg }}</div>
+              <h3 class="cs-home-why-item-title md:!pl-4 !pl-4 !text-[16px] sm:!text-3xl md:!text-2xl flex-1">
+                {{ block.settings.title }}
+              </h3>
+            </div>
+            <p
+              class="cs-home-why-item-content break-all  line-clamp-3 !text-[14px] sm:!text-2xl lg:!text-xl !m-0 !leading-[1.6] !wrap-break-word "
+              style="word-break: break-word;"
+            >
+              {{ block.settings.desc_content }}
+            </p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</div>
+
+<style>
+    .cs-home-why-section{
+      background-color: {{ se_stts.bg_color }};
+      padding:20px 0;
+    }
+    .pin-spacer{
+    background-color: {{ se_stts.bg_color }};
+  }
+    .cs-home-why-title,.cs-home-why-title>h2,.cs-home-why-item-title{
+      color: {{ se_stts.tt_color }};
+    }
+    .cs-home-why-title{
+      border: 1px solid {{ se_stts.border_color }};
+
+    }
+    .cs-home-why-item-content{
+      color: {{ se_stts.ct_color }};
+    }
+
+    .cs-home-why-item{
+      opacity: 0;
+    }
+
+    .gradient-border {
+    padding:2px; /* 边框宽度 */
+    border-radius: 12px; /* 圆角半径 */
+    background: linear-gradient(45deg, #e2be06 0%, #5e3eaf 100%);
+  }
+
+  .gradient-border-inner {
+    background: {{ se_stts.bg_color }}; /* 内部背景色，可自定义 */
+    border-radius: 12px; /* 比外层小一点，避免内容溢出 */
+  }
+
+  /* SVG容器样式 */
+  .svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .svg-container svg {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* 响应式SVG尺寸 */
+  @media (max-width: 767px) {
+    .svg-container {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .svg-container {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .svg-container {
+      width: 36px;
+      height: 36px;
+    }
+  }
+</style>
+<script type="module" src="{{ 'custom-home-why.min.js'| asset_url }}"></script>
+{% schema %}
+{
+  "name": "Why",
+  "tag": "section",
+  "class": "cs-home-why-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Why"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "圆框颜色",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "tt_color",
+      "label": "标题字体颜色（大标题和小标题）",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "ct_color",
+      "label": "内容字体颜色",
+      "default": "#bcb7b1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "内容区块",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "title"
+        },
+        {
+          "type": "text",
+          "id": "desc_content",
+          "label": "内容",
+          "default": "content"
+        },
+        {
+          "type": "html",
+          "id": "icon_svg",
+          "label": "图标(SVG)"
+        }
+      ],
+      "limit": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why",
+      "category": "Custom Home"
+    }
+  ]
+}
+{% endschema %}

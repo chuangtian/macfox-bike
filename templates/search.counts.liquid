@@ -1,0 +1,34 @@
+{% layout none %}
+
+{% if search.performed %}
+  {%- assign current_type = request.params.type | default: 'all' -%}
+
+  {%- paginate search.results by 25 -%}
+    { "query": {{ search.terms | json }}, "type": {{ current_type | json }}, "results_count":
+    {{ search.results_count }}, "page": {{ paginate.current_page }}, "page_size": {{ paginate.page_size }},
+    "page_count": {{ paginate.pages }}, "items": [
+    {%- for item in search.results -%}
+      {%- if forloop.index0 > 0 -%},{%- endif -%}
+      { "object_type": {{ item.object_type | json }}, "title":
+      {{ item.title | strip_html | strip_newlines | strip | json }}, "url": {{ item.url | split: '?' | first | json }}
+      {%- case item.object_type -%}
+        {%- when 'product' -%}
+          ,"featured_image": { "url":{{ item.featured_image | json }}, "width":{{ item.featured_image.width | json }},
+          "height":{{ item.featured_image.height | json }}
+          } ,"price":
+          {{ item.price | money_with_currency | json }} ,"compare_at_price":
+          {{ item.compare_at_price | money_with_currency | json }}
+        {%- when 'article' -%}
+          ,"featured_image": { "url":{{ item.image | json }}, "width":{{ item.image.width | json }}, "height":
+          {{- item.image.height | json }}
+          }
+      {%- endcase -%}
+      }
+    {%- endfor -%}
+    ] }
+  {%- endpaginate -%}
+
+{% else %}
+  { "query": null, "type": {{ request.params.type | default: 'all' | json }}, "results_count": 0, "page": 1,
+  "page_size": 0, "page_count": 0, "items": [] }
+{% endif %}

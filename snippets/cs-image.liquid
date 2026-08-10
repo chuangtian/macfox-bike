@@ -1,0 +1,48 @@
+{% comment %}
+  id: required!!!
+  className
+  PC Setting:
+    image_src
+    image_alt
+    mode: [full_width | full_height | cover]
+  Mobile Setting:
+    image_mb_src
+    image_mb_alt
+    mode_mb: [full_width | full_height | cover]
+{% endcomment %}
+
+{% if id != blank %}
+  <img class="cs-image {{ className }}" id="cs-image-{{ id }}" src="/" width="" height="" alt="">
+{% endif %}
+
+<script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      const isMobile = $(window).width() <= 768;
+      const domId = "cs-image-" + "{{ id }}";
+      const image_src = "{{ image_src | image_url }}";
+      const image_alt = "{{ image_alt }}";
+      let mode = "full_width";
+      {% if mode != blank %} mode = "{{ mode }}"; {% endif %}
+      {% if image_mb_src != blank %} const image_mb_src = "{{ image_mb_src | image_url }}";
+      {% else %} const image_mb_src = image_src;
+      {% endif %}
+      {% if image_mb_alt != blank %} const image_mb_alt = "{{ image_mb_alt }}";
+      {% else %} const image_mb_alt = image_alt;
+      {% endif %}
+      {% if mode_mb != blank %} const mode_mb = "{{ mode_mb }}";
+      {% else %} const mode_mb = mode;
+      {% endif %}
+      
+      if(!isMobile){
+        $(`#${domId}`).addClass(mode);
+        $(`#${domId}`).attr('src', image_src);
+        $(`#${domId}`).attr('alt', image_alt);
+      }else{
+        $(`#${domId}`).addClass(mode_mb);
+        $(`#${domId}`).attr('src', image_mb_src);
+        $(`#${domId}`).attr('alt', image_mb_alt);
+      }
+    })
+  })()
+</script>

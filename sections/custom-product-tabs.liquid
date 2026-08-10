@@ -1,0 +1,193 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="flex flex-col md:flex-row md:justify-between max-w-[1600px] w-full md:w-[90%] !mx-auto !pt-[40px] md:!pt-25 pb-[40px]! md:pb-25!">
+  <h2 class="w-full md:max-w-[45%] !text-white text-wrap !text-[26px] md:!text-6xl !mb-8 md:!mb-0 !leading-[1.3] md:sticky md:top-[120px] h-fit">
+    {{ se_stts.title }}
+  </h2>
+  <div class="w-full md:w-1/2 !space-y-3">
+    {%- for block in se_blocks -%}
+      {%- if block.type == 'tab-item' -%}
+        <div class="w-full h-auto !p-[2px] tab-item rounded-xl overflow-hidden {% if forloop.first %} bg-custom-gradient-120 {% else %} bg-[#4d4d4d] {% endif %}">
+          <div class="h-full w-full rounded-xl !px-[15px] md:!px-10" style="background-color: {{ se_stts.bg_color }}">
+            <div
+              class="tab-title cursor-pointer flex items-center justify-between !py-6 "
+              style="color: {{ block.settings.t_color }}"
+              onclick="tabShow(this)"
+              data-tab-show="{% if forloop.first %}true{% else %}false{% endif %}"
+            >
+              <div class="flex items-center">
+                {% if block.settings.t_icon != null and block.settings.t_icon != '' %}
+                  <div class="size-[24px] md:size-10">{{ block.settings.t_icon }}</div>
+                {% endif %}
+                <h3 class="{% if block.settings.t_icon != null and  block.settings.t_icon != ""%}!ml-4 {% endif %} !text-white !text-2xl">
+                  {{ block.settings.title }}
+                </h3>
+              </div>
+              <span class="text-white !text-4xl !pl-[10px] md:!pl-5">
+                {% if forloop.first %}
+                  -
+                {% else %}
+                  +
+                {% endif %}
+              </span>
+            </div>
+            <div class="tab-content {% if forloop.first %} max-h-[1000px] opacity-100 !pb-6{% else %} max-h-0 opacity-0 !pb-0{% endif %} overflow-hidden transition-all duration-200">
+              <div class="pt-4">
+                {{ block.settings.content }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+{%- assign faq_item_count = 0 -%}
+{%- for block in se_blocks -%}
+  {%- if block.type == 'tab-item' and block.settings.title != blank and block.settings.content != blank -%}
+    {%- assign faq_item_count = faq_item_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if faq_item_count > 0 and se_stts.title contains 'FAQ' -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- assign printed_count = 0 -%}
+        {%- for block in se_blocks -%}
+          {%- if block.type == 'tab-item' and block.settings.title != blank and block.settings.content != blank -%}
+            {%- assign printed_count = printed_count | plus: 1 -%}
+            {
+              "@type": "Question",
+              "name": {{ block.settings.title | strip_html | strip | json }},
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ block.settings.content | strip_html | strip_newlines | strip | json }}
+              }
+            }{%- if printed_count < faq_item_count -%},{%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
+<script>
+  const tabShow = (e) => {
+    const tabShow = e.getAttribute('data-tab-show');
+    const tabContent = e.parentElement.querySelector('.tab-content');
+    const tabItem = e.closest('.tab-item');
+    const tabTitle = e.parentElement.querySelector('.tab-title');
+
+    if (tabShow === 'true') {
+      // 关闭标签页
+      tabContent.classList.remove('max-h-[1000px]');
+      tabContent.classList.remove('opacity-100');
+      tabContent.classList.remove('!pb-6');
+      tabContent.classList.add('max-h-0');
+      tabContent.classList.add('opacity-0');
+      tabContent.classList.add('!pb-0');
+      tabItem.classList.remove('bg-custom-gradient-120');
+      tabItem.classList.add('bg-[#4d4d4d]');
+      tabTitle.querySelector('span').textContent = '+';
+      e.setAttribute('data-tab-show', 'false');
+    } else {
+      // 打开标签页
+      tabContent.classList.remove('max-h-0');
+      tabContent.classList.remove('opacity-0');
+      tabContent.classList.remove('!pb-0');
+      tabContent.classList.add('!pb-6');
+      tabContent.classList.add('max-h-[1000px]');
+      tabContent.classList.add('opacity-100');
+      tabItem.classList.remove('bg-[#4d4d4d]');
+      tabItem.classList.add('bg-custom-gradient-120');
+      tabTitle.querySelector('span').textContent = '-';
+      e.setAttribute('data-tab-show', 'true');
+    }
+  };
+</script>
+
+<style>
+  .cs-product-tabs-section {
+    background-color: {{ se_stts.bg_color }};
+    padding: 0;
+  }
+  .cs-product-tabs-section * {
+    margin: 0;
+  }
+
+  .cs-product-tabs-section .tab-item.show .tab-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: 769px){
+    .cs-product-tabs-section {
+      background-color: {{ se_stts.bg_color }};
+      padding: 0 20px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Tabs Box",
+  "tag": "section",
+  "class": "cs-product-tabs-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab-item",
+      "name": "Tab Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "html",
+          "id": "t_icon",
+          "label": "标题图标"
+        },
+        {
+          "type": "color",
+          "id": "t_color",
+          "label": "标题颜色",
+          "default": "#fff"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "内容"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab Item",
+      "category": "Custom Product"
+    }
+  ]
+}
+{% endschema %}

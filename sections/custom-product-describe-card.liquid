@@ -1,0 +1,229 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-product-describe-card-wrapper">
+  {%- comment -%} 移动端逻辑 {%- endcomment -%}
+  <div class="mobile-only">
+    {% for block in se_blocks %}
+      <div class="mobile-only-wrapper">
+        <div class="mobile-only-content">
+          <div class="mobile-only-heading">
+            <div class="cs-product-describe-card-item-content-text">
+              {{ block.settings.content }}
+            </div>
+            <p>
+              {{ block.settings.desc }}
+            </p>
+          </div>
+          <div class="mobile-only-img">
+            <img
+              src="{{ block.settings.image_mobile | image_url }}"
+              width="{{ block.settings.image_mobile.width }}"
+              height="{{ block.settings.image_mobile.height }}"
+              alt="{{ block.settings.content | strip_html }}"
+            >
+          </div>
+          <div class="mobile-only-svg">
+            {{ section.settings.point_svg }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {%- comment -%} 桌面端逻辑 {%- endcomment -%}
+  <div class="desktop-only cs-product-describe-card-container">
+    {% for block in se_blocks %}
+      {% if forloop.first %}
+        {%- comment -%} 第一个：文本卡片 {%- endcomment -%}
+        <div class="cs-product-describe-card-item">
+          <div class="cs-product-describe-card-item-wrapper">
+            <div class="cs-product-describe-card-item-text-bg">
+              <div class="cs-product-describe-card-item-content cs-product-describe-card-item-content-text">
+                {{ block.settings.content }}
+              </div>
+              <div class="cs-product-describe-card-item-desc">
+                <p>{{ block.settings.desc }}</p>
+              </div>
+              <div class="absolute bottom-0 w-full">
+                {{ se_stts.point_svg }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% elsif forloop.last %}
+        {%- comment -%} 最后一个：单图卡片 {%- endcomment -%}
+        {% assign is_even = se_blocks.size | modulo: 2 %}
+        {% if is_even == 1 %}
+          <div class="cs-product-describe-card-item">
+            <div class="cs-product-describe-card-item-wrapper">
+              <img
+                src="{{ block.settings.image | image_url }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.content | strip_html }}"
+              >
+            </div>
+          </div>
+        {% else %}
+          {% assign laste_index = forloop.index0 | minus: 1 %}
+          {% assign target = se_blocks[laste_index] %}
+          <div class="cs-product-describe-card-item">
+            <div class="cs-product-describe-card-item-wrapper">
+              <img
+                src="{{ target.settings.image | image_url }}"
+                width="{{ target.settings.image.width }}"
+                height="{{ target.settings.image.height }}"
+                alt="{{ target.settings.content | strip_html }}"
+              >
+              <img
+                src="{{ block.settings.image | image_url }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.content | strip_html }}"
+              >
+            </div>
+          </div>
+
+          <div class="cs-product-describe-card-item">
+            <div class="cs-product-describe-card-item-wrapper">
+              <div class="cs-product-describe-card-item-text-bg">
+                <div class="relative">
+                  <div class="cs-product-describe-card-item-text-group">
+                    <div class="cs-product-describe-card-item-content cs-product-describe-card-item-content-text">
+                      <div>{{ block.settings.content }}</div>
+                    </div>
+                    <div class="cs-product-describe-card-item-desc">
+                      <p>{{ block.settings.desc }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  {{ se_stts.point_svg }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% else %}
+        {% assign is_even = forloop.index0 | modulo: 2 %}
+        {%- comment -%} 中间部分：双图 + 双文本 {%- endcomment -%}
+        {% if is_even == 1 %}
+          {% assign laste_index = forloop.index0 | minus: 1 %}
+          {% assign target = se_blocks[laste_index] %}
+          {% assign next_index = forloop.index0 | plus: 1 %}
+          {% assign next_target = se_blocks[next_index] %}
+          <div class="cs-product-describe-card-item">
+            <div class="cs-product-describe-card-item-wrapper">
+              <img
+                src="{{ target.settings.image | image_url }}"
+                width="{{ target.settings.image.width }}"
+                height="{{ target.settings.image.height }}"
+                alt="{{ target.settings.content | strip_html }}"
+              >
+              <img
+                src="{{ block.settings.image | image_url }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.content | strip_html }}"
+              >
+            </div>
+          </div>
+
+          <div class="cs-product-describe-card-item">
+            <div class="cs-product-describe-card-item-wrapper">
+              <div class="cs-product-describe-card-item-text-bg">
+                <div class="relative">
+                  <div class="cs-product-describe-card-item-text-group">
+                    <div class="cs-product-describe-card-item-content cs-product-describe-card-item-content-text">
+                      <div>{{ block.settings.content }}</div>
+                    </div>
+                    <div class="cs-product-describe-card-item-desc">
+                      <p>{{ block.settings.desc }}</p>
+                    </div>
+                  </div>
+                  <div class="cs-product-describe-card-item-text-group">
+                    <div class="cs-product-describe-card-item-content cs-product-describe-card-item-content-text">
+                      <div>{{ next_target.settings.content }}</div>
+                    </div>
+                    <div class="cs-product-describe-card-item-desc">
+                      <p>{{ next_target.settings.desc }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  {{ se_stts.point_svg }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script type="module" src="{{"custom-product-describe-card.min.js" |  asset_url}}"></script>
+
+<style>
+  .cs-product-describe-card-section{
+    background-color: {{ se_stts.bg_color }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Describe Card",
+  "tag": "section",
+  "class": "cs-product-describe-card-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "html",
+      "id": "point_svg",
+      "label": "背景(SVG)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_describe_item",
+      "name": "Product Describe Item",
+      "settings": [
+        {
+          "type": "html",
+          "id": "content",
+          "label": "内容"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "补充说明"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片（PC端和平板端）"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "图片（移动端）"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Describe Card",
+      "category": "Custom Product"
+    }
+  ]
+}
+{% endschema %}

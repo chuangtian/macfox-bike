@@ -1,0 +1,177 @@
+{% liquid
+  assign se_stts = section.settings
+%}
+
+<div class="custom-home-carousel-video-wrapper">
+  <!-- 左侧信息区 -->
+  <div class="custom-home-carousel-video-info">
+    <h2>{{ se_stts.topic }}</h2>
+    <a
+      class="cs-home-carousel-video-btn"
+      href="https://www.youtube.com/@macfoxbike/shorts"
+    >
+      <div
+        class="carousel-video-btn-bg"
+        style="background-color: {{ se_stts.bg_color }};"
+      >
+        <div class="carousel-video-btn-topic cormorant-garamond-font">
+          {{ se_stts.btn_topic }}
+        </div>
+        <div class="carousel-video-btn-info">
+          <span>{{ se_stts.btn_title }}</span>
+          <div>
+            <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5 14.1L8 12.7L12.7 7.90001L8 3.10001L9.5 1.70001L15.5 7.90001L9.5 14.1Z" fill="white"/>
+              <path d="M14.1 6.80002H0.300049V8.80002H14.1V6.80002Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="carousel-video-handle-btn">
+      <button class="custom-home-carousel-video-arrow-prev" disabled  aria-label="View previous video">
+        {{ se_stts.arrow_left_icon }}
+      </button>
+      <button class="custom-home-carousel-video-arrow-next" aria-label="View next video">
+        {{ se_stts.arrow_right_icon }}
+      </button>
+    </div>
+  </div>
+
+  <!-- 右侧视频轮播区 -->
+  <div class="grow relative w-full overflow-x-visible md:overflow-x-hidden">
+    <div
+      class="custom-home-carousel-video-overflow block sm:hidden absolute z-5 w-[20px] -left-[20px] top-0 h-full "
+    ></div>
+    <div
+      class="cs-home-carousel-video-box flex gap-5 cursor-grab active:cursor-grabbing select-none"
+    >
+      {% for block in section.blocks %}
+        {% if block.type == 'video' and block.settings.video %}
+          <div class="cs-home-carousel-video-item relative shrink-0 grow-0 rounded-xl overflow-hidden w-[90.909%] lg:w-[45.454%] aspect-[9/16]">
+            <div
+              class="cs-home-carousel-video-item-btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] hover:bg-white/15 hover:border-white/30 hover:shadow-[0_12px_40px_0_rgba(31,38,135,0.45)] hover:scale-105 active:scale-95 active:shadow-[0_4px_16px_0_rgba(31,38,135,0.3)] group"
+              data-video-index="{{ forloop.index0 }}"
+            >
+              <div class="text-white/90 group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                {{ se_stts.play_icon }}
+              </div>
+            </div>
+            <div class="relative w-full h-full">
+              {% liquid
+                assign poster_image = block.settings.video.preview_image
+                assign poster_src = poster_image | image_url: width: 1600
+                assign video_alt = block.settings.video_alt | default: shop.name
+              %}
+
+              <video
+                class="size-full object-cover rounded-xl video-element"
+                loop="loop"
+                muted
+                preload="none"
+                poster="{{ poster_src }}"
+                aria-label="{{ video_alt | escape }}"
+              >
+                {%- for source in block.settings.video.sources -%}
+                  <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                {%- endfor -%}
+                <img
+                  src="{{ poster_src }}"
+                  alt="{{ video_alt | escape }}"
+                  class="size-full object-cover rounded-xl"
+                  width="{{ poster_image.width }}"
+                  height="{{ poster_image.height }}"
+                >
+              </video>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  /* 导入Cormorant Garamond字体 */
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+  .custom-home-carousel-video-section {
+    background-color: {{ se_stts.bg_color }};
+    height: auto;
+    padding: 0 20px;
+
+  }
+  .custom-home-carousel-video-overflow {
+    background-color: {{ se_stts.bg_color }};
+  }
+</style>
+
+<script type="module" src="{{ 'custom-home-carusel-video.min.js' |  asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Video",
+  "tag": "section",
+  "class": "custom-home-carousel-video-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "topic",
+      "label": "主题",
+      "default": "MACFOX Exciting Video Compilation"
+    },
+
+    {
+      "type": "html",
+      "id": "play_icon",
+      "label": "播放按钮图标"
+    },
+    {
+      "type": "text",
+      "id": "btn_title",
+      "label": "内容(按钮)",
+      "default": "Get the latest news"
+    },
+    {
+      "type": "text",
+      "id": "btn_topic",
+      "label": "标语(按钮)",
+      "default": "Follow our official Instagram"
+    },
+    {
+      "type": "html",
+      "id": "arrow_left_icon",
+      "label": "左箭头"
+    },
+    {
+      "type": "html",
+      "id": "arrow_right_icon",
+      "label": "右箭头"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "视频"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video (Carousel)",
+      "category": "Custom Home"
+    }
+  ]
+}
+{% endschema %}

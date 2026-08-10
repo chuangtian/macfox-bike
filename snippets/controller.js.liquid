@@ -1,0 +1,80 @@
+<script>
+  function test(val){
+    console.log(val)
+  }
+  
+  /* 防抖 */
+  function debounce(func, wait) {
+    let timeoutId;
+    return function (...args) {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        func.apply(this, args);
+      }, wait);
+    }
+  }
+
+  /* 修改路由参数（不新增历史记录） */
+  const appendQueryParameter = (key, value) => {
+    const href = window.location.href;
+    const startIndex = href.indexOf('?');
+    const rootUrl = startIndex > -1 ? href.slice(0, startIndex) : href;
+    let query = [];
+    if (startIndex > -1) {
+      query = href
+        .slice(startIndex + 1)
+        .split('&')
+        .filter(Boolean);
+    }
+    const keyIndex = query.findIndex((item) => item.startsWith(`${key}=`));
+    if (keyIndex > -1) {
+      query[keyIndex] = `${key}=${encodeURIComponent(value)}`;
+    } else {
+      query.push(`${key}=${encodeURIComponent(value)}`);
+    }
+    const newUrl = `${rootUrl}?${query.join('&')}`;
+    // 用 replaceState 替换当前地址，而不是 pushState
+    window.history.replaceState({}, '', newUrl);
+  };
+
+  /* 加入购物车 */
+  const handleCartAdd = async (productId, quantity) => {
+    // $('.all_add_cart').attr('disabled', true)
+    try {
+      const url = window.Shopify.routes.root + 'cart/add.js';
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        body: JSON.stringify({
+          id: productId,
+          quantity,
+        }),
+      };
+
+      const response = await fetch(url, options);
+      if (!response.ok) {
+        throw new Error(`Failed to update cart with status ${response.status}`);
+      }
+
+      const data = await response.json();
+      // $('.all_add_cart').attr('disabled', false)
+      if (!T4SThemeSP.cartTabActive) {
+        $('[data-is-tab-cart]').trigger('click');
+      }
+      T4SThemeSP.Drawer.opend($('#t4s-mini_cart'));
+      if (data.sections) {
+        T4SThemeSP.Cart.renderContents(data.sections);
+      } else {
+        T4SThemeSP.Cart.getToFetch();
+      }
+    } catch (error) {
+      console.error('Error updating the cart:', error)
+    }
+  };
+  const handleCartAddCon = debounce(handleCartAdd, 500);
+</script>

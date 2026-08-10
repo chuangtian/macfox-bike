@@ -1,0 +1,482 @@
+<!-- sections/footer1.liquid -->
+
+{%- liquid
+  assign se_blocks = section.blocks
+  assign se_stts = section.settings
+-%}
+
+{% for item in se_blocks %}
+  {% if item.type == 'email_subscription' %}
+    <div class="email-subcription !mx-auto max-w-[1600px] sm:!py-12 !py-14 sm:!px-[15px] flex">
+      <div class="flex flex-col items-center shrink-0 grow-0 !mx-auto sm:w-[70%] w-full">
+        <div class="!text-white !text-center text-wrap !text-[26px] md:!text-6xl leading-[1.3] !font-bold !my-[15px] md:!my-6">
+          {{ item.settings.title }}
+        </div>
+        <p class="!text-[14px] md:!text-3xl !leading-[1.5] !font-medium !text-center !text-[#a8a8a8] !mb-[30px] md:!mb-14">
+          {{ item.settings.subtitle }}
+        </p>
+        {% form 'customer' %}
+          <div class=" flex items-center !h-18 !border-1 !border-[#a3a3a3] rounded-xl overflow-hidden">
+            <input
+              type="email"
+              placeholder="{{ item.settings.email_placeholder }}"
+              class="w-full p-3 !text-[#a3a3a3] !font-medium h-full !border-none !text-[12px] md:!text-lg"
+              name="contact[email]"
+            >
+            <button
+              type="submit"
+              class="cs-email-subscription-btn !text-white w-fit h-full !px-6 md:!px-8 !py-3 !bg-transparent inline-block"
+              aria-label="Send Email"
+            >
+              <div class="h-full w-12 lg:w-16">
+                <svg width="100%" height="100%" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.9 40.6L40.7 0.600006L0.5 16.2L10.1 25.8L32.8 8.50001L15.6 31.2L24.9 40.6Z" fill="#F2CB04"/>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <!-- ✅ 成功/失败提示 -->
+          {% if form.posted_successfully? %}
+            <p class="text-green-500 mt-4 !text-sm sm:!text-2xl lg:!text-base ">Thank you for subscribing!</p>
+          {% elsif form.errors %}
+            <p class="text-red-500 mt-4 !text-sm sm:!text-2xl lg:!text-base ">
+              {{ form.errors.translated_fields.email | default: 'Please enter a valid email.' }}
+            </p>
+          {% endif %}
+        {% endform %}
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+<div class="social_media flex items-center md:justify-between justify-start max-w-[1600px] w-full md:w-[90%] !mx-auto !mb-[15px] md:!mb-10 md:!space-x-10 !space-x-5 !px-[20px] md:!px-[0px] !pt-10">
+  {%- for sm_item in se_blocks -%}
+    {%- if sm_item.type == 'social_media' -%}
+      <a
+        class=" block !text-white relative !p-[2px] sm:w-full rounded-lg overflow-hidden w-fit hover:-translate-y-1.5 transition-all duration-300"
+        href="{{ sm_item.settings["url"] }}"
+        title="{{ sm_item.settings["title"] }}"
+      >
+        <div
+          class="md:flex md:items-center md:justify-center md:w-full md:h-full  relative z-10 md:!py-4 md:!px-8 rounded-lg w-fit !p-4"
+          style="background-color: {{ se_stts.bg_color }};"
+        >
+          <div class="size-[20px] md:size-6 md:!mr-3">{{ sm_item.settings.icon }}</div>
+          <div class=" hidden md:block !text-2xl">
+            {{ sm_item.settings.title }}
+          </div>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full bg-custom-gradient-120 "></div>
+      </a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+<div class=" h-[1px] w-full bg-[#666666]"></div>
+<div class="flex max-w-[1600px] w-full md:w-[90%] !mx-auto !px-[20px] md:!px-[0px] flex-col sm:flex-row">
+  <div class="flex justify-between xl:!pr-20 sm:!pr-10 flex-1 !pt-[30px] md:!pt-15 !pb-[20px] md:!pb-20  flex-col sm:flex-row">
+    {%- for nm_item in se_blocks -%}
+      {%- if nm_item.type == 'navigation_menu' -%}
+        <div>
+          <div class="footer-handle-links !mb-[0px] md:!mb-10 flex justify-between items-center !text-[20px] md:!text-3xl !font-semibold text-white!">
+            {{ nm_item.settings.title }}
+            <span class="block sm:hidden !text-[24px]">+</span>
+          </div>
+          <div class=" flex flex-col !space-y-3 w-min !mb-[20px] md:!mb-[0] !mt-[10px] md:!mt-[0]">
+            {%- for item in nm_item.settings.menu.links -%}
+              <a
+                class="!text-[#d3d3d3] hover:!text-[#f2cb04] !text-nowrap !text-[14px] md:!text-lg !font-semibold"
+                href=" {{ item["url"] }} "
+              >
+                {{- item.title -}}
+              </a>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+  <div class=" !border-t-0 md:!border-l !border-[#666666]  md:!px-15 !pt-[15px] md:!pt-15 md:!pr-0 text-[#d3d3d3] flex flex-col justify-between !pb-10 sm:w-[35%] w-full">
+    {%- for item in se_blocks -%}
+      {%- if item.type == 'support' -%}
+        <div>
+          <div class="!mb-[10px] md:!mb-10 !text-[20px] md:!text-3xl !font-bold text-white!">{{ item.settings.title }}</div>
+          <div class="!space-y-3 !text-[#d3d3d3] !text-[14px] md:!text-lg !font-semibold">
+            <div class="!text-[#d3d3d3]">{{ item.settings.email }}</div>
+            <div class="!text-[#d3d3d3]">{{ item.settings.service_time }}</div>
+            <div class="!text-[#d3d3d3]">Tel: {{ item.settings.phone }}</div>
+            <div class="!text-[#d3d3d3]">{{ item.settings.name }}</div>
+            <div class="!text-[#d3d3d3]">{{ item.settings.address }}</div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if se_stts.show_trustpilot -%}
+      <a
+        class="cs-trustpilot"
+        href="{{ se_stts.trustpilot_url | default: '#' }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Trustpilot reviews"
+      >
+        <span class="cs-tp-label">Excellent</span>
+        <div class="cs-tp-stars">
+          {%- for i in (1..5) -%}
+            <span class="cs-tp-star">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="24" height="24" fill="#00b67a"></rect>
+                <path d="M12 15.9l3.7 2.6-1.4-4.3 3.7-2.6h-4.6L12 7.3l-1.4 4.3H6l3.7 2.6-1.4 4.3z" fill="#ffffff"></path>
+              </svg>
+            </span>
+          {%- endfor -%}
+        </div>
+        <div class="cs-tp-logo">
+          <svg class="cs-tp-logo-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.787 1.402 8.174L12 18.897l-7.336 3.869 1.402-8.174L.132 9.211l8.2-1.193z" fill="#00b67a"></path>
+          </svg>
+          <span class="cs-tp-logo-text">Trustpilot</span>
+        </div>
+      </a>
+    {%- endif -%}
+
+    <div class="!mt-10 sm:!mt-0">
+      {%- for item in se_blocks -%}
+        {%- if item.type == 'payment_methods' -%}
+          <div class="payment-methods grid grid-cols-5 w-fit !gap-1" data-payment='{{ item.settings["list"] }}'></div>
+        {%- endif -%}
+      {%- endfor -%}
+      <a
+        href="//www.dmca.com/Protection/Status.aspx?id=5f58e023-f362-49ac-bf0b-5a68bd8a7d66"
+        title="DMCA.com Protection Status"
+        class="dmca-badge"
+      >
+        <img
+          width="100"
+          height="20"
+          src="{{ "//images.dmca.com/Badges/dmca-badge-w100-5x1-08.png?ID=//www.dmca.com/Protection/Status.aspx?id=5f58e023-f362-49ac-bf0b-5a68bd8a7d66"  }}"
+          alt="DMCA.com Protection Status"
+      ></a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .footer-section {
+    background-color: {{ se_stts.bg_color }};
+  }
+
+  .footer-section a{
+    color:#d3d3d3 !important;
+  }
+  .footer-section h3{
+    margin-bottom: 10px;
+    color: white;
+  }
+  .email-subcription{
+     background-color: {{ se_stts.bg_color}};
+     height: auto;
+     padding: 0 20px;
+   }
+  .email-subcription #contact_form{
+   width: 100%;
+  }
+
+  .cs-trustpilot{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+  .cs-tp-label{
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-underline-offset: 3px;
+  }
+  .cs-trustpilot:hover .cs-tp-label{
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 640px){
+    .cs-trustpilot{
+      margin-top: 0px;
+      margin-bottom: 4px;
+    }
+    .cs-tp-star{
+      width: 22px;
+      height: 22px;
+    }
+    .cs-tp-label{
+      font-size: 15px;
+    }
+    .cs-tp-logo-star{
+      width: 22px;
+      height: 22px;
+    }
+    .cs-tp-logo-text{
+      font-size: 17px;
+    }
+  }
+  .cs-tp-stars{
+    display: flex;
+    gap: 3px;
+  }
+  .cs-tp-star{
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  .cs-tp-star svg{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .cs-tp-logo{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cs-tp-logo-star{
+    width: 20px;
+    height: 20px;
+  }
+  .cs-tp-logo-text{
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+</style>
+
+{%- schema -%}
+{
+  "name": "Footer",
+  "tag": "section",
+  "class": "footer-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Trustpilot"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trustpilot",
+      "label": "显示 Trustpilot",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "trustpilot_url",
+      "label": "Trustpilot 跳转链接",
+      "visible_if": "{{ section.settings.show_trustpilot }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "social_media",
+      "name": "社交媒体",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "社交平台",
+          "default": "INSTAGRAM"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "链接",
+          "default": "https://www.instagram.com/macfoxbike/"
+        },
+        {
+          "type": "html",
+          "id": "icon",
+          "label": "图标"
+        }
+      ]
+    },
+    {
+      "type": "navigation_menu",
+      "name": "导航菜单",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "模块名称",
+          "default": "CUSTOM MENU"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "选择菜单"
+        }
+      ]
+    },
+    {
+      "type": "support",
+      "name": "客服支持",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "模块名称",
+          "default": "SUPPORT"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "label": "电子邮箱",
+          "default": "customer@macfoxbike.com"
+        },
+        {
+          "type": "text",
+          "id": "service_time",
+          "label": "服务时间",
+          "default": "Monday to Friday, 8.30AM - 12PM, 1PM - 5PM(PST)"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "电话号码",
+          "default": "9496176785"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "商店名称",
+          "default": "Macfoxebike"
+        },
+        {
+          "type": "text",
+          "id": "address",
+          "label": "商店地址",
+          "default": "9496176785"
+        }
+      ]
+    },
+    {
+      "type": "payment_methods",
+      "name": "支付方式",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "list",
+          "label": "支付方式",
+          "default": "[\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/26628.svg\"]"
+        }
+      ]
+    },
+    {
+      "type": "email_subscription",
+      "name": "邮箱订阅",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "NO LIMITS. JUST RIDE."
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "副标题",
+          "default": "Stay in the loop — get our latest news and event updates."
+        },
+        {
+          "type": "text",
+          "id": "email_placeholder",
+          "label": "邮箱输入框占位符",
+          "default": "Enter Your Email"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "背景颜色",
+          "default": "#000000"
+        }
+      ]
+    }
+  ]
+}
+{%- endschema -%}
+
+<script src="{{'DMCABadgeHelper.min.js'  |  asset_url }}" defer></script>
+<script>
+  (function () {
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.payment-methods');
+
+      if (container) {
+        try {
+          const paymentList = JSON.parse(container.dataset.payment);
+          paymentList.forEach((method) => {
+            const item = document.createElement('div');
+            item.className = 'w-10';
+            item.innerHTML = `
+              <img width="100%" height="100%" src="${method}" alt="loading">
+            `;
+            container.appendChild(item);
+          });
+        } catch (e) {
+          console.error('Invalid payment method data:', e);
+        }
+      }
+    });
+    // 只在移动端生效
+    function isMobile() {
+      return window.innerWidth <= 640;
+    }
+    document.querySelectorAll('.footer-handle-links').forEach(function (h3) {
+      // 只处理有 "+" 的导航菜单
+      if (!h3.querySelector('span')) return;
+      const content = h3.nextElementSibling;
+      const toggleSpan = h3.querySelector('span');
+      if (!content) return;
+      // 默认收起
+      if (isMobile()) {
+        content.style.maxHeight = '0px';
+        content.style.overflow = 'hidden';
+        content.style.transition = 'max-height 0.3s cubic-bezier(0.4,0,0.2,1)';
+        toggleSpan.textContent = '+';
+      }
+      h3.addEventListener('click', function () {
+        if (!isMobile()) return;
+        if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          toggleSpan.textContent = '-';
+        } else {
+          content.style.maxHeight = '0px';
+          toggleSpan.textContent = '+';
+        }
+      });
+    });
+    // 响应式处理
+    window.addEventListener('resize', function () {
+      document.querySelectorAll('.footer-handle-links').forEach(function (h3) {
+        const content = h3.nextElementSibling;
+        const toggleSpan = h3.querySelector('span');
+        if (!content) return;
+        if (isMobile()) {
+          content.style.maxHeight = '0px';
+          content.style.overflow = 'hidden';
+          content.style.transition = 'max-height 0.3s cubic-bezier(0.4,0,0.2,1)';
+          if (toggleSpan) toggleSpan.textContent = '+';
+        } else {
+          content.style.maxHeight = '';
+          content.style.overflow = '';
+          content.style.transition = '';
+          if (toggleSpan) toggleSpan.textContent = '+';
+        }
+      });
+    });
+  })();
+</script>

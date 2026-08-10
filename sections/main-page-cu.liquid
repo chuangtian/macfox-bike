@@ -1,0 +1,15 @@
+<div class="container"> 
+  <h1 style="display:none;">{{ page.title }}</h1>
+</div>
+
+{%- if template == 'page.article-review' -%}  
+{%- style -%}
+  #nt_content {background: #ebeef1;}
+{%- endstyle -%}
+{%- endif -%}
+
+{%- schema -%}
+{
+  "name": "Page"
+}
+{% endschema %}

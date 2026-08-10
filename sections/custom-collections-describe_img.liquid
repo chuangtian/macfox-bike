@@ -1,0 +1,87 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<!-- 1. 在最外层容器添加 flex 和 gap，确保不同区块之间有足够的间距 (gap-10) -->
+<div class="--describe-wrapper flex flex-col gap-10 md:gap-16">
+  {%- for block in se_blocks -%}
+    <!-- 2. 统一移动端布局：默认 flex-col-reverse (图在上，文在下)。
+         PC端：默认 md:flex-row (文左图右)，如果是 ltr 则 md:flex-row-reverse (图左文右) -->
+    <div class="--distributor-item flex flex-col-reverse md:flex-row {% if block.settings.position == 'ltr' %} md:flex-row-reverse {% endif %} gap-6 md:gap-0 items-center">
+      
+      <!-- 添加了 w-full md:w-1/2 控制宽度占比，防止被挤压 -->
+      <div class="info w-full md:w-1/2 {% if block.settings.position == 'ltr' %} md:pl-35! {% else %} md:pr-35! {% endif %}">
+        <h2 class="--item-title">{{ block.settings.title }}</h2>
+        <div class="--item-content">{{ block.settings.content }}</div>
+      </div>
+
+      <!-- 添加了 w-full md:w-1/2 -->
+      <picture class="cover w-full md:w-1/2">
+        <source srcset="{{ block.settings.img.src | image_url: width: 400 }} 400w, {{ block.settings.img.src | image_url: width: 500 }} 600w, {{ block.settings.img.src | image_url: width: 600 }} 768w, " media="(max-width: 768px)">
+        <source srcset="{{ block.settings.img.src | image_url: width: 700 }} 900w, {{ block.settings.img.src | image_url: width: 700 }} 1200w, {{ block.settings.img.src | image_url: width: 800 }} 1600w, {{ block.settings.img.src | image_url: width: 900 }} 1920w" media="(min-width: 769px)">
+        <!-- 3. 删除了原来 hack 的 mb-[20px]!，让父级的 gap-6 来自动处理图文间距 -->
+        <img
+          class="w-full h-auto object-cover block"
+          src="{{ block.settings.img.src |  image_url: width: 700 }}"
+          width="{{ block.settings.img.width }}"
+          height="{{ block.settings.img.height }}"
+          alt="{{ block.settings.img.alt }}">
+      </picture>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Distributor Img",
+    "tag": "section",
+    "class": "cs-collections-describe_img",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "dealer",
+        "name": "Dealer Info",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "default": "Title",
+            "label": "名称"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "内容"
+          },
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "配图"
+          }, {
+            "type": "select",
+            "id": "position",
+            "label": "位置",
+            "options": [
+              {
+                "label": "左图右文",
+                "value": "ltr"
+              }, {
+                "label": "左文右图",
+                "value": "rtl"
+              }
+            ],
+            "default": "rtl"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Distributor Img",
+        "category": "Custom Collection"
+      }
+    ]
+  }
+{% endschema %}

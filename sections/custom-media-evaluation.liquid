@@ -1,0 +1,108 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'custom-media-evaluation.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+
+  assign t4s_se_class = 't4s_nt_se_' | append: sid
+  if se_stts.use_cus_css and se_stts.code_cus_css != blank
+    render 'se_cus_css', code_cus_css: se_stts.code_cus_css, t4s_se_class: t4s_se_class
+  endif
+-%}
+
+<div class="cs-social-evaluation">
+  <div class="socail-evaluation-title">{{ se_stts.me_title }}</div>
+  <div class="socail-evaluation-con">
+    <div class="socail-evaluation-list">
+      <div class="swiper socail-list-swiper">
+        <div class="swiper-wrapper">
+          {% for block in se_blocks %}
+            {% assign bk_stts = block.settings %}
+            <div class="swiper-slide">
+              <img
+                class="socail-item-img"
+                src="{{bk_stts.me_img |  image_url }}"
+                alt=""
+              >
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="social-evaluation-next">
+      <img src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/19.svg?v=1715248117" loading="lazy" alt="">
+    </div>
+    <div class="socail-evaluation-dom">
+      <div class="swiper socail-dom-swiper">
+        <div class="swiper-wrapper">
+          {% for block in se_blocks %}
+            {% assign bk_stts = block.settings %}
+            <div class="swiper-slide">
+              <div class="slide-evaluation-item">
+                {{ bk_stts.me_text }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="socail-evaluation-mark"></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Media Evaluation",
+  "settings": [
+    {
+      "type": "text",
+      "id": "me_title",
+      "label": "Title",
+      "default": "Featured in"
+    },
+    {
+      "id": "use_cus_css",
+      "type": "checkbox",
+      "label": "Use custom css",
+      "default": false,
+      "info": "If you want custom style for this section."
+    },
+    {
+      "id": "code_cus_css",
+      "type": "textarea",
+      "label": "Code custom css",
+      "info": "Use selector .SectionID to style css"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Media Evaluation",
+      "settings": [
+        {
+          "type": "text",
+          "id": "me_text",
+          "label": "Evaluation"
+        },
+        {
+          "type": "image_picker",
+          "id": "me_img",
+          "label": "Media logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom media evaluation",
+      "blocks": [
+        {
+          "type": "media"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

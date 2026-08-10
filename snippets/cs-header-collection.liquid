@@ -1,0 +1,118 @@
+{%- assign total = cs_col.size -%}
+
+<div class="cs-header-col-wrapper" data-total="{{ total }}">
+  {% if total > 2 and arrow_left_icon != null and arrow_left_icon != '' %}
+    <button class="embla__button embla__button--prev" type="button">
+      {{ arrow_left_icon }}
+    </button>
+  {% endif %}
+  {% comment %} {{ collections[cs_col.handle] |  json }} {% endcomment %}
+  <div class="embla__stage">
+  <div class="embla__viewport ">
+    <div class="embla__container{% if total<=1 %} justify-center {% endif %}">
+      {% for p in cs_col %}
+        {% assign p_info = p.metafields.custom.info_citation.value %}
+        <div class="cs-header-col-item embla__slide">
+          <a href="{{ p.url }}">
+            <div class="cs-header-col-featured_image">
+              {% if p.variants.first.featured_image != null %}
+                <img
+                  src="{{ p.variants.first.image.src | image_url: width:300 }}"
+                  width="{{ p.variants.first.image.width }}"
+                  height="{{ p.variants.first.image.height }}"
+                  alt="{{ p.variants.first.image.alt | default: item.settings.title }}"
+                >
+              {% else %}
+                <img
+                  src="{{ p.featured_image | image_url: width:300 }}"
+                  width="{{ p.featured_image.width }}"
+                  height="{{ p.featured_image.height }}"
+                  alt="{{ p.title }}"
+                >
+              {% endif %}
+            </div>
+            <div class="cs-header-col-info">
+              {% if p_info.label != null %}
+                <div class="info-label">
+                  {{- p_info.label -}}
+                </div>
+              {% endif %}
+
+              {% assign recommended_heights = '' %}
+              {% for i in p_info.specs.value.data %}
+                {% if i.name contains 'Recommended Rider Height' %}
+                  {% assign recommended_heights = recommended_heights | append: i.value | append: '&' %}
+                {% endif %}
+              {% endfor %}
+              {% assign recommended_heights = recommended_heights | remove_last: '&' | split: '&' %}
+
+              <div class="cs-header-col-concise">
+                {% if p_info.concise_name != null %}
+                  <span class="cs-header-col-concise_name">{{ p_info.concise_name }}</span>
+                {% else %}
+                  <span class="cs-header-col-concise_name">{{ p.title }}</span>
+                {% endif %}
+
+                <div class="cs-header-col-concise_tag">
+                  {% for tag in recommended_heights %}
+                    <div>
+                      {{- tag -}}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div
+                class="loox-rating"
+                data-id="{{ p.id }}"
+                data-rating="{{ p.metafields.loox.avg_rating }}"
+                data-raters="{{ p.metafields.loox.num_reviews }}"
+                data-color-text="#f2cb04"
+                data-color-star="#f2cb04"
+              ></div>
+              <div class="cs-collections-price">
+                From
+                {% if p.price_varies and p.price != p.compare_at_price %}
+                  <span class="cs-header-price">{{ p.price | money_with_currency }}</span>
+                  <span>
+                    {{- p.compare_at_price | money_with_currency -}}
+                  </span>
+                {% else %}
+                  <span class="cs-header-price">{{ p.price | money_with_currency }}</span>
+                {% endif %}
+              </div>
+              {% if p.options_by_name.color != null %}
+                <div class="colors-wrapper">
+                  {% for color in p.options_by_name.color.values %}
+                    {% assign color_key = color | replace: ' ', '_' | downcase %}
+                    {% assign color_value = p.metafields.custom.colors.value | map: color_key | first %}
+                    {% assign option = 'option' | append: p.options_by_name.color.position %}
+                    {% assign current_variant = p.variants | where: option, color | first %}
+                    <div
+                      class="colors-item {% if forloop.first %} active {% endif %}"
+                      data-img="{{ current_variant.featured_image.src | image_url }}"
+                      data-alt="{{ current_variant.featured_image.alt | default: p.title }}"
+                    >
+                      <div
+                        style="background-color: {{ color_value }};"
+                      ></div>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+    <div class="embla__dots{% if total <= 2 %} invisible{% endif %}"></div>
+  </div>
+  {%- if arrow_right_icon != null and arrow_right_icon != '' -%}
+    <button class="embla__button embla__button--next{% if total <= 2 %} invisible{% endif %}" type="button">
+      {{ arrow_right_icon }}
+    </button>
+  {%- endif -%}
+</div>
+
+<script type="module" src="{{ 'cs-header-collection.min.js' |  asset_url }}"></script>

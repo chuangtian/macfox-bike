@@ -1,0 +1,113 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<style>
+  .cs-gallery {
+    margin: 3vw auto;
+    width: 94vw;
+    overflow: hidden;
+  }
+  .cs-gallery-container {
+    column-count: 3;
+    column-gap: 2vw;
+  }
+  .cs-gallery-item {
+    display: block;
+    margin-bottom: 2vw;
+    break-inside: avoid;
+  }
+  .cs-gallery-item picture {
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--aspect-ratio);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .cs-gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1;
+    transition: scale .5s ease;
+    cursor: pointer;
+  }
+  .cs-gallery-item img:hover {
+    scale: 1.2;
+  }
+  @media screen and (max-width: 768px) {
+    .cs-gallery {
+      margin: 20px auto;
+      width: calc(100% - 40px);
+    }
+    .cs-gallery-container {
+      column-count: 2;
+      column-gap: 10px;
+    }
+    .cs-gallery-item {
+      margin-bottom: 10px;
+    }
+    .cs-gallery-item picture {
+      aspect-ratio: var(--aspect-ratio-mb);
+    }
+  }
+</style>
+
+<div class="cs-gallery">
+  <div class="cs-gallery-container">
+    {%- for block in se_blocks  -%}
+      {%- assign img_pc = block.settings.img_pc -%}
+      {%- assign img_mb = block.settings.img_mb | default: img_pc -%}
+      {%- if img_pc != blank -%}
+        <div class="cs-gallery-item" 
+          style="--aspect-ratio:{{ img_pc.aspect_ratio }};--aspect-ratio-mb:{{ img_mb.aspect_ratio }};"
+        >
+          <picture>
+            <source srcset="{{ img_mb | image_url: width: 400 }} 768w, "media="(max-width: 768px)">
+            <img
+              src="{{ img_pc | image_url: width: 800 }}"
+              alt="{{ img_pc.alt | escape }}"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom Gallery",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "image_item",
+        "name": "Image Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img_pc",
+            "label": "Image(PC)"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_mb",
+            "label": "Image(Mobile)",
+            "info": "alt不能响应式，默认取的是pc端图片的alt内容"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "Custom Gallery"
+        }
+    ]
+  }
+{% endschema %}

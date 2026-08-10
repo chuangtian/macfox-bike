@@ -1,0 +1,151 @@
+{% liquid
+  assign se_stts = section.settings
+  assign product_meta = product.metafields.custom.info_citation.value
+  assign user_manual = product_meta.user_manual.value
+  assign manual_count = user_manual | size
+%}
+
+<div class="cs-product-parameter-wrapper">
+  <h2>{{ product_meta.specs_title | upcase }}</h2>
+  <div class="cs-product-parameter-content">
+    <div class="cs-product-parameter-box">
+      <div class="cs-product-parameter-list">
+        {% for item in product_meta.specs.value.data %}
+          <div class="cs-product-parameter-item">
+            <h3 class="cs-product-parameter-item-title">
+              {{ item.name }}
+            </h3>
+            <span class="cs-product-parameter-item-content">
+              {{ item.value }}
+            </span>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="cs-product-parameter-btn">
+        <button class="cs-product-parameter-btn-add all_add_cart">Add To Cart</button>
+
+        {% if manual_count == 1 %}
+          <a class="cs-product-parameter-btn-manual" href="{{ user_manual[0].url }}" target="_blank">View Manual</a>
+        {% elsif manual_count > 1 %}
+          <a class="cs-product-parameter-btn-manual" href="javascript:void(0)" id="cs-manual-modal-trigger">View Manual</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="cs-product-parameter-img">
+      <img src="{{ product_meta.vehicle_size_img }}" alt="{{ product_meta.concise_name }}" width="100%" height="100%">
+    </div>
+  </div>
+</div>
+
+{% if manual_count > 1 %}
+  <!-- Manual Selection Modal -->
+  <div class="cs-manual-modal-overlay" id="cs-manual-modal-overlay">
+    <div class="cs-manual-modal">
+      <div class="cs-manual-modal-header">
+        <p class="cs-manual-modal-title">Select Model</p>
+        <button class="cs-manual-modal-close" id="cs-manual-modal-close" type="button" aria-label="Close">
+          <svg width="100%" height="100%" viewBox="0 0 65 66" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M52.8 65.5H13.2C6.70002 65.5 1.40002 60.2 1.40002 53.7V13.2C1.40002 6.69999 6.70002 1.39999 13.2 1.39999H52.7C59.2 1.39999 64.5 6.69999 64.5 13.2V53.7C64.5 60.3 59.3 65.5 52.8 65.5Z" fill="#1E1E1E" stroke="#666666" stroke-width="0.9603" stroke-miterlimit="10"></path><path d="M21.7001 22L44.3001 45" stroke="#828282" stroke-width="3.8412" stroke-miterlimit="10"></path><path d="M44.3001 22L21.7001 45" stroke="#828282" stroke-width="3.8412" stroke-miterlimit="10"></path></svg>
+        </button>
+      </div>
+      <div class="cs-manual-modal-list">
+        {% for item in user_manual %}
+          <div class="cs-manual-modal-item">
+            <span class="cs-manual-modal-item-name">{{ item.text }}</span>
+            <a class="cs-manual-modal-item-btn" href="{{ item.url }}" target="_blank">View</a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  .cs-product-parameter-section {
+    background-color: {{ se_stts.bg_color }};
+    padding: 100px 0;
+  }
+  .cs-product-parameter-section * {
+    margin: 0;
+  }
+  /* Modal overrides to prevent section styles from interfering */
+  .cs-manual-modal-overlay * {
+    margin: 0;
+  }
+  @media screen and (max-width: 769px){
+    .cs-product-parameter-section {
+      background-color: {{ se_stts.bg_color }};
+      padding: 60px 20px 50px;
+    }
+  }
+</style>
+
+<script>
+  const imgContainer = document.querySelector('.cs-product-parameter-img');
+  const boxContainer = document.querySelector('.cs-product-parameter-box');
+
+  function setImageHeight() {
+    if (boxContainer && imgContainer) {
+      const boxHeight = boxContainer.offsetHeight;
+      imgContainer.style.maxHeight = boxHeight + 'px';
+    }
+  }
+
+  // 页面加载完成后设置高度
+  window.addEventListener('load', setImageHeight);
+
+  // 窗口大小改变时重新设置高度
+  window.addEventListener('resize', setImageHeight);
+
+  // Manual Modal Logic
+  const modalTrigger = document.getElementById('cs-manual-modal-trigger');
+  const modalOverlay = document.getElementById('cs-manual-modal-overlay');
+  const modalClose = document.getElementById('cs-manual-modal-close');
+
+  if (modalTrigger && modalOverlay) {
+    modalTrigger.addEventListener('click', () => {
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    modalClose.addEventListener('click', () => {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Product Parameter",
+  "tag": "section",
+  "class": "cs-product-parameter-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "blur_color",
+      "label": "模糊背景颜色",
+      "default": "#000000"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Parameter",
+      "category": "Custom Product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,36 @@
+<script src="{{ 'MotionPathPlugin.min.js' | asset_url }}"></script>
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+
+{% render 'controller.js' %}
+
+<script type="module" src="{{ 'home.min.js' | asset_url }}"></script>
+
+{% if template contains 'product' %}
+  <script type="module" src="{{ 'home-product.min.js' | asset_url }}"></script>
+  {% if template contains '2' %}
+    <script>
+      <script type="module" src="{{ 'home-product-2.min.js' | asset_url }}"></script>;
+    </script>
+  {% endif %}
+{% endif %}
+
+{% if template == 'article' %}
+  <script type="module" src="{{ 'home-article.min.js' | asset_url }}"></script>
+{% endif %}
+
+{% if template contains 'blog' %}
+  <script type="module" src="{{ 'home-blog.min.js' | asset_url }}"></script>
+{% endif %}
+
+{% if template == 'index' %}
+  <script type="module" src="{{ 'home-index.min.js' | asset_url }}"></script>
+{% endif %}
+
+{% if template contains 'page' %}
+  <script>
+    $('.faq-item-title').on('click', function () {
+      $(this).parent().toggleClass('page-item-active');
+    });
+  </script>
+{% endif %}

@@ -1,0 +1,152 @@
+{% liquid
+  assign se_stts = section.settings
+%}
+
+<div
+  id="cs-home-carousel-upgrade"
+  class="cs-home-carousel-upgrade-section"
+  data-mobile-display="{{ se_stts.mobile_display | default: 'tabs' }}"
+>
+  <div class="home-carousel-upgrade-curtain" style="background-color: {{ se_stts.bg_color }};"></div>
+  <h2>
+    {{ se_stts.topic }}
+  </h2>
+
+  <!-- Tabs（由 JS 根据各分类面板动态生成） -->
+  <div class="cs-carousel-upgrade-tabs"></div>
+
+  <!-- 产品面板 -->
+  <div class="cs-home-carousel-upgrade-panels flex flex-col">
+    {% content_for "blocks" %}
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} {
+    background-color: {{ se_stts.bg_color }};
+    height: auto;
+    overflow: visible;
+  }
+
+  @media (max-width: 767px) {
+    .cs-home-carousel-upgrade-section {
+      overflow: hidden;
+    }
+  }
+
+  /* 颜色选项样式 */
+  .carousel-upgrade-colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 0 10px 0;
+  }
+
+  .carousel-upgrade-color-item {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 2px;
+    transition: border-color 0.2s ease;
+  }
+
+  .carousel-upgrade-color-item.active {
+    border-color: #784de9;
+  }
+
+  .carousel-upgrade-color-item > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-upgrade-color-item {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .carousel-upgrade-color-item > div {
+      border-radius: 6px;
+    }
+  }
+
+  /* Panel 显示/隐藏 */
+  .cs-home-carousel-upgrade-panel {
+    display: none;
+  }
+  .cs-home-carousel-upgrade-panel.active {
+    display: block;
+  }
+</style>
+
+<script type="module" src="{{ 'custom-home-carousel-upgrade.min.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Products Upgrade List",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "text",
+      "id": "topic",
+      "label": "主题",
+      "default": "The Most Popular Products"
+    },
+    {
+      "type": "select",
+      "id": "mobile_display",
+      "label": "移动端展示方式",
+      "info": "仅影响移动端。PC端始终为标签切换。",
+      "options": [
+        {
+          "value": "tabs",
+          "label": "标签切换轮播（当前）"
+        },
+        {
+          "value": "list",
+          "label": "普通排序（分类平铺，各自轮播）"
+        }
+      ],
+      "default": "tabs"
+    },
+    {
+      "type": "html",
+      "id": "arrow_left_icon",
+      "label": "左箭头"
+    },
+    {
+      "type": "html",
+      "id": "arrow_right_icon",
+      "label": "右箭头"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_ul",
+      "label": "UL认证展示",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_upgrade_group"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products Upgrade List",
+      "category": "Custom Home"
+    }
+  ]
+}
+{% endschema %}

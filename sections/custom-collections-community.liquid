@@ -1,0 +1,139 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="custom-collections-community-wrapper">
+  <h2>
+    {{ se_stts.title }}
+  </h2>
+
+  <div class="carousel-view">
+    <div class="carousel-viewport">
+      <div>
+        {% for item in se_blocks %}
+          {% assign i_se = item.settings %}
+          {% case item.type %}
+            {% when 'comment_card' %}
+              <div class="cs-collection-comment">
+                <img
+                  width="{{ i_se.img.width }}"
+                  height="{{ i_se.img.height }}"
+                  src="{{ i_se.img |  image_url: width:400  }}"
+                  alt="comment img is loading"
+                  loading="lazy"
+                >
+                <div class="cs-collection-comment-content">
+                  <p>
+                    {{ i_se.comment }}
+                  </p>
+                </div>
+                <div class="cs-collection-comment-rating">
+                  <div
+                    class="loox-rating "
+                    data-rating="5"
+                    data-color-text="#f2cb04"
+                    data-color-star="#f2cb04"
+                  ></div>
+                  <span>-{{ i_se.name }}</span>
+                </div>
+                <div class="cs-collection-comment-product">
+                  <img
+                    width="{{ i_se.product.variants.first.featured_image.width }}"
+                    height="{{ i_se.product.variants.first.featured_image.height }}"
+                    src="{{ i_se.product.variants.first.featured_image.src |  image_url: width:100  }}"
+                    alt="{{ i_se.product.variants.first.featured_image.alt }}"
+                    loading="lazy"
+                  >
+                  <div class="product-info">
+                    <span>
+                      {{- i_se.product.title -}}
+                    </span>
+                    <a
+                      href="{{ i_se.product.url }}"
+                      target="_self"
+                      >See the eBike</a
+                    >
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="carousel-control">
+    <div class="carousel-btn-wrapper">
+      <button class="prev-btn" aria-label="Left Button">{{ se_stts.l_btn }}</button>
+      <button class="next-btn" aria-label="Right Button">{{ se_stts.r_btn }}</button>
+    </div>
+
+    <div class="carousel-progress">
+      <div
+        class="carousel-progress-bar"
+      ></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="{{ "custom-collections-community.min.js"| asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Collection Community",
+  "class": "custom-collections-community-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "html",
+      "id": "l_btn",
+      "label": "左箭头"
+    },
+    {
+      "type": "html",
+      "id": "r_btn",
+      "label": "右箭头"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comment_card",
+      "name": "评论卡片",
+      "settings": [
+        {
+          "type": "text",
+          "id": "comment",
+          "default": "Comment",
+          "label": "评论"
+        },
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "default": "Name",
+          "label": "姓名"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "关联产品"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collections Community",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

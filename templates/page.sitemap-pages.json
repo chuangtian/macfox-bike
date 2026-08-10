@@ -1,0 +1,158 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "1_kEPmNG": {
+          "type": "1",
+          "settings": {
+            "heading": "Offline Stores",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 20,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "1_kEPmNG"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "disabled": true,
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": true,
+        "cl_bg": "rgba(0,0,0,0)",
+        "cl_link": "#222222"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "image_bg": "shopify://shop_images/2025.08_Macfox-37_1.jpg",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_sitemap_AAyffH": {
+      "type": "custom-sitemap",
+      "blocks": {
+        "collections_j36wz3": {
+          "type": "collections",
+          "disabled": true,
+          "settings": {
+            "title": "Collections"
+          }
+        },
+        "products_q3EA8U": {
+          "type": "products",
+          "disabled": true,
+          "settings": {
+            "title": "Products"
+          }
+        },
+        "pages_AFQBCT": {
+          "type": "pages",
+          "settings": {
+            "title": "Pages"
+          }
+        },
+        "blogs_iDFB9X": {
+          "type": "blogs",
+          "disabled": true,
+          "settings": {
+            "title": "Blogs"
+          }
+        }
+      },
+      "block_order": [
+        "collections_j36wz3",
+        "products_q3EA8U",
+        "pages_AFQBCT",
+        "blogs_iDFB9X"
+      ],
+      "name": "Custom Sitemap",
+      "settings": {
+        "title": "Macfox Pages Sitemap"
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "breadcrumb",
+    "main",
+    "custom_sitemap_AAyffH",
+    "sidebar-page"
+  ]
+}

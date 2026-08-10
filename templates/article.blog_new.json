@@ -1,0 +1,391 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-article",
+      "blocks": {
+        "0dd8a548-e739-4e97-b9d3-1f0c93b3b144": {
+          "type": "1",
+          "settings": {
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 41,
+            "text_lh": 50,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": true,
+            "text_shadow": false,
+            "text_mgb": 10,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 18,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "75a761bc-a254-452a-a9c3-944465384562": {
+          "type": "2",
+          "settings": {
+            "fontf": "3",
+            "font_italic": false
+          }
+        }
+      },
+      "block_order": [
+        "0dd8a548-e739-4e97-b9d3-1f0c93b3b144",
+        "75a761bc-a254-452a-a9c3-944465384562"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 0,
+        "padding": 0,
+        "paddingmb": 100,
+        "mg_b": 20,
+        "mg_bmb": 0,
+        "content_align": "t4s-text-start",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "bg_att": "fixed",
+        "use_cus_css": true,
+        "code_cus_css": ".page-head .t4s-container {padding: 0 15px;}"
+      }
+    },
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": true,
+        "cl_bg": "rgba(0,0,0,0)",
+        "cl_link": "#222222"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "c9d358e2-df0b-4360-bd29-d09caded2ea0": {
+          "type": "image",
+          "settings": {
+            "cate_des": "none"
+          }
+        },
+        "7653dbbd-5c36-4c62-93c4-a432a306bed5": {
+          "type": "title",
+          "settings": {
+            "show_title_first": true,
+            "show_au": true,
+            "show_dt": true,
+            "show_cm": false
+          }
+        },
+        "5908f252-0a66-4bc2-8069-a8f60d79fb18": {
+          "type": "content",
+          "settings": {}
+        },
+        "e8da95d6-7323-4d99-a68c-16088d24fa34": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {}
+        },
+        "d905ad63-1b38-496e-8a7e-38751e0ad0b8": {
+          "type": "socials",
+          "settings": {
+            "social_mode": "2",
+            "social_style": "2",
+            "social_size": "small",
+            "bd_radius": 30,
+            "use_color_set": true,
+            "icon_cl": "#000000",
+            "bg_cl": "#ffffff",
+            "space_h_item": "20",
+            "space_v_item": "5",
+            "space_h_item_mb": "10",
+            "space_v_item_mb": "2"
+          }
+        },
+        "dec42554-02e5-40e5-89ff-f922277dcb34": {
+          "type": "navigation",
+          "settings": {}
+        },
+        "0ae37c6c-16ef-447b-bbbf-31a449c30d2f": {
+          "type": "related",
+          "settings": {
+            "hd_related": "RELATED ARTICLES",
+            "hd_align": "center",
+            "content_align": "center",
+            "cate_des": "none",
+            "show_date": true,
+            "show_auth": false,
+            "limit_related": 8,
+            "date_post_related": "date",
+            "space_h_item": "30",
+            "space_v_item": "30",
+            "space_h_item_mb": "10",
+            "space_v_item_mb": "10",
+            "col_dk": "3",
+            "col_tb": "2",
+            "col_mb": "2",
+            "image_ratio": "ratio3_2",
+            "image_position": "8",
+            "image_size": "cover",
+            "img_effect": "none",
+            "b_effect": "none",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": true,
+            "btn_vi": "hover",
+            "btn_owl": "outline",
+            "btn_shape": "round",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "beea360a-ccb1-42b7-a996-ac5af0663be3": {
+          "type": "comments",
+          "settings": {
+            "enable_full_btn": false,
+            "button_style": "outline",
+            "btn_size": "medium",
+            "btn_cl": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "c9d358e2-df0b-4360-bd29-d09caded2ea0",
+        "7653dbbd-5c36-4c62-93c4-a432a306bed5",
+        "5908f252-0a66-4bc2-8069-a8f60d79fb18",
+        "e8da95d6-7323-4d99-a68c-16088d24fa34",
+        "d905ad63-1b38-496e-8a7e-38751e0ad0b8",
+        "dec42554-02e5-40e5-89ff-f922277dcb34",
+        "0ae37c6c-16ef-447b-bbbf-31a449c30d2f",
+        "beea360a-ccb1-42b7-a996-ac5af0663be3"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": ",20px,,20px",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-article",
+      "blocks": {
+        "37d3ea69-b6a8-4406-8abd-ae719de8696b": {
+          "type": "collection",
+          "settings": {
+            "title": "Related Product",
+            "collection": "electric-bike",
+            "limit_pr": 2,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "2b87352d-b166-4711-9591-727e5034717c": {
+          "type": "post",
+          "settings": {
+            "title": "Recent Post",
+            "blog": "news",
+            "date": "date",
+            "limit_post": 10,
+            "image_ratio": "t4s_ratio16_9",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "tags_AaFWep": {
+          "type": "tags",
+          "settings": {
+            "title": "Blog tags",
+            "count": true
+          }
+        },
+        "b385339a-41b4-4928-beef-c91f4adb1c09": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "community",
+            "count": false
+          }
+        },
+        "03da0455-e201-43b8-9cdf-c787c99bda57": {
+          "type": "sing_post",
+          "disabled": true,
+          "settings": {
+            "title": "Read Recommendation",
+            "article_1": "{{ article.metafields.custom.article_1.value }}",
+            "article_2": "{{ article.metafields.custom.article_2.value }}",
+            "article_3": "{{ article.metafields.custom.article_3.value }}",
+            "article_4": "{{ article.metafields.custom.article_4.value }}",
+            "article_5": "{{ article.metafields.custom.article_5.value }}",
+            "article_6": "{{ article.metafields.custom.article_6.value }}",
+            "article_7": "{{ article.metafields.custom.article_7.value }}",
+            "article_8": "{{ article.metafields.custom.article_8.value }}",
+            "article_9": "{{ article.metafields.custom.article_9.value }}",
+            "article_10": "{{ article.metafields.custom.article_10.value }}",
+            "date": "date",
+            "image_ratio": "t4s_ratio16_9",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        }
+      },
+      "block_order": [
+        "37d3ea69-b6a8-4406-8abd-ae719de8696b",
+        "2b87352d-b166-4711-9591-727e5034717c",
+        "tags_AaFWep",
+        "b385339a-41b4-4928-beef-c91f4adb1c09",
+        "03da0455-e201-43b8-9cdf-c787c99bda57"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "custom_main_article_UgpXUA": {
+      "type": "custom-main-article",
+      "blocks": {
+        "title_DT8z86": {
+          "type": "title",
+          "settings": {
+            "show_title_first": true,
+            "show_au": true,
+            "show_dt": true,
+            "show_cm": false,
+            "show_tag": true
+          }
+        },
+        "image_PFPCXT": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "cate_des": "none"
+          }
+        },
+        "content_ErVpPx": {
+          "type": "content",
+          "settings": {}
+        },
+        "tags_wcwzzR": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {}
+        },
+        "socials_jaxUKH": {
+          "type": "socials",
+          "settings": {
+            "social_mode": "2",
+            "social_style": "2",
+            "social_size": "small",
+            "bd_radius": 30,
+            "use_color_set": false,
+            "icon_cl": "#878787",
+            "bg_cl": "#222222",
+            "space_h_item": "5",
+            "space_v_item": "5",
+            "space_h_item_mb": "2",
+            "space_v_item_mb": "2"
+          }
+        },
+        "navigation_LfLhCH": {
+          "type": "navigation",
+          "settings": {}
+        },
+        "related_fEPPxr": {
+          "type": "related",
+          "settings": {
+            "hd_related": "Related Articles",
+            "article_nums": 5,
+            "pin_article": ""
+          }
+        },
+        "latest_8DqqCa": {
+          "type": "latest",
+          "settings": {
+            "hd_latest": "Latest Articles",
+            "article_nums": 5,
+            "pin_article": ""
+          }
+        },
+        "comments_bL4YTP": {
+          "type": "comments",
+          "settings": {
+            "enable_full_btn": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "title_DT8z86",
+        "image_PFPCXT",
+        "content_ErVpPx",
+        "tags_wcwzzR",
+        "socials_jaxUKH",
+        "navigation_LfLhCH",
+        "related_fEPPxr",
+        "latest_8DqqCa",
+        "comments_bL4YTP"
+      ],
+      "name": "Custom Main Article",
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "blog_btn": "default"
+      }
+    },
+    "custom_internal_link_BnmHPY": {
+      "type": "custom-Internal-link",
+      "name": "Custom Internal Link",
+      "settings": {
+        "internal_links": "internal-links-emvll4wz",
+        "theme": "black",
+        "title_align": "left"
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "breadcrumb",
+    "main",
+    "sidebar",
+    "custom_main_article_UgpXUA",
+    "custom_internal_link_BnmHPY"
+  ]
+}

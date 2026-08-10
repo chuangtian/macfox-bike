@@ -1,0 +1,856 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_CA9T9r": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        "h1 {color: #eee; line-height: 1.2; font-size: 40px; font-family: Antonio; text-align: center;}",
+        "@media screen and (max-width: 768px) {h1 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<h1>Ride in Style with Cool Fat Tire Electric Bikes!</h1>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#120921",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "20px,10px,20px,10px",
+        "mg_mb": "",
+        "pd_mb": "20px,10px"
+      }
+    },
+    "custom_banner_XE3rNp": {
+      "type": "custom-banner",
+      "blocks": {
+        "item_XBVQgF": {
+          "type": "item",
+          "settings": {
+            "link": "",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/1__1_1.webp",
+            "img_mb": "shopify://shop_images/02_3.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        }
+      },
+      "block_order": [
+        "item_XBVQgF"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "auto",
+        "se_height_mb": "auto",
+        "swi_autoplay": true,
+        "swi_time": 5,
+        "is_show_time": false,
+        "countdown_title": "Prime Day Huge Savings",
+        "end_time": "2024-12-31 23:59:59",
+        "bg_color": "#ffffff33",
+        "border_color": "#ffffff2e",
+        "shadow_color": "#1f268799",
+        "blur": "10px",
+        "text_color": "#222222"
+      }
+    },
+    "slideshow_etreXa": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_AK6HzC": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/30.webp",
+            "image_mb": "shopify://shop_images/Is-Bicycle-Good-for-Knees.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://pages/halloween-events",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_AK6HzC"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_countdown_zMBP9J": {
+      "type": "custom-countdown",
+      "disabled": true,
+      "name": "Countdown",
+      "settings": {
+        "bg_color": "#000000",
+        "title": "Last Chance：Back 2 School Ends Soon",
+        "title_color": "#ffffff",
+        "time": "2025-08-31 23:59:59",
+        "time_color": "#efca05",
+        "unit_color": "#8c8c8c"
+      }
+    },
+    "custom_collections_banner_7E9yVG": {
+      "type": "custom-collections-banner",
+      "name": "Custom Collections Banner",
+      "settings": {
+        "banner_link": "",
+        "banner_pc": "shopify://shop_images/helmeted-rider-cruising-macfox-x7-fat-tire-electric-bike-tree-lined-street-pc.webp",
+        "banner_mb": "shopify://shop_images/helmeted-rider-cruising-macfox-x7-fat-tire-electric-bike-tree-lined-street-m_webp.webp",
+        "banner_title": "Fat Tire Ebike",
+        "left": 0,
+        "top": 8,
+        "txt_color": "#ffffff",
+        "banner_overview": "",
+        "overview_txt_color": "#ffffff"
+      }
+    },
+    "custom_collections_tags_q9Y3cf": {
+      "type": "custom-collections-tags",
+      "blocks": {
+        "tag_cVbGLN": {
+          "type": "tag",
+          "settings": {
+            "icon": "shopify://shop_images/Street_Legal_Compliant.svg",
+            "content": "Street Legal Compliant"
+          }
+        },
+        "tag_hTQJ7C": {
+          "type": "tag",
+          "settings": {
+            "icon": "shopify://shop_images/Ride_Safe.svg",
+            "content": "Ride Safe"
+          }
+        },
+        "tag_UnypEf": {
+          "type": "tag",
+          "settings": {
+            "icon": "shopify://shop_images/Express_Yourself.svg",
+            "content": "Express Yourself"
+          }
+        },
+        "tag_MxAzFa": {
+          "type": "tag",
+          "settings": {
+            "icon": "shopify://shop_images/Worry-Free_Support.svg",
+            "content": "Worry-Free Support"
+          }
+        }
+      },
+      "block_order": [
+        "tag_cVbGLN",
+        "tag_hTQJ7C",
+        "tag_UnypEf",
+        "tag_MxAzFa"
+      ],
+      "name": "Custom Collections Tags",
+      "settings": {
+        "bg_color": "#1d1d1d"
+      }
+    },
+    "custom_collections_main_RjyJBb": {
+      "type": "custom-collections-main",
+      "blocks": {
+        "product_group_GTfWja": {
+          "type": "product_group",
+          "settings": {
+            "title": "Extra-Wide Fat Tire eBikes",
+            "desc": "Extra-wide front and rear tires for a planted ride and bold street presence.",
+            "products": [
+              "macfox-x2",
+              "macfox-x7"
+            ]
+          }
+        },
+        "product_group_ze3XQJ": {
+          "type": "product_group",
+          "settings": {
+            "title": "20 × 4.0 Fat Tire eBikes",
+            "desc": "A balanced fat-tire setup for daily streets, neighborhood rides, and mixed surfaces.",
+            "products": [
+              "macfox-x1",
+              "x1s-x-bs-zay"
+            ]
+          }
+        },
+        "product_group_9Gbwak": {
+          "type": "product_group",
+          "settings": {
+            "title": "Compact 16 × 4.0 Fat Tire eBike",
+            "desc": "A compact fat-tire option for smaller-frame fit and everyday neighborhood riding.",
+            "products": [
+              "macfox-m16-ebike"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "product_group_GTfWja",
+        "product_group_ze3XQJ",
+        "product_group_9Gbwak"
+      ],
+      "settings": {
+        "show_shopping_cart": false
+      }
+    },
+    "custom_collections_community_L76mjK": {
+      "type": "custom-collections-community",
+      "blocks": {
+        "comment_card_iggGJh": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "\"Love the bike! Very comfortable and I love the brakes and fat tires. It is quite a bit slower to get up to speed compared to all my kids x1 bikes but I do like it. Also the throttle switch does stick quite a bite. But we love our bikes! We have 4 of these EBikes\"",
+            "img": "shopify://shop_images/ebike-with-throttle-reviews-chris-e.webp",
+            "name": "Chris E.",
+            "product": "macfox-x7"
+          }
+        },
+        "comment_card_VT3nGg": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "\"I am very pleased with the Macfox X1S! It is a very sturdy ride at top speed and has a smooth thumb throttle which are both issues I’ve encountered with other brand e-bikes. 10/10\"",
+            "img": "shopify://shop_images/ebike-with-throttle-reviews-lindsey-b.webp",
+            "name": "Lindsey B.",
+            "product": "macfox-x1"
+          }
+        },
+        "comment_card_XeCa66": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "\"I researched several electric bikes before settling on the Macfox-X1, and I can confidently say that it offers exceptional value for money. The features and performance it provides at this price point are unmatched\"",
+            "img": "shopify://shop_images/fat-tire-ebike-reviews-allen-g.webp",
+            "name": "Allen G.",
+            "product": "macfox-x1"
+          }
+        },
+        "comment_card_HahxMa": {
+          "type": "comment_card",
+          "disabled": true,
+          "settings": {
+            "comment": "“Great bike for my 13 year olds! Arrived very quickly and was easy to assemble (the kids built it themselves). It’s been fun and safe to ride to school and around town.”",
+            "img": "shopify://shop_images/1_d6dc3ff1-d44b-4c5c-ac32-a21fdc1e0cc9.webp",
+            "name": "Erin R.",
+            "product": "macfox-x1"
+          }
+        },
+        "comment_card_keEe34": {
+          "type": "comment_card",
+          "disabled": true,
+          "settings": {
+            "comment": "“Shopping was way quicker than expected and the bike looks sharp!! My son will be so excited to receive this for his 13th birthday next weekend!”",
+            "img": "shopify://shop_images/1_a6e73b7b-04f3-40be-9853-0e89b3f6dcab.webp",
+            "name": "Krystle F.",
+            "product": "macfox-x1"
+          }
+        },
+        "comment_card_gzLdjU": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "“Best bike ever I had all 3 models x1 and x1s and x2 have to say the x2 is a good upgrade definitely worth the extra money !\"",
+            "img": "shopify://shop_images/2_e4810802-5573-4e7f-8829-e774bb5be5ed.webp",
+            "name": "Israel C.",
+            "product": "macfox-x2"
+          }
+        },
+        "comment_card_wYa4yn": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "“Bought the macfox x7 for my son’s 14th birthday. It’s was super easy to put together. He absolutely loves it! It’s perfect for riding around the neighborhood and going to friends houses.”",
+            "img": "shopify://shop_images/3_e24db871-3c80-4ae0-8423-dc424412cfee.webp",
+            "name": "Laura M.",
+            "product": "macfox-x7"
+          }
+        },
+        "comment_card_9h7T6f": {
+          "type": "comment_card",
+          "disabled": true,
+          "settings": {
+            "comment": "“Love the bike! Very comfortable and I love the brakes and fat tires. It is quite a bit slower to get up to speed compared to all my kids x1 bikes but I do like it. Also the throttle switch does stick quite a bite. But we love our bikes! We have 4 of these EBikes”",
+            "img": "shopify://shop_images/4_99e8c581-4e66-44e9-bdea-6a0ed7902568.webp",
+            "name": "Chris E.",
+            "product": "macfox-x7"
+          }
+        },
+        "comment_card_GMciQA": {
+          "type": "comment_card",
+          "disabled": true,
+          "settings": {
+            "comment": "“We ordered this electric bike on line and it has been great. It was great speed and it has been so helpful for my son to get around with no issues. Also has been very safe for him to use. Also want to mention the amazing Customer Service we have received from Macfox when needed. Paulina has been so responsive and answers are questions on a timely manner. Thank you 😊\"",
+            "img": "shopify://shop_images/5_c661bb5a-1934-4674-8651-ce479fdfbe51.webp",
+            "name": "Catalina G.",
+            "product": "macfox-x1"
+          }
+        },
+        "comment_card_4ibE8K": {
+          "type": "comment_card",
+          "disabled": true,
+          "settings": {
+            "comment": "“This bike is super sick! The lower seat height makes it super nice and comfy since I’m a shorter guy. It wheelies straight out of the box super well and the thicker wheels makes it feel like I have full control over the bike. The 13 amp battery gives me 20+ miles of hardcore riding and the brakes have insane stopping power. I would highly recommend buying this awesome bike!\"",
+            "img": "shopify://shop_images/6_cf7eb899-5107-49cf-ae55-8921b7254890.webp",
+            "name": "Jacob P.",
+            "product": "macfox-x7"
+          }
+        }
+      },
+      "block_order": [
+        "comment_card_iggGJh",
+        "comment_card_VT3nGg",
+        "comment_card_XeCa66",
+        "comment_card_HahxMa",
+        "comment_card_keEe34",
+        "comment_card_gzLdjU",
+        "comment_card_wYa4yn",
+        "comment_card_9h7T6f",
+        "comment_card_GMciQA",
+        "comment_card_4ibE8K"
+      ],
+      "name": "Custom Collections Community",
+      "settings": {
+        "title": "Hear From The Macfox Fat Tire E-bike Community",
+        "l_btn": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "r_btn": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>"
+      }
+    },
+    "custom_collections_describe_gMRkak": {
+      "type": "custom-collections-describe",
+      "blocks": {
+        "describe_card_mjJeaD": {
+          "type": "describe_card",
+          "settings": {
+            "title": "Go Anywhere With All-Terrain Tires",
+            "content": "Macfox fat tire e-bikes open up routes ordinary bikes can’t handle — dirt paths, grass fields, uneven roads, and even winter surfaces. The wide contact patch absorbs bumps and adds real traction, making the X7 and X2 ideal for riders who want the freedom to explore without limits."
+          }
+        },
+        "describe_card_FX7BVr": {
+          "type": "describe_card",
+          "settings": {
+            "title": "Comfort That Matches Your Adventure",
+            "content": "The cushioned ride of fat tires smooths out bumps and reduces vibration. The X1S offers a comfortable urban experience, while the X2’s dual-suspension setup gives even more support for trail riding. No matter where you ride, the wide tires keep your journey steady and enjoyable."
+          }
+        },
+        "describe_card_qW3Y6Q": {
+          "type": "describe_card",
+          "settings": {
+            "title": "Built for Daily Riding and Weekend Fun",
+            "content": "From weekday commutes to weekend trail runs, fat tire e-bikes adapt to your lifestyle. Riders love the confidence they provide in unpredictable terrain. The M16 gives younger riders a stable, safe platform with the same rugged look and control."
+          }
+        },
+        "describe_card_PA7xnE": {
+          "type": "describe_card",
+          "settings": {
+            "title": "Ride With Confidence",
+            "content": "Macfox fat tire bikes are designed to keep you moving — powerful motors, strong frames, and quality components ensure stability and long-term performance. Ride farther, ride steadier, and enjoy the all-terrain freedom only fat tires can deliver."
+          }
+        }
+      },
+      "block_order": [
+        "describe_card_mjJeaD",
+        "describe_card_FX7BVr",
+        "describe_card_qW3Y6Q",
+        "describe_card_PA7xnE"
+      ],
+      "name": "Custom Collections Describe",
+      "settings": {
+        "title": "Fat Tire Ebike Overview",
+        "describe": "Fat tire e-bikes are built for riders who want confidence on any surface. With wide tires that grip sand, snow, gravel, and city roads, Macfox fat-tire models deliver smooth rides, extra cushioning, and bold style. Whether you’re commuting or exploring trails, a fat tire e-bike keeps your ride stable and comfortable."
+      }
+    },
+    "custom_product_tabs_zy6jqD": {
+      "type": "custom-product-tabs",
+      "blocks": {
+        "tab_item_BC78mP": {
+          "type": "tab-item",
+          "settings": {
+            "title": "What makes a fat tire e-bike different from a regular e-bike?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>The oversized tires provide more stability, comfort, and traction, especially on uneven or loose terrain.</p>"
+          }
+        },
+        "tab_item_fxwnPf": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Are fat tire e-bikes good for commuting?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Yes. They offer extra comfort and grip, making them perfect for mixed city conditions like potholes, gravel, and uneven pavement.</p>"
+          }
+        },
+        "tab_item_RyhTyF": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Which Macfox model is best for all-terrain riding?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>The <strong>X7</strong> offers fat tires with a playful ride, while the <strong>X2</strong> adds dual suspension for more comfort on trail routes.</p>"
+          }
+        },
+        "tab_item_ixpqJE": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Are fat tire e-bikes harder to ride?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>No — they often feel easier and more stable, especially for beginners or riders needing more balance support.</p>"
+          }
+        },
+        "tab_item_ttdNgF": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Can younger riders use a fat tire e-bike?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Yes. The M16 is lightweight and stable, giving younger riders a secure introduction to fat-tire riding.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_BC78mP",
+        "tab_item_fxwnPf",
+        "tab_item_RyhTyF",
+        "tab_item_ixpqJE",
+        "tab_item_ttdNgF"
+      ],
+      "name": "Tab Item",
+      "settings": {
+        "title": "FAQ About Fat Tire E-Bikes",
+        "bg_color": "#121212"
+      }
+    },
+    "custom_home_carousel_discover_XDGnzc": {
+      "type": "custom-home-carousel-discover",
+      "disabled": true,
+      "name": "Carousel Discover",
+      "settings": {
+        "show_new": true,
+        "bl_handle": "news",
+        "bl_range": 9,
+        "bg_color": "#121212",
+        "topic": "The Most Popular Products",
+        "btn": "Read All",
+        "btn_link": "",
+        "arrow_left_icon": "",
+        "arrow_right_icon": ""
+      }
+    },
+    "top": {
+      "type": "top-collections",
+      "blocks": {
+        "69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67": {
+          "type": "cat",
+          "settings": {
+            "collection": "default-3",
+            "icon": ""
+          }
+        },
+        "863873b6-012e-4a34-90e3-eead750fa3ce": {
+          "type": "cat",
+          "settings": {
+            "collection": "bag",
+            "icon": ""
+          }
+        },
+        "fc07bff9-6d08-423c-8802-9a03c34f3a31": {
+          "type": "cat",
+          "settings": {
+            "collection": "decor",
+            "icon": ""
+          }
+        },
+        "a286cc0b-0c90-4b1a-862c-a1136f283aac": {
+          "type": "cat",
+          "settings": {
+            "collection": "default-2",
+            "icon": ""
+          }
+        },
+        "23c84729-8fcb-488c-9541-00e283af6afe": {
+          "type": "cat",
+          "settings": {
+            "collection": "dress",
+            "icon": ""
+          }
+        },
+        "5f1d751a-fdac-43d4-ad9d-55da0c297244": {
+          "type": "cat",
+          "settings": {
+            "collection": "hats",
+            "icon": ""
+          }
+        },
+        "0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01": {
+          "type": "cat",
+          "settings": {
+            "collection": "electric-bike",
+            "icon": ""
+          }
+        },
+        "70189b51-5562-4924-b642-a1deba7741ee": {
+          "type": "cat",
+          "settings": {
+            "collection": "sale",
+            "icon": ""
+          }
+        },
+        "560f5822-3eeb-4070-a2cd-b5738881a4c1": {
+          "type": "cat",
+          "settings": {
+            "collection": "shoes",
+            "icon": ""
+          }
+        },
+        "be9b8b8f-6cac-47ab-b809-a2fe640a75a7": {
+          "type": "cat",
+          "settings": {
+            "collection": "women",
+            "icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67",
+        "863873b6-012e-4a34-90e3-eead750fa3ce",
+        "fc07bff9-6d08-423c-8802-9a03c34f3a31",
+        "a286cc0b-0c90-4b1a-862c-a1136f283aac",
+        "23c84729-8fcb-488c-9541-00e283af6afe",
+        "5f1d751a-fdac-43d4-ad9d-55da0c297244",
+        "0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01",
+        "70189b51-5562-4924-b642-a1deba7741ee",
+        "560f5822-3eeb-4070-a2cd-b5738881a4c1",
+        "be9b8b8f-6cac-47ab-b809-a2fe640a75a7"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_top_collections": true,
+        "source": "1",
+        "menu": "main-menu",
+        "sort_collections": "alphabetical_reversed",
+        "box_border": "top",
+        "content_align": "center",
+        "hidden_mobile": false,
+        "space_item": 30,
+        "fontf": "inherit",
+        "text_cl": "#222222",
+        "text_cl_hover": "#56cfe1",
+        "text_fs": 14,
+        "text_lh": 45,
+        "text_fw": 400,
+        "text_ls": 0,
+        "font_italic": false,
+        "nav_btn": true,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "heading_template": {
+      "type": "heading-template",
+      "blocks": {
+        "a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9": {
+          "type": "1",
+          "settings": {
+            "heading": "Long Range Fat Tire Electric Bike",
+            "fontf": "1",
+            "text_cl": "#ffffff",
+            "text_fs": 20,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": true,
+            "font_uppercase": true,
+            "text_shadow": true,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20
+          }
+        },
+        "e9f249a0-0a0f-4baf-9664-73babbd7bbe7": {
+          "type": "4",
+          "settings": {
+            "design_des": "show_all",
+            "length": 60,
+            "view_more": true,
+            "viewm_txt": "View more",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20
+          }
+        }
+      },
+      "block_order": [
+        "a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9",
+        "e9f249a0-0a0f-4baf-9664-73babbd7bbe7"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/banner__1_1.jpg",
+        "use_specify_image": false,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 50,
+        "padding": 100,
+        "paddingmb": 100,
+        "mg_b": 0,
+        "mg_bmb": 0,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-collection",
+      "blocks": {
+        "c7bdf308-8019-4991-b58c-6d3e205a52eb": {
+          "type": "category",
+          "settings": {
+            "heading": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "9d37e80a-1eda-4a65-bb08-199e6a933a16": {
+          "type": "collection",
+          "settings": {
+            "heading": "Sale Products",
+            "collection": "electric-bike",
+            "limit_pr": 3,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "c090f36e-d6ef-4a2a-ab04-cc78211dadb7": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "img_effect": "zoom",
+            "b_link": "",
+            "open_link": "_self",
+            "content_align": "center",
+            "date": "2022/12/26",
+            "cdt_des": "1",
+            "countdown_pos": "2",
+            "cdt_size": "small",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#222222",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "c7bdf308-8019-4991-b58c-6d3e205a52eb",
+        "9d37e80a-1eda-4a65-bb08-199e6a933a16",
+        "c090f36e-d6ef-4a2a-ab04-cc78211dadb7"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 0,
+        "sidebar_pd": 15
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "filter_id": {
+          "type": "filter",
+          "settings": {}
+        },
+        "740319a4-8e19-4c70-b8a9-ada7cf235cbc": {
+          "type": "layout",
+          "settings": {}
+        },
+        "30594d23-d644-4653-9545-9ff769d2e6ab": {
+          "type": "sortby",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "filter_id",
+        "740319a4-8e19-4c70-b8a9-ada7cf235cbc",
+        "30594d23-d644-4653-9545-9ff769d2e6ab"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_desc": false,
+        "position_desc": "2",
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": true,
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "limit": 12,
+        "enable_listing": true,
+        "enable_listing_default": false,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "use_pagination": "default",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "outline",
+        "btns_size": "large",
+        "btns_cl": "primary",
+        "button_effect": "sweep-to-right",
+        "btn_pos": "t4s-text-center",
+        "type_filters": "facets",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_internal_link_e8PYTA": {
+      "type": "custom-Internal-link",
+      "name": "Custom Internal Link",
+      "settings": {
+        "internal_links": "fat-re",
+        "theme": "black",
+        "title_align": "left"
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_CA9T9r",
+    "custom_banner_XE3rNp",
+    "slideshow_etreXa",
+    "custom_countdown_zMBP9J",
+    "custom_collections_banner_7E9yVG",
+    "custom_collections_tags_q9Y3cf",
+    "custom_collections_main_RjyJBb",
+    "custom_collections_community_L76mjK",
+    "custom_collections_describe_gMRkak",
+    "custom_product_tabs_zy6jqD",
+    "custom_home_carousel_discover_XDGnzc",
+    "top",
+    "heading_template",
+    "sidebar",
+    "main",
+    "custom_internal_link_e8PYTA"
+  ]
+}

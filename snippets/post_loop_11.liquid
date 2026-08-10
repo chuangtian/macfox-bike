@@ -1,0 +1,33 @@
+<article class="t4s-col-item t4s-post t4s-post-item t4s-post-des-6">
+	<div class="t4s-post-inner cs_video_item">
+		<div class="t4s-post-thumb">
+          {% if video_type == 'youtube' %}
+            {% if video_url == blank %}
+            <iframe src="//www.youtube.com/embed/_9VUPq3SxOc?rel=0&showinfo=0&vq=720" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+          {% else %}
+            {% if video_url.type == 'youtube' %}
+              <iframe src="//www.youtube.com/embed/{{ video_url.id }}?rel=0&showinfo=0&vq=720" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+            {% if video_url.type == 'vimeo' %}
+              <iframe src="//player.vimeo.com/video/{{ video_url.id }}?color={{ settings.color_button | remove: "#" }}&byline=0&portrait=0&badge=0" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+          {% endif %}
+            
+          {% else %}
+             <video src="{{ video }}" preload="auto" playsinline=""  controls muted="" loop="" width="100%" height="100%"></video>
+          {% endif %}
+		</div>
+		<div class="t4s-post-info">
+				<div class="t4s-tags">
+                   {% if video_type == 'youtube' %}
+					<a href="{{ video_url }}" class="t4s-post-text-color">{{ title }}</a>
+                   {% else %}
+                     <a href="{{ video_link }}" class="t4s-post-text-color">{{ title }}</a>
+                     {% endif %}
+				</div>
+			<div class="t4s-post-metas">
+	           {{ text }}
+		    </div>
+		</div>	
+	</div>
+</article>

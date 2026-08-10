@@ -1,0 +1,91 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+%}
+
+<div class="max-w-[1600px] md:w-[90%] !mx-auto !px-[20px] md:!px-[0] !py-[30px] md:!py-15">
+  <h2
+    class="!text-[16px] md:!text-2xl !leading-[1.4] !font-bold !mx-auto {% if se_stts.theme == "white"  %} !text-[#121212] {% else %} !text-[#ffffff] {% endif %}"
+    title="{{ se_stts.internal_links.title.value }}"
+  >
+    {{ se_stts.internal_links.title }}
+  </h2>
+  <ul class="flex flex-wrap gap-x-[10px] md:gap-x-4 gap-y-[10px] md:gap-y-4  !pl-0 !pt-[15px] md:!pt-10">
+    {% for keyword in se_stts.internal_links.links.value %}
+      <li class=" rounded-sm overflow-hidden" title="{{- keyword.text -}}">
+        <a
+          class="!text-[10px] md:!text-lg w-full h-full !block !px-[15px] md:!px-6 !py-[4px] md:!py-2 md:hover:!text-[#f2cb04] active:!text-[#f2cb04] {% if se_stts.theme == "white"  %} bg-[#ededed] !text-[#121212] md:hover:bg-[#121212] active:bg-[#121212] {% else %} bg-[#1d1d1d] !text-[#cccccc] {% endif %}"
+          href="{{ keyword.url }}"
+        >
+          {{- keyword.text -}}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<style>
+  #shopify-section-{{sid}}{
+     background-color:{% if se_stts.theme == "white"  %} #ffffff {% else %} #121212 {% endif %};
+   }
+   #shopify-section-{{sid}} h2{
+    text-align: {{ se_stts.title_align }};
+   }
+</style>
+
+{% schema %}
+{
+  "name": "Internal Link",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "metaobject",
+      "id": "internal_links",
+      "label": "数据源",
+      "metaobject_type": "internal_links"
+    },
+    {
+      "type": "select",
+      "id": "theme",
+      "label": "主题色",
+      "default": "black",
+      "options": [
+        {
+          "label": "黑色",
+          "value": "black"
+        },
+        {
+          "label": "白色",
+          "value": "white"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "label": "标题位置",
+      "options": [
+        {
+          "label": "左",
+          "value": "left"
+        },
+        {
+          "label": "中",
+          "value": "center"
+        },
+        {
+          "label": "右",
+          "value": "right"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Internal Link",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,245 @@
+{% liquid
+  comment
+  产品元字段 custom.product_compare：元对象列表（product_compare 定义）
+  每个子项 = 一个比较模块，标题取子项的 title，表头取 head，产品取 product
+  endcomment
+  assign compare_list = product.metafields.custom.info_citation.value.product_compare.value
+
+  comment
+  特殊处理：X2 Pro 是 X2 产品下的一个规格（选项值），需要在 X2 旁边单独多一列
+  产品的某个选项里出现这个值时，就按该选项的值拆列，规格值优先取 "表头(列名)" 的专属项
+  endcomment
+  assign pro_option_value = 'X2 Pro'
+%}
+
+{%- capture prev_svg -%}
+  <svg
+    width="100%"
+    height="100%"
+    viewbox="0 0 60 60"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z" fill="#121212"></path>
+    <path d="M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z" fill="#666666"></path>
+    <path d="M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z" fill="#666666"></path>
+    <path d="M41.5 28.3H20.8V31.5H41.5V28.3Z" fill="#666666"></path>
+  </svg>
+{%- endcapture -%}
+{%- capture next_svg -%}
+  <svg
+    width="100%"
+    height="100%"
+    viewbox="0 0 61 60"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z" fill="#121212"></path>
+    <path d="M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z" fill="#666666"></path>
+    <path d="M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z" fill="#666666"></path>
+    <path d="M39.8 28.3H19.1V31.5H39.8V28.3Z" fill="#666666"></path>
+  </svg>
+{%- endcapture -%}
+{%- for compare_data in compare_list -%}
+  {%- liquid
+    assign compare_title = compare_data.title
+    assign compare_uid = section.id | append: '-' | append: forloop.index
+  -%}
+  {%- comment -%}
+    每个子项独立渲染一套轮播结构，JS 按 .cs-product-compare-wrapper 分别初始化，
+    类名保持不变（样式不受影响），但所有查询都限定在各自的 wrapper 内，
+    避免多个模块因类名重复导致轮播初始化异常。
+  {%- endcomment -%}
+  <div
+    class="cs-product-compare-wrapper"
+    data-compare-uid="{{ compare_uid }}"
+  >
+    {%- if compare_title != blank -%}
+      <h2>{{ compare_title }}</h2>
+    {%- endif -%}
+
+    <div class="embla">
+      <div class="embla_head embla__slide"></div>
+      <div class="embla__viewport"></div>
+    </div>
+    <div class="embla__controls">
+      <div class="embla__progress">
+        <div class="embla__progress__bar" style="transform:translate3d(0%,0px,0px)"></div>
+      </div>
+
+      <div class="embla__buttons">
+        <button
+          class="embla__button embla__button--prev"
+          type="button"
+          aria-label="Left Button"
+        >
+          {{ prev_svg }}
+        </button>
+        <button
+          class="embla__button embla__button--next"
+          type="button"
+          aria-label="Right Button"
+        >
+          {{ next_svg }}
+        </button>
+      </div>
+    </div>
+
+    <script
+      type="application/json"
+      class="cs-product-compare_data"
+      data-compare-json="{{ compare_uid }}"
+    >
+      {%- liquid
+        assign head_list = compare_data.head.value
+        assign current_product_array = compare_data.product.value | where: 'handle', product.handle
+        assign other_products_array = compare_data.product.value | reject: 'handle', product.handle
+        assign ordered_products = current_product_array | concat: other_products_array
+
+        comment
+        元对象的 head 里若没有 Ebike Model，则自动补一列产品（标题+图片）作为第一列
+        endcomment
+        assign has_model_col = false
+        if head_list contains 'Ebike Model'
+          assign has_model_col = true
+        endif
+      -%}
+      [
+      {%- comment -%}表头行{%- endcomment -%}
+      [
+        {%- unless has_model_col -%}"Ebike Model"{%- endunless -%}
+        {%- for th_head in head_list -%}
+          {%- if has_model_col == false or forloop.first == false -%},{%- endif -%}
+          {{- th_head | json -}}
+        {%- endfor -%}
+      ]
+      {%- comment -%}
+        每个产品一行；X2 这类「同一产品下有 X2 / X2 Pro 两个规格」的产品拆成两列：
+        规格值优先取带后缀的专属项（如 Tires(X2 Pro)），取不到再回退公用项（如 Tires）
+      {%- endcomment -%}
+      {%- for td_product in ordered_products -%}
+        {%- liquid
+          assign specs_data = td_product.metafields.custom.info_citation.value.specs.value.data
+
+          comment
+          DEFAULT 代表不拆列；若产品某个选项里含有 pro_option_value，则按该选项值拆成多列
+          endcomment
+          assign col_labels = 'DEFAULT' | split: ','
+          assign col_option_key = ''
+          for opt in td_product.options_with_values
+            if opt.values contains pro_option_value
+              comment
+              Pro 规格列排在前面（如 X2 Pro 在 X2 之前），其余按字母序跟在后面
+              endcomment
+              assign sorted_labels = opt.values | sort
+              assign ordered_labels = pro_option_value
+              for opt_value in sorted_labels
+                unless opt_value == pro_option_value
+                  assign ordered_labels = ordered_labels | append: '|' | append: opt_value
+                endunless
+              endfor
+              assign col_labels = ordered_labels | split: '|'
+              assign col_option_key = 'option' | append: opt.position
+              break
+            endif
+          endfor
+        -%}
+        {%- for col_label in col_labels -%}
+          {%- liquid
+            if col_label == 'DEFAULT'
+              assign col_title = td_product.metafields.custom.info_citation.value.concise_name.value | default: td_product.title
+              assign col_variant = td_product.variants.first
+              assign col_variants = td_product.variants
+            else
+              assign col_title = col_label
+              assign col_variants = td_product.variants | where: col_option_key, col_label
+              assign col_variant = col_variants | first
+            endif
+            assign col_img = col_variant.image | default: td_product.featured_image
+
+            comment
+            该列对应的变体全部售罄时，加 Sold Out 标签（X2 的变体已全部下架，X2 Pro 仍在售）
+            endcomment
+            assign col_available_variant = col_variants | where: 'available' | first
+            assign col_sold_out = false
+            if col_available_variant == blank
+              assign col_sold_out = true
+            endif
+          -%}
+          {%- capture model_cell -%}
+            {"title":{{ col_title | json }},"img":{{ col_img.src | image_url: width: 400 | json }},"img_width":{{ col_img.width | default: 0 | json }},"img_height":{{ col_img.height | default: 0 | json }},"sold_out":{{ col_sold_out | json }}}
+          {%- endcapture -%}
+          ,[
+            {%- unless has_model_col -%}{{ model_cell | strip }}{%- endunless -%}
+            {%- for th_head in head_list -%}
+              {%- if has_model_col == false or forloop.first == false -%},{%- endif -%}
+              {%- liquid
+                comment
+                拆列时优先匹配 "表头(列名)" 的专属规格，没有再用公用规格
+                endcomment
+                assign scoped_item = nil
+                if col_label != 'DEFAULT'
+                  assign scoped_name = th_head | append: '(' | append: col_label | append: ')'
+                  assign scoped_item = specs_data | find: 'name', scoped_name
+                endif
+              -%}
+              {%- case th_head -%}
+                {%- when 'Ebike Model' -%}
+                  {{- model_cell | strip -}}
+                {%- when 'Recommended Rider Height' -%}
+                  {%- liquid
+                    if scoped_item != blank
+                      assign recommended_heights_text = scoped_item.value
+                    else
+                      assign recommended_heights = ''
+                      for i in specs_data
+                        if i.name contains 'Recommended Rider Height'
+                          assign recommended_heights = recommended_heights | append: i.value | append: '&'
+                        endif
+                      endfor
+                      assign recommended_heights = recommended_heights | remove_last: '&' | split: '&'
+                      assign recommended_heights_text = recommended_heights | join: '<br/>'
+                    endif
+                  -%}
+                  {{- recommended_heights_text | json -}}
+                {%- else -%}
+                  {%- liquid
+                    assign item = scoped_item
+                    if item == blank
+                      assign item = specs_data | find: 'name', th_head
+                    endif
+                  -%}
+                  {{- item.value | default: '' | json -}}
+              {%- endcase -%}
+            {%- endfor -%}
+          ]
+        {%- endfor -%}
+      {%- endfor -%}
+      ]
+    </script>
+  </div>
+{%- endfor -%}
+
+<script type="module" src="{{"custom-product-compare.min.js" |  asset_url}}"></script>
+{% schema %}
+{
+  "name": "产品比较",
+  "tag": "section",
+  "class": "cs-product-compare-section",
+  "limit": 1,
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "内容取自产品元字段 custom.product_compare，每个子项渲染一个比较模块，标题取子项的 title。"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Compare"
+    }
+  ]
+}
+{% endschema %}

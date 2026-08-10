@@ -1,0 +1,320 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-product-promotion">
+    {%- for block in se_blocks -%}
+      {%- if block.type == 'product_item' -%}
+        {%- assign product_data = block.settings -%}
+        {%- assign product_id = forloop.index -%}
+        <a class="product-item" href="{{ product_data.link }}">
+            {%- assign img_id = sid | append: '-' | append: product_id -%}
+            {% render 'cs-image',
+                id: img_id,
+                image_src: product_data.bg_image,
+                image_alt: product_data.bg_image.alt,
+                image_mb_src: product_data.bg_image_mb,
+                image_mb_alt: product_data.bg_image_mb.alt
+            %}
+            <div class="product-item-inner">
+                <div class="item-head">
+                    {%- assign odd = product_id | modulo: 2 -%}
+                    <div class="item-title">
+                        {%- if odd == 1 -%}
+                            <img class="cs-image full_height" src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/41_2x_f3fb68e3-106e-4b09-9a5a-8c770106691a.webp?v=1725588870" alt="" width="" height="">
+                        {%- else -%}
+                            <img class="cs-image full_height" src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/40_2x_b9c581ee-7353-43df-98e3-211fc0982324.webp?v=1725588870" alt="" width="" height="">
+                        {%- endif -%}
+                        <span>{{ product_data.title }}</span>
+                    </div>
+                    <div class="item-price pc">
+                        <span>{{ product_data.o_price | money }}</span>
+                        <span>{{ product_data.c_price | money }}</span>
+                    </div>
+                    <div class="item-features">
+                        {%- assign feature_list = product_data.features | split: ',' -%}
+                        {%- for feature in feature_list -%}
+                            <span style="background-color: {% if odd == 1 %}#2d0260;{% else %}#120701{%- endif -%}" >{{ feature }}</span>
+                        {%- endfor -%}
+                    </div>
+                    <div class="item-price mb">
+                        <span>{{ product_data.o_price | money }}</span>
+                        <span>{{ product_data.c_price | money }}</span>
+                    </div>
+                </div>
+                <div class="item-body">
+                    <span class="item-btn">LEARN MORE</span>
+                    <img class="cs-image" src="{{ product_data.p_image | image_url }}" alt="{{ product_data.p_image.alt }}" width="" height="">
+                    <div class="item-Accessorie">
+                        <img class="cs-image full_width" src="{{ product_data.a_image1 | image_url }}" alt="{{ product_data.a_image1.alt }}" width="" height="">
+                        <img class="cs-image full_width" src="{{ product_data.a_image2 | image_url }}" alt="{{ product_data.a_image2.alt }}" width="" height="">
+                        <img class="cs-image full_width" src="{{ product_data.a_image3| image_url }}" alt="{{ product_data.a_image3.alt }}" width="" height="">
+                    </div>
+                </div>
+            </div>
+        </a>
+      {%- endif -%}
+    {%- endfor -%}
+</div>
+
+{% schema %}
+{
+    "name": "Custom Product Promotion",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "product_item",
+            "name": "Product Item",
+            "settings": [
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Colorful Gift Pack"
+                },
+                {
+                    "type": "number",
+                    "id": "o_price",
+                    "label": "Original Price"
+                },
+                {
+                    "type": "number",
+                    "id": "c_price",
+                    "label": "Current Price"
+                },
+                {
+                    "type": "text",
+                    "id": "features",
+                    "label": "Features",
+                    "info": "A String join with ','",
+                    "default": "X1S x Bs.zay,Iridescent Handlebar Set,Rearview mirrors,Iridescent Pedals"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "bg_image",
+                    "label": "Background Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "bg_image_mb",
+                    "label": "Background Image(Mobile)"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "p_image",
+                    "label": "Product Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "a_image1",
+                    "label": "Accessorie Image1"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "a_image2",
+                    "label": "Accessorie Image2"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "a_image3",
+                    "label": "Accessorie Image3"
+                }
+            ]  
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Product Promotion"
+        }
+    ]
+}
+{% endschema %}
+
+<style>
+    .cs-product-promotion {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 5vw;
+        background-color: #000;
+    }
+    .cs-product-promotion .product-item {
+        position: relative;
+        width: 44vw;
+    }
+    .cs-product-promotion .product-item-inner {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2vw;
+        width: 100%;
+        height: 100%;
+    }
+    .cs-product-promotion .item-head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1vw;
+    }
+    .cs-product-promotion .item-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5vw;
+        width: 100%;
+    }
+    .cs-product-promotion .item-features span {
+        padding: 10px;
+        background-color: #2d0260;
+        color: #fff;
+        font-family: Antonio;
+        font-size: 0.9vw;
+        line-height: 1;
+        border-radius: 5px;
+    }
+    .cs-product-promotion .item-title {
+        position: relative;
+        margin: 0;
+        height: 4vw;
+    }
+    .cs-product-promotion .item-title span {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        padding-left: 24%;
+        width: 100%;
+        height: 100%;
+        line-height: 1;
+        font-size: 1.5vw;
+    }
+    .cs-product-promotion .item-price span {
+        color: #f3861a;
+        font-family: Antonio;
+        font-size: 2vw;
+        line-height: 1;
+    }
+    .cs-product-promotion .item-price span:first-child {
+        position: relative;
+        margin-left: 4px;
+        font-size: 1.2vw;
+    }
+    .cs-product-promotion .item-price span:first-child::before {
+        content: '';
+        position: absolute;
+        left: -4px;
+        top: calc(50% - 0px);
+        width: calc(100% + 8px);
+        border-top: 2px solid #fff;
+        transform: rotate(8deg);
+    }
+    .cs-product-promotion .item-price {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+    }
+    .cs-product-promotion .item-price.mb {
+        display: none;
+    }
+    .cs-product-promotion .item-body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .cs-product-promotion .item-body > img {
+        width: 65%;
+    }
+    .cs-product-promotion .item-btn {
+        display: none;
+    }
+    .cs-product-promotion .item-Accessorie {
+      padding: 2.5vw 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
+    }
+    .cs-product-promotion .item-Accessorie .cs-image {
+        background-color: rgb(255 255 255 / 20%);
+        border-radius: 10px;
+    }
+    @media screen and (max-width: 768px) {
+        .cs-product-promotion {
+            flex-direction: column;
+            gap: 2vh;
+        }
+        .cs-product-promotion .product-item {
+            width: 100%;
+        }
+        .cs-product-promotion .item-body {
+            flex-direction: column-reverse;
+            gap: 2vh;
+        }
+        .cs-product-promotion .item-body > img {
+            width: 85%;
+          margin:0 auto;
+        }
+        .cs-product-promotion .item-btn {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+            border: 1px solid;
+            border-radius: 30px;
+            color: #fff;
+            line-height: 2;
+            font-size: 18px;
+            text-align: center;
+        }
+        .cs-product-promotion .item-Accessorie {
+            width: 100%;
+            flex-direction: row;
+        }
+        .cs-product-promotion .item-Accessorie .cs-image {
+            width: 32%;
+            height: auto;
+        }
+        .cs-product-promotion .product-item-inner {
+            padding: 6vw;
+        }
+        .cs-product-promotion .item-head {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2vh;
+        }
+        .cs-product-promotion .item-title {
+            height: 14vw;
+        }
+        .cs-product-promotion .item-title span {
+            font-size: 24px;
+        }
+        .cs-product-promotion .item-price.pc {
+            display: none;
+        }
+        .cs-product-promotion .item-price.mb {
+            display: flex;
+            gap: 20px;
+        }
+        .cs-product-promotion .item-price span {
+            font-size: 35px;
+        font-weight: 700;
+        }
+        .cs-product-promotion .item-price span:first-child {
+            font-size: 25px;
+        }
+        .cs-product-promotion .item-features span {
+            font-size: 15px;
+        }
+        .cs-product-promotion .item-features {
+            gap: 5px;
+        }
+    }
+</style>

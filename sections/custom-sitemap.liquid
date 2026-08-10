@@ -1,0 +1,125 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="--sitemap-wrapper">
+  <h1 class="--sitemap-title">{{ se_stts.title }}</h1>
+  {%- for bl in se_blocks -%}
+  {% case bl.type %}
+    {% when 'collections' %}
+      <div class="--sitemap-item">
+        <h2 class="--item-title">{{ bl.settings.title }}</h2>
+        <ul class="--collections-list --item-list">
+          {%- for collection in collections -%}
+            <!-- 渲染每个集合 -->
+            <li>
+              <a href="{{ collection.url }}">{{ collection.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+    {% when 'products' %}
+      <div class="--sitemap-item">
+        <h2 class="--item-title">{{ bl.settings.title }}</h2>
+        <ul class="--products-list --item-list"></ul>
+      </div>
+
+    {% when 'pages' %}
+      <div class="--sitemap-item">
+        <h2 class="--item-title">{{ bl.settings.title }}</h2>
+        <ul class="--pages-list --item-list">
+          {%- for page in pages -%}
+            <li>
+              <a href="{{ page.url }}">{{ page.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+    {% when 'blogs' %}
+      <div class="--sitemap-item">
+        <h2 class="--item-title">{{ bl.settings.title }}</h2>
+        <ul class="--blogs-list --item-list"></ul>
+      </div>
+  {% endcase %}
+{%- endfor -%}
+</div>
+
+<script type="module" src="{{ "custom-sitemap.min.js"| asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Custom Sitemap",
+  "class": "cs-sitemap-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Macfoxbike.com Sitemap"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collections",
+      "name": "Collections",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Collections"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "products",
+      "name": "Products",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Products"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "pages",
+      "name": "Pages",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Pages"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "blogs",
+      "name": "Blogs",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Blogs"
+        }
+      ],
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Sitemap"
+    }
+  ]
+}
+{% endschema %}

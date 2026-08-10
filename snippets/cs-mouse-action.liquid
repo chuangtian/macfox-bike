@@ -1,0 +1,99 @@
+<style>
+    #mouse_action_box {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        z-index: 500;
+    }
+    #mouse_action_box img {
+        position: absolute;
+        pointer-events: auto;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+</style>
+
+<div id="mouse_action_box"></div>
+
+<script>
+    const imgList = [
+        {"src": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/Halloween1.png?v=1725348326","alt": ""},
+        {"src": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/Halloween2.png?v=1725348325","alt": ""},
+        {"src": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/Halloween3.png?v=1725348326","alt": ""},
+        {"src": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/Halloween4.png?v=1725348325","alt": ""},
+        {"src": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/Halloween5.png?v=1725348325","alt": ""},
+        {"src": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/Halloween6.png?v=1725348326","alt": ""},
+        {"src": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/Halloween7.png?v=1725348325","alt": ""},
+        {"src": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/Halloween8.png?v=1725348325","alt": ""}
+    ];
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function getRandomList(min, max, count) {
+        const array = [];
+        for (let i = min; i <= max; i++) {
+            array.push(i);
+        }
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array.slice(0, count);
+    }
+
+    (function() {
+      document.addEventListener('DOMContentLoaded', function() {
+        gsap.registerPlugin(MotionPathPlugin);
+        $(document).on('click', function(event) {
+            mouseAction(event);
+        });
+        
+        function mouseAction(event){
+          let x = event.pageX || (event.touches ? event.touches[0].pageX : 0);
+          let y = event.pageY || (event.touches ? event.touches[0].pageY : 0);
+  
+          let count = getRandomInt(2, 3);
+          let indexList = getRandomList(0, imgList.length - 1, count);
+          let boxDom = $('#mouse_action_box');
+  
+          for (let i = 0; i < indexList.length; i++) {
+                let imgIndex = indexList[i];
+                let randomWidth = getRandomInt(10, 30);
+                let randomDeg = getRandomInt(30, 330);
+                let randomRadius = getRandomInt(40, 80);
+    
+                let randomRad = randomDeg * Math.PI / 180;
+                let randomTop = randomRadius * Math.cos(randomRad);
+                let randomLeft = randomRadius * Math.sin(randomRad);
+    
+                let $img = $(`<img style="width: ${randomWidth}px; transform: rotate(${randomDeg}deg);" src="${imgList[imgIndex].src}" alt="${imgList[imgIndex].alt}"/>`);
+                $img.css({
+                    left: (x - randomWidth / 2) + 'px',
+                    top: (y - randomWidth / 2) + 'px'
+                });
+                boxDom.append($img);
+    
+                gsap.timeline().to($img, {
+                    duration: 0.5,
+                    motionPath: {
+                        path: [
+                            {x: 0, y: 0},
+                            {x: randomLeft/2, y: randomTop > 0 ? randomTop/2+10 : randomTop/2-10},
+                            {x: randomLeft, y: randomTop}
+                        ],
+                        autoRotate: true,
+                        curviness: 2
+                    },
+                    ease: "power1.out"
+                }).to($img, {
+                    duration: 0.5,
+                    opacity: 0,
+                    onComplete: () => $img.remove()
+                }, ">");
+            }
+        }
+      })
+    })()
+</script>

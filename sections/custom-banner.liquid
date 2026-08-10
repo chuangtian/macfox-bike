@@ -1,0 +1,730 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<style>
+    #shopify-section-{{ sid }} {
+        width: 100%;
+        {%- case se_stts.se_height -%}
+        {%- when 'full_screen' -%}
+            --se-height: calc(100vh - var(--header-height));
+        {%- else -%}
+            --se-height: auto;
+        {%- endcase -%}
+    }
+
+
+  .glassmorphism-countdown-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 15% ;
+    z-index: 100;
+  }
+  .glassmorphism-countdown-bg {
+    background: {{ section.settings.bg_color | default: 'rgba(255,255,255,0.2)' }};
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 {{ section.settings.shadow_color | default: 'rgba(31, 38, 135, 0.37)' }};
+    backdrop-filter: blur({{ section.settings.blur | default: '10px' }});
+    -webkit-backdrop-filter: blur({{ section.settings.blur | default: '10px' }});
+    border: 1px solid {{ section.settings.border_color | default: 'rgba(255,255,255,0.18)' }};
+    padding: 32px 48px;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    transition: box-shadow 0.3s;
+  }
+  .glassmorphism-countdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .countdown-title {
+    font-size: 24px;
+    color: {{ section.settings.text_color | default: '#222' }};
+    margin-bottom: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .countdown-timer {
+    display: flex;
+    gap: 16px;
+  }
+  .countdown-timer-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: {{ section.settings.text_color | default: '#222' }};
+  }
+  .countdown-timer-item-desc{
+    font-size: 20px;
+  }
+  .countdown-timer span {
+    background: rgba(255,255,255,0.3);
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 48px;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  }
+  .countdown-timer label {
+    display: block;
+    font-size: 0.8rem;
+    color: {{ section.settings.text_color | default: '#222' }};
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 1024px) {
+    .glassmorphism-countdown-section {
+        width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 100;
+    bottom: 4%;
+    }
+    .countdown-title{
+        font-size: 20px;
+    }
+    .glassmorphism-countdown-bg{
+        width: 45%;
+        padding: 10px 0;
+    }
+  }
+
+  @media (max-width: 819px) {
+    .glassmorphism-countdown-section {
+    width: 30% ;
+    position: absolute;
+      bottom: 20%;
+      left: 62%;
+      padding: 20px 0;
+      border-radius: 6px;
+      margin: 0 auto;
+    }
+    .glassmorphism-countdown-bg {
+        width: 100%;
+      padding: 10px 0px;
+      max-width: 90vw;
+      border-radius: 6px;
+    }
+    .countdown-title {
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    .countdown-timer span {
+      font-size: 14px;
+      min-width: 32px;
+      padding: 6px;
+    }
+    .countdown-timer-item-desc{
+    font-size: 12px;
+  }
+  }
+    @media screen and (max-width: 767px) {
+        #shopify-section-{{ sid }} {
+            {%- case se_stts.se_height_mb -%}
+            {%- when 'full_screen' -%}
+                --se-height: calc(100vh - var(--header-height));
+            {%- else -%}
+                --se-height: auto;
+            {%- endcase -%}
+        }
+
+        .glassmorphism-countdown-section {
+        width: 55% ;
+        left: 40%;
+        bottom: 20% !important;
+      padding: 10px 0;
+      position: absolute;
+    }
+    .glassmorphism-countdown-bg {
+      padding: 10px 4px;
+    }
+    .countdown-title {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    .countdown-timer span {
+      font-size: 10px;
+      min-width: 24px;
+      padding: 4px 2px;
+    }
+    .countdown-timer-item-desc{
+    font-size: 9px;
+  }
+    }
+</style>
+
+<div
+  class="cs-banner"
+  id="banner-swiper-{{ sid }}"
+  data-swi_autoplay="{{ se_stts.swi_autoplay }}"
+  data-swi_time="{{ se_stts.swi_time }}"
+>
+  <div class="banner-swiper swiper">
+    <div class="swiper-wrapper">
+      {%- for block in se_blocks -%}
+        {%- if block.type == 'item' -%}
+          {%- liquid
+            assign img_pc = block.settings.img_pc
+            assign video_pc = block.settings.video_pc
+            assign poster_pc = video_pc.preview_image | image_url
+            assign img_mb = block.settings.img_mb | default: img_pc
+            assign video_mb = block.settings.video_mb | default: video_pc
+            assign poster_mb = video_mb.preview_image | image_url
+          -%}
+          <div class="swiper-slide">
+            <a
+              class="banner-item"
+              href="{{ block.settings.link | default: '#' }}"
+              title="{{ block.settings.link_title }}"
+              target="{{ block.settings.link_open_type }}"
+              aria-label="Macfox eBike Banner"
+            >
+              {%- if video_pc != blank -%}
+                <div class="banner-video pc">
+                  {{
+                    video_pc
+                    | video_tag: autoplay: true, loop: true, poster: poster_pc, fetchpriority: 'high', playsinline: true
+                  }}
+                </div>
+                <div class="banner-video mb">
+                  {{
+                    video_mb
+                    | video_tag: autoplay: true, loop: true, poster: poster_mb, fetchpriority: 'high', playsinline: true
+                  }}
+                </div>
+              {%- elsif img_pc != blank -%}
+                <picture>
+                  <source
+                    srcset="{{ img_mb | image_url: width: 400 }} 400w, {{ img_mb | image_url: width: 600 }} 600w, {{ img_mb | image_url: width: 768 }} 768w, "
+                    media="(max-width: 768px)"
+                  >
+                  <source
+                    srcset="{{ img_pc | image_url: width: 900 }} 900w, {{ img_pc | image_url: width: 1200 }} 1200w, {{ img_pc | image_url: width: 1600 }} 1600w, {{ img_pc | image_url: width: 1920 }} 1920w"
+                    media="(min-width: 769px)"
+                  >
+                  <img
+                    class="banner-image"
+                    src="{{ img_pc | image_url: width: 1000 }}"
+                    alt="{{ img_pc.alt | escape }}"
+                    width="{{ img_pc.width }}"
+                    height="{{ img_pc.height }}"
+                    fetchpriority="high"
+                    loading="eager"
+                  >
+                </picture>
+              {%- endif -%}
+              {%- if block.settings.title != blank -%}
+                <h1
+                  class="banner-item-title"
+                  style="--t-width:{{ block.settings.t_width }}%;--t-position-x:{{ block.settings.t_position_x }}%;--t-position-y:{{ block.settings.t_position_y }}%;--t-width-mb:{{ block.settings.t_width_mb }}%;--t-position-x-mb:{{ block.settings.t_position_x_mb }}%;--t-position-y-mb:{{ block.settings.t_position_y_mb }}%;"
+                >
+                  {{ block.settings.title }}
+                </h1>
+              {%- endif -%}
+              {%- if block.settings.content != blank -%}
+                <p
+                  class="banner-item-content"
+                  style="--c-width:{{ block.settings.c_width }}%;--c-position-x:{{ block.settings.c_position_x }}%;--c-position-y:{{ block.settings.c_position_y }}%;--c-width-mb:{{ block.settings.c_width_mb }}%;--c-position-x-mb:{{ block.settings.c_position_x_mb }}%;--c-position-y-mb:{{ block.settings.c_position_y_mb }}%;"
+                >
+                  {{ block.settings.content }}
+                </p>
+              {%- endif -%}
+              {%- if block.settings.button != blank -%}
+                <div
+                  class="banner-item-button"
+                  style="--b-width:{{ block.settings.b_width }}%;--b-position-x:{{ block.settings.b_position_x }}%;--b-position-y:{{ block.settings.b_position_y }}%;--b-width-mb:{{ block.settings.b_width_mb }}%;--b-position-x-mb:{{ block.settings.b_position_x_mb }}%;--b-position-y-mb:{{ block.settings.b_position_y_mb }}%;"
+                >
+                  {{ block.settings.button }}
+                </div>
+              {%- endif -%}
+            </a>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+  {% if se_stts.is_show_time %}
+    <div class="glassmorphism-countdown-section">
+      <div class="glassmorphism-countdown-bg">
+        <div class="glassmorphism-countdown-content">
+          <span class="countdown-title">{{ section.settings.countdown_title }}</span>
+          <div class="countdown-timer" id="countdown-timer-{{ section.id }}"></div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  {% if se_stts.is_show_time %} 
+    function startCountdown(endTime, containerId) {
+      function updateCountdown() {
+        var now = new Date().getTime();
+        var distance = endTime - now;
+        if (distance < 0) {
+          document.getElementById(containerId).innerHTML =
+            '<span>00</span><span>00</span><span>00</span><span>00</span>';
+          clearInterval(timer);
+          return;
+        }
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById(containerId).innerHTML =
+         `
+         <div class="countdown-timer-item">
+          <span>
+           ${String(days).padStart(2, '0')}
+          </span>
+          <div class="countdown-timer-item-desc">Days</div>
+         </div>
+         `
+         +
+         `
+         <div class="countdown-timer-item">
+          <span>
+           ${String(hours).padStart(2, '0')}
+          </span>
+          <div class="countdown-timer-item-desc">Hours</div>
+         </div>
+         `
+         +
+         `
+         <div class="countdown-timer-item">
+          <span>
+           ${String(minutes).padStart(2, '0')}
+          </span>
+          <div class="countdown-timer-item-desc">Min</div>
+         </div>
+         `
+         +
+         `
+         <div class="countdown-timer-item">
+          <span>
+           ${String(seconds).padStart(2, '0')}
+          </span>
+          <div class="countdown-timer-item-desc">Sec</div>
+         </div>
+         `;
+      }
+      updateCountdown();
+      var timer = setInterval(updateCountdown, 1000);
+    }
+    let endTime = new Date('{{ section.settings.end_time | escape }}').getTime();
+    let endTimeStr = '{{ section.settings.end_time | escape }}'.replaceAll('-', '/');
+    if(!endTime){
+      endTime = new Date(endTimeStr).getTime();
+    }
+    startCountdown(endTime, 'countdown-timer-{{ section.id }}');
+  {% endif %}
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "+ PC Settings"
+    },
+    {
+      "type": "select",
+      "id": "se_height",
+      "label": "Section Height",
+      "default": "auto",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Auto"
+        },
+        {
+          "value": "full_screen",
+          "label": "Full Screen"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "+ Mobile Settings"
+    },
+    {
+      "type": "select",
+      "id": "se_height_mb",
+      "label": "Section Height",
+      "default": "auto",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Auto"
+        },
+        {
+          "value": "full_screen",
+          "label": "Full Screen"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "+ Swiper Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "swi_autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "swi_time",
+      "label": "Slide Time(seconds)",
+      "default": 5
+    },
+
+    {
+      "type": "header",
+      "content": "+ Countdown Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_show_time",
+      "label": "是否显示时间",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "countdown_title",
+      "label": "倒计时标题",
+      "default": "Prime Day Huge Savings"
+    },
+    {
+      "type": "text",
+      "id": "end_time",
+      "label": "倒计时截止时间（如 2024-12-31 23:59:59）",
+      "default": "2024-12-31 23:59:59"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "倒计时背景色（带透明度）",
+      "default": "#ffffff33"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "倒计时边框颜色",
+      "default": "#ffffff2e"
+    },
+    {
+      "type": "color",
+      "id": "shadow_color",
+      "label": "倒计时阴影颜色",
+      "default": "#1f268799"
+    },
+    {
+      "type": "text",
+      "id": "blur",
+      "label": "倒计时模糊度（如10px）",
+      "default": "10px"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "倒计时文字颜色",
+      "default": "#222222"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "Link Title"
+        },
+        {
+          "type": "select",
+          "id": "link_open_type",
+          "label": "Open link in",
+          "default": "_blank",
+          "options": [
+            {
+              "label": "New Window",
+              "value": "_blank"
+            },
+            {
+              "label": "Current Window",
+              "value": "_self"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "+ PC Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_pc",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video_pc",
+          "label": "Video"
+        },
+        {
+          "type": "header",
+          "content": "+ Mobile Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_mb",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video_mb",
+          "label": "Video"
+        },
+        {
+          "type": "header",
+          "content": "+ Title Settings"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Text"
+        },
+        {
+          "type": "range",
+          "id": "t_width",
+          "label": "Width",
+          "default": 50,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "t_position_x",
+          "label": "Position X",
+          "default": 25,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "t_position_y",
+          "label": "Position Y",
+          "default": 20,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "t_width_mb",
+          "label": "Width(Mobile)",
+          "default": 90,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "t_position_x_mb",
+          "label": "Position X(Mobile)",
+          "default": 5,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "t_position_y_mb",
+          "label": "Position Y(Mobile)",
+          "default": 20,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "header",
+          "content": "+ Content Settings"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Text"
+        },
+        {
+          "type": "range",
+          "id": "c_width",
+          "label": "Width",
+          "default": 70,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "c_position_x",
+          "label": "Position X",
+          "default": 15,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "c_position_y",
+          "label": "Position Y",
+          "default": 60,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "c_width_mb",
+          "label": "Width(Mobile)",
+          "default": 90,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "c_position_x_mb",
+          "label": "Position X(Mobile)",
+          "default": 5,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "c_position_y_mb",
+          "label": "Position Y(Mobile)",
+          "default": 50,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "header",
+          "content": "+ Button Settings"
+        },
+        {
+          "type": "textarea",
+          "id": "button",
+          "label": "Text"
+        },
+        {
+          "type": "range",
+          "id": "b_width",
+          "label": "Width",
+          "default": 10,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "b_position_x",
+          "label": "Position X",
+          "default": 45,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "b_position_y",
+          "label": "Position Y",
+          "default": 90,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "b_width_mb",
+          "label": "Width(Mobile)",
+          "default": 50,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "b_position_x_mb",
+          "label": "Position X(Mobile)",
+          "default": 25,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "b_position_y_mb",
+          "label": "Position Y(Mobile)",
+          "default": 80,
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner"
+    }
+  ]
+}
+{% endschema %}

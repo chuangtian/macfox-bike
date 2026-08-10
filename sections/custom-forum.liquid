@@ -1,0 +1,325 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="max-w-[1600px] !mx-auto !px-[15px] md:!px-[3rem] !py-[30px] md:!py-[8rem]">
+  <div class="cs-forum-heading md:!mb-24 !mb-12">
+    <div class=" flex items-center flex-col md:flex-row">
+      <div class=" md:w-1/2 flex flex-col items-center">
+        <h2 class="!text-white !text-6xl">{{ se_stts.title }}</h2>
+        <span class="text-[#e9e9e9]">{{ se_stts.subtitle }}</span>
+        <p class="text-[#e9e9e9]">{{ se_stts.t_content }}</p>
+      </div>
+      <div class=" md:w-1/2 flex flex-col items-center gap-y-3">
+        {%- for variable in se_blocks -%}
+          {%- case variable.type -%}
+            {%- when 'link_btn' -%}
+              <a class="text-center !py-2 bg-white rounded-lg !w-[250px] block" href="{{ variable.settings.title }}">
+                {{- variable.settings.title -}}
+              </a>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+    <div class="flex items-center justify-center md:!space-x-16 !space-x-8 !mt-10">
+      {%- for variable in se_blocks -%}
+        {%- case variable.type -%}
+          {%- when 'tag' -%}
+            <div class="flex flex-col">
+              <span class="!mb-3 md:!text-4xl !text-3xl !text-white">{{ variable.settings.title }}</span>
+              <span class="!text-white">{{ variable.settings.replenish }}</span>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+  <div class="cs-forum-content grid md:grid-cols-2 grid-cols-1 md:gap-x-3 gap-y-2 md:gap-y-0">
+    <div id="cs-topics" class=" !space-y-2">
+      {%- for variable in se_blocks -%}
+        {%- case variable.type -%}
+          {%- when 'topic-item' -%}
+            <div
+              class="cs-topics-item md:!px-10 !py-8 !space-y-4"
+              data-category="{{ variable.settings.categories }}"
+              data-num="{{ variable.settings.num }}"
+            >
+              <h3 class="!text-white !mb-5 !ml-8 !text-4xl">{{ variable.settings.categories | upcase }}</h3>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+    <div id="cs-comments">
+      {%- for variable in se_blocks -%}
+        {%- case variable.type -%}
+          {%- when 'comment-item' -%}
+            <div class="cs-comment-item !space-y-4" data-num="{{ variable.settings.num }}"></div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<style>
+    .cs-forum-section {
+      /* background-color: {{ se_stts.bg_color }}; */
+      background: #121212;
+      padding: 20px 0;
+    }
+
+    .cs-comment-item-content img{
+      display: inline-block;
+    }
+    .cs-comment-item-content .lightbox-wrapper{
+      position: relative;
+    }
+    .cs-comment-item-content .meta{
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .cs-comment-item-content p{
+      margin-bottom: 0;
+      color: white;
+      text-wrap: wrap;
+      word-break: break-word;
+    }
+    .cs-comment-item-content a{
+      color: rgb(60, 132, 241);
+    }
+    .cs-comment-item-content a:hover{
+      color: #f2cb04;
+      text-decoration-line: underline;
+    }
+    .cs-comment-item-content .svg-icon{
+      display: none;
+    }
+    .cs-comment-item-content blockquote{
+      border-radius: 0.65rem;
+      background-color: #272727;
+      margin-top: 10px;
+      position: relative !important;
+      overflow: hidden;
+    }
+    .cs-comment-item-content blockquote::before,
+  .cs-comment-item-content blockquote::after{
+    height: 100% !important;
+    width: 1rem;
+    content: "" !important;
+    background-color: #04395e;
+    position: absolute;
+  }
+  .cs-comment-item-content blockquote::before{
+    left: 0;
+    top: 0;
+  }
+  .cs-comment-item-content blockquote::after{
+    right: 0;
+    top: 0;
+  }
+</style>
+
+<script>
+
+  const getCategory = (El, category, num) => {
+    axios
+      .get(`https://macfoxbiketribe.discourse.group/c/${category}.json`)
+      .then(function (response) {
+        if (response.status == 200) {
+          const data = response.data.topic_list.topics;
+          for (let i of data) {
+           
+            El.innerHTML += `
+              <a class="block !border-1 !border-[#1e1e1e] hover:bg-[#1e1e1e] !px-8 !py-5 rounded-2xl flex justify-between" href="https://macfoxbiketribe.discourse.group/t/${
+                i.slug
+              }" target="_blank">
+                <h4 class="!text-white">${i.unicode_title ? i.unicode_title : i.title}</h4>
+                <div class="flex items-center text-[#6e7271]">
+                  <time datetime="${i.created_at}">${new Date(i.created_at).toLocaleDateString()}</time>
+                </div>
+              </a >`;
+          }
+        } else {
+          El.innerHTML += 'error require';
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+  const getPosts = (El,num) => {
+    axios
+      .get('https://macfoxbiketribe.discourse.group/posts.json')
+      .then(function (response) {
+        if (response.status == 200) {
+          let data = response.data.latest_posts;
+          data = data.filter((item) => item.username == 'system' || item.username == 'Macfoxbike');
+          for (let i = 0; i < num; i++) {
+            const avatar = String(data[i].avatar_template).replace('{size}', '48');
+            El.innerHTML += `
+              <div class="bg-[#2e2e2e] !px-8 !py-5 rounded-2xl">
+                <div class=" flex justify-between items-center !mb-1">
+                  <div class="flex items-center">
+                   <div class="rounded-full overflow-hidden size-[32px] !mr-3"><img width="100%" height="100%" src="${
+                     data[i].admin ? 'https://macfoxbiketribe.discourse.group' + avatar : avatar
+                   }"/></div>
+                   <a class="!text-xl !text-white hover:!text-[#f2cb04]" target="_blank" href="https://macfoxbiketribe.discourse.group/u/${String(data[i].username).toLocaleLowerCase()}/summary">${data[i].username}</a>
+                  </div>
+                   <a class="bg-[#f2cb04] !px-6 rounded-sm !text-black" target="_blank" href="https://macfoxbiketribe.discourse.group${data[i].post_url}">Post</a>
+                </div>
+                <time class="!mb-5 text-[#f5eaea] !text-sm !block" datetime="${data[i].created_at}">${new Date(data[i].created_at).toLocaleString()}</time>
+                <div class="cs-comment-item-content">${data[i].cooked}</div>
+              </div>
+          `;
+          }
+        } else {
+          El.innerHTML += 'error require';
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+  window.addEventListener('DOMContentLoaded', () => {
+    const topicsList = document.querySelectorAll('.cs-topics-item');
+    const comments = document.querySelector('.cs-comment-item');
+    topicsList.forEach((item) => {
+      const category = item.dataset['category'];
+      const num = item.dataset['num'];
+      getCategory(item, category, num);
+    });
+
+    getPosts(comments,comments.dataset["num"]);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Forum",
+  "tag": "section",
+  "class": "cs-forum-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "背景图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Custom Forum"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "副标题",
+      "default": "Custom Forum"
+    },
+    {
+      "type": "text",
+      "id": "t_content",
+      "label": "文本内容",
+      "default": "Custom Forum"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_btn",
+      "name": "跳转链接",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "按钮文本",
+          "default": "按钮"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "调整链接",
+          "default": "https://"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "按钮背景",
+          "default": "#733ded"
+        },
+        {
+          "type": "checkbox",
+          "id": "shadow_show",
+          "label": "是否显示阴影",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "tag",
+      "name": "底部标签",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "内容",
+          "default": "Tags Content"
+        },
+        {
+          "type": "text",
+          "id": "replenish",
+          "label": "补充",
+          "default": "Tags Replenish"
+        }
+      ]
+    },
+    {
+      "type": "topic-item",
+      "name": "论坛主题",
+      "settings": [
+        {
+          "type": "text",
+          "id": "categories",
+          "label": "分类类型",
+          "default": "general"
+        },
+        {
+          "type": "number",
+          "id": "num",
+          "label": "展示数量",
+          "default": 5
+        }
+      ]
+    },
+    {
+      "type": "comment-item",
+      "name": "论坛评论",
+      "settings": [
+        {
+          "type": "number",
+          "id": "num",
+          "label": "展示数量",
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Forum",
+      "category": "Custom Forum"
+    }
+  ]
+}
+{% endschema %}

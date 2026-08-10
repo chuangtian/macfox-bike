@@ -1,0 +1,1719 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_CA9T9r": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        "h1 {color: #eee; line-height: 1.2; font-size: 40px; font-family: Antonio; text-align: center;}",
+        "@media screen and (max-width: 768px) {h1 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<h1>Ride in Style with Cool Fat Tire Electric Bikes!</h1>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#120921",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "20px,10px,20px,10px",
+        "mg_mb": "",
+        "pd_mb": "20px,10px"
+      }
+    },
+    "custom_banner_XE3rNp": {
+      "type": "custom-banner",
+      "blocks": {
+        "item_XBVQgF": {
+          "type": "item",
+          "settings": {
+            "link": "",
+            "link_title": "Electric Bike",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/1__1_1.webp",
+            "img_mb": "shopify://shop_images/02_3.webp",
+            "title": "",
+            "t_width": 49,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        }
+      },
+      "block_order": [
+        "item_XBVQgF"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "auto",
+        "se_height_mb": "auto",
+        "swi_autoplay": true,
+        "swi_time": 5,
+        "is_show_time": false,
+        "countdown_title": "Prime Day Huge Savings",
+        "end_time": "2024-12-31 23:59:59",
+        "bg_color": "#ffffff33",
+        "border_color": "#ffffff2e",
+        "shadow_color": "#1f268799",
+        "blur": "10px",
+        "text_color": "#222222"
+      }
+    },
+    "slideshow_etreXa": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_AK6HzC": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/30.webp",
+            "image_mb": "shopify://shop_images/Is-Bicycle-Good-for-Knees.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://pages/halloween-events",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_AK6HzC"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_countdown_zMBP9J": {
+      "type": "custom-countdown",
+      "disabled": true,
+      "name": "Countdown",
+      "settings": {
+        "bg_color": "#000000",
+        "title": "Last Chance：Back 2 School Ends Soon",
+        "title_color": "#ffffff",
+        "time": "2025-08-31 23:59:59",
+        "time_color": "#efca05",
+        "unit_color": "#8c8c8c"
+      }
+    },
+    "custom_collections_banner_7E9yVG": {
+      "type": "custom-collections-banner",
+      "name": "Custom Collections Banner",
+      "settings": {
+        "banner_pc": "shopify://shop_images/1_4362fa0d-0a2d-43a0-8bc6-f82c063d2495.webp",
+        "banner_mb": "shopify://shop_images/2_0f7ab56d-63ec-4a50-b519-d85fc37cfcc2.webp",
+        "banner_title": "Electric Wheelie Bike",
+        "left": 0,
+        "top": 8,
+        "txt_color": "#ffffff",
+        "banner_overview": "",
+        "overview_txt_color": "#ffffff"
+      }
+    },
+    "custom_collections_tags_q9Y3cf": {
+      "type": "custom-collections-tags",
+      "blocks": {
+        "tag_cVbGLN": {
+          "type": "tag",
+          "settings": {
+            "icon": "shopify://shop_images/Street_Legal_Compliant.svg",
+            "content": "Street Legal Compliant"
+          }
+        },
+        "tag_hTQJ7C": {
+          "type": "tag",
+          "settings": {
+            "icon": "shopify://shop_images/Ride_Safe.svg",
+            "content": "Ride Safe"
+          }
+        },
+        "tag_UnypEf": {
+          "type": "tag",
+          "settings": {
+            "icon": "shopify://shop_images/Express_Yourself.svg",
+            "content": "Express Yourself"
+          }
+        },
+        "tag_MxAzFa": {
+          "type": "tag",
+          "settings": {
+            "icon": "shopify://shop_images/Worry-Free_Support.svg",
+            "content": "Worry-Free Support"
+          }
+        }
+      },
+      "block_order": [
+        "tag_cVbGLN",
+        "tag_hTQJ7C",
+        "tag_UnypEf",
+        "tag_MxAzFa"
+      ],
+      "name": "Custom Collections Tags",
+      "settings": {
+        "bg_color": "#1d1d1d"
+      }
+    },
+    "custom_collections_main_RjyJBb": {
+      "type": "custom-collections-main",
+      "blocks": {
+        "product_group_tMR67q": {
+          "type": "product_group",
+          "settings": {
+            "title": "Classic Models",
+            "desc": "Reliable for commutes and casual rides.",
+            "products": [
+              "macfox-x1",
+              "x1s-x-bs-zay",
+              "macfox-m16-ebike"
+            ]
+          }
+        },
+        "product_group_PLgXRw": {
+          "type": "product_group",
+          "settings": {
+            "title": "Upgrade Models",
+            "desc": "Extra-wide tires. Upgraded throughout.",
+            "products": [
+              "macfox-x7",
+              "macfox-x2"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "product_group_tMR67q",
+        "product_group_PLgXRw"
+      ],
+      "settings": {
+        "show_shopping_cart": true
+      }
+    },
+    "custom_collections_community_L76mjK": {
+      "type": "custom-collections-community",
+      "blocks": {
+        "comment_card_4ibE8K": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "“This bike is super sick! The lower seat height makes it super nice and comfy since I’m a shorter guy. It wheelies straight out of the box super well and the thicker wheels makes it feel like I have full control over the bike. The 13 amp battery gives me 20+ miles of hardcore riding and the brakes have insane stopping power. I would highly recommend buying this awesome bike!\"",
+            "img": "shopify://shop_images/6_cf7eb899-5107-49cf-ae55-8921b7254890.webp",
+            "name": "Jacob P.",
+            "product": "macfox-x7"
+          }
+        },
+        "comment_card_gzLdjU": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "“Great e-bike! So easy to wheelie, and also the easiest bike to mod for sure. Parts are very high quality, and do not disappoint.Also it handles jumps like crazy the only thing I have to say that is ok is the back suspension,but besides that it is great!\"",
+            "img": "shopify://shop_images/macfox-x2-mountain-ebike-reviews.webp",
+            "name": "Westyn M.",
+            "product": "macfox-x2"
+          }
+        },
+        "comment_card_HahxMa": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "“Well, my son loves the bike, and so do his friends. At least 4 of them in his circle, followed our path and got their own X1s's. I bought the back tail light, different throtle style, front wheel screws (good have extras as most teens tend to wheelie on them and screws can get lose) and now recently I got a tire replacement. Bike has been great. For the price you get a great deal a a nice looking bike. My son got it for Christmass and so far hes gotten close to 700 miles on it. Mostly street rides.  Also important, the fact that they have a local presence and customer service here in the US. Any issues that we have encountered have been met with good service so far and thats a great advantage.  Overall. He is really happy with his bike and so I am. I would definately recommend the X1s to anyone looking for a cool reliable bike. ”",
+            "img": "shopify://shop_images/macfox-x1s-commuter-ebike-reviews.webp",
+            "name": "Attn Enrique V.",
+            "product": "macfox-x1"
+          }
+        },
+        "comment_card_GMciQA": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "“I like it it's not very fast but it looks better then other bikes and it's very fun and really easy to wheelie\"",
+            "img": "shopify://shop_images/macfox-x1s-x-bs-zay-commuter-ebike-reviews.webp",
+            "name": "Catalina G.",
+            "product": "x1s-x-bs-zay"
+          }
+        },
+        "comment_card_9h7T6f": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "“This bike is absolutely amazing. I modded it as you can see, it’s comfy and easy for hand drags, perfect for wheelies”",
+            "img": "shopify://shop_images/macfox-x7-offroad-ebike-reviews.webp",
+            "name": "Dylan C.",
+            "product": "macfox-x7"
+          }
+        },
+        "comment_card_keEe34": {
+          "type": "comment_card",
+          "settings": {
+            "comment": "“I love my macfox so much and it’s so fun to wheelie. They are super customizable and the frames don’t snap 😏. When I broke my macfox throttle they personally reached out to me and dmed me on tiktok, I now have a new throttle for free!  I love macfox!”",
+            "img": "shopify://shop_images/macfox-x1s-commuter-ebike-reviews-2.webp",
+            "name": "Ryder H.",
+            "product": "macfox-x1"
+          }
+        }
+      },
+      "block_order": [
+        "comment_card_4ibE8K",
+        "comment_card_gzLdjU",
+        "comment_card_HahxMa",
+        "comment_card_GMciQA",
+        "comment_card_9h7T6f",
+        "comment_card_keEe34"
+      ],
+      "name": "Custom Collections Community",
+      "settings": {
+        "title": "Hear From The Macfox Wheelie E-bike Community",
+        "l_btn": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "r_btn": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>"
+      }
+    },
+    "custom_collections_describe_gMRkak": {
+      "type": "custom-collections-describe",
+      "blocks": {
+        "describe_card_mjJeaD": {
+          "type": "describe_card",
+          "settings": {
+            "title": "Precision Power for Perfect Lift",
+            "content": "Throttle response matters most when pulling a clean wheelie. The Macfox X7 and X1S deliver smooth rear-drive torque that lifts predictably without jerks, while the X2’s dual-suspension setup absorbs landings and gives confidence on mixed terrain. Every model uses a 48 V power system tuned for instant acceleration and controlled balance — not brute force."
+          }
+        },
+        "describe_card_FX7BVr": {
+          "type": "describe_card",
+          "settings": {
+            "title": "Geometry That Keeps You Centered",
+            "content": "True wheelie control comes from smart frame design. Macfox bikes use optimized seat height, longer swingarms, and centered battery placement to help you find and hold the balance point. This means fewer accidental flips and more time fine-tuning your throttle rhythm."
+          }
+        },
+        "describe_card_qW3Y6Q": {
+          "type": "describe_card",
+          "settings": {
+            "title": "Style That Speaks for Itself",
+            "content": "From the minimalist X1S × Bs.Zay edition to the bold stance of the X7, every Macfox wheelie e-bike turns heads. Custom colorways, fat-tire confidence, and clean street lines make each trick look effortless. Whether you ride for fun or for footage, these bikes amplify your personality."
+          }
+        },
+        "describe_card_PA7xnE": {
+          "type": "describe_card",
+          "settings": {
+            "title": "A Community Built on Motion",
+            "content": "Macfox wheelie riders aren’t just cyclists — they’re performers. From teens learning backyard lifts to creators filming viral rides, this movement celebrates balance, creativity, and control. Join the Macfox community and push what an electric bike can really do."
+          }
+        }
+      },
+      "block_order": [
+        "describe_card_mjJeaD",
+        "describe_card_FX7BVr",
+        "describe_card_qW3Y6Q",
+        "describe_card_PA7xnE"
+      ],
+      "name": "Custom Collections Describe",
+      "settings": {
+        "title": "The Macfox Wheelie Electric Bike Collection — Balance, Control, and Pure Fun",
+        "describe": "Wheelie e-bikes represent more than just power — they’re about mastering control and expression. Macfox builds electric bikes that make throttle precision, geometry balance, and visual attitude part of your ride. Whether you’re learning your first lift or filming your next combo, these bikes keep your wheel steady and your style sharp."
+      }
+    },
+    "custom_product_tabs_zy6jqD": {
+      "type": "custom-product-tabs",
+      "blocks": {
+        "tab_item_fqezjd": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Can I do wheelies on a Macfox e-bike?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Yes, you can. While Macfox bikes aren’t built specifically for wheelies, their strong rear-drive torque and balanced frames make controlled lifts possible on most models.</p>"
+          }
+        },
+        "tab_item_yhBtqQ": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Which model is easiest for wheelies?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>All models can lift with skill, but the X7’s larger rear tire gives better traction, and the X2’s dual suspension helps with smooth landings. Riders often start with these for more stability.</p>"
+          }
+        },
+        "tab_item_EhHYNc": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Is it safe to practice wheelies on an electric bike?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Yes—if done carefully. Always wear protective gear, practice at low speeds, and use a safe open area. Gradually learn throttle response before attempting higher lifts.</p>"
+          }
+        },
+        "tab_item_xkTHbL": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Will doing wheelies damage my e-bike?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Not if you ride responsibly. Avoid sudden throttle bursts or hard landings. Macfox frames are durable, but repeated heavy impact can wear out tires and suspension faster.</p>"
+          }
+        },
+        "tab_item_WQHpLK": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Can beginners learn to do wheelies on an e-bike?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Yes, but start small. Focus on throttle feel and weight shift before full lifts. Many riders find e-bikes easier for balance because of their steady torque output.</p>"
+          }
+        },
+        "tab_item_kxxUbA": {
+          "type": "tab-item",
+          "settings": {
+            "title": "What’s the best way to improve wheelie control?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Practice throttle finesse and rear brake timing. Many riders use short, steady lifts before extending distance. The goal is control—not just height.</p>"
+          }
+        },
+        "tab_item_ccUNKf": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Is wheelie riding legal on public roads?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Wheelies are considered stunts, not standard riding. They should only be practiced off-road or in private areas to comply with safety and local laws.</p>"
+          }
+        },
+        "tab_item_VebhqV": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Does wheelie practice shorten battery life?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Frequent short bursts of throttle can use more energy, but normal wheelie sessions won’t significantly reduce battery health. Proper charging habits matter more.</p>"
+          }
+        },
+        "tab_item_MT3yfV": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Do heavier riders find wheelies harder?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>Heavier riders may need more torque and careful balance, but models like the <strong>X2</strong> or <strong>X7</strong> offer enough power and stability for most users with practice.</p>"
+          }
+        },
+        "tab_item_UhV3CT": {
+          "type": "tab-item",
+          "settings": {
+            "title": "Do I need a special throttle mode for wheelies?",
+            "t_icon": "",
+            "t_color": "#ffffff",
+            "content": "<p>No special mode is required. The key is smooth throttle control—Macfox’s responsive motor system helps riders maintain balance and lift consistency.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_fqezjd",
+        "tab_item_yhBtqQ",
+        "tab_item_EhHYNc",
+        "tab_item_xkTHbL",
+        "tab_item_WQHpLK",
+        "tab_item_kxxUbA",
+        "tab_item_ccUNKf",
+        "tab_item_VebhqV",
+        "tab_item_MT3yfV",
+        "tab_item_UhV3CT"
+      ],
+      "name": "Tab Item",
+      "settings": {
+        "title": "FAQ About Wheelie E-Bikes",
+        "bg_color": "#121212"
+      }
+    },
+    "custom_home_carousel_discover_XDGnzc": {
+      "type": "custom-home-carousel-discover",
+      "disabled": true,
+      "name": "Carousel Discover",
+      "settings": {
+        "show_new": true,
+        "bl_handle": "news",
+        "bl_range": 9,
+        "bg_color": "#121212",
+        "topic": "The Most Popular Products",
+        "btn": "Read All",
+        "btn_link": "",
+        "arrow_left_icon": "",
+        "arrow_right_icon": ""
+      }
+    },
+    "custom_liquid_4fmwpB": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<style>\n    .cs-liquid-box {\n        position: relative;\n        width: 100%;\n        overflow: hidden;\n    }\n    .cs-liquid-box .mobile {\n        display: none;\n    }\n    .cs-liquid-content {\n        position: absolute;\n        top: -20%;\n        left: -35%;\n        padding: 30% 10% 30% 40%;\n        width: 80%;\n        height: 140%;\n        background-color: rgb(0 0 0 / 49%);\n        border-radius: 50%;\n    }\n    .cs-liquid-content h2 {\n        margin-bottom: 2vh;\n        font-size: 2vw;\n        line-height: 1.2;\n        color: #f2cb04;\n        font-family: Antonio;\n    }\n    .cs-liquid-content p {\n        color: #d6d6d6;\n        font-size: 1.2vw;\n        line-height: 1.5;\n    }\n    @media screen and (max-width: 768px) {\n        .cs-liquid-box .mobile {\n            display: block;\n        }\n        .cs-liquid-box .pc {\n            display: none;\n        }\n        .cs-liquid-content {\n            top: -30vw;\n            left: -20vw;\n            padding: 35vw 25vw 18vw 25vw;\n            width: 140vw;\n            height: 130vw;\n        }\n        .cs-liquid-content h2 {\n            font-size: 26px;\n            text-align: center;\n        }\n        .cs-liquid-content p {\n            font-size: 12px;\n        }\n    }\n</style>\n<div class=\"cs-liquid-box\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/1-03_1.webp?v=1758791764\" alt=\"\" class=\"cs-image full_width pc\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/1-04_1.webp?v=1758791752\" alt=\"\" class=\"cs-image full_width mobile\">\n    <div class=\"cs-liquid-content\">\n        <h2>Fat Bikes for All Terrains</h2>\n        <p>The Macfox fat tire electric bike combines the rugged durability of wide tires with the ease and fun of electric assistance, making it the perfect ride for any terrain. Whether you’re coasting along sandy beaches, cutting through snowy trails, or navigating bumpy city streets, Macfox has you covered with excellent stability, traction, and power. As one of the best electric bikes for adults, it’s designed for ultimate comfort and control, featuring adjustable suspension, powerful disc brakes, and battery options to fit your needs. So, whether you’re commuting, going off-road, or just exploring new places, the Macfox fat tire e-bike will be your trusty companion, making every journey smoother and more enjoyable.\n</p>\n    </div>\n</div>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#000000",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "custom_liquid_bVeYtD": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<style>\n    .cs-liquid-box2 {\n        display: flex;\n        flex-wrap: wrap;\n        gap: 1vw;\n        padding: 5vw;\n        width: 100vw;\n    }\n    .cs-liquid-box2 .box-left {\n        display: flex;\n        flex-wrap: wrap;\n        gap: 1vw;\n        width: 52vw;\n        height: 45vw;\n    }\n    .cs-liquid-box2 .box-left h2 {\n        display: flex;\n        align-items: center;\n        padding: 2vw;\n        width: 21vw;\n        height: 21vw;\n        background-color: #f2cb04;\n        font-size: 2vw;\n        line-height: 1.2;\n        font-weight: 700;\n        text-align: center;\n        font-family: Antonio;\n    }\n    .cs-liquid-box2 .box-left p {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        margin: 0;\n        padding: 2vw;\n        width: 30vw;\n        height: 21vw;\n        background-color: #1d1d1d;\n        font-size: 1vw;\n        color: #919191;\n        line-height: 1.5;\n        text-align: center;\n        overflow: hidden;\n    }\n    .cs-liquid-box2 .box-left div {\n        width: 52vw; \n        height: 23vw;\n    }\n    .cs-liquid-box2 .box-right {\n        width: 37vw;\n        height: 45vw;\n    }\n    .cs-liquid-box2 .box-bottom {\n        display: flex;\n        gap: 1vw;\n    }\n    .cs-liquid-box2 .box-bottom h2 {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        margin: 0;\n        padding: 2vw;\n        width: 40vw;\n        background-color: #1d1d1d;\n        font-size: 2vw;\n        color: #f2cb04;\n        line-height: 1.5;\n        font-weight: 700;\n        text-align: center;\n        font-family: Antonio;\n    }\n    .cs-liquid-box2 .box-bottom p {\n        margin: 0;\n        padding: 2vw;\n        width: 49vw;\n        background-color: #1d1d1d;\n        font-size: 1vw;\n        line-height: 1.5;\n        color: #919191;\n        text-align: center;\n    }\n    @media screen and (max-width: 768px) {\n        .cs-liquid-box2 {\n            padding: 15px;\n            gap: 15px;\n        }\n\n        .cs-liquid-box2 .box-left {\n            gap: 15px;\n            width: 100%;\n            height: auto;\n        }\n\n        .cs-liquid-box2 .box-left h2 {\n            padding: 30px;\n            width: 100%;\n            height: auto;\n            font-size: 26px;\n        }\n\n        .cs-liquid-box2 .box-left p {\n            padding: 30px;\n            width: 100%;\n            height: auto;\n            font-size: 12px;\n            text-align: left;\n        }\n\n        .cs-liquid-box2 .box-left div {\n            width: 100%;\n            height: auto;\n        }\n\n        .cs-liquid-box2 .box-right {\n            width: 100%;\n            height: auto;\n        }\n\n        .cs-liquid-box2 .box-bottom {\n            flex-direction: column;\n            gap: 15px;\n        }\n\n        .cs-liquid-box2 .box-bottom h2 {\n            padding: 30px;\n            width: 100%;\n            font-size: 26px;\n        }\n\n        .cs-liquid-box2 .box-bottom p {\n            padding: 30px;\n            width: 100%;\n            font-size: 12px;\n        }\n    }\n</style>\n<div class=\"cs-liquid-box2\">\n    <div class=\"box-left\">\n        <h2>Maximizing Range:Dual Batteries Assist Long-distance Riding</h2>\n        <p>Macfox long range ebikes are engineered to travel longer distances on a single charge, with high-capacity lithium-ion batteries typically ranging from 500Wh single cell to 1000Wh dual cell. These bikes are assisted by high-efficiency brushless motors and feature lightweight construction made of aluminum material. Advanced electronics optimize power delivery and monitor battery usage, providing real-time data on range and performance. Macfox electric bikes continue to improve range and performance through advances in battery technology and motor efficiency.</p>\n        <div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/macfox_-05.webp?v=1725243849\" alt=\"\" class=\"cs-image cover\">\n        </div>\n    </div>\n    <div class=\"box-right\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/1-05_1.webp?v=1758791854\" alt=\"\" class=\"cs-image cover\">\n    </div>\n    <div class=\"box-bottom\">\n        <h2>Power Perfected: Macfox Bikes' Rear Motor System</h2>\n        <p>The Macfox electric bike features a rear motor system, positioning its powerful propulsion unit at the rear wheel for optimal performance. This design choice embodies Macfox's commitment to innovation and engineering excellence, providing riders with a balanced and reliable riding experience. Whether navigating steep inclines or cruising through urban streets, the Macfox ebike's rear motor delivers smooth acceleration and responsive power delivery. With this advanced motor configuration, Macfox ensures that riders enjoy enhanced traction, efficiency, and control, making every journey an exhilarating adventure.</p>\n    </div>\n</div>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#000000",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "top": {
+      "type": "top-collections",
+      "blocks": {
+        "69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67": {
+          "type": "cat",
+          "settings": {
+            "collection": "default-3",
+            "icon": ""
+          }
+        },
+        "863873b6-012e-4a34-90e3-eead750fa3ce": {
+          "type": "cat",
+          "settings": {
+            "collection": "bag",
+            "icon": ""
+          }
+        },
+        "fc07bff9-6d08-423c-8802-9a03c34f3a31": {
+          "type": "cat",
+          "settings": {
+            "collection": "decor",
+            "icon": ""
+          }
+        },
+        "a286cc0b-0c90-4b1a-862c-a1136f283aac": {
+          "type": "cat",
+          "settings": {
+            "collection": "default-2",
+            "icon": ""
+          }
+        },
+        "23c84729-8fcb-488c-9541-00e283af6afe": {
+          "type": "cat",
+          "settings": {
+            "collection": "dress",
+            "icon": ""
+          }
+        },
+        "5f1d751a-fdac-43d4-ad9d-55da0c297244": {
+          "type": "cat",
+          "settings": {
+            "collection": "hats",
+            "icon": ""
+          }
+        },
+        "0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01": {
+          "type": "cat",
+          "settings": {
+            "collection": "electric-bike",
+            "icon": ""
+          }
+        },
+        "70189b51-5562-4924-b642-a1deba7741ee": {
+          "type": "cat",
+          "settings": {
+            "collection": "sale",
+            "icon": ""
+          }
+        },
+        "560f5822-3eeb-4070-a2cd-b5738881a4c1": {
+          "type": "cat",
+          "settings": {
+            "collection": "shoes",
+            "icon": ""
+          }
+        },
+        "be9b8b8f-6cac-47ab-b809-a2fe640a75a7": {
+          "type": "cat",
+          "settings": {
+            "collection": "women",
+            "icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67",
+        "863873b6-012e-4a34-90e3-eead750fa3ce",
+        "fc07bff9-6d08-423c-8802-9a03c34f3a31",
+        "a286cc0b-0c90-4b1a-862c-a1136f283aac",
+        "23c84729-8fcb-488c-9541-00e283af6afe",
+        "5f1d751a-fdac-43d4-ad9d-55da0c297244",
+        "0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01",
+        "70189b51-5562-4924-b642-a1deba7741ee",
+        "560f5822-3eeb-4070-a2cd-b5738881a4c1",
+        "be9b8b8f-6cac-47ab-b809-a2fe640a75a7"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_top_collections": true,
+        "source": "1",
+        "menu": "main-menu",
+        "sort_collections": "alphabetical_reversed",
+        "box_border": "top",
+        "content_align": "center",
+        "hidden_mobile": false,
+        "space_item": 30,
+        "fontf": "inherit",
+        "text_cl": "#222222",
+        "text_cl_hover": "#56cfe1",
+        "text_fs": 14,
+        "text_lh": 45,
+        "text_fw": 400,
+        "text_ls": 0,
+        "font_italic": false,
+        "nav_btn": true,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "slideshow_NY7GrE": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_jTtEd4": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/1_48e7626a-2adc-4f9e-b22a-c6b9d84ef444.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 20,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "custom_text_MhkJWR": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Summer 2022",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_text_TVm4e7": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "New Arrival Collection",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_button_9hCnXG": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        },
+        "image_parent_gMBnjX": {
+          "type": "image_parent",
+          "disabled": true,
+          "settings": {
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "custom_text_AGzEPV": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Summer 2022",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_text_Y6YDjr": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Lookbook Collection",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_button_CYqhYK": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        },
+        "custom_text_UHCpTd": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Long Range Fat Tire Electric Bike",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 10,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 8,
+            "animation": "none"
+          }
+        },
+        "html_hym3cg": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "html_content": "<h1 style=\"color:#fff;font-size:1rem;margin:0 auto\">Long Range Fat Tire Electric Bike</h1>",
+            "hidden_mobile": false,
+            "animation": "fadeInDown"
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_jTtEd4",
+        "custom_text_MhkJWR",
+        "custom_text_TVm4e7",
+        "custom_button_9hCnXG",
+        "image_parent_gMBnjX",
+        "custom_text_AGzEPV",
+        "custom_text_Y6YDjr",
+        "custom_button_CYqhYK",
+        "custom_text_UHCpTd",
+        "html_hym3cg"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "slideshow_mDBW3k": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_w3yQjW": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Macfox_banner__1_5_1.jpg",
+            "image_mb": "shopify://shop_images/Macfox_banner-03_1.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "custom_text_xbnwrj": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Summer 2022",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_text_jhka7g": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "New Arrival Collection",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_button_yh8ggP": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        },
+        "image_parent_kxpJKT": {
+          "type": "image_parent",
+          "disabled": true,
+          "settings": {
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "custom_text_yCRmNx": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Summer 2022",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_text_WTXrGe": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Lookbook Collection",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_button_Xr3yWx": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_w3yQjW",
+        "custom_text_xbnwrj",
+        "custom_text_jhka7g",
+        "custom_button_yh8ggP",
+        "image_parent_kxpJKT",
+        "custom_text_yCRmNx",
+        "custom_text_WTXrGe",
+        "custom_button_Xr3yWx"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "heading_template": {
+      "type": "heading-template",
+      "blocks": {
+        "a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9": {
+          "type": "1",
+          "settings": {
+            "heading": "Long Range Fat Tire Electric Bike",
+            "fontf": "1",
+            "text_cl": "#ffffff",
+            "text_fs": 20,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": true,
+            "font_uppercase": true,
+            "text_shadow": true,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20
+          }
+        },
+        "e9f249a0-0a0f-4baf-9664-73babbd7bbe7": {
+          "type": "4",
+          "settings": {
+            "design_des": "show_all",
+            "length": 60,
+            "view_more": true,
+            "viewm_txt": "View more",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20
+          }
+        }
+      },
+      "block_order": [
+        "a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9",
+        "e9f249a0-0a0f-4baf-9664-73babbd7bbe7"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/banner__1_1.jpg",
+        "use_specify_image": false,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 50,
+        "padding": 100,
+        "paddingmb": 100,
+        "mg_b": 0,
+        "mg_bmb": 0,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-collection",
+      "blocks": {
+        "c7bdf308-8019-4991-b58c-6d3e205a52eb": {
+          "type": "category",
+          "settings": {
+            "heading": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "9d37e80a-1eda-4a65-bb08-199e6a933a16": {
+          "type": "collection",
+          "settings": {
+            "heading": "Sale Products",
+            "collection": "electric-bike",
+            "limit_pr": 3,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "c090f36e-d6ef-4a2a-ab04-cc78211dadb7": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "img_effect": "zoom",
+            "b_link": "",
+            "open_link": "_self",
+            "content_align": "center",
+            "date": "2022/12/26",
+            "cdt_des": "1",
+            "countdown_pos": "2",
+            "cdt_size": "small",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#222222",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "c7bdf308-8019-4991-b58c-6d3e205a52eb",
+        "9d37e80a-1eda-4a65-bb08-199e6a933a16",
+        "c090f36e-d6ef-4a2a-ab04-cc78211dadb7"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 0,
+        "sidebar_pd": 15
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "filter_id": {
+          "type": "filter",
+          "settings": {}
+        },
+        "740319a4-8e19-4c70-b8a9-ada7cf235cbc": {
+          "type": "layout",
+          "settings": {}
+        },
+        "30594d23-d644-4653-9545-9ff769d2e6ab": {
+          "type": "sortby",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "filter_id",
+        "740319a4-8e19-4c70-b8a9-ada7cf235cbc",
+        "30594d23-d644-4653-9545-9ff769d2e6ab"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_desc": false,
+        "position_desc": "2",
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": true,
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "limit": 12,
+        "enable_listing": true,
+        "enable_listing_default": false,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "use_pagination": "default",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "outline",
+        "btns_size": "large",
+        "btns_cl": "primary",
+        "button_effect": "sweep-to-right",
+        "btn_pos": "t4s-text-center",
+        "type_filters": "facets",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_html_zXNzVd": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "code": "<style>\n    .max_width {\n        max-width: 1400px;\n        margin: 0 auto;\n    }\n\n    .cs_main_advantage {\n        display: flex;\n        width: 100%;\n        /* height: 48rem; */\n        background: #9E6E5B;\n        margin-bottom: 5.7rem;\n    }\n\n    .main_advantage_le {\n        width: 60%;\n        padding: 4.0rem 8.6rem 4rem 5.0rem;\n    }\n\n    .main_advantage_title {\n        font-weight: bold;\n        font-size: 4rem;\n        color: #FFFFFF;\n        line-height: 4.2rem;\n        letter-spacing: 3px;\n        margin-bottom: 20px;\n    }\n\n    .main_advantage_text {\n        font-weight: 500;\n        font-size: 1.8rem;\n        color: #FFFFFF;\n        line-height: 3rem;\n    }\n\n    .main_advanrage_ri {\n        width: 40%;\n        /* height: 100%; */\n    }\n\n    .main_advanrage_ri img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n\n    .cs_minor_advantage {\n        display: flex;\n        width: 100%;\n        height: 40rem;\n        margin-bottom: 120px;\n    }\n\n    .minor_advantage_le {\n        width: 55%;\n        height: 100%;\n    padding: 0 20px 20px 20px;\n    }\n\n    .minor_advantage_le img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n\n    .minor_advantage_ri {\n        position: relative;\n        width: 45%;\n        padding: 2.1rem 5rem;\n    }\n\n    .minor_advantage_title {\n        font-weight: 600;\n        font-size: 2.7rem;\n        color: #9E6E5B;\n        line-height: 3.6rem;\n        margin-bottom: 20px;\n    }\n\n    .minor_advantage_text {\n        font-weight: 400;\n        font-size: 1.6rem;\n        color: #4F4F4F;\n        line-height: 2.3rem;\n    }\n\n    .minor_advantage_dom {\n        align-items: end;\n        height: auto;\n    }\n\n    .minor_advantage_dom .minor_advantage_ri {\n        padding: 0;\n    }\n\n    .minor_advantage_ri img {\n        position: absolute;\n        bottom: 0;\n        left: 5rem;\n        width: calc(100% - 5rem);\n        height: 34.3rem;\n        object-fit: cover;\n    }\n\n    .cs_advantage_con {\n        display: flex;\n        justify-content: space-between;\n        flex-wrap: wrap;\n    }\n\n    .cs_advantage_item {\n        display: flex;\n        width: calc(50% - 25px);\n        height: 32.9rem;\n        padding: 2.9rem;\n        background: #F4F4F4;\n        margin-bottom: 50px;\n    }\n\n    .advantage_item_title {\n        font-weight: 600;\n        font-size: 2.9rem;\n        color: #9E6E5B;\n        line-height: 3.4rem;\n        margin-bottom: 20px;\n    }\n\n    .advantage_item_text {\n        font-weight: 400;\n        font-size: 1.3rem;\n        color: #4F4F4F;\n        line-height: 2.3rem;\n    }\n\n    .advantage_item_le {\n        width: 65%;\n        padding-right: 2.9rem;\n    }\n\n    .advantage_item_ri {\n        width: 35%;\n    }\n\n    .advantage_item_ri img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n\n    @media screen and (max-width: 769px) {\n\n        .max_width {\n            width: 100%;\n            padding: 0 12px;\n        }\n\n        .cs_main_advantage {\n            flex-direction: column-reverse;\n            flex-wrap: wrap;\n            height: 110vh;\n\n        }\n\n        .main_advantage_le {\n            width: 100%;\n            height: 60%;\n            padding: 20px;\n        }\n\n        .main_advantage_title {\n            font-weight: bold;\n            font-size: 40px;\n            color: #FFFFFF;\n            line-height: 48px;\n            letter-spacing: 1px;\n        }\n\n        .main_advanrage_ri {\n            width: 100%;\n            height: 40%;\n        }\n\n        .main_advantage_text {\n            font-size: 14px;\n            line-height: 26px;\n        }\n\n        .cs_minor_advantage {\n            flex-wrap: wrap;\n            height: 110vh;\n            margin-bottom: 30px;\n        }\n\n        .minor_advantage_le {\n            width: 100%;\n            height: 40%;\n        }\n\n        .minor_advantage_ri {\n            width: 100%;\n            height: 60%;\n            padding: 20px;\n        }\n\n        .minor_advantage_ri img {\n            position: inherit;\n            width: 100%;\n            height: 100%;\n            left: 0;\n        }\n\n        .minor_advantage_dom {\n            flex-direction: column-reverse;\n        }\n\n        .minor_advantage_dom .minor_advantage_le {\n            width: 100%;\n            height: 60%;\n            padding: 20px;\n        }\n\n        .minor_advantage_dom .minor_advantage_ri {\n            width: 100%;\n            height: 40%;\n        }\n\n        .cs_advantage_item {\n            display: flex;\n            flex-wrap: wrap;\n            width: 100%;\n            height: 500px;\n            padding: 20px;\n        }\n\n        .cs_advantage_item .advantage_item_le {\n            width: 100%;\n            height: 60%;\n            padding-right: 0;\n        }\n\n        .cs_advantage_item .advantage_item_ri {\n            width: 100%;\n            height: 40%;\n        }\n    }\n</style>\n\n<div class=\"max_width\">\n    <div class=\"cs_main_advantage\">\n        <div class=\"main_advantage_le\">\n            <h2 class=\"main_advantage_title\">\n                Fat Bikes for All Terrains\n            </h2>\n            <div class=\"main_advantage_text\">\n                The Macfox fat tire electric bike combines the rugged versatility of wide tires with the convenience of electric assistance, offering riders an exhilarating way to conquer any terrain. Whether you're navigating sandy beaches, snowy trails, or rough urban streets, the Macfox provides stability, traction, and effortless pedaling power. With features like adjustable suspension, powerful disc brakes, and customizable battery options, Macfox bikes are engineered for comfort, control, and durability. Whether you're commuting to work, exploring off-road trails, or embarking on urban adventures, the Macfox fat tire ebike is your reliable companion for every journey.\n            </div>\n        </div>\n        <div class=\"main_advanrage_ri\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/E-Bike-Customization.jpg?v=1709103407\" alt=\"Macfox Fat Tire Electric Bike\">\n        </div>\n    </div>\n\n    <div class=\"cs_minor_advantage\">\n        <div class=\"minor_advantage_le\">\n           <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/E-Bike-Trails-In-The-USA.jpg?v=1709007851\" alt=\"Macfox Long Range Electric Bike\">\n        </div>\n        <div class=\"minor_advantage_ri\">\n            <h2 class=\"minor_advantage_title\">\n                Maximizing Range:Dual Batteries Assist Long-distance Riding\n            </h2>\n            <div class=\"minor_advantage_text\">\n                Macfox long range ebikes are engineered to travel longer distances on a single charge, with high-capacity lithium-ion batteries typically ranging from 500Wh single cell to 1000Wh dual cell. These bikes are assisted by high-efficiency brushless motors and feature lightweight construction made of aluminum material. Advanced electronics optimize power delivery and monitor battery usage, providing real-time data on range and performance. Macfox electric bikes continue to improve range and performance through advances in battery technology and motor efficiency.\n            </div>\n        </div>\n    </div>\n\n    <div class=\"cs_minor_advantage minor_advantage_dom\">\n        <div class=\"minor_advantage_le\">\n            <h2 class=\"minor_advantage_title\">\n                Power Perfected: Macfox Bikes' Rear Motor System\n            </h2>\n            <div class=\"minor_advantage_text\">\n                The Macfox electric bike features a rear motor system, positioning its powerful propulsion unit at the rear wheel for optimal performance. This design choice embodies Macfox's commitment to innovation and engineering excellence, providing riders with a balanced and reliable riding experience. Whether navigating steep inclines or cruising through urban streets, the Macfox ebike's rear motor delivers smooth acceleration and responsive power delivery. With this advanced motor configuration, Macfox ensures that riders enjoy enhanced traction, efficiency, and control, making every journey an exhilarating adventure.\n            </div>\n        </div>\n        <div class=\"minor_advantage_ri\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/E-Bike-In-Urban-Environment.jpg?v=1706149284\" alt=\"Macfox rear motor\">\n        </div>\n    </div>\n</div>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_page_faq_PBzFKw": {
+      "type": "custom-page-faq",
+      "blocks": {
+        "faq_cyrUXc": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "What Is an Electric Bike?",
+            "faq_content": "An electric bike is a bicycle equipped with an electric motor and battery that provides assistance while riding. It can be ridden using pedal power, motor power, or a combination of both, making riding easier and more enjoyable."
+          }
+        },
+        "faq_MX7HhH": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "What Is the Range of an Electric Bike?",
+            "faq_content": "The range of an electric bike depends on factors such as battery capacity, terrain, riding speed, and rider weight. Generally speaking, the range of the fat tire electric bike series launched by Macfox is 38-90 miles, and factors that affect the range of an electric bike include rider weight, the level of pedal assist used by the rider, how often the rider uses the throttle, terrain, speed, weather conditions, towing weight, etc."
+          }
+        },
+        "faq_jtwADR": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "What Is the Top Speed of an Electric Bike?",
+            "faq_content": "The top speed of an electric bike varies from model to model. Macfox electric bikes typically have a top speed of 25 to 28 miles per hour. For specific details, please refer to the product specifications of each model."
+          }
+        },
+        "faq_xFEPMU": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "Who Can Ride an MACFOX Electric Bike?",
+            "faq_content": "Electric bikes are suitable for teenagers and riding needs. Whether it is daily commuting, leisure riding or outdoor adventure, electric bikes can provide a convenient and comfortable riding experience."
+          }
+        },
+        "faq_HNCVme": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "Do I Need a Driver's License to Ride an Electric Bike?",
+            "faq_content": "In most countries and regions, you can ride an electric bike without a driver's license. However, specific regulations may vary, so it is recommended to check local laws and regulations before purchasing and using an electric bike."
+          }
+        },
+        "faq_CTBRiy": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "What Is the Warranty Policy for Electric Bikes?",
+            "faq_content": "We provide owners with a 2-year all-inclusive manufacturer warranty. Please refer to the product documentation or contact customer service for detailed <a href=\"https://macfoxbike.com/pages/general-warranty\" style=\"color: #3598db;\">warranty terms</a>."
+          }
+        },
+        "faq_UyRxdh": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "How to Choose an Electric Bike That Is Right for Me?",
+            "faq_content": "When choosing an electric bike, please consider your riding needs, budget, and intended use. Macfox offers a variety of options, including <a href=\"https://macfoxbike.com/products/macfox-x1\" style=\"color: #3598db;\">commuter ebike</a>, <a href=\"https://macfoxbike.com/products/macfox-x2\" style=\"color: #3598db;\">off road electric bike</a>, and <a href=\"https://macfoxbike.com/products/macfox-m19\" style=\"color: #3598db;\">kids electric bikes</a>, to meet different preferences and requirements. Whether you’re looking for a practical solution for daily commuting, an adventurous ride for rough terrains, or a safe and enjoyable option for your child, Macfox has the right model for you. Check product specifications and customer reviews to choose the model that best suits your needs."
+          }
+        }
+      },
+      "block_order": [
+        "faq_cyrUXc",
+        "faq_MX7HhH",
+        "faq_jtwADR",
+        "faq_xFEPMU",
+        "faq_HNCVme",
+        "faq_CTBRiy",
+        "faq_UyRxdh"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "FAQ About Macfox Electric Bike",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "blog_post_manual_xVbqKb": {
+      "type": "blog-post-manual",
+      "blocks": {
+        "article_kybYCi": {
+          "type": "article",
+          "settings": {
+            "article": "news/bikes-wheelies"
+          }
+        },
+        "article_ndk4PD": {
+          "type": "article",
+          "settings": {
+            "article": "news/how-to-do-a-wheelie-on-a-ebike"
+          }
+        }
+      },
+      "block_order": [
+        "article_kybYCi",
+        "article_ndk4PD"
+      ],
+      "disabled": true,
+      "name": "Blog post manual",
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-start",
+        "top_heading": "Blog post manual",
+        "icon_heading": "",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "post_des": "1",
+        "show_cate": false,
+        "show_tags": false,
+        "show_cnt": true,
+        "show_au": true,
+        "show_dt": true,
+        "show_cm": false,
+        "show_rm": false,
+        "date": "date",
+        "content_align": "t4s-text-start",
+        "limit": 8,
+        "img_effect": "none",
+        "b_effect": "none",
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "collections_list_simple_bXGJab": {
+      "type": "collections-list-simple",
+      "blocks": {
+        "collection_item_CwjDYK": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection",
+            "collection_link": ""
+          }
+        },
+        "collection_item_9LtcDr": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection",
+            "collection_link": ""
+          }
+        },
+        "collection_item_jK9jcA": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection",
+            "collection_link": ""
+          }
+        },
+        "collection_item_EhYrTA": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection",
+            "collection_link": ""
+          }
+        },
+        "collection_item_PbciAg": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection",
+            "collection_link": ""
+          }
+        },
+        "collection_item_wtW7jA": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection",
+            "collection_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_CwjDYK",
+        "collection_item_9LtcDr",
+        "collection_item_jK9jcA",
+        "collection_item_EhYrTA",
+        "collection_item_PbciAg",
+        "collection_item_wtW7jA"
+      ],
+      "disabled": true,
+      "name": "Collection list simple",
+      "settings": {
+        "title_cl": "#ffffff",
+        "title_cl_hover": "#f2cb04",
+        "open_link": "_self",
+        "space_item_dk": 100,
+        "space_item_tb": 100,
+        "space_item_mb": 25,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#121212",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "custom_internal_link_E4QgUK": {
+      "type": "custom-Internal-link",
+      "name": "Custom Internal Link",
+      "settings": {
+        "internal_links": "wheelie-re",
+        "theme": "black",
+        "title_align": "left"
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_CA9T9r",
+    "custom_banner_XE3rNp",
+    "slideshow_etreXa",
+    "custom_countdown_zMBP9J",
+    "custom_collections_banner_7E9yVG",
+    "custom_collections_tags_q9Y3cf",
+    "custom_collections_main_RjyJBb",
+    "custom_collections_community_L76mjK",
+    "custom_collections_describe_gMRkak",
+    "custom_product_tabs_zy6jqD",
+    "custom_home_carousel_discover_XDGnzc",
+    "custom_liquid_4fmwpB",
+    "custom_liquid_bVeYtD",
+    "top",
+    "slideshow_NY7GrE",
+    "slideshow_mDBW3k",
+    "heading_template",
+    "sidebar",
+    "main",
+    "custom_html_zXNzVd",
+    "custom_page_faq_PBzFKw",
+    "blog_post_manual_xVbqKb",
+    "collections_list_simple_bXGJab",
+    "custom_internal_link_E4QgUK"
+  ]
+}

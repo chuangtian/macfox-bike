@@ -1,0 +1,126 @@
+{% liquid
+  assign sid = section.id
+%}
+
+{% assign intro_title_tag = section.settings.title_tag | default: 'h1' %}
+<div class="collection-intro-{{ sid }}">
+  <{{ intro_title_tag }} class="collection-intro-title-{{ sid }}">{{ collection.title }}</{{ intro_title_tag }}>
+
+  {% if section.settings.describe != blank %}
+    <div class="collection-intro-desc-{{ sid }}">
+      {{ section.settings.describe }}
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  #shopify-section-{{ sid }}{
+    background-color: #121212;
+    color: #ffffff;
+    padding-top: 20px !important;
+    padding-bottom: 10px !important;
+    margin: 0 !important;
+    min-height: auto !important;
+  }
+
+  #shopify-section-{{ sid }} .collection-intro-{{ sid }}{
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 30px !important;
+    box-sizing: border-box;
+  }
+
+  #shopify-section-{{ sid }} .collection-intro-title-{{ sid }}{
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 700;
+    text-align: left !important;
+  }
+
+  #shopify-section-{{ sid }} .collection-intro-desc-{{ sid }}{
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: left !important;
+    max-width: none !important;
+  }
+
+  #shopify-section-{{ sid }} .collection-intro-desc-{{ sid }},
+  #shopify-section-{{ sid }} .collection-intro-desc-{{ sid }} span,
+  #shopify-section-{{ sid }} .collection-intro-desc-{{ sid }} a,
+  #shopify-section-{{ sid }} .collection-intro-desc-{{ sid }} em{
+    color: #ffffff !important;
+  }
+
+  #shopify-section-{{ sid }} .collection-intro-desc-{{ sid }} strong,
+  #shopify-section-{{ sid }} .collection-intro-desc-{{ sid }} b{
+    color: #f2cb04 !important;
+    font-weight: 700 !important;
+  }
+
+  @media (max-width: 767px){
+    #shopify-section-{{ sid }}{
+      padding-top: 20px !important;
+      padding-bottom: 10px !important;
+    }
+
+    #shopify-section-{{ sid }} .collection-intro-{{ sid }}{
+      padding: 0 16px !important;
+    }
+
+    #shopify-section-{{ sid }} .collection-intro-title-{{ sid }}{
+      font-size: 28px;
+      line-height: 1.15;
+      margin: 0 0 10px 0 !important;
+    }
+
+    #shopify-section-{{ sid }} .collection-intro-desc-{{ sid }}{
+      font-size: 14px;
+      line-height: 1.45;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Collection Describe no",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "标题标签",
+      "info": "控制标题的 HTML 标签（影响 SEO 与语义，样式不变）",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" },
+        { "value": "p", "label": "段落 (p)" },
+        { "value": "div", "label": "普通容器 (div)" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "textarea",
+      "id": "describe",
+      "label": "描述"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collections Describe no",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

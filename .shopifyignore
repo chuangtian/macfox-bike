@@ -1,0 +1,11 @@
+.git/*
+.github/*
+.gitignore
+.shopifyignore
+.DS_Store
+.env*
+.shopify/*
+node_modules/*
+package.json
+package-lock.json
+README.md

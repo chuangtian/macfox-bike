@@ -1,0 +1,519 @@
+<!-- sections/main-blog.liquid -->
+{{ 'blog.css' | asset_url | stylesheet_tag }}
+{{ 'section.css' | asset_url | stylesheet_tag }}
+{{ 'loading.css' | asset_url | stylesheet_tag }}
+{{ 'button-style.css' | asset_url | stylesheet_tag }}
+{{ 'custom-effect.css' | asset_url | stylesheet_tag }}
+{{ 'custom-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+  assign stt_layout = se_stts.layout
+  assign stt_image_bg = se_stts.image_bg
+  if stt_layout == 't4s-se-container'
+    assign html_layout = '<div class="t4s-container">__</div></div>' | split: '__'
+  elsif stt_layout == 't4s-container-wrap'
+    assign html_layout = '<div class="t4s-container">__</div>' | split: '__'
+  else
+    assign html_layout = '__' | split: '__'
+  endif
+  assign layout_des = se_stts.layout_des
+  assign art_des = se_stts.art_des
+  assign by_txt = 'blogs.article.by' | t
+  assign on_txt = 'blogs.article.on' | t
+  assign readmore_txt = 'blogs.article.read_more' | t
+  assign all_tags = blog.all_tags
+  assign date = se_stts.date
+  assign b_effect = se_stts.b_effect
+  assign img_effect = se_stts.img_effect
+  assign show_cate = se_stts.show_cate
+  assign show_tags = se_stts.show_tags
+  assign show_cnt = se_stts.show_cnt
+  assign show_au = se_stts.show_au
+  assign show_cm = se_stts.show_cm
+  assign show_dt = se_stts.show_dt
+  assign show_rm = se_stts.show_rm
+  assign show_irm = se_stts.show_irm
+  assign col_dk = se_stts.col_dk
+  assign col_tb = se_stts.col_tb
+  assign col_mb = se_stts.col_mb
+  if art_des == '4'
+    if col_dk != '1'
+      assign col_dk = '2'
+    endif
+    if col_tb != '1'
+      assign col_tb = '2'
+    endif
+  endif
+  assign source = se_stts.source
+  assign limit = se_stts.limit
+  assign blog_url = blog.url
+  assign use_pagination = se_stts.use_pagination
+  assign isLoadmore = false
+  if layout_des != '2'
+    if use_pagination == 'load-more' or use_pagination == 'infinite'
+      assign isLoadmore = true
+      assign typeAjax = 'LmDefault'
+    else
+      assign typeAjax = 'AjaxDefault'
+    endif
+  else
+    if use_pagination == 'load-more' or use_pagination == 'infinite'
+      assign isLoadmore = true
+      assign typeAjax = 'LmIsotope'
+    else
+      assign typeAjax = 'AjaxIsotope'
+    endif
+  endif
+  assign use_bar_lm = se_stts.use_bar_lm
+  assign results_count = blog.articles_count
+-%}
+{% assign all_blogs = blogs.all %}
+{% assign blog_size = blog.articles.size %}
+{% assign path = request.path %}
+{% assign last_part = path | split: '/' | last %}
+{% assign custom_blog_data = blog.metafields.custom.customblogdata.value %}
+{% for blog in all_blogs %}
+  {% assign blog_articles = blog.articles %}
+
+  {% for article in blog_articles %}
+    {% assign article_tags = article.tags %}
+
+    {% for tag in article_tags %}
+      {% unless all_tags contains tag %}
+        {% assign all_tags = all_tags | push: tag %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+<div class="custom_main_blog">
+  <div class="flex items-center justify-between flex-row md:flex-col !px-[12px] relative">
+    {% assign current_tag_title = '' %}
+
+{% if path contains '/tagged/' %}
+  {% for tag in all_tags %}
+    {% assign tag_handle = tag | handle %}
+    {% if tag_handle == last_part %}
+      {% assign current_tag_title = tag %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<h1 class="blog_main_title !text-3xl font-semibold w-fit">
+  <a href="{{ blog_url }}">
+    {% if current_tag_title != blank %}
+      {{ current_tag_title }} | {{ blog.title }}
+    {% else %}
+      {{ blog.title }}
+    {% endif %}
+  </a>
+</h1>
+
+    <div class="blog_nav_arr">
+      <div class="mb_nav_arr size-[30px] ">
+        <svg
+          class="p-[5px]"
+          t="1708498918545"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="15067"
+        >
+          <path
+            d="M44.4 245.9h935.2c24.4 0 44.4-20 44.4-44.4s-19.8-44.4-44.4-44.4H44.4C20 157.1 0 177.1 0 201.5s20 44.4 44.4 44.4z m935.2 221.8H44.4C20 467.7 0 487.7 0 512.1s20 44.4 44.4 44.4h935.2c24.4 0 44.4-20 44.4-44.4s-20-44.4-44.4-44.4z m0 310.4H44.4C20 778.1 0 797.8 0 822.5s20 44.4 44.4 44.4h935.2c24.4 0 44.4-19.8 44.4-44.4s-20-44.4-44.4-44.4z"
+            p-id="15068" fill="#ffffff"></path>
+        </svg>
+      </div>
+ <ul class=" absolute md:static w-full z-[999] bg-[#ffffff] left-0">
+  <li class="blog_nav_li{% if blog.handle == 'news' %} blog_nav_active{% endif %}">
+    <a href="/blogs/news">Home</a>
+  </li>
+
+  <li class="blog_nav_li{% if blog.handle == 'youth-riding' %} blog_nav_active{% endif %}">
+    <a href="/blogs/youth-riding">Youth Riding</a>
+  </li>
+
+  <li class="blog_nav_li{% if blog.handle == 'knowledge' %} blog_nav_active{% endif %}">
+    <a href="/blogs/knowledge">Knowledge</a>
+  </li>
+
+  <li class="blog_nav_li{% if blog.handle == 'e-bike-trails' %} blog_nav_active{% endif %}">
+    <a href="/blogs/e-bike-trails">E-Bike Trails</a>
+  </li>
+
+  <li class="blog_nav_li{% if blog.handle == 'best-ebike-guide' %} blog_nav_active{% endif %}">
+    <a href="/blogs/best-ebike-guide">Best eBike Guide</a>
+  </li>
+
+  <li class="blog_nav_li{% if blog.handle == 'insurance' %} blog_nav_active{% endif %}">
+    <a href="/blogs/insurance">Insurance</a>
+  </li>
+</ul>
+    </div>
+  </div>
+
+  {%- for block in se_blocks -%}
+    {%- if block.type == 'featured_articles' -%}
+      {%- assign featured_articles = block.settings -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if featured_articles != blank -%}
+    <div class="blog_dom_tp !h-fit">
+      <div class="blog_dom_le">
+        {%- assign post = featured_articles.article_1 -%}
+        <div class="swiper-slide">
+          <div
+            class="blog_slide_dom flex flex-col justify-end rounded-xl overflow-hidden"
+            style="background: url({{ post.image | image_url }}) no-repeat center/cover;"
+          >
+            <div class="blog_slide_con">
+              <h3 class="theme-banner-title !text-white !leading-[1.2] !text-2xl" title="{{ post.title }}">
+                {{- post.title -}}
+              </h3>
+              <div class="theme-banner-meta !text-lg">
+                <div class="flex items-center">
+                  <img
+                    class="!size-[16px]"
+                    src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/data_white.svg?v=1708409878"
+                    alt=""
+                    width="auto"
+                    height="auto"
+                  >
+                  <span>{{ post.published_at | time_tag: format: 'basic' }}</span>
+                </div>
+                <div class="flex items-center">
+                  <img
+                    class="!size-[16px]"
+                    src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/admin_white.svg?v=1708409878"
+                    alt=""
+                    width="auto"
+                    height="auto"
+                  >
+                  <span>{{ post.author | replace_first: 'ad clnt', 'admin' }}</span>
+                </div>
+              </div>
+            </div>
+            <a class="blog_slide_link" href="{{post.url}}"></a>
+          </div>
+        </div>
+      </div>
+      <div class="blog_dom_ri">
+        <div class="blog_dom_grid gap-3">
+          {% for fea_art in featured_articles offset: 6 limit: 4 %}
+            {%- assign post = featured_articles[fea_art] -%}
+            <figure class="gallery__item gallery__item--2 overflow-hidden rounded-lg h-full">
+              <div
+                class="blog_dom_figure !flex bg-[#f7f8fa] md:bg-transparent !h-[100px] md:!h-full relative"
+              >
+                <div class="blog_slide_con flex flex-col justify-between w-[70%] md:w-full static md:absolute md:!bottom-0 md:z-10 md:bg-[#000]/30">
+                  <h3
+                    class="theme-banner-title line-clamp-2 !leading-[1.2] !mb-2 !text-lg !text-black md:!text-white md:!text-base"
+                    title="{{ post.title }}"
+                  >
+                    {{- post.title -}}
+                  </h3>
+                  <div class="theme-banner-meta !text-[#a6a6a7] md:!text-white flex items-center">
+                    <div class="flex items-center">
+                      <img
+                        class="contrast-10 md:contrast-100"
+                        src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/data_white.svg?v=1708409878"
+                        alt=""
+                        width="auto"
+                        height="auto"
+                      >
+                      <span class="!text-lg">{{ post.published_at | time_tag: format: 'basic' }}</span>
+                    </div>
+                    <div class="flex items-center">
+                      <img
+                        class="contrast-10 md:contrast-100"
+                        src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/admin_white.svg?v=1708409878"
+                        alt=""
+                        width="auto"
+                        height="auto"
+                      >
+                      <span class="!text-lg">{{ post.author | replace_first: 'ad clnt', 'admin' }}</span>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  class="!w-[30%] md:!w-full !h-auto md:!h-full md:absolute md:top-0"
+                  src="{{ post.image | image_url }}"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                >
+                <a class="blog_slide_link z-20" href="{{ post.url }}"></a>
+              </div>
+            </figure>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="blog_dom_bt">
+    <div class="blog_dom_list">
+      {%- paginate blog.articles by se_stts.page_size -%}
+        <div class="blog_list_con grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
+          {% for post in blog.articles offset: 0 %}
+            <div class="blog_list_item w-full flex flex-col !bg-[#eeeff0] rounded-xl overflow-hidden relative">
+              <img
+                class=" w-full h-auto object-cover aspect-[4/3]"
+                src="{{ post.image | image_url }}"
+                alt="{{ post.image }}"
+                width="100%"
+                height="auto"
+              >
+
+              <div class=" flex flex-col flex-1 justify-between">
+                <h2
+                  class="blog_list_title !text-2xl md:!text-xl !px-[10px] line-clamp-2 !mt-2"
+                  title="{{ post.title }}"
+                >
+                  {{ post.title }}
+                </h2>
+                <div class="blog_list_info">
+                  <div class="blog-info-le flex w-full justify-between md:items-center">
+                    <div class="flex items-center">
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/data_gray.svg?v=1708409879"
+                        alt=""
+                        width=""
+                        height=""
+                      >
+                      <span>{{ post.published_at | time_tag: format: 'basic' }}</span>
+                    </div>
+                    {% if post.tags.size > 0 %}
+                      {% assign fristtag = post.tags[0] %}
+                      <a
+                        class=" relative z-20"
+                        href="{{ blog_url }}/tagged/{{ fristtag | handle }}"
+                        class="t4s-post-text-color"
+                      >
+                        {{- fristtag | remove: 'category_' | strip -}}
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              <a class=" absolute w-full h-full z-10 bottom-0" href="{{ post.url }}"></a>
+            </div>
+          {% endfor %}
+        </div>
+        {%- if paginate.pages > 1 -%}
+          <div class="t4s-blog-footer t4s-col-item t4s-has-btn-{{use_pagination}} {{se_stts.btn_pos}}">
+            {%- if use_pagination == 'default' -%}
+              {%- render 'pagination', paginate: paginate, anchor: '' -%}
+            {%- elsif paginate.next['is_link-'] %}
+              <div data-wrap-lm class="t4s-pagination-wrapper t4s-w-100">
+                {%- if use_bar_lm -%}
+                  <div data-wrap-lm-bar class="t4s-lm-bar t4s-btn-color-{{se_stts.btn_cl}}">
+                    {%- assign current_pr_size = blog.articles.size | plus: paginate.current_offset -%}
+                    <span class="t4s-lm-bar--txt">
+                      {{-
+                        'blogs.pagination.bar_with_count_html'
+                        | t: current_count: current_pr_size, total_count: results_count
+                      -}}
+                    </span>
+                    <div class="t4s-lm-bar--progress t4s-pr t4s-oh">
+                      <span
+                        class="t4s-lm-bar--current t4s-pa t4s-l-0 t4s-r-0 t4s-t-0 t4s-b-0"
+                        style="width: {{current_pr_size | times:100.0 | divided_by: results_count}}%"
+                      ></span>
+                    </div>
+                  </div>
+                {%- endif -%}
+                <a
+                  data-load-more
+                  {% if use_pagination == 'infinite' %}
+                    data-load-onscroll
+                  {% endif %}
+                  href="{{ paginate.next.url }}"
+                  class="t4s-pr t4s-btn-loading__svg t4s-btn t4s-btn-base t4s-btn-style-{{se_stts.button_style}} t4s-btn-size-{{se_stts.btn_size}} t4s-btn-icon-{{se_stts.btn_icon}} t4s-btn-color-{{se_stts.btn_cl}} {% if se_stts.button_style == 'default' or se_stts.button_style == 'outline'%}t4s-btn-effect-{{se_stts.button_effect}}{% endif %}"
+                  ><span class="t4s-btn-atc_text">{{ 'blogs.pagination.load_more' | t }}</span>
+                  {%- if se_stts.btn_icon -%}
+                    <svg class="t4s-btn-icon" viewBox="0 0 32 32">
+                      <path d="M 15 4 L 15 24.0625 L 8.21875 17.28125 L 6.78125 18.71875 L 15.28125 27.21875 L 16 27.90625 L 16.71875 27.21875 L 25.21875 18.71875 L 23.78125 17.28125 L 17 24.0625 L 17 4 Z"/>
+                    </svg>
+                  {%- endif -%}
+                  <div class="t4s-loading__spinner t4s-dn">
+                    <svg
+                      width="16"
+                      height="16"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="t4s-svg__spinner"
+                      viewBox="0 0 66 66"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle class="t4s-path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endpaginate -%}
+    </div>
+    <div class="blog_dom_menu">
+      {% comment %}
+        <div class="blog_menu_nav">
+          <h5>Hot Articles</h5>
+          <ul>
+            {% for block in se_blocks %}
+              {%- if block.type == 'hot_article_item' -%}
+                {%- assign article_item = block.settings.article -%}
+                <li class="hot-article-item">
+                  <a href="{{ article_item.url }}">
+                    <img src="{{ article_item.image | image_url }}" alt="{{ article_item.image.alt }}" width="" height="">
+                  </a>
+                  <a class="item-content" href="{{ article_item.url }}">
+                    <p class="blog_menu_title">{{ article_item.title }}</p>
+                  </a>
+                </li>
+              {%- endif -%}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endcomment %}
+      {% for menu in se_blocks %}
+        {%- if menu.type == 'link' -%}
+          <div class="blog_menu_nav">
+            {% assign menu_value = menu.settings %}
+            {% assign llists = linklists[menu_value.menu].links %}
+            <h5>{{ linklists[menu_value.menu].title }}</h5>
+            <ul>
+              {% for link in llists %}
+                {%- assign url_list = link.url | split: '/' -%}
+                {%- assign article = blogs[url_list[2]].articles
+                  | where: 'url', '/blogs/news/e-bike-price-breakdown'
+                  | first
+                -%}
+                <li class="{{ article.url }}">
+                  <a href="{{link.url}}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endfor %}
+      <div class="blog_menu_con">
+        <h5>Content Tags</h5>
+        <div class="blog_menu_tag">
+{% assign visible_tags = 'E-Bike Buying Guides|Reviews & Comparisons|Product Guides|Laws Rebates & Insurance|US State Guides|Maintenance & Repairs|Battery & Electrical|Motor & Performance|Safety & Gear|Routes & Trails|Fat Tire & Off-Road|Commuting & Urban Riding|E-Bike Basics|How-To & Tips|Accessories & Customization|Deals & Sales|Seasonal Riding|Sustainability & Trends|Health & Fitness|Family & Teen Riders|Commercial & Utility E-Bikes|X1|X1S|X2|X7|M16|X1S x Bs.zay' | split: '|' %}
+
+{% for tag in visible_tags %}
+  {% if all_tags contains tag %}
+    <a href="{{ blog_url }}/tagged/{{ tag | handle }}" class="t4s-post-text-color">
+      {{ tag }}
+    </a>
+  {% endif %}
+{% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+  <div class="blog_nav_arr blog_pc_list">
+    <ul>
+      <li class="blog_nav_li {% if path contains '/tagged/' %} {% else %} blog_nav_active {% endif %}">
+        <a href="/blogs/news/">Home</a>
+      </li>
+      {% for item in blog.all_tags %}
+        {% assign itemUrl = item | downcase | replace: ' ', '-' %}
+        <li class="blog_nav_li {% if last_part != blank and last_part == itemUrl %} blog_nav_active {% endif %}">
+          <a href="{{itemUrl}}">{{ item }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Custom Main Blog",
+  "settings": [
+    {
+      "type": "select",
+      "id": "use_pagination",
+      "label": "Pagination",
+      "default": "default",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "load-more",
+          "label": "'Load more' button"
+        },
+        {
+          "value": "infinite",
+          "label": "Infinit scrolling"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "page_size",
+      "label": "Articles per page",
+      "default": 21
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hot_article_item",
+      "name": "Hot Article Item",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Article"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "name": "Linklist (child)",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Add menu"
+        }
+      ]
+    },
+    {
+      "type": "featured_articles",
+      "name": "Featured Articles(10)",
+      "limit": 1,
+      "settings": [
+        { "type": "article", "id": "article_1", "label": "Article_1" },
+        { "type": "article", "id": "article_2", "label": "Article_2" },
+        { "type": "article", "id": "article_3", "label": "Article_3" },
+        { "type": "article", "id": "article_4", "label": "Article_4" },
+        { "type": "article", "id": "article_5", "label": "Article_5" },
+        { "type": "article", "id": "article_6", "label": "Article_6" },
+        { "type": "article", "id": "article_7", "label": "Article_7" },
+        { "type": "article", "id": "article_8", "label": "Article_8" },
+        { "type": "article", "id": "article_9", "label": "Article_9" },
+        { "type": "article", "id": "article_10", "label": "Article_10" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Main Blog",
+      "category": "Posts"
+    }
+  ]
+}
+{% endschema %}

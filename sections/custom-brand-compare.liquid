@@ -1,0 +1,193 @@
+{% liquid
+  assign se_stts = section.settings
+  assign compare_list = se_stts.compare_list
+  # 未在设置里选择时，兜底读取 brand_compare 元对象的全部条目
+  if compare_list == blank
+    assign compare_list = shop.metaobjects.brand_compare.values
+  endif
+%}
+
+<div class="--bc-wrapper">
+  <div class="--bc-visual">
+    {%- if se_stts.bg_pc != blank or se_stts.bg_mb != blank -%}
+      {% liquid
+        assign img_pc = se_stts.bg_pc
+        assign img_mb = se_stts.bg_mb
+        if img_pc == blank
+          assign img_pc = img_mb
+        endif
+        if img_mb == blank
+          assign img_mb = img_pc
+        endif
+      %}
+      <picture>
+        <source
+          media="(min-width: 769px)"
+          srcset="
+            {{ img_pc | image_url: width: 600 }} 600w,
+            {{ img_pc | image_url: width: 900 }} 900w,
+            {{ img_pc | image_url: width: 1200 }} 1200w
+          "
+        >
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            {{ img_mb | image_url: width: 400 }} 400w,
+            {{ img_mb | image_url: width: 600 }} 600w,
+            {{ img_mb | image_url: width: 768 }} 768w
+          "
+        >
+        <img
+          class="--bc-visual-img"
+          loading="lazy"
+          src="{{ img_pc | image_url: width: 900 }}"
+          alt="{{ img_pc.alt | default: se_stts.title | escape }}"
+          width="{{ img_pc.width }}"
+          height="{{ img_pc.height }}"
+        >
+      </picture>
+    {%- endif -%}
+    <div class="--bc-visual-content">
+      {%- if se_stts.title != blank -%}
+        <h2 class="--bc-title">{{ se_stts.title }}</h2>
+      {%- endif -%}
+      {%- if se_stts.desc != blank -%}
+        <p class="--bc-desc">{{ se_stts.desc }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- if compare_list != blank -%}
+    {% liquid
+      # 取两列中较多的条目数作为表格行数，保证每一行左右水平对齐
+      assign row_count = 0
+      for entry in compare_list limit: 2
+        assign label_size = entry.label_list.value.size
+        if label_size > row_count
+          assign row_count = label_size
+        endif
+      endfor
+    %}
+    <div class="--bc-table">
+      {%- comment -%} 表头行 {%- endcomment -%}
+      {%- for entry in compare_list limit: 2 -%}
+        {%- assign logo_file = entry.logo.value -%}
+        <div class="--bc-cell --bc-head">
+          {%- if logo_file != blank -%}
+            {%- if logo_file.width -%}
+              <img
+                class="--bc-col-logo"
+                loading="lazy"
+                src="{{ logo_file | image_url: width: 400 }}"
+                alt="{{ entry.title | escape }}"
+                width="{{ logo_file.width }}"
+                height="{{ logo_file.height }}"
+              >
+            {%- else -%}
+              <img
+                class="--bc-col-logo"
+                loading="lazy"
+                src="{{ logo_file.url }}"
+                alt="{{ entry.title | escape }}"
+                width="160"
+                height="27"
+              >
+            {%- endif -%}
+          {%- else -%}
+            <span class="--bc-col-name">{{ entry.title }}</span>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+
+      {%- comment -%} 内容行：同一行的左右单元格顶部对齐 {%- endcomment -%}
+      {%- if row_count > 0 -%}
+        {%- for i in (1..row_count) -%}
+          {%- assign idx = i | minus: 1 -%}
+          {%- for entry in compare_list limit: 2 -%}
+            {% liquid
+              assign is_brand = forloop.first
+              assign label_txt = entry.label_list.value[idx]
+              assign value_txt = entry.value_list.value[idx]
+            %}
+            <div class="--bc-cell{% if is_brand %} --is-brand{% endif %}">
+              {%- if label_txt != blank -%}
+                <div class="--bc-item-label">
+                  {%- if is_brand -%}
+                    <svg class="--bc-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false">
+                      <path d="M7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14Z" fill="#F2CB04"/>
+                      <path d="M6.27999 9.81988C6.06999 9.81988 5.84999 9.73988 5.68999 9.57988L3.16999 7.05989C2.83999 6.72989 2.83999 6.19989 3.16999 5.87989C3.49999 5.54989 4.02999 5.54989 4.34999 5.87989L6.27999 7.80989L9.64998 4.43988C9.97998 4.10988 10.51 4.10988 10.83 4.43988C11.16 4.76988 11.16 5.29988 10.83 5.61988L6.86999 9.57988C6.70999 9.73988 6.48999 9.81988 6.27999 9.81988Z" fill="#121212"/>
+                    </svg>
+                  {%- else -%}
+                    <svg class="--bc-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false">
+                      <path d="M7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14Z" fill="#E8E8E8"/>
+                      <path d="M6.49997 8.06995C6.49997 7.83995 6.53999 7.63996 6.60999 7.45996C6.67999 7.27996 6.77998 7.12996 6.88998 6.98996C6.99998 6.84996 7.12998 6.72995 7.25998 6.60995C7.38998 6.48995 7.50997 6.37996 7.62997 6.26996C7.73997 6.15996 7.83997 6.04995 7.90997 5.92995C7.98997 5.80995 8.01999 5.67996 8.01999 5.53996C8.01999 5.29996 7.91998 5.11996 7.72998 4.96996C7.53998 4.82996 7.27999 4.74995 6.95999 4.74995C6.64999 4.74995 6.37998 4.80996 6.13998 4.93996C5.89998 5.06996 5.69998 5.24996 5.53998 5.46996L4.35999 4.76996C4.61999 4.36996 4.97998 4.04995 5.44998 3.81995C5.90998 3.57995 6.46997 3.45996 7.12997 3.45996C7.61997 3.45996 8.04998 3.52996 8.41998 3.66996C8.78998 3.80996 9.07999 4.00996 9.29999 4.27996C9.50999 4.54996 9.61996 4.87996 9.61996 5.26996C9.61996 5.51996 9.57997 5.74996 9.49997 5.94996C9.41997 6.14996 9.31998 6.31996 9.19998 6.45996C9.07998 6.59996 8.93999 6.73995 8.79999 6.85995C8.65999 6.97995 8.52999 7.09996 8.39999 7.21996C8.27999 7.33996 8.16997 7.45996 8.08997 7.58996C8.00997 7.71996 7.96997 7.86996 7.96997 8.04996H6.49997V8.06995ZM7.24997 10.53C6.97997 10.53 6.74998 10.44 6.56998 10.27C6.38998 10.09 6.30997 9.87995 6.30997 9.63995C6.30997 9.38995 6.39998 9.17996 6.56998 9.01996C6.74998 8.84996 6.96997 8.76996 7.24997 8.76996C7.52997 8.76996 7.75999 8.84996 7.92999 9.01996C8.09999 9.18996 8.18997 9.38995 8.18997 9.63995C8.18997 9.87995 8.09999 10.09 7.92999 10.27C7.74999 10.44 7.52997 10.53 7.24997 10.53Z" fill="#121212"/>
+                    </svg>
+                  {%- endif -%}
+                  <span class="--bc-item-title">{{ label_txt }}</span>
+                </div>
+              {%- endif -%}
+              {%- if value_txt != blank -%}
+                <p class="--bc-item-value">{{ value_txt }}</p>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Brand Compare",
+  "tag": "section",
+  "class": "cs-brand-compare-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "左侧展示区"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_pc",
+      "label": "背景图（PC）"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_mb",
+      "label": "背景图（移动端）",
+      "info": "为空时复用 PC 背景图"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Why Families Choose Macfox?"
+    },
+    {
+      "type": "textarea",
+      "id": "desc",
+      "label": "描述",
+      "default": "Certified safety. Street-ready performance. Support that lasts."
+    },
+    {
+      "type": "header",
+      "content": "右侧对比内容"
+    },
+    {
+      "type": "metaobject_list",
+      "id": "compare_list",
+      "label": "对比数据源",
+      "metaobject_type": "brand_compare",
+      "limit": 2,
+      "info": "不选择时自动读取 brand_compare 的全部条目（取前 2 条）。第一条为本品牌（黄色勾选样式），第二条为其他品牌；有 logo 时优先渲染 logo，否则渲染 title；label_list 与 value_list 按下标一一对应"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Brand Compare",
+      "category": "Custom Compare"
+    }
+  ]
+}
+{% endschema %}

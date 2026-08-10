@@ -1,0 +1,402 @@
+<section id="macfox-media-reviews-{{ section.id }}" class="macfox-media-reviews">
+  <div class="macfox-media-reviews__inner">
+    {% if section.settings.heading != blank %}
+      <div class="macfox-media-reviews__head">
+        <h2>{{ section.settings.heading }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="macfox-media-reviews__track" data-media-review-track>
+      {% for block in section.blocks %}
+        <article class="macfox-media-reviews__card" {{ block.shopify_attributes }}>
+          <div class="macfox-media-reviews__top">
+            <div class="macfox-media-reviews__logo-wrap">
+              {% if block.settings.logo_image != blank %}
+                <img
+                  class="macfox-media-reviews__logo"
+                  src="{{ block.settings.logo_image | image_url: width: 420 }}"
+                  alt="{{ block.settings.logo_alt | default: block.settings.source_name | escape }}"
+                  width="{{ block.settings.logo_image.width }}"
+                  height="{{ block.settings.logo_image.height }}"
+                  loading="lazy"
+                >
+              {% else %}
+                <div class="macfox-media-reviews__logo-text">
+                  {{ block.settings.source_name }}
+                </div>
+              {% endif %}
+            </div>
+
+            {% if block.settings.review_type != blank %}
+              <div class="macfox-media-reviews__type">
+                {{ block.settings.review_type }}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="macfox-media-reviews__bottom">
+            {% if block.settings.excerpt != blank %}
+              <p class="macfox-media-reviews__excerpt">
+                {{ block.settings.excerpt }}
+              </p>
+            {% endif %}
+
+            {% if block.settings.article_url != blank %}
+              <a
+                class="macfox-media-reviews__button"
+                href="{{ block.settings.article_url }}"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                {{ section.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    {% if section.blocks.size > 1 %}
+      <div class="macfox-media-reviews__dots" aria-hidden="true" data-media-review-dots>
+        {% for block in section.blocks %}
+          <span class="{% if forloop.first %}is-active{% endif %}"></span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  #macfox-media-reviews-{{ section.id }} {
+    background: #121212 !important;
+    color: #fff;
+    padding: 72px 0;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__inner {
+    width: min(100% - 40px, 1200px);
+    margin: 0 auto;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__head {
+    margin-bottom: 30px;
+  }
+
+  #macfox-media-reviews-{{ section.id }} h2 {
+    margin: 0;
+    color: #fff !important;
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__card {
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 8px;
+    background: #1d1d1d !important;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__top {
+    padding: 34px 30px 22px;
+    background: #1d1d1d !important;
+    color: #fff !important;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__logo-wrap {
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+    margin-bottom: 22px;
+    background: transparent !important;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__logo {
+    display: block;
+    max-width: 230px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: transparent !important;
+    border: 0 !important;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__logo-text {
+    color: #fff !important;
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: 0;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__type {
+    color: #fff !important;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__bottom {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px 30px 28px;
+    background: #1d1d1d !important;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__excerpt {
+    margin: 0;
+    color: #ccc !important;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: auto;
+    padding: 12px 20px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    color: #fff !important;
+    background: transparent;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__button:hover {
+    background: #f2cb04;
+    border-color: #f2cb04;
+    color: #000 !important;
+  }
+
+  #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__dots {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__track {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    #macfox-media-reviews-{{ section.id }} {
+      padding: 48px 0;
+      overflow: hidden;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__inner {
+      width: min(100% - 28px, 1200px);
+    }
+
+    #macfox-media-reviews-{{ section.id }} h2 {
+      font-size: 28px;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__track {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0 42px 8px 0;
+      margin-right: -14px;
+      scrollbar-width: none;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__track::-webkit-scrollbar {
+      display: none;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__card {
+      flex: 0 0 84%;
+      min-height: 300px;
+      scroll-snap-align: start;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__top {
+      padding: 30px 24px 20px;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__bottom {
+      padding: 20px 24px 24px;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__logo-wrap {
+      min-height: 64px;
+      margin-bottom: 20px;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__logo {
+      max-width: 220px;
+      max-height: 64px;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__dots {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 18px;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #444;
+      transition: width 0.2s ease, background 0.2s ease;
+    }
+
+    #macfox-media-reviews-{{ section.id }} .macfox-media-reviews__dots span.is-active {
+      width: 22px;
+      background: #f2cb04;
+    }
+  }
+</style>
+
+<script>
+  (() => {
+    const section = document.querySelector('#macfox-media-reviews-{{ section.id }}');
+    if (!section) return;
+
+    const track = section.querySelector('[data-media-review-track]');
+    const dots = Array.from(section.querySelectorAll('[data-media-review-dots] span'));
+    if (!track || !dots.length) return;
+
+    const updateDots = () => {
+      const cards = Array.from(track.querySelectorAll('.macfox-media-reviews__card'));
+      if (!cards.length) return;
+
+      let activeIndex = 0;
+      let closestDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const distance = Math.abs(card.offsetLeft - track.scrollLeft);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          activeIndex = index;
+        }
+      });
+
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('is-active', index === activeIndex);
+      });
+    };
+
+    track.addEventListener('scroll', updateDots, { passive: true });
+    window.addEventListener('resize', updateDots);
+    updateDots();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Media Reviews Demo",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Media Reviews"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "READ FULL ARTICLE"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Media review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "source_name",
+          "label": "Media name",
+          "default": "autoevolution"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Media logo"
+        },
+        {
+          "type": "text",
+          "id": "logo_alt",
+          "label": "Logo alt text"
+        },
+        {
+          "type": "text",
+          "id": "review_type",
+          "label": "Review type",
+          "default": "EXPERT REVIEW"
+        },
+        {
+          "type": "textarea",
+          "id": "excerpt",
+          "label": "Short excerpt",
+          "default": "Autoevolution rode the Macfox X7L and covered its scrambler-style frame, build quality, wheelset, braking, power, and real-world range notes."
+        },
+        {
+          "type": "url",
+          "id": "article_url",
+          "label": "Article URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media Reviews Demo",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "source_name": "electrek",
+            "review_type": "EXPERT REVIEW",
+            "excerpt": "Electrek reviewed the Macfox X7 as a street-legal, UL-listed e-bike with moped-style presence and everyday ride practicality."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "source_name": "autoevolution",
+            "review_type": "EXPERT REVIEW",
+            "excerpt": "Autoevolution rode the Macfox X7L and covered its scrambler-style frame, build quality, wheelset, braking, power, and real-world range notes."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "source_name": "CleanTechnica",
+            "review_type": "MEDIA COVERAGE",
+            "excerpt": "Coverage focused on Macfox e-bike value, commuter use, and how the model fits riders looking for practical electric mobility."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

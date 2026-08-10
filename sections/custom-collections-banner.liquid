@@ -1,0 +1,144 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign banner_link = se_stts.banner_link
+%}
+
+{% if banner_link != blank %}<a href="{{ banner_link }}" class="--banner-link" aria-label="Banner link"></a>{% endif %}
+<picture>
+  <source
+    media="(min-width: 769px)"
+    srcset="
+      {{ se_stts.banner_pc | image_url: width:900 }} 900w,
+      {{ se_stts.banner_pc | image_url: width:1200 }} 1200w,
+      {{ se_stts.banner_pc | image_url: width:1600 }} 1600w,
+      {{ se_stts.banner_pc | image_url: width:1920 }} 1920w
+    "
+  >
+  <source
+    media="(max-width: 768px)"
+    srcset="
+      {{ se_stts.banner_mb | image_url: width:400 }} 400w,
+      {{ se_stts.banner_mb | image_url: width:600 }} 600w,
+      {{ se_stts.banner_mb | image_url: width:768 }} 768w
+    "
+  >
+  <img
+    class="w-full"
+    fetchpriority="high"
+    src="{{ se_stts.banner_pc | image_url: width: 1000 }}"
+    alt="{{ se_stts.banner_pc.alt }}"
+    width="{{ se_stts.banner_pc.width }}"
+    height="{{ se_stts.banner_pc.height }}"
+  >
+</picture>
+<div class="--banner-content">
+  <div class="--baner-wrapper" style="left: {{ se_stts.left |  append: '%' }}; top:{{ se_stts.top |  append: '%'}};">
+{% if collection and collection.handle != 'ebikes-for-sale' %}
+  <nav class="--banner-breadcrumb">
+    <a href="{{ routes.root_url }}">Home</a>
+    <span>｜</span>
+    <span aria-current="page">{{ collection.title }}</span>
+  </nav>
+{% endif %}
+    {%- if se_stts.banner_title != null and se_stts.banner_title != '' -%}
+      <h1
+        class="--banner-title"
+        style="color:{{ se_stts.txt_color }}"
+      >
+        {{ se_stts.banner_title }}
+      </h1>
+    {%- endif -%}
+    {%- if se_stts.banner_overview != null and se_stts.banner_overview != '' -%}
+      <p
+  class="--banner-overview"
+  style="
+    color: {{ se_stts.overview_txt_color }};
+    max-width: 90%;
+    line-height: 1.5;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  "
+>
+  {{ se_stts.banner_overview }}
+</p>
+
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Banner",
+  "tag": "section",
+  "class": "cs-col-banner-section",
+  "settings": [
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "跳转链接",
+      "info": "为空时点击不跳转"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_pc",
+      "label": "图片（PC）"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_mb",
+      "label": "图片（Mobile）"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "left",
+      "min": 0,
+      "max": 100,
+      "label": "水平距离",
+      "default": 0,
+      "unit": "%",
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "top",
+      "min": 0,
+      "max": 100,
+      "label": "垂直距离",
+      "default": 0,
+      "unit": "%",
+      "step": 1
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "字体颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "banner_overview",
+      "label": "概述",
+      "default": "overview"
+    },
+    {
+      "type": "color",
+      "id": "overview_txt_color",
+      "label": "字体颜色",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collections Banner",
+      "category": "Custom Banner"
+    }
+  ]
+}
+{% endschema %}

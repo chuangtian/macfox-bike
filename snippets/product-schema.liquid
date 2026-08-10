@@ -1,0 +1,129 @@
+{%- comment -%}
+  Product Schema - 动态生成 JSON-LD
+  使用方法: 在产品模板中 {% render 'product-schema' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign rating_value = ''
+  assign rating_count = 0
+
+  if product.metafields.loox.num_reviews and product.metafields.loox.num_reviews > 0
+    assign rating_value = product.metafields.loox.avg_rating | plus: 0
+    assign rating_count = product.metafields.loox.num_reviews | plus: 0
+  elsif product.metafields.reviews.rating_count and product.metafields.reviews.rating_count > 0
+    assign rating_value = product.metafields.reviews.rating.value.value | plus: 0
+    assign rating_count = product.metafields.reviews.rating_count | plus: 0
+  endif
+
+
+  assign description_text = product.metafields.global.description_tag
+  if description_text == blank
+    assign description_text = product.description | strip_html | strip
+  endif
+  assign description_text = description_text | truncate: 500
+-%}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": {{ product.title | json }},
+      "url": "{{ shop.url }}{{ product.url }}",
+      "image": [
+        {%- for image in product.images limit: 5 -%}
+          "{{ image | image_url: width: 1200 }}"{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "description": {{ description_text | json }},
+      "sku": {{ product.selected_or_first_available_variant.sku | json }},
+      "brand": {
+        "@type": "Brand",
+        "name": {{ product.vendor | json }}
+      },
+      {%- if rating_value > 0 and rating_count > 0 -%}
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ rating_value }}",
+        "bestRating": "5",
+        "reviewCount": "{{ rating_count }}"
+      },
+      {%- endif -%}
+      "offers": [
+        {%- for variant in product.variants -%}
+        {
+          "@type": "Offer",
+          "sku": {{ variant.sku | json }},
+          "name": {{ variant.title | json }},
+          "availability": "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price": {{ variant.price | money_without_currency | remove: ',' | remove: ' ' }},
+          "priceCurrency": "{{ shop.currency }}",
+          "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}",
+          "shippingDetails": [
+            {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0.00",
+                "currency": "{{ shop.currency }}"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "US"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 3,
+                  "maxValue": 5,
+                  "unitCode": "DAY"
+                }
+              }
+            }
+          ],
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "US",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 15,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/ReturnShippingFees"
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": "{{ shop.url }}",
+          "name": "Home"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": "{{ shop.url }}/collections/electric-bike",
+          "name": "Electric Bike"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": "{{ shop.url }}{{ product.url }}",
+          "name": {{ product.title | json }}
+        }
+      ]
+    }
+  ]
+}
+</script>

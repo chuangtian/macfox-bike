@@ -1,0 +1,638 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<h2>
+  {{ se_stts.topic }}
+</h2>
+
+<!-- PC端 -->
+<div class="--pc-wrapper">
+  <button
+    id="left-btn"
+    class="{% if se_blocks.size <= 1 %} hidden! {% endif %}"
+    aria-label="Previous slide"
+  >
+    {{ se_stts.arrow_left_icon }}
+  </button>
+  <div class="product-carousel-2_pc-wrapper">
+    <div
+      id="product-carousel-2_pc"
+    >
+      <h3 class="carousel-slogan"></h3>
+      <div class="--carousel-item">
+        <!-- 左侧信息 -->
+        <div class="--info-left">
+          <div class="--info-left_basic">
+            <div class="carousel-title-row">
+              <h4
+                class="carousel-title"
+              ></h4>
+              <span class="carousel-tag" style="display:none"></span>
+            </div>
+            <div class="--dialog-box">
+              <!-- 三角形 -->
+              <div>
+                <svg width="100%" height="100%" viewBox="0 0 1.5 1" style="display: block;">
+                  <polygon
+                    points="0.05,1.0417 0.05,0.0417 1.45,1.0417"
+                    fill="#2b2b2b"
+                    stroke="4c4c4c"
+                  />
+                  <line x1="0.05" y1="1.0417" x2="0.05" y2="0.0417" stroke="#353535" stroke-width="0.05"/>
+                  <line x1="0.05" y1="0.0417" x2="1.45" y2="1.0417" stroke="#353535" stroke-width="0.05"/>
+                  <line x1="0.05" y1="1.0417" x2="1.45" y2="1.0417" stroke="#232323" stroke-width="0.05"/>
+                </svg>
+                <span class=" absolute h-4 w-full bg-[#2b2b2b] z-20 xl:top-4 top-6 left-0"></span>
+              </div>
+
+              <!-- 聊天内容 -->
+              <span class="carousel-desc"></span>
+            </div>
+          </div>
+
+          <div id="product-carousel-2-color-con"></div>
+        </div>
+        <!-- 中间大图 -->
+        <div class="--info-center">
+          <img
+            width="100%"
+            height="100%"
+            class="carousel-image"
+          >
+
+          {%- if se_stts.show_ul -%}
+            <div class="ul-icon">
+              <img
+                src="https://macfoxbike.com/cdn/shop/files/1_965d3f60-75cf-439d-9631-c8c9e5988b8d.png?v=1764828110"
+                alt="UL Certification"
+                width="200"
+                height="241"
+              >
+            </div>
+          {%- endif -%}
+        </div>
+        <!-- 右侧参数 -->
+        <div class="--info-right">
+          <div
+            class="carousel-params"
+          ></div>
+          <a
+          aria-label="Learn More"
+            href="#"
+            class="carousel-link"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class=" flex justify-center gap-x-2 !mt-10 {% if se_blocks.size <= 1 %} !hidden {% endif %}">
+      {% assign size = se_blocks.size | minus: 1 %}
+      {% for key in (0..size) %}
+        <div
+          class="carousel_pc-indicator-item w-[32px] h-[4px] rounded-full {% if forloop.first %} bg-[#f2cb04] {% else %}bg-[#666666] {% endif %}"
+        ></div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <button
+    id="right-btn"
+    class="{% if se_blocks.size <= 1 %} hidden! {% endif %}"
+    aria-label="Next slide"
+  >
+    {{ se_stts.arrow_right_icon }}
+  </button>
+</div>
+
+<!-- 移动端 -->
+
+<div class="flex flex-col w-[90%] !mx-auto gap-y-10 md:hidden">
+  {% for item in se_blocks %}
+    {% assign p = item.settings %}
+    <div
+      class=" relative !mx-auto bg-[#181818] !rounded-3xl w-full"
+    >
+      <h3
+        class="absolute text-center left-1/2  top-0 -translate-x-1/2 -translate-y-[70%] !leading-none !text-[5.4vw] !font-bold !text-[#784de9] transition-opacity duration-300 opacity-100 w-full"
+      >
+        {{ p.slogan }}
+      </h3>
+      <div class=" relative z-10 flex w-full bg-gray-400/0.5 backdrop-blur-[2px] !py-[20px] !px-[15px] flex-col !rounded-3xl !border !border-[#686868]">
+        <!-- 左侧信息 -->
+        <div class="flex-1 flex flex-col justify-between h-auto !pt-[10px]">
+          <div class="w-full ">
+            <div class="flex items-center justify-center flex-wrap gap-5 mb-[5px]!">
+              <h4
+                class=" !text-[#f2cb04] !text-[30px] !font-extrabold !italic text-center !text-nowrap transition-opacity duration-300 opacity-100"
+              >
+                {{ p.product_name }}
+              </h4>
+              {% if item.type == 'tag_item' and p.tag != blank %}
+                <span class="carousel-tag">{{ p.tag }}</span>
+              {% endif %}
+            </div>
+
+            <div class="bg-[#2b2b2b] !text-[#cccccc] !font-semibold !leading-[1.6] rounded-xl !p-4 !text-[13px]  w-full relative !border-[#4c4c4c] !border-1">
+              <!-- 聊天内容 -->
+              <span class="transition-opacity duration-300 opacity-100 ">{{ p.desc }}</span>
+            </div>
+          </div>
+        </div>
+        <!-- 中间大图 -->
+        <div class="product-carousel-2-img flex-1 flex justify-center items-center relative !py-[0px]">
+          {%- liquid
+            assign filter_opt = nil
+            assign filtered_variants = p.product.variants
+            if p.filter_option != blank and p.filter_value != blank
+              assign filter_opt = p.product.options_with_values | where: 'name', p.filter_option | first
+              if filter_opt
+                assign f_option_key = 'option' | append: filter_opt.position
+                assign filtered_variants = p.product.variants | where: f_option_key, p.filter_value
+              endif
+            endif
+          -%}
+          {% if p.product.metafields.custom.colors.value == null %}
+            <img
+              width="{{ p.product.featured_image.width }}"
+              height="{{ p.product.featured_image.height }}"
+              class="transition-opacity duration-300 opacity-100 size-full"
+              src="{{  p.product.featured_image.src |  image_url  }}"
+              alt="{{ p.product.featured_image.alt }}"
+            >
+
+          {% else %}
+            <img
+              width="{{ filtered_variants[0].featured_image.width }}"
+              height="{{ filtered_variants[0].featured_image.height }}"
+              class="transition-opacity duration-300 opacity-100 size-full"
+              src="{{  filtered_variants[0].featured_image.src |  image_url  }}"
+              alt="{{ filtered_variants[0].featured_image.alt }}"
+            >
+          {% endif %}
+
+          {%- if se_stts.show_ul -%}
+            <div class="ul-icon">
+              <img
+                src="https://macfoxbike.com/cdn/shop/files/1_965d3f60-75cf-439d-9631-c8c9e5988b8d.png?v=1764828110"
+                alt="UL Certification"
+                width="200"
+                height="241"
+              >
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="flex-1 flex flex-col justify-between items-center !pt-[10px]">
+          {% if p.product.metafields.custom.colors.value != null %}
+            <div
+              class="product-carousel-2-color-con-md flex item-center cursor-pointer !mb-[20px] !space-x-[15px]"
+            >
+              {% assign color_option = p.product.options_with_values | where: 'name', 'Color' | first %}
+              {% assign color_opt_key = 'option' | append: color_option.position %}
+              {% assign first_rendered = true %}
+              {% for v in filtered_variants %}
+                {% assign color_key = v[color_opt_key] %}
+                {%- comment -%} 去重：只渲染每个颜色的第一个 variant {%- endcomment -%}
+                {% assign dup = false %}
+                {% for prev in filtered_variants %}
+                  {% if prev[color_opt_key] == color_key and forloop.index < forloop.parentloop.index %}
+                    {% assign dup = true %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+                {% unless dup %}
+                  {%- assign color_hex = nil -%}
+                  {%- assign color_key_alt = color_key | downcase | replace: ' ', '_' -%}
+                  {%- for c in p.product.metafields.custom.colors.value -%}
+                    {%- if c[0] == color_key -%}
+                      {%- assign color_hex = c[1] -%}
+                      {%- break -%}
+                    {%- elsif c[0] == color_key_alt -%}
+                      {%- assign color_hex = c[1] -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {% if color_hex %}
+                    <div
+                      class="color-btn size-12 !p-1 rounded-md {% if first_rendered %} active {% endif %}"
+                      data-img="{{ v.featured_image.src | image_url }}"
+                      data-url="{{ p.product.url }}?variant={{ v.id }}"
+                    >
+                      <div class=" w-full h-full rounded-md" style="background-color: {{ color_hex }};"></div>
+                    </div>
+                    {% assign first_rendered = false %}
+                  {% endif %}
+                {% endunless %}
+              {% endfor %}
+            </div>
+          {% endif %}
+          <a
+            href="{% if item.type == 'tag_item' and filtered_variants[0] %}{{ p.product.url }}?variant={{ filtered_variants[0].id }}{% else %}{{ p.product.url }}{% endif %}"
+            class="!py-[10px] !px-[38px] !text-[#121212] bg-[#f2cb04] rounded-lg !text-[14px] !font-semibold cursor-pointer w-full  text-center"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .cs-home-carousel-2-section{
+      background-color: {{ se_stts.bg_color }};
+  }
+  #product-carousel-2-color-con .active, .product-carousel-2-color-con-md .active{
+    border:1px solid #784de9;
+  }
+
+  /* 产品标签 */
+  .cs-home-carousel-2-section .carousel-title-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:2rem;
+  }
+  .cs-home-carousel-2-section .carousel-tag{
+    display:inline-flex;
+    align-items:center;
+    padding:4px 14px;
+    border-radius:4px;
+    background:#f2cb04;
+    color:#121212;
+    font-size:14px;
+    font-weight:700;
+    line-height:1.4;
+    white-space:nowrap;
+    vertical-align:middle;
+  }
+  @media (max-width: 767px) {
+    .cs-home-carousel-2-section .carousel-tag{
+      font-size:12px;
+      padding:3px 10px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cs-home-carousel-2-section {
+      overflow: hidden;
+    }
+  }
+</style>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth > 767) {
+      const products = [
+       {% for block in se_blocks %}
+         {
+           title: {{ block.settings.product_name | json }},
+           desc: {{ block.settings.desc | json }},
+           p_featured_image: {{ block.settings.product.featured_image |  image_url  |  json }},
+           p_image_w:{{ block.settings.product.featured_image.width |  json }},
+           p_image_h:{{ block.settings.product.featured_image.height |  json }},
+           p_image_alt:{{ block.settings.product.featured_image.alt |  json }},
+           p_sku: {{ block.settings.product.variants |  json }},
+           p_colors: {{ block.settings.product.metafields.custom.colors.value |  uniq:"" |  first | json }},
+           p_options:{{  block.settings.product.options_with_values |  where: 'name', 'Color' |  first |  json }},
+           p_options_all:{{ block.settings.product.options_with_values | json }},
+           tag: {% if block.type == 'tag_item' and block.settings.tag != blank %}{{ block.settings.tag | json }}{% else %}null{% endif %},
+           filter_option: {% if block.settings.filter_option != blank %}{{ block.settings.filter_option | json }}{% else %}null{% endif %},
+           filter_value: {% if block.settings.filter_value != blank %}{{ block.settings.filter_value | json }}{% else %}null{% endif %},
+           link:{{ block.settings.product.url |  json }},
+           params: {{ block.settings.parameter }},
+           slogan: {{ block.settings.slogan | json }}
+         }{% unless forloop.last %},{% endunless %}
+       {% endfor %}
+       ];
+     let current = 0;
+     const rootEl = document.querySelector("#product-carousel-2_pc")
+     const sloganEl = rootEl.querySelector('.carousel-slogan');
+     const titleEl = rootEl.querySelector('.carousel-title');
+     const tagEl = rootEl.querySelector('.carousel-tag');
+     const descEl = rootEl.querySelector('.carousel-desc');
+     const imageEl = rootEl.querySelector('.carousel-image');
+     const paramsEl = rootEl.querySelector('.carousel-params');
+     const linkEl = rootEl.querySelector('.carousel-link');
+     const colorConEl = rootEl.querySelector('#product-carousel-2-color-con');
+     const leftBtn = document.querySelector('#left-btn');
+     const rightBtn = document.querySelector('#right-btn');
+     const indicatorItem = document.querySelectorAll('.carousel_pc-indicator-item')
+
+     function renderProduct(idx, fade = true) {
+       const p = products[idx];
+       const elements = [titleEl, descEl, paramsEl, sloganEl, imageEl];
+ 
+       function updateContent() {
+         // 参数渲染
+         let paramArr = [];
+         try {
+           paramArr = typeof p.params === "string" ? JSON.parse(p.params) : p.params;
+         } catch (e) {
+           console.error('参数解析失败:', e);
+         }
+      
+         
+         paramsEl.innerHTML = paramArr.map(item =>
+           `<div class="text-right">
+             <div class="text-white !text-3xl !font-semibold">${item.value}</div>
+             <div class="!text-[#7f7f7f] !text-lg !font-medium !mt-1 md:w-full">${item.key}</div>
+           </div>`
+         ).join('');
+         // 文字内容更新
+         titleEl.textContent = p.title;
+         descEl.textContent = p.desc;
+         linkEl.href = p.link;
+         sloganEl.textContent = p.slogan;
+
+         imageEl.width = p.p_image_w;
+         imageEl.height = p.p_image_h;
+         imageEl.alt = p.p_image_alt
+
+         // 标签展示
+         if (p.tag) {
+           tagEl.textContent = p.tag;
+           tagEl.style.display = '';
+         } else {
+           tagEl.textContent = '';
+           tagEl.style.display = 'none';
+         }
+
+         if (p.p_colors == null) {
+           colorConEl.innerHTML = '';
+           imageEl.src = p.p_featured_image;
+         } else {
+           // 根据 filter_option/filter_value 筛选 variants 子集
+           let variants = p.p_sku;
+           let filterOpt = null;
+           if (p.filter_option && p.filter_value) {
+             filterOpt = (p.p_options_all || []).find(o => o.name.toLocaleLowerCase() === p.filter_option.toLocaleLowerCase());
+             if (filterOpt) {
+               variants = variants.filter(v => {
+                 const val = String(v[`option${filterOpt.position}`] || '').toLocaleLowerCase();
+                 return val === p.filter_value.toLocaleLowerCase();
+               });
+             }
+           }
+
+           if (variants.length && variants[0].featured_image) {
+             imageEl.src = variants[0].featured_image.src;
+             if (p.tag != null) linkEl.href = p.link + '?variant=' + variants[0].id;
+           } else {
+             imageEl.src = p.p_featured_image;
+           }
+
+           // 取该子集中可用的颜色值
+           const colorPos = p.p_options ? p.p_options.position : null;
+           const availColors = {};
+           if (colorPos) {
+             variants.forEach(v => {
+               const cKey = String(v[`option${colorPos}`] || '').toLocaleLowerCase().replace(' ', '_');
+               if (cKey && p.p_colors[cKey] != null) {
+                 availColors[cKey] = p.p_colors[cKey];
+               } else {
+                 // 尝试匹配原始 key
+                 for (let k in p.p_colors) {
+                   if (k.toLocaleLowerCase() === cKey) {
+                     availColors[k] = p.p_colors[k];
+                     break;
+                   }
+                 }
+               }
+             });
+           }
+
+           const colorsToRender = Object.keys(availColors).length ? availColors : p.p_colors;
+           let first = true;
+           for (let key in colorsToRender) {
+             const div = document.createElement("div");
+             const divInner = document.createElement("div");
+             divInner.classList.add("w-full", "h-full", "rounded-[7px]");
+             divInner.style.backgroundColor = colorsToRender[key];
+             div.appendChild(divInner);
+             div.dataset.color = key.toLocaleLowerCase();
+             div.classList.add('size-14', '!p-[3px]', 'rounded-[7px]', 'overflow-hidden');
+             colorConEl.appendChild(div);
+             if (first) { div.classList.add('active'); first = false; }
+             div.addEventListener("click", (e) => {
+               const activeEl = colorConEl.querySelector(".active");
+               activeEl.classList.remove("active");
+               div.classList.add("active");
+               const new_p = variants.find(i => {
+                 const color = String(i[`option${p.p_options.position}`] || '').toLocaleLowerCase().replace(" ", "_");
+                 return color == div.dataset.color;
+               });
+               if (new_p && new_p.featured_image) imageEl.src = new_p.featured_image.src;
+               if (new_p && p.tag != null) linkEl.href = p.link + '?variant=' + new_p.id;
+             });
+           }
+         }
+      }
+
+        if (fade) {
+        // 1. 所有内容一起淡出
+        elements.forEach(el => {
+          el.classList.remove('opacity-100');
+          el.classList.add('opacity-0');
+        });
+
+        setTimeout(() => {
+          colorConEl.innerHTML = null
+          // 2. 切换内容
+          updateContent();
+
+          // 3. 等图片加载完后，所有内容一起淡入
+          imageEl.onload = () => {
+            elements.forEach(el => {
+              el.classList.remove('opacity-0');
+              el.classList.add('opacity-100');
+            });
+          };
+        }, 300);
+        } else {
+        updateContent();
+        
+        elements.forEach(el => {
+          el.classList.remove('opacity-0');
+          el.classList.add('opacity-100');
+        });
+        }
+      }
+      
+      function carouselSwitch(direction) {
+        indicatorItem[current].classList.remove("bg-[#f2cb04]")
+        indicatorItem[current].classList.add("bg-[#666666]")
+      if (direction === 'prev') {
+        current = (current - 1 + products.length) % products.length;
+      } else if (direction === 'next') {
+        current = (current + 1) % products.length;
+      }
+      indicatorItem[current].classList.remove("bg-[#666666]")
+      indicatorItem[current].classList.add("bg-[#f2cb04]")
+      renderProduct(current);
+      }
+      
+      leftBtn.addEventListener('click', () => {
+      carouselSwitch('prev');
+      });
+      rightBtn.addEventListener('click', () => {
+      carouselSwitch('next');
+      });
+      // 初始化
+      renderProduct(current, false); 
+    } else {
+      const colorConMdEl = document.querySelectorAll('.product-carousel-2-color-con-md')
+      colorConMdEl.forEach(item=>{
+        const colorBtn = item.querySelectorAll(".color-btn")
+        colorBtn.forEach(el=>{
+          el.addEventListener("click",()=>{
+            item.querySelector(".active").classList.remove("active")
+            el.classList.add("active")
+            item.parentElement.parentElement.querySelector("img").src= el.dataset.img
+            if (el.dataset.url) {
+              const linkEl = item.closest('.relative').querySelector('a');
+              if (linkEl) linkEl.href = el.dataset.url;
+            }
+          })
+        })
+      })
+    }
+  
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Recommended Products",
+  "tag": "section",
+  "class": "cs-home-carousel-2-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "topic",
+      "label": "主题",
+      "default": "The Most Popular Products"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_ul",
+      "label": "UL认证展示",
+      "default": false
+    },
+    {
+      "type": "html",
+      "id": "arrow_left_icon",
+      "label": "左箭头"
+    },
+    {
+      "type": "html",
+      "id": "arrow_right_icon",
+      "label": "右箭头"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "内容区块",
+      "settings": [
+        {
+          "type": "text",
+          "id": "slogan",
+          "label": "标语",
+          "default": "slogan"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "产品"
+        },
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "产品名称",
+          "default": "product name"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "简介",
+          "default": "desc"
+        },
+        {
+          "type": "textarea",
+          "id": "parameter",
+          "label": "参数",
+          "default": "[{\"key\":\"Peak Power\",\"value\":\"750W\"},{\"key\":\"Max Range\",\"value\":\"76 MILES\"},{\"key\":\"Top Speed\",\"value\":\"25 MPH\"}]"
+        }
+      ]
+    },
+    {
+      "type": "tag_item",
+      "name": "内容区块（带标签）",
+      "settings": [
+        {
+          "type": "text",
+          "id": "slogan",
+          "label": "标语",
+          "default": "slogan"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "产品"
+        },
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "产品名称",
+          "default": "product name"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "标签文字",
+          "info": "展示在产品名称旁边的标签（如 $80 OFF）",
+          "default": "$80 OFF"
+        },
+        {
+          "type": "text",
+          "id": "filter_option",
+          "label": "筛选选项名称",
+          "info": "用于筛选型号的选项名（如 Trim），留空则展示全部颜色"
+        },
+        {
+          "type": "text",
+          "id": "filter_value",
+          "label": "筛选选项值",
+          "info": "指定型号的选项值（如 X2 Pro），只展示该型号下的颜色和图片"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "简介",
+          "default": "desc"
+        },
+        {
+          "type": "textarea",
+          "id": "parameter",
+          "label": "参数",
+          "default": "[{\"key\":\"Peak Power\",\"value\":\"750W\"},{\"key\":\"Max Range\",\"value\":\"76 MILES\"},{\"key\":\"Top Speed\",\"value\":\"25 MPH\"}]"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recommended Products (Carousel)",
+      "category": "Custom Home"
+    }
+  ]
+}
+{% endschema %}

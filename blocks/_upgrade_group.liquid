@@ -1,0 +1,62 @@
+<div
+  class="cs-home-carousel-upgrade-panel embla"
+  data-panel="{{ block.id }}"
+  data-label="{{ block.settings.label | escape }}"
+  data-desc="{{ block.settings.desc | escape }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="cs-cu-panel-heading">
+    <span class="cs-cu-panel-heading-label">{{ block.settings.label }}</span>
+    {% if block.settings.desc != blank %}
+      <span class="cs-cu-panel-heading-desc">{{ block.settings.desc }}</span>
+    {% endif %}
+  </div>
+
+  <div class="embla__viewport">
+    <div class="embla__container cs-home-carousel-upgrade-wrapper">
+      {% content_for "blocks" %}
+    </div>
+  </div>
+
+  <div class="embla__controls md:hidden!">
+    <div class="embla__buttons">
+      <button class="embla__button embla__button--prev" type="button" aria-label="Previous slide">
+        {{ section.settings.arrow_left_icon }}
+      </button>
+      <button class="embla__button embla__button--next" type="button" aria-label="Next slide">
+        {{ section.settings.arrow_right_icon }}
+      </button>
+    </div>
+    <div class="embla__dots"></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "分类标签",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "分类名称",
+      "default": "Base Models"
+    },
+    {
+      "type": "text",
+      "id": "desc",
+      "label": "分类描述",
+      "default": "Reliable for commutes and casual rides."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_upgrade_product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "分类标签"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,79 @@
+{%- liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+-%}
+
+<div class="max-w-[1200px] mx-auto! pt-[30px]! md:pt-15! pb-[50px]! md:pb-50!">
+  <h2 class=" text-center text-[#121212]! text-[26px]! md:text-5xl! font-bold! leading-[1.3] mb-8!">{{ se_stts.title }}</h2>
+  <main-predictive-search
+    search-terms="{{ search.terms | escape }}"
+  >
+    <form
+      class=" mx-auto flex flex-col items-center gap-y-10  px-[20px]! md:px-0!"
+      action="{{ routes.search_url }}"
+      method="get"
+      role="search"
+    >
+      <div class="flex w-full h-18! md:max-w-[50%]!">
+        <input
+          class="flex-1 rounded-s-md text-xl! font-medium!"
+          id="Search"
+          type="search"
+          name="q"
+          aria-owns="main-search-results"
+          aria-controls="main-search-results"
+          value="{{ search.terms | escape }}"
+          placeholder="{{ se_stts.placeholder }}"
+        >
+        <button class="h-full w-auto aspect-square hover:opacity-80 bg-black! p-5! rounded-e-md">
+          <svg
+            class=" w-full h-full"
+            width="100%"
+            height="100%"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7.3 12.6C4.1 12.6 1.4 10 1.4 6.7C1.4 3.5 4 0.8 7.3 0.8C10.5 0.8 13.2 3.4 13.2 6.7C13.2 10 10.5 12.6 7.3 12.6ZM7.3 2.3C4.9 2.3 2.9 4.3 2.9 6.7C2.9 9.1 4.9 11.1 7.3 11.1C9.7 11.1 11.7 9.1 11.7 6.7C11.7 4.3 9.7 2.3 7.3 2.3Z" fill="#f2cb04"/>
+            <path d="M13.8 15.1C13.6 15.1 13.4 15 13.3 14.9L9.9 11.5C9.6 11.2 9.6 10.7 9.9 10.5C10.2 10.2 10.7 10.2 10.9 10.5L14.3 13.9C14.6 14.2 14.6 14.7 14.3 14.9C14.2 15 14 15.1 13.8 15.1Z" fill="#f2cb04"/>
+          </svg>
+        </button>
+      </div>
+      <input name="options[prefix]" type="hidden" value="last">
+      <div id="main-search-el" class=" w-full" tabindex="-1">
+        {%- render 'main-search-results' -%}
+      </div>
+    </form>
+  </main-predictive-search>
+</div>
+
+<style>
+  p {
+    margin: 0 !important;
+  }
+</style>
+<script type="module" src="{{ 'main-predictive-search.min.js' | asset_url }}"></script>
+
+{%- schema -%}
+{
+  "name": "Search page",
+  "tag": "section",
+  "class": "main-search-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Search Our Site"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "提示词",
+      "default": "Search"
+    }
+  ],
+  "blocks": [],
+  "default": {}
+}
+{%- endschema -%}

@@ -1,0 +1,211 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+%}
+
+<div
+  id="section-{{ sid }}"
+  class="max-w-[1600px] !mx-auto !px-[15px] md:!px-[3rem] !py-[30px] md:!py-[8rem] flex flex-col md:flex-row "
+>
+  <div class="cs-collections-list-menu flex-1 relative z-50 md:h-fit md:sticky md:top-[8rem]">
+    <button
+      id="cs-collections-switch"
+      data-status="0"
+      class="w-full text-center md:text-start !bg-transparent  rounded-[25px] !border-1 !border-[#121212] !text-[#121212] md:!text-[20px] !font-semibold !leading-[1] !py-[15px] md:!p-0 md:!cursor-default md:!border-none md:!mb-[25px]"
+    >
+      <span class="hidden md:inline">
+        {{ se_stts.topic_btn }}
+      </span>
+      <div class="md:hidden flex items-center justify-center">
+        <span>{{ collection.title }}</span>
+        <span class="flex ml-2 transition-transform duration-300 ease-out group-focus-within:rotate-180 size-7 !mt-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </span>
+      </div>
+    </button>
+    <div
+      id="cs-collections-list"
+      class="
+      hidden w-full flex-col !space-y-1 absolute top-full md:flex md:static md:!p-0 rounded-b-[25px] !border-1 !border-[#121212] !border-t-0 md:!border-none bg-white !px-[15px] !py-[20px]"
+    >
+      {% for item in se_stts.collections %}
+        <a
+          class="{% if collection.handle == item.handle  %} !text-amber-300 {% endif %} relative !px-3 md:!px-0 !text-[16px] !leading-[1.4] !mb-[10px]"
+          href="{{ item.url }}"
+        >
+          {{ item.title }}({{ item.all_products_count }})
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="cs-collections-list-main flex flex-col items-center w-full md:w-[75%] !pt-[40px] md:!pt-0 !pb-12">
+    {% paginate collection.products by se_stts.page_nums %}
+      <div class=" flex flex-wrap justify-center !space-y-[20px] md:!space-y-10">
+        {%- for item in collection.products -%}
+          <div class="!px-[8px] md:!px-4 cs-collections-item">
+            <a class="flex flex-col !space-y-2 items-center h-full" href="{{ item.url }}">
+              <div class=" w-full aspect-square shadow-[0_0_0.8rem_#e5e5e5] rounded-lg overflow-hidden group relative">
+                <img
+                  class="w-full !h-full object-cover relative z-10 scale-100 group-hover:scale-110 duration-1000 group-hover:opacity-0"
+                  src="{{ item.featured_image |  image_url  }}"
+                  alt="{{ item.title }}"
+                  width="100%"
+                  height="100%"
+                >
+                <img
+                  class="w-full !h-full object-cover z-0 group-hover:z-50 group-hover:scale-110 opacity-0 group-hover:opacity-100 absolute top-0 left-0 transition-all ease-in-out duration-1000 contrast-85 bg-white"
+                  src="{{ item.images[1] |  image_url  }}"
+                  alt="{{ item.title }}"
+                  width="100%"
+                  height="100%"
+                >
+              </div>
+              <h3 class="!text-[14px] text-center !mt-2 !mb-0 !font-medium">{{ item.title }}</h3>
+              <div
+                class="loox-rating w-fit"
+                data-id="{{ item.id }}"
+                data-rating="{{ item.metafields.loox.avg_rating }}"
+                data-raters="{{ item.metafields.loox.num_reviews }}"
+              ></div>
+              <div class="!text-[14px] !font-normal !text-center">
+                {{ item.price_min | money_with_currency }}
+                {%- if item.price_max != blank and item.price_min != item.price_max -%}
+                  <span> - {{ item.price_max | money_with_currency }}</span>
+                {%- endif -%}
+              </div>
+            </a>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.parts.size > 0 -%}
+        <div class="cs-collections-paginate w-fit flex !space-x-10 !pt-[20px] md:!pt-3">
+          {%- if paginate.previous != blank and paginate.current_page != 1 -%}
+            <a href="{{ paginate.previous.url }}">Pre</a>
+          {%- endif -%}
+
+          {%- for item in paginate.parts -%}
+            <a
+              class="{% if  forloop.index == paginate.current_page%} !text-amber-300 {% endif %}"
+              href="{{ item.url }}"
+            >
+              {{- forloop.index -}}
+            </a>
+          {%- endfor -%}
+
+          {%- if paginate.next != blank and paginate.current_page != paginate['page_size-1'] -%}
+            <a href="{{ paginate.next.url }}">Next</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {% endpaginate %}
+  </div>
+</div>
+
+<style>
+  .cs-collections-item {
+    width: calc(100% / {{se_stts.col_nums_mb | default: 2}});
+  }
+
+  @media (min-width: 768px) {
+    .cs-collections-item {
+      width: calc(100% / {{se_stts.col_nums_pc | default: 4}});
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const collectionsSwitch = document.getElementById('cs-collections-switch');
+    const collectionsList = document.getElementById('cs-collections-list');
+    collectionsSwitch.addEventListener('click', (e) => {
+      const status = Number(e.currentTarget.getAttribute('data-status'));
+      if (!status) {
+        collectionsSwitch.classList.add('rounded-b-none');
+        collectionsList.classList.remove('hidden');
+        collectionsList.classList.add('rounded-t-none', 'flex');
+        collectionsSwitch.dataset.status = '1';
+        document.addEventListener('click', (event) => {
+          if (!collectionsSwitch.contains(event.target)) {
+            collectionsSwitch.classList.remove('rounded-b-none');
+            collectionsList.classList.remove('rounded-t-none', 'flex');
+            collectionsList.classList.add('hidden');
+            collectionsSwitch.dataset.status = '0';
+          }
+        });
+      } else {
+        collectionsSwitch.classList.remove('rounded-b-none');
+        collectionsList.classList.remove('rounded-t-none', 'flex');
+        collectionsList.classList.add('hidden');
+        collectionsSwitch.dataset.status = '0';
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Collections List",
+  "settings": [
+    {
+      "type": "collection_list",
+      "id": "collections",
+      "label": "产品系列"
+    },
+    {
+      "type": "text",
+      "id": "topic_btn",
+      "label": "标题（按钮）",
+      "default": "Product Categories"
+    },
+    {
+      "type": "range",
+      "id": "col_nums_pc",
+      "label": "每行产品数（PC端）",
+      "default": 4,
+      "step": 1,
+      "min": 2,
+      "max": 100
+    },
+    {
+      "type": "range",
+      "id": "col_nums_mb",
+      "label": "每行产品数（移动端）",
+      "default": 2,
+      "step": 1,
+      "min": 2,
+      "max": 100
+    },
+    {
+      "type": "range",
+      "id": "page_nums",
+      "label": "每页产品数（分页）",
+      "step": 1,
+      "default": 12,
+      "min": 2,
+      "max": 100
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custom Collections List",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

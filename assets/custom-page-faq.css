@@ -1,0 +1,100 @@
+.cs-page-faq {
+  padding: 5vh 0;
+  width: 100%;
+  background-color: #000;
+}
+.cs-page-faq .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 85vw;
+}
+.cs-page-faq .faq-title {
+  margin-bottom: 5vh;
+  line-height: 1.2;
+  color: #eee;
+  font-size: 50px;
+  font-family: Antonio;
+  font-weight: 600;
+}
+.cs-page-faq .faq-box {
+    width: 50vw;
+}
+.cs-page-faq .faq-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: -2px 2px #f1ca03;
+  border: 1px solid #313131;
+  border-radius: 15px;
+  color: #eee;
+}
+.cs-page-faq .faq-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  cursor: pointer;
+}
+.cs-page-faq .faq-item-title::after {
+  content: '+';
+  font-size: 25px;
+}
+.cs-page-faq .faq-item-con {
+  padding-top: 0;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  color: #838383;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: all .3s;
+}
+.cs-page-faq .faq-item.active .faq-item-title::after {
+  content: '-';
+}
+.cs-page-faq .faq-item.active .faq-item-con {
+  padding-top: 20px;
+  max-height: 800px;
+  opacity: 1;
+  visibility: visible;
+}
+.cs-page-faq .faq-item-close {
+  display: block;
+}
+.cs-page-faq .faq-item-show {
+  display: none;
+}
+.cs-page-faq .faq-item.active .faq-item-close {
+  display: none;
+}
+.cs-page-faq .faq-item.active .faq-item-show {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .cs-page-faq .container {
+    flex-direction: column;
+    width: 92vw;
+  }
+  .cs-page-faq .faq-title {
+    width: 100%;
+    font-size: 30px;
+  }
+  .cs-page-faq .faq-box {
+    width: 100%;
+  }
+  .cs-page-faq .faq-item {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+  }
+  .cs-page-faq .faq-item-title {
+    font-size: 14px;
+  }
+  .cs-page-faq .faq-item-con {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,875 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+  assign variants = product.variants
+  assign current_variant = product.selected_or_first_available_variant
+  assign deatail_imgs = product.metafields.custom.info_citation.value.detail_imges.value
+  assign cur_code_enabled = settings.currency_code_enabled
+%}
+
+{%- capture close_svg -%}
+    <svg width="100%" height="100%" viewBox="0 0 65 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M52.8 65.5H13.2C6.70002 65.5 1.40002 60.2 1.40002 53.7V13.2C1.40002 6.69999 6.70002 1.39999 13.2 1.39999H52.7C59.2 1.39999 64.5 6.69999 64.5 13.2V53.7C64.5 60.3 59.3 65.5 52.8 65.5Z" fill="#1E1E1E" stroke="#666666" stroke-width="0.9603" stroke-miterlimit="10"/>
+      <path d="M21.7001 22L44.3001 45" stroke="#828282" stroke-width="3.8412" stroke-miterlimit="10"/>
+      <path d="M44.3001 22L21.7001 45" stroke="#828282" stroke-width="3.8412" stroke-miterlimit="10"/>
+    </svg>
+{%- endcapture -%}
+
+<div
+  id="cs_product_main"
+  data-title="{{ product.title }}"
+  data-setting="{{ se_stts |  json | escape }}"
+>
+  <div class="cs_main_left" aria-label="Product Images">
+    <div class="--left-wrapper">
+      <div class="--left-content{% unless se_stts.fill_pictures %} --fill-pictures {% endunless %}">
+        {% for block in se_blocks %}
+          {% if block.type == 'product_ul_icon' %}
+            {%- assign ul_icon_data = block.settings -%}
+            <div class="cs_ul_icon">
+              <img
+                src="{{  ul_icon_data.ul_icon_url | image_url }}"
+                alt="Ul Icon"
+                width="{{ ul_icon_data.ul_icon_url.width }}"
+                height="{{ ul_icon_data.ul_icon_url.height }}"
+              >
+            </div>
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        <div class="cs_main_img">
+          {%- assign product_img = product.featured_image -%}
+          {% for variant in variants %}
+            {%- assign variant_img = variant.featured_image | default: product_img -%}
+            <img
+              class="product_img{% if variant.id == current_variant.id %} product_img_active {% endif %} "
+              src="{{ variant_img | image_url}}"
+              alt="{{ variant_img.alt }}"
+              {%- if variant.id == current_variant.id -%}
+                loading="eager"
+                fetchpriority="high"
+              {%- else -%}
+                loading="lazy"
+                fetchpriority="auto"
+              {%- endif -%}
+              srcset="{{ variant_img | image_url: width: 400 }} 400w, {{ variant_img | image_url: width: 800 }} 800w, {{ variant_img | image_url: width: 1200 }} 1200w"
+              sizes="(max-width: 767px) 80vw, 45vw"
+              width="{{ variant_img.width }}"
+              height="{{ variant_img.height }}"
+              data-id="{{ variant.id }}"
+              data-title="{{ variant.title }}"
+              {%- if cur_code_enabled -%}
+                data-price="{{ variant.price | money_with_currency }}"
+              {%- else -%}
+                data-price="{{ variant.price | money }}"
+              {%- endif -%}
+              {%- if variant.compare_at_price > variant.price -%}
+                {%- if cur_code_enabled -%}
+                  data-compare_price="{{ variant.compare_at_price | money_with_currency }}"
+                {%- else -%}
+                  data-compare_price="{{ variant.compare_at_price | money }}"
+                {%- endif -%}
+                data-save_price="{{ variant.compare_at_price | minus: variant.price | money_without_trailing_zeros }}"
+              {%- endif -%}
+              data-sell_out="{% if variant.inventory_quantity <= 0 %}true{% else %}false{% endif %}"
+            >
+          {% endfor %}
+        </div>
+        <div class="--detail-swiper swiper">
+          <div class="swiper-wrapper">
+            {%- for img in deatail_imgs -%}
+              <img
+                class="--detail-img swiper-slide"
+                src="{{ img | image_url }}"
+                width="{{ img.width }}"
+                height="{{ img.height }}"
+                alt="{{ img.alt }}"
+              >
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs_main_right" aria-label="Product Details">
+    <div class="cs_main_container">
+      <div class="cs_main_box">
+        <div class="cs_main_scroll">
+          {%- comment -%}
+            右侧 cs_main_right 的所有内容都由 block 控制，并在同一个循环里统一遍历输出：
+            product_title（产品标题+副标题）、product_price（产品价格）、
+            product_reviews（Loox 评分）、product_options（变体/规格选择）
+            这几个 block 无需填写任何内容，添加了才显示，拖动排序即可调整顺序。
+          {%- endcomment -%}
+          {%- capture product_title_html -%}
+            <h1 class="product_title">
+              {{ product.title }}
+            </h1>
+            {%- if product.metafields.custom.info_citation.value.describe != blank -%}
+              <p class="product_describe">{{ product.metafields.custom.info_citation.value.describe }}</p>
+            {%- endif -%}
+          {%- endcapture -%}
+          {%- capture product_price_html -%}
+            <div class="product_price">
+              <span class="product_sale_price">
+                {%- if cur_code_enabled -%}
+                  {{ current_variant.price | money_with_currency }}
+                {%- else -%}
+                  {{ current_variant.price | money }}
+                {%- endif -%}
+              </span>
+              {%- if se_stts.show_o_price and current_variant.compare_at_price != blank -%}
+                <span class="product_o_price">
+                  {%- if cur_code_enabled -%}
+                    {{ current_variant.compare_at_price | money_with_currency }}
+                  {%- else -%}
+                    {{ current_variant.compare_at_price | money }}
+                  {%- endif -%}
+                </span>
+              {%- endif -%}
+              {% comment %}
+                {%- if product.metafields.custom.info_citation.value.label != blank -%}
+                  <span
+                    class="--product-discount"
+                  >
+                    {{- product.metafields.custom.info_citation.value.label -}}
+                  </span>
+                {%- endif -%}
+              {% endcomment %}
+            </div>
+          {%- endcapture -%}
+          {%- capture product_reviews_html -%}
+            <div class="cs-to-looxReviews">
+              <div
+                class="loox-rating "
+                data-id="{{ product.id }}"
+                data-rating="{{ product.metafields.loox.avg_rating }}"
+                data-raters="{{ product.metafields.loox.num_reviews }}"
+                data-color-text="#f2cb04"
+                data-color-star="#f2cb04"
+              ></div>
+            </div>
+          {%- endcapture -%}
+          {%- capture product_options_html -%}
+            <div class="product_accessory_list">
+              {% for item in product.options_with_values %}
+                {%- if item.name != 'Title' -%}
+                  <div class="product_accessory_item">
+                    <div class="product_accessory_title">
+                      {{ item.name }}
+                    </div>
+                    <div class="product_accessory_options">
+                      {%- assign item_position = 'option' | append: item.position -%}
+                      {%- assign current_value = current_variant[item_position] -%}
+                      {% for element in item.values %}
+                        {%- assign option_name = item.name | downcase -%}
+                        {%- if option_name == 'color' -%}
+                          {% assign color_key = element | replace: ' ', '_' | downcase %}
+                          {% assign color_value = product.metafields.custom.colors.value | map: color_key | first %}
+                          <div
+                            class="product_accessory_sku --sku-color {% if element == current_value %} accessory_sku_active{% endif %}"
+                            data-value="{{ element }}"
+                            data-position="{{ item.position }}"
+                          >
+                            <div
+                              class="sku-color"
+                              style="background-color: {{ color_value  }};"
+                            ></div>
+                          </div>
+                        {%- else -%}
+                          <div
+                            class="product_accessory_sku --sku-basic {% if element == current_value %}accessory_sku_active{% endif %}"
+                            data-value="{{ element }}"
+                            data-position="{{ item.position }}"
+                          >
+                            {{ element }}
+                          </div>
+                        {%- endif -%}
+                      {% endfor %}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {% endfor %}
+            </div>
+          {%- endcapture -%}
+          {%- for block in se_blocks -%}
+            {%- case block.type -%}
+              {%- when 'product_title' -%}
+                {{ product_title_html }}
+              {%- when 'product_price' -%}
+                {{ product_price_html }}
+              {%- when 'product_reviews' -%}
+                {{ product_reviews_html }}
+              {%- when 'product_options' -%}
+                {{ product_options_html }}
+              {%- when 'product_ul' -%}
+                <div class="cs-product-ul">
+                  {% liquid
+                    assign url = block.settings.heading_url
+                  %}
+                  <span>This e-bike has received the</span>
+                  <a
+                    class="cs-product-ul-link"
+                    target="_parent"
+                    href="{{ url }}"
+                    >UL Certificate of Compliance</a
+                  >
+                </div>
+              {%- when 'product_discount' -%}
+                {%- assign dicount_data = block.settings -%}
+                <div class="product_discount_coupon">
+                  <div class="coupon_left">
+                    <div class="coupon_info">
+                      {{ dicount_data.discount_info }}
+                    </div>
+                  </div>
+                  <div class="coupon_right">
+                    <span class="coupon_code">
+                      {{- dicount_data.discount_code -}}
+                    </span>
+                    <span class="coupon_desc">Click To Copy</span>
+                  </div>
+                </div>
+              {%- when 'rich_text' -%}
+                <div class="cs-special-info">
+                  {{ block.settings.rich_text_content }}
+                </div>
+              {%- when 'countdown' -%}
+                {% liquid
+                  assign bl_stts = block.settings
+                  assign time_units = 'days,hours,minutes,seconds' | split: ','
+                  assign unit_labels = 'DAYS,HOURS,MINUTES,SECONDS' | split: ','
+                %}
+
+                <div class="countdown-wrapper">
+                  {% if bl_stts.title != blank %}
+                    <h2
+                      style="color: {{ bl_stts.title_color }};"
+                    >
+                      {{ bl_stts.title }}
+                    </h2>
+                  {% endif %}
+
+                  <div
+                    id="countdown"
+                    data-countdown="{{ bl_stts.time }}"
+                  >
+                    {% for unit in time_units %}
+                      {% assign unit_index = forloop.index0 %}
+                      <div class="--countdown-item">
+                        <div class="--item-unit">
+                          <span
+                            id="{{ unit }}"
+                            style="color: {{ bl_stts.time_color }};"
+                            >00</span
+                          >
+                        </div>
+
+                        <div
+                          class="--item-unit-label"
+                          style="color: {{ bl_stts.unit_color }};"
+                        >
+                          {{ unit_labels[unit_index] }}
+                        </div>
+                      </div>
+
+                      {% unless forloop.last %}
+                        <div class="--item-unit-gap">
+                          <span style="color: {{ bl_stts.time_color }};">:</span>
+                        </div>
+                      {% endunless %}
+                    {% endfor %}
+                  </div>
+
+                  <div id="countdown-over">
+                    <h2 style="color: {{ bl_stts.title_color }};">Countdown Ended!</h2>
+                    <p style="color: {{ bl_stts.unit_color }};">The event has ended. Thank you for participating!</p>
+                  </div>
+                </div>
+              {%- when 'picture_link' -%}
+                {% liquid
+                  assign bl_stts = block.settings
+                %}
+                {%- capture picture_link_imgs -%}
+                  <img
+                    width="{{ bl_stts.image.width }}"
+                    height="{{ bl_stts.image.height }}"
+                    src="{{ bl_stts.image |  image_url  }}"
+                    alt=""
+                  >
+                  <img
+                    width="{{ bl_stts.image_mb.width }}"
+                    height="{{ bl_stts.image_mb.height }}"
+                    src="{{ bl_stts.image_mb |  image_url }}"
+                    alt=""
+                  >
+                {%- endcapture -%}
+                {%- if bl_stts.link != blank -%}
+                  <a
+                    class="cs-picture_link"
+                    href="{{ bl_stts.link }}"
+                    target="_blank"
+                  >
+                    {{ picture_link_imgs }}
+                  </a>
+                {%- else -%}
+                  <div class="cs-picture_link">
+                    {{ picture_link_imgs }}
+                  </div>
+                {%- endif -%}
+              {%- when 'rich_text_expand' -%}
+                <div class="cs-special-info">
+                  {{ block.settings.rich_text_content }}
+                </div>
+
+              {%- when 'xcotton' -%}
+                <div id="ProductBlockXcotton" {{ block.shopify_attributes }}><div></div></div>
+              {%- when '@app' -%}
+                <div class="product-app">
+                  {%- render block -%}
+                </div>
+              {%- when 'ul_block' -%}
+                {%- assign ul_img = product.metafields.custom.info_citation.value.ul_img.value -%}
+                <div class="cs-ul-block" data-source="{{ ul_img |  json | escape }}">
+                  <div class="--ul-icon">
+                    <img
+                      src="https://macfoxbike.com/cdn/shop/files/1_965d3f60-75cf-439d-9631-c8c9e5988b8d.png"
+                      width="100"
+                      height="100"
+                      alt=""
+                    >
+                  </div>
+                  <div class="--ul-info">
+                    <p class="--ul-title">{{ block.settings.ul_title }}</p>
+                    <p class="--ul-content">{{ block.settings.ul_content }}</p>
+                  </div>
+                </div>
+              {%- when 'product_icon' -%}
+                {%- assign product_icons = product.metafields.custom.info_citation.value.product_icon.value -%}
+                {%- assign ul_img = product.metafields.custom.info_citation.value.ul_img.value -%}
+                <div class="--product-icon_wrapper">
+                  {%- for item in product_icons -%}
+                    <div
+                      class="--product-icon"
+                      {%- if item.type == 'ul' -%}
+                        data-type="{{ item.type }}"
+                        data-source="{{ ul_img |  json | escape }}"
+                      {%- endif -%}
+                    >
+                      <img
+                        src="{{ item.icon |  image_url  }}"
+                        width="{{ item.icon.width }}"
+                        height="{{ item.icon.height }}"
+                        alt="{{ item.icon.alt }}"
+                      >
+                      <div>{{ item.title }}</div>
+                    </div>
+                  {%- endfor -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    <button
+      class="all_add_cart"
+      {% if current_variant.inventory_quantity <= 0 %}
+        disabled="true"
+      {% endif %}
+    >
+      {%- if current_variant.inventory_quantity <= 0 -%}Sold Out{%- else -%}Add To Cart{%- endif -%}
+    </button>
+  </div>
+</div>
+
+{%- comment -%}
+  移动端加购吸底栏：当 .all_add_cart 向上滚动、下边框被顶部（吸顶 header）遮挡时出现，PC 端不显示。
+  这里的按钮不直接加购，只负责唤起下方的 .cs-atc-dialog 选项弹窗。
+{%- endcomment -%}
+<div class="cs-sticky-atc" data-visible="false" aria-hidden="true">
+  <button
+    class="--sticky-add-cart"
+    type="button"
+    aria-haspopup="dialog"
+    {% if current_variant.inventory_quantity <= 0 %}
+      disabled="true"
+    {% endif %}
+  >
+    {%- if current_variant.inventory_quantity <= 0 -%}Sold Out{%- else -%}Add To Cart{%- endif -%}
+  </button>
+</div>
+
+{%- comment -%}
+  移动端加购选项弹窗：产品信息 + 规格选项 + 优惠券 + 最终加购按钮。
+  规格选项与优惠券由 JS 从 #cs_product_main 克隆进来，保持单一数据源。
+{%- endcomment -%}
+<div class="cs-atc-dialog" data-visible="false" aria-hidden="true">
+  <div class="--atc-curtain" data-atc-close></div>
+  <div class="--atc-sheet" role="dialog" aria-modal="true" aria-label="{{ product.title }} options">
+    <button class="--atc-close" type="button" data-atc-close aria-label="Close">
+      <svg
+        class="--close-mb"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M5 5L19 19"></path>
+        <path d="M19 5L5 19"></path>
+      </svg>
+    </button>
+    <div class="--atc-scroll">
+      {%- assign atc_thumb = current_variant.featured_image | default: product.featured_image -%}
+      <div class="--atc-product">
+        <div class="--atc-thumb">
+          <img
+            class="--atc-thumb-img"
+            src="{{ atc_thumb | image_url: width: 300 }}"
+            width="272"
+            height="272"
+            alt="{{ atc_thumb.alt | default: product.title | escape }}"
+            loading="lazy"
+          >
+        </div>
+        <div class="--atc-summary">
+          <p class="--atc-title">{{ product.title }}</p>
+          <div class="--atc-price">
+            <span class="--atc-sale-price">
+              {%- if cur_code_enabled -%}
+                {{ current_variant.price | money_with_currency }}
+              {%- else -%}
+                {{ current_variant.price | money }}
+              {%- endif -%}
+            </span>
+            {%- if se_stts.show_o_price -%}
+              <span class="--atc-o-price">
+                {%- if current_variant.compare_at_price > current_variant.price -%}
+                  {%- if cur_code_enabled -%}
+                    {{ current_variant.compare_at_price | money_with_currency }}
+                  {%- else -%}
+                    {{ current_variant.compare_at_price | money }}
+                  {%- endif -%}
+                {%- endif -%}
+              </span>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      <div class="--atc-options"></div>
+      <div class="--atc-coupon"></div>
+    </div>
+    <div class="--atc-footer">
+      <button
+        class="all_add_cart --atc-add-cart"
+        type="button"
+        {% if current_variant.inventory_quantity <= 0 %}
+          disabled="true"
+        {% endif %}
+      >
+        {%- if current_variant.inventory_quantity <= 0 -%}Sold Out{%- else -%}Add To Cart{%- endif -%}
+      </button>
+    </div>
+  </div>
+</div>
+{%- if deatail_imgs != blank -%}
+  <div class="detail-imgs-dialog" visible="false">
+    <div class="--dialog-curtain --dialog-close"></div>
+    <div class="--dialog-main">
+      <div class="--dialog-heading">
+        <div class="--dialog-close --close-btn">
+          {{ close_svg }}
+        </div>
+      </div>
+      <div class="--dialog-content">
+        {%- for img in deatail_imgs -%}
+          <img
+            class="--deatail-img"
+            src="{{ img | image_url }}"
+            width="{{ img.width }}"
+            height="{{ img.height }}"
+            alt="{{ img.alt }}"
+          >
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+<div class="cs-info-darwer t4s-drawer t4s-drawer__right t4s-dn" aria-hidden="true">
+  <div class="t4s-drawer__header">
+    <button class="t4s-drawer__close" data-drawer-close aria-label="Close Custom Info">
+      <svg class="t4s-iconsvg-close" role="presentation" viewBox="0 0 16 14">
+        <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="t4s-drawer__content">
+    <!--
+      <h3>The Beauty of Morning Routines</h3>
+      <p>
+        Starting the day with a consistent morning routine can bring clarity and focus. Whether it's a peaceful moment with a cup of coffee or a brisk walk outside.
+      </p>
+    -->
+    <h3>BRAND-NEW UPGRADE</h3>
+    <p>1. The round headlight has been replaced with a shield-shaped light, enhancing the bike’s stylish appeal.</p>
+    <img
+      class="cs-image full_width"
+      src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/1_31f9de58-9906-417f-b465-d8214ca2f158.webp?v=1728634422"
+      alt=""
+      width=""
+      height=""
+    >
+    <div class="dash-line"></div>
+    <p>2. The gold chain brings a fresh, modern look, replacing the previous outdated style.</p>
+    <img
+      class="cs-image full_width"
+      src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/1000X700_d989891d-0b18-4dc7-8246-7a665fdcad2f.webp?v=1728644374"
+      alt=""
+      width=""
+      height=""
+    >
+    <div class="dash-line"></div>
+    <p>3. The upgraded brake pads reduce noise during braking.</p>
+    <img
+      class="cs-image full_width"
+      src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/3_6f08e732-dd5c-484d-a3c8-e90442cd1e6e.webp?v=1728634422"
+      alt=""
+      width=""
+      height=""
+    >
+    <div class="dash-line"></div>
+    <p>4. The tires have been upgraded for better durability and improved puncture resistance.</p>
+    <img
+      class="cs-image full_width"
+      src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/2_25557018-1ce5-4e3f-83ec-cd0e693c9d22.webp?v=1728634422"
+      alt=""
+      width=""
+      height=""
+    >
+    <div class="dash-line"></div>
+    <p>5. The dashboard and throttle are now separated, making operation easier.</p>
+    <img
+      class="cs-image full_width"
+      src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/1000X700_30d09b8e-74ef-410f-9412-0275ad838313.webp?v=1728645028"
+      alt=""
+      width=""
+      height=""
+    >
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ sid }} {
+    width: 100%;
+    height: auto;
+    {% if se_stts.image_bg != blank %}--se-bg-img: url({{ se_stts.image_bg | image_url }});{% endif %}
+    {% if se_stts.image_bg_mb != blank %}--se-bg-img-mb: url({{ se_stts.image_bg_mb | image_url }});{% endif %}
+    --se-bg-color: {{ se_stts.bg_color }};
+  }
+
+  {% for block in se_blocks %}
+    {% if block.type=="product_ul_icon" %}
+    {% assign ul_icon_data = block.settings %}
+      .cs_ul_icon{
+        position: absolute;
+        left:{{ul_icon_data.ul_icon_left}}%;
+        top:{{ul_icon_data.ul_icon_top}}%;
+        width:{{ul_icon_data.ul_icon_size}}px;
+        height:{{ul_icon_data.ul_icon_size}}px;
+      }
+
+      @media screen and (max-width: 769px) {
+       .cs_ul_icon{
+          left:{{ul_icon_data.ul_icon_mobile_left}}%;
+          top:{{ul_icon_data.ul_icon_mobile_top}}%;
+          width:{{ul_icon_data.ul_icon_mobile_size}}px;
+          height:{{ul_icon_data.ul_icon_mobile_size}}px;
+       }
+      }
+      {% break %}
+    {% endif %}
+  {% endfor %}
+</style>
+
+{% for block in se_blocks %}
+  {%- case block.type -%}
+    {%- when 'product_compare' -%}
+      {% if block.settings.product_compare_content != blank %}
+        <div class="cs-product-compare">
+          <div class="cs-product-compare-overflow" onclick="productCompareOff()"></div>
+          <div class="cs-product-compare-main">
+            <div class="cs-product-compare-control">
+              <div class="cs-product-compare-control-item">
+                <svg width="100%" height="100%" viewBox="0 0 65 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M52.8 65.5H13.2C6.70002 65.5 1.40002 60.2 1.40002 53.7V13.2C1.40002 6.69999 6.70002 1.39999 13.2 1.39999H52.7C59.2 1.39999 64.5 6.69999 64.5 13.2V53.7C64.5 60.3 59.3 65.5 52.8 65.5Z" fill="#1E1E1E" stroke="#666666" stroke-width="0.9603" stroke-miterlimit="10"/>
+                  <path d="M21.7001 22L44.3001 45" stroke="#828282" stroke-width="3.8412" stroke-miterlimit="10"/>
+                  <path d="M44.3001 22L21.7001 45" stroke="#828282" stroke-width="3.8412" stroke-miterlimit="10"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cs-product-compare-content">
+              {{ block.settings.product_compare_content }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+  {%- endcase -%}
+{% endfor %}
+
+<script type="module" src="{{"custom-product-main.min.js" |  asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Custom Product Main",
+  "class": "cs-product-main-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_o_price",
+      "label": "Show Original Price",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bg",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bg_mb",
+      "label": "Background Image(Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "linear-gradient(transparent 0%, #000 100%)",
+      "info": "default: linear-gradient(transparent 0%, #000 100%)"
+    },
+    {
+      "type": "number",
+      "id": "app_scroll_length",
+      "label": "Apps height total",
+      "info": "The total height of the app for scrolling",
+      "default": 100
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "xcotton",
+      "name": "Xcotton",
+      "limit": 1
+    },
+    {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": [
+        {
+          "type": "html",
+          "id": "rich_text_content",
+          "label": "Rich Text Content"
+        }
+      ]
+    },
+    {
+      "type": "rich_text_expand",
+      "name": "Rich Text Expand",
+      "settings": [
+        {
+          "type": "html",
+          "id": "rich_text_content",
+          "label": "Rich Text Content"
+        }
+      ]
+    },
+    {
+      "type": "product_discount",
+      "name": "Product Discount",
+      "settings": [
+        {
+          "type": "text",
+          "id": "discount_info",
+          "label": "Discount Info"
+        },
+        {
+          "type": "text",
+          "id": "discount_code",
+          "label": "Discount Code"
+        }
+      ]
+    },
+    {
+      "type": "product_ul",
+      "name": "Product UL",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading_url",
+          "label": "URL",
+          "default": "https://cdn.shopify.com/s/files/1/0714/3581/3182/files/X1S_UL_Certificate_of_Compliance.pdf?v=1749542498"
+        }
+      ]
+    },
+    {
+      "type": "product_ul_icon",
+      "name": "Product UL Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "ul_icon_url",
+          "label": "Image"
+        },
+        {
+          "type": "number",
+          "id": "ul_icon_size",
+          "label": "Size",
+          "default": 80
+        },
+        {
+          "type": "number",
+          "id": "ul_icon_mobile_size",
+          "label": "Mobile size",
+          "default": 30
+        },
+        {
+          "type": "range",
+          "id": "ul_icon_left",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Left",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "ul_icon_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Top",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "ul_icon_mobile_left",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Mobile left",
+          "default": 90
+        },
+        {
+          "type": "range",
+          "id": "ul_icon_mobile_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Mobile top",
+          "default": 10
+        }
+      ]
+    },
+    {
+      "type": "product_compare",
+      "name": "Product Compare",
+      "settings": [
+        {
+          "type": "html",
+          "id": "product_compare_content",
+          "label": "内容",
+          "info": "请给合适的外部元素加上这个触发函数 onclick=\"productCompareOn()\"以及类名class=\"open-drawer\"",
+          "default": "<div>1. The battery has been upgraded to a larger capacity, providing longer riding time.</div><div>2. The gold chain brings a fresh, modern look, replacing the previous outdated style.</div><div>3. The upgraded brake pads reduce noise during braking.</div><div>4. The tires have been upgraded for better durability and improved puncture resistance.</div><div>5. The dashboard and throttle are now separated, making operation easier.</div>"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "countdown",
+      "name": "倒计时",
+      "settings": [
+        { "type": "color", "id": "bg_color", "label": "背景颜色", "default": "#000000" },
+        { "type": "text", "id": "title", "label": "标题", "default": "Last Chance：Back 2 School Ends Soon" },
+        { "type": "color", "id": "title_color", "label": "标题颜色", "default": "#ffffff" },
+        {
+          "type": "text",
+          "id": "time",
+          "label": "结束时间",
+          "default": "2025-08-31 12:00:00",
+          "info": "格式：YYYY-MM-DD HH:MM:SS"
+        },
+        { "type": "color", "id": "time_color", "label": "时间颜色", "default": "#efca05" },
+        { "type": "color", "id": "unit_color", "label": "单位颜色", "default": "#666666" }
+      ]
+    },
+    {
+      "type": "picture_link",
+      "name": "链接（图片跳转）",
+      "settings": [
+        { "type": "url", "id": "link", "label": "链接" },
+        { "type": "image_picker", "id": "image", "label": "图片链接（PC端）" },
+        { "type": "image_picker", "id": "image_mb", "label": "图片链接（移动端）" }
+      ]
+    },
+    {
+      "type": "ul_block",
+      "name": "Ul Info",
+      "settings": [
+        {
+          "type": "text",
+          "id": "ul_title",
+          "label": "标题",
+          "default": "UL Safety Certified"
+        },
+        {
+          "type": "text",
+          "id": "ul_content",
+          "label": "内容",
+          "default": "Certified in accordance with UL 2849"
+        }
+      ]
+    },
+    {
+      "type": "product_icon",
+      "name": "图标信息",
+      "limit": 1
+    },
+    {
+      "type": "product_title",
+      "name": "标题（含副标题）",
+      "limit": 1
+    },
+    {
+      "type": "product_price",
+      "name": "价格",
+      "limit": 1
+    },
+    {
+      "type": "product_reviews",
+      "name": "评分（Loox）",
+      "limit": 1
+    },
+    {
+      "type": "product_options",
+      "name": "规格选择（SKU）",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Main",
+      "category": "Product Page"
+    }
+  ]
+}
+{% endschema %}

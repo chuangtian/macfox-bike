@@ -1,0 +1,77 @@
+<style>
+  #cs-moving-ani-widget {
+    position: fixed; 
+    top: calc(50% - 50px); 
+    left: calc(50% - 50px); 
+    width: 70px; 
+    height: 70px;
+    transform: translate(1000px, 1000px);
+    z-index: 9999;
+    pointer-events: none;
+  }
+  #cs-moving-ani-widget img {
+    transform-origin: center;
+  }
+</style>
+
+<div id="cs-moving-ani-widget">
+    <img src="https://cdn.shopify.com/s/files/1/0714/3581/3182/files/2_86d3ab2a-5adb-4eaa-9c78-f882c96a540e.png?v=1725863272" alt="" class="cs-image full_width" width="" height="">
+</div>
+
+<script>
+  (function() {
+      function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+    
+      document.addEventListener('DOMContentLoaded', function() {
+        const $widgetDom = $('#cs-moving-ani-widget');
+        const widgetWidth = $widgetDom.width();
+        const widgetHeight = $widgetDom.height();
+        const $imgDom = $('#cs-moving-ani-widget img')[0];
+        const xMax = ($(window).width() - widgetWidth) / 2;
+        const yMax = ($(window).height() - widgetHeight) / 2;
+
+        let direction = true;
+        let animation;
+        const startX = xMax;
+        const startY = getRandomInt(-yMax, yMax);
+        gsap.set($widgetDom[0], {x: startX, y: startY});
+        updatePosition();
+        $(document).on('mousemove', handleMouseMove);
+
+        function updatePosition(){
+          direction = !direction;
+          let currentX = gsap.getProperty($widgetDom[0], "x");
+          gsap.to($imgDom, { scaleX: direction ? -1 : 1 });
+          animation = gsap.to($widgetDom, {
+            x: (direction ? xMax : -xMax),
+            y: getRandomInt(-yMax, yMax),
+            duration: 10,
+            ease: "none",
+            onComplete: updatePosition
+          });
+        }
+
+        let isChange = false;
+        function handleMouseMove(e){
+          if(!isChange){
+            const mouseX = e.clientX - xMax;
+            const mouseY = e.clientY - yMax;
+            const currentX = gsap.getProperty($widgetDom[0], "x");
+            const currentY = gsap.getProperty($widgetDom[0], "y");
+            if(mouseX > currentX - widgetWidth - 10
+               && mouseX < currentX + widgetWidth + 10
+               && mouseY > currentY - widgetHeight - 10
+               && mouseY < currentY + widgetHeight + 10
+            ){
+              if(animation) animation.kill();
+              updatePosition();
+              isChange = true;
+              setTimeout(() => {isChange = false;}, 1000)
+            }
+          }
+        }
+      })
+  })()
+</script>

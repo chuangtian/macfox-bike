@@ -1,0 +1,77 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+<div class="cs-affiliate-program-wrapper">
+  <p class="--program-title">{{ se_stts.title }}</p>
+  <p class="--program-desc">{{ se_stts.desc }}</p>
+  <ul class="--program-wrapper">
+    {%- for variable in se_blocks -%}
+      {%- case variable.type -%}
+        {%- when 'work_item' -%}
+          <div class="--program-item">
+            <div class="--program-img">
+              <img
+                src="{{ variable.settings.img |  image_url  }}"
+                width="{{ variable.settings.img.width }}"
+                height="{{ variable.settings.img.height }}"
+                alt="{{ variable.settings.img.alt }}"
+              >
+            </div>
+            <a class="--program-link" href="{{ variable.settings.url  }}">{{ se_stts.btn_txt }}</a>
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </ul>
+</div>
+{% schema %}
+{
+  "name": "Custom Affiliate Program",
+  "tag": "section",
+  "class": "cs-affiliate-program-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "title"
+    },
+    {
+      "type": "textarea",
+      "id": "desc",
+      "label": "描述",
+      "default": "Desc"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "按钮文本",
+      "default": "Join Now"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "work_item",
+      "name": "卡片",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "图片"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "链接"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "加入联盟",
+      "category": "Affiliate"
+    }
+  ]
+}
+{% endschema %}

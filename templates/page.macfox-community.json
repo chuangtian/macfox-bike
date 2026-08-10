@@ -1,0 +1,407 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Best-Ebike-Mountain.jpg",
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "disabled": true,
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": true,
+        "cl_bg": "rgba(0,0,0,0)",
+        "cl_link": "#222222"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "custom_banner_CnVgNx": {
+      "type": "custom-banner",
+      "blocks": {
+        "item_Xch8px": {
+          "type": "item",
+          "settings": {
+            "link": "https://af.uppromote.com/macfoxebike/register",
+            "link_title": "",
+            "link_open_type": "_self",
+            "img_pc": "shopify://shop_images/Best-Ebike-Mountain.jpg",
+            "title": "Macfox Affiliate Marketing Programs",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 30,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 16,
+            "content": "Earn up to 6% commission for every sale you make with your affiliate link on macfoxbike.com with the<br> new E-bike Affiliate Marketing Programs. Partner with us and we’ll share what we earn.",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 40,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 30,
+            "button": "Let's Partner Up!",
+            "b_width": 14,
+            "b_position_x": 43,
+            "b_position_y": 50,
+            "b_width_mb": 36,
+            "b_position_x_mb": 32,
+            "b_position_y_mb": 60
+          }
+        }
+      },
+      "block_order": [
+        "item_Xch8px"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".cs-banner .banner-item-title,.cs-banner .banner-item-content {color: #000; font-weight: 400; text-align: center;}",
+        "@media screen and (max-width: 768px) {.cs-banner .banner-item-title {font-size: 4vw; } .cs-banner .banner-item-content {font-size: 3vw; } .cs-banner .banner-item-button {padding: 2.5vw; font-size: 3vw; }}"
+      ],
+      "name": "Custom Banner",
+      "settings": {
+        "se_height": "auto",
+        "se_height_mb": "auto",
+        "swi_autoplay": true,
+        "swi_time": 5,
+        "is_show_time": false,
+        "countdown_title": "Prime Day Huge Savings",
+        "end_time": "2024-12-31 23:59:59",
+        "bg_color": "#ffffff33",
+        "border_color": "#ffffff2e",
+        "shadow_color": "#1f268799",
+        "blur": "10px",
+        "text_color": "#222222"
+      }
+    },
+    "3345f81b-3ea0-4829-8440-faf8fc597e20": {
+      "type": "hero_image",
+      "blocks": {
+        "template--18664914026814__3345f81b-3ea0-4829-8440-faf8fc597e20-168178489196cd7435-1": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Macfox Affiliate Marketing Programs",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 32,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 10,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 18,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20,
+            "animation": "none"
+          }
+        },
+        "template--18664914026814__3345f81b-3ea0-4829-8440-faf8fc597e20-168178489196cd7435-0": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Earn up to 8% commission for every sale you make with your affiliate link on macfoxbike.com with the<br> new E-bike Affiliate Marketing Programs. Partner with us and we’ll share what we earn.",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 16,
+            "text_lh": 20,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 20,
+            "font_italic": true,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 13,
+            "text_lh_mb": 15,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20,
+            "animation": "none"
+          }
+        },
+        "template--18664914026814__3345f81b-3ea0-4829-8440-faf8fc597e20-168178489196cd7435-2": {
+          "type": "custom_button",
+          "settings": {
+            "button_text": "Let's Partner Up!",
+            "button_link": "https://af.uppromote.com/macfoxebike/register",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "#ffffff",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 300,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 50,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--18664914026814__3345f81b-3ea0-4829-8440-faf8fc597e20-168178489196cd7435-1",
+        "template--18664914026814__3345f81b-3ea0-4829-8440-faf8fc597e20-168178489196cd7435-0",
+        "template--18664914026814__3345f81b-3ea0-4829-8440-faf8fc597e20-168178489196cd7435-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratio_cuspx",
+        "custom_dk": true,
+        "height_dk": 1000,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 500,
+        "image": "shopify://shop_images/Best-Ebike-Mountain.jpg",
+        "parallax": false,
+        "image_position": "0",
+        "link_img1": "",
+        "open_link": "_blank",
+        "text_align": "center",
+        "text_align_mb": "center",
+        "content_width": "container",
+        "cv_pos": 50,
+        "ch_pos": 50,
+        "cv_pos_mb": 50,
+        "ch_pos_mb": 50,
+        "bg_overlay": "#000000",
+        "bg_opacity": 0,
+        "bg_content_cl": "#ffffff",
+        "bg_content_op": 0,
+        "content_pd_tb": 15,
+        "content_pd_lr": 15,
+        "content_pd_tb_mb": 10,
+        "content_pd_lr_mb": 10,
+        "border_bl": false,
+        "br_color": "#222222",
+        "br_bg": "#ffffff",
+        "br_opacity": 50,
+        "br_style": "solid",
+        "br_pd": 20,
+        "br_pd_mb": 10,
+        "time_animation": 1,
+        "animation_delay": 40,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_affiliate_banner_wFmb6J": {
+      "type": "custom-affiliate-banner",
+      "name": "联盟Banner图",
+      "settings": {
+        "img_pc": "shopify://shop_images/1_de96827c-f918-417c-b977-f72d7fbf791d.webp",
+        "img_mb": "shopify://shop_images/2_7c516f87-e984-4e16-ba78-1f4b16fda00e.webp",
+        "title": "Macfox Reddit Community Rewards",
+        "desc": "Share your Macfox story with the Reddit community and get sponsor rewarded.",
+        "btn_content": "Email Us to Claim",
+        "btn_type": "link",
+        "btn_el": ".cs-affiliate-program-wrapper",
+        "btn_url": "mailto:events@macfoxbike.com"
+      }
+    },
+    "custom_affiliate_card_rdWYff": {
+      "type": "custom-affiliate-card",
+      "blocks": {
+        "card_item_DTF6hy": {
+          "type": "card_item",
+          "settings": {
+            "img": "shopify://shop_images/3_09db5bdd-e9e3-4b4a-b935-205465272559.webp",
+            "title": "How It Works",
+            "keys": "Post your real Macfox experience, ride, setup, review, or questions on Reddit.;;We recommend posting in r/macfox. Posts in r/ebikes are also welcome when they follow the subreddit rules.;;Your post must remain live for at least 48 hours without being removed by Reddit.;;Rewards are available for customers with a valid Macfox official website order number.;;Email us your Reddit post link and order number. Once approved, we’ll arrange your sponsor reward.",
+            "type": "card_2"
+          }
+        },
+        "card_item_mWX9L9": {
+          "type": "card_item",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/3_21af5efb-37fb-4b9b-9de3-c506e0353893.webp",
+            "title": "Rules & Settlement Policy",
+            "keys": "Performance-Based: Commissions apply only to verified, conversion-driven sales.;;Exclusions: Self-purchases, duplicate attributions, or non-contributory orders are ineligible.;;Anti-Fraud: Strictly prohibits coupon sniping, cookie stuffing, or traffic hijacking.",
+            "type": "card_1"
+          }
+        },
+        "card_item_dTBDBX": {
+          "type": "card_item",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/1_14f39a81-11f9-4b46-9483-49a44c140f5a.webp",
+            "title": "Partnership Expectations",
+            "keys": "High-Value Returns: Clear, high-ticket conversion value per sale.;;30-Day Conversion: Aligned with the typical consumer decision-making cycle.;;Content-Driven: Optimized for expert reviews, authentic experiences, and long-term advocacy.;;Strategic Growth: Not intended for short-term arbitrage or low-intent traffic scaling.",
+            "type": "card_1"
+          }
+        }
+      },
+      "block_order": [
+        "card_item_DTF6hy",
+        "card_item_mWX9L9",
+        "card_item_dTBDBX"
+      ],
+      "name": "联盟描述卡片",
+      "settings": {}
+    },
+    "custom_affiliate_works_HamWt4": {
+      "type": "custom-affiliate-works",
+      "blocks": {
+        "work_item_TYTweV": {
+          "type": "work_item",
+          "settings": {
+            "title": "Join",
+            "desc": "It's 100% free to join. Partner with us and start earning today!"
+          }
+        },
+        "work_item_KQ6GNw": {
+          "type": "work_item",
+          "settings": {
+            "title": "Share",
+            "desc": "Choose products or pages to promote withaffiliate links."
+          }
+        },
+        "work_item_CkYLcd": {
+          "type": "work_item",
+          "settings": {
+            "title": "Earn",
+            "desc": "Get up to 6% commission on each successful order."
+          }
+        }
+      },
+      "block_order": [
+        "work_item_TYTweV",
+        "work_item_KQ6GNw",
+        "work_item_CkYLcd"
+      ],
+      "disabled": true,
+      "name": "联盟步骤",
+      "settings": {
+        "title": "How Does It Works?"
+      }
+    },
+    "custom_affiliate_program_QQer9T": {
+      "type": "custom-affiliate-program",
+      "blocks": {
+        "work_item_ah7zbF": {
+          "type": "work_item",
+          "settings": {
+            "img": "shopify://shop_images/5_95b1da4e-898d-4903-a22d-096cdc3a7edd.webp",
+            "url": "https://af.uppromote.com/macfoxebike/register"
+          }
+        },
+        "work_item_E3J9bi": {
+          "type": "work_item",
+          "settings": {
+            "img": "shopify://shop_images/logo-referralcandy.webp",
+            "url": "https://macfoxbike.refr.cc/join/refer-rewards"
+          }
+        }
+      },
+      "block_order": [
+        "work_item_ah7zbF",
+        "work_item_E3J9bi"
+      ],
+      "disabled": true,
+      "name": "加入联盟",
+      "settings": {
+        "title": "Join MACFOX Affiliate Program",
+        "desc": "The terms for the MACFOX affiliate program are the same across all of these networks, so just pick the one you prefer and apply. You don't need to apply to more than one.",
+        "btn_txt": "Join Now"
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "breadcrumb",
+    "main",
+    "sidebar-page",
+    "custom_banner_CnVgNx",
+    "3345f81b-3ea0-4829-8440-faf8fc597e20",
+    "custom_affiliate_banner_wFmb6J",
+    "custom_affiliate_card_rdWYff",
+    "custom_affiliate_works_HamWt4",
+    "custom_affiliate_program_QQer9T"
+  ]
+}

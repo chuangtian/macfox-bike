@@ -1,0 +1,179 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-picture-describe-box">
+  <div class="cs-picture-describe-content">
+    {% for block in se_blocks %}
+      {% case block.type %}
+        {% when 'picture_item' %}
+          <div class="cs-picture-item-box">
+            <div class="cs-picture-item-background">
+              <img
+                src="{{ block.settings.image_url | image_url }}"
+                alt="{{ block.settings.image_alt }}"
+                width="100"
+                height="100"
+                loading="lazy"
+              >
+            </div>
+            <p>{{ block.settings.picture_item_describe }}</p>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+   .cs-picture-describe-box{
+     background-color: #000000;
+     width: 100%;
+     padding: 20px 0;
+   }
+   .cs-picture-describe-content{
+     display: grid;
+     grid-template-columns: repeat({{ se_stts.items_per_row }}, 1fr);
+     max-width: 1300px;
+      margin: 0 auto;
+     gap:10px;
+   }
+
+   .cs-picture-describe-box img {
+     width: {{ se_stts.picture_background_width }};
+     height:{{ se_stts.picture_background_height }};
+   }
+
+   .cs-picture-item-box{
+     display: flex;
+     flex-direction: column;;
+     align-items: center;
+     max-width:200px;
+      margin: 0 auto;
+   }
+   .cs-picture-item-box>p{
+     word-break: keep-all;
+     overflow-wrap: break-word;
+     white-space: normal;
+     color: {{ se_stts.picture_item_describe_color }};
+         text-align: center;
+     font-size:12px;
+     line-height:14px;
+     margin-top:8px;
+     max-width:80%;
+   }
+
+   .cs-picture-item-background{
+     background-color: {{ se_stts.picture_background_color }};
+     border-radius: {{ se_stts.picture_border_radius }};
+     overflow: hidden;
+   }
+
+   /* 移动端及平板端样式 */
+   @media screen and (max-width: 1100px) {
+     .cs-picture-describe-box img {
+     width: {{ se_stts.picture_background_width_mobile }};
+     height:{{ se_stts.picture_background_height_mobile }};
+   }
+     .cs-picture-describe-content{
+     grid-template-columns: repeat({{ se_stts.items_per_row_mobile }}, 1fr);
+       width:100%;
+       padding:0 5px;
+   }
+       .cs-picture-item-box>p{
+     font-size:9px;
+   }
+        .cs-picture-item-box{
+    max-width:110px;
+   }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Picture Describe",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "items_per_row",
+      "label": "Items per row",
+      "default": 3
+    },
+    {
+      "type": "number",
+      "id": "items_per_row_mobile",
+      "label": "Items per row(Mobile)",
+      "default": 3
+    },
+    {
+      "type": "color",
+      "id": "picture_background_color",
+      "label": "Picture Background Color"
+    },
+    {
+      "type": "text",
+      "id": "picture_border_radius",
+      "label": "Picture Border Radius",
+      "default": "0"
+    },
+    {
+      "type": "text",
+      "id": "picture_background_width",
+      "label": "Picture Width",
+      "default": "100%"
+    },
+    {
+      "type": "text",
+      "id": "picture_background_height",
+      "label": "Picture Height",
+      "default": "100%"
+    },
+    {
+      "type": "text",
+      "id": "picture_background_width_mobile",
+      "label": "Picture Width(Mobile)",
+      "default": "100%"
+    },
+    {
+      "type": "text",
+      "id": "picture_background_height_mobile",
+      "label": "Picture Height(Mobile)",
+      "default": "100%"
+    },
+    {
+      "type": "color",
+      "id": "picture_item_describe_color",
+      "label": "Describe Color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "picture_item",
+      "name": "Picture Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_url",
+          "label": "Image Url"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image Alt"
+        },
+        {
+          "type": "text",
+          "id": "picture_item_describe",
+          "label": "Describe"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Picture Describe"
+    }
+  ]
+}
+{% endschema %}

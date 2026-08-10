@@ -1,0 +1,204 @@
+{% liquid
+  assign se = section.settings
+  assign stat_blocks = section.blocks | where: 'type', 'stat'
+  assign step_blocks = section.blocks | where: 'type', 'step'
+%}
+
+{%- capture play_icon -%}
+  <div class="cs-install-icon cs-install-icon-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] hover:bg-white/15 hover:border-white/30 hover:shadow-[0_12px_40px_0_rgba(31,38,135,0.45)] hover:scale-105 active:scale-95 active:shadow-[0_4px_16px_0_rgba(31,38,135,0.3)] text-white/90 hover:text-white">
+    <svg width="100%" height="100%" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M55.2 35.9L30.2 21.5C29 20.8 27.5 21.7 27.5 23.1V52C27.5 53.4 29 54.2 30.2 53.6L55.2 39.2C56.4 38.4 56.4 36.6 55.2 35.9Z" fill="currentColor"></path>
+    </svg>
+  </div>
+  <div class="cs-install-icon cs-install-icon-pause absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] hover:bg-white/15 hover:border-white/30 hover:shadow-[0_12px_40px_0_rgba(31,38,135,0.45)] hover:scale-105 active:scale-95 active:shadow-[0_4px_16px_0_rgba(31,38,135,0.3)] text-white/90 hover:text-white">
+    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="6" y="5" width="4" height="14" rx="1.2" fill="currentColor"></rect>
+      <rect x="14" y="5" width="4" height="14" rx="1.2" fill="currentColor"></rect>
+    </svg>
+  </div>
+{%- endcapture -%}
+
+<div class="cs-install-wrapper">
+  {% if se.title != blank %}
+    <p class="cs-install-title">{{ se.title }}</p>
+  {% endif %}
+
+  <div class="cs-install-grid">
+    <div class="cs-install-video">
+      {%- if se.video != blank -%}
+        <video
+          class="cs-install-media"
+          playsinline
+          loop
+          preload="metadata"
+          {% if se.video.preview_image != blank %}
+            poster="{{ se.video.preview_image | image_url: width: 1200 }}"
+          {% endif %}
+        >
+          {%- for src in se.video.sources -%}
+            <source src="{{ src.url }}" type="{{ src.mime_type }}">
+          {%- endfor -%}
+        </video>
+        <button class="cs-install-play" type="button" aria-label="Play video">{{ play_icon }}</button>
+      {%- endif -%}
+    </div>
+
+    <div class="cs-install-right">
+      {%- if stat_blocks.size > 0 -%}
+        <div class="cs-install-stats">
+          {%- for bl in stat_blocks -%}
+            <div class="cs-install-stat" {{ bl.shopify_attributes }}>
+              <span class="--value">{{ bl.settings.value }}</span>
+              <span class="--label">{{ bl.settings.label }}</span>
+              {%- if bl.settings.desc != blank -%}
+                <p class="--desc">{{ bl.settings.desc }}</p>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if step_blocks.size > 0 -%}
+        <div class="cs-install-steps">
+          {% if se.steps_title != blank %}
+            <h3 class="cs-install-steps-title">{{ se.steps_title }}</h3>
+          {% endif %}
+          <div class="cs-install-timeline" style="--n: {{ step_blocks.size }}">
+            {%- for bl in step_blocks -%}
+              <div class="cs-install-step" {{ bl.shopify_attributes }}>
+                <span class="--dot"></span>
+                <h4 class="--step-title">{{ bl.settings.title }}</h4>
+                <p class="--step-desc">{{ bl.settings.desc }}</p>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<script type="module" src="{{ "custom-product-install.min.js" | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Install Steps",
+  "tag": "section",
+  "class": "cs-product-install-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "From Box to First Ride, Fast"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "视频"
+    },
+    {
+      "type": "text",
+      "id": "steps_title",
+      "label": "步骤标题",
+      "default": "4 Simple Steps"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "数据卡片",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "数值",
+          "default": "95%"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "标签",
+          "default": "Pre-Assembled"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "描述",
+          "default": "Built in our facility. Final touches by you."
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "步骤",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Unbox"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "描述",
+          "default": "Open the box and take everything out."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Install Steps",
+      "category": "Custom Product",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "value": "95%",
+            "label": "Pre-Assembled",
+            "desc": "Built in our facility. Final touches by you."
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "value": "15-30 min",
+            "label": "Typical Setup Time",
+            "desc": "From unboxing to ready to ride."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Unbox",
+            "desc": "Open the box and take everything out."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Attach",
+            "desc": "Attach the front wheel, handlebars, and pedals."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Adjust",
+            "desc": "Dial in your fit and check key components."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Ride",
+            "desc": "Power on, test, and you're good to go."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

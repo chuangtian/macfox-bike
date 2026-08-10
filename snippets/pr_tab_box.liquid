@@ -1,0 +1,130 @@
+<div class="t4s-row t4s-container" style="margin: auto;">
+    {%- if product.metafields.global.specification != blank -%}
+    <div class="t4s-col-lg-6 t4s-col-md-6 t4s-col-12">
+        <div class="pr-faq">
+            <div class="pr-faq-head js_open">
+              <h5>In the box</h5>
+            </div>
+            <div class="pr-faq-content">
+              {{ product.metafields.global.specification }}
+            </div>
+        </div>
+    </div>
+    {%- endif -%}
+    {%- if product.metafields.global.payment != blank -%}
+    <div class="t4s-col-lg-6 t4s-col-md-6 t4s-col-12">
+        <div class="pr-faq">
+            <div class="pr-faq-head js_open">
+              <h5>Payment</h5>
+            </div>
+            <div class="pr-faq-content">
+              {{ product.metafields.global.payment }}
+            </div>
+        </div>
+    </div>
+    {%- endif -%}
+    {%- if product.metafields.global.shipping != blank -%}
+    <div class="t4s-col-lg-6 t4s-col-md-6 t4s-col-12">
+        <div class="pr-faq">
+            <div class="pr-faq-head js_open">
+              <h5>Shipping</h5>
+            </div>
+            <div class="pr-faq-content">
+              {{ product.metafields.global.shipping }}
+            </div>
+        </div>
+    </div>
+    {%- endif -%}
+    {%- if product.metafields.global.return != blank -%}
+    <div class="t4s-col-lg-6 t4s-col-md-6 t4s-col-12">
+        <div class="pr-faq">
+            <div class="pr-faq-head js_open">
+              <h5>Return &amp; Refund</h5>
+            </div>
+            <div class="pr-faq-content">
+              {{ product.metafields.global.return }}
+            </div>
+        </div>
+    </div>
+    {%- endif -%}
+</div>
+
+<style>
+    .pr-faq {
+        padding: 10px 15px;
+        background-color: #f6f6f6;
+        margin: 0 15px 30px;
+    }
+    
+    .pr-faq-head {
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .pr-faq-head::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 0px;
+        width: 0px;
+        border-top: 8px solid transparent;
+        border-left: 13px solid black;
+        border-bottom: 8px solid transparent;
+        margin-top: -8px;
+        transition: all 0.3s cubic-bezier(.25, .46, .45, .94);
+    }
+    
+    .pr-faq .pr-faq-head.expanded::after {
+        transform: rotate(90deg);
+    }
+    
+    .pr-faq-head h5 {
+        margin: 0;
+        padding-left: 3rem;
+        font-size: 16px;
+    }
+    
+    .pr-faq .pr-faq-content {
+        max-height: 0;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transform: translateY(40px);
+        transition: all 0.3s cubic-bezier(.25, .46, .45, .94);
+    }
+    
+    .pr-faq-head.expanded+.pr-faq-content {
+        visibility: visible;
+        max-height: fit-content;
+        height: 100%;
+        transform: translateY(0);
+        transition: all 0.5s cubic-bezier(.25, .46, .45, .94);
+    }
+    
+    .pr-faq .pr-faq-content>div {
+        padding: 10px 0;
+        user-select: none;
+    }
+    
+    @media (max-width: 767px) {
+        .pr-faq,
+        .pr-faq .pr-faq-content>div {
+            padding: 7.5px;
+        }
+        .pr-faq-head h5 {
+            padding-left: 1.5rem;
+            font-size: 14px;
+        }
+        .pr-faq-head::after {
+            border-top-width: 6px;
+            border-left-width: 11px;
+            border-bottom-width: 6px;
+            margin-top: -6px;
+        }
+        .pr-faq .pr-faq-content>div {
+            font-size: 12px;
+        }
+    }
+</style>

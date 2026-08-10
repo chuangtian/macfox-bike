@@ -1,0 +1,149 @@
+<div class="pr_tabs">
+    {{ product.metafields.global.switch_titile }}
+<!--     <div class="pr_tabs_title" id="pr_tabs">
+        <div class="tab" onclick="changeTab(this)">
+            <span>30-Day Return</span>
+        </div>
+        <div class="" onclick="changeTab(this)">
+            <span>Free Shipping</span>
+        </div>
+        <div class="" onclick="changeTab(this)">
+            <span>Shipping Time</span>
+        </div>
+    </div> -->
+    <div class="pr_tabs_content">
+        <div name="t1" class="t2">
+            {{ product.metafields.global.day_return }}
+        </div>
+        <div name="t1" class="t2">
+            {{ product.metafields.global.free_shipping }}
+        </div>
+        <div name="t1" class="t2">
+            {{ product.metafields.global.shipping_time }}
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .t4s-click .t4s-eff-img- {
+        text-align: center;
+    }
+    
+    .pr_sw_btn {
+        border-radius: 4px;
+        border: 3px solid #fff;
+        background-color: transparent;
+    }
+    
+    .t4s_se_template--17772547277118__602619e3-8408-4b38-9f07-62da435a1135 .t4s-row,
+    .t4s_se_template--17772547309886__0e407ed0-7adf-4f7b-84b0-e8d171ff7164 .t4s-row {
+        align-items: flex-start;
+    }
+    
+    .pr_tabs {
+        max-width: 80%;
+    }
+    
+    .pr_tabs>span {
+        display: block;
+        font-size: 28px;
+        color: #fff;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+    
+    .pr_tabs_title {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .pr_tabs_title div {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    
+    .pr_tabs_title span {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: #d0d1d2;
+        padding: 4px 24px;
+        box-sizing: border-box;
+        border: 3px solid #2c2c2c;
+        border-radius: 4px;
+        transition: 0.3s;
+    }
+    
+    .pr_tabs_title div.tab span {
+        border-color: #fff;
+    }
+    
+    .pr_tabs_content>.t2 {
+        display: none;
+        padding: 20px 15px;
+    }
+    
+    .pr_tabs_content>.t2:first-of-type {
+        display: block;
+    }
+    
+    .pr_tabs_content>.t2 .t4s-col-item {
+        margin-bottom: 24px;
+    }
+    
+    .pr_tabs_content>.t2 .t4s-col-item::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 1px;
+        background-color: #eee;
+        margin-bottom: 12px;
+    }
+    
+    .pr_tabs_content>.t2 h5 {
+        font-size: 14px;
+        color: #fff;
+        font-weight: 600;
+        margin: 0 0 5px 0;
+    }
+    
+    .pr_tabs_content>.t2 p {
+        font-size: 14px;
+        color: #eee;
+        font-weight: 400;
+        margin: 0;
+    }
+    
+    @media (max-width: 767px) {
+        .pr_tabs {
+            width: 100%;
+        }
+        .pr_tabs>span {
+            padding: 0 7.5px; 
+        }
+        .pr_tabs_title div {
+            padding: 0 7.5px;
+        }
+    }
+</style>
+
+<script type="text/javascript">
+    var tabs = document.getElementById("pr_tabs").getElementsByTagName("div");
+    var cts = document.getElementsByName("t1");
+
+    function changeTab(current) {
+        for (i = 0; i < tabs.length; i++) {
+            if (tabs[i] == current) {
+                tabs[i].className = "tab";
+                cts[i].style.display = "block";
+            } else {
+                tabs[i].className = "";
+                cts[i].style.display = "none";
+            }
+        }
+    }
+</script>

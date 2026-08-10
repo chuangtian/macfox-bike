@@ -1,0 +1,176 @@
+{% liquid
+  assign se_stts = section.settings
+  assign related_product_series = product.metafields.custom.related_product_series.value
+  assign cs_collections = collections[related_product_series.handle].products
+%}
+
+<div class="cs-product-recommendations-wrapper">
+  {% if related_product_series != blank %}
+    <h3 class=" text-{{ se_stts.title_align }}">{{ se_stts.title }}</h3>
+    <div class="swiper" data-col_pc="{{ se_stts.col_pc }}" data-col_md="{{ se_stts.col_mb }}">
+      <div class="prev-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></div>
+      <div class="swiper-wrapper">
+        {% for item in cs_collections %}
+          <div
+            class="swiper-slide"
+          >
+            <a href="{{ item.url }}" target="_blank">
+              <div class="group __product-img">
+                <img
+                  src="{{item.featured_image |  image_url }}"
+                  width="{{ item.featured_image.width }}"
+                  height="{{ item.featured_image.height }}"
+                  alt="{{ item.title }}"
+                >
+                <img
+                  src="{{ item.images[1] |  image_url }}"
+                  width="{{ item.images[1].width }}"
+                  height="{{ item.images[1].height }}"
+                  alt="{{ item.images[item.images.size-1].alt }}"
+                >
+              </div>
+              <div class=" __product-item">
+                <h4>{{ item.title }}</h4>
+                <div
+                  class="loox-rating"
+                  data-id="{{ item.id }}"
+                  data-rating="{{ item.metafields.loox.avg_rating }}"
+                  data-raters="{{ item.metafields.loox.num_reviews }}"
+                  data-color-text="#1f1f1f"
+                  data-color-star="#f2cb04"
+                ></div>
+                {% if item.price != blank %}
+                  <div class="__item-price">
+                    <span>{{ item.price_min | money_with_currency }}</span>
+                    {% if item.price_max != blank %}
+                      <span> - {{ item.price_max | money_with_currency }}</span>
+                    {% endif %}
+                  </div>
+                {% else %}
+                  <div class="__item-price">
+                    <span>{{ item.compare_at_price_min | money_with_currency }}</span>
+                    {% if item.compare_at_price_max != blank %}
+                      <span> - {{ item.compare_at_price_max | money_with_currency }}</span>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="next-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></div>
+    </div>
+  {% endif %}
+</div>
+
+<script type="module"  src="{{"custom-product-recommendations.min.js" |  asset_url}}"></script>
+
+<style>
+  .cs-product-recommendations-section {
+    background-color: white;
+    padding: 100px 0;
+  }
+  .cs-product-recommendations-section * {
+    margin: 0;
+  }
+  @media screen and (max-width: 769px){
+    .cs-product-recommendations-section {
+      padding: 60px 20px 50px;
+    }
+  }
+</style>
+
+
+<script type="module" src="{{ "custom-product-recommendations.min.js" |  asset_url }}"></script>
+
+
+
+
+
+{% schema %}
+{
+  "name": "Product Recommendations",
+  "tag": "section",
+  "class": "cs-product-recommendations-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Product Recomendations"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "label": "标题位置",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_pc",
+      "label": "展示数量(PC端)",
+      "default": "4",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_mb",
+      "label": "展示数量(移动端)",
+      "default": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Product Recommendations",
+      "category": "Custom Product"
+    }
+  ]
+}
+{% endschema %}

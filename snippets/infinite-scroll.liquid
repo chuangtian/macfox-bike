@@ -1,0 +1,82 @@
+<script>
+  let locationLink =  window.location.href
+   if(locationLink.indexOf('customer_sharing') != -1){
+         let wrap = document.getElementsByClassName('wrap')[0]
+    let pop_up = document.getElementsByClassName('.cs_pop_up')[0]
+    let box = document.getElementsByClassName('box')
+    let _column
+     for (let i = 0; i < box.length; i++) {
+      let item = box[i]
+      // console.log(item.children[1].children[1].children)
+      item.onclick = (() => {
+        $('.cs_pop_up').find('.pop_up_img')[0].src = item.children[0].src
+        $('.cs_pop_up').find('.cs_up_title')[0].innerText = item.children[1].children[0].innerText
+        $('.cs_pop_up').find('.cs_up_text')[0].innerHTML = item.children[1].children[0].getAttribute('data-con')
+        $('.cs_pop_up').find('.cs_up_date')[0].innerText = item.children[1].children[1].children[0].innerText
+        $('.cs_pop_up').find('.cs_up_author')[0].innerText = item.children[1].children[1].children[1].innerText
+        $('.cs_pop_up')[0].style.display = 'flex'
+      })
+     }
+
+    function handleRender(y) {
+      let _wrap = document.querySelector(".wrap"); //父容器
+      for (let i = 0; i < _boxList.length; i++) {
+        if (i == y) {
+          _boxList[i].style.top = min + _spacing + "px"; //第二列居上距离
+        }
+      }
+
+    }
+
+    function render(y) {
+      let _wrap = document.querySelector(".wrap"); //父容器
+      let _column = createColumns(_wrap); //列数
+      let _spacing = 10; //间距
+      let _colWidth = (_wrap.offsetWidth - (_column - 1) * _spacing) / _column; //列宽
+      let _boxList = document.querySelectorAll(".box");
+      let _arr = []; //高度数组
+      for (let i = 0; i < _boxList.length; i++) {
+        _boxList[i].style.width = _colWidth + "px";
+        if (i < _column) {
+          _arr.push(_boxList[i].offsetHeight); //将每一列的高度存放到_arr数组中
+          _boxList[i].style.top = 0;
+          _boxList[i].style.left = (_colWidth + _spacing) * i + "px";
+        } else {
+          let min = Math.min(..._arr); //最小高度
+          let index = _arr.indexOf(min); //最小高度的索引
+          _boxList[i].style.top = min + _spacing + "px"; //第二列居上距离
+          _boxList[i].style.left = (_spacing + _colWidth) * index + "px"; //第二列居左距离
+          _arr[index] += _boxList[i].offsetHeight + _spacing;
+        }
+      }
+    }
+    function createColumns(ele) {
+      let width = ele.offsetWidth;
+      if (width >= 992) {
+        _column = 4;
+      }
+
+
+      if (width < 992 && width >= 768) {
+        _column = 3;
+      }
+
+      if (width < 768) {
+        _column = 2;
+      }
+      if (width < 360) {
+        _column = 1;
+      }
+      return _column;
+    }
+      // 在网页上的资源全部加载完成后再运行代码
+    window.addEventListener("load", render);
+    // 窗口宽度改变
+    window.addEventListener("resize", render);
+
+    
+    $('.cs_mask_layer')[0].onclick = () => {
+      $('.cs_pop_up')[0].style.display = 'none'
+    }
+   }
+</script>

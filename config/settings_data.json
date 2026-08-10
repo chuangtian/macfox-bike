@@ -1,0 +1,2395 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "purchase_code": "k1H530kDB5T$",
+    "general_layout": "custom",
+    "cus_w_bd": 1500,
+    "use_rtl": "0",
+    "checkbox_mail": false,
+    "header_design": "custom",
+    "logo_svg": "",
+    "logo": "shopify://shop_images/macfox_logo_342590e2-6a13-48ae-901d-5d1b17387e95.png",
+    "logo_width": 125,
+    "logos_width": 125,
+    "logo_mb_width": 95,
+    "logo_tr_svg": "",
+    "logo_tr_width": 125,
+    "mobile_nav_type": "1",
+    "only_icon": true,
+    "text_color": "#222222",
+    "accent_color": "#f2cb04",
+    "loading_bar_color": "#f2cb04",
+    "link_color": "#222222",
+    "link_color_hover": "#f2cb04",
+    "cl_lazyload": "#f2cb04",
+    "font_source": "2",
+    "fnt_fm_sp2": "poppins_n4",
+    "fnt_fm_sp3": "libre_baskerville_n4",
+    "fnt_fm_gg1": "Poppins",
+    "fnt_fm_gg2": "Poppins",
+    "fnt_fm_gg3": "Poppins",
+    "bd_fsize": 16,
+    "hd_ffamily": "1",
+    "enable_compe": true,
+    "app_review": "4",
+    "badge_shape": "1",
+    "label_sale_style": "2",
+    "use_new_badge": false,
+    "within_cat": true,
+    "enable_quickview": false,
+    "enable_quickshop": false,
+    "enable_rating": true,
+    "enable_atc": false,
+    "show_qty": false,
+    "pr_border_style": "1",
+    "enable_pr_color": true,
+    "swatch_item_style": "1",
+    "show_color_type": "1",
+    "pr_img_effect": "2",
+    "enable_shadow_round_img": true,
+    "pr_curent": "3",
+    "use_group_media": true,
+    "show_first_media": false,
+    "use_change_variant_by_img": true,
+    "enable_his": true,
+    "variant_remove": "1",
+    "share_source": "1",
+    "min_qty": "0",
+    "gift_wrap_pr": "gift-wrap",
+    "filter_type_search": true,
+    "show_search_suggest": true,
+    "search_prs_suggest": "women",
+    "show_search_hotkey": true,
+    "currency_code_enabled": true,
+    "currency_type": "1",
+    "size_currency": "sm",
+    "round_currency": false,
+    "notify_currency": true,
+    "hover_currency": false,
+    "share_pinterest": false,
+    "share_tumblr": false,
+    "share_telegram": true,
+    "share_whatsapp": false,
+    "social_facebook_link": "https://facebook.com/macfoxbikes",
+    "social_twitter_link": "https://twitter.com/macfoxbike",
+    "social_instagram_link": "https://www.instagram.com/macfoxbike/",
+    "social_dribbble_link": "",
+    "social_linkedin_link": "",
+    "social_pinterest_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "https://youtube.com/@MacfoxBike",
+    "social_vimeo_link": "",
+    "social_behance_link": "",
+    "social_soundcloud_link": "",
+    "social_tiktok_link": "https://www.tiktok.com/@macfox_official",
+    "favicon": "shopify://shop_images/favicon-32x32.png",
+    "pr_incoming_mess": true,
+    "use_vimg": true,
+    "sticky_atc": true,
+    "fnt_fm_button": "1",
+    "sections": {
+      "bottom-bar": {
+        "type": "bottom-bar",
+        "blocks": {
+          "2433b4f1-5bdc-49a9-ba42-a51f4eb6d8e3": {
+            "type": "bl_col",
+            "settings": {
+              "col_heading": "",
+              "menu": "",
+              "col_dk": "8",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-start",
+              "padding_inner_mb": ""
+            }
+          },
+          "13a2a6f1-ecdd-469a-a400-987b21809a1f": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image_child": "shopify://shop_images/pay_logo.png",
+              "img_width": 0,
+              "img_width_mb": 0,
+              "mgb": 20,
+              "mgb_mb": 20
+            }
+          },
+          "b3c6ceca-2d54-4a14-b482-bb86cbf25f08": {
+            "type": "copyR",
+            "disabled": true,
+            "settings": {
+              "text": "<style>\n    @media screen and (max-width: 768px) {\n        .foot_img {\n            width: auto!important;\n            height: 18px !important;\nmargin-right:0px;\n        }\n    }\n.foot_bt_title {\nfont-weight:400;\nfont-size:10px;\nline-height:1;\ncolor:#fff;\n}\n</style>\n\n<span class=\"foot_bt_title\">Copyright © [year] <span>MACFOX</span> all rights reserved. </span>\n<br>\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/paypal-49e4c1e03244b6d2de0d270ca0d22dd15da6e92cc7266e93eb43762df5aa355d.svg\" width=\"50\" height=\"22\"> \n<img class=\"foot_img\" src=\"https://cdn.shopify.com/s/files/1/0650/6273/2017/files/Klarna_MarketingBadge_Pink_RGB.svg?v=1665995338\" alt=\"Pulpit rock\" width=\"50\" height=\"22\">\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg\" width=\"50\" height=\"22\">\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg\" width=\"50\" height=\"22\">\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg\" width=\"50\" height=\"22\">\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg\" width=\"50\" height=\"22\">\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/discover-cc9808e50193c7496e7a5245eb86d5e06f02e2476c0fe70f2c40016707d35461.svg\" width=\"50\" height=\"22\">\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/jcb-ab0f5a1739704f1ab039f19ac8c28895af5c39a3f54ee9b748ea051986b0bd36.svg\" width=\"50\" height=\"22\">\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/diners_club-16436b9fb6dd9060edb51f1c7c44e23941e544ad798282d6aef1604319562fba.svg\" width=\"50\" height=\"22\">\n<img class=\"foot_img\" src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visaelectron-131aa567644ec0382c5762f24c751903c87a9ce4d2ffcfdb4be83be8e21d86b5.svg\" width=\"50\" height=\"22\">",
+              "mgb": 0,
+              "mgb_mb": 0
+            }
+          },
+          "47f5eb4c-1063-495d-bfc4-a54c62d219aa": {
+            "type": "bl_col",
+            "disabled": true,
+            "settings": {
+              "col_heading": "",
+              "menu": "",
+              "col_dk": "4",
+              "col_tb": "5",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-end",
+              "padding_inner": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-center",
+              "padding_inner_mb": ""
+            }
+          },
+          "0846c930-4864-4202-afdb-855db0fc7f13": {
+            "type": "bl_col",
+            "disabled": true,
+            "settings": {
+              "col_heading": "",
+              "menu": "",
+              "col_dk": "3",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-start",
+              "padding_inner_mb": ""
+            }
+          },
+          "bf3a7a39-0aed-4eed-a28e-c3a4861e77fb": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "html_content": "<a href=\"//www.dmca.com/Protection/Status.aspx?id=5f58e023-f362-49ac-bf0b-5a68bd8a7d66\" title=\"DMCA.com Protection Status\" class=\"dmca-badge\"> <img src=\"//images.dmca.com/Badges/dmca-badge-w100-5x1-08.png?ID=//www.dmca.com/Protection/Status.aspx?id=5f58e023-f362-49ac-bf0b-5a68bd8a7d66\" alt=\"DMCA.com Protection Status\"></a> <script src=\"//images.dmca.com/Badges/DMCABadgeHelper.min.js\"> </script>",
+              "hidden_mobile": false
+            }
+          }
+        },
+        "block_order": [
+          "2433b4f1-5bdc-49a9-ba42-a51f4eb6d8e3",
+          "13a2a6f1-ecdd-469a-a400-987b21809a1f",
+          "b3c6ceca-2d54-4a14-b482-bb86cbf25f08",
+          "47f5eb4c-1063-495d-bfc4-a54c62d219aa",
+          "0846c930-4864-4202-afdb-855db0fc7f13",
+          "bf3a7a39-0aed-4eed-a28e-c3a4861e77fb"
+        ],
+        "custom_css": [],
+        "settings": {
+          "border_top": false,
+          "border_pos": "in",
+          "space_h_item": "30",
+          "space_v_item": "0",
+          "space_h_item_mb": "0",
+          "space_v_item_mb": "0",
+          "heading_fontf": "inherit",
+          "heading_fs": 12,
+          "heading_lh": 0,
+          "heading_fw": 400,
+          "heading_ls": 0,
+          "mgb": 1,
+          "mgb_mb": 0,
+          "text_fs": 12,
+          "text_fw": 400,
+          "heading_cl": "#dddddd",
+          "text_cl": "#dddddd",
+          "link_cl": "#878787",
+          "link_hover_cl": "#56cfe1",
+          "border_cl": "#e6e6e6",
+          "layout": "t4s-container-wrap",
+          "cl_bg": "#121212",
+          "cl_bg_gradient": "",
+          "mg": "",
+          "pd": "20px,,5px,",
+          "mg_tb": "",
+          "pd_tb": "",
+          "mg_mb": "",
+          "pd_mb": "10px,,5px,"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "email_subscription_e6HWpM": {
+            "type": "email_subscription",
+            "settings": {
+              "title": "Stay in the loop-get our<br>latest news and event updates.",
+              "subtitle": "Get free accessories and exclusive discounts!",
+              "email_placeholder": "Enter Your Email",
+              "bg_color": "#000000"
+            }
+          },
+          "social_media_8Ae9fw": {
+            "type": "social_media",
+            "settings": {
+              "title": "INSTAGRAM",
+              "url": "https://www.instagram.com/macfoxbike/",
+              "icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.97 20H3.03C1.36 20 0 18.64 0 16.97V3.03C0 1.36 1.36 0 3.03 0H16.97C18.64 0 20 1.36 20 3.03V16.97C20 18.64 18.64 20 16.97 20Z\" fill=\"url(#paint0_linear_3748_31)\"></path>\n<path d=\"M16.31 7.38C16.28 6.7 16.17 6.24 16.01 5.84C15.85 5.42 15.6 5.03 15.28 4.72C14.96 4.4 14.58 4.15 14.16 3.99C13.76 3.83 13.29 3.73 12.62 3.7C11.94 3.66 11.72 3.65 10 3.65C8.28 3.65 8.06 3.66 7.38 3.69C6.7 3.72 6.24 3.83 5.84 3.99C5.42 4.14 5.03 4.39 4.72 4.72C4.4 5.04 4.15 5.42 3.99 5.84C3.83 6.24 3.73 6.71 3.7 7.38C3.66 8.06 3.65 8.28 3.65 10C3.65 11.72 3.66 11.94 3.69 12.62C3.72 13.3 3.83 13.76 3.99 14.16C4.15 14.58 4.4 14.97 4.72 15.28C5.04 15.6 5.42 15.85 5.84 16.01C6.24 16.17 6.71 16.27 7.38 16.31C8.06 16.34 8.27 16.35 10 16.35C11.73 16.35 11.94 16.34 12.62 16.31C13.3 16.28 13.76 16.17 14.16 16.01C15.01 15.68 15.69 15.01 16.02 14.15C16.18 13.75 16.28 13.28 16.32 12.61C16.35 11.93 16.36 11.72 16.36 9.99C16.35 8.28 16.34 8.06 16.31 7.38ZM15.17 12.57C15.14 13.19 15.04 13.53 14.95 13.75C14.74 14.3 14.3 14.74 13.74 14.96C13.52 15.05 13.18 15.15 12.56 15.18C11.9 15.2 11.7 15.21 10 15.21C8.3 15.21 8.1 15.2 7.43 15.17C6.81 15.14 6.47 15.04 6.25 14.95C5.97 14.85 5.72 14.69 5.52 14.47C5.31 14.27 5.15 14.02 5.04 13.74C4.95 13.52 4.85 13.18 4.82 12.56C4.8 11.9 4.79 11.7 4.79 10C4.79 8.3 4.8 8.1 4.83 7.43C4.86 6.81 4.96 6.47 5.05 6.25C5.15 5.97 5.31 5.72 5.53 5.52C5.73 5.31 5.98 5.15 6.26 5.04C6.48 4.95 6.82 4.85 7.44 4.82C8.1 4.8 8.3 4.79 10 4.79C11.7 4.79 11.9 4.8 12.57 4.83C13.19 4.86 13.53 4.96 13.75 5.05C14.03 5.15 14.28 5.31 14.48 5.53C14.69 5.73 14.85 5.98 14.96 6.26C15.05 6.48 15.15 6.82 15.18 7.44C15.2 8.1 15.21 8.3 15.21 10C15.21 11.7 15.2 11.9 15.17 12.57Z\" fill=\"white\"></path>\n<path d=\"M10 6.74C8.2 6.74 6.74 8.2 6.74 10C6.74 11.8 8.2 13.26 10 13.26C11.8 13.26 13.26 11.8 13.26 10C13.26 8.2 11.8 6.74 10 6.74ZM10 12.12C8.83 12.12 7.88 11.17 7.88 10C7.88 8.83 8.83 7.88 10 7.88C11.17 7.88 12.12 8.83 12.12 10C12.12 11.17 11.17 12.12 10 12.12Z\" fill=\"white\"></path>\n<path d=\"M14.15 6.61C14.15 7.03 13.81 7.37 13.39 7.37C12.97 7.37 12.63 7.03 12.63 6.61C12.63 6.19 12.97 5.85 13.39 5.85C13.81 5.85 14.15 6.19 14.15 6.61Z\" fill=\"white\"></path>\n<defs>\n<lineargradient id=\"paint0_linear_3748_31\" x1=\"0.8873\" y1=\"19.1127\" x2=\"19.1127\" y2=\"0.8873\" gradientunits=\"userSpaceOnUse\">\n<stop stop-color=\"#FFDD55\"></stop>\n<stop offset=\"0.5\" stop-color=\"#FF543E\"></stop>\n<stop offset=\"1\" stop-color=\"#C837AB\"></stop>\n</lineargradient>\n</defs>\n</svg>"
+            }
+          },
+          "social_media_j9BYCK": {
+            "type": "social_media",
+            "settings": {
+              "title": "FACEBOOK",
+              "url": "https://facebook.com/macfoxbikes",
+              "icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.81 20H3.19C1.43 20 0 18.57 0 16.81V3.19C0 1.43 1.43 0 3.19 0H16.81C18.57 0 20 1.43 20 3.19V16.81C20 18.57 18.57 20 16.81 20Z\" fill=\"#1976D2\"></path>\n<path d=\"M12.94 4.12V6.47H11.76C11.35 6.47 11.17 6.95 11.17 7.35V8.82H12.93V11.17H11.17V15.88H8.83V11.17H7.07V8.82H8.83V6.47C8.83 5.17 9.88 4.12 11.18 4.12H12.94Z\" fill=\"white\"></path>\n</svg>"
+            }
+          },
+          "social_media_EBELWT": {
+            "type": "social_media",
+            "settings": {
+              "title": "YOUTUBE",
+              "url": "https://youtube.com/@MacfoxBike",
+              "icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.81 20H3.19C1.43 20 0 18.57 0 16.81V3.19C0 1.43 1.43 0 3.19 0H16.81C18.57 0 20 1.43 20 3.19V16.81C20 18.57 18.57 20 16.81 20Z\" fill=\"#FF0000\"></path>\n<path d=\"M15.58 7.19C15.44 6.7 15.06 6.31 14.57 6.18C13.66 5.94 10.01 5.94 10.01 5.94C10.01 5.94 6.36999 5.94 5.44999 6.18C4.95999 6.32 4.57 6.7 4.44 7.19C4.27 8.12 4.18 9.06 4.19 10.01C4.19 10.95 4.27 11.89 4.44 12.82C4.58 13.31 4.95999 13.7 5.44999 13.83C6.35999 14.07 10.01 14.07 10.01 14.07C10.01 14.07 13.65 14.07 14.57 13.83C15.06 13.69 15.45 13.31 15.58 12.82C15.75 11.89 15.83 10.95 15.82 10.01C15.83 9.06 15.74 8.12 15.58 7.19ZM8.83999 11.75V8.26L11.88 10.01L8.83999 11.75Z\" fill=\"white\"></path>\n</svg>"
+            }
+          },
+          "social_media_6WJ3Qr": {
+            "type": "social_media",
+            "settings": {
+              "title": "X",
+              "url": "https://twitter.com/macfoxbike",
+              "icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.81 20H3.19C1.43 20 0 18.57 0 16.81V3.19C0 1.43 1.43 0 3.19 0H16.81C18.57 0 20 1.43 20 3.19V16.81C20 18.57 18.57 20 16.81 20Z\" fill=\"white\"></path>\n<path d=\"M7.88 4.82H4.17L8.55 10.53L4.41 15.19H5.81L9.2 11.38L12.12 15.19H15.83L11.27 9.24L15.2 4.82H13.8L10.63 8.39L7.88 4.82ZM12.97 14.65L5.84999 5.36H7.03999L14.16 14.65H12.97Z\" fill=\"#121212\"></path>\n</svg>"
+            }
+          },
+          "social_media_748yh4": {
+            "type": "social_media",
+            "settings": {
+              "title": "TIKTOK",
+              "url": "https://www.tiktok.com/@macfox_official",
+              "icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.81 20H3.18999C1.42999 20 0 18.57 0 16.81V3.19C0 1.43 1.42999 0 3.18999 0H16.81C18.57 0 20 1.43 20 3.19V16.81C20 18.57 18.57 20 16.81 20Z\" fill=\"#121212\"></path>\n<path d=\"M15.48 8.56V6.22C12.42 6.09 12.32 3.31 12.32 3.04V3.02H9.95V12.15C9.95 13.19 9.11 14.02 8.07 14.02C7.03 14.02 6.2 13.18 6.2 12.14C6.2 11.1 7.03999 10.27 8.07999 10.27C8.25999 10.27 8.45 10.3 8.62 10.35V7.94C8.44 7.92 8.26 7.91 8.07 7.91C5.72 7.91 3.82 9.81 3.82 12.16C3.82 14.51 5.72 16.41 8.07 16.41C10.42 16.41 12.32 14.51 12.32 12.16C12.32 12.1 12.32 12.04 12.32 11.98V7.48C13.4 8.48 15.48 8.56 15.48 8.56Z\" fill=\"#00F6EF\"></path>\n<path d=\"M16.17 9.14V6.79C13.11 6.66 13.01 3.88 13.01 3.61V3.6H10.64V12.73C10.64 13.77 9.79999 14.6 8.75999 14.6C7.71999 14.6 6.89 13.76 6.89 12.72C6.89 11.68 7.73 10.85 8.77 10.85C8.95 10.85 9.14 10.88 9.32 10.93V8.52C9.14 8.5 8.96 8.49 8.77 8.49C6.42 8.49 4.52 10.39 4.52 12.74C4.52 15.09 6.42 16.99 8.77 16.99C11.12 16.99 13.02 15.09 13.02 12.74C13.02 12.68 13.02 12.62 13.02 12.56V8.06C14.1 9.05 16.17 9.14 16.17 9.14Z\" fill=\"white\"></path>\n<path d=\"M12.37 3.6C12.48 4.22 12.82 5.19 13.79 5.76C13.05 4.89 13.01 3.78 13.01 3.62V3.6H12.37Z\" fill=\"#FF004F\"></path>\n<path d=\"M16.17 9.14V6.79C15.94 6.78 15.7 6.75 15.47 6.71V8.56C15.47 8.56 13.4 8.47 12.31 7.48V11.97C12.31 12.03 12.31 12.09 12.31 12.15C12.31 14.5 10.41 16.4 8.06 16.4C7.22 16.4 6.4 16.15 5.71 15.69C7.34 17.38 10.03 17.42 11.72 15.79C12.55 14.99 13.01 13.89 13.01 12.74C13.01 12.68 13.01 12.62 13.01 12.56V8.06C14.1 9.05 16.17 9.14 16.17 9.14Z\" fill=\"#FF004F\"></path>\n<path d=\"M8.61999 10.35C7.62999 10.05 6.58 10.61 6.28 11.6C6.01 12.49 6.42999 13.43 7.25999 13.84C6.64999 13 6.83 11.83 7.67 11.22C8.15 10.87 8.76 10.77 9.32 10.94V8.52C9.14 8.5 8.95999 8.49 8.76999 8.49C8.71999 8.49 8.66999 8.49 8.61999 8.49V10.35Z\" fill=\"#FF004F\"></path>\n</svg>"
+            }
+          },
+          "navigation_menu_RtAaJL": {
+            "type": "navigation_menu",
+            "settings": {
+              "title": "SHOP PRODUCTS",
+              "menu": "shop-products"
+            }
+          },
+          "navigation_menu_8QET3c": {
+            "type": "navigation_menu",
+            "settings": {
+              "title": "MACFOX",
+              "menu": "macfox"
+            }
+          },
+          "navigation_menu_QUxnzV": {
+            "type": "navigation_menu",
+            "settings": {
+              "title": "COMPANY INFO",
+              "menu": "company-info"
+            }
+          },
+          "support_9VPmdb": {
+            "type": "support",
+            "settings": {
+              "title": "SUPPORT",
+              "email": "support@macfoxbike.com",
+              "service_time": "Monday-Friday, 9AM-12PM, 1PM-5PM(PST)",
+              "phone": "(951)393-9081<br>  (949)617-6785<br>  1-855-552-9461",
+              "name": "Macfox Bike",
+              "address": ""
+            }
+          },
+          "payment_methods_KGx6tB": {
+            "type": "payment_methods",
+            "settings": {
+              "list": "[\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/26628.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/2c2bf.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/cd169.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/0878f.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/b34cb.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/06a40.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/d50d6.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/267b2.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/33b68.svg\",\n\"https://cdn.shopify.com/shopifycloud/admin-ui-foundations/payment-icons/274d1.svg\"\n]"
+            }
+          }
+        },
+        "block_order": [
+          "email_subscription_e6HWpM",
+          "social_media_8Ae9fw",
+          "social_media_j9BYCK",
+          "social_media_EBELWT",
+          "social_media_6WJ3Qr",
+          "social_media_748yh4",
+          "navigation_menu_RtAaJL",
+          "navigation_menu_8QET3c",
+          "navigation_menu_QUxnzV",
+          "support_9VPmdb",
+          "payment_methods_KGx6tB"
+        ],
+        "custom_css": [
+          "@media screen and (min-width: 1025px) {.t4s-footer .t4s-footer-wrap {margin: 0 auto; display: flex; justify-content: center; } .t4s-custom-col {margin: 0 25px; } .cs_mark {width: 100%; margin: 40px auto; }}"
+        ],
+        "settings": {
+          "bg_color": "#121212",
+          "show_trustpilot": true,
+          "trustpilot_url": "https://www.trustpilot.com/review/macfoxbike.com"
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "link": "",
+              "content": "<p>Today deal sale off <strong>70%</strong>. End in <strong>[countdown]</strong>. Hurry Up [icon_arrow]</p>",
+              "countdown": "2022/09/19",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "announcement-bar-1": {
+            "type": "announcement",
+            "settings": {
+              "link": "",
+              "content": "<p>Today deal sale off <strong>70%</strong>. End in <strong>[countdown]</strong>. Hurry Up [icon_arrow]</p>",
+              "countdown": "2022/09/19",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "announcement-bar-2": {
+            "type": "announcement",
+            "settings": {
+              "link": "",
+              "content": "<p>Today deal sale off <strong>70%</strong>. End in <strong>[countdown]</strong>. Hurry Up [icon_arrow]</p>",
+              "countdown": "2022/09/19",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0",
+          "announcement-bar-1",
+          "announcement-bar-2"
+        ],
+        "settings": {
+          "show_announcement": false,
+          "effect": "1",
+          "au_time": 3.5,
+          "height": 45,
+          "fontsize": 12,
+          "cl": "#ffffff",
+          "bg": "#e91e63",
+          "bg_op": 100,
+          "close": "1",
+          "cl_btn": "#ffffff",
+          "version": "1",
+          "date": 60
+        }
+      },
+      "top-bar": {
+        "type": "top-bar",
+        "blocks": {
+          "top-bar-0": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "html": "<a class=\"cs_nav_image\" style=\"width:1920px;height:60px;position: absolute;left: calc(50% - 960px);top:0;max-width: initial;background:url(https://cdn.shopify.com/s/files/1/0714/3581/3182/files/1-02_2ff3d0fa-cd37-4630-988a-0e83bbe7a5b2.jpg?v=1696663638)\" href=\"https://macfoxbike.com/pages/lottery\">\n</a>",
+              "hide": false,
+              "text_align": "center",
+              "col": "12"
+            }
+          },
+          "top-bar-1": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Macfox Advocates for Safe & Legal Riding.</p>",
+              "countdown": "2025/12/1 23:59:59",
+              "txt_day": "days",
+              "dayx": 0,
+              "effect": "0",
+              "au_time": 5,
+              "fw_bold": 600,
+              "cl_a": "#222222",
+              "cl_bold": "#ffffff",
+              "cl_a_tr": "#ffffff",
+              "cl_bold_tr": "#ec0101",
+              "hide": false,
+              "text_align": "center",
+              "col": "12"
+            }
+          },
+          "top-bar-2": {
+            "type": "cur",
+            "settings": {
+              "show_currency": false,
+              "show_language": false,
+              "use_location": false,
+              "txt_location": "Location",
+              "url_location": "",
+              "open_link": "_self",
+              "hide": false,
+              "text_align": "end",
+              "col": "4"
+            }
+          }
+        },
+        "block_order": [
+          "top-bar-0",
+          "top-bar-1",
+          "top-bar-2"
+        ],
+        "custom_css": [
+          ".t4s-top-bar__wrap {padding: 0; width: 100%;}",
+          ".t4s-container {padding: 0 !important;}",
+          "@media screen and (max-width: 769px) {.cs_nav_image {width: 100% !important; left: 0 !important; background: url(https://cdn.shopify.com/s/files/1/0714/3581/3182/files/1__1_3.jpg?v=1696665326) no-repeat !important; background-size: cover !important; }}",
+          "a {color: #fff; text-decoration: underline;}"
+        ],
+        "settings": {
+          "show_topbar": true,
+          "topbar_transparent": false,
+          "height": 30,
+          "fontsize": 13,
+          "cl": "#ffffff",
+          "cl_a_hover": "#56cfe1",
+          "bg": "#000000",
+          "bg_op": 100,
+          "show_border": false,
+          "bd_cl": "#000000",
+          "cl_tr": "#ffffff",
+          "cl_a_hover_tr": "#56cfe1",
+          "bg_tr": "#000000",
+          "bg_op_tr": 0,
+          "show_border_tr": false,
+          "bd_cl_tr": "#000000"
+        }
+      },
+      "header-inline": {
+        "type": "header-inline",
+        "blocks": {
+          "798d78f4-e95c-4ee6-88ee-1e8f43ade32a": {
+            "type": "mega",
+            "settings": {
+              "title": "Electric Bike",
+              "url": "shopify://collections/electric-bike",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "bottom",
+              "wid": "full",
+              "cus_wid": 1200,
+              "id": 1,
+              "enable_packery": true,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "2601ba5a-81b0-4536-afdf-4a86a9a2be0e": {
+            "type": "mega",
+            "disabled": true,
+            "settings": {
+              "title": "Accessories",
+              "url": "shopify://collections/accessories",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "bottom",
+              "wid": "full",
+              "cus_wid": 1200,
+              "id": 2,
+              "enable_packery": true,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "base_fdnGpU": {
+            "type": "base",
+            "settings": {
+              "title": "Accessories",
+              "url": "shopify://collections/accessories",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_j4iAxz": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "Rookie Ride",
+              "url": "shopify://pages/rookie-ride",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": true,
+              "cl": "#ffffff",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "cca207ae-af77-4ef7-bae6-9038b301b1b7": {
+            "type": "mega",
+            "settings": {
+              "title": "Community",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "bottom",
+              "wid": "full",
+              "cus_wid": 1200,
+              "id": 4,
+              "enable_packery": true,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "472a7f7e-2738-471e-ba65-91d84148776c": {
+            "type": "drop",
+            "settings": {
+              "title": "Support",
+              "url": "",
+              "open_link": "_self",
+              "menu": "support",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": false,
+              "pos_sub": "bottom",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "798d78f4-e95c-4ee6-88ee-1e8f43ade32a",
+          "2601ba5a-81b0-4536-afdf-4a86a9a2be0e",
+          "base_fdnGpU",
+          "base_j4iAxz",
+          "cca207ae-af77-4ef7-bae6-9038b301b1b7",
+          "472a7f7e-2738-471e-ba65-91d84148776c"
+        ],
+        "custom_css": [
+          "@media screen and (max-width: 769px) {.t4s-header__wrapper {background-color: #000 !important; }}"
+        ],
+        "settings": {
+          "layout": "logo_left",
+          "full_header": true,
+          "height": 70,
+          "arrow": true,
+          "align": "center",
+          "hover": "hover_sideup",
+          "h_navmb": 60,
+          "bgnav": "#000000",
+          "opnav": 100,
+          "clnav": "#ffffff",
+          "clnav_hover": "#ffffff",
+          "h_icon": "kalles",
+          "hover_icon": "2",
+          "show_search": true,
+          "show_acc": false,
+          "show_wis": false,
+          "cart_des": "1",
+          "bg_hc": "#ffffff",
+          "cl_hc": "#000000",
+          "sticky_header": true,
+          "scroll_header": true,
+          "bgnavst": "#000000",
+          "opnavst": 100,
+          "clnavst": "#ffffff",
+          "clnavst_hover": "#ffffff",
+          "transparent_header": true,
+          "space_transparent_header": false,
+          "bgnavtr": "#000000",
+          "opnavtr": 100,
+          "clnavtr": "#ffffff",
+          "clnavtr_hover": "#ffffff",
+          "fm_nav": "1",
+          "fs_nav": 16,
+          "fw_nav": 600,
+          "ls_nav": 0
+        }
+      },
+      "title_config": {
+        "type": "title_config",
+        "blocks": {
+          "title_config-0": {
+            "type": "title",
+            "settings": {
+              "color": "#222222",
+              "family": "2",
+              "size": 30,
+              "weight": 600,
+              "lh": 70,
+              "ls": 0,
+              "space": 0,
+              "size_mb": 24,
+              "lh_mb": 41,
+              "ls_mb": 0,
+              "space_mb": 0
+            }
+          },
+          "title_config-1": {
+            "type": "subtitle",
+            "settings": {
+              "italic": true,
+              "color": "#878787",
+              "family": "3",
+              "size": 18,
+              "weight": 400,
+              "lh": 0,
+              "ls": 0,
+              "space": 0,
+              "size_mb": 14,
+              "lh_mb": 0,
+              "ls_mb": 0,
+              "space_mb": 0
+            }
+          }
+        },
+        "block_order": [
+          "title_config-0",
+          "title_config-1"
+        ],
+        "settings": {
+          "design_heading": "1",
+          "heading_align": "t4s-text-center",
+          "top_heading": "Accordion",
+          "icon_heading": "las la-gem",
+          "top_subheading": "",
+          "tophead_mb": 30
+        }
+      },
+      "pr_item_config": {
+        "type": "pr_item_config",
+        "blocks": {
+          "pr_item_config-0": {
+            "type": "1",
+            "settings": {
+              "heading": "Product desgin 01",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "pr_item_config-1": {
+            "type": "2",
+            "settings": {
+              "heading": "Product desgin 02",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "977f60cb-440c-4e8e-beaa-b55b503aaa7c": {
+            "type": "3",
+            "settings": {
+              "heading": "Product design 03",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "fca180ab-ad71-42a7-a8a9-ed91fbebd0ac": {
+            "type": "4",
+            "settings": {
+              "heading": "Product design 04",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "pr_btn_round": 0,
+              "size_list_color": "#ffffff"
+            }
+          },
+          "6fdc3407-75d0-4c09-92f9-138646c4699e": {
+            "type": "5",
+            "settings": {
+              "heading": "Product design 05",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "16ce1932-676d-4dcd-bdbf-356d813613c5": {
+            "type": "6",
+            "settings": {
+              "heading": "Product design 06",
+              "atc_style": "default",
+              "addtocart_color": "#56cfe1",
+              "addtocart_color_hover": "#00badb",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "83670c68-17f0-43a9-8caa-b96cca9a3b05": {
+            "type": "list",
+            "settings": {
+              "heading": "Product list",
+              "content_color": "#878787",
+              "addtocart_color": "#56cfe1",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#56cfe1",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "a8021fa1-2248-47ff-a3a7-9433011a17bc": {
+            "type": "packery",
+            "settings": {
+              "heading": "Product packery",
+              "pr_title_color": "#ffffff",
+              "pr_title_color_hover": "#56cfe1",
+              "price_color": "#ffffff",
+              "price_sale_color": "#ec0101",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "pr_item_config-0",
+          "pr_item_config-1",
+          "977f60cb-440c-4e8e-beaa-b55b503aaa7c",
+          "fca180ab-ad71-42a7-a8a9-ed91fbebd0ac",
+          "6fdc3407-75d0-4c09-92f9-138646c4699e",
+          "16ce1932-676d-4dcd-bdbf-356d813613c5",
+          "83670c68-17f0-43a9-8caa-b96cca9a3b05",
+          "a8021fa1-2248-47ff-a3a7-9433011a17bc"
+        ],
+        "settings": {
+          "txt_tr_pr": "none",
+          "fnt_df_pr": "1",
+          "size_pr": 14,
+          "fw_pr": 500,
+          "lh_pr": 20,
+          "ls_pr": 0,
+          "size_price_pr": 14,
+          "fw_price_pr": 400,
+          "space_img_content": 15,
+          "space_elements": 0,
+          "swatch_color_size": 16,
+          "swatch_color_size_mb": 20,
+          "pr_btn_round": 40,
+          "pr_title_color": "#222222",
+          "pr_title_color_hover": "#56cfe1",
+          "price_color": "#696969",
+          "price_sale_color": "#ec0101",
+          "vendors_color": "#878787",
+          "vendors_color_hover": "#56cfe1",
+          "countdown_color": "#56cfe1",
+          "countdown_overlay": 100,
+          "pr_bg_overlay": "#000000",
+          "pr_overlay": 10
+        }
+      },
+      "btn_config": {
+        "type": "btn_config",
+        "blocks": {
+          "btn_config-0": {
+            "type": "custom1",
+            "settings": {
+              "color_primary": "#ffb100",
+              "color_second": "#ffffff",
+              "color_primary_hover": "#ff4e00",
+              "color_second_hover": "#ffffff"
+            }
+          },
+          "btn_config-1": {
+            "type": "custom2",
+            "settings": {
+              "color_primary": "#f7f7f7",
+              "color_second": "#222222",
+              "color_primary_hover": "#ffffff",
+              "color_second_hover": "#222222"
+            }
+          }
+        },
+        "block_order": [
+          "btn_config-0",
+          "btn_config-1"
+        ],
+        "settings": {
+          "fnt_fm_button": "--font-family-1",
+          "btn_fw": 600,
+          "btn_bdr": 60,
+          "button_effect": "default"
+        }
+      },
+      "toolbar_mobile": {
+        "type": "toolbar_mobile",
+        "blocks": {
+          "toolbar_mobile-0": {
+            "type": "shop",
+            "disabled": true,
+            "settings": {
+              "title": "Shop",
+              "link": ""
+            }
+          },
+          "toolbar_mobile-1": {
+            "type": "wish",
+            "disabled": true,
+            "settings": {
+              "title": "Wishlist"
+            }
+          },
+          "toolbar_mobile-2": {
+            "type": "cart",
+            "disabled": true,
+            "settings": {
+              "title": "Cart"
+            }
+          },
+          "toolbar_mobile-3": {
+            "type": "account",
+            "disabled": true,
+            "settings": {
+              "title": "Account"
+            }
+          },
+          "toolbar_mobile-4": {
+            "type": "search",
+            "disabled": true,
+            "settings": {
+              "title": "Search"
+            }
+          }
+        },
+        "block_order": [
+          "toolbar_mobile-0",
+          "toolbar_mobile-1",
+          "toolbar_mobile-2",
+          "toolbar_mobile-3",
+          "toolbar_mobile-4"
+        ],
+        "settings": {
+          "enable_toolbar": true,
+          "show_txt": true
+        }
+      },
+      "back_top": {
+        "type": "back_top",
+        "settings": {
+          "enable_backtop": false,
+          "enable_hidden_mobile": true,
+          "backtop_des": "1"
+        }
+      },
+      "mega-menu": {
+        "type": "mega-menu",
+        "blocks": {
+          "ddfe3769-897b-4838-b8b2-821fbc8f90b6": {
+            "type": "mega",
+            "settings": {
+              "id": 1
+            }
+          },
+          "83b1c4b3-fe12-4d5b-b15d-36d4f2d74cc2": {
+            "type": "pr",
+            "settings": {
+              "collection": "new-electric-bike",
+              "product_des": "1",
+              "show_vendor": false,
+              "use_cdt": false,
+              "image_ratio": "ratio1_1",
+              "image_size": "cover",
+              "image_position": "8",
+              "content_align": "center",
+              "limit": 6,
+              "col_dk": "4",
+              "space_h_item": "30",
+              "space_v_item": "30",
+              "layout_des": "2",
+              "nav_btn": true,
+              "btn_vi": "hover",
+              "btn_owl": "default",
+              "btn_shape": "none",
+              "btn_cl": "dark",
+              "btn_size": "small",
+              "btn_hidden_mobile": true,
+              "col": "12"
+            }
+          },
+          "d239d1a8-0723-4a37-bf5a-bf62d8995749": {
+            "type": "mega",
+            "disabled": true,
+            "settings": {
+              "id": 2
+            }
+          },
+          "6f2261ee-8d57-46e5-ba73-531ccbba08f4": {
+            "type": "link",
+            "disabled": true,
+            "settings": {
+              "tt_hd": "Accessories",
+              "url": "shopify://collections/accessories",
+              "open_link": "_self",
+              "menu": "accessories",
+              "col": "3"
+            }
+          },
+          "fecfccb4-a793-4d1a-8c69-291164099012": {
+            "type": "cat",
+            "disabled": true,
+            "settings": {
+              "collection": "spare-parts",
+              "collection_title": "Spare parts",
+              "collection_subtitle": "Products",
+              "collection_des": "7",
+              "title_cl": "#ffffff",
+              "title_cl_hover": "#222222",
+              "subtitle_cl": "#878787",
+              "count_cl": "#222222",
+              "border_cl": "#e5e5e5",
+              "open_link": "_self",
+              "space_bottom": 20,
+              "space_bottom_mb": 10,
+              "border": false,
+              "item_pd": 0,
+              "item_rd": 0,
+              "img_effect": "zoom",
+              "b_effect": "none",
+              "image_ratio": "ratio1_1",
+              "image_size": "cover",
+              "image_position": "8",
+              "collection_link": "",
+              "col": "3"
+            }
+          },
+          "link2_TfEKXQ": {
+            "type": "link2",
+            "disabled": true,
+            "settings": {
+              "col": "3",
+              "menu": ""
+            }
+          },
+          "cat_rdQN6H": {
+            "type": "cat",
+            "disabled": true,
+            "settings": {
+              "collection": "customize",
+              "collection_title": "",
+              "collection_subtitle": "Products",
+              "collection_des": "7",
+              "title_cl": "#ffffff",
+              "title_cl_hover": "#222222",
+              "subtitle_cl": "#878787",
+              "count_cl": "#222222",
+              "border_cl": "#e5e5e5",
+              "open_link": "_self",
+              "space_bottom": 20,
+              "space_bottom_mb": 10,
+              "border": false,
+              "item_pd": 0,
+              "item_rd": 0,
+              "img_effect": "zoom",
+              "b_effect": "none",
+              "image_ratio": "ratio1_1",
+              "image_size": "cover",
+              "image_position": "8",
+              "collection_link": "",
+              "col": "3"
+            }
+          },
+          "eceb9d7f-1457-48c7-9016-79027709b2a7": {
+            "type": "mega",
+            "settings": {
+              "id": 4
+            }
+          },
+          "dd1dcec5-cde3-4b1f-bf3a-412f182ed6c1": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "MACFOX Community",
+              "url": "",
+              "open_link": "_self",
+              "menu": "community",
+              "col": "3"
+            }
+          },
+          "04e4df57-4158-4c22-959e-5dbd045f7ea2": {
+            "type": "blogs",
+            "settings": {
+              "blog": "news",
+              "post_des": "1",
+              "show_cate": false,
+              "show_tags": false,
+              "show_cnt": false,
+              "show_au": false,
+              "show_dt": false,
+              "show_cm": false,
+              "show_rm": false,
+              "show_irm": false,
+              "date": "date",
+              "content_align": "center",
+              "limit": 3,
+              "img_effect": "none",
+              "b_effect": "none",
+              "image_ratio": "ratio3_2",
+              "image_size": "cover",
+              "image_position": "8",
+              "col_dk": "3",
+              "space_h_item": "30",
+              "space_v_item": "30",
+              "layout_des": "2",
+              "nav_btn": false,
+              "btn_vi": "hover",
+              "btn_owl": "default",
+              "btn_shape": "none",
+              "btn_cl": "dark",
+              "btn_size": "small",
+              "btn_hidden_mobile": true,
+              "col": "9"
+            }
+          },
+          "1eda054a-fccb-4c0d-bba4-d74e37200483": {
+            "type": "mega",
+            "settings": {
+              "id": 16
+            }
+          },
+          "09709542-26eb-4122-b56f-e32bcc02b1ea": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "",
+              "url": "",
+              "open_link": "_self",
+              "menu": "support",
+              "col": "12"
+            }
+          }
+        },
+        "block_order": [
+          "ddfe3769-897b-4838-b8b2-821fbc8f90b6",
+          "83b1c4b3-fe12-4d5b-b15d-36d4f2d74cc2",
+          "d239d1a8-0723-4a37-bf5a-bf62d8995749",
+          "6f2261ee-8d57-46e5-ba73-531ccbba08f4",
+          "fecfccb4-a793-4d1a-8c69-291164099012",
+          "link2_TfEKXQ",
+          "cat_rdQN6H",
+          "eceb9d7f-1457-48c7-9016-79027709b2a7",
+          "dd1dcec5-cde3-4b1f-bf3a-412f182ed6c1",
+          "04e4df57-4158-4c22-959e-5dbd045f7ea2",
+          "1eda054a-fccb-4c0d-bba4-d74e37200483",
+          "09709542-26eb-4122-b56f-e32bcc02b1ea"
+        ],
+        "settings": {}
+      },
+      "mb_nav": {
+        "type": "mb_nav",
+        "blocks": {
+          "menu_gefkHw": {
+            "type": "menu",
+            "settings": {
+              "title": "🏷️ Black Friday",
+              "url": "shopify://collections/black-friday",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "menu_6qp4Qj": {
+            "type": "menu",
+            "settings": {
+              "title": "X7",
+              "url": "shopify://products/macfox-x7",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "5a908741-05ef-4f42-bede-017d38380f76": {
+            "type": "menu",
+            "settings": {
+              "title": "MACFOX X1S",
+              "url": "shopify://products/macfox-x1",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "menu_C4weNH": {
+            "type": "menu",
+            "settings": {
+              "title": "X1S X Bs.zay",
+              "url": "shopify://products/x1s-x-bs-zay",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "23683d2b-33ca-42ae-a4c9-58d02d9c725a": {
+            "type": "menu",
+            "settings": {
+              "title": "MACFOX X2",
+              "url": "shopify://products/macfox-x2",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "acad32cf-6f36-4acc-8916-198e77dced5f": {
+            "type": "menu",
+            "settings": {
+              "title": "MACFOX M16",
+              "url": "shopify://products/macfox-m16-ebike",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "menu_RdByNn": {
+            "type": "menu",
+            "settings": {
+              "title": "MACFOX M19",
+              "url": "shopify://products/macfox-m19",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "menu_TAQAwR": {
+            "type": "menu",
+            "settings": {
+              "title": "Electric Bike",
+              "url": "shopify://collections/electric-bike",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "mb_nav-2": {
+            "type": "menu",
+            "settings": {
+              "title": "Accessories",
+              "url": "shopify://collections/accessories",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "menu_YMVqQg": {
+            "type": "menu",
+            "settings": {
+              "title": "Forum",
+              "url": "https://macfoxbiketribe.discourse.group/",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "mb_nav-0": {
+            "type": "menu",
+            "settings": {
+              "title": "Community",
+              "url": "",
+              "open_link": "_self",
+              "menu": "community",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "3bce1d83-2c78-429e-b9d9-264cdb929a77": {
+            "type": "menu",
+            "settings": {
+              "title": "Support",
+              "url": "",
+              "open_link": "_self",
+              "menu": "support",
+              "icon": "",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "mb_nav-6": {
+            "type": "acc",
+            "settings": {}
+          },
+          "mb_nav-7": {
+            "type": "help",
+            "settings": {
+              "title": "Need help?",
+              "text": "<a href=\"http://www.support@macfoxbike.com\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 32 32\" fill=\"currentColor\"><path d=\"M 3 8 L 3 26 L 29 26 L 29 8 Z M 7.3125 10 L 24.6875 10 L 16 15.78125 Z M 5 10.875 L 15.4375 17.84375 L 16 18.1875 L 16.5625 17.84375 L 27 10.875 L 27 24 L 5 24 Z\"></path></svg>\nsupport@macfoxbike.com</a>"
+            }
+          },
+          "mb_nav-9": {
+            "type": "cur",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "menu_gefkHw",
+          "menu_6qp4Qj",
+          "5a908741-05ef-4f42-bede-017d38380f76",
+          "menu_C4weNH",
+          "23683d2b-33ca-42ae-a4c9-58d02d9c725a",
+          "acad32cf-6f36-4acc-8916-198e77dced5f",
+          "menu_RdByNn",
+          "menu_TAQAwR",
+          "mb_nav-2",
+          "menu_YMVqQg",
+          "mb_nav-0",
+          "3bce1d83-2c78-429e-b9d9-264cdb929a77",
+          "mb_nav-6",
+          "mb_nav-7",
+          "mb_nav-9"
+        ],
+        "settings": {}
+      },
+      "mb_cat": {
+        "type": "mb_cat",
+        "blocks": {
+          "37d41873-33b9-495f-b9e9-261690a26f44": {
+            "type": "cat",
+            "disabled": true,
+            "settings": {
+              "cat": "women",
+              "title": "",
+              "url": "",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "1",
+              "icon": "chair"
+            }
+          },
+          "02afbc74-7e86-47eb-a54c-4b782b9be1ec": {
+            "type": "cat",
+            "settings": {
+              "cat": "electric-bike",
+              "title": "",
+              "url": "",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "1",
+              "icon": "chair"
+            }
+          },
+          "a8e444e6-eaae-4fff-a0dd-f13d43abd5f0": {
+            "type": "cat",
+            "settings": {
+              "cat": "accessories",
+              "title": "",
+              "url": "shopify://collections/accessories",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "1",
+              "icon": "chair"
+            }
+          },
+          "a613ac38-3b02-42a8-8d06-c7fab073ed0c": {
+            "type": "catimg",
+            "settings": {
+              "cat": "customize",
+              "title": "",
+              "url": "shopify://collections/customize",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "1",
+              "icon": "chair",
+              "cat1": "",
+              "url1": "",
+              "cat2": "",
+              "url2": "",
+              "cat3": "",
+              "url3": "",
+              "cat4": "",
+              "url4": "",
+              "cat5": "",
+              "url5": "",
+              "cat6": "",
+              "url6": "",
+              "cat7": "",
+              "url7": "",
+              "cat8": "",
+              "url8": "",
+              "cat9": "",
+              "url9": "",
+              "cat10": "",
+              "url10": "",
+              "cat11": "",
+              "url11": "",
+              "cat12": "",
+              "url12": "",
+              "cat13": "",
+              "url13": "",
+              "cat14": "",
+              "url14": "",
+              "cat15": "",
+              "url15": "",
+              "cat16": "",
+              "url16": "",
+              "cat17": "",
+              "url17": "",
+              "cat18": "",
+              "url18": "",
+              "cat19": "",
+              "url19": "",
+              "cat20": "",
+              "url20": "",
+              "cat21": "",
+              "url21": "",
+              "cat22": "",
+              "url22": "",
+              "cat23": "",
+              "url23": "",
+              "cat24": "",
+              "url24": "",
+              "cat25": "",
+              "url25": ""
+            }
+          }
+        },
+        "block_order": [
+          "37d41873-33b9-495f-b9e9-261690a26f44",
+          "02afbc74-7e86-47eb-a54c-4b782b9be1ec",
+          "a8e444e6-eaae-4fff-a0dd-f13d43abd5f0",
+          "a613ac38-3b02-42a8-8d06-c7fab073ed0c"
+        ],
+        "settings": {}
+      },
+      "mini_cart": {
+        "type": "mini_cart",
+        "blocks": {
+          "mini_cart-0": {
+            "type": "price",
+            "settings": {}
+          },
+          "mini_cart-1": {
+            "type": "tax",
+            "disabled": true,
+            "settings": {
+              "image": ""
+            }
+          },
+          "mini_cart-2": {
+            "type": "agree",
+            "disabled": true,
+            "settings": {}
+          },
+          "mini_cart-3": {
+            "type": "btnc",
+            "settings": {
+              "btn_icon": false,
+              "button_style": "default",
+              "btn_cl": "custom2",
+              "button_effect": "default"
+            }
+          },
+          "mini_cart-4": {
+            "type": "btnck",
+            "settings": {
+              "btn_icon": false,
+              "button_style": "default",
+              "btn_cl": "primary",
+              "button_effect": "default"
+            }
+          },
+          "mini_cart-5": {
+            "type": "img",
+            "settings": {}
+          },
+          "mini_cart-6": {
+            "type": "btn",
+            "settings": {
+              "title": "Return To Shop",
+              "url": "",
+              "btn_icon": false,
+              "button_style": "default",
+              "btn_cl": "primary",
+              "button_effect": "fade"
+            }
+          }
+        },
+        "block_order": [
+          "mini_cart-0",
+          "mini_cart-1",
+          "mini_cart-2",
+          "mini_cart-3",
+          "mini_cart-4",
+          "mini_cart-5",
+          "mini_cart-6"
+        ],
+        "custom_css": [],
+        "settings": {
+          "style": "1",
+          "enable_calc_ship": false,
+          "enable_note": true,
+          "enable_rates": true,
+          "enable_discount": true,
+          "enable_gift_wrap": true,
+          "ship_df_country": "United States"
+        }
+      },
+      "main-qv": {
+        "type": "main-qv",
+        "blocks": {
+          "main-qv-0": {
+            "type": "title",
+            "settings": {
+              "txt_tr_pr": "none",
+              "fnt_df_pr": "1",
+              "size_pr": 16,
+              "fw_pr": 600,
+              "lh_pr": 0,
+              "ls_pr": 0,
+              "pr_title_color": "#222222",
+              "pr_title_color_hover": "#56cfe1"
+            }
+          },
+          "main-qv-1": {
+            "type": "price_review",
+            "settings": {
+              "price": "0",
+              "type_sale": "0",
+              "tax_ship": true,
+              "rating": true,
+              "review_liquid": "",
+              "size_price_pr": 22,
+              "fw_price_pr": 400,
+              "price_color": "#696969",
+              "price_sale_color": "#ec0101"
+            }
+          },
+          "main-qv-2": {
+            "type": "description",
+            "settings": {
+              "des": "2",
+              "text": "<p>Go kalles this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish kalles vibe.</p>",
+              "length": 31,
+              "readm": false,
+              "readm_txt": "Read more"
+            }
+          },
+          "main-qv-3": {
+            "type": "form",
+            "settings": {
+              "selector_mode": "circle",
+              "color_mode": "color is-sw-cl__round",
+              "enable_fit_ratio_img": false,
+              "color_size": "medium",
+              "show_qty": true,
+              "enable_wishlist": true,
+              "enable_compare": true,
+              "btn_atc_full": false,
+              "pr_btn_round": 40,
+              "ani": "t4s-ani-tada",
+              "time": 6,
+              "btn_txt": "3",
+              "btn_icon": false,
+              "button_style": "default",
+              "button_color": "primary",
+              "button_effect": "sweep-to-bottom",
+              "show_dynamic_checkout": true,
+              "btn_txt2": "3",
+              "button_color_payment": "dark",
+              "product_list": [],
+              "show_product_current": true,
+              "qty_val": "0",
+              "advance_label": "Choose style",
+              "advance_pr_list": []
+            }
+          },
+          "main-qv-4": {
+            "type": "size_delivery_ask",
+            "settings": {
+              "size_chart": "3",
+              "pos_sizeg": "1",
+              "sc_type": "1",
+              "page": "size-chart",
+              "size_ck": "",
+              "delivery": true,
+              "page_dr": "delivery-return",
+              "ask": true,
+              "phone": true
+            }
+          },
+          "main-qv-5": {
+            "type": "meta",
+            "settings": {
+              "show_options": true,
+              "show_vendor": false,
+              "use_cdt": false,
+              "show_type": false,
+              "show_sku": true,
+              "show_barcode": false,
+              "show_available": true,
+              "show_category": true,
+              "show_tags": true
+            }
+          },
+          "main-qv-6": {
+            "type": "social",
+            "settings": {
+              "socials_align": "start",
+              "social_mode": "1",
+              "social_style": "1",
+              "social_size": "extra_small",
+              "bd_radius": 0,
+              "use_color_set": true,
+              "icon_cl": "#222222",
+              "bg_cl": "#56cfe1",
+              "space_h_item": "10",
+              "space_v_item": "5",
+              "space_h_item_mb": "6",
+              "space_v_item_mb": "2"
+            }
+          }
+        },
+        "block_order": [
+          "main-qv-0",
+          "main-qv-1",
+          "main-qv-2",
+          "main-qv-3",
+          "main-qv-4",
+          "main-qv-5",
+          "main-qv-6"
+        ],
+        "settings": {
+          "demo_pr": "",
+          "image_ratio": "ratioadapt",
+          "image_size": "cover",
+          "image_position": "8",
+          "nav_btn": true,
+          "btn_vi": "always",
+          "btn_owl": "outline",
+          "btn_shape": "round",
+          "btn_cl": "dark",
+          "btn_size": "small",
+          "btn_hidden_mobile": false
+        }
+      },
+      "slider_config": {
+        "type": "slider_config",
+        "blocks": {
+          "ef55a72d-2a3a-4be2-b303-7904b5feef29": {
+            "type": "custom1",
+            "settings": {
+              "btn_color_primary": "#abb1b4",
+              "btn_color_second": "#ffffff",
+              "btn_color_primary_hover": "#56cfe1",
+              "btn_color_second_hover": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "ef55a72d-2a3a-4be2-b303-7904b5feef29"
+        ],
+        "settings": {
+          "btn_vi": "hover",
+          "btn_owl": "default",
+          "btn_shape": "none",
+          "btn_size": "small",
+          "dot_owl": "default",
+          "dots_round": true,
+          "dots_space": 10
+        }
+      },
+      "search-hidden": {
+        "type": "search-hidden",
+        "settings": {}
+      },
+      "login-sidebar": {
+        "type": "login-sidebar",
+        "settings": {
+          "content_align": "start",
+          "btn_width": "full",
+          "button_style": "default",
+          "btns_size": "medium",
+          "btns_cl": "primary",
+          "button_effect": "default"
+        }
+      },
+      "facets": {
+        "type": "facets",
+        "settings": {
+          "style_color_filter": "Color, color, Colour , colour",
+          "style_tag_filter": "ss bb"
+        }
+      },
+      "heading-template": {
+        "type": "heading-template",
+        "blocks": {
+          "heading-template-0": {
+            "type": "1",
+            "settings": {
+              "heading": "",
+              "fontf": "inherit",
+              "text_cl": "#ffffff",
+              "text_fs": 20,
+              "text_lh": 20,
+              "text_fw": 500,
+              "text_ls": 0,
+              "font_italic": false,
+              "font_uppercase": false,
+              "text_shadow": false,
+              "text_mgb": 0,
+              "hidden_mobile": false,
+              "text_fs_mb": 20,
+              "text_lh_mb": 20,
+              "text_ls_mb": 0,
+              "text_mgb_mobile": 0
+            }
+          }
+        },
+        "block_order": [
+          "heading-template-0"
+        ],
+        "settings": {
+          "use_specify_image": true,
+          "parallax": false,
+          "color": "#000000",
+          "overlay": 54,
+          "padding": 50,
+          "paddingmb": 50,
+          "mg_b": 50,
+          "mg_bmb": 50,
+          "content_align": "t4s-text-center",
+          "bg_pos": "center center",
+          "bg_repeat": "no-repeat",
+          "bg_size": "cover",
+          "use_cus_css": false,
+          "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+        }
+      },
+      "main-wishlist": {
+        "type": "main-wishlist",
+        "blocks": {
+          "main-wishlist-0": {
+            "type": "layout",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "main-wishlist-0"
+        ],
+        "settings": {
+          "product_des": "1",
+          "show_vendor": false,
+          "use_cdt": false,
+          "image_ratio": "rationt",
+          "image_size": "cover",
+          "image_position": "8",
+          "content_align": "default",
+          "limit": 12,
+          "enable_listing": true,
+          "enable_listing_default": false,
+          "col_dk": "4",
+          "col_tb": "2",
+          "col_mb": "2",
+          "space_h_item": "30",
+          "space_v_item": "30",
+          "space_h_item_mb": "10",
+          "space_v_item_mb": "10",
+          "layout_des": "1",
+          "use_pagination": "default",
+          "enable_bar_lm": true,
+          "btn_icon": false,
+          "button_style": "default",
+          "btns_size": "large",
+          "btns_cl": "dark",
+          "button_effect": "default",
+          "btn_pos": "t4s-text-center",
+          "layout": "t4s-container-wrap",
+          "cl_bg": "",
+          "cl_bg_gradient": "",
+          "mg": ",,50px,",
+          "pd": "",
+          "mg_mb": ",,30px,",
+          "pd_mb": ""
+        }
+      },
+      "main-compare": {
+        "type": "main-compare",
+        "blocks": {
+          "main-compare-0": {
+            "type": "basic",
+            "settings": {}
+          },
+          "main-compare-1": {
+            "type": "availability",
+            "settings": {
+              "title": "Availability"
+            }
+          },
+          "main-compare-2": {
+            "type": "vendor",
+            "settings": {
+              "title": "Vendor"
+            }
+          },
+          "main-compare-3": {
+            "type": "variants",
+            "settings": {
+              "title": "Color"
+            }
+          },
+          "main-compare-4": {
+            "type": "btn",
+            "settings": {
+              "title": "RETURN TO SHOP",
+              "url": "",
+              "open_link": "_self",
+              "btn_icon": false,
+              "button_style": "default",
+              "btns_size": "medium",
+              "btns_cl": "primary",
+              "button_effect": "default"
+            }
+          }
+        },
+        "block_order": [
+          "main-compare-0",
+          "main-compare-1",
+          "main-compare-2",
+          "main-compare-3",
+          "main-compare-4"
+        ],
+        "settings": {
+          "cl_price": "#95bf46",
+          "cl_price_sale": "#ec0101",
+          "cl_in": "#95bf46",
+          "cl_out": "#e1b878",
+          "image_ratio": "rationt",
+          "image_size": "cover",
+          "image_position": "8",
+          "content_align": "center",
+          "layout": "t4s-container-wrap",
+          "cl_bg": "",
+          "cl_bg_gradient": "",
+          "mg": ",,50px,",
+          "pd": "",
+          "mg_mb": ",,30px,",
+          "pd_mb": ""
+        }
+      },
+      "header-vertical": {
+        "type": "header-vertical",
+        "blocks": {
+          "header-vertical-0": {
+            "type": "mega",
+            "settings": {
+              "title": "Home",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00BADB",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "id": 1,
+              "r_s_h_item": "30",
+              "r_s_v_item": "30"
+            }
+          },
+          "header-vertical-1": {
+            "type": "mega",
+            "settings": {
+              "title": "mega",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00BADB",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "id": 1,
+              "r_s_h_item": "30",
+              "r_s_v_item": "30"
+            }
+          },
+          "header-vertical-2": {
+            "type": "base",
+            "settings": {
+              "title": "base",
+              "url": "/",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "0dec03c0-f79c-4d2b-946e-0a9c5d0a0d9a": {
+            "type": "drop",
+            "settings": {
+              "title": "Dropdown",
+              "url": "",
+              "open_link": "_self",
+              "menu": "main-menu",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          }
+        },
+        "block_order": [
+          "header-vertical-0",
+          "header-vertical-1",
+          "header-vertical-2",
+          "0dec03c0-f79c-4d2b-946e-0a9c5d0a0d9a"
+        ],
+        "settings": {
+          "show_currency": true,
+          "show_language": true,
+          "arrow": true,
+          "bgnav": "#ffffff",
+          "opnav": 100,
+          "clnav": "#222222",
+          "clnav_hover": "#56cfe1",
+          "h_icon": "kalles",
+          "show_search": true,
+          "show_acc": true,
+          "show_wis": true,
+          "cart_des": "1",
+          "bg_hc": "#000000",
+          "cl_hc": "#ffffff",
+          "source": "2",
+          "txt": "<p>Welcome to our store!</p>",
+          "h_navmb": 62,
+          "sticky_header": true,
+          "scroll_header": true,
+          "bgnavst": "#ffffff",
+          "opnavst": 100,
+          "clnavst": "#222222",
+          "clnavst_hover": "#56cfe1",
+          "fm_nav": "1",
+          "fs_nav": 14,
+          "fw_nav": 500,
+          "ls_nav": 0.2
+        }
+      },
+      "popups": {
+        "type": "popups",
+        "blocks": {
+          "a19f52d0-03ea-40e1-9c78-f59ddd291f8d": {
+            "type": "newsletter",
+            "settings": {
+              "heading": "Sign up our newsletter and save $50 off for the purchase!",
+              "sub_heading": "Subscribe to our newsletters and don’t miss new arrivals, the latest fashion updates and our promotions.",
+              "txt": "Your Information will never be shared with any third party.",
+              "btn_ck": true,
+              "txt2": "Do not show it anymore.",
+              "input_cl": "#878787",
+              "border_cl": "#000000",
+              "btn_cl": "#ffffff",
+              "btn_bg_cl": "#222222",
+              "btn_hover_cl": "#ffffff",
+              "btn_hover_bg_cl": "#56cfe1",
+              "image": "shopify://shop_images/fastest-ebike.jpg",
+              "news_layout": "2",
+              "mb": true,
+              "index": false,
+              "product": false,
+              "collection": false,
+              "article": false,
+              "blog": false,
+              "cart": false,
+              "page": false,
+              "number_pages": 0,
+              "version": "1",
+              "day_next": 2,
+              "after": "scroll",
+              "time_delay": 7,
+              "scroll_delay": 800
+            }
+          }
+        },
+        "block_order": [
+          "a19f52d0-03ea-40e1-9c78-f59ddd291f8d"
+        ],
+        "settings": {}
+      },
+      "t4s_custom_color": {
+        "type": "t4s_custom_color",
+        "blocks": {
+          "06eaa184-e59c-4525-ac5d-eac6fc91f3e8": {
+            "type": "bg_color",
+            "settings": {
+              "title": "",
+              "color": "",
+              "cl_gradient": "",
+              "color_img": false
+            }
+          }
+        },
+        "block_order": [
+          "06eaa184-e59c-4525-ac5d-eac6fc91f3e8"
+        ],
+        "settings": {}
+      },
+      "main-qs": {
+        "type": "main-qs",
+        "blocks": {
+          "main-qs-0": {
+            "type": "title",
+            "settings": {
+              "txt_tr_pr": "none",
+              "fnt_df_pr": "1",
+              "size_pr": 16,
+              "fw_pr": 600,
+              "lh_pr": 0,
+              "ls_pr": 0,
+              "pr_title_color": "#222222",
+              "pr_title_color_hover": "#56cfe1"
+            }
+          },
+          "main-qs-1": {
+            "type": "price",
+            "settings": {
+              "price": "0",
+              "type_sale": "2",
+              "size_price_pr": 22,
+              "fw_price_pr": 400,
+              "price_color": "#696969",
+              "price_sale_color": "#ec0101"
+            }
+          },
+          "main-qs-2": {
+            "type": "form",
+            "settings": {
+              "selector_mode": "block",
+              "color_mode": "variant_image",
+              "enable_fit_ratio_img": true,
+              "color_size": "large",
+              "show_qty": true,
+              "enable_wishlist": true,
+              "enable_compare": true,
+              "pr_btn_round": 40,
+              "ani": "t4s-ani-shake",
+              "time": 3,
+              "btn_txt": "3",
+              "btn_icon": false,
+              "button_style": "default",
+              "button_color": "primary",
+              "button_effect": "sweep-to-top",
+              "show_dynamic_checkout": true,
+              "btn_txt2": "3",
+              "button_color_payment": "dark"
+            }
+          }
+        },
+        "block_order": [
+          "main-qs-0",
+          "main-qs-1",
+          "main-qs-2"
+        ],
+        "settings": {
+          "demo_pr": ""
+        }
+      },
+      "facets_tags": {
+        "type": "facets_tags",
+        "blocks": {
+          "14770600-c9ef-4dc1-afbb-0efa120a1bd4": {
+            "type": "color",
+            "settings": {
+              "hidden_block": false,
+              "title": "By Color",
+              "arra_enter": "Red,White,Brown,Blue, Black, Green, Grey, Sliver,Pink",
+              "use_auto_filter_tag": false,
+              "key": "Color"
+            }
+          }
+        },
+        "block_order": [
+          "14770600-c9ef-4dc1-afbb-0efa120a1bd4"
+        ],
+        "settings": {}
+      },
+      "custom-header": {
+        "type": "custom-header",
+        "blocks": {
+          "collection_hJ3rB8": {
+            "type": "collection",
+            "settings": {
+              "title": "Electric Bike",
+              "col_label": "Classic Models;;Upgrade Models",
+              "col_list": [
+                "base-models",
+                "upgrade-models"
+              ],
+              "def_link": "shopify://collections/electric-bike",
+              "show_dropdown_icon": true
+            }
+          },
+          "base_Hnjm4K": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "2-Bike Deals",
+              "link": "shopify://collections/bundle"
+            }
+          },
+          "base_J4Brjj": {
+            "type": "base",
+            "settings": {
+              "title": "Accessories",
+              "link": "shopify://collections/accessories"
+            }
+          },
+          "base_G96f9U": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "Forum",
+              "link": "https://macfoxbiketribe.discourse.group/"
+            }
+          },
+          "community_hcDCLV": {
+            "type": "community",
+            "settings": {
+              "title": "Community",
+              "menu": "community",
+              "def_link": "shopify://blogs/news",
+              "show_dropdown_icon": true
+            }
+          },
+          "dropdown_YnU8zF": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Support",
+              "link": "support",
+              "def_link": "",
+              "show_dropdown_icon": true
+            }
+          }
+        },
+        "block_order": [
+          "collection_hJ3rB8",
+          "base_Hnjm4K",
+          "base_J4Brjj",
+          "base_G96f9U",
+          "community_hcDCLV",
+          "dropdown_YnU8zF"
+        ],
+        "settings": {
+          "bg_color": "#000000",
+          "topic": "The Most Popular Products",
+          "arrow_left_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+          "arrow_right_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+          "h_icon": "kalles",
+          "show_search": true,
+          "dropdown_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 124 124\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_3718_30)\">\n<path d=\"M17.7 18.8L61.9 63L106.1 18.8L123.8 36.5L61.9 98.4001L0 36.5L17.7 18.8Z\" fill=\"white\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_3718_30\">\n<rect width=\"123.8\" height=\"123.8\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
+          "menu_icon_mb": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 231 231\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M220.5 30.3H9.9V48.3H220.5V30.3Z\" fill=\"white\"></path>\n<path d=\"M220.5 106.2H9.9V124.2H220.5V106.2Z\" fill=\"white\"></path>\n<path d=\"M220.5 182.2H9.9V200.2H220.5V182.2Z\" fill=\"white\"></path>\n</svg>",
+          "product_bar": [
+            "cs-product-accordion-card-section",
+            "cs-product-text-animation-section",
+            "notes",
+            "reviews"
+          ]
+        }
+      },
+      "custom-push-menu": {
+        "type": "custom-push-menu",
+        "blocks": {
+          "base_item_cqpa4T": {
+            "type": "base_item",
+            "disabled": true,
+            "settings": {
+              "title": "2-Bike Deals",
+              "lik": "shopify://collections/bundle"
+            }
+          },
+          "expand_item_znjtTx": {
+            "type": "expand_item",
+            "settings": {
+              "title": "Electric Bike",
+              "lik": "shopify://collections/electric-bike",
+              "liks": "mb_-electric-bike",
+              "is_expand": true
+            }
+          },
+          "base_item_PGUBPK": {
+            "type": "base_item",
+            "settings": {
+              "title": "Accessories",
+              "lik": "shopify://collections/accessories"
+            }
+          },
+          "base_item_JB3cVE": {
+            "type": "base_item",
+            "disabled": true,
+            "settings": {
+              "title": "Forum",
+              "lik": "https://macfoxbiketribe.discourse.group/"
+            }
+          },
+          "expand_item_CTBGiL": {
+            "type": "expand_item",
+            "settings": {
+              "title": "Community",
+              "lik": "",
+              "liks": "community",
+              "is_expand": false
+            }
+          },
+          "expand_item_7tQMkg": {
+            "type": "expand_item",
+            "settings": {
+              "title": "Support",
+              "lik": "",
+              "liks": "support",
+              "is_expand": false
+            }
+          },
+          "custom_item_GxB7wq": {
+            "type": "custom_item",
+            "settings": {
+              "title": "Need help?",
+              "content": "<a href=\"mailto:support@example.com\" style=\"text-decoration: underline;\">\n  support@macfoxbike.com\n</a>"
+            }
+          },
+          "account_ah3gWQ": {
+            "type": "account",
+            "disabled": true,
+            "settings": {}
+          },
+          "currency_JAw6cM": {
+            "type": "currency",
+            "disabled": true,
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "base_item_cqpa4T",
+          "expand_item_znjtTx",
+          "base_item_PGUBPK",
+          "base_item_JB3cVE",
+          "expand_item_CTBGiL",
+          "expand_item_7tQMkg",
+          "custom_item_GxB7wq",
+          "account_ah3gWQ",
+          "currency_JAw6cM"
+        ],
+        "settings": {
+          "title": "",
+          "bg_color": "#121212",
+          "close_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 65 66\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M52.8 65.5H13.2C6.70002 65.5 1.40002 60.2 1.40002 53.7V13.2C1.40002 6.69999 6.70002 1.39999 13.2 1.39999H52.7C59.2 1.39999 64.5 6.69999 64.5 13.2V53.7C64.5 60.3 59.3 65.5 52.8 65.5Z\" fill=\"#1E1E1E\" stroke=\"#666666\" stroke-width=\"0.9603\" stroke-miterlimit=\"10\"></path><path d=\"M21.7001 22L44.3001 45\" stroke=\"#828282\" stroke-width=\"3.8412\" stroke-miterlimit=\"10\"></path><path d=\"M44.3001 22L21.7001 45\" stroke=\"#828282\" stroke-width=\"3.8412\" stroke-miterlimit=\"10\"></path></svg>",
+          "expand_icon": "<svg width=\"15\" height=\"15\" viewbox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.4 3.7C7.2 3.7 6.9 3.8 6.8 4L1.1 9.6C0.8 9.9 0.8 10.5 1.1 10.8C1.4 11.1 2 11.1 2.3 10.8L7.3 5.8L12.5 11C12.8 11.3 13.4 11.3 13.7 11C14 10.7 14 10.1 13.7 9.8L8 3.9C7.8 3.8 7.6 3.7 7.4 3.7Z\" fill=\"white\"></path></svg>"
+        }
+      },
+      "custom-search": {
+        "type": "custom-search",
+        "settings": {
+          "title": "Search Our Site",
+          "placeholder": "Search",
+          "search_list": "search-list-v1"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "uppromote-affiliate-referral-message-bar-87967-64c32457-930d-4cb9-9641-e24c0d9cf1f4": {
+        "type": "shopify://apps/uppromote-affiliate-referral/blocks/message-bar/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": true,
+        "settings": {}
+      },
+      "uppromote-affiliate-referral-customer-referral-87967-64c32457-930d-4cb9-9641-e24c0d9cf1f4": {
+        "type": "shopify://apps/uppromote-affiliate-referral/blocks/customer-referral/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": false,
+        "settings": {}
+      },
+      "623fbf2f-24b8-49c9-b54c-4fe9d8b0f5db": {
+        "type": "shopify://apps/instagram-feed-story-tiktok/blocks/social-widget/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+        "disabled": false,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "greeting_message": "👋 Hi, message us with any questions. We're happy to help!",
+          "button_color": "#202a36",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_left",
+          "button_vertical_position": "lowest"
+        }
+      },
+      "11532412952436166569": {
+        "type": "shopify://apps/loox-reviews/blocks/loox-inject/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+        "disabled": false,
+        "settings": {}
+      },
+      "2539598332178966696": {
+        "type": "shopify://apps/xcotton-post-purchase-guard/blocks/insurance/6531bb8b-340c-42d4-b5da-1734c7a2c524",
+        "disabled": false,
+        "settings": {}
+      },
+      "6689287753176884356": {
+        "type": "shopify://apps/aftership-personalization/blocks/aftership-personalization/a3defeb3-0cab-4254-bd92-41fa7c497d49",
+        "disabled": false,
+        "settings": {}
+      },
+      "3138269044488530766": {
+        "type": "shopify://apps/uppromote-affiliate/blocks/core-script/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": false,
+        "settings": {}
+      },
+      "18121446316682264196": {
+        "type": "shopify://apps/beans-id-verification/blocks/fab-embed/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {}
+      },
+      "15820462083712392141": {
+        "type": "shopify://apps/beans-id-verification/blocks/discount-redeem/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {}
+      },
+      "15549472988515247997": {
+        "type": "shopify://apps/beans-id-verification/blocks/banner/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {}
+      },
+      "449199394124024797": {
+        "type": "shopify://apps/beans-id-verification/blocks/modern-discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {
+          "page_title": "Unlock exclusive discounts",
+          "sub_heading_text": "We’ve teamed up with Beans ID to offer exclusive discounts. Click through to verify and receive your discount for free!"
+        }
+      },
+      "14305174654594977286": {
+        "type": "shopify://apps/beans-id-verification/blocks/discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {
+          "header_toggle": true,
+          "page_title": "Unlock exclusive discounts",
+          "sub_heading_text": "We’ve teamed up with Beans iD to offer exclusive discounts. Click through to verify and receive your discount for free!",
+          "background_color": "#F6F6F7",
+          "text_color": "#202223",
+          "heading_text_size_desktop": 42,
+          "heading_text_size_mobile": 32,
+          "body_text_size_desktop": 16,
+          "body_text_size_mobile": 12,
+          "cta_background_colour": "#FFFFFF",
+          "cta_text_colour": "#000000",
+          "card_title_text_size_desktop": 26,
+          "card_title_text_size_mobile": 21,
+          "card_conditions_text_size": 14
+        }
+      },
+      "6279071938380501511": {
+        "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {}
+      },
+      "9658382757468664484": {
+        "type": "shopify://apps/aftership-email-marketing-sms/blocks/aftership_popup/2db13273-f8db-4274-be89-c86a3352fb70",
+        "disabled": false,
+        "settings": {
+          "show_aftership_popup_description": ""
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "15339989130375257234": {
+        "type": "shopify://apps/referral-candy/blocks/efop_v2/0258f542-988d-488e-8d98-209cecc83a8a",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".paypal-button-text {display: none !important;}"
+    ]
+  }
+}

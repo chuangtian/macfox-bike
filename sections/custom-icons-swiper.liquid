@@ -1,0 +1,66 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-icons-swiper swiper">
+    <div class="swiper-wrapper">
+        {%- for block in se_blocks -%}
+            <div class="swiper-slide" {{ block.shopify_attributes }}>
+                {{ block.settings.icon }}
+                <p>{{ block.settings.text }}</p>
+            </div>
+        {%- endfor -%}
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var isMobile = $(window).innerWidth() <= 768;
+        $('.cs-icons-swiper').each(function() {
+            var $this = $(this);
+            var swiper = new Swiper($this[0], {
+                slidesPerView: 'auto',
+                slidesPerGroup: !isMobile ? 4 : 2,
+                pagination: {
+                    el: $this.find('.swiper-pagination')[0]
+                }
+            })
+        });
+    })
+</script>
+
+{% schema %}
+{
+    "name": "Custom Icons Swiper",
+    "tag": "section",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "Text"
+                },
+                {
+                    "type": "html",
+                    "id": "icon",
+                    "label": "Icon Svg",
+                    "info": "html"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Icons Swiper"
+        }
+    ]
+}
+{% endschema %}

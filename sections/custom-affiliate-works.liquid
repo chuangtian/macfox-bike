@@ -1,0 +1,60 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+<div class="cs-affiliate-works-wrapper">
+  <p class="--works-title">{{ se_stts.title }}</p>
+  <div class="--works-main">
+    {%- for variable in se_blocks -%}
+     {%- case variable.type -%}
+      {%- when "work_item" -%}
+        <div class="--work-item">
+          <div class="--work-heading">
+            <div class="--work-serial">{{ forloop.index }}</div>
+            <p class="--work-title">{{ variable.settings.title }}</p>
+          </div>
+          <p class="--work-desc">{{ variable.settings.desc }}</p>
+        </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Custom Affiliate Works",
+  "tag": "section",
+  "class": "cs-affiliate-works-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default":"title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "work_item",
+      "name": "卡片",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "描述"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "联盟步骤",
+      "category": "Affiliate"
+    }
+  ]
+}
+{% endschema %}

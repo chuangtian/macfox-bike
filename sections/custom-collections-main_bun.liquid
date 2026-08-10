@@ -1,0 +1,95 @@
+{% liquid
+  assign se_stts = section.settings
+%}
+<div class="cs-collections-main">
+  {% for item in se_stts.products %}
+    <div class="cs-collections-item" data-variantid="{{ item.variants.first.id }}" data-quantit="{{ item.variants.first.inventory_quantity }}">
+      <a href="{{ item.url }}" target="_self" class="cs-collections-heading">
+        {% if item.featured_image != blank %}
+          <picture>
+            <source
+              media="(min-width: 769px)"
+              srcset="
+                {{ item.featured_image | image_url: width:250 }} 900w,
+                {{ item.featured_image | image_url: width:300 }} 1200w,
+                {{ item.featured_image | image_url: width:400 }} 1600w,
+                {{ item.featured_image | image_url: width:500 }} 1920w
+              "
+            >
+            <source
+              media="(max-width: 768px)"
+              srcset="
+                {{ item.featured_image | image_url: width:100 }} 400w,
+                {{ item.featured_image | image_url: width:200 }} 600w,
+                {{ item.featured_image | image_url: width:256 }} 768w
+              "
+            >
+            <img
+              src="{{ item.featured_image | image_url: width:500 }}"
+              width="{{ item.featured_image.width }}"
+              height="{{ item.featured_image.height }}"
+              alt="{{ item.title }}"
+              loading="lazy"
+            >
+          </picture>
+        {% endif %}
+
+        {% if item.metafields.custom.bundle_discount.value != blank %}
+          <span class="--item-label">
+            {{- item.metafields.custom.bundle_discount.value -}}
+          </span>
+        {% endif %}
+      </a>
+      <div class="cs-collections-info">
+        <div class="--info-heading">
+          <div class="--heading-title">
+            {{ item.title }}
+          </div>
+        </div>
+        <div class="--info--price">
+          From
+          {% if item.price != item.compare_at_price %}
+            <span>{{ item.price | money_with_currency }}</span>
+            <span class="--price-compare">
+              {{- item.compare_at_price | money_with_currency -}}
+            </span>
+          {% else %}
+            <span>{{ item.price | money_with_currency }}</span>
+          {% endif %}
+        </div>
+        <div class="--info-control">
+          <a
+            class="--info-link"
+            href="{{ item.url }}"
+            target="_self"
+            >Choose Bundle</a
+          >
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script type="module" src="{{ "custom-collections-main.min.js"| asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Collections Main Bundle",
+  "tag": "section",
+  "class": "cs-col-main-section",
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "产品列表"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Collections Main Bundle",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

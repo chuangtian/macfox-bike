@@ -1,0 +1,172 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div
+  id="cs-carousel-discover"
+>
+  <div
+    class="cs-carousel-discover-overflow-md"
+    style="background-color: {{ se_stts.bg_color}};"
+  ></div>
+
+  <div class="flex items-end justify-between !pb-6 flex-wrap md:flex-nowrap">
+    <h2 class=" !text-white !text-[26px] md:!text-6xl leading-[1.3] !font-bold !text-wrap w-full md:w-fit !mb-[15px] md:!mb-[0px]">
+      {{ se_stts.topic }}
+    </h2>
+
+    <a
+      class=" flex justify-between items-center !py-[10px] !px-[38px] md:!py-4 md:!px-14 !text-[#121212] bg-[#f2cb04] rounded-lg !text-[14px] md:!text-xl !font-semibold cursor-pointer"
+      href="{{ se_stts.btn_link }}"
+    >
+      {{- se_stts.btn }}
+      <span class="!ml-7 !size-[20px] md:!size-5">
+        <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.5 14.1L8 12.7L12.7 7.90001L8 3.10001L9.5 1.70001L15.5 7.90001L9.5 14.1Z" fill="#121212"/>
+          <path d="M14.1 6.80002H0.300049V8.80002H14.1V6.80002Z" fill="#121212"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <div class="embla__viewport">
+    <div class="embla__container flex">
+      {% if se_stts.show_new %}
+        {% for new in blogs[se_stts.bl_handle].articles limit: se_stts.bl_range %}
+          <div class="embla__slide">
+            <a
+              href="{{ new.url }}"
+            >
+              <div class="embla__slide-img">
+                <img
+                  src="{{ new.image | image_url: width: 800 }}"
+                  alt="{{ new.title }}"
+                  width="800"
+                  height="534"
+                  class="object-cover w-full h-full"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="embla__slide-info">
+                <p>
+                  {{ new.title }}
+                </p>
+                <span>
+                  {{- new.published_at | date: '%b %d, %Y' -}}
+                </span>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      {% else %}
+        {% for block in se_blocks %}
+          {% if block.type == 'item' %}
+            {%- assign item = block.settings.article_item -%}
+            <div class="embla__slide">
+              <a
+                href="{{ item.url }}"
+              >
+                <div class="aspect-[3/2] w-full rounded-xl overflow-hidden">
+                  <img
+                    src="{{ item.image | image_url: width: 800 }}"
+                    alt="{{ item.title }}"
+                    width="800"
+                    height="534"
+                    class="object-cover w-full h-full"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="!mt-4 !space-y-5">
+                  <p class="!text-[18px] md:!text-2xl !text-white !font-semibold !leading-[1.6] !line-clamp-3 h-28 !mb-[10px]">
+                    {{ item.title }}
+                  </p>
+                  <span class="!text-[14px] md:!text-lg !font-medium !text-[#818181]">
+                    {{- item.published_at | date: '%b %d, %Y' -}}
+                  </span>
+                </div>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="embla__controls">
+    <div class="embla__buttons">
+      <button
+        class="embla__button embla__button--prev"
+        type="button"
+         aria-label="Previous slide"
+      >
+        {{ se_stts.arrow_left_icon }}
+      </button>
+      <button
+        class="embla__button embla__button--next"
+        type="button"
+         aria-label="Next slide"
+      >
+        {{ se_stts.arrow_right_icon }}
+      </button>
+    </div>
+
+    <div class="embla__dots"></div>
+  </div>
+</div>
+
+<style>
+  .cs-carousel-discover-section {
+    background-color: {{ se_stts.bg_color}};
+    height: auto;
+  }
+</style>
+
+<script type="module" src="{{'custom-home-carousel-discover.min.js' |  asset_url}}"></script>
+
+{% schema %}
+{
+  "name": "Carousel Discover",
+  "tag": "section",
+  "class": "cs-carousel-discover-section",
+  "settings": [
+    { "type": "checkbox", "id": "show_new", "label": "展示新博客", "default": false },
+    {
+      "type": "select",
+      "id": "bl_handle",
+      "label": "博客类别",
+      "options": [
+        { "label": "News", "value": "news" },
+        { "label": "Knowledge", "value": "knowledge" }
+      ],
+      "default": "news"
+    },
+    {
+      "type": "range",
+      "id": "bl_range",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "info": "只有展示新博客时才需要选择这个数量",
+      "label": "展示数量",
+      "default": 8
+    },
+    { "type": "color", "id": "bg_color", "label": "背景颜色", "default": "#000000" },
+    { "type": "text", "id": "topic", "label": "主题", "default": "The Most Popular Products" },
+    { "type": "text", "id": "btn", "label": "按钮文本", "default": "Read All" },
+    { "type": "url", "id": "btn_link", "label": "跳转链接" },
+    { "type": "html", "id": "arrow_left_icon", "label": "左箭头" },
+    { "type": "html", "id": "arrow_right_icon", "label": "右箭头" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "内容区块",
+      "settings": [{ "type": "article", "id": "article_item", "label": "文章" }]
+    }
+  ],
+  "presets": [{ "name": "Carousel Discover", "category": "Custom Home" }]
+}
+{% endschema %}

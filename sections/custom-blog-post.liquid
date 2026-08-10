@@ -1,0 +1,126 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'custom-blog-post.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+  assign blog = blogs.News
+
+  assign t4s_se_class = 't4s_nt_se_' | append: sid
+  if se_stts.use_cus_css and se_stts.code_cus_css != blank
+    render 'se_cus_css', code_cus_css: se_stts.code_cus_css, t4s_se_class: t4s_se_class
+  endif
+-%}
+
+<div class="cs-blog-post">
+  <div class="cs-comm-title">
+    <div class="comm-list-con cs-page-width">
+      <div class="comm-main-title">
+        {{ se_stts.me_title }}
+      </div>
+      <div class="comm-minor-title">{{ se_stts.minor_title }}</div>
+    </div>
+  </div>
+
+  <div class="blog-post-list cs-page-width">
+    <div class="post-list-dom post-list-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          {% for post in blog.articles limit: 3 %}
+            <div class="blog-post-item">
+              <div class="post-item-date">
+                <div class="post-item-line"></div>
+                <div class="post-date-text">{{ post.published_at | time_tag: format: se_stts.date }}</div>
+              </div>
+              <div class="post-item-con">
+                <a href="{{ post.url }}" class="post-item-img">
+                  <img
+                    src="{{ post.image | image_url }}"
+                    alt=""
+                  >
+                </a>
+                <div class="post-item-info">
+                  <a href="{{ post.url }}" class="post-item-title cs-ellipsis-2">
+                    {{ post.title }}
+                  </a>
+                  <div class="post-item-text cs-ellipsis-3">
+                    {{ post.excerpt }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <a href="/blogs/news/" class="post-list-btn"> READ ALL </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custon Blog Post",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "me_title",
+      "label": "Title",
+      "default": "START YOUR <br> STREET PERFORMANCE",
+      "info": "If you want to line break, please add a <br> tag in the text"
+    },
+    {
+      "type": "text",
+      "id": "minor_title",
+      "label": "Minor Title",
+      "default": "Choose This One That Suits You",
+      "info": "If you want to line break, please add a <br> tag in the text"
+    },
+    {
+      "type": "select",
+      "id": "date",
+      "label": "Date format",
+      "info": "different format options display for various languages.",
+      "default": "date",
+      "options": [
+        {
+          "value": "abbreviated_date",
+          "label": "Apr 19, 1994"
+        },
+        {
+          "value": "basic",
+          "label": "4/19/1994"
+        },
+        {
+          "value": "date",
+          "label": "April 19, 1994"
+        },
+        {
+          "value": "%b %d",
+          "label": "Apr 19"
+        }
+      ]
+    },
+    {
+      "id": "use_cus_css",
+      "type": "checkbox",
+      "label": "Use custom css",
+      "default": false,
+      "info": "If you want custom style for this section."
+    },
+    {
+      "id": "code_cus_css",
+      "type": "textarea",
+      "label": "Code custom css",
+      "info": "Use selector .SectionID to style css"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custon Blog Post"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,178 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="!mx-auto max-w-[1600px] w-full md:w-[90%] xl:!px-0 sm:!py-40 !py-16 sm:!px-0 !px-[15px]">
+  <h2 class="!text-[26px] md:!text-6xl leading-[1.3] !text-white !font-bold text-center sm:!mb-35 !mb-16">
+    {{ se_stts.topic }}
+  </h2>
+  <div
+    id="cs-home-carousel-4"
+    class="sm:flex items-center sm:relative "
+    data-rotate_mb="{{ se_stts.rotate_mb }}"
+    data-rotate_pc="{{ se_stts.rotate_pc }}"
+  >
+    <div class="cs-home-carousel-4-item  max-w-[1300px] xl:w-[75%] sm:w-[85%] w-full relative !mx-auto">
+      {% for block in se_blocks %}
+        {% assign bl_stts = block.settings %}
+        <div
+          class="
+            cs-home-carousel-4-item-block flex flex-col sm:flex-row
+            bg-[#1e1e1e] !border !border-[#666666] rounded-xl w-full xl:!max-h-[360px] sm:!max-h-[260px] h-full !pb-62 md:!pb-0
+            {% unless  forloop.last %} absolute {% endunless %}
+          "
+          style="z-index: {{ forloop.length | minus: forloop.index }};"
+        >
+          <div class="cs-home-carousel-4-item-content flex-1 !text-[#d1d1d1] !py-8 !px-[20px] md:!px-16">
+            <img
+              class=" w-44 md:w-50"
+              src="{{ bl_stts.logo_image | image_url  }}"
+              width="100%"
+              height="100%"
+              alt="loading..."
+            >
+            <p class="!text-[18px] md:!text-3xl !leading-[1.6] !mt-8 !font-medium">{{ bl_stts.content }}</p>
+          </div>
+          <div class="cs-home-carousel-4-item-image sm:flex sm:justify-end sm:!py-3 sm:!px-5 !py-1 !px-2 absolute md:static bottom-0">
+            <div class=" h-full w-full md:w-fit relative md:flex md:justify-end">
+              {% comment %} 头像 {% endcomment %}
+              <div class="absolute md:size-42 size-36 rounded-full sm:bottom-6 sm:left-8 sm:-translate-x-1/2 left-[90%] bottom-1/3 -translate-x-full  -rotate-15 !p-[1px] bg-custom-gradient-120">
+                <img
+                  class="w-full h-full rounded-full"
+                  src="{{ bl_stts.icon_image | image_url  }}"
+                  width="100%"
+                  height="100%"
+                  alt="loading..."
+                >
+              </div>
+
+              <span class="hidden md:block h-full w-full md:w-fit ">
+                {{ se_stts.bg_card_pc }}
+              </span>
+              <span class="block md:hidden">
+                {{ se_stts.bg_card_mobile }}
+              </span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class=" flex sm:justify-between justify-center gap-x-10 w-full sm:absolute !py-10">
+      <button
+        class="cs-home-carousel-4-arrow-prev size-[45px] md:size-15 !p-0 !bg-transparent !cursor-not-allowed opacity-50 transition-opacity duration-300"
+        disabled
+        aria-label="Previous slide"
+      >
+        {{ se_stts.arrow_left_icon }}
+      </button>
+
+      <button class="cs-home-carousel-4-arrow-next size-[45px] md:size-15 !p-0 !bg-transparent transition-opacity duration-300" aria-label="Next slide">
+        {{ se_stts.arrow_right_icon }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cs-home-carousel-4-section {
+    background-color: {{ se_stts.bg_color}};
+    height: auto;
+    padding: 0 20px;
+    overflow: visible;
+  }
+
+  @media (max-width: 767px) {
+    .cs-home-carousel-4-section {
+      overflow: hidden;
+    }
+  }
+</style>
+
+<script
+  type="module"
+  src="{{ "custom-home-carousel-4.min.js"| asset_url }}"
+></script>
+
+{% schema %}
+{
+  "name": "Public Relations",
+  "tag": "section",
+  "class": "cs-home-carousel-4-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "topic",
+      "label": "主题",
+      "default": "In The Limelight"
+    },
+    {
+      "type": "text",
+      "id": "rotate_pc",
+      "label": "旋转角度（PC端）",
+      "default": "1.5"
+    },
+    {
+      "type": "text",
+      "id": "rotate_mb",
+      "label": "旋转角度（移动端）",
+      "default": "1"
+    },
+    {
+      "type": "html",
+      "id": "bg_card_pc",
+      "label": "卡片背景图（PC端）"
+    },
+    {
+      "type": "html",
+      "id": "bg_card_mobile",
+      "label": "卡片背景图（移动端）"
+    },
+    {
+      "type": "html",
+      "id": "arrow_left_icon",
+      "label": "左箭头"
+    },
+    {
+      "type": "html",
+      "id": "arrow_right_icon",
+      "label": "右箭头"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "内容区块",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "内容"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "头像"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Public Relations (Carousel)",
+      "category": "Custom Home"
+    }
+  ]
+}
+{% endschema %}

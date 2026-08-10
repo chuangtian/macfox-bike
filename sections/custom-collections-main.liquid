@@ -1,0 +1,373 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+  # 统计分组数量：没有分组时，图片卡片单独成组渲染
+  assign group_count = 0
+  for b in se_blocks
+    if b.type == 'product_group'
+      assign group_count = group_count | plus: 1
+    endif
+  endfor
+  assign group_seen = 0
+%}
+
+{%- for block in se_blocks -%}
+  {%- if block.type != 'product_group' -%}
+    {%- continue -%}
+  {%- endif -%}
+  {% liquid
+    assign gi = forloop.index0
+    assign bk_stts = block.settings
+    assign group_seen = group_seen | plus: 1
+  %}
+  <div class="cs-collections-group" {{ block.shopify_attributes }}>
+    {%- if bk_stts.title != blank or bk_stts.desc != blank -%}
+      <div class="--group-head">
+        {%- if bk_stts.title != blank -%}
+          <h2 class="--group-title">{{ bk_stts.title }}</h2>
+        {%- endif -%}
+        {%- if bk_stts.desc != blank -%}
+          <p class="--group-desc">{{ bk_stts.desc }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="cs-collections-main">
+      {%- comment -%} 排在第一个分组之前的图片卡片，并入首个分组 {%- endcomment -%}
+      {%- if group_seen == 1 -%}
+        {%- for b in se_blocks -%}
+          {%- if b.type == 'product_group' -%}
+            {%- break -%}
+          {%- endif -%}
+          {%- if b.type == 'image_card' -%}
+            {%- render 'cs-collections-image-card', block: b -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {% for item in bk_stts.products %}
+        {% assign cz_data = item.metafields.custom.info_citation.value %}
+        <div class="cs-collections-item" data-variantid="{{ item.variants.first.id }}" data-quantit="{{ item.variants.first.inventory_quantity }}">
+          <a href="{{ item.url }}" target="_self" class="cs-collections-heading">
+            {% if item.options_by_name.color != null %}
+              <div class="relative">
+                {% for color in item.options_by_name.color.values %}
+                  {% assign color_key = color | replace: ' ', '_' | downcase %}
+                  {% assign color_value = item.metafields.custom.colors.value | map: color_key | first %}
+                  {% assign option = 'option' | append: item.options_by_name.color.position %}
+                  {% assign current_variant = item.variants | where: option, color | first %}
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        {{ current_variant.featured_image.src |  image_url: width:250 }} 900w,
+                        {{ current_variant.featured_image.src |  image_url: width:300 }} 1200w,
+                        {{ current_variant.featured_image.src |  image_url: width:400 }} 1600w,
+                        {{ current_variant.featured_image.src |  image_url: width:500 }} 1920w
+                      "
+                    >
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        {{ current_variant.featured_image.src |  image_url: width:100 }} 400w,
+                        {{ current_variant.featured_image.src |  image_url: width:200 }} 600w,
+                        {{ current_variant.featured_image.src |  image_url: width:256 }} 768w
+                      "
+                    >
+                    <img
+                      id="cs-variant-image-{{ current_variant.id }}"
+                      class="{% if forloop.first %} opacity-100 {% else %} absolute opacity-0 top-0 left-0 w-full h-full {% endif %}"
+                      src="{{ current_variant.featured_image.src |  image_url: width:500   }}"
+                      width="{{ item.featured_image.width }}"
+                      height="{{ item.featured_image.height }}"
+                      alt="{{ item.title }}"
+                      loading="lazy"
+                    >
+                  </picture>
+                {% endfor %}
+              </div>
+
+              {% comment %} No color options {% endcomment %}
+            {%- else -%}
+              {% if item.variants.first.featured_image != null %}
+                <picture>
+                  <source
+                    media="(max-width: 768px)"
+                    srcset="
+                      {{ item.variants.first.featured_image.src |  image_url: width:250 }} 900w,
+                      {{ item.variants.first.featured_image.src |  image_url: width:300 }} 1200w,
+                      {{ item.variants.first.featured_image.src |  image_url: width:400 }} 1600w,
+                      {{ item.variants.first.featured_image.src |  image_url: width:500 }} 1920w
+                    "
+                  >
+                  <source
+                    media="(max-width: 768px)"
+                    srcset="
+                      {{ item.variants.first.featured_image.src |  image_url: width:100 }} 400w,
+                      {{ item.variants.first.featured_image.src |  image_url: width:200 }} 600w,
+                      {{ item.variants.first.featured_image.src |  image_url: width:256 }} 768w
+                    "
+                  >
+                  <img
+                    src="{{ item.variants.first.featured_image.src |  image_url: width:500   }}"
+                    width="{{ item.featured_image.width }}"
+                    height="{{ item.featured_image.height }}"
+                    alt="{{ item.title }}"
+                    loading="lazy"
+                    data-variantid="{{ current_variant.id }}"
+                  >
+                </picture>
+              {% else %}
+                <picture>
+                  <source
+                    media="(min-width: 769px)"
+                    srcset="
+                      {{ item.featured_image |  image_url: width:250 }} 900w,
+                      {{ item.featured_image |  image_url: width:300 }} 1200w,
+                      {{ item.featured_image |  image_url: width:400 }} 1600w,
+                      {{ item.featured_image |  image_url: width:500 }} 1920w
+                    "
+                  >
+                  <source
+                    media="(max-width: 768px)"
+                    srcset="
+                      {{ item.featured_image |  image_url: width:100 }} 400w,
+                      {{ item.featured_image |  image_url: width:200 }} 600w,
+                      {{ item.featured_image |  image_url: width:256 }} 768w
+                    "
+                  >
+                  <img
+                    src="{{ item.featured_image |  image_url: width:500  }}"
+                    width="{{ item.featured_image.width }}"
+                    height="{{ item.featured_image.height }}"
+                    alt="{{ item.title }}"
+                    loading="lazy"
+                    data-variantid="{{ current_variant.id }}"
+                  >
+                </picture>
+              {% endif %}
+            {% endif %}
+
+            {% if cz_data.label != null %}
+              <span class="--item-label">
+                {{- cz_data.label -}}
+              </span>
+            {% endif %}
+            {% comment %}<span class="--link-info">{{ cz_data.concise_name | prepend: 'Macfox ' | append: ' eBike' }}</span>{% endcomment %}
+          </a>
+          <div class="cs-collections-info">
+            <div class="--info-heading">
+              <h3 class="--heading-title">
+            <a class="--heading-title" href="{{ item.url }}">
+                {% if cz_data.concise_name != null %}
+                  {{ cz_data.concise_name | prepend: 'Macfox ' | append: ' eBike' }}
+                {% else %}
+                  {{ item.title }}
+                {% endif %}
+              </a> 
+            </h3>
+              {%- if cz_data.overview != null and cz_data.overview != '' -%}
+                <p class="--heading-overview" title="{{ cz_data.overview }}">{{ cz_data.overview }}</p>
+              {%- endif -%}
+              {% assign recommended_heights = '' %}
+              {% for item in cz_data.specs.value.data %}
+                {% if item.name contains 'Recommended Rider Height' %}
+                  {% assign recommended_heights = recommended_heights | append: item.value | append: '&' %}
+                {% endif %}
+              {% endfor %}
+              {% assign recommended_heights = recommended_heights | remove_last: '&' %}
+              {% assign recommended_heights = recommended_heights | split: '&' %}
+              <div class="--heading-color">
+                {% for reco in recommended_heights %}
+                  <span class="--color-item">
+                    {{ reco }}
+                  </span>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="--info--price">
+              From
+              {% if item.price != item.compare_at_price %}
+                <span>{{ item.price | money_with_currency }}</span>
+                <span class="--price-compare">
+                  {{- item.compare_at_price | money_with_currency -}}
+                </span>
+              {% else %}
+                <span>{{ item.price | money_with_currency }}</span>
+              {% endif %}
+            </div>
+            <div class="--info-sku">
+              {% if item.options_by_name.color != null %}
+                <div class="--sku-item">
+                  {% for color in item.options_by_name.color.values %}
+                    {% assign color_key = color | replace: ' ', '_' | downcase %}
+                    {% assign color_value = item.metafields.custom.colors.value | map: color_key | first %}
+                    {% assign option = 'option' | append: item.options_by_name.color.position %}
+                    {% assign current_variant = item.variants | where: option, color | first %}
+                    <div
+                      class="colors-item{% if forloop.first %} active {% endif %}"
+                      data-img="{{ current_variant.featured_image.src |  image_url  }}"
+                      data-alt="{{ current_variant.featured_image.alt }}"
+                      data-variantid="{{ current_variant.id }}"
+                      data-quantit="{{ current_variant.inventory_quantity }}"
+                    >
+                      <div
+                        style="background-color: {{ color_value  }};"
+                      ></div>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              <a href="#looxReviews">
+                <div
+                  class="loox-rating"
+                  data-id="{{ item.id }}"
+                  data-rating="{{ item.metafields.loox.avg_rating }}"
+                  data-raters="{{ item.metafields.loox.num_reviews }}"
+                  data-color-text="#f2cb04"
+                  data-color-star="#f2cb04"
+                ></div>
+              </a>
+            </div>
+            <div class="--info-parameter">
+              {% for param in cz_data.collection_page_features.value %}
+                {% for item in cz_data.specs.value.data %}
+                  {% if item.name == param %}
+                    <div class="--parameter-item">
+                      <span>{{ item.value }}</span>
+                      <span>
+                        {{- item.name -}}
+                      </span>
+                    </div>
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+            <div class="--info-control">
+              <a
+                class="--info-link"
+                href="{{ item.url }}"
+                target="_self"
+                >See the eBike</a
+              >
+
+              {%- if se_stts.show_shopping_cart -%}
+                <button class="all_add_cart">
+                  <svg width="100%" height="100%" viewBox="0 0 231 231" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M70.1 137.1L197.8 125.6L216.9 51.4H55.3L49.7 19.1H11.4V37.1H34.6L57.6 170.6H205.2V152.6H72.8L70.1 137.1ZM193.6 69.5L183.5 108.9L67 119.3L58.4 69.4H193.6V69.5Z" fill="currentColor"></path>
+                    <path d="M90.2 215.7C96.717 215.7 102 210.417 102 203.9C102 197.383 96.717 192.1 90.2 192.1C83.6831 192.1 78.4 197.383 78.4 203.9C78.4 210.417 83.6831 215.7 90.2 215.7Z" fill="currentColor"></path>
+                    <path d="M176.1 215.7C182.617 215.7 187.9 210.417 187.9 203.9C187.9 197.383 182.617 192.1 176.1 192.1C169.583 192.1 164.3 197.383 164.3 203.9C164.3 210.417 169.583 215.7 176.1 215.7Z" fill="currentColor"></path>
+                  </svg>
+                </button>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      {%- comment -%} 紧跟在本分组之后的图片卡片，并入本分组网格 {%- endcomment -%}
+      {%- for b in se_blocks -%}
+        {%- if forloop.index0 > gi -%}
+          {%- if b.type == 'product_group' -%}
+            {%- break -%}
+          {%- endif -%}
+          {%- if b.type == 'image_card' -%}
+            {%- render 'cs-collections-image-card', block: b -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endfor -%}
+
+{%- comment -%} 没有任何分组时，图片卡片单独成网格 {%- endcomment -%}
+{%- if group_count == 0 -%}
+  <div class="cs-collections-main">
+    {%- for b in se_blocks -%}
+      {%- if b.type == 'image_card' -%}
+        {%- render 'cs-collections-image-card', block: b -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
+<script type="module" src="{{ "custom-collections-main.min.js"| asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Custom Collections Main",
+  "tag": "section",
+  "class": "cs-col-main-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_shopping_cart",
+      "label": "是否展示购物车",
+      "default": true
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "product_group",
+      "name": "Product Group",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "分组标题"
+        },
+        {
+          "type": "textarea",
+          "id": "desc",
+          "label": "分组描述"
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "产品列表"
+        }
+      ]
+    },
+    {
+      "type": "image_card",
+      "name": "Image Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "跳转链接"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "按钮文案",
+          "default": "Shop Now"
+        },
+        {
+          "type": "paragraph",
+          "content": "图片卡片会并入它上方最近的一个 Product Group 网格；若放在所有分组之前，则并入第一个分组"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Custom Collections Main",
+      "category": "Custom Collection",
+      "blocks": [
+        {
+          "type": "product_group"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

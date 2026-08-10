@@ -1,0 +1,80 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="embla">
+  <div
+    class="embla__viewport"
+  >
+    <div class="embla__container">
+      {% for item in se_blocks %}
+        {% case item.type %}
+          {% when 'tag' %}
+            <div
+              class="embla__slide"
+            >
+              <img
+                width="{{ item.settings.icon.width }}"
+                height="{{ item.settings.icon.height }}"
+                src="{{ item.settings.icon |  image_url  }}"
+                alt="{{ item.settings.content }}"
+              >
+              <p>
+                {{ item.settings.content }}
+              </p>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<style>
+  #shopify-section-{{sid}}{
+    background-color:{{ se_stts.bg_color }};
+  }
+</style>
+
+<script type="module" src="{{ "custom-collections-tags.min.js"| asset_url }}"></script>
+{% schema %}
+{
+  "name": "Collection Banner",
+  "tag": "section",
+  "class": "cs-col-tags-sections",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#1d1d1d"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tag",
+      "limit": 4,
+      "name": "标签",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "图标"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "内容",
+          "default": "Ride Safe"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collections Tags",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

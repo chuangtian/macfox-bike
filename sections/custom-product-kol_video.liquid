@@ -1,0 +1,258 @@
+{% liquid
+  assign se = section.settings
+  assign blocks = section.blocks
+%}
+
+{%- capture play_icon -%}
+  <div class="cs-kol-play-icon cs-kol-icon-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] hover:bg-white/15 hover:border-white/30 hover:shadow-[0_12px_40px_0_rgba(31,38,135,0.45)] hover:scale-105 active:scale-95 active:shadow-[0_4px_16px_0_rgba(31,38,135,0.3)] text-white/90 hover:text-white">
+    <svg width="100%" height="100%" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M55.2 35.9L30.2 21.5C29 20.8 27.5 21.7 27.5 23.1V52C27.5 53.4 29 54.2 30.2 53.6L55.2 39.2C56.4 38.4 56.4 36.6 55.2 35.9Z" fill="currentColor"></path>
+    </svg>
+  </div>
+  <div class="cs-kol-play-icon cs-kol-icon-pause absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] hover:bg-white/15 hover:border-white/30 hover:shadow-[0_12px_40px_0_rgba(31,38,135,0.45)] hover:scale-105 active:scale-95 active:shadow-[0_4px_16px_0_rgba(31,38,135,0.3)] text-white/90 hover:text-white">
+    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="6" y="5" width="4" height="14" rx="1.2" fill="currentColor"></rect>
+      <rect x="14" y="5" width="4" height="14" rx="1.2" fill="currentColor"></rect>
+    </svg>
+  </div>
+{%- endcapture -%}
+
+{%- capture verified_icon -%}
+    <svg class="cs-kol-verified" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13.3813 5.5825L12.6813 4.8925C12.5413 4.7425 12.4513 4.5325 12.4513 4.3225V3.4825C12.4513 2.3825 11.5613 1.5025 10.4613 1.4925H9.6313C9.4213 1.4925 9.21131 1.4025 9.06131 1.2625L8.3613 0.5625C7.5813 -0.1875 6.3413 -0.1875 5.5613 0.5625L4.8613 1.2625C4.7113 1.4125 4.5013 1.4925 4.2913 1.4925H3.4513C2.3613 1.5225 1.5113 2.4225 1.5213 3.5125V4.3525C1.5213 4.5625 1.4313 4.7725 1.2913 4.9225L0.591304 5.6025C-0.188696 6.3725 -0.198696 7.6225 0.571304 8.3925C0.571304 8.4025 0.581304 8.4125 0.591304 8.4125L1.2913 9.1125C1.4413 9.2625 1.5213 9.4625 1.5213 9.6725V10.5125C1.5213 11.6025 2.4113 12.4925 3.5013 12.4925H4.3413C4.5513 12.4925 4.7613 12.5825 4.9113 12.7225L5.6113 13.4225C6.3913 14.1925 7.6413 14.1925 8.4113 13.4225L9.1113 12.7225C9.2613 12.5725 9.4713 12.4925 9.6813 12.4925H10.5213C11.6213 12.4925 12.5013 11.6025 12.5113 10.5125V9.6725C12.5113 9.4625 12.5913 9.2625 12.7413 9.1125L13.4413 8.4125C14.2113 7.6325 14.2013 6.3825 13.4313 5.6125C13.4013 5.6025 13.3913 5.5925 13.3813 5.5825Z" fill="#F2CB04"/>
+      <path d="M6.4513 9.23246C6.2613 9.23246 6.0813 9.15246 5.9413 9.02246L4.0313 7.10246C3.7513 6.82246 3.7513 6.36246 4.0313 6.08246C4.3113 5.80246 4.7613 5.80246 5.0413 6.08246L6.4513 7.49246L8.9613 4.98246C9.2413 4.70246 9.6913 4.70246 9.9713 4.98246C10.2513 5.26246 10.2513 5.71246 9.9713 5.99246L6.9613 9.02246C6.8213 9.15246 6.6413 9.23246 6.4513 9.23246Z" fill="#121212"/>
+    </svg>
+{%- endcapture -%}
+
+<div class="cs-kol-wrapper">
+  {% if se.title != blank %}
+    <p class="cs-kol-title">{{ se.title }}</p>
+  {% endif %}
+
+  {%- comment -%} ============ PC ============ {%- endcomment -%}
+  <div class="cs-kol-row">
+    {%- for bl in blocks -%}
+      {%- assign s = bl.settings -%}
+      <div
+        class="cs-kol-item{% if forloop.first %} is-active{% endif %}"
+        data-index="{{ forloop.index0 }}"
+        {{ bl.shopify_attributes }}
+      >
+        <div class="cs-kol-video">
+          {%- if s.video != blank -%}
+            <video
+              class="cs-kol-media"
+              playsinline
+              muted
+              loop
+              preload="metadata"
+              {% if s.video.preview_image != blank %}
+                poster="{{ s.video.preview_image | image_url: width: 900 }}"
+              {% endif %}
+            >
+              {%- for src in s.video.sources -%}
+                <source src="{{ src.url }}" type="{{ src.mime_type }}">
+              {%- endfor -%}
+            </video>
+          {%- endif -%}
+          <button class="cs-kol-play" type="button" aria-label="Play video">{{ play_icon }}</button>
+        </div>
+
+        <div class="cs-kol-info">
+          {%- if s.quote != blank -%}
+            <div class="cs-kol-quote">{{ s.quote }}</div>
+          {%- endif -%}
+          <div class="cs-kol-profile">
+            <div class="cs-kol-user">
+              {%- if s.avatar != blank -%}
+                <img
+                  class="cs-kol-avatar"
+                  src="{{ s.avatar | image_url: width: 120 }}"
+                  width="{{ s.avatar.width }}"
+                  height="{{ s.avatar.height }}"
+                  alt="{{ s.name | escape }}"
+                  loading="lazy"
+                >
+              {%- endif -%}
+              <div class="cs-kol-meta">
+                <span class="cs-kol-name">
+                  {{- s.name -}}
+                  {%- if s.verified %}{{ verified_icon }}{% endif -%}
+                </span>
+                {%- if s.role != blank -%}
+                  <span class="cs-kol-role">{{ s.role }}</span>
+                {%- endif -%}
+              </div>
+            </div>
+            {%- if s.followers != blank -%}
+              <div class="cs-kol-followers">
+                <span class="cs-kol-count">{{ s.followers }}</span>
+                <span class="cs-kol-flabel">{{ s.followers_label }}</span>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  {%- comment -%} ============ Mobile ============ {%- endcomment -%}
+  <div class="cs-kol-mobile">
+    <div class="swiper cs-kol-swiper">
+      <div class="swiper-wrapper">
+        {%- for bl in blocks -%}
+          {%- assign s = bl.settings -%}
+          <div class="swiper-slide">
+            <div class="cs-kol-video">
+              {%- if s.video != blank -%}
+                <video
+                  class="cs-kol-media"
+                  playsinline
+                  muted
+                  loop
+                  preload="metadata"
+                  {% if s.video.preview_image != blank %}
+                    poster="{{ s.video.preview_image | image_url: width: 900 }}"
+                  {% endif %}
+                >
+                  {%- for src in s.video.sources -%}
+                    <source src="{{ src.url }}" type="{{ src.mime_type }}">
+                  {%- endfor -%}
+                </video>
+              {%- endif -%}
+              <button class="cs-kol-play" type="button" aria-label="Play video">{{ play_icon }}</button>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="cs-kol-info-mobile">
+      {%- for bl in blocks -%}
+        {%- assign s = bl.settings -%}
+        <div class="cs-kol-info{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}">
+          {%- if s.quote != blank -%}
+            <div class="cs-kol-quote">{{ s.quote }}</div>
+          {%- endif -%}
+          <div class="cs-kol-profile">
+            <div class="cs-kol-user">
+              {%- if s.avatar != blank -%}
+                <img
+                  class="cs-kol-avatar"
+                  src="{{ s.avatar | image_url: width: 120 }}"
+                  width="{{ s.avatar.width }}"
+                  height="{{ s.avatar.height }}"
+                  alt="{{ s.name | escape }}"
+                  loading="lazy"
+                >
+              {%- endif -%}
+              <div class="cs-kol-meta">
+                <span class="cs-kol-name">
+                  {{- s.name -}}
+                  {%- if s.verified %}{{ verified_icon }}{% endif -%}
+                </span>
+                {%- if s.role != blank -%}
+                  <span class="cs-kol-role">{{ s.role }}</span>
+                {%- endif -%}
+              </div>
+            </div>
+            {%- if s.followers != blank -%}
+              <div class="cs-kol-followers">
+                <span class="cs-kol-count">{{ s.followers }}</span>
+                <span class="cs-kol-flabel">{{ s.followers_label }}</span>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="cs-kol-nav">
+      <button class="cs-kol-prev" type="button" aria-label="Previous">
+        <svg width="100%" height="100%" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z" fill="#121212"></path><path d="M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z" fill="#666666"></path><path d="M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z" fill="#666666"></path><path d="M41.5 28.3H20.8V31.5H41.5V28.3Z" fill="#666666"></path></svg>
+      </button>
+      <button class="cs-kol-next" type="button" aria-label="Next">
+        <svg width="100%" height="100%" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z" fill="#121212"></path><path d="M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z" fill="#666666"></path><path d="M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z" fill="#666666"></path><path d="M39.8 28.3H19.1V31.5H39.8V28.3Z" fill="#666666"></path></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="{{ "custom-product-kol_video.min.js" | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "KOL Video",
+  "tag": "section",
+  "class": "cs-kol-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "The Folks We Work With Totally Trust Us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "kol",
+      "name": "红人",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "视频"
+        },
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "评价内容",
+          "default": "<p>“The X7 feels planted from the first ride. The fat tires make corners, bumps, and rough neighborhood roads feel smoother, while the bold frame gives it the kind of street look young riders actually want to show off.”</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "头像"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "红人名称",
+          "default": "@streetkid.rides"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "认证标识",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "副标题",
+          "default": "Teen Street Riding"
+        },
+        {
+          "type": "text",
+          "id": "followers",
+          "label": "粉丝数",
+          "default": "128K+"
+        },
+        {
+          "type": "text",
+          "id": "followers_label",
+          "label": "粉丝数文本",
+          "default": "Followers"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KOL Video",
+      "category": "Custom Product",
+      "blocks": [{ "type": "kol" }, { "type": "kol" }, { "type": "kol" }, { "type": "kol" }]
+    }
+  ]
+}
+{% endschema %}

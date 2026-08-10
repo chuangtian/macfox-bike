@@ -1,0 +1,142 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-product-accordion-card-wrapper">
+  <div class="cs-product-accordion-card-container">
+    {% for block in se_blocks %}
+      {% if block.type == 'product_accordion_item' %}
+        <div class="cs-product-accordion-card-item">
+          <div class="__item-main">
+            <div class="__item-content">
+              <div class="__item-image">
+                <img
+                  src="{{ block.settings.image | image_url }}"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                  alt="loading..."
+                >
+              </div>
+              <div class="__item-info">
+                <div class="__item-tag">
+                  {{ block.settings.tag }}
+                </div>
+                <h3 class="__item-title">
+                  {{ block.settings.title }}
+                </h3>
+                <p class="__item-desc">
+                  {{ block.settings.content }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="__item-btn">
+            <div>
+              <div>
+                <div class="__item-icon">{{ block.settings.icon }}</div>
+                <div class="__item-tag">
+                  {{ block.settings.tag }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="cs-product-card-control-md">
+    <div>
+      <svg width="100%" height="100%" viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z" fill="#121212"></path>
+        <path d="M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z" fill="#666666"></path>
+        <path d="M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z" fill="#666666"></path>
+        <path d="M41.5 28.3H20.8V31.5H41.5V28.3Z" fill="#666666"></path>
+      </svg>
+    </div>
+    <div>
+      <svg width="100%" height="100%" viewbox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z" fill="#121212"></path>
+        <path d="M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z" fill="#666666"></path>
+        <path d="M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z" fill="#666666"></path>
+        <path d="M39.8 28.3H19.1V31.5H39.8V28.3Z" fill="#666666"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cs-product-accordion-card-section {
+    background-color: {{ se_stts.bg_color }};
+    padding: 0 15px;
+    overflow: hidden;
+    height: auto;
+  }
+  .cs-product-accordion-card-section * {
+    margin: 0;
+  }
+
+
+  @media (width >= 768px ) {
+    .cs-product-accordion-card-section {
+      overflow: visible;
+    }
+  }
+</style>
+
+<script type="module" src="{{'custom-product-accordion-card.min.js' |  asset_url}}"></script>
+{% schema %}
+{
+  "name": "Accordion Card",
+  "tag": "section",
+  "class": "cs-product-accordion-card-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_accordion_item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "标签"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "名称"
+        },
+        {
+          "type": "html",
+          "id": "icon",
+          "label": "图标"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "内容"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion Card",
+      "category": "Custom Product"
+    }
+  ]
+}
+{% endschema %}

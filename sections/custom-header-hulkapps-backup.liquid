@@ -1,0 +1,236 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+<div class="cs-header-wrapper">
+  <div id="cs-menu-mb-control">
+    <div class="menu_icon_mb">{{ se_stts.menu_icon_mb }}</div>
+  </div>
+  <div class="cs-menu-logo">
+    {%- render 't4s_logo', tag: 'div' -%}
+  </div>
+  <nav>
+    {% for item in se_blocks %}
+      {% case item.type %}
+        {% when 'collection' %}
+          <div class="cs-header-item">
+            <a
+              href="{%  if item.settings.def_link != nil %} {{ item.settings.def_link }} {%  else %} #  {% endif %}"
+            >
+              {{- item.settings.title -}}
+              {% if item.settings.show_dropdown_icon %}
+                <span class="cs-header-dropdown_icon">{{ se_stts.dropdown_icon }}</span>
+              {% endif %}
+            </a>
+            <div class="cs-header-collection-wrapper">
+              <div
+                class=" swiper"
+                style="background-color: {{ se_stts.bg_color  }};"
+              >
+
+                <div class="swiper-pagination" data-labels="{{ item.settings.col_label }}">
+                </div>
+
+                <div class="swiper-wrapper{% if item.settings.col_list.size >= 2 %} pt-[20px]! {% endif %}">
+                  {% for col in item.settings.col_list %}
+                    <div class="swiper-slide">
+                      {% render 'cs-header-collection',
+                        cs_col: collections[col.handle].products,
+                        arrow_left_icon: section.settings.arrow_left_icon,
+                        arrow_right_icon: section.settings.arrow_right_icon
+                      %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        {% when 'community' %}
+          <div class="cs-header-item">
+            <a
+              href="{%  if item.settings.def_link != nil %} {{ item.settings.def_link }} {%  else %} # {% endif %}"
+            >
+              {{- item.settings.title -}}
+              {% if item.settings.show_dropdown_icon %}
+                <span class="cs-header-dropdown_icon">{{ se_stts.dropdown_icon }}</span>
+              {% endif %}
+            </a>
+            <div
+              class="cs-header-community-wrapper"
+              style="background-color: {{ se_stts.bg_color  }};"
+            >
+              {% render 'cs-header-community', menu: item.settings.menu.links, bl_handle: 'news' %}
+            </div>
+          </div>
+        {% when 'dropdown' %}
+          <div class="cs-header-item relative">
+            <a
+              href="{%  if item.settings.def_link != nil %} {{ item.settings.def_link }} {%  else %} # {% endif %}"
+            >
+              {{- item.settings.title -}}
+              {% if item.settings.show_dropdown_icon %}
+                <span class="cs-header-dropdown_icon">{{ se_stts.dropdown_icon }}</span>
+              {% endif %}
+            </a>
+            <div
+              class="cs-header-dropdown-wrapper"
+              style="background-color: {{ se_stts.bg_color  }};"
+            >
+              {% render 'cs-header-dropdown', link_list: item.settings.link.links %}
+            </div>
+          </div>
+        {% else %}
+          <div class="cs-header-item">
+            <a href="{{ item.settings.link }}">{{ item.settings.title }}</a>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </nav>
+  <div class="cs-header-assistance">
+    <div class="cs-search-on group">
+      <a href="{{ routes.search_url }}" onclick="return false;" aria-label="Search for Macfox products and blogs">
+        <svg width="100%" height="100%" viewBox="0 0 231 231" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M215.2 201.6L169.3 158.4C181.9 143.3 189.4 123.9 189.4 102.8C189.4 54.8 150.4 15.8 102.4 15.8C54.4 15.8 15.4 54.8 15.4 102.8C15.4 150.8 54.4 189.8 102.4 189.8C122.8 189.8 141.6 182.7 156.4 171L202.8 214.7L215.2 201.6ZM33.4 102.8C33.4 64.7001 64.4 33.8 102.4 33.8C140.4 33.8 171.4 64.8 171.4 102.8C171.4 140.8 140.4 171.8 102.4 171.8C64.4 171.8 33.4 140.8 33.4 102.8Z" fill="white"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="t4s-site-nav__icon t4s-site-nav__cart">
+      <a
+        class="h-full"
+        href="{{ routes.cart_url }}"
+        {% if settings.cart_type != 'disable' %}
+          data-drawer-delay data-drawer-options='{ "id":"#t4s-mini_cart" }'
+        {% endif %}
+      >
+        <span class="t4s-pr t4s-icon-cart__wrap">
+          <svg width="100%" height="100%" viewBox="0 0 231 231" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M70.1 137.1L197.8 125.6L216.9 51.4H55.3L49.7 19.1H11.4V37.1H34.6L57.6 170.6H205.2V152.6H72.8L70.1 137.1ZM193.6 69.5L183.5 108.9L67 119.3L58.4 69.4H193.6V69.5Z" fill="white"/>
+            <path d="M90.2 215.7C96.717 215.7 102 210.417 102 203.9C102 197.383 96.717 192.1 90.2 192.1C83.6831 192.1 78.4 197.383 78.4 203.9C78.4 210.417 83.6831 215.7 90.2 215.7Z" fill="white"/>
+            <path d="M176.1 215.7C182.617 215.7 187.9 210.417 187.9 203.9C187.9 197.383 182.617 192.1 176.1 192.1C169.583 192.1 164.3 197.383 164.3 203.9C164.3 210.417 169.583 215.7 176.1 215.7Z" fill="white"/>
+          </svg>
+          <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box ">{{ cart.item_count }}</span>
+        </span>
+        <span class="t4s-h-cart-totals t4s-dn t4s-truncate">
+          <span class="t4s-h-cart__divider t4s-dn">/</span>
+          <span data-cart-tt-price class="t4s-h-cart__total">{{ cart.total_price | money }}</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+{%- if product and se_stts.product_bar != null and se_stts.product_bar.size > 0 -%}
+  <div class="heading-bar-wrapper">
+    <div class="--heading-bar">
+      {%- for variable in se_stts.product_bar -%}
+        <div
+          data-tagName="{{ variable.tag_name }}"
+          class="--heading-bar-item"
+        >
+          {{ variable.name }}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+<script type="module" src="{{ 'custom-header.min.js' |  asset_url }}"></script>
+{% schema %}
+{
+  "name": "Custom header",
+  "tag": "header",
+  "class": "cs-header",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "背景颜色", "default": "#000000" },
+    { "type": "text", "id": "topic", "label": "主题", "default": "Header" },
+    { "type": "html", "id": "arrow_left_icon", "label": "左箭头" },
+    { "type": "html", "id": "arrow_right_icon", "label": "右箭头" },
+    {
+      "type": "select",
+      "id": "h_icon",
+      "label": "图标类型",
+      "options": [
+        {
+          "label": "Kalles",
+          "value": "kalles"
+        },
+        {
+          "label": "Pe",
+          "value": "pe"
+        },
+        {
+          "label": "Drawn",
+          "value": "drawn"
+        }
+      ],
+      "default": "kalles"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "搜索图标",
+      "default": true
+    },
+    {
+      "type": "html",
+      "id": "dropdown_icon",
+      "label": "下拉图标"
+    },
+    {
+      "type": "html",
+      "id": "menu_icon_mb",
+      "label": "菜单图标（移动端）",
+      "default": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='16' viewBox='0 0 30 16' fill='currentColor'><rect width='30' height='1.5'></rect><rect y='7' width='20' height='1.5'></rect><rect y='14' width='30' height='1.5'></rect></svg>"
+    },
+    {
+      "type": "metaobject_list",
+      "metaobject_type": "heading_bar",
+      "id": "product_bar",
+      "label": "产品顶部导航栏",
+      "info": "M19和配件不包含在内"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "产品系列",
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "Title" },
+        { "type": "textarea", "id": "col_label", "label": "系列别名", "info": "Name1;;Name2" },
+        { "type": "collection_list", "id": "col_list", "label": "产品系列" },
+        { "type": "url", "id": "def_link", "label": "默认跳转链接" },
+        { "type": "checkbox", "id": "show_dropdown_icon", "label": "显示下拉图标", "default": true }
+      ]
+    },
+    {
+      "type": "base",
+      "name": "Base item",
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "Accessories" },
+        { "type": "url", "id": "link", "label": "链接" }
+      ]
+    },
+    {
+      "type": "community",
+      "name": "社区",
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "Title" },
+        { "type": "link_list", "id": "menu", "label": "菜单" },
+        { "type": "url", "id": "def_link", "label": "默认跳转链接" },
+        { "type": "checkbox", "id": "show_dropdown_icon", "label": "显示下拉图标", "default": true }
+      ]
+    },
+    {
+      "type": "dropdown",
+      "name": "Dropdown item",
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "Support" },
+        { "type": "link_list", "id": "link", "label": "链接" },
+        { "type": "url", "id": "def_link", "label": "默认跳转链接" },
+        { "type": "checkbox", "id": "show_dropdown_icon", "label": "显示下拉图标", "default": true }
+      ]
+    }
+  ]
+}
+{% endschema %}

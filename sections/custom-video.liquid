@@ -1,0 +1,299 @@
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+-%}
+
+<style>
+    .cs-video {
+        position: relative;
+        width: 100%;
+        {%- case se_stts.se_height -%}
+        {%- when 'full_screen' -%}
+            height: calc(100vh - var(--header-height) - var(--topbar-height));
+        {%- when 'cs_height' -%}
+            height: {{ se_stts.cs_height }}px;
+        {%- else -%}
+            height: auto;
+        {%- endcase -%}
+        
+    }
+    .cs-video.mb {
+        display: none;
+        {%- case se_stts.se_height_mb -%}
+        {%- when 'full_screen' -%}
+            height: calc(100vh - var(--header-height) - var(--topbar-height));
+        {%- when 'cs_height' -%}
+            height: {{ se_stts.cs_height_mb }}px;
+        {%- else -%}
+            height: auto;
+        {%- endcase -%}
+    }
+    .cs-video a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .cs-video video,
+    .cs-video iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .cs-video .play-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .cs-video .play-btn svg {
+        display: block;
+        width: 8vw;
+        height: 8vw;
+        color: #000;
+        cursor: pointer;
+    }
+    .cs-video .btn-muted {
+        position: absolute;
+        bottom: 50px;
+        right: 35px;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+        .cs-video {
+            display: none;
+        }
+        .cs-video.mb {
+            display: block;
+            padding: 0;
+        }
+        .cs-video .play-btn svg {
+            width: 50px;
+            height: 50px;
+        }
+        .cs-video .btn-muted {
+            bottom: 0;
+            right: 0;
+        }
+    }
+</style>
+
+<div class="cs-video pc">
+  <a href="{{ se_stts.link | default: 'javascript:void(0);' }}">
+    {%- case se_stts.source -%}
+    {%- when 'shopify' -%}
+        {%- assign preview_image = se_stts.shopify_video.preview_image |  image_url -%}
+        {{ se_stts.shopify_video | video_tag: autoplay: se_stts.autoplay, loop: true, poster: preview_image }}
+    {%- when 'external' -%}
+        <video src="{{ se_stts.external_video }}" autoplay="{{ se_stts.autoplay }}" loop playsinline preload="metadata"></video>
+    {%- when 'youtube' -%}
+        {% assign youtube_id = se_stts.youtube_video | split: 'v=' | last %}
+        {% assign youtube_id = youtube_id | split: '&' | first %}
+        <iframe width="100%" height="700" 
+            frameborder="0" allowfullscreen
+            src="https://www.youtube.com/embed/{{ youtube_id }}?autoplay=1&mute=1" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+    {%- endcase -%}
+  </a>
+  {%- if se_stts.autoplay == false and se_stts.source != 'youtube' -%}
+    <div class="play-btn"> 
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_235_2)"><path d="M8.2 16.4C12.7287 16.4 16.4 12.7287 16.4 8.2C16.4 3.67126 12.7287 0 8.2 0C3.67126 0 0 3.67126 0 8.2C0 12.7287 3.67126 16.4 8.2 16.4Z" fill="currentColor"/><path d="M11.1998 7.8998L6.7998 5.3998C6.5998 5.2998 6.2998 5.3998 6.2998 5.6998V10.7998C6.2998 11.0998 6.5998 11.1998 6.7998 11.0998L11.1998 8.4998C11.3998 8.3998 11.3998 8.0998 11.1998 7.8998Z" fill="white"/></g><defs><clipPath id="clip0_235_2"><rect width="16.4" height="16.4" fill="white"/></clipPath></defs>
+        </svg>
+    </div>
+  {%- elsif se_stts.show_muted == true and se_stts.source != 'youtube' -%}
+    <span class="btn-muted muted">muted</span>
+  {%- endif -%}
+</div>
+<div class="cs-video mb">
+  <a href="{{ se_stts.link | default: 'javascript:void(0);' }}">
+    {%- case se_stts.source_mb -%}
+    {%- when 'shopify' -%}
+        {%- assign preview_image = se_stts.shopify_video_mb.preview_image |  image_url -%}
+        {{ se_stts.shopify_video_mb | video_tag: autoplay: se_stts.autoplay, loop: true, poster: preview_image }}
+    {%- when 'external' -%}
+        <video src="{{ se_stts.external_video_mb }}" autoplay="{{ se_stts.autoplay }}" loop playsinline preload="metadata"></video>
+    {%- when 'youtube' -%}
+        {% assign youtube_id = se_stts.youtube_video_mb | split: 'v=' | last %}
+        {% assign youtube_id = youtube_id | split: '&' | first %}
+        <iframe width="100%" height="700" 
+            frameborder="0" allowfullscreen
+            src="https://www.youtube.com/embed/{{ youtube_id }}?autoplay=1&mute=1" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+    {%- endcase -%}
+  </a>
+  {%- if se_stts.autoplay == false and se_stts.source != 'youtube' -%}
+    <div class="play-btn"> 
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_235_2)"><path d="M8.2 16.4C12.7287 16.4 16.4 12.7287 16.4 8.2C16.4 3.67126 12.7287 0 8.2 0C3.67126 0 0 3.67126 0 8.2C0 12.7287 3.67126 16.4 8.2 16.4Z" fill="currentColor"/><path d="M11.1998 7.8998L6.7998 5.3998C6.5998 5.2998 6.2998 5.3998 6.2998 5.6998V10.7998C6.2998 11.0998 6.5998 11.1998 6.7998 11.0998L11.1998 8.4998C11.3998 8.3998 11.3998 8.0998 11.1998 7.8998Z" fill="white"/></g><defs><clipPath id="clip0_235_2"><rect width="16.4" height="16.4" fill="white"/></clipPath></defs>
+        </svg>
+    </div>
+  {%- elsif se_stts.show_muted == true and se_stts.source != 'youtube' -%}
+    <span class="btn-muted muted">muted</span>
+  {%- endif -%}
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        {%- assign domId = 'shopify-section-' | append: sid -%}
+        {%- if se_stts.autoplay == false and se_stts.source != 'youtube' -%}
+            let $video = $('#{{ domId }} .cs-video video');
+            $video.prop('controls', false);
+            $video.on('play', function(){
+                $(this).prop('controls', true);
+                $(this).parent().siblings('.play-btn').hide();
+            });
+            $video.on('pause', function(){
+                $(this).prop('controls', false);
+                $(this).parent().siblings('.play-btn').show();
+            });
+            $video.on('ended', function(){
+                $(this).prop('controls', false);
+                $(this).parent().siblings('.play-btn').show();
+            });
+            $('#{{ domId }} .play-btn svg').click(function(){
+                $(this).parent().siblings('a').children('video')[0].play();
+            });
+        {%- elsif se_stts.show_muted == true and se_stts.source != 'youtube' -%}
+            $('#{{ domId }} .btn-muted').click(function(){
+                let video = $(this).siblings('a').children('video')[0];
+                if($(this).hasClass('muted')){
+                    $(this).removeClass('muted');
+                    $(video).prop('muted', false);
+                }else{
+                    $(this).addClass('muted');
+                    $(video).prop('muted', true);
+                }
+            })
+        {%- endif -%}
+    });
+</script>
+
+{% schema %}
+    {
+        "name": "Custom Video",
+        "tag": "section",
+        "settings": [
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Section Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "autoplay",
+                "label": "Autoplay",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "show_muted",
+                "label": "Show Muted Buuton",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "===== PC Settings ====="
+            },
+            {
+                "type": "select",
+                "id": "se_height",
+                "label": "Section Height",
+                "default": "adapt_video",
+                "options": [
+                    {"label": "Adapt Video Height", "value": "adapt_video"},
+                    {"label": "Full screen height", "value": "full_screen"},
+                    {"label": "Custom height", "value": "cs_height"}
+                ]
+            },
+            {
+                "type": "number",
+                "id": "cs_height",
+                "label": "Custom Height"
+            },
+            {
+                "type": "select",
+                "id": "source",
+                "label": "Source video",
+                "default": "shopify",
+                "options": [
+                    {"value": "shopify", "label": "Shopify Hosted"},
+                    {"value": "external", "label": "External Link"},
+                    {"value": "youtube", "label": "YouTube"}
+                ]
+            },
+            {
+                "type": "video",
+                "id": "shopify_video",
+                "label": "Shopify Hosted Video"
+            },
+            {
+                "type": "text",
+                "id": "external_video",
+                "label": "External Video Link"
+            },
+            {
+                "type": "text",
+                "id": "youtube_video",
+                "label": "YouTube Video Link"
+            },
+            {
+                "type": "header",
+                "content": "===== Mobile Settings ====="
+            },
+            {
+                "type": "select",
+                "id": "se_height_mb",
+                "label": "Section Height",
+                "default": "adapt_video",
+                "options": [
+                    {"label": "Adapt Video Height", "value": "adapt_video"},
+                    {"label": "Full screen height", "value": "full_screen"},
+                    {"label": "Custom height", "value": "cs_height"}
+                ]
+            },
+            {
+                "type": "number",
+                "id": "cs_height_mb",
+                "label": "Custom Height"
+            },
+            {
+                "type": "select",
+                "id": "source_mb",
+                "label": "Source video",
+                "default": "shopify",
+                "options": [
+                    {"value": "shopify", "label": "Shopify Hosted"},
+                    {"value": "external", "label": "External Link"},
+                    {"value": "youtube", "label": "YouTube"}
+                ]
+            },
+            {
+                "type": "video",
+                "id": "shopify_video_mb",
+                "label": "Shopify Hosted Video"
+            },
+            {
+                "type": "text",
+                "id": "external_video_mb",
+                "label": "External Video Link"
+            },
+            {
+                "type": "text",
+                "id": "youtube_video_mb",
+                "label": "YouTube Video Link"
+            }
+        ],
+        "presets": [
+        {
+            "name": "Custom Video"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,266 @@
+{% liquid
+  assign sid = section.id
+  assign st = section.settings
+%}
+
+<div class="cs-cdn2-wrap-{{ sid }}">
+  {% assign cdn2_title = st.title | default: collection.title %}
+  {% assign cdn2_title_tag = st.title_tag | default: 'h1' %}
+  {% if cdn2_title != blank %}
+    <{{ cdn2_title_tag }} class="cs-cdn2-title-{{ sid }}">{{ cdn2_title }}</{{ cdn2_title_tag }}>
+  {% endif %}
+
+  {% if st.describe != blank %}
+    <div class="cs-cdn2-desc-{{ sid }}">
+      {{ st.describe }}
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  #shopify-section-{{ sid }}{
+    background-color: {{ st.bg_color }};
+    margin: 0 !important;
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  #shopify-section-{{ sid }} .cs-cdn2-wrap-{{ sid }}{
+    width: 100% !important;
+    max-width: 1500px !important;
+    margin-inline: auto !important;
+    box-sizing: border-box;
+    /* 左右内边距与 cs-collections-main 一致：移动端 20px */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    /* 移动端上下内边距 */
+    padding-top: {{ st.pad_top_mobile }}px !important;
+    padding-bottom: {{ st.pad_bottom_mobile }}px !important;
+  }
+
+  #shopify-section-{{ sid }} .cs-cdn2-title-{{ sid }}{
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    line-height: 1.15;
+    font-weight: 700;
+    text-align: left !important;
+    color: {{ st.title_color }} !important;
+    /* 移动端标题字体大小 */
+    font-size: {{ st.title_size_mobile }}px;
+  }
+
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }}{
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: left !important;
+    max-width: none !important;
+    color: {{ st.desc_color }} !important;
+    /* 移动端描述字体大小 */
+    font-size: {{ st.desc_size_mobile }}px;
+  }
+
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }},
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }} span,
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }} a,
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }} em,
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }} p,
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }} li{
+    color: {{ st.desc_color }} !important;
+  }
+
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }} p{
+    margin: 0 !important;
+  }
+
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }} strong,
+  #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }} b{
+    color: {{ st.highlight_color }} !important;
+    font-weight: 700 !important;
+  }
+
+  /* PC端 */
+  @media (min-width: 768px){
+    #shopify-section-{{ sid }} .cs-cdn2-wrap-{{ sid }}{
+      width: 90% !important;
+      /* 左右内边距与 cs-collections-main 一致：PC端 0 */
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-top: {{ st.pad_top_pc }}px !important;
+      padding-bottom: {{ st.pad_bottom_pc }}px !important;
+    }
+
+    #shopify-section-{{ sid }} .cs-cdn2-title-{{ sid }}{
+      font-size: {{ st.title_size_pc }}px;
+      line-height: 1.1;
+    }
+
+    #shopify-section-{{ sid }} .cs-cdn2-desc-{{ sid }}{
+      font-size: {{ st.desc_size_pc }}px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Collection Describe no 2",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "info": "留空则默认显示集合标题"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "标题标签",
+      "info": "控制标题的 HTML 标签（影响 SEO 与语义，样式不变）",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" },
+        { "value": "p", "label": "段落 (p)" },
+        { "value": "div", "label": "普通容器 (div)" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "describe",
+      "label": "描述内容"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "标题字体颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "描述字体颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "加粗高亮颜色",
+      "default": "#f2cb04"
+    },
+    {
+      "type": "header",
+      "content": "PC端 - 上下内边距"
+    },
+    {
+      "type": "range",
+      "id": "pad_top_pc",
+      "label": "上内边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pad_bottom_pc",
+      "label": "下内边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "PC端 - 字体大小"
+    },
+    {
+      "type": "range",
+      "id": "title_size_pc",
+      "label": "标题字体大小",
+      "min": 12,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "desc_size_pc",
+      "label": "描述字体大小",
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "移动端 - 上下内边距"
+    },
+    {
+      "type": "range",
+      "id": "pad_top_mobile",
+      "label": "上内边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pad_bottom_mobile",
+      "label": "下内边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "移动端 - 字体大小"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "标题字体大小",
+      "min": 12,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "desc_size_mobile",
+      "label": "描述字体大小",
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collections Describe no 2",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

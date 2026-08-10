@@ -1,0 +1,213 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'custom-product-list.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+
+  assign t4s_se_class = 't4s_nt_se_' | append: sid
+  if se_stts.use_cus_css and se_stts.code_cus_css != blank
+    render 'se_cus_css', code_cus_css: se_stts.code_cus_css, t4s_se_class: t4s_se_class
+  endif
+-%}
+
+<div class="cs-product-list">
+  <div class="cs-comm-title">
+    <div class="comm-list-con cs-page-width">
+      <div class="comm-main-title">
+        {{ se_stts.me_title }}
+      </div>
+      <div class="comm-minor-title">{{ se_stts.minor_title }}</div>
+    </div>
+  </div>
+
+  <div class="product-list-dom">
+    <div class="swiper product-list-swiper">
+      <div class="swiper-wrapper">
+        {% for block in se_blocks %}
+          {%- assign bk_stts = block.settings -%}
+          <div class="swiper-slide">
+            {% assign product = all_products[bk_stts.product_id.handle] %}
+            {% assign parameterData = product.metafields.custom.parameterdata.value %}
+            <div class="product-list-item">
+              <div class="product-list-tag">{{ parameterData.name }}</div>
+              <div class="product-item-con">
+                <a href="{{ parameterData.url }}" class="product-item-img">
+                  <img
+                    src="{{  parameterData.img_url}}"
+                    alt=""
+                    width=""
+                    height=""
+                  >
+                </a>
+                <div class="product-item-info">
+                  {% if parameterData.children != blank %}
+                    {% for item in parameterData.children %}
+                      <div class="product-list-parameter">
+                        <div class="list-parameter-value">{{ item.value }}</div>
+                        <div class="list-parameter-name">{{ item.name }}</div>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+                <a href="{{ parameterData.url }}" class="list-parameter-link"> Learn More </a>
+              </div>
+
+              {% if bk_stts.ul_icon_url != blank %}
+                <div class="product-item-ul_icon">
+                  <img
+                    class="ul-icon-size"
+                    src="{{  bk_stts.ul_icon_url | image_url }}"
+                    alt="error network"
+                    width=""
+                    height=""
+                  >
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="product-list-le"></div>
+    <div class="product-list-ri"></div>
+  </div>
+</div>
+{% style %}
+  .product-list-item{
+    position: relative;
+  }
+
+  {% for block in se_blocks %}
+              {% if block.type=="product" %}
+                {% assign bk_stts = block.settings %}
+               .product-item-ul_icon{
+             position: absolute;
+                 left:{{bk_stts.ul_icon_left}}%;
+                top:{{bk_stts.ul_icon_top}}%;
+                width:{{bk_stts.ul_icon_size}}px;
+                 height:{{bk_stts.ul_icon_size}}px;
+            }
+
+              @media screen and (max-width: 769px) {
+             .product-item-ul_icon{
+                left:{{bk_stts.ul_icon_mobile_left}}%;
+                top:{{bk_stts.ul_icon_mobile_top}}%;
+                width:{{bk_stts.ul_icon_mobile_size}}px;
+                height:{{bk_stts.ul_icon_mobile_size}}px;
+             }
+            }
+            {% break %}
+              {% endif %}
+            {% endfor %}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Custom Product List",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "me_title",
+      "label": "Title",
+      "default": "START YOUR <br> STREET PERFORMANCE",
+      "info": "If you want to line break, please add a <br> tag in the text"
+    },
+    {
+      "type": "text",
+      "id": "minor_title",
+      "label": "Minor Title",
+      "default": "Choose This One That Suits You",
+      "info": "If you want to line break, please add a <br> tag in the text"
+    },
+    {
+      "id": "use_cus_css",
+      "type": "checkbox",
+      "label": "Use custom css",
+      "default": false,
+      "info": "If you want custom style for this section."
+    },
+    {
+      "id": "code_cus_css",
+      "type": "textarea",
+      "label": "Code custom css",
+      "info": "Use selector .SectionID to style css"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product Item",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product_id",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "ul_icon_url",
+          "label": "Image"
+        },
+        {
+          "type": "number",
+          "id": "ul_icon_size",
+          "label": "Size",
+          "default":80
+        },
+        {
+          "type": "number",
+          "id": "ul_icon_mobile_size",
+          "label": "Mobile size",
+          "default":30
+        },
+        {
+    "type": "range",
+  "id": "ul_icon_left",
+  "min": 0,
+  "max": 100,
+  "step": 1,
+  "unit": "%",
+  "label": "Left",
+  "default": 10
+},
+         {
+  "type": "range",
+  "id": "ul_icon_top",
+  "min": 0,
+  "max": 100,
+  "step": 1,
+  "unit": "%",
+  "label": "Top",
+  "default": 10
+},{
+  "type": "range",
+  "id": "ul_icon_mobile_left",
+  "min": 0,
+  "max": 100,
+  "step": 1,
+  "unit": "%",
+  "label": "Mobile left",
+  "default": 90
+},
+         {
+  "type": "range",
+  "id": "ul_icon_mobile_top",
+  "min": 0,
+  "max": 100,
+  "step": 1,
+  "unit": "%",
+  "label": "Mobile top",
+  "default": 10
+},
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "Custom Product List"
+    }
+  ]
+}
+{% endschema %}

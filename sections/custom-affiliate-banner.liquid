@@ -1,0 +1,159 @@
+{% liquid
+  assign se_stts = section.settings
+  assign img_pc = se_stts.img_pc
+  assign img_mb = se_stts.img_mb
+%}
+
+{% if img_pc != blank or img_mb != blank %}
+  <picture>
+    {% if img_mb != blank %}
+      <source
+        media="(max-width: 768px)"
+        srcset="
+          {{ img_mb | image_url: width: 400 }} 400w,
+          {{ img_mb | image_url: width: 600 }} 600w,
+          {{ img_mb | image_url: width: 768 }} 768w
+        "
+        sizes="100vw"
+      >
+    {% endif %}
+
+    {% if img_pc != blank %}
+      <source
+        media="(min-width: 769px)"
+        srcset="
+          {{ img_pc | image_url: width: 900 }} 900w,
+          {{ img_pc | image_url: width: 1200 }} 1200w,
+          {{ img_pc | image_url: width: 1600 }} 1600w,
+          {{ img_pc | image_url: width: 1920 }} 1920w
+        "
+        sizes="(min-width: 1200px) 1200px, 100vw"
+      >
+    {% endif %}
+
+    {% if img_pc != blank %}
+      <img
+        src="{{ img_pc | image_url: width: 1600 }}"
+        alt="{{ img_pc.alt | default: se_stts.title | escape }}"
+        width="{{ img_pc.width }}"
+        height="{{ img_pc.height }}"
+        loading="lazy"
+      >
+    {% elsif img_mb != blank %}
+      <img
+        src="{{ img_mb | image_url: width: 768 }}"
+        alt="{{ img_mb.alt | default: se_stts.title | escape }}"
+        width="{{ img_mb.width }}"
+        height="{{ img_mb.height }}"
+        loading="lazy"
+      >
+    {% endif %}
+  </picture>
+{% endif %}
+
+<div class="--banner-wrapper">
+  <div class="--banner-info">
+    {% if se_stts.title != blank %}
+      <p class="--info-title">{{ se_stts.title }}</p>
+    {% endif %}
+
+    {% if se_stts.desc != blank %}
+      <p class="--info-desc">{{ se_stts.desc }}</p>
+    {% endif %}
+
+    {% if se_stts.btn_content != blank %}
+      {% if se_stts.btn_type == 'link' %}
+        <a
+          class="--info-link"
+          href="{{ se_stts.btn_url | default: '#' }}"
+        >
+          {{ se_stts.btn_content }}
+        </a>
+      {% else %}
+        <button
+          type="button"
+          class="--info-link"
+          data-target_el="{{ se_stts.btn_el | escape }}"
+        >
+          {{ se_stts.btn_content }}
+        </button>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
+
+<script type="module" src="{{ 'custom-affiliate-banner.min.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Custom Affiliate Banner",
+  "tag": "section",
+  "class": "cs-affiliate-banner-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img_pc",
+      "label": "图片(PC端)"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_mb",
+      "label": "图片(移动端)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Macfox Affiliate Program"
+    },
+    {
+      "type": "textarea",
+      "id": "desc",
+      "label": "描述",
+      "default": "Movein past the X1S wit5h thicker tires and a sculpted wide-body design.The X7 delivers the ultimate visual impact and the highest level of stability for a truly fearless drive."
+    },
+    {
+      "type": "text",
+      "id": "btn_content",
+      "label": "按钮文本",
+      "default": "Join Now"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "按钮类型",
+      "options": [
+        {
+          "value": "scroll",
+          "label": "跳转按钮"
+        },
+        {
+          "value": "link",
+          "label": "链接按钮"
+        }
+      ],
+      "default": "scroll"
+    },
+    {
+      "type": "text",
+      "id": "btn_el",
+      "label": "类名或者ID（跳转按钮）",
+      "info": "点击后滚动到该元素",
+      "default": ".cs-affiliate-works-section",
+      "visible_if": "{{ section.settings.btn_type == 'scroll' }}"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "链接地址（链接按钮）",
+      "visible_if": "{{ section.settings.btn_type == 'link' }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "联盟Banner图",
+      "category": "Affiliate"
+    }
+  ]
+}
+{% endschema %}

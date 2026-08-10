@@ -1,0 +1,136 @@
+{% liquid
+  assign se_stts = section.settings
+  assign time_units = 'days,hours,minutes,seconds' | split: ','
+  assign unit_labels = 'DAYS,HOURS,MINUTES,SECONDS' | split: ','
+%}
+
+{% if se_stts.time != blank %}
+  <div class="countdown-wrapper !py-[20px] md:!py-5">
+    {% if se_stts.title != blank %}
+      <h2
+        class="!text-4xl md:!text-5xl font-bold !mb-[15px] md:!mb-13 text-center !leading-[1.4]"
+        style="color: {{ se_stts.title_color }};"
+      >
+        {{ se_stts.title }}
+      </h2>
+    {% endif %}
+
+    <div class="flex justify-between md:justify-center items-center !space-x-4 md:!space-x-8 !mb-8" id="countdown">
+      {% for unit in time_units %}
+        {% assign unit_index = forloop.index0 %}
+        <div class="text-center">
+          <div class="bg-white/10 rounded-lg md:rounded-xl flex items-center justify-center size-20 md:size-28 inset-shadow-[-2px_2px_0] inset-shadow-white/15">
+            <span
+              class="!text-4xl md:!text-5xl !font-semibold leading-none"
+              id="{{ unit }}"
+              style="color: {{ se_stts.time_color }};"
+              >00</span
+            >
+          </div>
+
+          <div
+            class="!text-sm md:!text-base !font-medium text-center !mt-3"
+            style="color: {{ se_stts.unit_color }};"
+          >
+            {{ unit_labels[unit_index] }}
+          </div>
+        </div>
+
+        {% unless forloop.last %}
+          <div class="flex items-center !mb-9 md:!mb-11">
+            <span class="!text-5xl md:!text-5xl !font-bold" style="color: {{ se_stts.time_color }};">:</span>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+
+    <div class="text-center !py-10 !px-5 hidden" id="countdown-over">
+      <h2 class="!text-3xl !font-bold !mb-5" style="color: {{ se_stts.title_color }};">Countdown Ended!</h2>
+      <p class="!text-lg" style="color: {{ se_stts.unit_color }};">The event has ended. Thank you for participating!</p>
+    </div>
+  </div>
+
+  <style>
+    .cs-countdown-section {
+      background-color: {{ se_stts.bg_color}};
+      padding: 0 15px;
+    }
+
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const countdownElement = document.getElementById('countdown');
+      const countdownOverElement = document.getElementById('countdown-over');
+      const timeUnits = ['days', 'hours', 'minutes', 'seconds'];
+
+      // 获取目标时间
+      let targetTime = new Date('{{ se_stts.time }}').getTime();
+       if(!targetTime){
+         const endTimeStr = '{{ se_stts.time }}'.replaceAll('-', '/');
+         targetTime = new Date(endTimeStr).getTime();
+       }
+      // 倒计时函数
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetTime - now;
+
+        if (distance < 0) {
+          // 倒计时结束
+          countdownElement.classList.add('hidden');
+          countdownOverElement.classList.remove('hidden');
+          return;
+        }
+
+        // 计算时间
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // 更新显示
+        updateDigit('days', days);
+        updateDigit('hours', hours);
+        updateDigit('minutes', minutes);
+        updateDigit('seconds', seconds);
+      }
+
+      // 更新数字
+      function updateDigit(type, newValue) {
+        const element = document.getElementById(type);
+        if (element) {
+          element.textContent = String(newValue).padStart(2, '0');
+        }
+      }
+
+      // 初始化显示
+      updateCountdown();
+
+      // 每秒更新一次
+      setInterval(updateCountdown, 1000);
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Countdown",
+  "tag": "section",
+  "class": "cs-countdown-section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "背景颜色", "default": "#000000" },
+    { "type": "text", "id": "title", "label": "标题", "default": "Last Chance：Back 2 School Ends Soon" },
+    { "type": "color", "id": "title_color", "label": "标题颜色", "default": "#ffffff" },
+    {
+      "type": "text",
+      "id": "time",
+      "label": "结束时间",
+      "default": "2025-08-31 12:00:00",
+      "info": "格式：YYYY-MM-DD HH:MM:SS"
+    },
+    { "type": "color", "id": "time_color", "label": "时间颜色", "default": "#efca05" },
+    { "type": "color", "id": "unit_color", "label": "单位颜色", "default": "#666666" }
+  ],
+  "presets": [{ "name": "Countdown", "category": "Time" }]
+}
+{% endschema %}

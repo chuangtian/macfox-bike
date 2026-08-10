@@ -1,0 +1,140 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+    {%- for bl in se_blocks -%}
+      {%- case bl.type -%}
+        {%- when 'item' -%}
+          <div class="swiper-slide">
+            <div class="--item-cover">
+              <img
+                src="{{ bl.settings.media_img.src |  image_url  }}"
+                width="{{ bl.settings.media_img.width }}"
+                height="{{ bl.settings.media_img.height }}"
+                alt="{{ bl.settings.media_img.alt }}"
+              >
+            </div>
+            <div class="--item-main">
+              <div class="--main-info">
+                <span class="--main-heading">{{ bl.settings.source }}</span>
+                <div class="--main-title">{{ bl.settings.title }}</div>
+                <p class="--main-content">{{ bl.settings.content }}</p>
+                {%- if bl.settings.media_link -%}
+                  <a class="--media-link" href="{{ bl.settings.media_link }}">
+                    {%- if bl.settings.media_text != null and bl.settings.media_text != '' -%}
+                      {{ bl.settings.media_text }}
+                    {%- else -%}
+                      Read More
+                    {%- endif -%}
+                  </a>
+                {%- endif -%}
+              </div>
+
+              {%- if bl.settings.cs_product -%}
+                {%- assign p = bl.settings.cs_product -%}
+                <a class="--main-product" href="{{ p.url }}" aria-label="View {{ p.title }}">
+                  <img
+                    width="{{ p.variants.first.featured_image.width }}"
+                    height="{{ p.variants.first.featured_image.height }}"
+                    src="{{ p.variants.first.featured_image.src |  image_url: width:100  }}"
+                    alt="{{ p.variants.first.featured_image.alt }}"
+                    loading="lazy"
+                  >
+                  <p>{{ p.title }}</p>
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+  <div>
+    <div class="--control-wrapper">
+      <div class="--control-pagination"></div>
+      <div class="--control-btns">
+        <button class="prev-btn" aria-label="Left Button">
+          <svg width="100%" height="100%" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z" fill="#121212"></path>
+            <path d="M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z" fill="#666666"></path>
+            <path d="M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z" fill="#666666"></path>
+            <path d="M41.5 28.3H20.8V31.5H41.5V28.3Z" fill="#666666"></path>
+          </svg>
+        </button>
+        <button class="next-btn" aria-label="Right Button">
+          <svg width="100%" height="100%" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z" fill="#121212"></path>
+            <path d="M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z" fill="#666666"></path>
+            <path d="M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z" fill="#666666"></path>
+            <path d="M39.8 28.3H19.1V31.5H39.8V28.3Z" fill="#666666"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="{{ "custom-collections-media.min.js"| asset_url }}"></script>
+{% schema %}
+{
+  "name": "Media Card",
+  "tag": "section",
+  "class": "cs-col-media-sections",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "媒体卡片",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "media_img",
+          "label": "媒体图片"
+        },
+        {
+          "type": "text",
+          "id": "source",
+          "label": "来源",
+          "default": "from instagram.com"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Macfoxbike"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "内容",
+          "default": "content"
+        },
+        {
+          "type": "url",
+          "id": "media_link",
+          "label": "媒体跳转链接"
+        },
+        {
+          "type": "text",
+          "id": "media_text",
+          "label": "媒体跳转文本"
+        },
+        {
+          "type": "product",
+          "id": "cs_product",
+          "label": "产品"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media Card",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

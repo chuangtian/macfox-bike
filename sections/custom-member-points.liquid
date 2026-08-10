@@ -1,0 +1,273 @@
+{% comment %}
+  会员积分页面 (Owner Club / Member Points)
+  - 页面由「区块(block)」拆分组成，每个区块只需填写「名称(标题)」，其余数据由数据源/插件提供：
+      · 排名 leaderboard          —— LoyaltyLion 排行榜（预留挂载点，暂用占位演示）
+      · 积分规则 miles_rules       —— 占位演示（后续可接元对象）
+      · 每月前十奖励 monthly_rewards —— 占位演示
+      · 会员等级 levels            —— 占位演示
+      · 积分产品 redeem_products    —— section.settings.campaign 活动元对象的产品
+      · 官方精选产品 featured_products —— section.settings.featured_collection 集合
+  - 每种区块最多只能添加一个，按编辑器内的顺序从上往下排列。
+{% endcomment %}
+
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+
+  # 数据源：member_points 元对象（含 points_redemption / official_rewards 两个产品列表字段）
+  assign data_source = se_stts.data_source
+
+  # ===== 占位演示数据（等接入插件/元对象后替换）=====
+  assign lb_names = 'MotoKing,BikerJ,RideFast,TrailHunter,FoxRider,SpeedDemon,UrbanRider,NightCruiser,MotoVibes,AdventureX' | split: ','
+  assign lb_miles = '23,680|18,540|15,230|12,870|11,450|10,230|9,850|8,760|8,450|7,980' | split: '|'
+
+  assign rule_labels = 'Join Owner Club|Google Review|Trustpilot Review|Share a Ride Photo|Reddit Post|TikTok / Instagram Reel|YouTube Shorts|Participate in a Ride Out|Organize a Ride Out|Successful Referral' | split: '|'
+  assign rule_points = '+100|+100|+100|+50|+200|+300|+500|+500|+2,000|+5,000' | split: '|'
+
+  assign level_names = 'OWNER|ADVOCATE|AMBASSADOR|ELITE RIDER|COMMUNITY LEADER' | split: '|'
+  assign level_reqs = 'Join The Club|1,000 Miles|1 Successful Referral|3 Successful Referrals|10 Successful Referrals' | split: '|'
+  assign level_perks = '100 Miles Welcome Bonus|Official Community Badge|Ambassador Badge|Early Product Access|Featured Rider Status' | split: '|'
+  assign level_colors = '#ffffff|#2ec76b|#3aa0ff|#a06bff|#f26a1b' | split: '|'
+
+  assign mr_ranks = '1st|2nd – 3rd|4th – 5th|6th – 10th' | split: '|'
+  assign mr_rewards = 'GoPro Hero|AirPods 4|JBL Flip 6|$50 Gift Card' | split: '|'
+%}
+
+<div id="cs-member-points-{{ sid }}" class="cs-member-points-section" data-ll-mount>
+  <div class="cs-mp-inner">
+    <div class="flex flex-col gap-y-[16px]!">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+        {%- comment -%} ========== 排名 ========== {%- endcomment -%}
+        {%- when 'leaderboard' -%}
+          <section class="cs-mp-card" {{ block.shopify_attributes }}>
+            <p class="cs-mp-card-title">{{ block.settings.title | default: 'TOP RANK LEADERBOARD' }}</p>
+            <div class="cs-mp-rank-podium mb-[18px]!">
+              {%- for i in (0..2) -%}
+                {%- assign rank = i | plus: 1 -%}
+                <div class="cs-mp-rank-{{ rank }} flex flex-col items-center {% if rank == 1 %}order-2{% elsif rank == 2 %}order-1{% else %}order-3{% endif %}">
+                  <div class="cs-mp-rank-avatar {% if rank == 1 %}w-[80px] h-[80px]{% else %}w-[60px] h-[60px]{% endif %} bg-[#242424]!"></div>
+                  <p class="text-[12px]! font-bold! mt-[8px]! mb-0!">{{ lb_names[i] }}</p>
+                  <p class="text-[11px]! text-[#f2cb04]! m-0!">{{ lb_miles[i] }} Miles</p>
+                </div>
+              {%- endfor -%}
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-[24px]!">
+              {%- for i in (3..9) -%}
+                <div class="cs-mp-list-row">
+                  <span class="text-[13px]! text-[#cfcfcf]!"><span class="text-[#7a7a7a]! mr-[8px]!">{{ i | plus: 1 }}</span>{{ lb_names[i] }}</span>
+                  <span class="cs-mp-points text-[#cfcfcf]!">{{ lb_miles[i] }} Miles</span>
+                </div>
+              {%- endfor -%}
+            </div>
+          </section>
+
+        {%- comment -%} ========== 积分规则 ========== {%- endcomment -%}
+        {%- when 'miles_rules' -%}
+          <section class="cs-mp-card" {{ block.shopify_attributes }}>
+            <p class="cs-mp-card-title">{{ block.settings.title | default: 'MILES RULES' }}</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-[24px]!">
+              {%- for label in rule_labels -%}
+                <div class="cs-mp-list-row">
+                  <span class="text-[12px]! text-[#cfcfcf]!">{{ label }}</span>
+                  <span class="cs-mp-points">{{ rule_points[forloop.index0] }}</span>
+                </div>
+              {%- endfor -%}
+            </div>
+          </section>
+
+        {%- comment -%} ========== 每月前十奖励 ========== {%- endcomment -%}
+        {%- when 'monthly_rewards' -%}
+          <section class="cs-mp-card" {{ block.shopify_attributes }}>
+            <p class="cs-mp-card-title">{{ block.settings.title | default: 'MONTHLY TOP 10 REWARDS' }}</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-[24px]!">
+              {%- for rank_label in mr_ranks -%}
+                <div class="cs-mp-list-row">
+                  <span class="text-[12px]! font-bold! text-[#cfcfcf]!">{{ rank_label }}</span>
+                  <span class="text-[12px]! text-[#f2cb04]!">{{ mr_rewards[forloop.index0] }}</span>
+                </div>
+              {%- endfor -%}
+            </div>
+          </section>
+
+        {%- comment -%} ========== 会员等级 levels ========== {%- endcomment -%}
+        {%- when 'levels' -%}
+          <section class="cs-mp-card" {{ block.shopify_attributes }}>
+            <p class="cs-mp-card-title">{{ block.settings.title | default: 'MEMBERSHIP LEVELS' }}</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[12px]!">
+              {%- for name in level_names -%}
+                <div class="py-[10px]! border-b! border-[#242424]! lg:border-b-0!">
+                  <p class="text-[13px]! font-bold! m-0!" style="color: {{ level_colors[forloop.index0] | default: '#ffffff' }};">{{ name }}</p>
+                  <p class="text-[11px]! text-[#9a9a9a]! m-0!">{{ level_reqs[forloop.index0] }}</p>
+                  <p class="text-[11px]! text-[#6f6f6f]! m-0!">{{ level_perks[forloop.index0] }}</p>
+                </div>
+              {%- endfor -%}
+            </div>
+          </section>
+
+        {%- comment -%} ========== 积分产品（活动元对象） ========== {%- endcomment -%}
+        {%- when 'redeem_products' -%}
+          <section class="cs-mp-card" data-ll-rewards {{ block.shopify_attributes }}>
+            <p class="cs-mp-card-title">{{ block.settings.title | default: 'REDEEM YOUR MILES' }}</p>
+            <div class="cs-mp-redeem-grid">
+              {%- assign redeem_products = data_source.points_redemption.value -%}
+              {%- if redeem_products and redeem_products.size > 0 -%}
+                {%- for product in redeem_products -%}
+                  {%- assign points = product.metafields.custom.points | default: 0 -%}
+                  <article class="cs-mp-redeem-card" data-ll-reward data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}" data-points="{{ points }}">
+                    {%- if product.featured_image -%}
+                      <img class="cs-mp-redeem-img" src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.featured_image.alt | escape | default: product.title }}" width="300" height="300" loading="lazy">
+                    {%- endif -%}
+                    <p class="cs-mp-redeem-points">{{ points }}</p>
+                    <p class="text-[10px]! text-[#8a8a8a]! uppercase tracking-widest! m-0!">{{ se_stts.points_unit | default: 'Miles' }}</p>
+                    <p class="cs-mp-redeem-name">{{ product.title }}</p>
+                    <button type="button" class="cs-mp-redeem-btn" data-ll-redeem>{{ se_stts.redeem_btn_text | default: 'Redeem Now' }}</button>
+                  </article>
+                {%- endfor -%}
+              {%- else -%}
+                {%- for i in (1..6) -%}
+                  <article class="cs-mp-redeem-card opacity-70">
+                    <div class="cs-mp-redeem-img bg-[#242424]! rounded-lg"></div>
+                    <p class="cs-mp-redeem-points">—</p>
+                    <p class="text-[10px]! text-[#8a8a8a]! uppercase tracking-widest! m-0!">{{ se_stts.points_unit | default: 'Miles' }}</p>
+                    <button type="button" class="cs-mp-redeem-btn" disabled>{{ se_stts.redeem_btn_text | default: 'Redeem Now' }}</button>
+                  </article>
+                {%- endfor -%}
+              {%- endif -%}
+            </div>
+          </section>
+
+        {%- comment -%} ========== 官方精选产品（集合） ========== {%- endcomment -%}
+        {%- when 'featured_products' -%}
+          <section class="cs-mp-card" {{ block.shopify_attributes }}>
+            <p class="cs-mp-card-title">{{ block.settings.title | default: 'OFFICIAL PICKS' }}</p>
+            <div class="cs-mp-redeem-grid">
+              {%- assign featured = data_source.official_rewards.value -%}
+              {%- if featured and featured.size > 0 -%}
+                {%- for product in featured limit: 12 -%}
+                  <article class="cs-mp-redeem-card">
+                    <a href="{{ product.url }}" class="contents">
+                      {%- if product.featured_image -%}
+                        <img class="cs-mp-redeem-img" src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.featured_image.alt | escape | default: product.title }}" width="300" height="300" loading="lazy">
+                      {%- endif -%}
+                      <p class="cs-mp-redeem-name">{{ product.title }}</p>
+                    </a>
+                    <a href="{{ product.url }}" class="cs-mp-redeem-btn text-center!">{{ se_stts.featured_btn_text | default: 'View' }}</a>
+                  </article>
+                {%- endfor -%}
+              {%- else -%}
+                {%- for i in (1..6) -%}
+                  <article class="cs-mp-redeem-card opacity-70">
+                    <div class="cs-mp-redeem-img bg-[#242424]! rounded-lg"></div>
+                    <span class="cs-mp-redeem-btn text-center! opacity-40!">{{ se_stts.featured_btn_text | default: 'View' }}</span>
+                  </article>
+                {%- endfor -%}
+              {%- endif -%}
+            </div>
+          </section>
+
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ sid }} {
+    background-color: {{ se_stts.bg_color | default: '#0d0d0d' }};
+  }
+</style>
+
+<script type="module" src="{{ 'custom-member-points.min.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Member Points",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "全局" },
+    { "type": "color", "id": "bg_color", "label": "背景颜色", "default": "#0d0d0d" },
+
+    { "type": "header", "content": "数据源（member_points 元对象）" },
+    {
+      "type": "metaobject",
+      "id": "data_source",
+      "label": "会员积分数据源",
+      "metaobject_type": "member_points",
+      "info": "绑定「member_points」元对象：points_redemption 字段为积分兑换产品列表，official_rewards 字段为官方精选产品列表；兑换产品的积分读取自 metafield custom.points"
+    },
+
+    { "type": "header", "content": "积分产品" },
+    { "type": "text", "id": "points_unit", "label": "积分单位", "default": "Miles" },
+    { "type": "text", "id": "redeem_btn_text", "label": "兑换按钮文案", "default": "Redeem Now" },
+
+    { "type": "header", "content": "官方精选产品" },
+    { "type": "text", "id": "featured_btn_text", "label": "按钮文案", "default": "View" }
+  ],
+  "blocks": [
+    {
+      "type": "leaderboard",
+      "name": "排名",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "TOP RANK LEADERBOARD" }
+      ]
+    },
+    {
+      "type": "miles_rules",
+      "name": "积分规则",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "MILES RULES" }
+      ]
+    },
+    {
+      "type": "monthly_rewards",
+      "name": "每月前十奖励",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "MONTHLY TOP 10 REWARDS" }
+      ]
+    },
+    {
+      "type": "levels",
+      "name": "会员等级",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "MEMBERSHIP LEVELS" }
+      ]
+    },
+    {
+      "type": "redeem_products",
+      "name": "积分产品",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "REDEEM YOUR MILES" }
+      ]
+    },
+    {
+      "type": "featured_products",
+      "name": "官方精选产品",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "title", "label": "名称", "default": "OFFICIAL PICKS" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Member Points",
+      "category": "Custom",
+      "blocks": [
+        { "type": "leaderboard" },
+        { "type": "miles_rules" },
+        { "type": "monthly_rewards" },
+        { "type": "levels" },
+        { "type": "redeem_products" },
+        { "type": "featured_products" }
+      ]
+    }
+  ]
+}
+{% endschema %}

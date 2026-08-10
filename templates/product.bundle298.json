@@ -1,0 +1,986 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "disabled": true,
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": true,
+        "cl_bg": "rgba(0,0,0,0)",
+        "cl_link": "#222222"
+      }
+    },
+    "custom_product_main_rn7zWH": {
+      "type": "custom-product-main",
+      "blocks": {
+        "rich_text_expand_FKJ3NU": {
+          "type": "rich_text_expand",
+          "disabled": true,
+          "settings": {
+            "rich_text_content": "UL 2271 Certified (Single battery configuration) ※ Dual battery system exceeds standard UL scope For Dual Battery orders, the second battery will be shipped separately."
+          }
+        },
+        "product_ul_icon_VtEjWY": {
+          "type": "product_ul_icon",
+          "settings": {
+            "ul_icon_url": "shopify://shop_images/1_965d3f60-75cf-439d-9631-c8c9e5988b8d.png",
+            "ul_icon_size": 55,
+            "ul_icon_mobile_size": 30,
+            "ul_icon_left": 88,
+            "ul_icon_top": 5,
+            "ul_icon_mobile_left": 5,
+            "ul_icon_mobile_top": 5
+          }
+        },
+        "product_discount_BwEWQw": {
+          "type": "product_discount",
+          "settings": {
+            "discount_info": "$100 OFF",
+            "discount_code": "NEWRIDE"
+          }
+        },
+        "countdown_GQmwhE": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "bg_color": "#000000",
+            "title": "Last Chance Ends In:",
+            "title_color": "#ffffff",
+            "time": "2026-6-3 23:59:59",
+            "time_color": "#efca05",
+            "unit_color": "#666666"
+          }
+        },
+        "picture_link_cjN8GX": {
+          "type": "picture_link",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://products/macfox-ebike-storage-bag",
+            "image": "shopify://shop_images/macfox_ecbb6998-7fb6-4e49-8569-6f444d28a4b0.webp",
+            "image_mb": "shopify://shop_images/macfox_ecbb6998-7fb6-4e49-8569-6f444d28a4b0.webp"
+          }
+        },
+        "rich_text_gLEhtD": {
+          "type": "rich_text",
+          "disabled": true,
+          "settings": {
+            "rich_text_content": "Macfox X7L, with a higher frame than X7, is more friendly for taller riders. <div onclick=\"productCompareOn()\" class=\"open-drawer\">Click to see the detailed differences.</div>"
+          }
+        },
+        "product_icon_tWET6K": {
+          "type": "product_icon",
+          "settings": {}
+        },
+        "ul_block_WKYgk6": {
+          "type": "ul_block",
+          "disabled": true,
+          "settings": {
+            "ul_title": "UL Safety Certified",
+            "ul_content": "Certified in accordance with UL 2849"
+          }
+        },
+        "product_discount_6rpFa7": {
+          "type": "product_discount",
+          "disabled": true,
+          "settings": {
+            "discount_info": "$100 OFF",
+            "discount_code": "BLACKFRIDAY"
+          }
+        },
+        "klarna_on_site_messaging_app_block_fPbK9G": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "custom",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": "or"
+          }
+        },
+        "xcotton_gpCMxF": {
+          "type": "xcotton",
+          "settings": {}
+        },
+        "rich_text_hPLqMK": {
+          "type": "rich_text",
+          "disabled": true,
+          "settings": {
+            "rich_text_content": "Fast Fulfillment: Handling time within 24 business hours from California or New Jersey."
+          }
+        },
+        "rich_text_ik6gJh": {
+          "type": "rich_text",
+          "disabled": true,
+          "settings": {
+            "rich_text_content": "<p style=\"color:#c9c9c9;margin:0\">This product comes with a 2-year warranty.\n</p>"
+          }
+        },
+        "product_compare_3FNHbJ": {
+          "type": "product_compare",
+          "settings": {
+            "product_compare_content": "<style>\n  .cs-product-compare-box > h3 {\n    margin-bottom: 30px;\n    font-size: 30px;\n  }\n  .cs-product-compare-item-subtitle {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    margin-top: 30px;\n    margin-bottom: 20px;\n  }\n  .cs-product-compare-item-subtitle > span {\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    background-color: #f2cb04;\n    border-radius: 50%;\n  }\n  .cs-product-compare-item-subtitle > h4 {\n    color: #fff;\n    font-weight: 400;\n  }\n  .cs-product-compare-item-text-yellow {\n    color: #f2cb04;\n  }\n  .cs-product-compare-item-desc {\n    color: #e5e5e5;\n  }\n  .cs-product-compare-item-table {\n    color: #a3a3a3;\n    border-radius: 8px;\n    overflow: hidden;\n    border: 1px solid #6a6a6a;\n  }\n  .cs-product-compare-item-table table {\n    border-collapse: collapse;\n    width: 100%;\n    border: none;\n    background-color: transparent;\n  }\n  .cs-product-compare-item-table td {\n    text-align: center;\n    border: 1px solid #6a6a6a;\n  }\n  .cs-product-compare-content td:first-child {\n    border-left: none;\n  }\n  .cs-product-compare-content td:last-child {\n    border-right: none;\n  }\n  .cs-product-compare-content tr:nth-of-type(1) td {\n    border-top: none;\n  }\n  .cs-product-compare-content tr:last-of-type td {\n    border-bottom: none;\n  }\n\n  .cs-product-compare-item-example h5 {\n    font-size: 20px;\n    margin-top: 40px;\n    margin-bottom: 20px;\n  }\n\n  @media (max-width: 768px) {\n    .cs-product-compare-box > h3 {\n      margin-bottom: 20px;\n      font-size: 25px;\n    }\n    .cs-product-compare-item-desc{\n      font-size: 14px;\n    }\n  }\n</style>\n<div class=\"cs-product-compare-box\">\n  <h3 style=\"color: #fff;\">Differences Between X7L and X7</h3>\n\n  <div>\n    <div class=\"cs-product-compare-item-subtitle\">\n      <span></span>\n      <h4>Suitable Rider Height:</h4>\n    </div>\n\n    <div class=\"cs-product-compare-item-table\">\n      <table style=\"margin-bottom: 0;\">\n        <tbody>\n<tr>\n          <td>X7</td>\n          <td>X7L</td>\n        </tr>\n        <tr>\n          <td>5'1'' and up</td>\n          <td>5'3'' and up</td>\n        </tr>\n      </tbody>\n</table>\n    </div>\n  </div>\n\n  <div>\n    <div class=\"cs-product-compare-item-subtitle\">\n      <span></span>\n      <h4>Frame Details:</h4>\n    </div>\n\n    <p class=\"cs-product-compare-item-desc\">\n      The X7 features a curved seat tube design\n    </p>\n    <div style=\"display: flex; gap: 10px;\">\n      <div style=\"display: flex; flex-direction: column; align-items: center; gap: 10px;\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/X7.webp?v=1754018098\" width=\"100%\" height=\"100%\" alt=\"X7_image\">\n        <span class=\"cs-product-compare-item-text-yellow\">X7</span>\n      </div>\n\n      <div style=\"display: flex; flex-direction: column; align-items: center; gap: 10px;\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/X7L.webp?v=1754018098\" width=\"100%\" height=\"100%\" alt=\"X7L_image\">\n        <span class=\"cs-product-compare-item-text-yellow\">X7L</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"cs-product-compare-item-example\">\n    <div class=\"cs-product-compare-item-subtitle\">\n      <span></span>\n      <h4>Size Parameter Table:</h4>\n    </div>\n\n    <div>\n      <div>\n        <h5 class=\"cs-product-compare-item-text-yellow\">X7:</h5>\n        <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/X7_0e4daf08-8c2b-48d3-b5c8-c5ea8ae34c2a.webp?v=1754018098\" width=\"100%\" height=\"auto\" alt=\"X7_image\">\n      </div>\n    </div>\n\n    <div>\n      <div>\n        <h5 class=\"cs-product-compare-item-text-yellow\">X7L:</h5>\n        <img src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/X7L_model_data.png?v=1754378030\" width=\"100%\" height=\"auto\" alt=\"X7L_image\">\n      </div>\n    </div>\n  </div>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "rich_text_expand_FKJ3NU",
+        "product_ul_icon_VtEjWY",
+        "product_discount_BwEWQw",
+        "countdown_GQmwhE",
+        "picture_link_cjN8GX",
+        "rich_text_gLEhtD",
+        "product_icon_tWET6K",
+        "ul_block_WKYgk6",
+        "product_discount_6rpFa7",
+        "klarna_on_site_messaging_app_block_fPbK9G",
+        "xcotton_gpCMxF",
+        "rich_text_hPLqMK",
+        "rich_text_ik6gJh",
+        "product_compare_3FNHbJ"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "klarna-placement::part(osm-message) {font-size: 14px !important; font-weight: 400 !important;}",
+        "klarna-placement::part(osm-cta) {font-size: 14px !important; font-weight: 400 !important; color: #939393 !important;}",
+        "klarna-placement::part(osm-badge) {height: 20px !important; width: auto;}",
+        "klarna-placement::part(osm-container) {justify-content: space-between; color: #939393; background-color: #212121; border: 1px solid #363636; border-radius: 8px;}"
+      ],
+      "settings": {
+        "show_o_price": false,
+        "bg_color": "#121212",
+        "app_scroll_length": 350
+      }
+    },
+    "custom_product_main_bun_fGLjgL": {
+      "type": "custom-product-main_bun",
+      "blocks": {
+        "product_ul_icon_RY3E9W": {
+          "type": "product_ul_icon",
+          "settings": {
+            "ul_icon_url": "shopify://shop_images/1_965d3f60-75cf-439d-9631-c8c9e5988b8d.png",
+            "ul_icon_size": 55,
+            "ul_icon_mobile_size": 30,
+            "ul_icon_left": 10,
+            "ul_icon_top": 5,
+            "ul_icon_mobile_left": 5,
+            "ul_icon_mobile_top": 5
+          }
+        },
+        "klarna_on_site_messaging_app_block_nQ9nRP": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "product_discount_fePKbW": {
+          "type": "product_discount",
+          "settings": {
+            "discount_info": "$100 OFF",
+            "discount_code": "BUNDLE100"
+          }
+        },
+        "picture_link_LzwMwq": {
+          "type": "picture_link",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/macfox_112f9379-e138-419e-b3f4-878aad226b35.webp",
+            "image_mb": "shopify://shop_images/macfox_112f9379-e138-419e-b3f4-878aad226b35.webp"
+          }
+        }
+      },
+      "block_order": [
+        "product_ul_icon_RY3E9W",
+        "klarna_on_site_messaging_app_block_nQ9nRP",
+        "product_discount_fePKbW",
+        "picture_link_LzwMwq"
+      ],
+      "custom_css": [
+        "klarna-placement::part(osm-message) {font-size: 14px !important; font-weight: 400 !important;}",
+        "klarna-placement::part(osm-cta) {font-size: 14px !important; font-weight: 400 !important; color: #939393 !important;}",
+        "klarna-placement::part(osm-badge) {height: 20px !important; width: auto;}",
+        "klarna-placement::part(osm-container) {justify-content: space-between; color: #939393; background-color: #212121; border: 1px solid #363636; border-radius: 8px;}"
+      ],
+      "name": "Product Main Bundle",
+      "settings": {
+        "show_o_price": false,
+        "bg_color": "#121212",
+        "app_scroll_length": 150
+      }
+    },
+    "custom_html_ydhzGr": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "code": "<section class=\"cs-product-review-container\">\n  <div class=\"cs-product-review\">\n    <div class=\"--review--layout\">\n      <div class=\"--review--start-main\">\n        <div class=\"--review--value\">4.8</div>\n        <div class=\"--review--info\">\n          <div class=\"--review--stars\" aria-label=\"5 stars\">\n            <svg class=\"--review--star\" viewbox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\">\n              <path d=\"M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.96 6.09 20.66l1.13-6.57L2.45 9.44l6.6-.96L12 2.5z\" fill=\"currentColor\"></path>\n            </svg>\n            <svg class=\"--review--star\" viewbox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\">\n              <path d=\"M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.96 6.09 20.66l1.13-6.57L2.45 9.44l6.6-.96L12 2.5z\" fill=\"currentColor\"></path>\n            </svg>\n            <svg class=\"--review--star\" viewbox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\">\n              <path d=\"M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.96 6.09 20.66l1.13-6.57L2.45 9.44l6.6-.96L12 2.5z\" fill=\"currentColor\"></path>\n            </svg>\n            <svg class=\"--review--star\" viewbox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\">\n              <path d=\"M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.96 6.09 20.66l1.13-6.57L2.45 9.44l6.6-.96L12 2.5z\" fill=\"currentColor\"></path>\n            </svg>\n            <svg class=\"--review--star\" viewbox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\">\n              <path d=\"M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.96 6.09 20.66l1.13-6.57L2.45 9.44l6.6-.96L12 2.5z\" fill=\"currentColor\"></path>\n            </svg>\n          </div>\n          <div class=\"--review--text\">Based on 6520+ reviews</div>\n        </div>\n      </div>\n\n      <div class=\"--review--divider\" aria-hidden=\"true\"></div>\n\n      <div class=\"--review--end-main\">\n        <div class=\"--review--value\">120K+</div>\n        <div class=\"--review--info\">\n          <div class=\"--review--text\">Happy riders</div>\n          <div class=\"--review--text\">\n            <span class=\"--review--text-stack\">Global shipments</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n  .cs-product-review-container {\n    padding-block: 40px;\n    margin: 0 auto;\n    width: 90%;\n    max-width: 1000px;\n  }\n\n  .cs-product-review {\n    background: #161616;\n    border: 1px solid #565656;\n    border-radius: 15px;\n    padding: 40px;\n  }\n\n  .cs-product-review .--review--layout {\n    display: grid;\n    grid-template-columns: 1fr 1px 1fr;\n    align-items: center;\n  }\n\n  .cs-product-review .--review--start-main,\n  .cs-product-review .--review--end-main {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 18px;\n    min-width: 0;\n  }\n\n  .cs-product-review .--review--start-main {\n    padding-right: 22px;\n  }\n\n  .cs-product-review .--review--end-main {\n    padding-left: 22px;\n  }\n\n  .cs-product-review .--review--divider {\n    width: 1px;\n    height: 84px;\n    background: rgba(255, 255, 255, 0.16);\n    justify-self: center;\n  }\n\n  .cs-product-review .--review--value {\n    font-size: 58px;\n    line-height: 1;\n    font-weight: 700;\n    color: #f2cb04;\n    flex: 0 0 auto;\n    white-space: nowrap;\n  }\n\n  .cs-product-review .--review--info {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    min-width: 0;\n  }\n\n  .cs-product-review .--review--stars {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n    color: #f2cb04;\n    line-height: 1;\n  }\n\n  .cs-product-review .--review--star {\n    width: 16px;\n    height: 16px;\n    display: block;\n    flex: 0 0 auto;\n  }\n\n  .cs-product-review .--review--text {\n    color: #c1c1c1;\n    font-size: 18px;\n    line-height: 1.2;\n    white-space: nowrap;\n    font-weight: 500;\n  }\n\n  .cs-product-review .--review--text-stack {\n    display: block;\n    white-space: normal;\n  }\n\n  @media (max-width: 768px) {\n    .cs-product-review-container {\n      padding-block: 40px;\n      padding-inline: 20px;\n      width: 100%;\n    }\n    .cs-product-review {\n      padding: 26px 18px;\n      border-radius: 16px;\n    }\n\n    .cs-product-review .--review--layout {\n      grid-template-columns: 1fr;\n    }\n\n    .cs-product-review .--review--start-main,\n    .cs-product-review .--review--end-main {\n      flex-direction: column;\n      justify-content: center;\n      text-align: center;\n      padding: 0;\n      gap: 10px;\n    }\n\n    .cs-product-review .--review--divider {\n      width: 100%;\n      height: 1px;\n      margin: 22px 0;\n    }\n\n    .cs-product-review .--review--value {\n      font-size: 46px;\n    }\n\n    .cs-product-review .--review--star {\n      width: 14px;\n      height: 14px;\n    }\n    .cs-product-review .--review--info {\n      align-items: center;\n    }\n\n    .cs-product-review .--review--text {\n      font-size: 16px;\n      white-space: normal;\n    }\n  }\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#121212",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_product_reasons_qf87c6": {
+      "type": "custom-product-reasons",
+      "blocks": {
+        "card_item_UJcQWp": {
+          "type": "card_item",
+          "settings": {
+            "icon": "<svg width=\"47\" height=\"47\" viewbox=\"0 0 47 47\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.94 10.61V20.26C4.94 30.49 11.35 39.84 20.91 43.51C21.68 43.81 22.49 43.95 23.3 43.95C24.11 43.95 24.92 43.8 25.69 43.51L27.12 42.96C35.95 39.56 41.66 31.02 41.65 21.2V10.61C41.65 9.82002 41.02 9.17002 40.23 9.14002C34.93 8.93002 29.52 6.84002 24.16 2.93002C23.64 2.55002 22.94 2.55002 22.42 2.93002C17.07 6.84002 11.66 8.93002 6.36 9.14002C5.57 9.17002 4.94 9.82002 4.94 10.61ZM7.89 11.99C13.03 11.5 18.2 9.47002 23.3 5.93002C28.4 9.47002 33.57 11.51 38.71 11.99V21.2C38.71 29.79 33.75 37.25 26.07 40.2L24.64 40.75C23.78 41.08 22.83 41.08 21.97 40.75C13.55 37.51 7.89 29.27 7.89 20.25V11.99Z\" fill=\"#F2CB04\"></path>\n<path d=\"M20.28 29.4001C20.56 29.6801 20.93 29.8301 21.32 29.8301C21.71 29.8301 22.09 29.6701 22.36 29.4001L31.54 20.2201C32.12 19.6401 32.12 18.7101 31.54 18.1301C30.96 17.5501 30.03 17.5501 29.45 18.1301L21.32 26.2601L17.14 22.0801C16.56 21.5001 15.63 21.5001 15.05 22.0801C14.47 22.6601 14.47 23.5901 15.05 24.1701L20.28 29.4001Z\" fill=\"#F2CB04\"></path>\n</svg>",
+            "title": "Uncompromising Safety, No Limits",
+            "desc": "Fully UL 2849 certified for total battery and system peace of mind. We hit the industry’s toughest standards so you can focus on hitting the trails. Ride hard, stay safe."
+          }
+        },
+        "card_item_7yCQ8G": {
+          "type": "card_item",
+          "settings": {
+            "icon": "<svg width=\"47\" height=\"47\" viewbox=\"0 0 47 47\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M37.4201 9.92997C36.6201 9.58997 35.7001 9.87997 35.2401 10.61C35.2301 10.62 35.23 10.63 35.22 10.63L28.0401 21.35C27.7401 21.8 27.14 21.92 26.69 21.63C26.24 21.34 26.11 20.73 26.4 20.28L30.9301 13.19C31.3901 12.41 31.1001 11.42 30.3001 11.02C29.5701 10.67 28.7201 10.91 28.3001 11.56C28.3001 11.57 28.2901 11.57 28.2901 11.58L24.78 16.74C24.48 17.19 23.8701 17.3 23.4201 17C22.9701 16.7 22.8601 16.09 23.1601 15.64L26.6601 10.49C27.6401 8.97997 29.5701 8.48997 31.1601 9.25997L31.1701 9.26997C31.8701 9.61997 32.4001 10.18 32.7301 10.82L33.58 9.54997C34.56 8.00997 36.5001 7.40997 38.1801 8.10997C40.2701 8.97997 41.0801 11.54 39.9201 13.46L39.9101 13.47C40.2901 13.5 40.6801 13.6 41.0501 13.76C43.0001 14.62 43.7801 17 42.6801 18.84C42.6801 18.85 42.6701 18.86 42.6601 18.86L37.72 26.65L38.2901 26.29C38.3001 26.29 38.3 26.28 38.31 26.28C38.32 26.28 38.32 26.27 38.33 26.27C40.04 25.3 42.21 25.83 43.31 27.44C44.4 29.05 44.08 31.22 42.59 32.44L35.44 39.63C33.87 41.22 31.87 42.17 29.81 42.49C29.28 42.57 28.77 42.21 28.69 41.67C28.61 41.14 28.97 40.63 29.51 40.55C31.18 40.29 32.7901 39.53 34.0401 38.25L41.2401 31.02C41.2701 30.99 41.3 30.97 41.33 30.94C42.05 30.37 42.22 29.31 41.69 28.53C41.16 27.75 40.12 27.5 39.32 27.95L35.09 30.61C34.7 30.85 34.2001 30.8 33.8701 30.47C33.5501 30.15 33.4901 29.64 33.7401 29.25L41 17.8C41.48 16.97 41.13 15.91 40.26 15.52C39.53 15.2 38.66 15.47 38.26 16.15C38.25 16.16 38.2501 16.17 38.2401 16.19L33.22 23.85C32.92 24.3 32.3201 24.43 31.8701 24.13C31.4201 23.84 31.29 23.23 31.58 22.78L38.26 12.4C38.78 11.54 38.3901 10.33 37.4201 9.92997Z\" fill=\"#F2CB04\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.02 12.12L13.8701 13.39C14.1901 12.74 14.7201 12.19 15.4301 11.84L15.44 11.83C17.03 11.06 18.97 11.56 19.95 13.07C19.99 13.14 20.03 13.21 20.06 13.29L29.5401 27.21C32.5301 31.61 31.58 37.58 27.39 40.85L24.5401 43.06C20.5001 46.19 14.7901 45.83 11.1801 42.22L4.02004 35.02C2.53004 33.8 2.21007 31.63 3.30007 30.02C4.40007 28.4 6.57005 27.87 8.28005 28.85C8.29005 28.86 8.31003 28.86 8.32003 28.87L8.89004 29.23L3.95004 21.44C3.94004 21.43 3.94008 21.42 3.93008 21.42C2.83008 19.57 3.61002 17.19 5.56002 16.34C5.93002 16.18 6.31004 16.08 6.70004 16.05L6.69003 16.04C5.53003 14.12 6.34008 11.57 8.43008 10.69C10.1001 9.98 12.04 10.57 13.02 12.12ZM18.15 13.94C17.7 13.44 16.9501 13.28 16.3001 13.59C15.5101 13.99 15.2201 14.99 15.6701 15.76L20.2 22.84C20.49 23.29 20.3601 23.89 19.9101 24.19C19.4601 24.49 18.86 24.36 18.56 23.91L11.38 13.19C11.37 13.18 11.3701 13.17 11.3601 13.17C10.9001 12.44 9.98008 12.15 9.18008 12.49C8.21008 12.89 7.82007 14.1 8.36007 15.01L15.0401 25.39C15.3301 25.84 15.2 26.45 14.75 26.74C14.3 27.03 13.69 26.91 13.4 26.46L8.38003 18.8C8.37003 18.79 8.37007 18.78 8.36007 18.76C7.95007 18.08 7.09007 17.8 6.36007 18.13C5.49007 18.51 5.14008 19.58 5.62008 20.41L12.88 31.86C13.13 32.25 13.07 32.75 12.75 33.08C12.43 33.4 11.9201 33.46 11.5301 33.22L7.30007 30.56C6.49007 30.11 5.46008 30.36 4.93008 31.14C4.40008 31.92 4.57006 32.97 5.29006 33.55C5.32006 33.57 5.35003 33.6 5.38003 33.63L12.57 40.86C15.48 43.77 20.0801 44.06 23.3401 41.53L26.19 39.32C29.56 36.69 30.3301 31.88 27.9201 28.33L18.26 14.15C18.21 14.07 18.18 14.01 18.15 13.94Z\" fill=\"#F2CB04\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.66 4.22991C17.09 3.89991 17.7 3.97991 18.03 4.40991L20.51 7.62991C20.84 8.05991 20.76 8.66991 20.33 8.99991C19.9 9.32991 19.29 9.24991 18.96 8.81991L16.48 5.59991C16.15 5.17991 16.23 4.55991 16.66 4.22991Z\" fill=\"#F2CB04\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M27.77 4.22984C28.2 4.55984 28.28 5.16984 27.95 5.59984L25.49 8.81984C25.16 9.24984 24.55 9.32984 24.12 8.99984C23.69 8.66984 23.61 8.05984 23.94 7.62984L26.4 4.40984C26.72 3.98984 27.34 3.89984 27.77 4.22984Z\" fill=\"#F2CB04\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22.07 1.40991C22.61 1.40991 23.05 1.84991 23.05 2.38991V6.61991C23.05 7.15991 22.61 7.59991 22.07 7.59991C21.53 7.59991 21.09 7.15991 21.09 6.61991V2.38991C21.09 1.84991 21.53 1.40991 22.07 1.40991Z\" fill=\"#F2CB04\"></path>\n</svg>",
+            "title": "Your Ride, Your Rules",
+            "desc": "Grab your crew and make it yours. With endless DIY possibilities, MACFOX isn't just a bike—it’s a canvas for your style. Don't just ride; stand out."
+          }
+        },
+        "card_item_HfLPMT": {
+          "type": "card_item",
+          "settings": {
+            "icon": "<svg width=\"47\" height=\"47\" viewbox=\"0 0 47 47\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M23.3001 44.06C21.8001 44.06 20.3601 43.47 19.3001 42.4L17.1901 40.29C16.6701 39.77 15.9701 39.48 15.2401 39.48H12.77C9.65005 39.48 7.11014 36.94 7.11014 33.82V31.35C7.11014 30.62 6.82008 29.91 6.30008 29.4L4.19009 27.29C1.98009 25.08 1.98009 21.5 4.19009 19.29L6.30008 17.18C6.82008 16.66 7.11014 15.96 7.11014 15.23V12.76C7.11014 9.63996 9.65005 7.09996 12.77 7.09996H15.2401C15.9701 7.09996 16.6801 6.80996 17.1901 6.28996L19.3001 4.17996C21.5101 1.96996 25.0901 1.96996 27.3001 4.17996L29.4101 6.28996C29.9301 6.80996 30.6301 7.09996 31.3601 7.09996H33.8301C36.9501 7.09996 39.4901 9.63996 39.4901 12.76V15.23C39.4901 15.96 39.7801 16.67 40.3001 17.18L42.4101 19.29C44.6201 21.5 44.6201 25.08 42.4101 27.29L40.3001 29.4C39.7801 29.92 39.4901 30.62 39.4901 31.35V33.82C39.4901 36.94 36.9501 39.48 33.8301 39.48H31.3601C30.6301 39.48 29.9201 39.77 29.4101 40.29L27.3001 42.4C26.2501 43.47 24.8101 44.06 23.3001 44.06ZM12.77 10.01C11.25 10.01 10.01 11.25 10.01 12.77V15.24C10.02 16.74 9.42013 18.19 8.35013 19.25L6.24014 21.36C5.16014 22.44 5.16014 24.19 6.24014 25.27L8.35013 27.38C9.42013 28.44 10.01 29.88 10.01 31.38V33.85C10.01 35.37 11.25 36.61 12.77 36.61H15.2401C16.7401 36.61 18.1801 37.2 19.2401 38.27L21.3501 40.38C22.4301 41.46 24.18 41.46 25.26 40.38L27.37 38.27C28.43 37.2 29.87 36.61 31.37 36.61H33.8401C35.3701 36.61 36.6001 35.37 36.6001 33.85V31.38C36.6001 29.88 37.19 28.44 38.26 27.38L40.37 25.27C41.45 24.19 41.45 22.44 40.37 21.36L38.26 19.26C37.19 18.2 36.6001 16.76 36.6001 15.26V12.79C36.6001 11.27 35.3601 10.03 33.8401 10.03H31.37C29.87 10.04 28.4201 9.43996 27.3601 8.36996L25.25 6.25996C24.17 5.17996 22.4201 5.17996 21.3401 6.25996L19.2401 8.36996C18.1801 9.43996 16.7401 10.03 15.2401 10.03L12.77 10.01Z\" fill=\"#F2CB04\"></path>\n<path d=\"M21.37 28.61C20.99 28.61 20.6201 28.46 20.3501 28.19L16.4901 24.33C15.9401 23.74 15.9801 22.83 16.5601 22.28C17.1201 21.76 17.98 21.76 18.54 22.28L21.38 25.12L28.0801 18.42C28.6701 17.87 29.58 17.91 30.13 18.49C30.65 19.05 30.65 19.91 30.13 20.47L22.4 28.2C22.13 28.46 21.76 28.61 21.37 28.61Z\" fill=\"#F2CB04\"></path>\n</svg>",
+            "title": "Own Your Time",
+            "desc": "A win for both riders and parents. Ditch the school gate traffic and pickup line stress. Independent commutes mean freedom for students and saved time for parents. Why wait when you can glide?"
+          }
+        }
+      },
+      "block_order": [
+        "card_item_UJcQWp",
+        "card_item_7yCQ8G",
+        "card_item_HfLPMT"
+      ],
+      "name": "购买原因",
+      "settings": {
+        "title": "Three Reasons to Join the MACFOX Squad",
+        "desc": "Why thousands of riders and parents are choosing the MACFOX life."
+      }
+    },
+    "custom_product_panorama_bhmw7d": {
+      "type": "custom-product-panorama",
+      "disabled": true,
+      "name": "Custom Product Panorama",
+      "settings": {
+        "title": "PANORAMIC VIEW",
+        "custom_liquid": "let data;\nlet speed = 10;\n\nif (document.documentElement.clientWidth > 769) {\n    // pc\n    data = [\n        {\"src\": \"X7_360_1.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_24.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_23.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_22.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_21.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_20.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_19.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_18.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_17.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_16.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_15.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_14.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_13.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_12.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_11.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_10.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_9.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_8.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_7.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_6.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_5.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_4.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_3.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_2.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_360_1.webp\", \"alt\": \"\"}\n    ]\n} else {\n    // mb\n    data = [\n        {\"src\": \"X7_mb_360_1.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_24.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_23.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_22.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_21.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_20.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_19.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_18.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_17.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_16.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_15.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_14.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_13.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_12.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_11.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_10.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_9.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_8.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_7.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_6.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_5.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_4.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_3.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_2.webp\", \"alt\": \"\"},\n        {\"src\": \"X7_mb_360_1.webp\", \"alt\": \"\"}\n    ]\n}",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_picture_gallery_UMwkNV": {
+      "type": "custom-picture-gallery",
+      "blocks": {
+        "pics_row_jUdAkn": {
+          "type": "pics_row",
+          "settings": {
+            "picture_array": "[\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_5.webp?v=1779095235\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_6.webp?v=1758269981\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_2.webp?v=1758269982\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_10.webp?v=1758269981\",\n        \"alt\": \"\"\n    }\n]",
+            "picture_array_mb": "[\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_14.webp?v=1758271818\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_6.webp?v=1758269981\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_16.webp?v=1758271818\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_10.webp?v=1758269981\",\n        \"alt\": \"\"\n    }\n]"
+          }
+        },
+        "pics_row_zxDwjm": {
+          "type": "pics_row",
+          "settings": {
+            "picture_array": "[\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_1.webp?v=1758269980\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_3.webp?v=1758269980\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_9.webp?v=1758269982\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_7.webp?v=1758269980\",\n        \"alt\": \"\"\n    }\n]",
+            "picture_array_mb": "[\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_15.webp?v=1779094120\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_12.webp?v=1758269980\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_18.webp?v=1758271818\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_11.webp?v=1779095235\",\n        \"alt\": \"\"\n    }\n]"
+          }
+        },
+        "pics_row_88TzzN": {
+          "type": "pics_row",
+          "settings": {
+            "picture_array": "[\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_8.webp?v=1758269980\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_12.webp?v=1758269980\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_4.webp?v=1779095235\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_11.webp?v=1779095235\",\n        \"alt\": \"\"\n    }\n]",
+            "picture_array_mb": "[\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_13.webp?v=1758271818\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_3.webp?v=1758269980\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_17.webp?v=1758271818\",\n        \"alt\": \"\"\n    },\n    {\n        \"src\": \"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/product_gallery_7.webp?v=1758269980\",\n        \"alt\": \"\"\n    }\n]"
+          }
+        }
+      },
+      "block_order": [
+        "pics_row_jUdAkn",
+        "pics_row_zxDwjm",
+        "pics_row_88TzzN"
+      ],
+      "disabled": true,
+      "name": "Custom Picture Gallery",
+      "settings": {
+        "title": ""
+      }
+    },
+    "custom_product_text_animation_tcTMgp": {
+      "type": "custom-product-text-animation",
+      "disabled": true,
+      "name": "Text Animation",
+      "settings": {
+        "bg_color": "#121212",
+        "title": "RIDESTYLE WITH",
+        "subtitle_1": "YOUTH ENERGY",
+        "subtitle_1_color": "#f2cb04",
+        "subtitle_2": "MACFOX EMPOWERS YOUTH COMMUTING WITH LEGAL ROAD SAFETY, STUNT PLAYABILITY, AND ROOM FOR CUSTOMIZATION.",
+        "el_image": "shopify://shop_images/1_46897903-09a5-4a59-84aa-895a3335f0e7.webp",
+        "hover_tolerance": 30
+      }
+    },
+    "custom_product_describe_card_3XUrEQ": {
+      "type": "custom-product-describe-card",
+      "blocks": {
+        "product_describe_item_pJM33h": {
+          "type": "product_describe_item",
+          "settings": {
+            "content": "<span>The 500W motor, peaking at 750W, offers the perfect balance of power and street legality.</span>\nExperience torque-packed rides with 20mph top speed, so you can cruise public roads worry-free.",
+            "desc": "",
+            "image": "shopify://shop_images/72e98730358f9ca17d97ce83614537f6_6cf735fd-1c64-4cbf-9a1c-6049109e325e.webp",
+            "image_mobile": "shopify://shop_images/72e98730358f9ca17d97ce83614537f6_6cf735fd-1c64-4cbf-9a1c-6049109e325e.webp"
+          }
+        },
+        "product_describe_item_3ejtBq": {
+          "type": "product_describe_item",
+          "disabled": true,
+          "settings": {
+            "content": "The bike frame is carefully designed to support a natural riding posture, protecting the developing spine of youth while effectively reducing fatigue during long rides. This ensures both comfort and safety for the rider.",
+            "desc": "",
+            "image": "shopify://shop_images/1_130b55fd-999a-4bb7-a49c-beef23c9e0e0.webp",
+            "image_mobile": "shopify://shop_images/1_130b55fd-999a-4bb7-a49c-beef23c9e0e0.webp"
+          }
+        },
+        "product_describe_item_pK9R3A": {
+          "type": "product_describe_item",
+          "settings": {
+            "content": "Lab testing shows that the X7 e-bike can achieve up to <span>35 miles</span> of range on a full charge under standard test conditions, including an average rider weight and steady cruising in second gear.<br><br>\n\nWith a dual-battery setup, the total range can be extended up to <span>70 miles</span>.",
+            "desc": "*MACFOX battery interfaces are fully compatible, allowing you to upgrade to higher-capacity batteries for extendedrange. However, please note that the selected battery capacity must not be lower than the standard battery to ensurebike performance and safety.<br><br>UL 2271 Certified (Single battery configuration) ※ Dual battery system exceeds standard UL scope For Dual Battery orders, the second battery will be shipped separately.",
+            "image": "shopify://shop_images/bd34af0629b900eeb34e182960688bef_0588fb68-ca95-448f-a2d1-576576e2f160.webp",
+            "image_mobile": "shopify://shop_images/bd34af0629b900eeb34e182960688bef_0588fb68-ca95-448f-a2d1-576576e2f160.webp"
+          }
+        },
+        "product_describe_item_9zmFfg": {
+          "type": "product_describe_item",
+          "settings": {
+            "content": "<span>Custom 20x4.5'' front and 20x5.0'' rear fat tires are the widest on the market, delivering unmatched safety and stability.</span> Their bold size gives the bike a cooler stance, and the R&amp;D team calls it the little monster of the road.",
+            "desc": "",
+            "image": "shopify://shop_images/7412169cb25827a09dec8269b6cf0a9e_dfdacf08-4763-46d1-a647-1c968ac6bf0a.webp",
+            "image_mobile": "shopify://shop_images/7412169cb25827a09dec8269b6cf0a9e_dfdacf08-4763-46d1-a647-1c968ac6bf0a.webp"
+          }
+        },
+        "product_describe_item_ETkACa": {
+          "type": "product_describe_item",
+          "settings": {
+            "content": "<span>Durable high-strength carbon steel frame made for mods and daily abuse.</span>The high-strength carbon steel frame offers strength and clean lines. Matte black finish fits any aesthetic and gives plenty of room for custom upgrades.The bike frame is carefully designed to support a natural riding posture.",
+            "desc": "",
+            "image": "shopify://shop_images/X7_1158efaa-b20a-4e23-a1b7-1c54d9b7ebb3.webp",
+            "image_mobile": "shopify://shop_images/X7_1158efaa-b20a-4e23-a1b7-1c54d9b7ebb3.webp"
+          }
+        }
+      },
+      "block_order": [
+        "product_describe_item_pJM33h",
+        "product_describe_item_3ejtBq",
+        "product_describe_item_pK9R3A",
+        "product_describe_item_9zmFfg",
+        "product_describe_item_ETkACa"
+      ],
+      "disabled": true,
+      "name": "Describe Card",
+      "settings": {
+        "bg_color": "#121212",
+        "point_svg": "<svg viewbox=\"0 0 931 115\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<mask id=\"mask0_3702_3\" style=\"mask-type:luminance\" maskunits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"931\" height=\"115\">\n<path d=\"M930.3 0.400024H0.299988V114.9H930.3V0.400024Z\" fill=\"white\"></path>\n</mask>\n<g mask=\"url(#mask0_3702_3)\">\n<path d=\"M462.2 -14.7C462.1 -14.7 462.1 -14.8 462.1 -14.8C462.1 -14.9 462.2 -14.9 462.2 -14.9C462.3 -14.9 462.3 -14.8 462.3 -14.8L462.2 -14.7ZM438.5 -14.9C438.5 -15 438.4 -15 438.4 -15C438.3 -15 438.3 -14.9 438.3 -14.9C438.3 -14.8 438.4 -14.8 438.4 -14.8C438.4 -14.7 438.5 -14.8 438.5 -14.9ZM414.7 -14.9C414.7 -15 414.6 -15 414.6 -15C414.5 -15 414.5 -14.9 414.5 -14.9C414.5 -14.8 414.6 -14.8 414.6 -14.8C414.6 -14.8 414.7 -14.8 414.7 -14.9ZM450.6 8.9C450.6 8.7 450.4 8.5 450.2 8.5C450 8.5 449.8 8.7 449.8 8.9C449.8 9.1 450 9.3 450.2 9.3C450.5 9.3 450.6 9.2 450.6 8.9ZM426.8 8.9C426.8 8.7 426.6 8.5 426.4 8.5C426.2 8.5 426 8.7 426 8.9C426 9.1 426.2 9.3 426.4 9.3C426.7 9.3 426.8 9.2 426.8 8.9ZM403 8.9C403 8.7 402.8 8.5 402.6 8.5C402.4 8.5 402.2 8.7 402.2 8.9C402.2 9.1 402.4 9.3 402.6 9.3C402.9 9.3 403 9.2 403 8.9ZM462.9 32.7C462.9 32.3 462.6 32 462.2 32C461.8 32 461.5 32.3 461.5 32.7C461.5 33.1 461.8 33.4 462.2 33.4C462.6 33.5 462.9 33.1 462.9 32.7ZM439.1 32.7C439.1 32.3 438.8 32 438.4 32C438 32 437.7 32.3 437.7 32.7C437.7 33.1 438 33.4 438.4 33.4C438.7 33.5 439.1 33.1 439.1 32.7ZM415.3 32.7C415.3 32.3 415 32 414.6 32C414.2 32 413.9 32.3 413.9 32.7C413.9 33.1 414.2 33.4 414.6 33.4C414.9 33.5 415.3 33.1 415.3 32.7ZM451.3 56.5C451.3 55.9 450.8 55.4 450.2 55.4C449.6 55.4 449.1 55.9 449.1 56.5C449.1 57.1 449.6 57.6 450.2 57.6C450.8 57.6 451.3 57.1 451.3 56.5ZM427.5 56.5C427.5 55.9 427 55.4 426.4 55.4C425.8 55.4 425.3 55.9 425.3 56.5C425.3 57.1 425.8 57.6 426.4 57.6C427 57.6 427.5 57.1 427.5 56.5ZM403.7 56.5C403.7 55.9 403.2 55.4 402.6 55.4C402 55.4 401.5 55.9 401.5 56.5C401.5 57.1 402 57.6 402.6 57.6C403.2 57.6 403.7 57.1 403.7 56.5ZM463.5 80.4C463.5 79.6 462.9 79 462.1 79C461.3 79 460.7 79.6 460.7 80.4C460.7 81.2 461.3 81.8 462.1 81.8C462.9 81.7 463.5 81.1 463.5 80.4ZM439.7 80.4C439.7 79.6 439.1 79 438.3 79C437.5 79 436.9 79.6 436.9 80.4C436.9 81.2 437.5 81.8 438.3 81.8C439.1 81.7 439.7 81.1 439.7 80.4ZM415.9 80.4C415.9 79.6 415.3 79 414.5 79C413.7 79 413.1 79.6 413.1 80.4C413.1 81.2 413.7 81.8 414.5 81.8C415.3 81.7 415.9 81.1 415.9 80.4ZM452 104.2C452 103.2 451.2 102.4 450.2 102.4C449.2 102.4 448.4 103.2 448.4 104.2C448.4 105.2 449.2 106 450.2 106C451.2 105.9 452 105.1 452 104.2ZM428.2 104.2C428.2 103.2 427.4 102.4 426.4 102.4C425.4 102.4 424.6 103.2 424.6 104.2C424.6 105.2 425.4 106 426.4 106C427.4 105.9 428.2 105.1 428.2 104.2ZM404.4 104.2C404.4 103.2 403.6 102.4 402.6 102.4C401.6 102.4 400.8 103.2 400.8 104.2C400.8 105.2 401.6 106 402.6 106C403.6 105.9 404.4 105.1 404.4 104.2ZM464.3 128C464.3 126.8 463.4 125.9 462.2 125.9C461 125.9 460.1 126.8 460.1 128C460.1 129.2 461 130.1 462.2 130.1C463.3 130.1 464.3 129.1 464.3 128ZM440.5 128C440.5 126.8 439.6 125.9 438.4 125.9C437.2 125.9 436.3 126.8 436.3 128C436.3 129.2 437.2 130.1 438.4 130.1C439.6 130.1 440.5 129.1 440.5 128ZM416.7 128C416.7 126.8 415.8 125.9 414.6 125.9C413.4 125.9 412.5 126.8 412.5 128C412.5 129.2 413.4 130.1 414.6 130.1C415.7 130.1 416.7 129.1 416.7 128ZM452.8 151.8C452.8 150.4 451.7 149.3 450.3 149.3C448.9 149.3 447.8 150.4 447.8 151.8C447.8 153.2 448.9 154.3 450.3 154.3C451.6 154.3 452.8 153.2 452.8 151.8ZM429 151.8C429 150.4 427.9 149.3 426.5 149.3C425.1 149.3 424 150.4 424 151.8C424 153.2 425.1 154.3 426.5 154.3C427.8 154.3 429 153.2 429 151.8ZM405.1 151.8C405.1 150.4 404 149.3 402.6 149.3C401.2 149.3 400.1 150.4 400.1 151.8C400.1 153.2 401.2 154.3 402.6 154.3C404 154.3 405.1 153.2 405.1 151.8ZM465.1 175.6C465.1 174 463.8 172.7 462.2 172.7C460.6 172.7 459.3 174 459.3 175.6C459.3 177.2 460.6 178.5 462.2 178.5C463.8 178.5 465.1 177.2 465.1 175.6ZM441.3 175.6C441.3 174 440 172.7 438.4 172.7C436.8 172.7 435.5 174 435.5 175.6C435.5 177.2 436.8 178.5 438.4 178.5C439.9 178.5 441.3 177.2 441.3 175.6ZM417.4 175.6C417.4 174 416.1 172.7 414.5 172.7C412.9 172.7 411.6 174 411.6 175.6C411.6 177.2 412.9 178.5 414.5 178.5C416.1 178.5 417.4 177.2 417.4 175.6ZM453.5 199.4C453.5 197.6 452 196.1 450.2 196.1C448.4 196.1 446.9 197.6 446.9 199.4C446.9 201.2 448.4 202.7 450.2 202.7C452.1 202.7 453.5 201.2 453.5 199.4ZM429.7 199.4C429.7 197.6 428.2 196.1 426.4 196.1C424.6 196.1 423.1 197.6 423.1 199.4C423.1 201.2 424.6 202.7 426.4 202.7C428.3 202.7 429.7 201.2 429.7 199.4ZM405.9 199.4C405.9 197.6 404.4 196.1 402.6 196.1C400.8 196.1 399.3 197.6 399.3 199.4C399.3 201.2 400.8 202.7 402.6 202.7C404.5 202.7 405.9 201.2 405.9 199.4ZM390.9 -14.9C390.9 -15 390.8 -15 390.8 -15C390.7 -15 390.7 -14.9 390.7 -14.9C390.7 -14.8 390.8 -14.8 390.8 -14.8C390.8 -14.7 390.9 -14.8 390.9 -14.9ZM367.1 -14.9C367.1 -15 367 -15 367 -15C366.9 -15 366.9 -14.9 366.9 -14.9C366.9 -14.8 367 -14.8 367 -14.8C367 -14.7 367.1 -14.8 367.1 -14.9ZM343.3 -14.9C343.3 -15 343.2 -15 343.2 -15C343.1 -15 343.1 -14.9 343.1 -14.9C343.1 -14.8 343.2 -14.8 343.2 -14.8C343.2 -14.7 343.3 -14.8 343.3 -14.9ZM319.5 -14.9C319.5 -15 319.4 -15 319.4 -15C319.3 -15 319.3 -14.9 319.3 -14.9C319.3 -14.8 319.4 -14.8 319.4 -14.8C319.4 -14.7 319.5 -14.8 319.5 -14.9ZM295.6 -14.9C295.6 -15 295.5 -15 295.5 -15C295.4 -15 295.4 -14.9 295.4 -14.9C295.4 -14.8 295.5 -14.8 295.5 -14.8C295.6 -14.7 295.6 -14.8 295.6 -14.9ZM271.8 -14.9C271.8 -15 271.7 -15 271.7 -15C271.6 -15 271.6 -14.9 271.6 -14.9C271.6 -14.8 271.7 -14.8 271.7 -14.8C271.8 -14.7 271.8 -14.8 271.8 -14.9ZM248 -14.9C248 -15 247.9 -15 247.9 -15C247.8 -15 247.8 -14.9 247.8 -14.9C247.8 -14.8 247.9 -14.8 247.9 -14.8C248 -14.7 248 -14.8 248 -14.9ZM224.2 -14.9C224.2 -15 224.1 -15 224.1 -15C224 -15 224 -14.9 224 -14.9C224 -14.8 224.1 -14.8 224.1 -14.8C224.2 -14.7 224.2 -14.8 224.2 -14.9ZM200.4 -14.9C200.4 -15 200.3 -15 200.3 -15C200.2 -15 200.2 -14.9 200.2 -14.9C200.2 -14.8 200.3 -14.8 200.3 -14.8C200.4 -14.7 200.4 -14.8 200.4 -14.9ZM176.6 -14.9C176.6 -15 176.5 -15 176.5 -15C176.4 -15 176.4 -14.9 176.4 -14.9C176.4 -14.8 176.5 -14.8 176.5 -14.8C176.6 -14.7 176.6 -14.8 176.6 -14.9ZM152.8 -14.9C152.8 -15 152.7 -15 152.7 -15C152.6 -15 152.6 -14.9 152.6 -14.9C152.6 -14.8 152.7 -14.8 152.7 -14.8C152.8 -14.7 152.8 -14.8 152.8 -14.9ZM129 -14.9C129 -15 128.9 -15 128.9 -15C128.8 -15 128.8 -14.9 128.8 -14.9C128.8 -14.8 128.9 -14.8 128.9 -14.8C129 -14.7 129 -14.8 129 -14.9ZM105.2 -14.9C105.2 -15 105.1 -15 105.1 -15C105 -15 105 -14.9 105 -14.9C105 -14.8 105.1 -14.8 105.1 -14.8C105.1 -14.7 105.2 -14.8 105.2 -14.9ZM81.4 -14.9C81.4 -15 81.3 -15 81.3 -15C81.2 -15 81.2 -14.9 81.2 -14.9C81.2 -14.8 81.3 -14.8 81.3 -14.8C81.3 -14.7 81.4 -14.8 81.4 -14.9ZM57.6 -14.9C57.6 -15 57.5 -15 57.5 -15C57.4 -15 57.4 -14.9 57.4 -14.9C57.4 -14.8 57.5 -14.8 57.5 -14.8C57.5 -14.7 57.6 -14.8 57.6 -14.9ZM33.8 -14.9C33.8 -15 33.7 -15 33.7 -15C33.6 -15 33.6 -14.9 33.6 -14.9C33.6 -14.8 33.7 -14.8 33.7 -14.8C33.7 -14.7 33.8 -14.8 33.8 -14.9ZM10 -14.9L9.9 -15C9.8 -15 9.8 -14.9 9.8 -14.9C9.8 -14.8 9.9 -14.8 9.9 -14.8C9.9 -14.7 10 -14.8 10 -14.9ZM379.2 8.9C379.2 8.7 379 8.5 378.8 8.5C378.6 8.5 378.4 8.7 378.4 8.9C378.4 9.1 378.6 9.3 378.8 9.3C379.1 9.3 379.2 9.2 379.2 8.9ZM355.4 8.9C355.4 8.7 355.2 8.5 355 8.5C354.8 8.5 354.6 8.7 354.6 8.9C354.6 9.1 354.8 9.3 355 9.3C355.2 9.3 355.4 9.2 355.4 8.9ZM331.6 8.9C331.6 8.7 331.4 8.5 331.2 8.5C331 8.5 330.8 8.7 330.8 8.9C330.8 9.1 331 9.3 331.2 9.3C331.4 9.3 331.6 9.2 331.6 8.9ZM307.8 8.9C307.8 8.7 307.6 8.5 307.4 8.5C307.2 8.5 307 8.7 307 8.9C307 9.1 307.2 9.3 307.4 9.3C307.6 9.3 307.8 9.2 307.8 8.9ZM284 8.9C284 8.7 283.8 8.5 283.6 8.5C283.4 8.5 283.2 8.7 283.2 8.9C283.2 9.1 283.4 9.3 283.6 9.3C283.8 9.3 284 9.2 284 8.9ZM260.2 8.9C260.2 8.7 260 8.5 259.8 8.5C259.6 8.5 259.4 8.7 259.4 8.9C259.4 9.1 259.6 9.3 259.8 9.3C260 9.3 260.2 9.2 260.2 8.9ZM236.4 8.9C236.4 8.7 236.2 8.5 236 8.5C235.8 8.5 235.6 8.7 235.6 8.9C235.6 9.1 235.8 9.3 236 9.3C236.2 9.3 236.4 9.2 236.4 8.9ZM212.6 8.9C212.6 8.7 212.4 8.5 212.2 8.5C212 8.5 211.8 8.7 211.8 8.9C211.8 9.1 212 9.3 212.2 9.3C212.4 9.3 212.6 9.2 212.6 8.9ZM188.8 8.9C188.8 8.7 188.6 8.5 188.4 8.5C188.2 8.5 188 8.7 188 8.9C188 9.1 188.2 9.3 188.4 9.3C188.6 9.3 188.8 9.2 188.8 8.9ZM165 8.9C165 8.7 164.8 8.5 164.6 8.5C164.4 8.5 164.2 8.7 164.2 8.9C164.2 9.1 164.4 9.3 164.6 9.3C164.8 9.3 165 9.2 165 8.9ZM141.2 8.9C141.2 8.7 141 8.5 140.8 8.5C140.6 8.5 140.4 8.7 140.4 8.9C140.4 9.1 140.6 9.3 140.8 9.3C141 9.3 141.2 9.2 141.2 8.9ZM117.4 8.9C117.4 8.7 117.2 8.5 117 8.5C116.8 8.5 116.6 8.7 116.6 8.9C116.6 9.1 116.8 9.3 117 9.3C117.2 9.3 117.4 9.2 117.4 8.9ZM93.6 8.9C93.6 8.7 93.4 8.5 93.2 8.5C93 8.5 92.8 8.7 92.8 8.9C92.8 9.1 93 9.3 93.2 9.3C93.4 9.3 93.6 9.2 93.6 8.9ZM69.8 8.9C69.8 8.7 69.6 8.5 69.4 8.5C69.2 8.5 69 8.7 69 8.9C69 9.1 69.2 9.3 69.4 9.3C69.6 9.3 69.8 9.2 69.8 8.9ZM46 8.9C46 8.7 45.8 8.5 45.6 8.5C45.4 8.5 45.2 8.7 45.2 8.9C45.2 9.1 45.4 9.3 45.6 9.3C45.8 9.3 46 9.2 46 8.9ZM22.2 8.9C22.2 8.7 22 8.5 21.8 8.5C21.6 8.5 21.4 8.7 21.4 8.9C21.4 9.1 21.6 9.3 21.8 9.3C22 9.3 22.2 9.2 22.2 8.9ZM-1.7 8.9C-1.7 8.7 -1.9 8.5 -2.1 8.5C-2.3 8.5 -2.5 8.7 -2.5 8.9C-2.5 9.1 -2.3 9.3 -2.1 9.3C-1.8 9.3 -1.7 9.2 -1.7 8.9ZM391.5 32.7C391.5 32.3 391.2 32 390.8 32C390.4 32 390.1 32.3 390.1 32.7C390.1 33.1 390.4 33.4 390.8 33.4C391.1 33.5 391.5 33.1 391.5 32.7ZM367.7 32.7C367.7 32.3 367.4 32 367 32C366.6 32 366.3 32.3 366.3 32.7C366.3 33.1 366.6 33.4 367 33.4C367.3 33.5 367.7 33.1 367.7 32.7ZM343.9 32.7C343.9 32.3 343.6 32 343.2 32C342.8 32 342.5 32.3 342.5 32.7C342.5 33.1 342.8 33.4 343.2 33.4C343.5 33.5 343.9 33.1 343.9 32.7ZM320 32.7C320 32.3 319.7 32 319.3 32C318.9 32 318.6 32.3 318.6 32.7C318.6 33.1 318.9 33.4 319.3 33.4C319.7 33.5 320 33.1 320 32.7ZM296.2 32.7C296.2 32.3 295.9 32 295.5 32C295.1 32 294.8 32.3 294.8 32.7C294.8 33.1 295.1 33.4 295.5 33.4C295.9 33.5 296.2 33.1 296.2 32.7ZM272.4 32.7C272.4 32.3 272.1 32 271.7 32C271.3 32 271 32.3 271 32.7C271 33.1 271.3 33.4 271.7 33.4C272.1 33.4 272.4 33.1 272.4 32.7ZM248.6 32.7C248.6 32.3 248.3 32 247.9 32C247.5 32 247.2 32.3 247.2 32.7C247.2 33.1 247.5 33.4 247.9 33.4C248.3 33.5 248.6 33.1 248.6 32.7ZM224.8 32.7C224.8 32.3 224.5 32 224.1 32C223.7 32 223.4 32.3 223.4 32.7C223.4 33.1 223.7 33.4 224.1 33.4C224.5 33.5 224.8 33.1 224.8 32.7ZM201 32.7C201 32.3 200.7 32 200.3 32C199.9 32 199.6 32.3 199.6 32.7C199.6 33.1 199.9 33.4 200.3 33.4C200.7 33.5 201 33.1 201 32.7ZM177.2 32.7C177.2 32.3 176.9 32 176.5 32C176.1 32 175.8 32.3 175.8 32.7C175.8 33.1 176.1 33.4 176.5 33.4C176.9 33.5 177.2 33.1 177.2 32.7ZM153.4 32.7C153.4 32.3 153.1 32 152.7 32C152.3 32 152 32.3 152 32.7C152 33.1 152.3 33.4 152.7 33.4C153.1 33.5 153.4 33.1 153.4 32.7ZM129.6 32.7C129.6 32.3 129.3 32 128.9 32C128.5 32 128.2 32.3 128.2 32.7C128.2 33.1 128.5 33.4 128.9 33.4C129.3 33.5 129.6 33.1 129.6 32.7ZM105.8 32.7C105.8 32.3 105.5 32 105.1 32C104.7 32 104.4 32.3 104.4 32.7C104.4 33.1 104.7 33.4 105.1 33.4C105.5 33.5 105.8 33.1 105.8 32.7ZM82 32.7C82 32.3 81.7 32 81.3 32C80.9 32 80.6 32.3 80.6 32.7C80.6 33.1 80.9 33.4 81.3 33.4C81.7 33.5 82 33.1 82 32.7ZM58.2 32.7C58.2 32.3 57.9 32 57.5 32C57.1 32 56.8 32.3 56.8 32.7C56.8 33.1 57.1 33.4 57.5 33.4C57.9 33.5 58.2 33.1 58.2 32.7ZM34.4 32.7C34.4 32.3 34.1 32 33.7 32C33.3 32 33 32.3 33 32.7C33 33.1 33.3 33.4 33.7 33.4C34.1 33.5 34.4 33.1 34.4 32.7ZM10.6 32.7C10.6 32.3 10.3 32 9.9 32C9.5 32 9.2 32.3 9.2 32.7C9.2 33.1 9.5 33.4 9.9 33.4C10.3 33.5 10.6 33.1 10.6 32.7ZM379.9 56.5C379.9 55.9 379.4 55.4 378.8 55.4C378.2 55.4 377.7 55.9 377.7 56.5C377.7 57.1 378.2 57.6 378.8 57.6C379.4 57.6 379.9 57.1 379.9 56.5ZM356.1 56.5C356.1 55.9 355.6 55.4 355 55.4C354.4 55.4 353.9 55.9 353.9 56.5C353.9 57.1 354.4 57.6 355 57.6C355.6 57.6 356.1 57.1 356.1 56.5ZM332.3 56.5C332.3 55.9 331.8 55.4 331.2 55.4C330.6 55.4 330.1 55.9 330.1 56.5C330.1 57.1 330.6 57.6 331.2 57.6C331.8 57.6 332.3 57.1 332.3 56.5ZM308.5 56.5C308.5 55.9 308 55.4 307.4 55.4C306.8 55.4 306.3 55.9 306.3 56.5C306.3 57.1 306.8 57.6 307.4 57.6C308 57.6 308.5 57.1 308.5 56.5ZM284.7 56.5C284.7 55.9 284.2 55.4 283.6 55.4C283 55.4 282.5 55.9 282.5 56.5C282.5 57.1 283 57.6 283.6 57.6C284.2 57.6 284.7 57.1 284.7 56.5ZM260.9 56.5C260.9 55.9 260.4 55.4 259.8 55.4C259.2 55.4 258.7 55.9 258.7 56.5C258.7 57.1 259.2 57.6 259.8 57.6C260.4 57.6 260.9 57.1 260.9 56.5ZM237.1 56.5C237.1 55.9 236.6 55.4 236 55.4C235.4 55.4 234.9 55.9 234.9 56.5C234.9 57.1 235.4 57.6 236 57.6C236.6 57.6 237.1 57.1 237.1 56.5ZM213.3 56.5C213.3 55.9 212.8 55.4 212.2 55.4C211.6 55.4 211.1 55.9 211.1 56.5C211.1 57.1 211.6 57.6 212.2 57.6C212.8 57.6 213.3 57.1 213.3 56.5ZM189.4 56.5C189.4 55.9 188.9 55.4 188.3 55.4C187.7 55.4 187.2 55.9 187.2 56.5C187.2 57.1 187.7 57.6 188.3 57.6C189 57.6 189.4 57.1 189.4 56.5ZM165.6 56.5C165.6 55.9 165.1 55.4 164.5 55.4C163.9 55.4 163.4 55.9 163.4 56.5C163.4 57.1 163.9 57.6 164.5 57.6C165.2 57.6 165.6 57.1 165.6 56.5ZM141.8 56.5C141.8 55.9 141.3 55.4 140.7 55.4C140.1 55.4 139.6 55.9 139.6 56.5C139.6 57.1 140.1 57.6 140.7 57.6C141.4 57.6 141.8 57.1 141.8 56.5ZM118 56.5C118 55.9 117.5 55.4 116.9 55.4C116.3 55.4 115.8 55.9 115.8 56.5C115.8 57.1 116.3 57.6 116.9 57.6C117.6 57.6 118 57.1 118 56.5ZM94.2 56.5C94.2 55.9 93.7 55.4 93.1 55.4C92.5 55.4 92 55.9 92 56.5C92 57.1 92.5 57.6 93.1 57.6C93.8 57.6 94.2 57.1 94.2 56.5ZM70.4 56.5C70.4 55.9 69.9 55.4 69.3 55.4C68.7 55.4 68.2 55.9 68.2 56.5C68.2 57.1 68.7 57.6 69.3 57.6C69.9 57.6 70.4 57.1 70.4 56.5ZM46.6 56.5C46.6 55.9 46.1 55.4 45.5 55.4C44.9 55.4 44.4 55.9 44.4 56.5C44.4 57.1 44.9 57.6 45.5 57.6C46.1 57.6 46.6 57.1 46.6 56.5ZM22.8 56.5C22.8 55.9 22.3 55.4 21.7 55.4C21.1 55.4 20.6 55.9 20.6 56.5C20.6 57.1 21.1 57.6 21.7 57.6C22.3 57.6 22.8 57.1 22.8 56.5ZM-1 56.5C-1 56 -1.5 55.5 -2 55.5C-2.6 55.5 -3.1 56 -3.1 56.6C-3.1 57.2 -2.6 57.7 -2 57.7C-1.5 57.6 -1 57.1 -1 56.5ZM392.1 80.4C392.1 79.6 391.5 79 390.7 79C389.9 79 389.3 79.6 389.3 80.4C389.3 81.2 389.9 81.8 390.7 81.8C391.5 81.7 392.1 81.1 392.1 80.4ZM368.3 80.4C368.3 79.6 367.7 79 366.9 79C366.1 79 365.5 79.6 365.5 80.4C365.5 81.2 366.1 81.8 366.9 81.8C367.7 81.7 368.3 81.1 368.3 80.4ZM344.5 80.4C344.5 79.6 343.9 79 343.1 79C342.3 79 341.7 79.6 341.7 80.4C341.7 81.2 342.3 81.8 343.1 81.8C343.9 81.7 344.5 81.1 344.5 80.4ZM320.7 80.4C320.7 79.6 320.1 79 319.3 79C318.5 79 317.9 79.6 317.9 80.4C317.9 81.2 318.5 81.8 319.3 81.8C320.1 81.7 320.7 81.1 320.7 80.4ZM296.9 80.4C296.9 79.6 296.3 79 295.5 79C294.7 79 294.1 79.6 294.1 80.4C294.1 81.2 294.7 81.8 295.5 81.8C296.3 81.7 296.9 81.1 296.9 80.4ZM273.1 80.4C273.1 79.6 272.5 79 271.7 79C270.9 79 270.3 79.6 270.3 80.4C270.3 81.2 270.9 81.8 271.7 81.8C272.5 81.7 273.1 81.1 273.1 80.4ZM249.3 80.4C249.3 79.6 248.7 79 247.9 79C247.1 79 246.5 79.6 246.5 80.4C246.5 81.2 247.1 81.8 247.9 81.8C248.7 81.7 249.3 81.1 249.3 80.4ZM225.5 80.4C225.5 79.6 224.9 79 224.1 79C223.3 79 222.7 79.6 222.7 80.4C222.7 81.2 223.3 81.8 224.1 81.8C224.9 81.7 225.5 81.1 225.5 80.4ZM201.7 80.4C201.7 79.6 201.1 79 200.3 79C199.5 79 198.9 79.6 198.9 80.4C198.9 81.2 199.5 81.8 200.3 81.8C201.1 81.8 201.7 81.1 201.7 80.4ZM177.9 80.4C177.9 79.6 177.3 79 176.5 79C175.7 79 175.1 79.6 175.1 80.4C175.1 81.2 175.7 81.8 176.5 81.8C177.3 81.7 177.9 81.1 177.9 80.4ZM154.1 80.4C154.1 79.6 153.5 79 152.7 79C151.9 79 151.3 79.6 151.3 80.4C151.3 81.2 151.9 81.8 152.7 81.8C153.4 81.7 154.1 81.1 154.1 80.4ZM130.3 80.4C130.3 79.6 129.7 79 128.9 79C128.1 79 127.5 79.6 127.5 80.4C127.5 81.2 128.1 81.8 128.9 81.8C129.7 81.8 130.3 81.1 130.3 80.4ZM106.5 80.4C106.5 79.6 105.9 79 105.1 79C104.3 79 103.7 79.6 103.7 80.4C103.7 81.2 104.3 81.8 105.1 81.8C105.8 81.7 106.5 81.1 106.5 80.4ZM82.7 80.4C82.7 79.6 82.1 79 81.3 79C80.5 79 79.9 79.6 79.9 80.4C79.9 81.2 80.5 81.8 81.3 81.8C82 81.7 82.7 81.1 82.7 80.4ZM58.8 80.4C58.8 79.6 58.2 79 57.4 79C56.6 79 56 79.6 56 80.4C56 81.2 56.6 81.8 57.4 81.8C58.2 81.7 58.8 81.1 58.8 80.4ZM35 80.4C35 79.6 34.4 79 33.6 79C32.8 79 32.2 79.6 32.2 80.4C32.2 81.2 32.8 81.8 33.6 81.8C34.4 81.7 35 81.1 35 80.4ZM11.2 80.4C11.2 79.6 10.6 79 9.8 79C9 79 8.4 79.6 8.4 80.4C8.4 81.2 9 81.8 9.8 81.8C10.6 81.7 11.2 81.1 11.2 80.4ZM380.6 104.2C380.6 103.2 379.8 102.4 378.8 102.4C377.8 102.4 377 103.2 377 104.2C377 105.2 377.8 106 378.8 106C379.8 105.9 380.6 105.1 380.6 104.2ZM356.8 104.2C356.8 103.2 356 102.4 355 102.4C354 102.4 353.2 103.2 353.2 104.2C353.2 105.2 354 106 355 106C356 105.9 356.8 105.1 356.8 104.2ZM333 104.2C333 103.2 332.2 102.4 331.2 102.4C330.2 102.4 329.4 103.2 329.4 104.2C329.4 105.2 330.2 106 331.2 106C332.2 105.9 333 105.1 333 104.2ZM309.2 104.2C309.2 103.2 308.4 102.4 307.4 102.4C306.4 102.4 305.6 103.2 305.6 104.2C305.6 105.2 306.4 106 307.4 106C308.4 105.9 309.2 105.1 309.2 104.2ZM285.4 104.2C285.4 103.2 284.6 102.4 283.6 102.4C282.6 102.4 281.8 103.2 281.8 104.2C281.8 105.2 282.6 106 283.6 106C284.6 105.9 285.4 105.1 285.4 104.2ZM261.6 104.2C261.6 103.2 260.8 102.4 259.8 102.4C258.8 102.4 258 103.2 258 104.2C258 105.2 258.8 106 259.8 106C260.8 105.9 261.6 105.1 261.6 104.2ZM237.8 104.2C237.8 103.2 237 102.4 236 102.4C235 102.4 234.2 103.2 234.2 104.2C234.2 105.2 235 106 236 106C237 105.9 237.8 105.1 237.8 104.2ZM214 104.2C214 103.2 213.2 102.4 212.2 102.4C211.2 102.4 210.4 103.2 210.4 104.2C210.4 105.2 211.2 106 212.2 106C213.2 105.9 214 105.1 214 104.2ZM190.2 104.2C190.2 103.2 189.4 102.4 188.4 102.4C187.4 102.4 186.6 103.2 186.6 104.2C186.6 105.2 187.4 106 188.4 106C189.4 105.9 190.2 105.1 190.2 104.2ZM166.4 104.2C166.4 103.2 165.6 102.4 164.6 102.4C163.6 102.4 162.8 103.2 162.8 104.2C162.8 105.2 163.6 106 164.6 106C165.6 105.9 166.4 105.1 166.4 104.2ZM142.6 104.2C142.6 103.2 141.8 102.4 140.8 102.4C139.8 102.4 139 103.2 139 104.2C139 105.2 139.8 106 140.8 106C141.8 105.9 142.6 105.1 142.6 104.2ZM118.8 104.2C118.8 103.2 118 102.4 117 102.4C116 102.4 115.2 103.2 115.2 104.2C115.2 105.2 116 106 117 106C118 105.9 118.8 105.1 118.8 104.2ZM95 104.2C95 103.2 94.2 102.4 93.2 102.4C92.2 102.4 91.4 103.2 91.4 104.2C91.4 105.2 92.2 106 93.2 106C94.2 105.9 95 105.1 95 104.2ZM71.1 104.2C71.1 103.2 70.3 102.4 69.3 102.4C68.3 102.4 67.5 103.2 67.5 104.2C67.5 105.2 68.3 106 69.3 106C70.4 105.9 71.1 105.1 71.1 104.2ZM47.3 104.2C47.3 103.2 46.5 102.4 45.5 102.4C44.5 102.4 43.7 103.2 43.7 104.2C43.7 105.2 44.5 106 45.5 106C46.5 105.9 47.3 105.1 47.3 104.2ZM23.5 104.2C23.5 103.2 22.7 102.4 21.7 102.4C20.7 102.4 19.9 103.2 19.9 104.2C19.9 105.2 20.7 106 21.7 106C22.7 105.9 23.5 105.1 23.5 104.2ZM-0.3 104.2C-0.3 103.2 -1.1 102.4 -2.1 102.4C-3.1 102.4 -3.9 103.2 -3.9 104.2C-3.9 105.2 -3.1 106 -2.1 106C-1.1 105.9 -0.3 105.1 -0.3 104.2ZM392.8 128C392.8 126.8 391.9 125.9 390.7 125.9C389.5 125.9 388.6 126.8 388.6 128C388.6 129.2 389.5 130.1 390.7 130.1C391.9 130.1 392.8 129.1 392.8 128ZM369 128C369 126.8 368.1 125.9 366.9 125.9C365.7 125.9 364.8 126.8 364.8 128C364.8 129.2 365.7 130.1 366.9 130.1C368.1 130.1 369 129.1 369 128ZM345.2 128C345.2 126.8 344.3 125.9 343.1 125.9C341.9 125.9 341 126.8 341 128C341 129.2 341.9 130.1 343.1 130.1C344.3 130.1 345.2 129.1 345.2 128ZM321.4 128C321.4 126.8 320.5 125.9 319.3 125.9C318.1 125.9 317.2 126.8 317.2 128C317.2 129.2 318.1 130.1 319.3 130.1C320.5 130.1 321.4 129.1 321.4 128ZM297.6 128C297.6 126.8 296.7 125.9 295.5 125.9C294.3 125.9 293.4 126.8 293.4 128C293.4 129.2 294.3 130.1 295.5 130.1C296.7 130.1 297.6 129.1 297.6 128ZM273.8 128C273.8 126.8 272.9 125.9 271.7 125.9C270.5 125.9 269.6 126.8 269.6 128C269.6 129.2 270.5 130.1 271.7 130.1C272.9 130.1 273.8 129.1 273.8 128ZM250 128C250 126.8 249.1 125.9 247.9 125.9C246.7 125.9 245.8 126.8 245.8 128C245.8 129.2 246.7 130.1 247.9 130.1C249.1 130.1 250 129.1 250 128ZM226.2 128C226.2 126.8 225.3 125.9 224.1 125.9C222.9 125.9 222 126.8 222 128C222 129.2 222.9 130.1 224.1 130.1C225.3 130.1 226.2 129.1 226.2 128ZM202.4 128C202.4 126.8 201.5 125.9 200.3 125.9C199.1 125.9 198.2 126.8 198.2 128C198.2 129.2 199.1 130.1 200.3 130.1C201.5 130.1 202.4 129.1 202.4 128ZM178.6 128C178.6 126.8 177.7 125.9 176.5 125.9C175.3 125.9 174.4 126.8 174.4 128C174.4 129.2 175.3 130.1 176.5 130.1C177.7 130.1 178.6 129.1 178.6 128ZM154.8 128C154.8 126.8 153.9 125.9 152.7 125.9C151.5 125.9 150.6 126.8 150.6 128C150.6 129.2 151.5 130.1 152.7 130.1C153.9 130.1 154.8 129.1 154.8 128ZM131 128C131 126.8 130.1 125.9 128.9 125.9C127.7 125.9 126.8 126.8 126.8 128C126.8 129.2 127.7 130.1 128.9 130.1C130 130.1 131 129.1 131 128ZM107.2 128C107.2 126.8 106.3 125.9 105.1 125.9C103.9 125.9 103 126.8 103 128C103 129.2 103.9 130.1 105.1 130.1C106.2 130.1 107.2 129.1 107.2 128ZM83.4 128C83.4 126.8 82.5 125.9 81.3 125.9C80.1 125.9 79.2 126.8 79.2 128C79.2 129.2 80.1 130.1 81.3 130.1C82.4 130.1 83.4 129.1 83.4 128ZM59.6 128C59.6 126.8 58.7 125.9 57.5 125.9C56.3 125.9 55.4 126.8 55.4 128C55.4 129.2 56.3 130.1 57.5 130.1C58.6 130.1 59.6 129.1 59.6 128ZM35.8 128C35.8 126.8 34.9 125.9 33.7 125.9C32.5 125.9 31.6 126.8 31.6 128C31.6 129.2 32.5 130.1 33.7 130.1C34.8 130.1 35.8 129.1 35.8 128ZM12 128C12 126.8 11.1 125.9 9.9 125.9C8.7 125.9 7.8 126.8 7.8 128C7.8 129.2 8.7 130.1 9.9 130.1C11.1 130.1 12 129.1 12 128ZM381.3 151.8C381.3 150.4 380.2 149.3 378.8 149.3C377.4 149.3 376.3 150.4 376.3 151.8C376.3 153.2 377.4 154.3 378.8 154.3C380.2 154.3 381.3 153.2 381.3 151.8ZM357.5 151.8C357.5 150.4 356.4 149.3 355 149.3C353.6 149.3 352.5 150.4 352.5 151.8C352.5 153.2 353.6 154.3 355 154.3C356.4 154.3 357.5 153.2 357.5 151.8ZM333.7 151.8C333.7 150.4 332.6 149.3 331.2 149.3C329.8 149.3 328.7 150.4 328.7 151.8C328.7 153.2 329.8 154.3 331.2 154.3C332.6 154.3 333.7 153.2 333.7 151.8ZM309.9 151.8C309.9 150.4 308.8 149.3 307.4 149.3C306 149.3 304.9 150.4 304.9 151.8C304.9 153.2 306 154.3 307.4 154.3C308.8 154.3 309.9 153.2 309.9 151.8ZM286.1 151.8C286.1 150.4 285 149.3 283.6 149.3C282.2 149.3 281.1 150.4 281.1 151.8C281.1 153.2 282.2 154.3 283.6 154.3C285 154.3 286.1 153.2 286.1 151.8ZM262.3 151.8C262.3 150.4 261.2 149.3 259.8 149.3C258.4 149.3 257.3 150.4 257.3 151.8C257.3 153.2 258.4 154.3 259.8 154.3C261.2 154.3 262.3 153.2 262.3 151.8ZM238.5 151.8C238.5 150.4 237.4 149.3 236 149.3C234.6 149.3 233.5 150.4 233.5 151.8C233.5 153.2 234.6 154.3 236 154.3C237.4 154.3 238.5 153.2 238.5 151.8ZM214.7 151.8C214.7 150.4 213.6 149.3 212.2 149.3C210.8 149.3 209.7 150.4 209.7 151.8C209.7 153.2 210.8 154.3 212.2 154.3C213.6 154.3 214.7 153.2 214.7 151.8ZM190.9 151.8C190.9 150.4 189.8 149.3 188.4 149.3C187 149.3 185.9 150.4 185.9 151.8C185.9 153.2 187 154.3 188.4 154.3C189.8 154.3 190.9 153.2 190.9 151.8ZM167.1 151.8C167.1 150.4 166 149.3 164.6 149.3C163.2 149.3 162.1 150.4 162.1 151.8C162.1 153.2 163.2 154.3 164.6 154.3C166 154.3 167.1 153.2 167.1 151.8ZM143.3 151.8C143.3 150.4 142.2 149.3 140.8 149.3C139.4 149.3 138.3 150.4 138.3 151.8C138.3 153.2 139.4 154.3 140.8 154.3C142.2 154.3 143.3 153.2 143.3 151.8ZM119.5 151.8C119.5 150.4 118.4 149.3 117 149.3C115.6 149.3 114.5 150.4 114.5 151.8C114.5 153.2 115.6 154.3 117 154.3C118.4 154.3 119.5 153.2 119.5 151.8ZM95.7 151.8C95.7 150.4 94.6 149.3 93.2 149.3C91.8 149.3 90.7 150.4 90.7 151.8C90.7 153.2 91.8 154.3 93.2 154.3C94.6 154.3 95.7 153.2 95.7 151.8ZM71.9 151.8C71.9 150.4 70.8 149.3 69.4 149.3C68 149.3 66.9 150.4 66.9 151.8C66.9 153.2 68 154.3 69.4 154.3C70.8 154.3 71.9 153.2 71.9 151.8ZM48.1 151.8C48.1 150.4 47 149.3 45.6 149.3C44.2 149.3 43.1 150.4 43.1 151.8C43.1 153.2 44.2 154.3 45.6 154.3C46.9 154.3 48.1 153.2 48.1 151.8ZM24.3 151.8C24.3 150.4 23.2 149.3 21.8 149.3C20.4 149.3 19.3 150.4 19.3 151.8C19.3 153.2 20.4 154.3 21.8 154.3C23.1 154.3 24.3 153.2 24.3 151.8ZM0.5 151.8C0.5 150.4 -0.6 149.3 -2 149.3C-3.4 149.3 -4.5 150.4 -4.5 151.8C-4.5 153.2 -3.4 154.3 -2 154.3C-0.7 154.3 0.5 153.2 0.5 151.8ZM393.6 175.6C393.6 174 392.3 172.7 390.7 172.7C389.1 172.7 387.8 174 387.8 175.6C387.8 177.2 389.1 178.5 390.7 178.5C392.3 178.5 393.6 177.2 393.6 175.6ZM369.8 175.6C369.8 174 368.5 172.7 366.9 172.7C365.3 172.7 364 174 364 175.6C364 177.2 365.3 178.5 366.9 178.5C368.5 178.5 369.8 177.2 369.8 175.6ZM346 175.6C346 174 344.7 172.7 343.1 172.7C341.5 172.7 340.2 174 340.2 175.6C340.2 177.2 341.5 178.5 343.1 178.5C344.7 178.5 346 177.2 346 175.6ZM322.2 175.6C322.2 174 320.9 172.7 319.3 172.7C317.7 172.7 316.4 174 316.4 175.6C316.4 177.2 317.7 178.5 319.3 178.5C320.9 178.5 322.2 177.2 322.2 175.6ZM298.4 175.6C298.4 174 297.1 172.7 295.5 172.7C293.9 172.7 292.6 174 292.6 175.6C292.6 177.2 293.9 178.5 295.5 178.5C297.1 178.5 298.4 177.2 298.4 175.6ZM274.6 175.6C274.6 174 273.3 172.7 271.7 172.7C270.1 172.7 268.8 174 268.8 175.6C268.8 177.2 270.1 178.5 271.7 178.5C273.3 178.5 274.6 177.2 274.6 175.6ZM250.8 175.6C250.8 174 249.5 172.7 247.9 172.7C246.3 172.7 245 174 245 175.6C245 177.2 246.3 178.5 247.9 178.5C249.5 178.5 250.8 177.2 250.8 175.6ZM227 175.6C227 174 225.7 172.7 224.1 172.7C222.5 172.7 221.2 174 221.2 175.6C221.2 177.2 222.5 178.5 224.1 178.5C225.7 178.5 227 177.2 227 175.6ZM203.2 175.6C203.2 174 201.9 172.7 200.3 172.7C198.7 172.7 197.4 174 197.4 175.6C197.4 177.2 198.7 178.5 200.3 178.5C201.9 178.5 203.2 177.2 203.2 175.6ZM179.4 175.6C179.4 174 178.1 172.7 176.5 172.7C174.9 172.7 173.6 174 173.6 175.6C173.6 177.2 174.9 178.5 176.5 178.5C178.1 178.5 179.4 177.2 179.4 175.6ZM155.6 175.6C155.6 174 154.3 172.7 152.7 172.7C151.1 172.7 149.8 174 149.8 175.6C149.8 177.2 151.1 178.5 152.7 178.5C154.3 178.5 155.6 177.2 155.6 175.6ZM131.8 175.6C131.8 174 130.5 172.7 128.9 172.7C127.3 172.7 126 174 126 175.6C126 177.2 127.3 178.5 128.9 178.5C130.5 178.5 131.8 177.2 131.8 175.6ZM108 175.6C108 174 106.7 172.7 105.1 172.7C103.5 172.7 102.2 174 102.2 175.6C102.2 177.2 103.5 178.5 105.1 178.5C106.7 178.5 108 177.2 108 175.6ZM84.2 175.6C84.2 174 82.9 172.7 81.3 172.7C79.7 172.7 78.4 174 78.4 175.6C78.4 177.2 79.7 178.5 81.3 178.5C82.9 178.5 84.2 177.2 84.2 175.6ZM60.4 175.6C60.4 174 59.1 172.7 57.5 172.7C55.9 172.7 54.6 174 54.6 175.6C54.6 177.2 55.9 178.5 57.5 178.5C59.1 178.5 60.4 177.2 60.4 175.6ZM36.6 175.6C36.6 174 35.3 172.7 33.7 172.7C32.1 172.7 30.8 174 30.8 175.6C30.8 177.2 32.1 178.5 33.7 178.5C35.3 178.5 36.6 177.2 36.6 175.6ZM12.8 175.6C12.8 174 11.5 172.7 9.9 172.7C8.3 172.7 7 174 7 175.6C7 177.2 8.3 178.5 9.9 178.5C11.5 178.5 12.8 177.2 12.8 175.6ZM382.1 199.4C382.1 197.6 380.6 196.1 378.8 196.1C377 196.1 375.5 197.6 375.5 199.4C375.5 201.2 377 202.7 378.8 202.7C380.7 202.7 382.1 201.2 382.1 199.4ZM358.3 199.4C358.3 197.6 356.8 196.1 355 196.1C353.2 196.1 351.7 197.6 351.7 199.4C351.7 201.2 353.2 202.7 355 202.7C356.9 202.7 358.3 201.2 358.3 199.4ZM334.5 199.4C334.5 197.6 333 196.1 331.2 196.1C329.4 196.1 327.9 197.6 327.9 199.4C327.9 201.2 329.4 202.7 331.2 202.7C333 202.7 334.5 201.2 334.5 199.4ZM310.7 199.4C310.7 197.6 309.2 196.1 307.4 196.1C305.6 196.1 304.1 197.6 304.1 199.4C304.1 201.2 305.6 202.7 307.4 202.7C309.2 202.7 310.7 201.2 310.7 199.4ZM286.9 199.4C286.9 197.6 285.4 196.1 283.6 196.1C281.8 196.1 280.3 197.6 280.3 199.4C280.3 201.2 281.8 202.7 283.6 202.7C285.4 202.7 286.9 201.2 286.9 199.4ZM263.1 199.4C263.1 197.6 261.6 196.1 259.8 196.1C258 196.1 256.5 197.6 256.5 199.4C256.5 201.2 258 202.7 259.8 202.7C261.6 202.7 263.1 201.2 263.1 199.4ZM239.3 199.4C239.3 197.6 237.8 196.1 236 196.1C234.2 196.1 232.7 197.6 232.7 199.4C232.7 201.2 234.2 202.7 236 202.7C237.8 202.7 239.3 201.2 239.3 199.4ZM215.5 199.4C215.5 197.6 214 196.1 212.2 196.1C210.4 196.1 208.9 197.6 208.9 199.4C208.9 201.2 210.4 202.7 212.2 202.7C214 202.7 215.5 201.2 215.5 199.4ZM191.7 199.4C191.7 197.6 190.2 196.1 188.4 196.1C186.6 196.1 185.1 197.6 185.1 199.4C185.1 201.2 186.6 202.7 188.4 202.7C190.2 202.7 191.7 201.2 191.7 199.4ZM167.9 199.4C167.9 197.6 166.4 196.1 164.6 196.1C162.8 196.1 161.3 197.6 161.3 199.4C161.3 201.2 162.8 202.7 164.6 202.7C166.4 202.7 167.9 201.2 167.9 199.4ZM144.1 199.4C144.1 197.6 142.6 196.1 140.8 196.1C139 196.1 137.5 197.6 137.5 199.4C137.5 201.2 139 202.7 140.8 202.7C142.6 202.7 144.1 201.2 144.1 199.4ZM120.3 199.4C120.3 197.6 118.8 196.1 117 196.1C115.2 196.1 113.7 197.6 113.7 199.4C113.7 201.2 115.2 202.7 117 202.7C118.8 202.7 120.3 201.2 120.3 199.4ZM96.5 199.4C96.5 197.6 95 196.1 93.2 196.1C91.4 196.1 89.9 197.6 89.9 199.4C89.9 201.2 91.4 202.7 93.2 202.7C95 202.7 96.5 201.2 96.5 199.4ZM72.7 199.4C72.7 197.6 71.2 196.1 69.4 196.1C67.6 196.1 66.1 197.6 66.1 199.4C66.1 201.2 67.6 202.7 69.4 202.7C71.2 202.7 72.7 201.2 72.7 199.4ZM48.9 199.4C48.9 197.6 47.4 196.1 45.6 196.1C43.8 196.1 42.3 197.6 42.3 199.4C42.3 201.2 43.8 202.7 45.6 202.7C47.4 202.7 48.9 201.2 48.9 199.4ZM25.1 199.4C25.1 197.6 23.6 196.1 21.8 196.1C20 196.1 18.5 197.6 18.5 199.4C18.5 201.2 20 202.7 21.8 202.7C23.6 202.7 25.1 201.2 25.1 199.4ZM1.3 199.4C1.3 197.6 -0.2 196.1 -2 196.1C-3.8 196.1 -5.3 197.6 -5.3 199.4C-5.3 201.2 -3.8 202.7 -2 202.7C-0.2 202.7 1.3 201.2 1.3 199.4ZM465.8 223.2C465.8 221.2 464.1 219.5 462.1 219.5C460.1 219.5 458.4 221.2 458.4 223.2C458.4 225.2 460.1 226.9 462.1 226.9C464.2 226.9 465.8 225.2 465.8 223.2ZM442 223.2C442 221.2 440.3 219.5 438.3 219.5C436.3 219.5 434.6 221.2 434.6 223.2C434.6 225.2 436.3 226.9 438.3 226.9C440.4 226.9 442 225.2 442 223.2ZM418.2 223.2C418.2 221.2 416.5 219.5 414.5 219.5C412.5 219.5 410.8 221.2 410.8 223.2C410.8 225.2 412.5 226.9 414.5 226.9C416.6 226.9 418.2 225.2 418.2 223.2ZM394.4 223.2C394.4 221.2 392.7 219.5 390.7 219.5C388.7 219.5 387 221.2 387 223.2C387 225.2 388.7 226.9 390.7 226.9C392.8 226.9 394.4 225.2 394.4 223.2ZM370.6 223.2C370.6 221.2 368.9 219.5 366.9 219.5C364.9 219.5 363.2 221.2 363.2 223.2C363.2 225.2 364.9 226.9 366.9 226.9C369 226.9 370.6 225.2 370.6 223.2ZM346.8 223.2C346.8 221.2 345.1 219.5 343.1 219.5C341.1 219.5 339.4 221.2 339.4 223.2C339.4 225.2 341.1 226.9 343.1 226.9C345.2 226.9 346.8 225.2 346.8 223.2ZM323 223.2C323 221.2 321.3 219.5 319.3 219.5C317.3 219.5 315.6 221.2 315.6 223.2C315.6 225.2 317.3 226.9 319.3 226.9C321.4 226.9 323 225.2 323 223.2ZM299.2 223.2C299.2 221.2 297.5 219.5 295.5 219.5C293.5 219.5 291.8 221.2 291.8 223.2C291.8 225.2 293.5 226.9 295.5 226.9C297.6 226.9 299.2 225.2 299.2 223.2ZM275.4 223.2C275.4 221.2 273.7 219.5 271.7 219.5C269.7 219.5 268 221.2 268 223.2C268 225.2 269.7 226.9 271.7 226.9C273.8 226.9 275.4 225.2 275.4 223.2ZM251.6 223.2C251.6 221.2 249.9 219.5 247.9 219.5C245.9 219.5 244.2 221.2 244.2 223.2C244.2 225.2 245.9 226.9 247.9 226.9C249.9 226.9 251.6 225.2 251.6 223.2ZM227.8 223.2C227.8 221.2 226.1 219.5 224.1 219.5C222.1 219.5 220.4 221.2 220.4 223.2C220.4 225.2 222.1 226.9 224.1 226.9C226.1 226.9 227.8 225.2 227.8 223.2ZM204 223.2C204 221.2 202.3 219.5 200.3 219.5C198.3 219.5 196.6 221.2 196.6 223.2C196.6 225.2 198.3 226.9 200.3 226.9C202.3 226.9 204 225.2 204 223.2ZM180.2 223.2C180.2 221.2 178.5 219.5 176.5 219.5C174.5 219.5 172.8 221.2 172.8 223.2C172.8 225.2 174.5 226.9 176.5 226.9C178.5 226.9 180.2 225.2 180.2 223.2ZM156.4 223.2C156.4 221.2 154.7 219.5 152.7 219.5C150.7 219.5 149 221.2 149 223.2C149 225.2 150.7 226.9 152.7 226.9C154.7 226.9 156.4 225.2 156.4 223.2ZM132.6 223.2C132.6 221.2 130.9 219.5 128.9 219.5C126.9 219.5 125.2 221.2 125.2 223.2C125.2 225.2 126.9 226.9 128.9 226.9C130.9 226.9 132.6 225.2 132.6 223.2ZM108.8 223.2C108.8 221.2 107.1 219.5 105.1 219.5C103.1 219.5 101.4 221.2 101.4 223.2C101.4 225.2 103.1 226.9 105.1 226.9C107.1 226.9 108.8 225.2 108.8 223.2ZM85 223.2C85 221.2 83.3 219.5 81.3 219.5C79.3 219.5 77.6 221.2 77.6 223.2C77.6 225.2 79.3 226.9 81.3 226.9C83.3 226.9 85 225.2 85 223.2ZM61.2 223.2C61.2 221.2 59.5 219.5 57.5 219.5C55.5 219.5 53.8 221.2 53.8 223.2C53.8 225.2 55.5 226.9 57.5 226.9C59.5 226.9 61.2 225.2 61.2 223.2ZM37.4 223.2C37.4 221.2 35.7 219.5 33.7 219.5C31.7 219.5 30 221.2 30 223.2C30 225.2 31.7 226.9 33.7 226.9C35.7 226.9 37.4 225.2 37.4 223.2ZM13.6 223.2C13.6 221.2 11.9 219.5 9.9 219.5C7.9 219.5 6.2 221.2 6.2 223.2C6.2 225.2 7.9 226.9 9.9 226.9C11.9 226.9 13.6 225.2 13.6 223.2ZM454.3 247C454.3 244.7 452.5 242.9 450.2 242.9C447.9 242.9 446.1 244.7 446.1 247C446.1 249.3 447.9 251.1 450.2 251.1C452.5 251.1 454.3 249.2 454.3 247ZM430.5 247C430.5 244.7 428.7 242.9 426.4 242.9C424.1 242.9 422.3 244.7 422.3 247C422.3 249.3 424.1 251.1 426.4 251.1C428.7 251.1 430.5 249.2 430.5 247ZM406.7 247C406.7 244.7 404.9 242.9 402.6 242.9C400.3 242.9 398.5 244.7 398.5 247C398.5 249.3 400.3 251.1 402.6 251.1C404.9 251.1 406.7 249.2 406.7 247ZM382.9 247C382.9 244.7 381.1 242.9 378.8 242.9C376.5 242.9 374.7 244.7 374.7 247C374.7 249.3 376.5 251.1 378.8 251.1C381.1 251.1 382.9 249.2 382.9 247ZM359.1 247C359.1 244.7 357.3 242.9 355 242.9C352.7 242.9 350.9 244.7 350.9 247C350.9 249.3 352.7 251.1 355 251.1C357.3 251.1 359.1 249.2 359.1 247ZM335.3 247C335.3 244.7 333.5 242.9 331.2 242.9C328.9 242.9 327.1 244.7 327.1 247C327.1 249.3 328.9 251.1 331.2 251.1C333.5 251.1 335.3 249.2 335.3 247ZM311.5 247C311.5 244.7 309.7 242.9 307.4 242.9C305.1 242.9 303.3 244.7 303.3 247C303.3 249.3 305.1 251.1 307.4 251.1C309.7 251.1 311.5 249.2 311.5 247ZM287.7 247C287.7 244.7 285.9 242.9 283.6 242.9C281.3 242.9 279.5 244.7 279.5 247C279.5 249.3 281.3 251.1 283.6 251.1C285.9 251.1 287.7 249.2 287.7 247ZM263.9 247C263.9 244.7 262.1 242.9 259.8 242.9C257.5 242.9 255.7 244.7 255.7 247C255.7 249.3 257.5 251.1 259.8 251.1C262.1 251.1 263.9 249.2 263.9 247ZM240.1 247C240.1 244.7 238.3 242.9 236 242.9C233.7 242.9 231.9 244.7 231.9 247C231.9 249.3 233.7 251.1 236 251.1C238.3 251.1 240.1 249.2 240.1 247ZM216.3 247C216.3 244.7 214.5 242.9 212.2 242.9C209.9 242.9 208.1 244.7 208.1 247C208.1 249.3 209.9 251.1 212.2 251.1C214.5 251.1 216.3 249.2 216.3 247ZM192.5 247C192.5 244.7 190.7 242.9 188.4 242.9C186.1 242.9 184.3 244.7 184.3 247C184.3 249.3 186.1 251.1 188.4 251.1C190.7 251.1 192.5 249.2 192.5 247ZM168.7 247C168.7 244.7 166.9 242.9 164.6 242.9C162.3 242.9 160.5 244.7 160.5 247C160.5 249.3 162.3 251.1 164.6 251.1C166.8 251.1 168.7 249.2 168.7 247ZM144.9 247C144.9 244.7 143.1 242.9 140.8 242.9C138.5 242.9 136.7 244.7 136.7 247C136.7 249.3 138.5 251.1 140.8 251.1C143 251.1 144.9 249.2 144.9 247ZM121.1 247C121.1 244.7 119.3 242.9 117 242.9C114.7 242.9 112.9 244.7 112.9 247C112.9 249.3 114.7 251.1 117 251.1C119.2 251.1 121.1 249.2 121.1 247ZM97.3 247C97.3 244.7 95.5 242.9 93.2 242.9C90.9 242.9 89.1 244.7 89.1 247C89.1 249.3 90.9 251.1 93.2 251.1C95.4 251.1 97.3 249.2 97.3 247ZM73.5 247C73.5 244.7 71.7 242.9 69.4 242.9C67.1 242.9 65.3 244.7 65.3 247C65.3 249.3 67.1 251.1 69.4 251.1C71.6 251.1 73.5 249.2 73.5 247ZM49.7 247C49.7 244.7 47.9 242.9 45.6 242.9C43.3 242.9 41.5 244.7 41.5 247C41.5 249.3 43.3 251.1 45.6 251.1C47.8 251.1 49.7 249.2 49.7 247ZM25.8 247C25.8 244.7 24 242.9 21.7 242.9C19.4 242.9 17.6 244.7 17.6 247C17.6 249.3 19.4 251.1 21.7 251.1C24 251.1 25.8 249.2 25.8 247ZM2 247C2 244.7 0.2 242.9 -2.1 242.9C-4.4 242.9 -6.2 244.7 -6.2 247C-6.2 249.3 -4.4 251.1 -2.1 251.1C0.2 251.1 2 249.2 2 247ZM466.6 270.8C466.6 268.3 464.6 266.3 462.1 266.3C459.6 266.3 457.6 268.3 457.6 270.8C457.6 273.3 459.6 275.3 462.1 275.3C464.6 275.3 466.6 273.3 466.6 270.8ZM442.8 270.8C442.8 268.3 440.8 266.3 438.3 266.3C435.8 266.3 433.8 268.3 433.8 270.8C433.8 273.3 435.8 275.3 438.3 275.3C440.8 275.3 442.8 273.3 442.8 270.8ZM419 270.8C419 268.3 417 266.3 414.5 266.3C412 266.3 410 268.3 410 270.8C410 273.3 412 275.3 414.5 275.3C417 275.3 419 273.3 419 270.8ZM395.2 270.8C395.2 268.3 393.2 266.3 390.7 266.3C388.2 266.3 386.2 268.3 386.2 270.8C386.2 273.3 388.2 275.3 390.7 275.3C393.2 275.3 395.2 273.3 395.2 270.8ZM371.4 270.8C371.4 268.3 369.4 266.3 366.9 266.3C364.4 266.3 362.4 268.3 362.4 270.8C362.4 273.3 364.4 275.3 366.9 275.3C369.4 275.3 371.4 273.3 371.4 270.8ZM347.6 270.8C347.6 268.3 345.6 266.3 343.1 266.3C340.6 266.3 338.6 268.3 338.6 270.8C338.6 273.3 340.6 275.3 343.1 275.3C345.6 275.3 347.6 273.3 347.6 270.8ZM323.8 270.8C323.8 268.3 321.8 266.3 319.3 266.3C316.8 266.3 314.8 268.3 314.8 270.8C314.8 273.3 316.8 275.3 319.3 275.3C321.8 275.3 323.8 273.3 323.8 270.8ZM300 270.8C300 268.3 298 266.3 295.5 266.3C293 266.3 291 268.3 291 270.8C291 273.3 293 275.3 295.5 275.3C298 275.3 300 273.3 300 270.8ZM276.2 270.8C276.2 268.3 274.2 266.3 271.7 266.3C269.2 266.3 267.2 268.3 267.2 270.8C267.2 273.3 269.2 275.3 271.7 275.3C274.2 275.3 276.2 273.3 276.2 270.8ZM252.4 270.8C252.4 268.3 250.4 266.3 247.9 266.3C245.4 266.3 243.4 268.3 243.4 270.8C243.4 273.3 245.4 275.3 247.9 275.3C250.4 275.3 252.4 273.3 252.4 270.8ZM228.6 270.8C228.6 268.3 226.6 266.3 224.1 266.3C221.6 266.3 219.6 268.3 219.6 270.8C219.6 273.3 221.6 275.3 224.1 275.3C226.6 275.3 228.6 273.3 228.6 270.8ZM204.8 270.8C204.8 268.3 202.8 266.3 200.3 266.3C197.8 266.3 195.8 268.3 195.8 270.8C195.8 273.3 197.8 275.3 200.3 275.3C202.8 275.3 204.8 273.3 204.8 270.8ZM181 270.8C181 268.3 179 266.3 176.5 266.3C174 266.3 172 268.3 172 270.8C172 273.3 174 275.3 176.5 275.3C179 275.3 181 273.3 181 270.8ZM157.2 270.8C157.2 268.3 155.2 266.3 152.7 266.3C150.2 266.3 148.2 268.3 148.2 270.8C148.2 273.3 150.2 275.3 152.7 275.3C155.2 275.3 157.2 273.3 157.2 270.8ZM133.4 270.8C133.4 268.3 131.4 266.3 128.9 266.3C126.4 266.3 124.4 268.3 124.4 270.8C124.4 273.3 126.4 275.3 128.9 275.3C131.4 275.3 133.4 273.3 133.4 270.8ZM109.6 270.8C109.6 268.3 107.6 266.3 105.1 266.3C102.6 266.3 100.6 268.3 100.6 270.8C100.6 273.3 102.6 275.3 105.1 275.3C107.6 275.3 109.6 273.3 109.6 270.8ZM85.8 270.8C85.8 268.3 83.8 266.3 81.3 266.3C78.8 266.3 76.8 268.3 76.8 270.8C76.8 273.3 78.8 275.3 81.3 275.3C83.7 275.3 85.8 273.3 85.8 270.8ZM62 270.8C62 268.3 60 266.3 57.5 266.3C55 266.3 53 268.3 53 270.8C53 273.3 55 275.3 57.5 275.3C59.9 275.3 62 273.3 62 270.8ZM38.1 270.8C38.1 268.3 36.1 266.3 33.6 266.3C31.1 266.3 29.1 268.3 29.1 270.8C29.1 273.3 31.1 275.3 33.6 275.3C36.1 275.3 38.1 273.3 38.1 270.8ZM14.3 270.8C14.3 268.3 12.3 266.3 9.8 266.3C7.3 266.3 5.3 268.3 5.3 270.8C5.3 273.3 7.3 275.3 9.8 275.3C12.3 275.3 14.3 273.3 14.3 270.8ZM455.2 294.6C455.2 291.9 453 289.7 450.2 289.7C447.5 289.7 445.3 291.9 445.3 294.6C445.3 297.3 447.5 299.6 450.2 299.6C453 299.5 455.2 297.3 455.2 294.6ZM431.4 294.6C431.4 291.9 429.2 289.7 426.4 289.7C423.7 289.7 421.5 291.9 421.5 294.6C421.5 297.3 423.7 299.6 426.4 299.6C429.2 299.5 431.4 297.3 431.4 294.6ZM407.6 294.6C407.6 291.9 405.4 289.7 402.6 289.7C399.9 289.7 397.6 291.9 397.6 294.6C397.6 297.3 399.8 299.6 402.6 299.6C405.4 299.5 407.6 297.3 407.6 294.6ZM383.8 294.6C383.8 291.9 381.6 289.7 378.8 289.7C376.1 289.7 373.8 291.9 373.8 294.6C373.8 297.3 376 299.6 378.8 299.6C381.6 299.5 383.8 297.3 383.8 294.6ZM360 294.6C360 291.9 357.8 289.7 355 289.7C352.3 289.7 350.1 291.9 350.1 294.6C350.1 297.3 352.3 299.6 355 299.6C357.8 299.5 360 297.3 360 294.6ZM336.2 294.6C336.2 291.9 334 289.7 331.3 289.7C328.6 289.7 326.3 291.9 326.3 294.6C326.3 297.3 328.5 299.6 331.3 299.6C334 299.5 336.2 297.3 336.2 294.6ZM312.4 294.6C312.4 291.9 310.2 289.7 307.5 289.7C304.8 289.7 302.5 291.9 302.5 294.6C302.5 297.3 304.7 299.6 307.5 299.6C310.2 299.5 312.4 297.3 312.4 294.6ZM288.6 294.6C288.6 291.9 286.4 289.7 283.6 289.7C280.9 289.7 278.7 291.9 278.7 294.6C278.7 297.3 280.9 299.6 283.6 299.6C286.3 299.5 288.6 297.3 288.6 294.6ZM264.8 294.6C264.8 291.9 262.6 289.7 259.8 289.7C257.1 289.7 254.9 291.9 254.9 294.6C254.9 297.3 257.1 299.6 259.8 299.6C262.5 299.5 264.8 297.3 264.8 294.6ZM241 294.6C241 291.9 238.8 289.7 236 289.7C233.3 289.7 231.1 291.9 231.1 294.6C231.1 297.3 233.3 299.6 236 299.6C238.7 299.5 241 297.3 241 294.6ZM217.1 294.6C217.1 291.9 214.9 289.7 212.1 289.7C209.3 289.7 207.1 291.9 207.1 294.6C207.1 297.3 209.3 299.6 212.1 299.6C214.9 299.6 217.1 297.3 217.1 294.6ZM193.3 294.6C193.3 291.9 191.1 289.7 188.3 289.7C185.5 289.7 183.3 291.9 183.3 294.6C183.3 297.3 185.5 299.6 188.3 299.6C191.1 299.6 193.3 297.3 193.3 294.6ZM169.5 294.6C169.5 291.9 167.3 289.7 164.5 289.7C161.8 289.7 159.6 291.9 159.6 294.6C159.6 297.3 161.8 299.6 164.5 299.6C167.3 299.5 169.5 297.3 169.5 294.6ZM145.7 294.6C145.7 291.9 143.5 289.7 140.8 289.7C138.1 289.7 135.8 291.9 135.8 294.6C135.8 297.3 138 299.6 140.8 299.6C143.6 299.6 145.7 297.3 145.7 294.6ZM121.9 294.6C121.9 291.9 119.7 289.7 117 289.7C114.3 289.7 112 291.9 112 294.6C112 297.3 114.2 299.6 117 299.6C119.7 299.5 121.9 297.3 121.9 294.6ZM98.1 294.6C98.1 291.9 95.9 289.7 93.2 289.7C90.5 289.7 88.2 291.9 88.2 294.6C88.2 297.3 90.4 299.6 93.2 299.6C95.9 299.5 98.1 297.3 98.1 294.6ZM74.3 294.6C74.3 291.9 72.1 289.7 69.4 289.7C66.7 289.7 64.4 291.9 64.4 294.6C64.4 297.3 66.6 299.6 69.4 299.6C72.1 299.5 74.3 297.3 74.3 294.6ZM50.5 294.6C50.5 291.9 48.3 289.7 45.6 289.7C42.9 289.7 40.6 291.9 40.6 294.6C40.6 297.3 42.8 299.6 45.6 299.6C48.3 299.5 50.5 297.3 50.5 294.6ZM26.7 294.6C26.7 291.9 24.5 289.7 21.8 289.7C19.1 289.7 16.8 291.9 16.8 294.6C16.8 297.3 19 299.6 21.8 299.6C24.5 299.5 26.7 297.3 26.7 294.6ZM2.9 294.6C2.9 291.9 0.7 289.7 -2 289.7C-4.7 289.7 -7 291.9 -7 294.6C-7 297.3 -4.8 299.6 -2 299.6C0.7 299.5 2.9 297.3 2.9 294.6ZM467.5 318.4C467.5 315.4 465.1 313.1 462.2 313.1C459.2 313.1 456.9 315.5 456.9 318.4C456.9 321.4 459.3 323.7 462.2 323.7C465.1 323.8 467.5 321.4 467.5 318.4ZM443.7 318.4C443.7 315.4 441.3 313.1 438.4 313.1C435.4 313.1 433.1 315.5 433.1 318.4C433.1 321.4 435.5 323.7 438.4 323.7C441.3 323.8 443.7 321.4 443.7 318.4ZM419.9 318.4C419.9 315.4 417.5 313.1 414.6 313.1C411.6 313.1 409.3 315.5 409.3 318.4C409.3 321.4 411.7 323.7 414.6 323.7C417.5 323.8 419.9 321.4 419.9 318.4ZM396.1 318.4C396.1 315.4 393.7 313.1 390.8 313.1C387.8 313.1 385.5 315.5 385.5 318.4C385.5 321.4 387.9 323.7 390.8 323.7C393.7 323.8 396.1 321.4 396.1 318.4ZM372.3 318.4C372.3 315.4 369.9 313.1 367 313.1C364 313.1 361.7 315.5 361.7 318.4C361.7 321.4 364.1 323.7 367 323.7C369.9 323.8 372.3 321.4 372.3 318.4ZM348.5 318.4C348.5 315.4 346.1 313.1 343.2 313.1C340.2 313.1 337.9 315.5 337.9 318.4C337.9 321.4 340.3 323.7 343.2 323.7C346.1 323.8 348.5 321.4 348.5 318.4ZM324.7 318.4C324.7 315.4 322.3 313.1 319.4 313.1C316.4 313.1 314.1 315.5 314.1 318.4C314.1 321.4 316.5 323.7 319.4 323.7C322.3 323.8 324.7 321.4 324.7 318.4ZM300.9 318.4C300.9 315.4 298.5 313.1 295.6 313.1C292.6 313.1 290.3 315.5 290.3 318.4C290.3 321.4 292.7 323.7 295.6 323.7C298.5 323.8 300.9 321.4 300.9 318.4ZM277.1 318.4C277.1 315.4 274.7 313.1 271.8 313.1C268.8 313.1 266.5 315.5 266.5 318.4C266.5 321.4 268.9 323.7 271.8 323.7C274.7 323.8 277.1 321.4 277.1 318.4ZM253.3 318.4C253.3 315.4 250.9 313.1 248 313.1C245 313.1 242.7 315.5 242.7 318.4C242.7 321.4 245.1 323.7 248 323.7C250.9 323.8 253.3 321.4 253.3 318.4ZM229.4 318.4C229.4 315.4 227 313.1 224.1 313.1C221.1 313.1 218.8 315.5 218.8 318.4C218.8 321.4 221.2 323.7 224.1 323.7C227.1 323.8 229.4 321.4 229.4 318.4ZM205.6 318.4C205.6 315.4 203.2 313.1 200.3 313.1C197.3 313.1 195 315.5 195 318.4C195 321.4 197.4 323.7 200.3 323.7C203.2 323.8 205.6 321.4 205.6 318.4ZM181.8 318.4C181.8 315.4 179.4 313.1 176.5 313.1C173.5 313.1 171.2 315.5 171.2 318.4C171.2 321.4 173.6 323.7 176.5 323.7C179.4 323.8 181.8 321.4 181.8 318.4ZM158 318.4C158 315.4 155.6 313.1 152.7 313.1C149.7 313.1 147.4 315.5 147.4 318.4C147.4 321.4 149.8 323.7 152.7 323.7C155.6 323.8 158 321.4 158 318.4ZM134.2 318.4C134.2 315.4 131.8 313.1 128.9 313.1C125.9 313.1 123.6 315.5 123.6 318.4C123.6 321.4 126 323.7 128.9 323.7C131.8 323.8 134.2 321.4 134.2 318.4ZM110.4 318.4C110.4 315.4 108 313.1 105.1 313.1C102.1 313.1 99.7 315.5 99.7 318.4C99.7 321.4 102.1 323.7 105.1 323.7C108 323.8 110.4 321.4 110.4 318.4ZM86.6 318.4C86.6 315.4 84.2 313.1 81.3 313.1C78.3 313.1 75.9 315.5 75.9 318.4C75.9 321.4 78.3 323.7 81.3 323.7C84.2 323.8 86.6 321.4 86.6 318.4ZM62.8 318.4C62.8 315.4 60.4 313.1 57.5 313.1C54.5 313.1 52.1 315.5 52.1 318.4C52.1 321.4 54.5 323.7 57.5 323.7C60.4 323.8 62.8 321.4 62.8 318.4ZM39 318.4C39 315.4 36.6 313.1 33.7 313.1C30.7 313.1 28.3 315.5 28.3 318.4C28.3 321.4 30.7 323.7 33.7 323.7C36.6 323.8 39 321.4 39 318.4ZM15.2 318.4C15.2 315.4 12.8 313.1 9.9 313.1C6.9 313.1 4.6 315.5 4.6 318.4C4.6 321.4 7 323.7 9.9 323.7C12.8 323.8 15.2 321.4 15.2 318.4ZM937.9 -14.7C937.8 -14.7 937.8 -14.8 937.8 -14.8C937.8 -14.9 937.9 -14.9 937.9 -14.9C938 -14.9 938 -14.8 938 -14.8C938.1 -14.8 938 -14.7 937.9 -14.7ZM914.3 -14.9C914.3 -15 914.2 -15 914.2 -15C914.1 -15 914.1 -14.9 914.1 -14.9C914.1 -14.8 914.2 -14.8 914.2 -14.8C914.2 -14.7 914.3 -14.8 914.3 -14.9ZM890.4 -14.9C890.4 -15 890.3 -15 890.3 -15C890.2 -15 890.2 -14.9 890.2 -14.9C890.2 -14.8 890.3 -14.8 890.3 -14.8C890.3 -14.8 890.4 -14.8 890.4 -14.9ZM926.4 8.9C926.4 8.7 926.2 8.5 926 8.5C925.8 8.5 925.6 8.7 925.6 8.9C925.6 9.1 925.8 9.3 926 9.3C926.2 9.3 926.4 9.2 926.4 8.9ZM902.6 8.9C902.6 8.7 902.4 8.5 902.2 8.5C902 8.5 901.8 8.7 901.8 8.9C901.8 9.1 902 9.3 902.2 9.3C902.4 9.3 902.6 9.2 902.6 8.9ZM878.8 8.9C878.8 8.7 878.6 8.5 878.4 8.5C878.2 8.5 878 8.7 878 8.9C878 9.1 878.2 9.3 878.4 9.3C878.6 9.3 878.8 9.2 878.8 8.9ZM938.7 32.7C938.7 32.3 938.4 32 938 32C937.6 32 937.3 32.3 937.3 32.7C937.3 33.1 937.6 33.4 938 33.4C938.3 33.5 938.7 33.1 938.7 32.7ZM914.8 32.7C914.8 32.3 914.5 32 914.1 32C913.7 32 913.4 32.3 913.4 32.7C913.4 33.1 913.7 33.4 914.1 33.4C914.5 33.5 914.8 33.1 914.8 32.7ZM891 32.7C891 32.3 890.7 32 890.3 32C889.9 32 889.6 32.3 889.6 32.7C889.6 33.1 889.9 33.4 890.3 33.4C890.7 33.5 891 33.1 891 32.7ZM927.1 56.5C927.1 55.9 926.6 55.4 926 55.4C925.4 55.4 924.9 55.9 924.9 56.5C924.9 57.1 925.4 57.6 926 57.6C926.6 57.6 927.1 57.1 927.1 56.5ZM903.3 56.5C903.3 55.9 902.8 55.4 902.2 55.4C901.6 55.4 901.1 55.9 901.1 56.5C901.1 57.1 901.6 57.6 902.2 57.6C902.8 57.6 903.3 57.1 903.3 56.5ZM879.5 56.5C879.5 55.9 879 55.4 878.4 55.4C877.8 55.4 877.3 55.9 877.3 56.5C877.3 57.1 877.8 57.6 878.4 57.6C879 57.6 879.5 57.1 879.5 56.5ZM939.3 80.4C939.3 79.6 938.7 79 937.9 79C937.1 79 936.5 79.6 936.5 80.4C936.5 81.2 937.1 81.8 937.9 81.8C938.7 81.7 939.3 81.1 939.3 80.4ZM915.5 80.4C915.5 79.6 914.9 79 914.1 79C913.3 79 912.7 79.6 912.7 80.4C912.7 81.2 913.3 81.8 914.1 81.8C914.9 81.7 915.5 81.1 915.5 80.4ZM891.7 80.4C891.7 79.6 891.1 79 890.3 79C889.5 79 888.9 79.6 888.9 80.4C888.9 81.2 889.5 81.8 890.3 81.8C891.1 81.7 891.7 81.1 891.7 80.4ZM927.8 104.2C927.8 103.2 927 102.4 926 102.4C925 102.4 924.2 103.2 924.2 104.2C924.2 105.2 925 106 926 106C927 105.9 927.8 105.1 927.8 104.2ZM904 104.2C904 103.2 903.2 102.4 902.2 102.4C901.2 102.4 900.4 103.2 900.4 104.2C900.4 105.2 901.2 106 902.2 106C903.2 105.9 904 105.1 904 104.2ZM880.2 104.2C880.2 103.2 879.4 102.4 878.4 102.4C877.4 102.4 876.6 103.2 876.6 104.2C876.6 105.2 877.4 106 878.4 106C879.4 105.9 880.2 105.1 880.2 104.2ZM940 128C940 126.8 939.1 125.9 937.9 125.9C936.7 125.9 935.8 126.8 935.8 128C935.8 129.2 936.7 130.1 937.9 130.1C939.1 130.1 940 129.1 940 128ZM916.2 128C916.2 126.8 915.3 125.9 914.1 125.9C912.9 125.9 912 126.8 912 128C912 129.2 912.9 130.1 914.1 130.1C915.3 130.1 916.2 129.1 916.2 128ZM892.4 128C892.4 126.8 891.5 125.9 890.3 125.9C889.1 125.9 888.2 126.8 888.2 128C888.2 129.2 889.1 130.1 890.3 130.1C891.5 130.1 892.4 129.1 892.4 128ZM928.5 151.8C928.5 150.4 927.4 149.3 926 149.3C924.6 149.3 923.5 150.4 923.5 151.8C923.5 153.2 924.6 154.3 926 154.3C927.4 154.3 928.5 153.2 928.5 151.8ZM904.7 151.8C904.7 150.4 903.6 149.3 902.2 149.3C900.8 149.3 899.7 150.4 899.7 151.8C899.7 153.2 900.8 154.3 902.2 154.3C903.6 154.3 904.7 153.2 904.7 151.8ZM880.9 151.8C880.9 150.4 879.8 149.3 878.4 149.3C877 149.3 875.9 150.4 875.9 151.8C875.9 153.2 877 154.3 878.4 154.3C879.8 154.3 880.9 153.2 880.9 151.8ZM940.8 175.6C940.8 174 939.5 172.7 937.9 172.7C936.3 172.7 935 174 935 175.6C935 177.2 936.3 178.5 937.9 178.5C939.5 178.5 940.8 177.2 940.8 175.6ZM917 175.6C917 174 915.7 172.7 914.1 172.7C912.5 172.7 911.2 174 911.2 175.6C911.2 177.2 912.5 178.5 914.1 178.5C915.7 178.5 917 177.2 917 175.6ZM893.2 175.6C893.2 174 891.9 172.7 890.3 172.7C888.7 172.7 887.4 174 887.4 175.6C887.4 177.2 888.7 178.5 890.3 178.5C891.9 178.5 893.2 177.2 893.2 175.6ZM929.3 199.4C929.3 197.6 927.8 196.1 926 196.1C924.2 196.1 922.7 197.6 922.7 199.4C922.7 201.2 924.2 202.7 926 202.7C927.8 202.7 929.3 201.2 929.3 199.4ZM905.5 199.4C905.5 197.6 904 196.1 902.2 196.1C900.4 196.1 898.9 197.6 898.9 199.4C898.9 201.2 900.4 202.7 902.2 202.7C904 202.7 905.5 201.2 905.5 199.4ZM881.7 199.4C881.7 197.6 880.2 196.1 878.4 196.1C876.6 196.1 875.1 197.6 875.1 199.4C875.1 201.2 876.6 202.7 878.4 202.7C880.2 202.7 881.7 201.2 881.7 199.4ZM866.6 -14.9C866.6 -15 866.5 -15 866.5 -15C866.4 -15 866.4 -14.9 866.4 -14.9C866.4 -14.8 866.5 -14.8 866.5 -14.8C866.6 -14.7 866.6 -14.8 866.6 -14.9ZM842.8 -14.9C842.8 -15 842.7 -15 842.7 -15C842.6 -15 842.6 -14.9 842.6 -14.9C842.6 -14.8 842.7 -14.8 842.7 -14.8C842.8 -14.7 842.8 -14.8 842.8 -14.9ZM819 -14.9C819 -15 818.9 -15 818.9 -15C818.8 -15 818.8 -14.9 818.8 -14.9C818.8 -14.8 818.9 -14.8 818.9 -14.8C819 -14.7 819 -14.8 819 -14.9ZM795.2 -14.9C795.2 -15 795.1 -15 795.1 -15C795 -15 795 -14.9 795 -14.9C795 -14.8 795.1 -14.8 795.1 -14.8C795.2 -14.7 795.2 -14.8 795.2 -14.9ZM771.4 -14.9C771.4 -15 771.3 -15 771.3 -15C771.2 -15 771.2 -14.9 771.2 -14.9C771.2 -14.8 771.3 -14.8 771.3 -14.8C771.3 -14.8 771.4 -14.8 771.4 -14.9ZM747.6 -14.9C747.6 -15 747.5 -15 747.5 -15C747.4 -15 747.4 -14.9 747.4 -14.9C747.4 -14.8 747.5 -14.8 747.5 -14.8C747.5 -14.8 747.6 -14.8 747.6 -14.9ZM723.8 -14.9C723.8 -15 723.7 -15 723.7 -15C723.6 -15 723.6 -14.9 723.6 -14.9C723.6 -14.8 723.7 -14.8 723.7 -14.8C723.8 -14.7 723.8 -14.8 723.8 -14.9ZM700 -14.9C700 -15 699.9 -15 699.9 -15C699.8 -15 699.8 -14.9 699.8 -14.9C699.8 -14.8 699.9 -14.8 699.9 -14.8C700 -14.7 700 -14.8 700 -14.9ZM676.2 -14.9C676.2 -15 676.1 -15 676.1 -15C676 -15 676 -14.9 676 -14.9C676 -14.8 676.1 -14.8 676.1 -14.8C676.1 -14.8 676.2 -14.8 676.2 -14.9ZM652.4 -14.9C652.4 -15 652.3 -15 652.3 -15C652.2 -15 652.2 -14.9 652.2 -14.9C652.2 -14.8 652.3 -14.8 652.3 -14.8C652.3 -14.8 652.4 -14.8 652.4 -14.9ZM628.6 -14.9C628.6 -15 628.5 -15 628.5 -15C628.4 -15 628.4 -14.9 628.4 -14.9C628.4 -14.8 628.5 -14.8 628.5 -14.8C628.5 -14.7 628.6 -14.8 628.6 -14.9ZM604.8 -14.9C604.8 -15 604.7 -15 604.7 -15C604.6 -15 604.6 -14.9 604.6 -14.9C604.6 -14.8 604.7 -14.8 604.7 -14.8C604.7 -14.7 604.8 -14.8 604.8 -14.9ZM581 -14.9C581 -15 580.9 -15 580.9 -15C580.8 -15 580.8 -14.9 580.8 -14.9C580.8 -14.8 580.9 -14.8 580.9 -14.8C580.9 -14.7 581 -14.8 581 -14.9ZM557.2 -14.9C557.2 -15 557.1 -15 557.1 -15C557 -15 557 -14.9 557 -14.9C557 -14.8 557.1 -14.8 557.1 -14.8C557.1 -14.7 557.2 -14.8 557.2 -14.9ZM533.4 -14.9C533.4 -15 533.3 -15 533.3 -15C533.2 -15 533.2 -14.9 533.2 -14.9C533.2 -14.8 533.3 -14.8 533.3 -14.8C533.3 -14.7 533.4 -14.8 533.4 -14.9ZM509.6 -14.9C509.6 -15 509.5 -15 509.5 -15C509.4 -15 509.4 -14.9 509.4 -14.9C509.4 -14.8 509.5 -14.8 509.5 -14.8C509.5 -14.7 509.6 -14.8 509.6 -14.9ZM485.8 -14.9C485.8 -15 485.7 -15 485.7 -15C485.6 -15 485.6 -14.9 485.6 -14.9C485.6 -14.8 485.7 -14.8 485.7 -14.8C485.7 -14.7 485.8 -14.8 485.8 -14.9ZM855 8.9C855 8.7 854.8 8.5 854.6 8.5C854.4 8.5 854.2 8.7 854.2 8.9C854.2 9.1 854.4 9.3 854.6 9.3C854.8 9.3 855 9.2 855 8.9ZM831.2 8.9C831.2 8.7 831 8.5 830.8 8.5C830.6 8.5 830.4 8.7 830.4 8.9C830.4 9.1 830.6 9.3 830.8 9.3C831 9.3 831.2 9.2 831.2 8.9ZM807.4 8.9C807.4 8.7 807.2 8.5 807 8.5C806.8 8.5 806.6 8.7 806.6 8.9C806.6 9.1 806.8 9.3 807 9.3C807.2 9.3 807.4 9.2 807.4 8.9ZM783.6 8.9C783.6 8.7 783.4 8.5 783.2 8.5C783 8.5 782.8 8.7 782.8 8.9C782.8 9.1 783 9.3 783.2 9.3C783.4 9.3 783.6 9.2 783.6 8.9ZM759.8 8.9C759.8 8.7 759.6 8.5 759.4 8.5C759.2 8.5 759 8.7 759 8.9C759 9.1 759.2 9.3 759.4 9.3C759.6 9.3 759.8 9.2 759.8 8.9ZM736 8.9C736 8.7 735.8 8.5 735.6 8.5C735.4 8.5 735.2 8.7 735.2 8.9C735.2 9.1 735.4 9.3 735.6 9.3C735.8 9.3 736 9.2 736 8.9ZM712.2 8.9C712.2 8.7 712 8.5 711.8 8.5C711.6 8.5 711.4 8.7 711.4 8.9C711.4 9.1 711.6 9.3 711.8 9.3C712 9.3 712.2 9.2 712.2 8.9ZM688.4 8.9C688.4 8.7 688.2 8.5 688 8.5C687.8 8.5 687.6 8.7 687.6 8.9C687.6 9.1 687.8 9.3 688 9.3C688.2 9.3 688.4 9.2 688.4 8.9ZM664.6 8.9C664.6 8.7 664.4 8.5 664.2 8.5C664 8.5 663.8 8.7 663.8 8.9C663.8 9.1 664 9.3 664.2 9.3C664.4 9.3 664.6 9.2 664.6 8.9ZM640.8 8.9C640.8 8.7 640.6 8.5 640.4 8.5C640.2 8.5 640 8.7 640 8.9C640 9.1 640.2 9.3 640.4 9.3C640.6 9.3 640.8 9.2 640.8 8.9ZM617 8.9C617 8.7 616.8 8.5 616.6 8.5C616.4 8.5 616.2 8.7 616.2 8.9C616.2 9.1 616.4 9.3 616.6 9.3C616.8 9.3 617 9.2 617 8.9ZM593.2 8.9C593.2 8.7 593 8.5 592.8 8.5C592.6 8.5 592.4 8.7 592.4 8.9C592.4 9.1 592.6 9.3 592.8 9.3C593 9.3 593.2 9.2 593.2 8.9ZM569.3 8.9C569.3 8.7 569.1 8.5 568.9 8.5C568.7 8.5 568.5 8.7 568.5 8.9C568.5 9.1 568.7 9.3 568.9 9.3C569.2 9.3 569.3 9.2 569.3 8.9ZM545.5 8.9C545.5 8.7 545.3 8.5 545.1 8.5C544.9 8.5 544.7 8.7 544.7 8.9C544.7 9.1 544.9 9.3 545.1 9.3C545.4 9.3 545.5 9.2 545.5 8.9ZM521.7 8.9C521.7 8.7 521.5 8.5 521.3 8.5C521.1 8.5 520.9 8.7 520.9 8.9C520.9 9.1 521.1 9.3 521.3 9.3C521.6 9.3 521.7 9.2 521.7 8.9ZM497.9 8.9C497.9 8.7 497.7 8.5 497.5 8.5C497.3 8.5 497.1 8.7 497.1 8.9C497.1 9.1 497.3 9.3 497.5 9.3C497.8 9.3 497.9 9.2 497.9 8.9ZM474.1 8.9C474.1 8.7 473.9 8.5 473.7 8.5C473.5 8.5 473.3 8.7 473.3 8.9C473.3 9.1 473.5 9.3 473.7 9.3C473.9 9.3 474.1 9.2 474.1 8.9ZM867.2 32.7C867.2 32.3 866.9 32 866.5 32C866.1 32 865.8 32.3 865.8 32.7C865.8 33.1 866.1 33.4 866.5 33.4C866.9 33.5 867.2 33.1 867.2 32.7ZM843.4 32.7C843.4 32.3 843.1 32 842.7 32C842.3 32 842 32.3 842 32.7C842 33.1 842.3 33.4 842.7 33.4C843.1 33.5 843.4 33.1 843.4 32.7ZM819.6 32.7C819.6 32.3 819.3 32 818.9 32C818.5 32 818.2 32.3 818.2 32.7C818.2 33.1 818.5 33.4 818.9 33.4C819.3 33.5 819.6 33.1 819.6 32.7ZM795.8 32.7C795.8 32.3 795.5 32 795.1 32C794.7 32 794.4 32.3 794.4 32.7C794.4 33.1 794.7 33.4 795.1 33.4C795.5 33.5 795.8 33.1 795.8 32.7ZM772 32.7C772 32.3 771.7 32 771.3 32C770.9 32 770.6 32.3 770.6 32.7C770.6 33.1 770.9 33.4 771.3 33.4C771.7 33.5 772 33.1 772 32.7ZM748.2 32.7C748.2 32.3 747.9 32 747.5 32C747.1 32 746.8 32.3 746.8 32.7C746.8 33.1 747.1 33.4 747.5 33.4C747.9 33.5 748.2 33.1 748.2 32.7ZM724.4 32.7C724.4 32.3 724.1 32 723.7 32C723.3 32 723 32.3 723 32.7C723 33.1 723.3 33.4 723.7 33.4C724.1 33.5 724.4 33.1 724.4 32.7ZM700.6 32.7C700.6 32.3 700.3 32 699.9 32C699.5 32 699.2 32.3 699.2 32.7C699.2 33.1 699.5 33.4 699.9 33.4C700.3 33.5 700.6 33.1 700.6 32.7ZM676.8 32.7C676.8 32.3 676.5 32 676.1 32C675.7 32 675.4 32.3 675.4 32.7C675.4 33.1 675.7 33.4 676.1 33.4C676.5 33.5 676.8 33.1 676.8 32.7ZM653 32.7C653 32.3 652.7 32 652.3 32C651.9 32 651.6 32.3 651.6 32.7C651.6 33.1 651.9 33.4 652.3 33.4C652.7 33.5 653 33.1 653 32.7ZM629.2 32.7C629.2 32.3 628.9 32 628.5 32C628.1 32 627.8 32.3 627.8 32.7C627.8 33.1 628.1 33.4 628.5 33.4C628.9 33.5 629.2 33.1 629.2 32.7ZM605.4 32.7C605.4 32.3 605.1 32 604.7 32C604.3 32 604 32.3 604 32.7C604 33.1 604.3 33.4 604.7 33.4C605.1 33.5 605.4 33.1 605.4 32.7ZM581.6 32.7C581.6 32.3 581.3 32 580.9 32C580.5 32 580.2 32.3 580.2 32.7C580.2 33.1 580.5 33.4 580.9 33.4C581.3 33.5 581.6 33.1 581.6 32.7ZM557.8 32.7C557.8 32.3 557.5 32 557.1 32C556.7 32 556.4 32.3 556.4 32.7C556.4 33.1 556.7 33.4 557.1 33.4C557.4 33.5 557.8 33.1 557.8 32.7ZM534 32.7C534 32.3 533.7 32 533.3 32C532.9 32 532.6 32.3 532.6 32.7C532.6 33.1 532.9 33.4 533.3 33.4C533.6 33.5 534 33.1 534 32.7ZM510.2 32.7C510.2 32.3 509.9 32 509.5 32C509.1 32 508.8 32.3 508.8 32.7C508.8 33.1 509.1 33.4 509.5 33.4C509.8 33.5 510.2 33.1 510.2 32.7ZM486.4 32.7C486.4 32.3 486.1 32 485.7 32C485.3 32 485 32.3 485 32.7C485 33.1 485.3 33.4 485.7 33.4C486 33.5 486.4 33.1 486.4 32.7ZM855.7 56.5C855.7 55.9 855.2 55.4 854.6 55.4C854 55.4 853.5 55.9 853.5 56.5C853.5 57.1 854 57.6 854.6 57.6C855.2 57.6 855.7 57.1 855.7 56.5ZM831.9 56.5C831.9 55.9 831.4 55.4 830.8 55.4C830.2 55.4 829.7 55.9 829.7 56.5C829.7 57.1 830.2 57.6 830.8 57.6C831.4 57.6 831.9 57.1 831.9 56.5ZM808.1 56.5C808.1 55.9 807.6 55.4 807 55.4C806.4 55.4 805.9 55.9 805.9 56.5C805.9 57.1 806.4 57.6 807 57.6C807.6 57.6 808.1 57.1 808.1 56.5ZM784.3 56.5C784.3 55.9 783.8 55.4 783.2 55.4C782.6 55.4 782.1 55.9 782.1 56.5C782.1 57.1 782.6 57.6 783.2 57.6C783.8 57.6 784.3 57.1 784.3 56.5ZM760.4 56.5C760.4 55.9 759.9 55.4 759.3 55.4C758.7 55.4 758.2 55.9 758.2 56.5C758.2 57.1 758.7 57.6 759.3 57.6C759.9 57.6 760.4 57.1 760.4 56.5ZM736.6 56.5C736.6 55.9 736.1 55.4 735.5 55.4C734.9 55.4 734.4 55.9 734.4 56.5C734.4 57.1 734.9 57.6 735.5 57.6C736.2 57.6 736.6 57.1 736.6 56.5ZM712.8 56.5C712.8 55.9 712.3 55.4 711.7 55.4C711.1 55.4 710.6 55.9 710.6 56.5C710.6 57.1 711.1 57.6 711.7 57.6C712.4 57.6 712.8 57.1 712.8 56.5ZM689 56.5C689 55.9 688.5 55.4 687.9 55.4C687.3 55.4 686.8 55.9 686.8 56.5C686.8 57.1 687.3 57.6 687.9 57.6C688.6 57.6 689 57.1 689 56.5ZM665.2 56.5C665.2 55.9 664.7 55.4 664.1 55.4C663.5 55.4 663 55.9 663 56.5C663 57.1 663.5 57.6 664.1 57.6C664.8 57.6 665.2 57.1 665.2 56.5ZM641.4 56.5C641.4 55.9 640.9 55.4 640.3 55.4C639.7 55.4 639.2 55.9 639.2 56.5C639.2 57.1 639.7 57.6 640.3 57.6C640.9 57.6 641.4 57.1 641.4 56.5ZM617.6 56.5C617.6 55.9 617.1 55.4 616.5 55.4C615.9 55.4 615.4 55.9 615.4 56.5C615.4 57.1 615.9 57.6 616.5 57.6C617.1 57.6 617.6 57.1 617.6 56.5ZM593.8 56.5C593.8 55.9 593.3 55.4 592.7 55.4C592.1 55.4 591.6 55.9 591.6 56.5C591.6 57.1 592.1 57.6 592.7 57.6C593.3 57.6 593.8 57.1 593.8 56.5ZM570 56.5C570 55.9 569.5 55.4 568.9 55.4C568.3 55.4 567.8 55.9 567.8 56.5C567.8 57.1 568.3 57.6 568.9 57.6C569.5 57.6 570 57.1 570 56.5ZM546.2 56.5C546.2 55.9 545.7 55.4 545.1 55.4C544.5 55.4 544 55.9 544 56.5C544 57.1 544.5 57.6 545.1 57.6C545.7 57.6 546.2 57.1 546.2 56.5ZM522.4 56.5C522.4 55.9 521.9 55.4 521.3 55.4C520.7 55.4 520.2 55.9 520.2 56.5C520.2 57.1 520.7 57.6 521.3 57.6C521.9 57.6 522.4 57.1 522.4 56.5ZM498.6 56.5C498.6 55.9 498.1 55.4 497.5 55.4C496.9 55.4 496.4 55.9 496.4 56.5C496.4 57.1 496.9 57.6 497.5 57.6C498.1 57.6 498.6 57.1 498.6 56.5ZM474.8 56.5C474.8 55.9 474.3 55.4 473.7 55.4C473.1 55.4 472.6 55.9 472.6 56.5C472.6 57.1 473.1 57.6 473.7 57.6C474.3 57.6 474.8 57.1 474.8 56.5ZM867.9 80.4C867.9 79.6 867.3 79 866.5 79C865.7 79 865.1 79.6 865.1 80.4C865.1 81.2 865.7 81.8 866.5 81.8C867.3 81.7 867.9 81.1 867.9 80.4ZM844.1 80.4C844.1 79.6 843.5 79 842.7 79C841.9 79 841.3 79.6 841.3 80.4C841.3 81.2 841.9 81.8 842.7 81.8C843.5 81.8 844.1 81.1 844.1 80.4ZM820.3 80.4C820.3 79.6 819.7 79 818.9 79C818.1 79 817.5 79.6 817.5 80.4C817.5 81.2 818.1 81.8 818.9 81.8C819.7 81.7 820.3 81.1 820.3 80.4ZM796.5 80.4C796.5 79.6 795.9 79 795.1 79C794.3 79 793.7 79.6 793.7 80.4C793.7 81.2 794.3 81.8 795.1 81.8C795.9 81.7 796.5 81.1 796.5 80.4ZM772.7 80.4C772.7 79.6 772.1 79 771.3 79C770.5 79 769.9 79.6 769.9 80.4C769.9 81.2 770.5 81.8 771.3 81.8C772.1 81.7 772.7 81.1 772.7 80.4ZM748.9 80.4C748.9 79.6 748.3 79 747.5 79C746.7 79 746.1 79.6 746.1 80.4C746.1 81.2 746.7 81.8 747.5 81.8C748.3 81.7 748.9 81.1 748.9 80.4ZM725.1 80.4C725.1 79.6 724.5 79 723.7 79C722.9 79 722.3 79.6 722.3 80.4C722.3 81.2 722.9 81.8 723.7 81.8C724.4 81.7 725.1 81.1 725.1 80.4ZM701.3 80.4C701.3 79.6 700.7 79 699.9 79C699.1 79 698.5 79.6 698.5 80.4C698.5 81.2 699.1 81.8 699.9 81.8C700.6 81.7 701.3 81.1 701.3 80.4ZM677.5 80.4C677.5 79.6 676.9 79 676.1 79C675.3 79 674.7 79.6 674.7 80.4C674.7 81.2 675.3 81.8 676.1 81.8C676.8 81.7 677.5 81.1 677.5 80.4ZM653.7 80.4C653.7 79.6 653.1 79 652.3 79C651.5 79 650.9 79.6 650.9 80.4C650.9 81.2 651.5 81.8 652.3 81.8C653 81.7 653.7 81.1 653.7 80.4ZM629.8 80.4C629.8 79.6 629.2 79 628.4 79C627.6 79 627 79.6 627 80.4C627 81.2 627.6 81.8 628.4 81.8C629.2 81.7 629.8 81.1 629.8 80.4ZM606 80.4C606 79.6 605.4 79 604.6 79C603.8 79 603.2 79.6 603.2 80.4C603.2 81.2 603.8 81.8 604.6 81.8C605.4 81.8 606 81.1 606 80.4ZM582.2 80.4C582.2 79.6 581.6 79 580.8 79C580 79 579.4 79.6 579.4 80.4C579.4 81.2 580 81.8 580.8 81.8C581.6 81.7 582.2 81.1 582.2 80.4ZM558.4 80.4C558.4 79.6 557.8 79 557 79C556.2 79 555.6 79.6 555.6 80.4C555.6 81.2 556.2 81.8 557 81.8C557.8 81.7 558.4 81.1 558.4 80.4ZM534.6 80.4C534.6 79.6 534 79 533.2 79C532.4 79 531.8 79.6 531.8 80.4C531.8 81.2 532.4 81.8 533.2 81.8C534 81.7 534.6 81.1 534.6 80.4ZM510.8 80.4C510.8 79.6 510.2 79 509.4 79C508.6 79 508 79.6 508 80.4C508 81.2 508.6 81.8 509.4 81.8C510.2 81.7 510.8 81.1 510.8 80.4ZM487 80.4C487 79.6 486.4 79 485.6 79C484.8 79 484.2 79.6 484.2 80.4C484.2 81.2 484.8 81.8 485.6 81.8C486.4 81.7 487 81.1 487 80.4ZM856.4 104.2C856.4 103.2 855.6 102.4 854.6 102.4C853.6 102.4 852.8 103.2 852.8 104.2C852.8 105.2 853.6 106 854.6 106C855.6 105.9 856.4 105.1 856.4 104.2ZM832.6 104.2C832.6 103.2 831.8 102.4 830.8 102.4C829.8 102.4 829 103.2 829 104.2C829 105.2 829.8 106 830.8 106C831.8 105.9 832.6 105.1 832.6 104.2ZM808.8 104.2C808.8 103.2 808 102.4 807 102.4C806 102.4 805.2 103.2 805.2 104.2C805.2 105.2 806 106 807 106C808 105.9 808.8 105.1 808.8 104.2ZM785 104.2C785 103.2 784.2 102.4 783.2 102.4C782.2 102.4 781.4 103.2 781.4 104.2C781.4 105.2 782.2 106 783.2 106C784.2 106 785 105.1 785 104.2ZM761.2 104.2C761.2 103.2 760.4 102.4 759.4 102.4C758.4 102.4 757.6 103.2 757.6 104.2C757.6 105.2 758.4 106 759.4 106C760.4 105.9 761.2 105.1 761.2 104.2ZM737.4 104.2C737.4 103.2 736.6 102.4 735.6 102.4C734.6 102.4 733.8 103.2 733.8 104.2C733.8 105.2 734.6 106 735.6 106C736.6 105.9 737.4 105.1 737.4 104.2ZM713.6 104.2C713.6 103.2 712.8 102.4 711.8 102.4C710.8 102.4 710 103.2 710 104.2C710 105.2 710.8 106 711.8 106C712.8 105.9 713.6 105.1 713.6 104.2ZM689.8 104.2C689.8 103.2 689 102.4 688 102.4C687 102.4 686.2 103.2 686.2 104.2C686.2 105.2 687 106 688 106C689 105.9 689.8 105.1 689.8 104.2ZM666 104.2C666 103.2 665.2 102.4 664.2 102.4C663.2 102.4 662.4 103.2 662.4 104.2C662.4 105.2 663.2 106 664.2 106C665.2 105.9 666 105.1 666 104.2ZM642.1 104.2C642.1 103.2 641.3 102.4 640.3 102.4C639.3 102.4 638.5 103.2 638.5 104.2C638.5 105.2 639.3 106 640.3 106C641.3 105.9 642.1 105.1 642.1 104.2ZM618.3 104.2C618.3 103.2 617.5 102.4 616.5 102.4C615.5 102.4 614.7 103.2 614.7 104.2C614.7 105.2 615.5 106 616.5 106C617.5 106 618.3 105.1 618.3 104.2ZM594.5 104.2C594.5 103.2 593.7 102.4 592.7 102.4C591.7 102.4 590.9 103.2 590.9 104.2C590.9 105.2 591.7 106 592.7 106C593.7 105.9 594.5 105.1 594.5 104.2ZM570.7 104.2C570.7 103.2 569.9 102.4 568.9 102.4C567.9 102.4 567.1 103.2 567.1 104.2C567.1 105.2 567.9 106 568.9 106C569.9 105.9 570.7 105.1 570.7 104.2ZM546.9 104.2C546.9 103.2 546.1 102.4 545.1 102.4C544.1 102.4 543.3 103.2 543.3 104.2C543.3 105.2 544.1 106 545.1 106C546.1 105.9 546.9 105.1 546.9 104.2ZM523.1 104.2C523.1 103.2 522.3 102.4 521.3 102.4C520.3 102.4 519.5 103.2 519.5 104.2C519.5 105.2 520.3 106 521.3 106C522.3 105.9 523.1 105.1 523.1 104.2ZM499.3 104.2C499.3 103.2 498.5 102.4 497.5 102.4C496.5 102.4 495.7 103.2 495.7 104.2C495.7 105.2 496.5 106 497.5 106C498.5 105.9 499.3 105.1 499.3 104.2ZM475.5 104.2C475.5 103.2 474.7 102.4 473.7 102.4C472.7 102.4 471.9 103.2 471.9 104.2C471.9 105.2 472.7 106 473.7 106C474.7 105.9 475.5 105.1 475.5 104.2ZM868.6 128C868.6 126.8 867.7 125.9 866.5 125.9C865.3 125.9 864.4 126.8 864.4 128C864.4 129.2 865.3 130.1 866.5 130.1C867.7 130.1 868.6 129.1 868.6 128ZM844.8 128C844.8 126.8 843.9 125.9 842.7 125.9C841.5 125.9 840.6 126.8 840.6 128C840.6 129.2 841.5 130.1 842.7 130.1C843.9 130.1 844.8 129.1 844.8 128ZM821 128C821 126.8 820.1 125.9 818.9 125.9C817.7 125.9 816.8 126.8 816.8 128C816.8 129.2 817.7 130.1 818.9 130.1C820.1 130.1 821 129.1 821 128ZM797.2 128C797.2 126.8 796.3 125.9 795.1 125.9C793.9 125.9 793 126.8 793 128C793 129.2 793.9 130.1 795.1 130.1C796.3 130.1 797.2 129.1 797.2 128ZM773.4 128C773.4 126.8 772.5 125.9 771.3 125.9C770.1 125.9 769.2 126.8 769.2 128C769.2 129.2 770.1 130.1 771.3 130.1C772.5 130.1 773.4 129.1 773.4 128ZM749.6 128C749.6 126.8 748.7 125.9 747.5 125.9C746.3 125.9 745.4 126.8 745.4 128C745.4 129.2 746.3 130.1 747.5 130.1C748.7 130.1 749.6 129.1 749.6 128ZM725.8 128C725.8 126.8 724.9 125.9 723.7 125.9C722.5 125.9 721.6 126.8 721.6 128C721.6 129.2 722.5 130.1 723.7 130.1C724.9 130.1 725.8 129.1 725.8 128ZM702 128C702 126.8 701.1 125.9 699.9 125.9C698.7 125.9 697.8 126.8 697.8 128C697.8 129.2 698.7 130.1 699.9 130.1C701 130.1 702 129.1 702 128ZM678.2 128C678.2 126.8 677.3 125.9 676.1 125.9C674.9 125.9 674 126.8 674 128C674 129.2 674.9 130.1 676.1 130.1C677.2 130.1 678.2 129.1 678.2 128ZM654.4 128C654.4 126.8 653.5 125.9 652.3 125.9C651.1 125.9 650.2 126.8 650.2 128C650.2 129.2 651.1 130.1 652.3 130.1C653.5 130.1 654.4 129.1 654.4 128ZM630.6 128C630.6 126.8 629.7 125.9 628.5 125.9C627.3 125.9 626.4 126.8 626.4 128C626.4 129.2 627.3 130.1 628.5 130.1C629.6 130.1 630.6 129.1 630.6 128ZM606.8 128C606.8 126.8 605.9 125.9 604.7 125.9C603.5 125.9 602.6 126.8 602.6 128C602.6 129.2 603.5 130.1 604.7 130.1C605.8 130.1 606.8 129.1 606.8 128ZM583 128C583 126.8 582.1 125.9 580.9 125.9C579.7 125.9 578.8 126.8 578.8 128C578.8 129.2 579.7 130.1 580.9 130.1C582 130.1 583 129.1 583 128ZM559.2 128C559.2 126.8 558.3 125.9 557.1 125.9C555.9 125.9 555 126.8 555 128C555 129.2 555.9 130.1 557.1 130.1C558.2 130.1 559.2 129.1 559.2 128ZM535.4 128C535.4 126.8 534.5 125.9 533.3 125.9C532.1 125.9 531.2 126.8 531.2 128C531.2 129.2 532.1 130.1 533.3 130.1C534.4 130.1 535.4 129.1 535.4 128ZM511.5 128C511.5 126.8 510.6 125.9 509.4 125.9C508.2 125.9 507.3 126.8 507.3 128C507.3 129.2 508.2 130.1 509.4 130.1C510.6 130.1 511.5 129.1 511.5 128ZM487.7 128C487.7 126.8 486.8 125.9 485.6 125.9C484.4 125.9 483.5 126.8 483.5 128C483.5 129.2 484.4 130.1 485.6 130.1C486.8 130.1 487.7 129.1 487.7 128ZM857.1 151.8C857.1 150.4 856 149.3 854.6 149.3C853.2 149.3 852.1 150.4 852.1 151.8C852.1 153.2 853.2 154.3 854.6 154.3C856 154.3 857.1 153.2 857.1 151.8ZM833.3 151.8C833.3 150.4 832.2 149.3 830.8 149.3C829.4 149.3 828.3 150.4 828.3 151.8C828.3 153.2 829.4 154.3 830.8 154.3C832.2 154.3 833.3 153.2 833.3 151.8ZM809.5 151.8C809.5 150.4 808.4 149.3 807 149.3C805.6 149.3 804.5 150.4 804.5 151.8C804.5 153.2 805.6 154.3 807 154.3C808.4 154.3 809.5 153.2 809.5 151.8ZM785.7 151.8C785.7 150.4 784.6 149.3 783.2 149.3C781.8 149.3 780.7 150.4 780.7 151.8C780.7 153.2 781.8 154.3 783.2 154.3C784.6 154.3 785.7 153.2 785.7 151.8ZM761.9 151.8C761.9 150.4 760.8 149.3 759.4 149.3C758 149.3 756.9 150.4 756.9 151.8C756.9 153.2 758 154.3 759.4 154.3C760.8 154.3 761.9 153.2 761.9 151.8ZM738.1 151.8C738.1 150.4 737 149.3 735.6 149.3C734.2 149.3 733.1 150.4 733.1 151.8C733.1 153.2 734.2 154.3 735.6 154.3C737 154.3 738.1 153.2 738.1 151.8ZM714.3 151.8C714.3 150.4 713.2 149.3 711.8 149.3C710.4 149.3 709.3 150.4 709.3 151.8C709.3 153.2 710.4 154.3 711.8 154.3C713.2 154.3 714.3 153.2 714.3 151.8ZM690.5 151.8C690.5 150.4 689.4 149.3 688 149.3C686.6 149.3 685.5 150.4 685.5 151.8C685.5 153.2 686.6 154.3 688 154.3C689.4 154.3 690.5 153.2 690.5 151.8ZM666.7 151.8C666.7 150.4 665.6 149.3 664.2 149.3C662.8 149.3 661.7 150.4 661.7 151.8C661.7 153.2 662.8 154.3 664.2 154.3C665.6 154.3 666.7 153.2 666.7 151.8ZM642.9 151.8C642.9 150.4 641.8 149.3 640.4 149.3C639 149.3 637.9 150.4 637.9 151.8C637.9 153.2 639 154.3 640.4 154.3C641.8 154.3 642.9 153.2 642.9 151.8ZM619.1 151.8C619.1 150.4 618 149.3 616.6 149.3C615.2 149.3 614.1 150.4 614.1 151.8C614.1 153.2 615.2 154.3 616.6 154.3C617.9 154.3 619.1 153.2 619.1 151.8ZM595.3 151.8C595.3 150.4 594.2 149.3 592.8 149.3C591.4 149.3 590.3 150.4 590.3 151.8C590.3 153.2 591.4 154.3 592.8 154.3C594.1 154.3 595.3 153.2 595.3 151.8ZM571.5 151.8C571.5 150.4 570.4 149.3 569 149.3C567.6 149.3 566.5 150.4 566.5 151.8C566.5 153.2 567.6 154.3 569 154.3C570.3 154.3 571.5 153.2 571.5 151.8ZM547.7 151.8C547.7 150.4 546.6 149.3 545.2 149.3C543.8 149.3 542.7 150.4 542.7 151.8C542.7 153.2 543.8 154.3 545.2 154.3C546.5 154.3 547.7 153.2 547.7 151.8ZM523.8 151.8C523.8 150.4 522.7 149.3 521.3 149.3C519.9 149.3 518.8 150.4 518.8 151.8C518.8 153.2 519.9 154.3 521.3 154.3C522.7 154.3 523.8 153.2 523.8 151.8ZM500 151.8C500 150.4 498.9 149.3 497.5 149.3C496.1 149.3 495 150.4 495 151.8C495 153.2 496.1 154.3 497.5 154.3C498.9 154.3 500 153.2 500 151.8ZM476.2 151.8C476.2 150.4 475.1 149.3 473.7 149.3C472.3 149.3 471.2 150.4 471.2 151.8C471.2 153.2 472.3 154.3 473.7 154.3C475.1 154.3 476.2 153.2 476.2 151.8ZM869.4 175.6C869.4 174 868.1 172.7 866.5 172.7C864.9 172.7 863.6 174 863.6 175.6C863.6 177.2 864.9 178.5 866.5 178.5C868.1 178.5 869.4 177.2 869.4 175.6ZM845.6 175.6C845.6 174 844.3 172.7 842.7 172.7C841.1 172.7 839.8 174 839.8 175.6C839.8 177.2 841.1 178.5 842.7 178.5C844.3 178.5 845.6 177.2 845.6 175.6ZM821.8 175.6C821.8 174 820.5 172.7 818.9 172.7C817.3 172.7 816 174 816 175.6C816 177.2 817.3 178.5 818.9 178.5C820.5 178.5 821.8 177.2 821.8 175.6ZM798 175.6C798 174 796.7 172.7 795.1 172.7C793.5 172.7 792.2 174 792.2 175.6C792.2 177.2 793.5 178.5 795.1 178.5C796.7 178.5 798 177.2 798 175.6ZM774.2 175.6C774.2 174 772.9 172.7 771.3 172.7C769.7 172.7 768.4 174 768.4 175.6C768.4 177.2 769.7 178.5 771.3 178.5C772.9 178.5 774.2 177.2 774.2 175.6ZM750.4 175.6C750.4 174 749.1 172.7 747.5 172.7C745.9 172.7 744.6 174 744.6 175.6C744.6 177.2 745.9 178.5 747.5 178.5C749.1 178.5 750.4 177.2 750.4 175.6ZM726.6 175.6C726.6 174 725.3 172.7 723.7 172.7C722.1 172.7 720.8 174 720.8 175.6C720.8 177.2 722.1 178.5 723.7 178.5C725.3 178.5 726.6 177.2 726.6 175.6ZM702.8 175.6C702.8 174 701.5 172.7 699.9 172.7C698.3 172.7 697 174 697 175.6C697 177.2 698.3 178.5 699.9 178.5C701.5 178.5 702.8 177.2 702.8 175.6ZM679 175.6C679 174 677.7 172.7 676.1 172.7C674.5 172.7 673.2 174 673.2 175.6C673.2 177.2 674.5 178.5 676.1 178.5C677.7 178.5 679 177.2 679 175.6ZM655.2 175.6C655.2 174 653.9 172.7 652.3 172.7C650.7 172.7 649.4 174 649.4 175.6C649.4 177.2 650.7 178.5 652.3 178.5C653.9 178.5 655.2 177.2 655.2 175.6ZM631.4 175.6C631.4 174 630.1 172.7 628.5 172.7C626.9 172.7 625.6 174 625.6 175.6C625.6 177.2 626.9 178.5 628.5 178.5C630.1 178.5 631.4 177.2 631.4 175.6ZM607.6 175.6C607.6 174 606.3 172.7 604.7 172.7C603.1 172.7 601.8 174 601.8 175.6C601.8 177.2 603.1 178.5 604.7 178.5C606.3 178.5 607.6 177.2 607.6 175.6ZM583.8 175.6C583.8 174 582.5 172.7 580.9 172.7C579.3 172.7 578 174 578 175.6C578 177.2 579.3 178.5 580.9 178.5C582.5 178.5 583.8 177.2 583.8 175.6ZM560 175.6C560 174 558.7 172.7 557.1 172.7C555.5 172.7 554.2 174 554.2 175.6C554.2 177.2 555.5 178.5 557.1 178.5C558.6 178.5 560 177.2 560 175.6ZM536.1 175.6C536.1 174 534.8 172.7 533.2 172.7C531.6 172.7 530.3 174 530.3 175.6C530.3 177.2 531.6 178.5 533.2 178.5C534.8 178.5 536.1 177.2 536.1 175.6ZM512.3 175.6C512.3 174 511 172.7 509.4 172.7C507.8 172.7 506.5 174 506.5 175.6C506.5 177.2 507.8 178.5 509.4 178.5C511 178.5 512.3 177.2 512.3 175.6ZM488.5 175.6C488.5 174 487.2 172.7 485.6 172.7C484 172.7 482.7 174 482.7 175.6C482.7 177.2 484 178.5 485.6 178.5C487.2 178.5 488.5 177.2 488.5 175.6ZM857.9 199.4C857.9 197.6 856.4 196.1 854.6 196.1C852.8 196.1 851.3 197.6 851.3 199.4C851.3 201.2 852.8 202.7 854.6 202.7C856.4 202.7 857.9 201.2 857.9 199.4ZM834.1 199.4C834.1 197.6 832.6 196.1 830.8 196.1C829 196.1 827.5 197.6 827.5 199.4C827.5 201.2 829 202.7 830.8 202.7C832.6 202.7 834.1 201.2 834.1 199.4ZM810.3 199.4C810.3 197.6 808.8 196.1 807 196.1C805.2 196.1 803.7 197.6 803.7 199.4C803.7 201.2 805.2 202.7 807 202.7C808.8 202.7 810.3 201.2 810.3 199.4ZM786.5 199.4C786.5 197.6 785 196.1 783.2 196.1C781.4 196.1 779.9 197.6 779.9 199.4C779.9 201.2 781.4 202.7 783.2 202.7C785 202.7 786.5 201.2 786.5 199.4ZM762.7 199.4C762.7 197.6 761.2 196.1 759.4 196.1C757.6 196.1 756.1 197.6 756.1 199.4C756.1 201.2 757.6 202.7 759.4 202.7C761.2 202.7 762.7 201.2 762.7 199.4ZM738.9 199.4C738.9 197.6 737.4 196.1 735.6 196.1C733.8 196.1 732.3 197.6 732.3 199.4C732.3 201.2 733.8 202.7 735.6 202.7C737.4 202.7 738.9 201.2 738.9 199.4ZM715.1 199.4C715.1 197.6 713.6 196.1 711.8 196.1C710 196.1 708.5 197.6 708.5 199.4C708.5 201.2 710 202.7 711.8 202.7C713.6 202.7 715.1 201.2 715.1 199.4ZM691.3 199.4C691.3 197.6 689.8 196.1 688 196.1C686.2 196.1 684.7 197.6 684.7 199.4C684.7 201.2 686.2 202.7 688 202.7C689.8 202.7 691.3 201.2 691.3 199.4ZM667.5 199.4C667.5 197.6 666 196.1 664.2 196.1C662.4 196.1 660.9 197.6 660.9 199.4C660.9 201.2 662.4 202.7 664.2 202.7C666 202.7 667.5 201.2 667.5 199.4ZM643.7 199.4C643.7 197.6 642.2 196.1 640.4 196.1C638.6 196.1 637.1 197.6 637.1 199.4C637.1 201.2 638.6 202.7 640.4 202.7C642.2 202.7 643.7 201.2 643.7 199.4ZM619.9 199.4C619.9 197.6 618.4 196.1 616.6 196.1C614.8 196.1 613.3 197.6 613.3 199.4C613.3 201.2 614.8 202.7 616.6 202.7C618.4 202.7 619.9 201.2 619.9 199.4ZM596.1 199.4C596.1 197.6 594.6 196.1 592.8 196.1C591 196.1 589.5 197.6 589.5 199.4C589.5 201.2 591 202.7 592.8 202.7C594.6 202.7 596.1 201.2 596.1 199.4ZM572.2 199.4C572.2 197.6 570.7 196.1 568.9 196.1C567.1 196.1 565.6 197.6 565.6 199.4C565.6 201.2 567.1 202.7 568.9 202.7C570.8 202.7 572.2 201.2 572.2 199.4ZM548.4 199.4C548.4 197.6 546.9 196.1 545.1 196.1C543.3 196.1 541.8 197.6 541.8 199.4C541.8 201.2 543.3 202.7 545.1 202.7C547 202.7 548.4 201.2 548.4 199.4ZM524.6 199.4C524.6 197.6 523.1 196.1 521.3 196.1C519.5 196.1 518 197.6 518 199.4C518 201.2 519.5 202.7 521.3 202.7C523.2 202.7 524.6 201.2 524.6 199.4ZM500.8 199.4C500.8 197.6 499.3 196.1 497.5 196.1C495.7 196.1 494.2 197.6 494.2 199.4C494.2 201.2 495.7 202.7 497.5 202.7C499.4 202.7 500.8 201.2 500.8 199.4ZM477 199.4C477 197.6 475.5 196.1 473.7 196.1C471.9 196.1 470.4 197.6 470.4 199.4C470.4 201.2 471.9 202.7 473.7 202.7C475.6 202.7 477 201.2 477 199.4ZM941.6 223.2C941.6 221.2 939.9 219.5 937.9 219.5C935.9 219.5 934.2 221.2 934.2 223.2C934.2 225.2 935.9 226.9 937.9 226.9C940 226.9 941.6 225.2 941.6 223.2ZM917.8 223.2C917.8 221.2 916.1 219.5 914.1 219.5C912.1 219.5 910.4 221.2 910.4 223.2C910.4 225.2 912.1 226.9 914.1 226.9C916.2 226.9 917.8 225.2 917.8 223.2ZM894 223.2C894 221.2 892.3 219.5 890.3 219.5C888.3 219.5 886.6 221.2 886.6 223.2C886.6 225.2 888.3 226.9 890.3 226.9C892.4 226.9 894 225.2 894 223.2ZM870.2 223.2C870.2 221.2 868.5 219.5 866.5 219.5C864.5 219.5 862.8 221.2 862.8 223.2C862.8 225.2 864.5 226.9 866.5 226.9C868.6 226.9 870.2 225.2 870.2 223.2ZM846.4 223.2C846.4 221.2 844.7 219.5 842.7 219.5C840.7 219.5 839 221.2 839 223.2C839 225.2 840.7 226.9 842.7 226.9C844.8 226.9 846.4 225.2 846.4 223.2ZM822.6 223.2C822.6 221.2 820.9 219.5 818.9 219.5C816.9 219.5 815.2 221.2 815.2 223.2C815.2 225.2 816.9 226.9 818.9 226.9C820.9 226.9 822.6 225.2 822.6 223.2ZM798.8 223.2C798.8 221.2 797.1 219.5 795.1 219.5C793.1 219.5 791.4 221.2 791.4 223.2C791.4 225.2 793.1 226.9 795.1 226.9C797.1 226.9 798.8 225.2 798.8 223.2ZM775 223.2C775 221.2 773.3 219.5 771.3 219.5C769.3 219.5 767.6 221.2 767.6 223.2C767.6 225.2 769.3 226.9 771.3 226.9C773.3 226.9 775 225.2 775 223.2ZM751.2 223.2C751.2 221.2 749.5 219.5 747.5 219.5C745.5 219.5 743.8 221.2 743.8 223.2C743.8 225.2 745.5 226.9 747.5 226.9C749.5 226.9 751.2 225.2 751.2 223.2ZM727.4 223.2C727.4 221.2 725.7 219.5 723.7 219.5C721.7 219.5 720 221.2 720 223.2C720 225.2 721.7 226.9 723.7 226.9C725.7 226.9 727.4 225.2 727.4 223.2ZM703.6 223.2C703.6 221.2 701.9 219.5 699.9 219.5C697.9 219.5 696.2 221.2 696.2 223.2C696.2 225.2 697.9 226.9 699.9 226.9C701.9 226.9 703.6 225.2 703.6 223.2ZM679.8 223.2C679.8 221.2 678.1 219.5 676.1 219.5C674.1 219.5 672.4 221.2 672.4 223.2C672.4 225.2 674.1 226.9 676.1 226.9C678.1 226.9 679.8 225.2 679.8 223.2ZM656 223.2C656 221.2 654.3 219.5 652.3 219.5C650.3 219.5 648.6 221.2 648.6 223.2C648.6 225.2 650.3 226.9 652.3 226.9C654.3 226.9 656 225.2 656 223.2ZM632.2 223.2C632.2 221.2 630.5 219.5 628.5 219.5C626.5 219.5 624.8 221.2 624.8 223.2C624.8 225.2 626.5 226.9 628.5 226.9C630.5 226.9 632.2 225.2 632.2 223.2ZM608.4 223.2C608.4 221.2 606.7 219.5 604.7 219.5C602.7 219.5 601 221.2 601 223.2C601 225.2 602.7 226.9 604.7 226.9C606.7 226.9 608.4 225.2 608.4 223.2ZM584.6 223.2C584.6 221.2 582.9 219.5 580.9 219.5C578.9 219.5 577.2 221.2 577.2 223.2C577.2 225.2 578.9 226.9 580.9 226.9C582.9 226.9 584.6 225.2 584.6 223.2ZM560.7 223.2C560.7 221.2 559 219.5 557 219.5C555 219.5 553.3 221.2 553.3 223.2C553.3 225.2 555 226.9 557 226.9C559.1 226.9 560.7 225.2 560.7 223.2ZM536.9 223.2C536.9 221.2 535.2 219.5 533.2 219.5C531.2 219.5 529.5 221.2 529.5 223.2C529.5 225.2 531.2 226.9 533.2 226.9C535.3 226.9 536.9 225.2 536.9 223.2ZM513.1 223.2C513.1 221.2 511.4 219.5 509.4 219.5C507.4 219.5 505.7 221.2 505.7 223.2C505.7 225.2 507.4 226.9 509.4 226.9C511.5 226.9 513.1 225.2 513.1 223.2ZM489.3 223.2C489.3 221.2 487.6 219.5 485.6 219.5C483.6 219.5 481.9 221.2 481.9 223.2C481.9 225.2 483.6 226.9 485.6 226.9C487.7 226.9 489.3 225.2 489.3 223.2ZM930.1 247C930.1 244.7 928.3 242.9 926 242.9C923.7 242.9 921.9 244.7 921.9 247C921.9 249.3 923.7 251.1 926 251.1C928.3 251.1 930.1 249.2 930.1 247ZM906.3 247C906.3 244.7 904.5 242.9 902.2 242.9C899.9 242.9 898.1 244.7 898.1 247C898.1 249.3 899.9 251.1 902.2 251.1C904.5 251.1 906.3 249.2 906.3 247ZM882.5 247C882.5 244.7 880.7 242.9 878.4 242.9C876.1 242.9 874.3 244.7 874.3 247C874.3 249.3 876.1 251.1 878.4 251.1C880.7 251.1 882.5 249.2 882.5 247ZM858.7 247C858.7 244.7 856.9 242.9 854.6 242.9C852.3 242.9 850.5 244.7 850.5 247C850.5 249.3 852.3 251.1 854.6 251.1C856.9 251.1 858.7 249.2 858.7 247ZM834.9 247C834.9 244.7 833.1 242.9 830.8 242.9C828.5 242.9 826.7 244.7 826.7 247C826.7 249.3 828.5 251.1 830.8 251.1C833.1 251.1 834.9 249.2 834.9 247ZM811.1 247C811.1 244.7 809.3 242.9 807 242.9C804.7 242.9 802.9 244.7 802.9 247C802.9 249.3 804.7 251.1 807 251.1C809.3 251.1 811.1 249.2 811.1 247ZM787.3 247C787.3 244.7 785.5 242.9 783.2 242.9C780.9 242.9 779.1 244.7 779.1 247C779.1 249.3 780.9 251.1 783.2 251.1C785.5 251.1 787.3 249.2 787.3 247ZM763.5 247C763.5 244.7 761.7 242.9 759.4 242.9C757.1 242.9 755.3 244.7 755.3 247C755.3 249.3 757.1 251.1 759.4 251.1C761.7 251.1 763.5 249.2 763.5 247ZM739.7 247C739.7 244.7 737.9 242.9 735.6 242.9C733.3 242.9 731.5 244.7 731.5 247C731.5 249.3 733.3 251.1 735.6 251.1C737.8 251.1 739.7 249.2 739.7 247ZM715.9 247C715.9 244.7 714.1 242.9 711.8 242.9C709.5 242.9 707.7 244.7 707.7 247C707.7 249.3 709.5 251.1 711.8 251.1C714 251.1 715.9 249.2 715.9 247ZM692.1 247C692.1 244.7 690.3 242.9 688 242.9C685.7 242.9 683.9 244.7 683.9 247C683.9 249.3 685.7 251.1 688 251.1C690.2 251.1 692.1 249.2 692.1 247ZM668.3 247C668.3 244.7 666.5 242.9 664.2 242.9C661.9 242.9 660.1 244.7 660.1 247C660.1 249.3 661.9 251.1 664.2 251.1C666.4 251.1 668.3 249.2 668.3 247ZM644.5 247C644.5 244.7 642.7 242.9 640.4 242.9C638.1 242.9 636.3 244.7 636.3 247C636.3 249.3 638.1 251.1 640.4 251.1C642.6 251.1 644.5 249.2 644.5 247ZM620.7 247C620.7 244.7 618.9 242.9 616.6 242.9C614.3 242.9 612.5 244.7 612.5 247C612.5 249.3 614.3 251.1 616.6 251.1C618.9 251.1 620.7 249.2 620.7 247ZM596.8 247C596.8 244.7 595 242.9 592.7 242.9C590.4 242.9 588.6 244.7 588.6 247C588.6 249.3 590.4 251.1 592.7 251.1C595 251.1 596.8 249.2 596.8 247ZM573 247C573 244.7 571.2 242.9 568.9 242.9C566.6 242.9 564.8 244.7 564.8 247C564.8 249.3 566.6 251.1 568.9 251.1C571.2 251.1 573 249.2 573 247ZM549.2 247C549.2 244.7 547.4 242.9 545.1 242.9C542.8 242.9 541 244.7 541 247C541 249.3 542.8 251.1 545.1 251.1C547.4 251.1 549.2 249.2 549.2 247ZM525.4 247C525.4 244.7 523.6 242.9 521.3 242.9C519 242.9 517.2 244.7 517.2 247C517.2 249.3 519 251.1 521.3 251.1C523.6 251.1 525.4 249.2 525.4 247ZM501.6 247C501.6 244.7 499.8 242.9 497.5 242.9C495.2 242.9 493.4 244.7 493.4 247C493.4 249.3 495.2 251.1 497.5 251.1C499.8 251.1 501.6 249.2 501.6 247ZM477.8 247C477.8 244.7 476 242.9 473.7 242.9C471.4 242.9 469.6 244.7 469.6 247C469.6 249.3 471.4 251.1 473.7 251.1C476 251.1 477.8 249.2 477.8 247ZM942.4 270.8C942.4 268.3 940.4 266.3 937.9 266.3C935.4 266.3 933.4 268.3 933.4 270.8C933.4 273.3 935.4 275.3 937.9 275.3C940.4 275.3 942.4 273.3 942.4 270.8ZM918.6 270.8C918.6 268.3 916.6 266.3 914.1 266.3C911.6 266.3 909.6 268.3 909.6 270.8C909.6 273.3 911.6 275.3 914.1 275.3C916.6 275.3 918.6 273.3 918.6 270.8ZM894.8 270.8C894.8 268.3 892.8 266.3 890.3 266.3C887.8 266.3 885.8 268.3 885.8 270.8C885.8 273.3 887.8 275.3 890.3 275.3C892.8 275.3 894.8 273.3 894.8 270.8ZM871 270.8C871 268.3 869 266.3 866.5 266.3C864 266.3 862 268.3 862 270.8C862 273.3 864 275.3 866.5 275.3C869 275.3 871 273.3 871 270.8ZM847.2 270.8C847.2 268.3 845.2 266.3 842.7 266.3C840.2 266.3 838.2 268.3 838.2 270.8C838.2 273.3 840.2 275.3 842.7 275.3C845.2 275.3 847.2 273.3 847.2 270.8ZM823.4 270.8C823.4 268.3 821.4 266.3 818.9 266.3C816.4 266.3 814.4 268.3 814.4 270.8C814.4 273.3 816.4 275.3 818.9 275.3C821.4 275.3 823.4 273.3 823.4 270.8ZM799.6 270.8C799.6 268.3 797.6 266.3 795.1 266.3C792.6 266.3 790.6 268.3 790.6 270.8C790.6 273.3 792.6 275.3 795.1 275.3C797.6 275.3 799.6 273.3 799.6 270.8ZM775.8 270.8C775.8 268.3 773.8 266.3 771.3 266.3C768.8 266.3 766.8 268.3 766.8 270.8C766.8 273.3 768.8 275.3 771.3 275.3C773.8 275.3 775.8 273.3 775.8 270.8ZM752 270.8C752 268.3 750 266.3 747.5 266.3C745 266.3 743 268.3 743 270.8C743 273.3 745 275.3 747.5 275.3C750 275.3 752 273.3 752 270.8ZM728.2 270.8C728.2 268.3 726.2 266.3 723.7 266.3C721.2 266.3 719.2 268.3 719.2 270.8C719.2 273.3 721.2 275.3 723.7 275.3C726.2 275.3 728.2 273.3 728.2 270.8ZM704.4 270.8C704.4 268.3 702.4 266.3 699.9 266.3C697.4 266.3 695.4 268.3 695.4 270.8C695.4 273.3 697.4 275.3 699.9 275.3C702.4 275.3 704.4 273.3 704.4 270.8ZM680.6 270.8C680.6 268.3 678.6 266.3 676.1 266.3C673.6 266.3 671.6 268.3 671.6 270.8C671.6 273.3 673.6 275.3 676.1 275.3C678.6 275.3 680.6 273.3 680.6 270.8ZM656.8 270.8C656.8 268.3 654.8 266.3 652.3 266.3C649.8 266.3 647.8 268.3 647.8 270.8C647.8 273.3 649.8 275.3 652.3 275.3C654.7 275.3 656.8 273.3 656.8 270.8ZM633 270.8C633 268.3 631 266.3 628.5 266.3C626 266.3 624 268.3 624 270.8C624 273.3 626 275.3 628.5 275.3C630.9 275.3 633 273.3 633 270.8ZM609.1 270.8C609.1 268.3 607.1 266.3 604.6 266.3C602.1 266.3 600.1 268.3 600.1 270.8C600.1 273.3 602.1 275.3 604.6 275.3C607.1 275.3 609.1 273.3 609.1 270.8ZM585.3 270.8C585.3 268.3 583.3 266.3 580.8 266.3C578.3 266.3 576.3 268.3 576.3 270.8C576.3 273.3 578.3 275.3 580.8 275.3C583.3 275.3 585.3 273.3 585.3 270.8ZM561.5 270.8C561.5 268.3 559.5 266.3 557 266.3C554.5 266.3 552.5 268.3 552.5 270.8C552.5 273.3 554.5 275.3 557 275.3C559.5 275.3 561.5 273.3 561.5 270.8ZM537.7 270.8C537.7 268.3 535.7 266.3 533.2 266.3C530.7 266.3 528.7 268.3 528.7 270.8C528.7 273.3 530.7 275.3 533.2 275.3C535.7 275.3 537.7 273.3 537.7 270.8ZM513.9 270.8C513.9 268.3 511.9 266.3 509.4 266.3C506.9 266.3 504.9 268.3 504.9 270.8C504.9 273.3 506.9 275.3 509.4 275.3C511.9 275.3 513.9 273.3 513.9 270.8ZM490.1 270.8C490.1 268.3 488.1 266.3 485.6 266.3C483.1 266.3 481.1 268.3 481.1 270.8C481.1 273.3 483.1 275.3 485.6 275.3C488.1 275.3 490.1 273.3 490.1 270.8ZM931 294.6C931 291.9 928.8 289.7 926 289.7C923.3 289.7 921.1 291.9 921.1 294.6C921.1 297.3 923.3 299.6 926 299.6C928.8 299.5 931 297.3 931 294.6ZM907.2 294.6C907.2 291.9 905 289.7 902.2 289.7C899.5 289.7 897.3 291.9 897.3 294.6C897.3 297.3 899.5 299.6 902.2 299.6C905 299.5 907.2 297.3 907.2 294.6ZM883.4 294.6C883.4 291.9 881.2 289.7 878.4 289.7C875.6 289.7 873.4 291.9 873.4 294.6C873.4 297.3 875.6 299.6 878.4 299.6C881.2 299.6 883.4 297.3 883.4 294.6ZM859.6 294.6C859.6 291.9 857.4 289.7 854.6 289.7C851.8 289.7 849.6 291.9 849.6 294.6C849.6 297.3 851.8 299.6 854.6 299.6C857.4 299.6 859.6 297.3 859.6 294.6ZM835.8 294.6C835.8 291.9 833.6 289.7 830.8 289.7C828.1 289.7 825.9 291.9 825.9 294.6C825.9 297.3 828.1 299.6 830.8 299.6C833.5 299.5 835.8 297.3 835.8 294.6ZM812 294.6C812 291.9 809.8 289.7 807.1 289.7C804.4 289.7 802.1 291.9 802.1 294.6C802.1 297.3 804.3 299.6 807.1 299.6C809.9 299.6 812 297.3 812 294.6ZM788.1 294.6C788.1 291.9 785.9 289.7 783.2 289.7C780.5 289.7 778.2 291.9 778.2 294.6C778.2 297.3 780.4 299.6 783.2 299.6C785.9 299.5 788.1 297.3 788.1 294.6ZM764.3 294.6C764.3 291.9 762.1 289.7 759.3 289.7C756.6 289.7 754.4 291.9 754.4 294.6C754.4 297.3 756.6 299.6 759.3 299.6C762.1 299.5 764.3 297.3 764.3 294.6ZM740.5 294.6C740.5 291.9 738.3 289.7 735.5 289.7C732.8 289.7 730.6 291.9 730.6 294.6C730.6 297.3 732.8 299.6 735.5 299.6C738.3 299.5 740.5 297.3 740.5 294.6ZM716.7 294.6C716.7 291.9 714.5 289.7 711.7 289.7C709 289.7 706.8 291.9 706.8 294.6C706.8 297.3 709 299.6 711.7 299.6C714.5 299.5 716.7 297.3 716.7 294.6ZM692.9 294.6C692.9 291.9 690.7 289.7 687.9 289.7C685.1 289.7 682.9 291.9 682.9 294.6C682.9 297.3 685.1 299.6 687.9 299.6C690.7 299.5 692.9 297.3 692.9 294.6ZM669.1 294.6C669.1 291.9 666.9 289.7 664.1 289.7C661.3 289.7 659.1 291.9 659.1 294.6C659.1 297.3 661.3 299.6 664.1 299.6C666.9 299.6 669.1 297.3 669.1 294.6ZM645.3 294.6C645.3 291.9 643.1 289.7 640.3 289.7C637.6 289.7 635.4 291.9 635.4 294.6C635.4 297.3 637.6 299.6 640.3 299.6C643.1 299.5 645.3 297.3 645.3 294.6ZM621.5 294.6C621.5 291.9 619.3 289.7 616.6 289.7C613.9 289.7 611.6 291.9 611.6 294.6C611.6 297.3 613.8 299.6 616.6 299.6C619.4 299.6 621.5 297.3 621.5 294.6ZM597.7 294.6C597.7 291.9 595.5 289.7 592.8 289.7C590.1 289.7 587.8 291.9 587.8 294.6C587.8 297.3 590 299.6 592.8 299.6C595.5 299.5 597.7 297.3 597.7 294.6ZM573.9 294.6C573.9 291.9 571.7 289.7 569 289.7C566.3 289.7 564 291.9 564 294.6C564 297.3 566.2 299.6 569 299.6C571.7 299.5 573.9 297.3 573.9 294.6ZM550.1 294.6C550.1 291.9 547.9 289.7 545.2 289.7C542.5 289.7 540.2 291.9 540.2 294.6C540.2 297.3 542.4 299.6 545.2 299.6C547.9 299.5 550.1 297.3 550.1 294.6ZM526.3 294.6C526.3 291.9 524.1 289.7 521.4 289.7C518.7 289.7 516.4 291.9 516.4 294.6C516.4 297.3 518.6 299.6 521.4 299.6C524.1 299.5 526.3 297.3 526.3 294.6ZM502.5 294.6C502.5 291.9 500.3 289.7 497.6 289.7C494.9 289.7 492.6 291.9 492.6 294.6C492.6 297.3 494.8 299.6 497.6 299.6C500.3 299.5 502.5 297.3 502.5 294.6ZM478.7 294.6C478.7 291.9 476.5 289.7 473.8 289.7C471.1 289.7 468.8 291.9 468.8 294.6C468.8 297.3 471 299.6 473.8 299.6C476.5 299.5 478.7 297.3 478.7 294.6ZM943.3 318.4C943.3 315.4 940.9 313.1 938 313.1C935 313.1 932.7 315.5 932.7 318.4C932.7 321.4 935.1 323.7 938 323.7C940.9 323.8 943.3 321.4 943.3 318.4ZM919.5 318.4C919.5 315.4 917.1 313.1 914.2 313.1C911.2 313.1 908.9 315.5 908.9 318.4C908.9 321.4 911.3 323.7 914.2 323.7C917.1 323.8 919.5 321.4 919.5 318.4ZM895.7 318.4C895.7 315.4 893.3 313.1 890.4 313.1C887.4 313.1 885.1 315.5 885.1 318.4C885.1 321.4 887.5 323.7 890.4 323.7C893.3 323.8 895.7 321.4 895.7 318.4ZM871.9 318.4C871.9 315.4 869.5 313.1 866.6 313.1C863.6 313.1 861.3 315.5 861.3 318.4C861.3 321.4 863.7 323.7 866.6 323.7C869.5 323.8 871.9 321.4 871.9 318.4ZM848.1 318.4C848.1 315.4 845.7 313.1 842.8 313.1C839.8 313.1 837.5 315.5 837.5 318.4C837.5 321.4 839.9 323.7 842.8 323.7C845.7 323.8 848.1 321.4 848.1 318.4ZM824.2 318.4C824.2 315.4 821.8 313.1 818.9 313.1C815.9 313.1 813.6 315.5 813.6 318.4C813.6 321.4 816 323.7 818.9 323.7C821.9 323.8 824.2 321.4 824.2 318.4ZM800.4 318.4C800.4 315.4 798 313.1 795.1 313.1C792.1 313.1 789.8 315.5 789.8 318.4C789.8 321.4 792.2 323.7 795.1 323.7C798.1 323.8 800.4 321.4 800.4 318.4ZM776.6 318.4C776.6 315.4 774.2 313.1 771.3 313.1C768.3 313.1 766 315.5 766 318.4C766 321.4 768.4 323.7 771.3 323.7C774.2 323.8 776.6 321.4 776.6 318.4ZM752.8 318.4C752.8 315.4 750.4 313.1 747.5 313.1C744.6 313.1 742.2 315.5 742.2 318.4C742.2 321.4 744.6 323.7 747.5 323.7C750.4 323.8 752.8 321.4 752.8 318.4ZM729 318.4C729 315.4 726.6 313.1 723.7 313.1C720.7 313.1 718.4 315.5 718.4 318.4C718.4 321.4 720.8 323.7 723.7 323.7C726.6 323.8 729 321.4 729 318.4ZM705.2 318.4C705.2 315.4 702.8 313.1 699.9 313.1C696.9 313.1 694.6 315.5 694.6 318.4C694.6 321.4 697 323.7 699.9 323.7C702.8 323.8 705.2 321.4 705.2 318.4ZM681.4 318.4C681.4 315.4 679 313.1 676.1 313.1C673.1 313.1 670.8 315.5 670.8 318.4C670.8 321.4 673.2 323.7 676.1 323.7C679 323.8 681.4 321.4 681.4 318.4ZM657.6 318.4C657.6 315.4 655.2 313.1 652.3 313.1C649.3 313.1 647 315.5 647 318.4C647 321.4 649.4 323.7 652.3 323.7C655.2 323.8 657.6 321.4 657.6 318.4ZM633.8 318.4C633.8 315.4 631.4 313.1 628.5 313.1C625.5 313.1 623.2 315.5 623.2 318.4C623.2 321.4 625.6 323.7 628.5 323.7C631.4 323.8 633.8 321.4 633.8 318.4ZM610 318.4C610 315.4 607.6 313.1 604.7 313.1C601.7 313.1 599.4 315.5 599.4 318.4C599.4 321.4 601.8 323.7 604.7 323.7C607.6 323.8 610 321.4 610 318.4ZM586.2 318.4C586.2 315.4 583.8 313.1 580.9 313.1C577.9 313.1 575.5 315.5 575.5 318.4C575.5 321.4 577.9 323.7 580.9 323.7C583.8 323.8 586.2 321.4 586.2 318.4ZM562.4 318.4C562.4 315.4 560 313.1 557.1 313.1C554.1 313.1 551.7 315.5 551.7 318.4C551.7 321.4 554.1 323.7 557.1 323.7C560 323.8 562.4 321.4 562.4 318.4ZM538.6 318.4C538.6 315.4 536.2 313.1 533.3 313.1C530.3 313.1 527.9 315.5 527.9 318.4C527.9 321.4 530.3 323.7 533.3 323.7C536.2 323.8 538.6 321.4 538.6 318.4ZM514.8 318.4C514.8 315.4 512.4 313.1 509.5 313.1C506.5 313.1 504.1 315.5 504.1 318.4C504.1 321.4 506.5 323.7 509.5 323.7C512.4 323.8 514.8 321.4 514.8 318.4ZM491 318.4C491 315.4 488.6 313.1 485.7 313.1C482.7 313.1 480.4 315.5 480.4 318.4C480.4 321.4 482.8 323.7 485.7 323.7C488.6 323.8 491 321.4 491 318.4Z\" fill=\"url(#paint0_linear_3702_3)\"></path>\n</g>\n<defs>\n<lineargradient id=\"paint0_linear_3702_3\" x1=\"-7\" y1=\"154.375\" x2=\"943.275\" y2=\"154.375\" gradientunits=\"userSpaceOnUse\">\n<stop stop-color=\"#784DE9\"></stop>\n<stop offset=\"1\" stop-color=\"#F2CB04\"></stop>\n</lineargradient>\n</defs>\n</svg>"
+      }
+    },
+    "custom_product_accordion_card_LnxR4G": {
+      "type": "custom-product-accordion-card",
+      "blocks": {
+        "product_accordion_item_WQctQE": {
+          "type": "product_accordion_item",
+          "settings": {
+            "tag": "HYDRAULIC BRAKES",
+            "title": "Smooth Powerful Stops",
+            "icon": "<svg viewbox=\"0 0 500 500\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_7_117)\">\n<path d=\"M279.71 178.72C231.78 131.38 154.96 131.48 108.1 178.93C61.25 226.37 62.11 303.21 110.04 350.54C157.97 397.87 234.79 397.78 281.65 350.32C328.49 302.88 327.62 226.04 279.71 178.72Z\" stroke=\"#B7B7B7\" stroke-width=\"25\" stroke-miterlimit=\"10\"></path>\n<path d=\"M289.72 73.79C365.65 110.35 412.43 190.17 406.88 273.9L372.04 263.9C376.12 200.74 340.55 140.6 283.02 113.55L289.72 73.79ZM277.64 42.32C273.72 42.32 270.03 44.74 268.6 48.64L256.66 119.63C254.84 124.6 257.37 130.1 262.33 131.95L262.54 132.03C320.2 153.55 355.2 212.99 345.87 273.51L345.84 273.71C345.04 278.93 348.59 283.83 353.81 284.67L418.6 303.28C419.12 303.36 419.64 303.41 420.16 303.41C424.83 303.41 428.93 300.01 429.66 295.24C446.29 187.3 383.89 81.34 281.07 42.95L281 42.93C279.89 42.51 278.76 42.32 277.64 42.32Z\" fill=\"#B7B7B7\"></path>\n<path d=\"M361.84 322.81C337.69 392.02 271.84 441.68 194.39 441.68C96.4701 441.68 17.0901 362.3 17.0901 264.38C17.0901 166.46 96.4701 87.08 194.39 87.08C205.19 87.08 215.77 88.05 226.04 89.9\" stroke=\"#B7B7B7\" stroke-width=\"25\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M194.87 293.69C210.919 293.69 223.93 280.679 223.93 264.63C223.93 248.581 210.919 235.57 194.87 235.57C178.821 235.57 165.81 248.581 165.81 264.63C165.81 280.679 178.821 293.69 194.87 293.69Z\" stroke=\"#B7B7B7\" stroke-width=\"25\" stroke-miterlimit=\"10\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_7_117\">\n<rect width=\"500\" height=\"500\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
+            "content": "Reliable hydraulic system ensures safe and controlled braking in any riding condition.",
+            "image": "shopify://shop_images/ee4008867e43bfb32d97faf8592ada02.webp"
+          }
+        },
+        "product_accordion_item_tATPcB": {
+          "type": "product_accordion_item",
+          "settings": {
+            "tag": "ADJUSTABLE FRONT FORK",
+            "title": "Ride with Flexibility",
+            "icon": "<svg viewbox=\"0 0 500 500\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_7_90)\">\n<path d=\"M261.44 38.51C266.41 38.51 271.31 39.83 275.61 42.33C282.13 46.13 286.8 52.29 288.75 59.68C290.7 67.07 289.69 74.74 285.89 81.26C280.82 89.96 271.33 95.37 261.12 95.37C256.15 95.37 251.25 94.05 246.95 91.55C240.43 87.75 235.76 81.59 233.81 74.2C231.86 66.81 232.87 59.14 236.67 52.62C241.74 43.92 251.23 38.51 261.44 38.51ZM261.44 12.9C242.78 12.9 224.55 22.53 214.54 39.74C199.58 65.45 208.37 98.73 234.08 113.7C242.58 118.65 251.91 121 261.13 121C279.79 121 298.02 111.37 308.03 94.16C323 68.44 314.2 35.16 288.49 20.2C279.99 15.25 270.66 12.9 261.44 12.9Z\" fill=\"#B7B7B7\"></path>\n<path d=\"M63.97 369.13C70.48 369.13 76.89 370.86 82.52 374.13C91.05 379.1 97.16 387.15 99.71 396.81C102.26 406.47 100.93 416.49 95.97 425.03C89.35 436.41 76.95 443.48 63.62 443.48C57.11 443.48 50.7 441.75 45.07 438.48C36.54 433.51 30.43 425.46 27.88 415.8C25.33 406.14 26.66 396.12 31.62 387.58C38.24 376.2 50.64 369.13 63.97 369.13ZM63.97 343.52C42.29 343.52 21.11 354.71 9.48 374.7C-7.9 404.57 2.31 443.24 32.18 460.62C42.06 466.37 52.9 469.1 63.61 469.1C85.29 469.1 106.47 457.91 118.1 437.92C135.48 408.05 125.27 369.38 95.4 352C85.52 346.25 74.68 343.52 63.97 343.52Z\" fill=\"#B7B7B7\"></path>\n<path d=\"M176.52 105.3L269.14 160.76\" stroke=\"#B7B7B7\" stroke-width=\"25.613\" stroke-miterlimit=\"10\" stroke-linecap=\"round\"></path>\n<path d=\"M74.35 215.54L223.35 304.76\" stroke=\"#B7B7B7\" stroke-width=\"25.613\" stroke-miterlimit=\"10\" stroke-linecap=\"round\"></path>\n<path d=\"M53.3199 251.68L202.31 340.9\" stroke=\"#B7B7B7\" stroke-width=\"25.613\" stroke-miterlimit=\"10\" stroke-linecap=\"round\"></path>\n<path d=\"M32.29 287.82L181.28 377.04\" stroke=\"#B7B7B7\" stroke-width=\"25.613\" stroke-miterlimit=\"10\" stroke-linecap=\"round\"></path>\n<path d=\"M223.71 135.72L162.3 232.82\" stroke=\"#B7B7B7\" stroke-width=\"25.613\" stroke-miterlimit=\"10\" stroke-linecap=\"round\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_7_90\">\n<rect width=\"500\" height=\"500\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
+            "content": "The hydraulic hybrid spring fork offers greater adjustability to match your needs, providing enhanced elasticity and durability that resists damage over time.",
+            "image": "shopify://shop_images/b6a499200b477db68f6a9504a35a5273_5c95cadd-7598-49cc-ba8e-4c02949ccfc5.webp"
+          }
+        },
+        "product_accordion_item_Ht9JgF": {
+          "type": "product_accordion_item",
+          "settings": {
+            "tag": "LONG SEAT",
+            "title": "Comfort with Style",
+            "icon": "<svg viewbox=\"0 0 500 500\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_7_139)\">\n<path d=\"M293.45 438.31H233.59C227.88 438.31 223.21 433.64 223.21 427.93V360.41C223.21 352.16 218.33 344.74 210.75 341.41L205.51 339.13C201.72 337.47 199.28 333.73 199.28 329.58V300C199.28 294.29 203.95 289.62 209.66 289.62C215.37 289.62 220.04 294.29 220.04 300V322.78C234.62 329.58 244.02 344.21 244.02 360.35V417.49H283.12V336.8C283.12 331.09 287.79 326.42 293.5 326.42H310.26C315.97 326.42 320.64 331.09 320.64 336.8C320.64 342.51 315.97 347.18 310.26 347.18H303.88V427.89C303.83 433.64 299.15 438.31 293.45 438.31Z\" fill=\"#B7B7B7\" stroke=\"#B7B7B7\" stroke-width=\"5\" stroke-miterlimit=\"10\"></path>\n<path d=\"M432.59 300.75C418.53 299.48 407.77 293.97 406.98 293.54C401.9 290.89 399.92 284.61 402.62 279.54C405.27 274.46 411.54 272.48 416.61 275.18C416.81 275.3 441.04 287.44 457.61 273.57C464.32 267.98 467.86 259.9 468.12 249.56C468.32 240.98 466.14 234.01 466.14 233.96C464.34 228.53 467.32 222.65 472.74 220.85C478.16 219.05 484.05 222.03 485.84 227.51C486.37 229.12 498.31 266.63 470.86 289.47C458.41 299.91 444.32 301.81 432.59 300.75Z\" fill=\"#B7B7B7\" stroke=\"#B7B7B7\" stroke-width=\"5\" stroke-miterlimit=\"10\"></path>\n<path d=\"M116.5 167.79C127.04 170.76 137.96 171.99 148.89 171.53C226.96 168.25 329.31 151 389.71 124.85C457.06 95.7 456.06 130.88 472.14 148.47C488.22 166.06 491.24 169.08 460.08 185.16C428.92 201.24 348.05 309.82 305.83 267.6C263.61 225.38 33.4101 247.49 33.4101 247.49C33.4101 247.49 1.24006 250.51 24.3601 214.32C47.4801 178.13 59.5401 149.31 90.7101 159.7C102.6 163.66 110.64 166.14 116.5 167.79Z\" stroke=\"#B7B7B7\" stroke-width=\"28\" stroke-miterlimit=\"10\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_7_139\">\n<rect width=\"500\" height=\"500\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
+            "content": "Ergonomic extended seat supports tricks and chill rides with friends alike.",
+            "image": "shopify://shop_images/68a5b1b978efeb23ec298114dcf95541.webp"
+          }
+        },
+        "product_accordion_item_ghCQjG": {
+          "type": "product_accordion_item",
+          "settings": {
+            "tag": "SMART DISPLAY",
+            "title": "Advanced LCD Screen",
+            "icon": "<svg viewbox=\"0 0 500 500\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_7_70)\">\n<path d=\"M360.44 106.58C373.68 106.58 386.19 111.79 395.65 121.26C405.12 130.73 410.33 143.23 410.33 156.47V343.52C410.33 356.76 405.12 369.27 395.65 378.73C386.18 388.2 373.68 393.41 360.44 393.41H77.89C64.65 393.41 52.14 388.2 42.68 378.73C33.21 369.27 28 356.77 28 343.53V156.47C28 143.23 33.21 130.72 42.68 121.26C52.15 111.79 64.65 106.58 77.89 106.58H360.44ZM360.44 78.58H77.89C35.05 78.58 0 113.63 0 156.47V343.52C0 386.36 35.05 421.41 77.89 421.41H360.44C403.28 421.41 438.33 386.36 438.33 343.52V156.47C438.33 113.63 403.28 78.58 360.44 78.58Z\" fill=\"#B7B7B7\"></path>\n<path d=\"M124.7 192.27H313.15\" stroke=\"#B7B7B7\" stroke-width=\"28\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M255.11 159.31V230.25\" stroke=\"#B7B7B7\" stroke-width=\"28\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M316.37 311.22H127.92\" stroke=\"#B7B7B7\" stroke-width=\"28\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M185.96 278.26V349.19\" stroke=\"#B7B7B7\" stroke-width=\"28\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_7_70\">\n<rect width=\"500\" height=\"500\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
+            "content": "Stay informed in real time with the LCD smart display - track speed, battery life, mileage, and more with just a glance.",
+            "image": "shopify://shop_images/e6f4f836c932491c9651419630d6f448.webp"
+          }
+        },
+        "product_accordion_item_QWCATF": {
+          "type": "product_accordion_item",
+          "settings": {
+            "tag": "CONVENIENTLY REMOVABLE",
+            "title": "Adjustable Thumb Throttle",
+            "icon": "<svg viewbox=\"0 0 500 500\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_7_164)\">\n<path d=\"M69.7601 406.56C40.2201 372.99 22.3101 328.94 22.3101 280.71C22.3101 175.44 107.65 90.1 212.92 90.1C318.19 90.1 403.53 175.44 403.53 280.71C403.53 329.59 385.13 374.17 354.88 407.91\" stroke=\"#B7B7B7\" stroke-width=\"30\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M209.69 338.98C228.39 338.98 243.55 323.82 243.55 305.12C243.55 286.42 228.39 271.26 209.69 271.26C190.99 271.26 175.83 286.42 175.83 305.12C175.83 323.82 190.99 338.98 209.69 338.98Z\" fill=\"#B7B7B7\"></path>\n<path d=\"M312.55 190.11L209.69 305.12\" stroke=\"#B7B7B7\" stroke-width=\"30\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_7_164\">\n<rect width=\"500\" height=\"500\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
+            "content": "Whether you prefer accelerating with your left or right hand, Macfox’s removable and position-adjustable thumb throttle lets you easily pull off all kinds of tricks and stunts.",
+            "image": "shopify://shop_images/R20S_X1_X7_X7L.webp"
+          }
+        }
+      },
+      "block_order": [
+        "product_accordion_item_WQctQE",
+        "product_accordion_item_tATPcB",
+        "product_accordion_item_Ht9JgF",
+        "product_accordion_item_ghCQjG",
+        "product_accordion_item_QWCATF"
+      ],
+      "disabled": true,
+      "name": "Accordion Card",
+      "settings": {
+        "bg_color": "#121212"
+      }
+    },
+    "custom_product_parameter_TxCRWy": {
+      "type": "custom-product-parameter",
+      "disabled": true,
+      "name": "Parameter",
+      "settings": {
+        "bg_color": "#121212",
+        "blur_color": "#121212"
+      }
+    },
+    "custom_product_compare_U7wwV8": {
+      "type": "custom-product-compare",
+      "disabled": true,
+      "name": "Custom Product Compare",
+      "settings": {}
+    },
+    "custom_product_tabs_tHm8ji": {
+      "type": "custom-product-tabs",
+      "blocks": {
+        "tab_item_kcEGPU": {
+          "type": "tab-item",
+          "settings": {
+            "title": "IN THE BOX",
+            "t_icon": "<svg viewbox=\"0 0 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M17.5 33L4.10001 25.2V9.8L17.5 2L30.9 9.7V25.2L17.5 33ZM6.20001 24L17.5 30.5L28.8 24V11L17.5 4.5L6.20001 11V24Z\" fill=\"white\"></path>\n<path d=\"M17.5 18.7L4.60001 11.3L5.70001 9.5L17.5 16.3L25.9 11.5L25.5 14.1L17.5 18.7Z\" fill=\"white\"></path>\n<path d=\"M18.6 17.5H16.5V31.8H18.6V17.5Z\" fill=\"white\"></path>\n<path d=\"M13.6 21L8.90001 18.3V15.9L13.6 18.6V21Z\" fill=\"white\"></path>\n<path d=\"M12.0164 5.76269L10.9382 7.5647L23.1233 14.855L24.2014 13.053L12.0164 5.76269Z\" fill=\"white\"></path>\n</svg>",
+            "t_color": "#ffffff",
+            "content": "<h6><strong>Standard Package:</strong></h6><p>1x Macfox Electric Bike<br/>1x Headlight<br/>1x Taillight<br/>1x Battery<br/>1x Charger<br/>1x Installation Tools<br/>1x User Manual</p><h6><strong>Optional accessories (not included):</strong></h6><p>Bag<br/>One extra battery</p>"
+          }
+        },
+        "tab_item_kg6kLh": {
+          "type": "tab-item",
+          "settings": {
+            "title": "SAFETY PRECAUTIONS",
+            "t_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 33 33\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.33 30.13C23.9516 30.13 30.13 23.9516 30.13 16.33C30.13 8.7085 23.9516 2.53003 16.33 2.53003C8.7085 2.53003 2.53003 8.7085 2.53003 16.33C2.53003 23.9516 8.7085 30.13 16.33 30.13Z\" stroke=\"white\" stroke-width=\"2.4224\" stroke-miterlimit=\"10\"></path>\n<path d=\"M16.34 24.62C15.56 24.62 14.92 24.38 14.42 23.89C13.92 23.41 13.67 22.83 13.67 22.16C13.67 21.47 13.92 20.9 14.42 20.44C14.92 19.98 15.56 19.75 16.34 19.75C17.12 19.75 17.75 19.98 18.25 20.44C18.74 20.9 18.99 21.47 18.99 22.16C18.99 22.83 18.74 23.41 18.25 23.89C17.76 24.38 17.12 24.62 16.34 24.62ZM14.57 18.45L13.7 8.04004H18.99L18.1 18.45H14.57Z\" fill=\"white\"></path>\n</svg>",
+            "t_color": "#ffffff",
+            "content": "<p>Unauthorized movement of the controller is strictly prohibited to avoid potential water damage and fire risks.</p>"
+          }
+        },
+        "tab_item_keTDmV": {
+          "type": "tab-item",
+          "settings": {
+            "title": "SHIPPING",
+            "t_icon": "<svg viewbox=\"0 0 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M21.2 7.90002H2.6V5.70001H23.4V10.2H29.3L33.8 18.4V26.6H30.8C31 25.9 30.9 25.1 30.6 24.4H31.7V19L28.1 12.5H23.5V24.4H23.8C24.6 22.5 26.8 21.7 28.7 22.5C30.6 23.3 31.4 25.5 30.6 27.4C29.8 29.3 27.6 30.1 25.7 29.3C24.6 28.8 23.8 27.8 23.5 26.6H14.4C14.6 25.9 14.5 25.1 14.2 24.4H21.2V7.90002ZM10.8 29.4C9 29.4 7.5 28.2 7.2 26.4H2.6V22H4.8V24.2H7.3C8.1 22.3 10.3 21.5 12.2 22.3C14.1 23.1 14.9 25.3 14.1 27.2C13.6 28.5 12.3 29.4 10.8 29.4ZM10.8 27.2C11.6 27.2 12.3 26.5 12.3 25.7C12.3 24.9 11.6 24.2 10.8 24.2C10 24.2 9.3 24.9 9.3 25.7C9.3 26.5 10 27.2 10.8 27.2ZM28.6 25.7C28.6 24.9 27.9 24.2 27.1 24.2C26.3 24.2 25.6 24.9 25.6 25.7C25.6 26.5 26.3 27.2 27.1 27.2C28 27.2 28.6 26.5 28.6 25.7ZM8.6 13.4H1.1V11.2H8.5V13.4H8.6ZM2.6 18.6H8.5V16.4H2.6V18.6Z\" fill=\"white\"></path>\n</svg>",
+            "t_color": "#ffffff",
+            "content": "<h6><strong>Locations We Ship To:</strong></h6><p>We currently only ship within the continental United States.</p><h6><strong>Shipping Fee:</strong></h6><p>We offer the Free shipping on all eligible orders.</p><h6><strong>Shipment Processing Time:</strong></h6><p>All orders are processed within 3-5 business days. Orders are not shipped or delivered on weekends or holidays. Please note: All delivery dates are estimates only and are not guaranteed.</p><h6><strong>Shipment Way:</strong></h6><p>Macfox ships products via UPS or FedEx.</p>"
+          }
+        },
+        "tab_item_HAUbGU": {
+          "type": "tab-item",
+          "settings": {
+            "title": "RETURN & REFUND",
+            "t_icon": "<svg viewbox=\"0 0 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M17.5 3.40002C25.3 3.40002 31.6 9.7 31.6 17.5C31.6 25.3 25.3 31.6 17.5 31.6C14.2 31.6 11 30.5 8.5 28.4L8.2 28.1L9.5 25.4C13.8 29.9 21 29.9 25.4 25.6C29.9 21.3 29.9 14.1 25.6 9.70001C21.3 5.30001 14.1 5.2 9.7 9.5C7.6 11.5 6.4 14.3 6.3 17.2V17.6H9.8L6 25.7C4.3 23.3 3.5 20.5 3.5 17.6C3.4 9.69998 9.7 3.40002 17.5 3.40002ZM18.9 9.09998V11.9H22.4V14.7H14.6C14.2 14.7 13.9 15 13.9 15.4C13.9 15.7 14.1 16 14.5 16.1H14.6H20.2C22.1 16.1 23.7 17.7 23.7 19.6C23.7 21.5 22.1 23.1 20.2 23.1H18.8V25.9H16V23.1H12.5V20.3H20.3C20.7 20.3 21 20 21 19.6C21 19.3 20.8 19 20.4 18.9H20.3H14.7C12.8 18.9 11.2 17.3 11.2 15.4C11.2 13.5 12.8 11.9 14.7 11.9H16.1V9.09998H18.9Z\" fill=\"white\"></path>\n</svg>",
+            "t_color": "#ffffff",
+            "content": "<h6>Cancellation:</h6><p>You can request a full refund before an item ships. Once an item has shipped, cancellations are not possible.</p><h6>Returns:</h6><p>You may apply for a return within 15 days of delivery. To be eligible, items must be unused, in original condition, and in the original packaging. A receipt or proof of purchase is required. For assistance, contact support@macfoxbike.com. We will help create a return label and process your refund once the returned item is received and inspected. Approved refunds will be credited back to your original payment method within a few days.</p><h6>Late or Missing Refunds:</h6><p>If you haven't received your refund, check your bank account and contact your credit card company or bank as there might be processing delays. If the issue persists, contact us at support@macfoxbike.com.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_kcEGPU",
+        "tab_item_kg6kLh",
+        "tab_item_keTDmV",
+        "tab_item_HAUbGU"
+      ],
+      "disabled": true,
+      "name": "Tab Item",
+      "settings": {
+        "title": "Some Things You Might Want To Know",
+        "bg_color": "#121212"
+      }
+    },
+    "1758092497f8e40369": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_8JJN6F": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_8JJN6F"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product1",
+      "blocks": {
+        "e7517124-5ba5-43f1-91d7-4128527acf89": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"discount_text\">\n    <p>Orders delivered before December 31, 2022 can enjoy multiple discounts such as new energy vehicle subsidies, point rewards, and insurance subsidies. </p>\n    <a href=\"https://www.tesla.cn/support/offers\" target=\"_blank\">Find out about limited time offers in December</a>\n</div>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 25,
+            "fw_pr": 400,
+            "lh_pr": 35,
+            "ls_pr": 0,
+            "pr_title_color": "#222222"
+          }
+        },
+        "f3495ae0-e2f3-478c-a69e-ec71490a632e": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "0",
+            "tax_ship": true,
+            "rating": true,
+            "review_liquid": "",
+            "size_price_pr": 22,
+            "fw_price_pr": 500,
+            "price_color": "#000000",
+            "price_sale_color": "#ec0101"
+          }
+        },
+        "da2a430e-a0df-449a-ac57-2a71b71da9d5": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.product_preference.value }}</p>"
+          }
+        },
+        "49fc11c8-8564-4ac2-874b-88ab5638aa21": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .red-text {\n    color: #E70014;\n    font-size: 25px;\n    font-weight: bold;\n  }\n</style>\n</head>\n<body>\n  <p class=\"red-text\">Shipping by July 15</p>\n</body>\n</html>"
+          }
+        },
+        "96601863-d5be-4e51-975d-09a5a75c9d64": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "e5c19a7d-d4dc-42d6-af08-1b95e25b721d": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"discount t4s-pr t4s-d-flex\">\n    <div class=\"discount-content t4s-d-flex t4s-align-items-center t4s-justify-content-center t4s-col-4 t4s-col-lg-4 t4s-col-md-4\">\n        <span class=\"discount_num\">$100 OFF</span>\n    </div>\n    <div value=\"LIMITED100\" onclick=\"copyVideoUrl(event)\" class=\"discount-code t4s-d-flex t4s-align-items-start t4s-justify-content-center t4s-col-8 t4s-col-lg-8 t4s-col-md-8\">\n        <span class=\"discount-code-inner\">LIMITED100</span>\n        <span class=\"discount_description\">Click To Copy</span>\n    </div>\n</div>"
+          }
+        },
+        "390ce4ad-757a-4284-8415-adc8e89ed17f": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "des": "2",
+            "text": "<p>Delayed shipping by 10 days for bag, fenders, and second battery.</p>",
+            "length": 31,
+            "readm": false,
+            "readm_txt": "Read more"
+          }
+        },
+        "acdac34e-1d0c-482a-9713-24cbb6a57245": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "radio is-sw__full",
+            "color_mode": "circle",
+            "enable_fit_ratio_img": false,
+            "color_size": "small",
+            "show_qty": false,
+            "enable_wishlist": false,
+            "enable_compare": false,
+            "btn_atc_full": true,
+            "pr_btn_round": 5,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": false,
+            "button_style": "default",
+            "button_color": "dark",
+            "button_effect": "shadow",
+            "show_dynamic_checkout": true,
+            "btn_txt2": "3",
+            "button_color_payment": "primary",
+            "product_list": [],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": []
+          }
+        },
+        "674f8d3b-cb73-447f-b69c-01265321eb36": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"cs_tab_mark\">\n    <div class=\"cs_mark_con\">\n        <div class=\"cs_tab_item active\" data-index=\"0\">\n            <div><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cs_tab_svg\" viewBox=\"0 0 23.14 23.14\">\n                    <defs>\n                        <style>\n                            .cls-1 {\n                                fill: #000;\n                            }\n                        </style>\n                    </defs>\n                    <g id=\"图层_2\" data-name=\"图层 2\">\n                        <g id=\"图层_1-2\" data-name=\"图层 1\">\n                            <path class=\"cls-1\"\n                                d=\"M11.57,23.14A11.57,11.57,0,1,1,23.14,11.57,11.58,11.58,0,0,1,11.57,23.14ZM11.57,1a10.6,10.6,0,1,0,10.6,10.6A10.62,10.62,0,0,0,11.57,1Z\" />\n                            <path class=\"cls-1\"\n                                d=\"M13.92,6.08a3.67,3.67,0,0,1,1.59.36l-.93.92a1.35,1.35,0,0,0,0,1.91h0a1.35,1.35,0,0,0,1.93,0l.83-.81a3.62,3.62,0,0,1-3.42,4.83A3.83,3.83,0,0,1,12.56,13L8.9,16.67a1.38,1.38,0,0,1-1.94,0,1.36,1.36,0,0,1,0-1.91H7l3.64-3.61a3.51,3.51,0,0,1-.31-1.46,3.61,3.61,0,0,1,3.63-3.6Z\" />\n                        </g>\n                    </g>\n                </svg></div>\n            <div>2-Year Warranty</div>\n        </div>\n        <div class=\"cs_tab_item\" data-index=\"1\">\n            <div><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cs_tab_svg\" viewBox=\"0 0 23.14 23.14\">\n                    <defs>\n                        <style>\n                            .cls-1 {\n                                fill: #000;\n                            }\n                        </style>\n                    </defs>\n                    <g id=\"图层_2\" data-name=\"图层 2\">\n                        <g id=\"图层_1-2\" data-name=\"图层 1\">\n                            <path class=\"cls-1\"\n                                d=\"M11.57,18.38a.63.63,0,0,0,.64-.65V16.52a3.37,3.37,0,0,0,1.7-.8,2.75,2.75,0,0,0,.72-1.93,3,3,0,0,0-3.06-3,1.91,1.91,0,0,1-1.37-.48,1.53,1.53,0,0,1-.4-1.05,1.77,1.77,0,0,1,3.54-.16A.61.61,0,1,0,14.55,9a2.85,2.85,0,0,0-2.34-2.66v-1a.64.64,0,1,0-1.28,0v1a2.92,2.92,0,0,0-2.42,2.9,2.58,2.58,0,0,0,.72,1.86,3,3,0,0,0,2.26.8,1.76,1.76,0,0,1,1.85,1.78,1.52,1.52,0,0,1-.4,1,1.91,1.91,0,0,1-1.37.49h-.08a1.45,1.45,0,0,1-1.61-1.21v-.49a.62.62,0,0,0-1.21-.24,1.68,1.68,0,0,0,0,.89,2.64,2.64,0,0,0,2.26,2.25v1.13A.66.66,0,0,0,11.57,18.38Z\" />\n                            <path class=\"cls-1\"\n                                d=\"M11.57,23.14A11.57,11.57,0,1,1,23.14,11.57,11.58,11.58,0,0,1,11.57,23.14ZM11.57,1a10.6,10.6,0,1,0,10.6,10.6A10.62,10.62,0,0,0,11.57,1Z\" />\n                        </g>\n                    </g>\n                </svg></div>\n            <div>15-Day Return</div>\n        </div>\n        <div class=\"cs_tab_item\" data-index=\"2\">\n            <div><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cs_tab_svg\" viewBox=\"0 0 23.14 23.14\">\n                    <defs>\n                        <style>\n                            .cls-1 {\n                                fill: #000;\n                            }\n                        </style>\n                    </defs>\n                    <g id=\"图层_2\" data-name=\"图层 2\">\n                        <g id=\"图层_1-2\" data-name=\"图层 1\">\n                            <path class=\"cls-1\"\n                                d=\"M11.57,23.14A11.57,11.57,0,1,1,23.14,11.57,11.58,11.58,0,0,1,11.57,23.14ZM11.57,1a10.6,10.6,0,1,0,10.6,10.6A10.62,10.62,0,0,0,11.57,1Z\" />\n                            <path class=\"cls-1\"\n                                d=\"M15.9,17.11a2.36,2.36,0,0,1-2.32-1.91h-3a2.36,2.36,0,0,1-4.63,0H5.86a.93.93,0,0,1-.93-.92V7.59a.93.93,0,0,1,.93-.93h8.6a.93.93,0,0,1,.92.93V9.53h1.34a.66.66,0,0,1,.57.31l1.81,2.71a.7.7,0,0,1,.11.38v1.35a1,1,0,0,1-.27.65.91.91,0,0,1-.65.27h-.08A2.36,2.36,0,0,1,15.9,17.11Zm-6.18-2.8h4.71v.45a1.47,1.47,0,0,0,2.94,0v-.45h.94V13l-1.71-2.57H14.5V7.59a0,0,0,0,0,0,0H5.86a0,0,0,0,0,0,0v6.69s0,0,0,0h.92v.45a1.47,1.47,0,0,0,2.94,0ZM18.36,13h0Zm-1.81-2.71Z\" />\n                            <path class=\"cls-1\"\n                                d=\"M11.93,9.09a.42.42,0,0,0-.6,0L9.37,11l-.94-.94a.45.45,0,0,0-.61,0h0a.43.43,0,0,0,0,.61L9.06,12h0a.43.43,0,0,0,.61,0h0L11.94,9.7a.43.43,0,0,0,0-.61Zm3.79,4.72a1,1,0,0,0-.76.76,1,1,0,1,0,.76-.76Zm-7.65,0a1,1,0,0,0-.75.76,1,1,0,0,0,1.12,1.12,1,1,0,0,0-.37-1.88Zm8.29-2.88H14.94v1.92h2.87L16.55,11A.19.19,0,0,0,16.36,10.93Z\" />\n                        </g>\n                    </g>\n                </svg></div>\n            <div>Free Shipping</div>\n        </div>\n    </div>\n</div>\n<div class=\"cs_tab_text\">\n    <div class=\"cs_text_con\" style=\"display: block\">\n        All Macfox bilkes are covered under our manufacturer's 2-year all-inclusive warranty for the original owner\n        against all manufacturing defects (All free Accessories are not covered by warranty service). All dealerships provide free diagnosis and free maintenance\n        services to customers.\n    </div>\n    <div class=\"cs_text_con\">\n        For non-quality issues, customer may ask for product replacement or return within 15 days after received it.\n        A 10% processing fee will be applied but we can prevent it for the customer if a replacement order is\n        received. The customer is also responsible for the return shipping cost of $150. Macfox will provide a\n        return shipping label, and the designated carrier will collect the return package. The customer may also\n        choose self-return or arrange the return shipment by himself.\n    </div>\n    <div class=\"cs_text_con\">\n        Currently, we only provide FREE shipping to the lower 48 states in the US. And we DO NOT ship to PO BOXES or\n        APO.\n    </div>\n</div>"
+          }
+        },
+        "c804b5fd-ef0e-477a-bfab-036bee9db4b3": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"height: 50px;\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/paypal-49e4c1e03244b6d2de0d270ca0d22dd15da6e92cc7266e93eb43762df5aa355d.svg\"> <img src=\"https://cdn.shopify.com/s/files/1/0650/6273/2017/files/Klarna_MarketingBadge_Pink_RGB.svg?v=1665995338\" alt=\"Pulpit rock\" width=\"50\" height=\"22\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/discover-cc9808e50193c7496e7a5245eb86d5e06f02e2476c0fe70f2c40016707d35461.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/jcb-ab0f5a1739704f1ab039f19ac8c28895af5c39a3f54ee9b748ea051986b0bd36.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/diners_club-16436b9fb6dd9060edb51f1c7c44e23941e544ad798282d6aef1604319562fba.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visaelectron-131aa567644ec0382c5762f24c751903c87a9ce4d2ffcfdb4be83be8e21d86b5.svg\"></div><br>"
+          }
+        },
+        "9d29f6fe-433d-43fa-b925-825ac8966518": {
+          "type": "img",
+          "settings": {
+            "al": "center",
+            "mess": "Guaranteed Safe Checkout",
+            "size": 16,
+            "source": "1",
+            "wimg": 100,
+            "svg": "american_express,diners_club,discover,jcb,klarna,maestro,master,paypal,visa,visaelectron",
+            "height": 22
+          }
+        }
+      },
+      "block_order": [
+        "e7517124-5ba5-43f1-91d7-4128527acf89",
+        "title",
+        "f3495ae0-e2f3-478c-a69e-ec71490a632e",
+        "da2a430e-a0df-449a-ac57-2a71b71da9d5",
+        "49fc11c8-8564-4ac2-874b-88ab5638aa21",
+        "96601863-d5be-4e51-975d-09a5a75c9d64",
+        "e5c19a7d-d4dc-42d6-af08-1b95e25b721d",
+        "390ce4ad-757a-4284-8415-adc8e89ed17f",
+        "acdac34e-1d0c-482a-9713-24cbb6a57245",
+        "674f8d3b-cb73-447f-b69c-01265321eb36",
+        "c804b5fd-ef0e-477a-bfab-036bee9db4b3",
+        "9d29f6fe-433d-43fa-b925-825ac8966518"
+      ],
+      "disabled": true,
+      "settings": {
+        "pr_layout": "wide",
+        "enable_sticky_info": false,
+        "media_layout": "without_thumbnails",
+        "media_size": "medium",
+        "thumb_lr_size": "medium",
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "pswp",
+        "zoom_tp": "external",
+        "enable_zoom_icon": false,
+        "enable_zoom_click_mb": false,
+        "enable_video_looping": false,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "tabs_design": "tab",
+        "tabs_design_mb": "accordion",
+        "tabs_position": "external",
+        "enable_first_tab": false,
+        "tabs_layout": "tab",
+        "bg": "#878787",
+        "bg_mb": "#ffffff",
+        "product_list": [],
+        "sticky_mode": "0",
+        "sticky_show": "2",
+        "ani": "none",
+        "time": 6
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "You May Also Like",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 12,
+        "display_type": "4",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "1",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "1",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_product_recommendations_gaE3Mg": {
+      "type": "custom-product-recommendations",
+      "disabled": true,
+      "name": "Product Recommendations",
+      "settings": {
+        "title": "Product Recommendations",
+        "title_align": "center",
+        "col_pc": "4",
+        "col_mb": "2"
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
+          "type": "category",
+          "settings": {
+            "title_category": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "f65f464b-9487-43be-9c91-8688a098bb6f": {
+          "type": "collection",
+          "settings": {
+            "title_fea_pr": "Sale Products",
+            "collection": "electric-bike",
+            "limit_pr": 5,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
+          "type": "instagram",
+          "settings": {
+            "title_ins": "Instagram",
+            "mode": "2",
+            "acc": "",
+            "limit": 12,
+            "open_link": "_blank",
+            "round": 0,
+            "col_dk": "3",
+            "space_item": "6"
+          }
+        },
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
+          "type": "shipping",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6": {
+          "type": "image",
+          "settings": {
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "none",
+            "date": "2022/12/26",
+            "content_align": "center",
+            "cdt_des": "2",
+            "countdown_pos": "2",
+            "cdt_size": "medium",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#ffffff",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba",
+        "f65f464b-9487-43be-9c91-8688a098bb6f",
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792",
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c",
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently_viewed",
+      "disabled": true,
+      "settings": {
+        "show": false,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Recently viewed products",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 14,
+        "sortby": "1",
+        "unavailable_prs": "show",
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_internal_link_gUGL8F": {
+      "type": "custom-Internal-link",
+      "name": "Custom Internal Link",
+      "settings": {
+        "internal_links": "internal-link",
+        "theme": "black",
+        "title_align": "left"
+      }
+    },
+    "product_schema": {
+      "type": "product-schema",
+      "settings": {}
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "custom_product_main_rn7zWH",
+    "custom_product_main_bun_fGLjgL",
+    "custom_html_ydhzGr",
+    "custom_product_reasons_qf87c6",
+    "custom_product_panorama_bhmw7d",
+    "custom_picture_gallery_UMwkNV",
+    "custom_product_text_animation_tcTMgp",
+    "custom_product_describe_card_3XUrEQ",
+    "custom_product_accordion_card_LnxR4G",
+    "custom_product_parameter_TxCRWy",
+    "custom_product_compare_U7wwV8",
+    "custom_product_tabs_tHm8ji",
+    "1758092497f8e40369",
+    "main",
+    "product-recommendations",
+    "custom_product_recommendations_gaE3Mg",
+    "sidebar",
+    "recently-viewed-products",
+    "custom_internal_link_gUGL8F",
+    "product_schema"
+  ]
+}

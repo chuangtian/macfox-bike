@@ -1,0 +1,2177 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": true,
+        "cl_bg": "rgba(0,0,0,0)",
+        "cl_link": "#222222"
+      }
+    },
+    "main": {
+      "type": "main-product1",
+      "blocks": {
+        "e7517124-5ba5-43f1-91d7-4128527acf89": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"discount_text\">\n    <p>Orders delivered before December 31, 2022 can enjoy multiple discounts such as new energy vehicle subsidies, point rewards, and insurance subsidies. </p>\n    <a href=\"https://www.tesla.cn/support/offers\" target=\"_blank\">Find out about limited time offers in December</a>\n</div>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 25,
+            "fw_pr": 400,
+            "lh_pr": 35,
+            "ls_pr": 0,
+            "pr_title_color": "#222222"
+          }
+        },
+        "f3495ae0-e2f3-478c-a69e-ec71490a632e": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "0",
+            "tax_ship": true,
+            "rating": true,
+            "review_liquid": "",
+            "size_price_pr": 22,
+            "fw_price_pr": 500,
+            "price_color": "#000000",
+            "price_sale_color": "#ec0101"
+          }
+        },
+        "custom_liquid_TcbcMp": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<a class=\" w-full block overflow-hidden\" href=\"https://macfoxbike.com/pages/student-beans\" target=\"_blank\">\n                    <img class=\"hidden md:block\" width=\"100%\" height=\"100%\" src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/MACFOX-_2025.10.30.webp?v=1761788597\" alt=\"\">\n                    <img class=\"block md:hidden\" width=\"100%\" height=\"100%\" src=\"https://cdn.shopify.com/s/files/1/0714/3581/3182/files/MACFOX-_2025.10.30.webp?v=1761788597\" alt=\"\">\n                  </a>"
+          }
+        },
+        "da2a430e-a0df-449a-ac57-2a71b71da9d5": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.product_preference.value }}</p>"
+          }
+        },
+        "49fc11c8-8564-4ac2-874b-88ab5638aa21": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .red-text {\n    color: #E70014;\n    font-size: 25px;\n    font-weight: bold;\n  }\n</style>\n</head>\n<body>\n  <p class=\"red-text\">Shipping by July 15</p>\n</body>\n</html>"
+          }
+        },
+        "96601863-d5be-4e51-975d-09a5a75c9d64": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "e5c19a7d-d4dc-42d6-af08-1b95e25b721d": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"discount t4s-pr t4s-d-flex\">\n    <div class=\"discount-content t4s-d-flex t4s-align-items-center t4s-justify-content-center t4s-col-4 t4s-col-lg-4 t4s-col-md-4\">\n        <span class=\"discount_price\">$100  OFF</span>\n    </div>\n    <div value=\"BLACKFRIDAY\" onclick=\"copyVideoUrl(event)\" class=\"discount-code t4s-d-flex t4s-align-items-start t4s-justify-content-center t4s-col-8 t4s-col-lg-8 t4s-col-md-8\">\n        <span class=\"discount-code-inner\">BLACKFRIDAY</span>\n        <span class=\"discount_description\">Click To Copy</span>\n    </div>\n</div>"
+          }
+        },
+        "390ce4ad-757a-4284-8415-adc8e89ed17f": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "des": "2",
+            "text": "<p>Delayed shipping by 10 days for bag, fenders, and second battery.</p>",
+            "length": 31,
+            "readm": false,
+            "readm_txt": "Read more"
+          }
+        },
+        "acdac34e-1d0c-482a-9713-24cbb6a57245": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "radio is-sw__full",
+            "color_mode": "circle",
+            "enable_fit_ratio_img": false,
+            "color_size": "small",
+            "show_qty": false,
+            "enable_wishlist": false,
+            "enable_compare": false,
+            "btn_atc_full": true,
+            "pr_btn_round": 5,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": false,
+            "button_style": "default",
+            "button_color": "dark",
+            "button_effect": "shadow",
+            "show_dynamic_checkout": true,
+            "btn_txt2": "3",
+            "button_color_payment": "primary",
+            "product_list": [],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": []
+          }
+        },
+        "674f8d3b-cb73-447f-b69c-01265321eb36": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"cs_tab_mark\">\n    <div class=\"cs_mark_con\">\n        <div class=\"cs_tab_item active\" data-index=\"0\">\n            <div><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cs_tab_svg\" viewBox=\"0 0 23.14 23.14\">\n                    <defs>\n                        <style>\n                            .cls-1 {\n                                fill: #000;\n                            }\n                        </style>\n                    </defs>\n                    <g id=\"图层_2\" data-name=\"图层 2\">\n                        <g id=\"图层_1-2\" data-name=\"图层 1\">\n                            <path class=\"cls-1\"\n                                d=\"M11.57,23.14A11.57,11.57,0,1,1,23.14,11.57,11.58,11.58,0,0,1,11.57,23.14ZM11.57,1a10.6,10.6,0,1,0,10.6,10.6A10.62,10.62,0,0,0,11.57,1Z\" />\n                            <path class=\"cls-1\"\n                                d=\"M13.92,6.08a3.67,3.67,0,0,1,1.59.36l-.93.92a1.35,1.35,0,0,0,0,1.91h0a1.35,1.35,0,0,0,1.93,0l.83-.81a3.62,3.62,0,0,1-3.42,4.83A3.83,3.83,0,0,1,12.56,13L8.9,16.67a1.38,1.38,0,0,1-1.94,0,1.36,1.36,0,0,1,0-1.91H7l3.64-3.61a3.51,3.51,0,0,1-.31-1.46,3.61,3.61,0,0,1,3.63-3.6Z\" />\n                        </g>\n                    </g>\n                </svg></div>\n            <div>2-Year Warranty</div>\n        </div>\n        <div class=\"cs_tab_item\" data-index=\"1\">\n            <div><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cs_tab_svg\" viewBox=\"0 0 23.14 23.14\">\n                    <defs>\n                        <style>\n                            .cls-1 {\n                                fill: #000;\n                            }\n                        </style>\n                    </defs>\n                    <g id=\"图层_2\" data-name=\"图层 2\">\n                        <g id=\"图层_1-2\" data-name=\"图层 1\">\n                            <path class=\"cls-1\"\n                                d=\"M11.57,18.38a.63.63,0,0,0,.64-.65V16.52a3.37,3.37,0,0,0,1.7-.8,2.75,2.75,0,0,0,.72-1.93,3,3,0,0,0-3.06-3,1.91,1.91,0,0,1-1.37-.48,1.53,1.53,0,0,1-.4-1.05,1.77,1.77,0,0,1,3.54-.16A.61.61,0,1,0,14.55,9a2.85,2.85,0,0,0-2.34-2.66v-1a.64.64,0,1,0-1.28,0v1a2.92,2.92,0,0,0-2.42,2.9,2.58,2.58,0,0,0,.72,1.86,3,3,0,0,0,2.26.8,1.76,1.76,0,0,1,1.85,1.78,1.52,1.52,0,0,1-.4,1,1.91,1.91,0,0,1-1.37.49h-.08a1.45,1.45,0,0,1-1.61-1.21v-.49a.62.62,0,0,0-1.21-.24,1.68,1.68,0,0,0,0,.89,2.64,2.64,0,0,0,2.26,2.25v1.13A.66.66,0,0,0,11.57,18.38Z\" />\n                            <path class=\"cls-1\"\n                                d=\"M11.57,23.14A11.57,11.57,0,1,1,23.14,11.57,11.58,11.58,0,0,1,11.57,23.14ZM11.57,1a10.6,10.6,0,1,0,10.6,10.6A10.62,10.62,0,0,0,11.57,1Z\" />\n                        </g>\n                    </g>\n                </svg></div>\n            <div>15-Day Return</div>\n        </div>\n        <div class=\"cs_tab_item\" data-index=\"2\">\n            <div><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cs_tab_svg\" viewBox=\"0 0 23.14 23.14\">\n                    <defs>\n                        <style>\n                            .cls-1 {\n                                fill: #000;\n                            }\n                        </style>\n                    </defs>\n                    <g id=\"图层_2\" data-name=\"图层 2\">\n                        <g id=\"图层_1-2\" data-name=\"图层 1\">\n                            <path class=\"cls-1\"\n                                d=\"M11.57,23.14A11.57,11.57,0,1,1,23.14,11.57,11.58,11.58,0,0,1,11.57,23.14ZM11.57,1a10.6,10.6,0,1,0,10.6,10.6A10.62,10.62,0,0,0,11.57,1Z\" />\n                            <path class=\"cls-1\"\n                                d=\"M15.9,17.11a2.36,2.36,0,0,1-2.32-1.91h-3a2.36,2.36,0,0,1-4.63,0H5.86a.93.93,0,0,1-.93-.92V7.59a.93.93,0,0,1,.93-.93h8.6a.93.93,0,0,1,.92.93V9.53h1.34a.66.66,0,0,1,.57.31l1.81,2.71a.7.7,0,0,1,.11.38v1.35a1,1,0,0,1-.27.65.91.91,0,0,1-.65.27h-.08A2.36,2.36,0,0,1,15.9,17.11Zm-6.18-2.8h4.71v.45a1.47,1.47,0,0,0,2.94,0v-.45h.94V13l-1.71-2.57H14.5V7.59a0,0,0,0,0,0,0H5.86a0,0,0,0,0,0,0v6.69s0,0,0,0h.92v.45a1.47,1.47,0,0,0,2.94,0ZM18.36,13h0Zm-1.81-2.71Z\" />\n                            <path class=\"cls-1\"\n                                d=\"M11.93,9.09a.42.42,0,0,0-.6,0L9.37,11l-.94-.94a.45.45,0,0,0-.61,0h0a.43.43,0,0,0,0,.61L9.06,12h0a.43.43,0,0,0,.61,0h0L11.94,9.7a.43.43,0,0,0,0-.61Zm3.79,4.72a1,1,0,0,0-.76.76,1,1,0,1,0,.76-.76Zm-7.65,0a1,1,0,0,0-.75.76,1,1,0,0,0,1.12,1.12,1,1,0,0,0-.37-1.88Zm8.29-2.88H14.94v1.92h2.87L16.55,11A.19.19,0,0,0,16.36,10.93Z\" />\n                        </g>\n                    </g>\n                </svg></div>\n            <div>Free Shipping</div>\n        </div>\n    </div>\n</div>\n<div class=\"cs_tab_text\">\n    <div class=\"cs_text_con\" style=\"display: block\">\n        All Macfox bilkes are covered under our manufacturer's 2-year all-inclusive warranty for the original owner\n        against all manufacturing defects (All free Accessories are not covered by warranty service). All dealerships provide free diagnosis and free maintenance\n        services to customers.\n    </div>\n    <div class=\"cs_text_con\">\n        For non-quality issues, customer may ask for product replacement or return within 15 days after received it.\n        A 10% processing fee will be applied but we can prevent it for the customer if a replacement order is\n        received. The customer is also responsible for the return shipping cost of $150. Macfox will provide a\n        return shipping label, and the designated carrier will collect the return package. The customer may also\n        choose self-return or arrange the return shipment by himself.\n    </div>\n    <div class=\"cs_text_con\">\n        Currently, we only provide FREE shipping to the lower 48 states in the US. And we DO NOT ship to PO BOXES or\n        APO.\n    </div>\n</div>"
+          }
+        },
+        "c804b5fd-ef0e-477a-bfab-036bee9db4b3": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"height: 50px;\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/paypal-49e4c1e03244b6d2de0d270ca0d22dd15da6e92cc7266e93eb43762df5aa355d.svg\"> <img src=\"https://cdn.shopify.com/s/files/1/0650/6273/2017/files/Klarna_MarketingBadge_Pink_RGB.svg?v=1665995338\" alt=\"Pulpit rock\" width=\"50\" height=\"22\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/discover-cc9808e50193c7496e7a5245eb86d5e06f02e2476c0fe70f2c40016707d35461.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/jcb-ab0f5a1739704f1ab039f19ac8c28895af5c39a3f54ee9b748ea051986b0bd36.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/diners_club-16436b9fb6dd9060edb51f1c7c44e23941e544ad798282d6aef1604319562fba.svg\">\n<img src=\"https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visaelectron-131aa567644ec0382c5762f24c751903c87a9ce4d2ffcfdb4be83be8e21d86b5.svg\"></div><br>"
+          }
+        },
+        "9d29f6fe-433d-43fa-b925-825ac8966518": {
+          "type": "img",
+          "disabled": true,
+          "settings": {
+            "al": "center",
+            "mess": "Guaranteed Safe Checkout",
+            "size": 16,
+            "source": "1",
+            "wimg": 100,
+            "svg": "american_express,diners_club,discover,jcb,klarna,maestro,master,paypal,visa,visaelectron",
+            "height": 22
+          }
+        }
+      },
+      "block_order": [
+        "e7517124-5ba5-43f1-91d7-4128527acf89",
+        "title",
+        "f3495ae0-e2f3-478c-a69e-ec71490a632e",
+        "custom_liquid_TcbcMp",
+        "da2a430e-a0df-449a-ac57-2a71b71da9d5",
+        "49fc11c8-8564-4ac2-874b-88ab5638aa21",
+        "96601863-d5be-4e51-975d-09a5a75c9d64",
+        "e5c19a7d-d4dc-42d6-af08-1b95e25b721d",
+        "390ce4ad-757a-4284-8415-adc8e89ed17f",
+        "acdac34e-1d0c-482a-9713-24cbb6a57245",
+        "674f8d3b-cb73-447f-b69c-01265321eb36",
+        "c804b5fd-ef0e-477a-bfab-036bee9db4b3",
+        "9d29f6fe-433d-43fa-b925-825ac8966518"
+      ],
+      "settings": {
+        "pr_layout": "wide",
+        "enable_sticky_info": false,
+        "media_layout": "without_thumbnails",
+        "media_size": "medium",
+        "thumb_lr_size": "medium",
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "pswp",
+        "zoom_tp": "external",
+        "enable_zoom_icon": false,
+        "enable_zoom_click_mb": false,
+        "enable_video_looping": false,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "tabs_design": "tab",
+        "tabs_design_mb": "accordion",
+        "tabs_position": "external",
+        "enable_first_tab": false,
+        "tabs_layout": "tab",
+        "bg": "#878787",
+        "bg_mb": "#ffffff",
+        "product_list": [],
+        "sticky_mode": "0",
+        "sticky_show": "2",
+        "ani": "none",
+        "time": 6
+      }
+    },
+    "slideshow_Hk7V8T": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_GyPHge": {
+          "type": "image_parent",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/9929fb64-6250-4b40-b1aa-ee95081083f6.jpg",
+            "image_mb": "shopify://shop_images/71f8373c69903a1693c0cd7f1bd283c.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "custom_text_8bmXFY": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Summer 2022",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_text_7yEp6n": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "New Arrival Collection",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_button_UnETTp": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        },
+        "image_parent_wH3yKg": {
+          "type": "image_parent",
+          "disabled": true,
+          "settings": {
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "custom_text_8ty9xm": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Summer 2022",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_text_rQmrTN": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Lookbook Collection",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_button_fgEpaV": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_GyPHge",
+        "custom_text_8bmXFY",
+        "custom_text_7yEp6n",
+        "custom_button_UnETTp",
+        "image_parent_wH3yKg",
+        "custom_text_8ty9xm",
+        "custom_text_rQmrTN",
+        "custom_button_fgEpaV"
+      ],
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "9b515280-b54a-4703-8ada-5db24864c49d": {
+      "type": "custom-product-list",
+      "blocks": {
+        "baeee466-08a3-4501-8c57-a92b1f96eb29": {
+          "type": "product",
+          "settings": {
+            "product_id": "",
+            "ul_icon_size": 80,
+            "ul_icon_mobile_size": 30,
+            "ul_icon_left": 10,
+            "ul_icon_top": 10,
+            "ul_icon_mobile_left": 90,
+            "ul_icon_mobile_top": 10
+          }
+        },
+        "2933027f-bc78-4320-af00-6ec10588ff9d": {
+          "type": "product",
+          "settings": {
+            "product_id": "",
+            "ul_icon_size": 80,
+            "ul_icon_mobile_size": 30,
+            "ul_icon_left": 10,
+            "ul_icon_top": 10,
+            "ul_icon_mobile_left": 90,
+            "ul_icon_mobile_top": 10
+          }
+        },
+        "c5985dd5-e463-437d-a0ad-d76dc11fb4aa": {
+          "type": "product",
+          "settings": {
+            "product_id": "",
+            "ul_icon_size": 80,
+            "ul_icon_mobile_size": 30,
+            "ul_icon_left": 10,
+            "ul_icon_top": 10,
+            "ul_icon_mobile_left": 90,
+            "ul_icon_mobile_top": 10
+          }
+        },
+        "ad1dc2b9-1f2a-467e-b1f5-75e18aa935ee": {
+          "type": "product",
+          "settings": {
+            "product_id": "",
+            "ul_icon_size": 80,
+            "ul_icon_mobile_size": 30,
+            "ul_icon_left": 10,
+            "ul_icon_top": 10,
+            "ul_icon_mobile_left": 90,
+            "ul_icon_mobile_top": 10
+          }
+        },
+        "1e4ef7f5-d4bf-4f01-81ea-fa59745a9895": {
+          "type": "product",
+          "settings": {
+            "product_id": "",
+            "ul_icon_size": 80,
+            "ul_icon_mobile_size": 30,
+            "ul_icon_left": 10,
+            "ul_icon_top": 10,
+            "ul_icon_mobile_left": 90,
+            "ul_icon_mobile_top": 10
+          }
+        },
+        "b6f9fa28-61db-4821-814b-0b7651af1612": {
+          "type": "product",
+          "settings": {
+            "product_id": "",
+            "ul_icon_size": 80,
+            "ul_icon_mobile_size": 30,
+            "ul_icon_left": 10,
+            "ul_icon_top": 10,
+            "ul_icon_mobile_left": 90,
+            "ul_icon_mobile_top": 10
+          }
+        }
+      },
+      "block_order": [
+        "baeee466-08a3-4501-8c57-a92b1f96eb29",
+        "2933027f-bc78-4320-af00-6ec10588ff9d",
+        "c5985dd5-e463-437d-a0ad-d76dc11fb4aa",
+        "ad1dc2b9-1f2a-467e-b1f5-75e18aa935ee",
+        "1e4ef7f5-d4bf-4f01-81ea-fa59745a9895",
+        "b6f9fa28-61db-4821-814b-0b7651af1612"
+      ],
+      "disabled": true,
+      "settings": {
+        "me_title": "START YOUR <br> STREET PERFORMANCE",
+        "minor_title": "Choose This One That Suits You",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "You May Also Like",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 12,
+        "display_type": "4",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "1",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "1",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "16929492566fb2b7c9": {
+      "type": "apps",
+      "blocks": {
+        "092a0882-852a-4a7d-8b48-ba62fc376f9e": {
+          "type": "shopify://apps/aftership-personalization/blocks/recommendation-main/a3defeb3-0cab-4254-bd92-41fa7c497d49",
+          "settings": {
+            "offerId": "00005"
+          }
+        }
+      },
+      "block_order": [
+        "092a0882-852a-4a7d-8b48-ba62fc376f9e"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
+          "type": "category",
+          "settings": {
+            "title_category": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "f65f464b-9487-43be-9c91-8688a098bb6f": {
+          "type": "collection",
+          "settings": {
+            "title_fea_pr": "Sale Products",
+            "collection": "electric-bike",
+            "limit_pr": 5,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
+          "type": "instagram",
+          "settings": {
+            "title_ins": "Instagram",
+            "mode": "2",
+            "acc": "",
+            "limit": 12,
+            "open_link": "_blank",
+            "round": 0,
+            "col_dk": "3",
+            "space_item": "6"
+          }
+        },
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
+          "type": "shipping",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6": {
+          "type": "image",
+          "settings": {
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "none",
+            "date": "2022/12/26",
+            "content_align": "center",
+            "cdt_des": "2",
+            "countdown_pos": "2",
+            "cdt_size": "medium",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#ffffff",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba",
+        "f65f464b-9487-43be-9c91-8688a098bb6f",
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792",
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c",
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d": {
+      "type": "custom-section",
+      "blocks": {
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-0": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-1": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Macfox-X2",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 0,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 5,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-3": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#d2a2a2"
+          }
+        },
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-4": {
+          "type": "newsletter",
+          "disabled": true,
+          "settings": {
+            "form_width": 0,
+            "form_width_mb": 0,
+            "newl_des": "1",
+            "news_align": "center",
+            "newl_size": "small",
+            "btn_icon": false,
+            "input_cl": "#878787",
+            "border_cl": "#000000",
+            "btn_cl": "#ffffff",
+            "btn_bg_cl": "#222222",
+            "btn_hover_cl": "#ffffff",
+            "btn_hover_bg_cl": "#56cfe1",
+            "hidden_mobile": false,
+            "mgb": 15,
+            "mgb_mb": 10
+          }
+        },
+        "69bd8739-7405-4618-9bca-6c94af60e7d0": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "<br>FOR THE ADVENTURE-SEEKERS",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 18,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 14,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "b6aa900b-4926-4cc5-aa31-0dfe61488b01": {
+          "type": "custom_text",
+          "settings": {
+            "text": "<br><h2>THE YOUTH EXCLUSIVE EBIKE</h2>",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 30,
+            "text_lh": 0,
+            "text_fw": 300,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 25,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-2": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "<br>Macfox-X2",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 14,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "27ec3193-9369-40c7-b7e7-48ea123e6b41": {
+          "type": "custom_text",
+          "settings": {
+            "text": "<br>Macfox's first Teen E-Bike – designed to ignite outdoor exploration in adolescents. Encouraging a healthy lifestyle, our bike promises durability, safety, and thrilling adventures for teenagers embracing the great outdoors. Join us in inspiring the next generation with Macfox M19.",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 16,
+            "text_lh": 20,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 15,
+            "text_lh_mb": 20,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-0",
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-1",
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-3",
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-4",
+        "69bd8739-7405-4618-9bca-6c94af60e7d0",
+        "b6aa900b-4926-4cc5-aa31-0dfe61488b01",
+        "template--17772547277118__c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d-1678349031edab60c3-2",
+        "27ec3193-9369-40c7-b7e7-48ea123e6b41"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,20px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "656a26a1-1719-42ec-85fa-3472dc9a0a4a": {
+      "type": "background_video",
+      "blocks": {
+        "bf514ae2-a425-4034-9c46-b87a73c54a9e": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Powerful performance!",
+            "remove_br_tag": false,
+            "text_tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 40,
+            "text_lh": 70,
+            "text_fw": 800,
+            "text_ls": 0,
+            "text_mgb": 20,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 22,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "6aafc3a7-492b-4498-8ed1-13e3068c38ee": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Macfox-X2",
+            "remove_br_tag": false,
+            "text_tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 28,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 18,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 40,
+            "animation": "none"
+          }
+        },
+        "4a72c368-9b49-413c-80b8-b13717f43f5b": {
+          "type": "custom_text",
+          "settings": {
+            "text": "The Macfox-X2 is designed for those seeking new thrills, featuring a powerful brushless motor with a peak output of 1000W and a high-end suspension system. The lightweight and sturdy aluminum alloy frame ensures stability and agility. Get ready to embark on your next adventure with Macfox-X2!",
+            "remove_br_tag": false,
+            "text_tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 26,
+            "text_fw": 400,
+            "text_ls": 0,
+            "text_mgb": 800,
+            "font_italic": true,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 13,
+            "text_lh_mb": 20,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "bf514ae2-a425-4034-9c46-b87a73c54a9e",
+        "6aafc3a7-492b-4498-8ed1-13e3068c38ee",
+        "4a72c368-9b49-413c-80b8-b13717f43f5b"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratio_fh",
+        "custom_dk": true,
+        "height_dk": 1080,
+        "custom_tb": true,
+        "height_tb": 800,
+        "custom_mb": true,
+        "height_mb": 300,
+        "image": "shopify://shop_images/DSC05556..jpg",
+        "source": "2",
+        "video_url": "",
+        "file_link": "",
+        "file_link_mb": "https://cdn.shopify.com/videos/c/o/v/36b090fe9aa842b7a31f9dcdce15113a.mp4",
+        "text_align": "start",
+        "text_align_mb": "start",
+        "content_width": "container",
+        "cv_pos": 50,
+        "ch_pos": 0,
+        "cv_pos_mb": 50,
+        "ch_pos_mb": 50,
+        "bg_overlay": "#000000",
+        "bg_opacity": 0,
+        "bg_content_cl": "#ffffff",
+        "bg_content_op": 0,
+        "content_pd_tb": 15,
+        "content_pd_lr": 15,
+        "content_pd_tb_mb": 10,
+        "content_pd_lr_mb": 10,
+        "border_bl": false,
+        "br_color": "#222222",
+        "br_bg": "#ffffff",
+        "br_opacity": 50,
+        "br_style": "solid",
+        "br_pd": 20,
+        "br_pd_mb": 10,
+        "time_animation": 3,
+        "animation_delay": 40,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "51e0c6c4-1958-4500-873d-d3f27511740d": {
+      "type": "shipping",
+      "blocks": {
+        "template--17032844771617__51e0c6c4-1958-4500-873d-d3f27511740d-167073736171da6c00-2": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "refesh",
+            "icon": "undo-alt",
+            "title": "48V 20Ah",
+            "text": "<p>Brand Battery</p>",
+            "link": ""
+          }
+        },
+        "template--17032844771617__51e0c6c4-1958-4500-873d-d3f27511740d-167073736171da6c00-1": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "help",
+            "icon": "life-ring",
+            "title": "750W(peak 1000W)",
+            "text": "<p>Geared Hub Motor</p>",
+            "link": ""
+          }
+        },
+        "template--17032844771617__51e0c6c4-1958-4500-873d-d3f27511740d-167073736171da6c00-3": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "door-lock",
+            "icon": "lock",
+            "title": "45 Miles",
+            "text": "<p>Miles per Charge (Double battery for 90 Miles)</p>",
+            "link": ""
+          }
+        },
+        "37657372-9a07-4bb4-8f5e-8ea2f252c38f": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "rocket",
+            "icon": "Up to 28 MPH",
+            "title": "Up to 28 MPH",
+            "text": "<p>legally required in US</p>",
+            "link": ""
+          }
+        },
+        "95b5db84-85ec-430a-8100-efead30a6d14": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "car",
+            "icon": "headset",
+            "title": "Upgraded 6061 Aluminum",
+            "text": "<p>Frame</p>",
+            "link": ""
+          }
+        },
+        "template--17032844771617__51e0c6c4-1958-4500-873d-d3f27511740d-167073736171da6c00-0": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "cash",
+            "icon": "tractor",
+            "title": "Installment",
+            "text": "<p>4 interest-free payments of $374.75</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17032844771617__51e0c6c4-1958-4500-873d-d3f27511740d-167073736171da6c00-2",
+        "template--17032844771617__51e0c6c4-1958-4500-873d-d3f27511740d-167073736171da6c00-1",
+        "template--17032844771617__51e0c6c4-1958-4500-873d-d3f27511740d-167073736171da6c00-3",
+        "37657372-9a07-4bb4-8f5e-8ea2f252c38f",
+        "95b5db84-85ec-430a-8100-efead30a6d14",
+        "template--17032844771617__51e0c6c4-1958-4500-873d-d3f27511740d-167073736171da6c00-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "content_align": "text-center",
+        "align_vertical": false,
+        "design_padding": "1",
+        "source": "themes_icon",
+        "icon_des": "deafult",
+        "icon_size": "large",
+        "col_dk": "6",
+        "col_tb": "3",
+        "col_mb": "2",
+        "border": false,
+        "cl_bd": "#ffffff",
+        "cl_ic": "#ffffff",
+        "cl_hd": "#ffffff",
+        "cl_cot": "#ffffff",
+        "bg_item": "#ffffff",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "carousel_mobile": true,
+        "dots_cl": "light",
+        "dots_round": true,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#222222",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "50px,,50px",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "6eee34f4-65d6-4d4f-b79a-ce35a9602807": {
+      "type": "image_text",
+      "blocks": {
+        "template--17032844771617__6eee34f4-65d6-4d4f-b79a-ce35a9602807-167075608986917adb-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "5",
+            "col_tb": "6",
+            "text_size": "60,18",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "Safety First",
+            "text": "<p><strong>Equipped with high-performance front and rear disc brakes, ensuring safety remains our top priority at all times.</strong></p>",
+            "subhd_color": "#222222",
+            "hd_color": "#ffffff",
+            "des_color": "#ffffff",
+            "use_shadow": false,
+            "button_label": "",
+            "button_link": "shopify://collections",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "light",
+            "button_effect": "default"
+          }
+        },
+        "template--17032844771617__6eee34f4-65d6-4d4f-b79a-ce35a9602807-167075608986917adb-0": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/DSC04382_1_2.jpg",
+            "col_dk": "7",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratio3_2",
+            "image_size": "cover",
+            "image_position": "9",
+            "loop": true,
+            "au_time": 4,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": true,
+            "dot_owl": "default",
+            "dots_cl": "light",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17032844771617__6eee34f4-65d6-4d4f-b79a-ce35a9602807-167075608986917adb-1",
+        "template--17032844771617__6eee34f4-65d6-4d4f-b79a-ce35a9602807-167075608986917adb-0"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "30",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#2b2b2b",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "2169acf0-6512-4a02-9500-751a6e34d731": {
+      "type": "image_text",
+      "blocks": {
+        "bd586e48-7999-4ce4-8a56-2066f246d3da": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/DSC04384_1_2.jpg",
+            "col_dk": "7",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratio3_2",
+            "image_size": "cover",
+            "image_position": "9",
+            "loop": true,
+            "au_time": 4,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": true,
+            "dot_owl": "default",
+            "dots_cl": "light",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "63b4dfbf-b764-4e33-9c70-c7eec13aa9a8": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "5",
+            "col_tb": "6",
+            "text_size": "60,18",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "Removable Battery",
+            "text": "<p><strong>A convenient removable battery makes charging and swapping a breeze. Extend your adventure! </strong></p>",
+            "subhd_color": "#222222",
+            "hd_color": "#ffffff",
+            "des_color": "#ffffff",
+            "use_shadow": false,
+            "button_label": "",
+            "button_link": "shopify://collections",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "light",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "bd586e48-7999-4ce4-8a56-2066f246d3da",
+        "63b4dfbf-b764-4e33-9c70-c7eec13aa9a8"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "30",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#2b2b2b",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "b7739067-e9c4-4692-97b0-da3a332a220d": {
+      "type": "image_text",
+      "blocks": {
+        "template--17032844771617__b7739067-e9c4-4692-97b0-da3a332a220d-167075608986917adb-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "5",
+            "col_tb": "6",
+            "text_size": "60,18",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "Comfortable Seat",
+            "text": "<p><strong>The seat is designed for optimum comfort, making it ideal for long-distance rides. Its ergonomic design ensures a comfortable and supportive experience, even during extended journeys.</strong></p>",
+            "subhd_color": "#222222",
+            "hd_color": "#ffffff",
+            "des_color": "#ffffff",
+            "use_shadow": false,
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "light",
+            "button_effect": "default"
+          }
+        },
+        "template--17032844771617__b7739067-e9c4-4692-97b0-da3a332a220d-167075608986917adb-0": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/DSC04386_1_2.jpg",
+            "col_dk": "7",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratio3_2",
+            "image_size": "cover",
+            "image_position": "9",
+            "loop": true,
+            "au_time": 4,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": true,
+            "dot_owl": "default",
+            "dots_cl": "light",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17032844771617__b7739067-e9c4-4692-97b0-da3a332a220d-167075608986917adb-1",
+        "template--17032844771617__b7739067-e9c4-4692-97b0-da3a332a220d-167075608986917adb-0"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "30",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#2b2b2b",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "23a47183-7ad7-4945-92c7-d70bcf751346": {
+      "type": "image_text",
+      "blocks": {
+        "template--17032844771617__23a47183-7ad7-4945-92c7-d70bcf751346-167075611697aaa1b0-0": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/DSC04388_1_2.jpg",
+            "col_dk": "7",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratio3_2",
+            "image_size": "cover",
+            "image_position": "9",
+            "loop": true,
+            "au_time": 4,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": true,
+            "dot_owl": "default",
+            "dots_cl": "light",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "template--17032844771617__23a47183-7ad7-4945-92c7-d70bcf751346-167075611697aaa1b0-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "5",
+            "col_tb": "6",
+            "text_size": "60,18",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "Compact Front Light",
+            "text": "<p><strong>The M19  now features a compact front light, ensuring improved safety and visibility during rides. </strong></p><p><strong>Ideal for young riders, this small yet powerful addition enhances security during evening or low-light outings, making the biking experience safer and more enjoyable.</strong></p>",
+            "subhd_color": "#222222",
+            "hd_color": "#ffffff",
+            "des_color": "#ffffff",
+            "use_shadow": false,
+            "button_label": "",
+            "button_link": "shopify://collections",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "light",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "template--17032844771617__23a47183-7ad7-4945-92c7-d70bcf751346-167075611697aaa1b0-0",
+        "template--17032844771617__23a47183-7ad7-4945-92c7-d70bcf751346-167075611697aaa1b0-1"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "30",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#2b2b2b",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "a3f88e20-2a8e-40dc-ab10-17993b70201c": {
+      "type": "feature_columns",
+      "blocks": {
+        "template--17032844771617__a3f88e20-2a8e-40dc-ab10-17993b70201c-1670754134efff77e9-0": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSC05521.jpg",
+            "title": "48V LED Headlight",
+            "text": "<p>High-end headlights, low power consumption, high brightness, wide range, can see everything ahead when driving at night, and play a role in reminding pedestrians and vehicles.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "template--17032844771617__a3f88e20-2a8e-40dc-ab10-17993b70201c-1670754134efff77e9-1": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "Integrated Brake Rear Light",
+            "text": "<p>Whether it is day or night, the light reminder function when braking can keep the rear pedestrians and vehicles at a safe distance. At the same time, the tail lights can also keep on to prevent rear-end collisions at night.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "template--17032844771617__a3f88e20-2a8e-40dc-ab10-17993b70201c-1670754134efff77e9-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSC05530.jpg",
+            "title": "The 7-speed Shifter",
+            "text": "<p>The high-end version of the seven-speed transmission system can maintain the ideal pedaling pace and torque no matter whether it is climbing, flat road or downhill.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "f2f3354c-bc4e-4d7f-aa3e-1db2687a26b2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSC05605.jpg",
+            "title": "Mechanical Hydraulic Brakes",
+            "text": "<p>Sensitive front and rear hydraulic brakes cooperate with the suspension system to reduce the impact caused by inertia when braking.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "c45f12b7-ddd3-4814-94a7-71cfe4d9a6f5": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSC05581.jpg",
+            "title": "Extra Long Double Seat",
+            "text": "<p>Different from conventional ebikes, macfox has an extra-long comfortable seat and uses PU memory foam to eliminate the fatigue for the rider during long-distance riding.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "950277aa-027b-4e9c-8494-5e3f28f4d693": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "Ergonomic Half Twist Throttle",
+            "text": "<p>When tired of pedaling, take a break and cruise. Gently twist the throttle on your right to accelerate.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "505ead31-83a3-43e8-9f16-ea73626a603a": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "Adjustable Saddle",
+            "text": "<p>This bike seat is a durable and comfortable saddle that decreases the impact of road bumps. You may adjust your posture by moving the saddle up and down as well as back and forth.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "26058b19-7c3d-4553-8d4f-6b60586ef119": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSC05670.jpg",
+            "title": "20\"*4.0\" CST Tires",
+            "text": "<p>The fierce thick tire and knobby tread pattern still maintain strong grip and traction in harsh terrains such as dry land, mud, asphalt and sand.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "ae6269df-143d-4f81-87eb-9dc771c3f251": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSC05679.jpg",
+            "title": "Gear Mode",
+            "text": "<p>Rotary plate accelerator mode, which can be used with pedal assisted riding to achieve optimal energy saving, three gears for you to switch at will.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "d0179f23-a8cb-4df3-997d-e4e287d9f656": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSC05575.jpg",
+            "title": "Display Screen",
+            "text": "<p>The light and compact LCD screen is designed for energy saving. It provides speed, mileage and power display in different gears, monitors your riding status in real time, and eliminates power anxiety.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "d190264d-6baf-4cb5-8569-fe78bbfc0613": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "Full Fenders",
+            "text": "<p>Fenders on both the front and rear are complete with all of the necessary hardware. They're incredibly resilient and keep you dry and clean from water and mud.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "4373572d-e4b6-4589-b21c-dcebf73ef1b9": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "Center Stand",
+            "text": "<p>Built with rust-resistant, sturdy, and durable aluminum alloy.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        }
+      },
+      "block_order": [
+        "template--17032844771617__a3f88e20-2a8e-40dc-ab10-17993b70201c-1670754134efff77e9-0",
+        "template--17032844771617__a3f88e20-2a8e-40dc-ab10-17993b70201c-1670754134efff77e9-1",
+        "template--17032844771617__a3f88e20-2a8e-40dc-ab10-17993b70201c-1670754134efff77e9-2",
+        "f2f3354c-bc4e-4d7f-aa3e-1db2687a26b2",
+        "c45f12b7-ddd3-4814-94a7-71cfe4d9a6f5",
+        "950277aa-027b-4e9c-8494-5e3f28f4d693",
+        "505ead31-83a3-43e8-9f16-ea73626a603a",
+        "26058b19-7c3d-4553-8d4f-6b60586ef119",
+        "ae6269df-143d-4f81-87eb-9dc771c3f251",
+        "d0179f23-a8cb-4df3-997d-e4e287d9f656",
+        "d190264d-6baf-4cb5-8569-fe78bbfc0613",
+        "4373572d-e4b6-4589-b21c-dcebf73ef1b9"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "text_align": "start",
+        "pos_text": "default",
+        "fs_title": 26,
+        "fs_text": 16,
+        "fs_title_mb": 22,
+        "fs_text_mb": 15,
+        "image_ratio": "ratio16_9",
+        "image_size": "cover",
+        "image_position": "8",
+        "img_effect": "none",
+        "b_effect": "none",
+        "layout_des": "1",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,,50px,",
+        "pd": "0,40px,0,40px",
+        "mg_mb": ",,30px,",
+        "pd_mb": "0,15px,0,15px",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_picture_describe_hdcciW": {
+      "type": "custom-picture-describe",
+      "blocks": {
+        "picture_item_4JKJmK": {
+          "type": "picture_item",
+          "settings": {
+            "image_url": "shopify://shop_images/icon2_1_-08.png",
+            "image_alt": "Do Not Use Non-Original Battery or Charger",
+            "picture_item_describe": "Do Not Use Non-Original Battery or Charger"
+          }
+        },
+        "picture_item_iPjyjF": {
+          "type": "picture_item",
+          "settings": {
+            "image_url": "shopify://shop_images/icon2_1_-09.png",
+            "image_alt": "Do Not Park the Bike Outdoors in Stormy Weather",
+            "picture_item_describe": "Do Not Park the Bike Outdoors in Stormy Weather"
+          }
+        },
+        "picture_item_zMGz4C": {
+          "type": "picture_item",
+          "settings": {
+            "image_url": "shopify://shop_images/icon2_1_-10.png",
+            "image_alt": "Do Not Store the Entire Bike Indoors",
+            "picture_item_describe": "Do Not Store the Entire Bike Indoors"
+          }
+        },
+        "picture_item_CqW8Je": {
+          "type": "picture_item",
+          "settings": {
+            "image_url": "shopify://shop_images/icon2_1_-11.png",
+            "image_alt": "No Charging Near Flammables",
+            "picture_item_describe": "No Charging Near Flammables"
+          }
+        },
+        "picture_item_dkT4yF": {
+          "type": "picture_item",
+          "settings": {
+            "image_url": "shopify://shop_images/icon2_1_-12.png",
+            "image_alt": "No Riding in Deep Water or Flooded Areas",
+            "picture_item_describe": "No Riding in Deep Water or Flooded Areas"
+          }
+        },
+        "picture_item_kd7JaC": {
+          "type": "picture_item",
+          "settings": {
+            "image_url": "shopify://shop_images/icon2_1_-13.png",
+            "image_alt": "Sheltered & Ventilated Parking Only",
+            "picture_item_describe": "Sheltered & Ventilated Parking Only"
+          }
+        }
+      },
+      "block_order": [
+        "picture_item_4JKJmK",
+        "picture_item_iPjyjF",
+        "picture_item_zMGz4C",
+        "picture_item_CqW8Je",
+        "picture_item_dkT4yF",
+        "picture_item_kd7JaC"
+      ],
+      "name": "Custom Picture Describe",
+      "settings": {
+        "items_per_row": 6,
+        "items_per_row_mobile": 3,
+        "picture_background_color": "#f2cb04",
+        "picture_border_radius": "50%",
+        "picture_background_width": "50px",
+        "picture_background_height": "50px",
+        "picture_background_width_mobile": "30px",
+        "picture_background_height_mobile": "30px",
+        "picture_item_describe_color": "#dddddd"
+      }
+    },
+    "602619e3-8408-4b38-9f07-62da435a1135": {
+      "type": "custom-section",
+      "blocks": {
+        "template--17772547277118__602619e3-8408-4b38-9f07-62da435a1135-1678240891ddec6dd2-0": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "7",
+            "col_tb": "7",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "e3228111-3c2a-4f9a-a919-1228c48c5709": {
+          "type": "image",
+          "settings": {
+            "image_child": "shopify://shop_images/1_b51cf1a1-cd5b-46e3-9cba-da5259cca61d.webp",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 0,
+            "img_width_mb": 0,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 20,
+            "mgb_mb": 20
+          }
+        },
+        "cb1e30e8-f3a4-48e9-921a-7ec7f8f4714c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_child": "shopify://shop_images/1.1.jpg",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 0,
+            "img_width_mb": 0,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 50,
+            "mgb_mb": 20
+          }
+        },
+        "e022314a-bb9c-4fa9-af61-76f404c27ef9": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_child": "shopify://shop_images/1.2.jpg",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 0,
+            "img_width_mb": 0,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 0,
+            "mgb_mb": 0
+          }
+        },
+        "template--17772547277118__602619e3-8408-4b38-9f07-62da435a1135-1678240891ddec6dd2-3": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "5",
+            "col_tb": "5",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "447c9ef8-f643-4222-a7d8-6c8c43e4d646": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style type=\"text/css\">\n    .t4s-click .t4s-eff-img- {\n        text-align: center;\n    }\n    \n    .pr_sw_btn {\n        border-radius: 4px;\n        border: 3px solid #fff;\n        background-color: transparent;\n    }\n    \n    .t4s_se_template--17772547277118__602619e3-8408-4b38-9f07-62da435a1135 .t4s-row,\n    .t4s_se_template--17772547309886__0e407ed0-7adf-4f7b-84b0-e8d171ff7164 .t4s-row {\n        align-items: flex-start;\n    }\n    \n    .pr_tabs {\n        max-width: 80%;\n    }\n    \n    .pr_tabs>span {\n        display: block;\n        font-size: 28px;\n        color: #fff;\n        margin-bottom: 20px;\n        padding: 0 15px;\n    }\n    \n    .pr_tabs_title {\n        display: flex;\n        justify-content: flex-start;\n        flex-wrap: wrap;\n    }\n    \n    .pr_tabs_title div {\n        flex: 0 0 50%;\n        max-width: 50%;\n        padding: 0 15px;\n        box-sizing: border-box;\n        margin-bottom: 10px;\n    }\n    \n    .pr_tabs_title span {\n        display: block;\n        text-align: center;\n        font-size: 14px;\n        color: #d0d1d2;\n        padding: 4px 24px;\n        box-sizing: border-box;\n        border: 3px solid #2c2c2c;\n        border-radius: 4px;\n        transition: 0.3s;\n    }\n    \n    .pr_tabs_title div.tab span {\n        border-color: #fff;\n    }\n    \n    .pr_tabs_content>.t2 {\n        display: none;\n        padding: 20px 15px;\n    }\n    \n    .pr_tabs_content>.t2:first-of-type {\n        display: block;\n    }\n    \n    .pr_tabs_content>.t2 .t4s-col-item {\n        margin-bottom: 24px;\n    }\n    \n    .pr_tabs_content>.t2 .t4s-col-item::before {\n        content: '';\n        display: block;\n        width: 32px;\n        height: 1px;\n        background-color: #eee;\n        margin-bottom: 12px;\n    }\n    \n    .pr_tabs_content>.t2 h5 {\n        font-size: 14px;\n        color: #fff;\n        font-weight: 600;\n        margin: 0 0 5px 0;\n    }\n    \n    .pr_tabs_content>.t2 p {\n        font-size: 14px;\n        color: #eee;\n        font-weight: 400;\n        margin: 0;\n    }\n    \n    @media (max-width: 767px) {\n        .pr_tabs {\n            width: 100%;\n        }\n        .pr_tabs>span {\n            padding: 0 7.5px; \n        }\n        .pr_tabs_title div {\n            padding: 0 7.5px;\n        }\n    }\n</style>   \n <div class=\"pr_tabs\">\n        <span>\n            <p><strong>Macfox-M19 Specs</strong> Specs</p>\n        </span>\n        <div class=\"pr_tabs_content\">\n            <div name=\"t1\" class=\"t2\">\n                <p><strong>Top Speed |</strong> 16 mph</p>\n                <p><br><strong>Range |</strong> 20 miles<br></p>\n                <p><br><strong>Charge Time |</strong>  5-6 hours</p>\n                <p><br><strong>Battery |</strong>&nbsp;36V 7.8Ah&nbsp;</p>\n                <p><br><strong>Motor |</strong>&nbsp;250W</p>\n                <p><br><strong>Peak power |</strong>&nbsp;500W</p>\n                <p><br><strong>Throttle |</strong>&nbsp;Thumb Throttle</p>\n                <p><br><strong>Max Payload |</strong>&nbsp;220lbs</p>\n                <p><br><strong>Brakes |</strong>&nbsp;Disc Brake</p>\n                <p><br><strong>Tire |</strong>&nbsp;16 inch</p>\n                <p><br><strong>Gearing |</strong>&nbsp;Single Speed</p>\n                <p><br><strong>Frame |</strong>&nbsp;Steel</p>\n                <p><br><strong>Headlight |</strong>&nbsp;LED Light</p>\n                <p><br><strong>Vehicle Weight |</strong>&nbsp;49lbs</p>\n            </div>\n        </div>\n    </div>"
+          }
+        },
+        "93bd41b4-d33b-4484-b7bc-73a433a72102": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--17772547277118__602619e3-8408-4b38-9f07-62da435a1135-1678240891ddec6dd2-0",
+        "e3228111-3c2a-4f9a-a919-1228c48c5709",
+        "cb1e30e8-f3a4-48e9-921a-7ec7f8f4714c",
+        "e022314a-bb9c-4fa9-af61-76f404c27ef9",
+        "template--17772547277118__602619e3-8408-4b38-9f07-62da435a1135-1678240891ddec6dd2-3",
+        "447c9ef8-f643-4222-a7d8-6c8c43e4d646",
+        "93bd41b4-d33b-4484-b7bc-73a433a72102"
+      ],
+      "settings": {
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#000000",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "50px,,50px,",
+        "mg_tb": ",,50px,",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "d890ad80-147c-47b9-b7ae-858910f91fed": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- render 'pr_tab_box' -%}",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "30px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "16777240793e0d7145": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_iXrHBW": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_iXrHBW"
+      ],
+      "settings": {}
+    },
+    "6ebd3ff8-a77d-4bc7-bd2b-3eb32ac0f9b5": {
+      "type": "video_click",
+      "blocks": {
+        "template--17772547277118__6ebd3ff8-a77d-4bc7-bd2b-3eb32ac0f9b5-1678258630fde1b4d9-1": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "button_text": "Watch the video",
+            "source": "1",
+            "video_url": "https://www.youtube.com/watch?v=XFT5ADwGtng",
+            "file_link": "https://cdn.shopify.com/s/files/1/0610/5209/2628/files/Share_your_brand_story_by_adding_a_video_to_your_store.mp4?v=1641630446",
+            "au_video": true,
+            "loop_video": true
+          }
+        }
+      },
+      "block_order": [
+        "template--17772547277118__6ebd3ff8-a77d-4bc7-bd2b-3eb32ac0f9b5-1678258630fde1b4d9-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "layout_des": "1",
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "col_dk": "1",
+        "col_tb": "1",
+        "col_mb": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#000000",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": ",,50px,",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently_viewed",
+      "settings": {
+        "show": false,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Recently viewed products",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 14,
+        "sortby": "1",
+        "unavailable_prs": "show",
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_internal_link_aFg8zc": {
+      "type": "custom-Internal-link",
+      "name": "Custom Internal Link",
+      "settings": {
+        "internal_links": "internal-link",
+        "theme": "black",
+        "title_align": "left"
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "slideshow_Hk7V8T",
+    "9b515280-b54a-4703-8ada-5db24864c49d",
+    "product-recommendations",
+    "16929492566fb2b7c9",
+    "sidebar",
+    "c1f9c08b-c2f8-49df-a5e0-f7bbc6410d8d",
+    "656a26a1-1719-42ec-85fa-3472dc9a0a4a",
+    "51e0c6c4-1958-4500-873d-d3f27511740d",
+    "6eee34f4-65d6-4d4f-b79a-ce35a9602807",
+    "2169acf0-6512-4a02-9500-751a6e34d731",
+    "b7739067-e9c4-4692-97b0-da3a332a220d",
+    "23a47183-7ad7-4945-92c7-d70bcf751346",
+    "a3f88e20-2a8e-40dc-ab10-17993b70201c",
+    "custom_picture_describe_hdcciW",
+    "602619e3-8408-4b38-9f07-62da435a1135",
+    "d890ad80-147c-47b9-b7ae-858910f91fed",
+    "16777240793e0d7145",
+    "6ebd3ff8-a77d-4bc7-bd2b-3eb32ac0f9b5",
+    "recently-viewed-products",
+    "custom_internal_link_aFg8zc"
+  ]
+}

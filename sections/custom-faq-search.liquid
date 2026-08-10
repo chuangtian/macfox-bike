@@ -1,0 +1,316 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<style>
+  #shopify-section-{{ sid }} {
+    {% if se_stts.img != blank %}--se-bg-img: url({{ se_stts.img | image_url }});{% endif %}
+    --mask-color: {{ se_stts.mask_color }};
+    --mask-opacity: {{ se_stts.mask_opacity | times: 0.01 }};
+  }
+  .cs-faq-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5vh 5vw;
+    width: 100%;
+    background-image: var(--se-bg-img);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+  }
+  .cs-faq-search::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--mask-color);
+    opacity: var(--mask-opacity);
+  }
+  .faq-search-title {
+    color: #fff;
+    line-height: 1.2;
+    font-size: var(--t-fsize);
+  }
+  .faq-search-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    color: #fff;
+    font-size: var(--b-fsize);
+    line-height: 1.5;
+  }
+  .breadcrumbs-item {
+    display: block;
+    color: inherit;
+  }
+  .faq-search-con {
+    position: relative;
+    width: var(--s-width, 45%);
+    --search-con-size: var(--s-fsize);
+  }
+  .faq-search-input {
+    display: block;
+    padding-left: calc(var(--search-con-size) * 2 + 4px);
+    width: 100%;
+    border-radius: 5px;
+    line-height: 1;
+    font-size: var(--search-con-size);
+  }
+  .faq-search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: calc(var(--search-con-size) * 2 + 4px);
+    height: 100%;
+    background: none;
+    color: #000;
+  }
+  .faq-search-btn svg {
+    display: block;
+    width: calc(var(--search-con-size) + 2px);
+    height: calc(var(--search-con-size) + 2px);
+  }
+  .faq-search-btn:hover {
+    background: none;
+    color: #000;
+  }
+  @media screen and (max-width: 768px) {
+    .faq-search-title {
+      font-size: var(--t-fsize-mb);
+    }
+    .faq-search-breadcrumbs {
+      font-size: var(--b-fsize-mb);
+    }
+    .faq-search-con {
+      width: var(--s-width-mb, 45%);
+      --search-con-size: var(--s-fsize-mb);
+    }
+  }
+</style>
+
+<div class="cs-faq-search">
+  {%- for block in se_blocks -%}
+    {%- case block.type -%}
+    {%- when 'title' -%}
+      <h1 
+        class="faq-search-title" 
+        style="color:{{ block.settings.t_fcolor }};--t-fsize:{{ block.settings.t_fsize }}px;--t-fsize-mb:{{ block.settings.t_fsize_mb }}px;"
+      >
+        {{ block.settings.title }}
+      </h1>
+    {%- when 'breadcrumbs' -%}
+      <div class="faq-search-breadcrumbs" 
+        style="color:{{ block.settings.b_fcolor }};--b-fsize:{{ block.settings.b_fsize }}px;--b-fsize-mb:{{ block.settings.b_fsize_mb }}px;"
+      >
+        <a class="breadcrumbs-item" href="{{ routes.root_url }}">
+          {{ 'general.breadcrumb.home' | t }}
+        </a>
+        <span class="breadcrumbs-item">&gt;</span> 
+        <span class="breadcrumbs-item">{{ page_title }}</span> 
+      </div>
+    {%- when 'search' -%}
+      <div 
+        class="faq-search-con" 
+        style="--s-fsize:{{ block.settings.s_fsize }}px;--s-width:{{ block.settings.s_width }}%;--s-fsize-mb:{{ block.settings.s_fsize_mb }}px;--s-width-mb:{{ block.settings.s_width_mb }}%;"
+      >
+        <input type="text" class="faq-search-input" placeholder="{{ block.settings.placeholder }}">
+        <button class="faq-search-btn">
+          <svg aria-hidden="true" focusable="false" role="presentation">
+            <use href="#icon-h-search"></use>
+          </svg>
+        </button>
+      </div>
+    {%- endcase -%}
+  {%- endfor -%}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let domId = "#shopify-section-{{ sid }} .cs-faq-search";
+    let $searchBtn = $(`${domId} .faq-search-btn`);
+    let $inputBtn = $(`${domId} .faq-search-input`);
+    $inputBtn.on('input', function(){
+      faqSearchHandle();
+    })
+    $searchBtn.on('input', function(){
+      faqSearchHandle();
+    })
+    function faqSearchHandle(){
+      let activeInput = $inputBtn.val().toLowerCase();
+      if($('.t4s-type-accordion').length > 0){
+        $('.t4s-type-accordion .t4s-tab-wrapper').each(function(){
+          let title = $(this).find('.t4s-accor-text').text();
+          if(title.toLowerCase().indexOf(activeInput) > -1){
+            $(this).show();
+          }else{
+            $(this).hide();
+          }
+        })
+      }
+    }
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Custom Faq Search",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Background Image"
+      },
+      {
+        "type": "color",
+        "id": "mask_color",
+        "label": "Mask Color",
+        "default": "#000"
+      },
+      {
+        "type": "range",
+        "id": "mask_opacity",
+        "label": "Mask Opacity",
+        "default": 40,
+        "unit": "%",
+        "step": 1,
+        "min": 0,
+        "max": 100
+      }
+    ],
+    "blocks": [
+      {
+        "type": "title",
+        "name": "Title",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "html",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "color",
+            "id": "t_fcolor",
+            "label": "Font Color",
+            "default": "#fff"
+          },
+          {
+            "type": "number",
+            "id": "t_fsize",
+            "label": "Font Size(px)",
+            "default": 40
+          },
+          {
+            "type": "header",
+            "content": "+ Mobile Settings"
+          },
+          {
+            "type": "number",
+            "id": "t_fsize_mb",
+            "label": "Font Size(px)",
+            "default": 24
+          }
+        ]
+      },
+      {
+        "type": "breadcrumbs",
+        "name": "Breadcrumbs",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "color",
+            "id": "b_fcolor",
+            "label": "Font Color",
+            "default": "#fff"
+          },
+          {
+            "type": "number",
+            "id": "b_fsize",
+            "label": "Font Size(px)",
+            "default": 18
+          },
+          {
+            "type": "header",
+            "content": "+ Mobile Settings"
+          },
+          {
+            "type": "number",
+            "id": "b_fsize_mb",
+            "label": "Font Size(px)",
+            "default": 14
+          }
+        ]
+      },
+      {
+        "type": "search",
+        "name": "Search",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "placeholder",
+            "label": "Placeholder",
+            "default": "Enter a product or ask a question."
+          },
+          {
+            "type": "range",
+            "id": "s_width",
+            "label": "Width",
+            "default": 45,
+            "unit": "%",
+            "step": 1,
+            "min": 10,
+            "max": 100
+          },
+          {
+            "type": "number",
+            "id": "s_fsize",
+            "label": "Font Size(px)",
+            "default": 16
+          },
+          {
+            "type": "header",
+            "content": "+ Mobile Settings"
+          },
+          {
+            "type": "range",
+            "id": "s_width_mb",
+            "label": "Width",
+            "default": 90,
+            "unit": "%",
+            "step": 1,
+            "min": 10,
+            "max": 100
+          },
+          {
+            "type": "number",
+            "id": "s_fsize_mb",
+            "label": "Font Size(px)",
+            "default": 14
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Faq Search",
+        "blocks": [
+          {"type": "title"},{"type": "breadcrumbs"},{"type": "search"}
+        ]
+      }
+    ]
+  }
+{% endschema %}

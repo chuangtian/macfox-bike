@@ -1,0 +1,1907 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_video_4f8NNX": {
+      "type": "custom-video",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Custom Video",
+      "settings": {
+        "link": "shopify://collections/electric-bike",
+        "autoplay": true,
+        "show_muted": false,
+        "se_height": "adapt_video",
+        "source": "shopify",
+        "shopify_video": "shopify://files/videos/12月4日.mov",
+        "external_video": "",
+        "youtube_video": "",
+        "se_height_mb": "adapt_video",
+        "source_mb": "shopify",
+        "shopify_video_mb": "shopify://files/videos/12月4日(1).mov",
+        "external_video_mb": "",
+        "youtube_video_mb": ""
+      }
+    },
+    "custom_banner_W4C4a7": {
+      "type": "custom-banner",
+      "blocks": {
+        "item_etEPde": {
+          "type": "item",
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_self",
+            "img_pc": "shopify://shop_images/macfox-_banner_e2ee0167-4efd-43d1-b4d8-e83f1b10dbcb.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_54adc945-33b8-4978-959f-aabf1e02844d.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_amWYCY": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_self",
+            "img_pc": "shopify://shop_images/macfox_ff666039-61b9-43df-ba5b-d16b1838c9f3.webp",
+            "img_mb": "shopify://shop_images/macfox_308c6763-b8f7-4e5c-abe5-908ed8beba47.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_LCLb37": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_self",
+            "img_pc": "shopify://shop_images/macfox-_banner_5a76fe24-bda2-4580-9f0b-4d30be972724.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_73f2e1d7-b1bd-4836-99a8-d697cc90f9b4.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_BPMRcf": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_self",
+            "img_pc": "shopify://shop_images/macfox-_banner_c14cb6d4-ba95-48d4-82b2-f09dbb879f08.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_74182fc0-b1e8-4455-9860-197163f1735c.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_LPtQWM": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_self",
+            "img_pc": "shopify://shop_images/macfox-_banner_c1deaa9d-c737-4b3c-9820-7ce1512abf14.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_ce0afbaf-abc5-454b-ab24-534f4d82851e.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_cmRmt8": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_self",
+            "img_pc": "shopify://shop_images/macfox-_banner_8c65be7f-ceac-4b01-990c-ecb64760a97c.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_a09dac92-f152-4c05-be6e-85336ead49eb.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_L3ywYm": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_200.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_200_6ec794b3-fa87-4297-b364-125f2d57f01f.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_gkfU4m": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_ba622db5-b90c-4bab-9000-4858d066674d.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_eadc6310-c3aa-4559-b797-32a2d5c4a55b.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_LG4Rh6": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_2.0_1.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_2_445a06ca-c7b3-4228-9cab-ce2ade68c281.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_RbCRyX": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_c4d7d92c-2597-487c-a407-b87c7a1144f2.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_b732f0fe-045a-44fe-b3ff-67e869bea307.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_6FpHJ3": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/img_v3_02112_140036ab-27f8-4c29-ae19-2429d0afa52g.webp",
+            "img_mb": "shopify://shop_images/img_v3_02112_12fc14bf-f719-4f0c-a826-13f4c59a7a3g.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_NpUdBc": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_NO.7.webp",
+            "img_mb": "shopify://shop_images/img_v3_0210i_7114594b-30be-4a2f-a3dd-49f1746b8c7g.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_y7rpqB": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_5_98636417-0c20-4798-b81a-77c19504809c.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_5.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_4Nk336": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_2026.2.4_5458413c-ac1e-4f43-bfb5-0ad6d098a778.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_2026.2.4.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_HV3i9H": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_3.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_4.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_PP6pAE": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_6519bed6-eb24-46bf-b06b-e9979252359c.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_3982d3ad-bb91-404e-b284-cae9f211f438.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_Dh7eiV": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_1_8a39860e-c4e4-4db5-bcb1-c508612bfb0d.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_1.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_dtbRXD": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_2_b117996a-c3f6-47ca-a37b-7dfcfbe63d5b.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_2.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_UcgLBw": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ebikes-for-sale",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_79b6d38c-5c42-48a8-ad8b-b0c6638c50af.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner_3e63c6cf-fe61-46c4-a714-315409e6fb2a.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_bRK3JQ": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-HYPE_Rocket_banner.webp",
+            "img_mb": "shopify://shop_images/macfox-HYPE_Rocket_banner_8e3ebb07-da64-43d3-9c75-c90146bf7d9e.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_ph4Bia": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox-_banner_e24f76d1-55b1-424d-bed6-d37532e06bd9.webp",
+            "img_mb": "shopify://shop_images/macfox-_banner.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_BfaEwa": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/black-friday-ebike-deals",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/MACFOX-_banner_2025.11.26_aa5e3b48-a3b3-4f48-9046-359504565d41.webp",
+            "img_mb": "shopify://shop_images/MACFOX-_banner_2025.11.26.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_rjBUG8": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/black-friday-ebike-deals",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/MACFOX-banner_2025.11.20.webp",
+            "img_mb": "shopify://shop_images/MACFOX-banner_2025.11.20_2352c6cf-3d85-4c62-b3d6-61bf4a009587.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_QWkxQ3": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/Macfox_back2school_1.jpg",
+            "img_mb": "shopify://shop_images/Macfox_back2school2_1.jpg",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_rL9aKM": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/Macfox_back2school__1_1.webp",
+            "img_mb": "shopify://shop_images/Macfox_back2school-03_1.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_yLXbqa": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/2_c2606508-4fef-4265-8a2f-f33ca4d552fb.webp",
+            "img_mb": "shopify://shop_images/1_4c1b8ff9-da99-4b6b-b7f3-3d354bfc789a.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_fDXCrW": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/2_bd06a38d-dad1-424e-a194-0075d389a50c.webp",
+            "img_mb": "shopify://shop_images/1_b37315d0-6f89-45af-848c-ae34994bd696.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_bnEaec": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/banner___1_2.jpg",
+            "img_mb": "shopify://shop_images/Mobile.png",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_jkV6Ri": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox_6_banner__1_2.webp",
+            "img_mb": "shopify://shop_images/macfox_6_banner__1_3.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_wxzYfy": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox_banner2__1_3.webp",
+            "img_mb": "shopify://shop_images/macfox_banner2-02_3.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        },
+        "item_fyeqCY": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/electric-bike",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/macfox_banner0411__1_1.webp",
+            "img_mb": "shopify://shop_images/macfox_banner0411-02_1.webp",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        }
+      },
+      "block_order": [
+        "item_etEPde",
+        "item_amWYCY",
+        "item_LCLb37",
+        "item_BPMRcf",
+        "item_LPtQWM",
+        "item_cmRmt8",
+        "item_L3ywYm",
+        "item_gkfU4m",
+        "item_LG4Rh6",
+        "item_RbCRyX",
+        "item_6FpHJ3",
+        "item_NpUdBc",
+        "item_y7rpqB",
+        "item_4Nk336",
+        "item_HV3i9H",
+        "item_PP6pAE",
+        "item_Dh7eiV",
+        "item_dtbRXD",
+        "item_UcgLBw",
+        "item_bRK3JQ",
+        "item_ph4Bia",
+        "item_BfaEwa",
+        "item_rjBUG8",
+        "item_QWkxQ3",
+        "item_rL9aKM",
+        "item_yLXbqa",
+        "item_fDXCrW",
+        "item_bnEaec",
+        "item_jkV6Ri",
+        "item_wxzYfy",
+        "item_fyeqCY"
+      ],
+      "custom_css": [
+        ".cs-banner {margin-top: var(--header-height);}"
+      ],
+      "settings": {
+        "se_height": "auto",
+        "se_height_mb": "auto",
+        "swi_autoplay": true,
+        "swi_time": 6,
+        "is_show_time": false,
+        "countdown_title": "Prime Day Huge Savings",
+        "end_time": "2025-7-12 15:00:00",
+        "bg_color": "#ffffff33",
+        "border_color": "#ffffff2e",
+        "shadow_color": "#1f268799",
+        "blur": "10px",
+        "text_color": "#222222"
+      }
+    },
+    "custom_brand_compare_9aFPki": {
+      "type": "custom-brand-compare",
+      "disabled": true,
+      "name": "Custom Brand Compare",
+      "settings": {
+        "bg_pc": "shopify://shop_images/20260803-230833.jpg",
+        "bg_mb": "shopify://shop_images/20260803-230827.jpg",
+        "title": "Why Families Choose Macfox?",
+        "desc": "Certified safety. Street-ready performance. Support that lasts.",
+        "compare_list": []
+      }
+    },
+    "custom_banner_zURk3K": {
+      "type": "custom-banner",
+      "blocks": {
+        "item_xP7fez": {
+          "type": "item",
+          "settings": {
+            "link": "shopify://pages/student-beans",
+            "link_title": "",
+            "link_open_type": "_blank",
+            "img_pc": "shopify://shop_images/Macfox_9.1_-02_2.png",
+            "img_mb": "shopify://shop_images/Macfox_9.1_-03_2.png",
+            "title": "",
+            "t_width": 50,
+            "t_position_x": 25,
+            "t_position_y": 20,
+            "t_width_mb": 90,
+            "t_position_x_mb": 5,
+            "t_position_y_mb": 20,
+            "content": "",
+            "c_width": 70,
+            "c_position_x": 15,
+            "c_position_y": 60,
+            "c_width_mb": 90,
+            "c_position_x_mb": 5,
+            "c_position_y_mb": 50,
+            "button": "",
+            "b_width": 10,
+            "b_position_x": 45,
+            "b_position_y": 90,
+            "b_width_mb": 50,
+            "b_position_x_mb": 25,
+            "b_position_y_mb": 80
+          }
+        }
+      },
+      "block_order": [
+        "item_xP7fez"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".cs-banner .banner-swiper.swiper {background-color: #121212; padding: 10px 20px;}",
+        "@media screen and (max-width: 768px) {.cs-banner .banner-swiper.swiper {padding: 20px 20px 0; }}"
+      ],
+      "settings": {
+        "se_height": "auto",
+        "se_height_mb": "auto",
+        "swi_autoplay": true,
+        "swi_time": 5,
+        "is_show_time": false,
+        "countdown_title": "Prime Day Huge Savings",
+        "end_time": "2025-7-12 15:00:00",
+        "bg_color": "#ffffff33",
+        "border_color": "#ffffff2e",
+        "shadow_color": "#1f268799",
+        "blur": "10px",
+        "text_color": "#222222"
+      }
+    },
+    "custom_home_info_qN4WBH": {
+      "type": "custom-home-info",
+      "blocks": {
+        "item_38UDya": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/205031e9-25e7-419a-878d-448a80d745a9.webp",
+            "image_alt": "Youth Rider Showcase",
+            "title": "Youth Rider Showcase",
+            "go_link": "shopify://pages/youth-rider-showcase",
+            "txt_color": "#ffffff"
+          }
+        },
+        "item_KtfkAV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1_3a1a35b7-8c4b-495b-a072-28f78fe29372.webp",
+            "image_alt": "Macfox Mod Gallery",
+            "title": "Macfox Mod Gallery",
+            "go_link": "shopify://pages/macfox-mod-gallery",
+            "txt_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "item_38UDya",
+        "item_KtfkAV"
+      ],
+      "name": "Info",
+      "settings": {
+        "bg_color": "#121212"
+      }
+    },
+    "custom_home_carousel_modify_iLDHLe": {
+      "type": "custom-home-carousel-modify",
+      "blocks": {
+        "item_4mACKJ": {
+          "type": "item",
+          "settings": {
+            "title": "TYLER THE CREATOR - GOLF",
+            "avatar": "shopify://shop_images/2-4.webp",
+            "base_desc": "Based on X1S",
+            "name": "Ethan Cole",
+            "product_item": "",
+            "product_image_pc": "shopify://shop_images/2-1.webp",
+            "product_image_mb": "shopify://shop_images/2-1-mb.webp"
+          }
+        },
+        "item_W6CA8E": {
+          "type": "item",
+          "settings": {
+            "title": "ROCK AND RIDE",
+            "avatar": "shopify://shop_images/2-4.webp",
+            "base_desc": "Based on X7",
+            "name": "Ethan Cole",
+            "product_item": "",
+            "product_image_pc": "shopify://shop_images/2-2.webp",
+            "product_image_mb": "shopify://shop_images/2-2-mb.webp"
+          }
+        },
+        "item_RjbwVU": {
+          "type": "item",
+          "settings": {
+            "title": "ALL TREATS, NO TRICKS",
+            "avatar": "shopify://shop_images/2-4.webp",
+            "base_desc": "Based on X2",
+            "name": "Ethan Cole",
+            "product_item": "",
+            "product_image_pc": "shopify://shop_images/2-3.webp",
+            "product_image_mb": "shopify://shop_images/2-3-mb.webp"
+          }
+        }
+      },
+      "block_order": [
+        "item_4mACKJ",
+        "item_W6CA8E",
+        "item_RjbwVU"
+      ],
+      "disabled": true,
+      "name": "Modify (Carousel)",
+      "settings": {
+        "title": "Custom Macfox Builds",
+        "subtitle": "Each build is one of a kind — a showcase of vision, effort, and creativity from passionate builders.",
+        "bg_color": "#121212",
+        "arrow_left_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60Z\" fill=\"#121212\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"white\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"white\"></path>\n</svg>",
+        "arrow_right_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49 60H11.2C5.09997 60 0.0999756 55 0.0999756 48.9V11.1C0.0999756 5 5.09997 0 11.2 0H49C55.1 0 60.1 5 60.1 11.1V48.9C60.1 55 55.1 60 49 60Z\" fill=\"#121212\"></path>\n<path d=\"M32.4 39.2L30.1 36.9L37 30L30.1 23.1L32.4 20.8L41.6 30L32.4 39.2Z\" fill=\"white\"></path>\n<path d=\"M39.3 28.3H18.6V31.5H39.3V28.3Z\" fill=\"white\"></path>\n</svg>"
+      }
+    },
+    "custom_home_carousel_2_qVNCyq": {
+      "type": "custom-home-carousel-2",
+      "blocks": {
+        "model_item_t6eFpU": {
+          "type": "tag_item",
+          "settings": {
+            "slogan": "",
+            "product": "macfox-x2",
+            "product_name": "X2 Pro",
+            "tag": "Limited Release",
+            "filter_option": "Trim",
+            "filter_value": "X2 Pro",
+            "desc": "The all-new Macfox X2 Pro is built for more. A stronger steel frame, wider fat tires, two new colors, and a redesigned fit deliver a smoother, more capable ride.",
+            "parameter": "[{\"key\":\"Front Tire\",\"value\":\"20''*4.5''\"},{\"key\":\"Rear Tire\",\"value\":\"20''*5.0''\"}]"
+          }
+        },
+        "item_kdBjxR": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "slogan": "",
+            "product": "macfox-x7",
+            "product_name": "X7 / X7L",
+            "desc": "The all-new Macfox X7 redefines teen riding. Lower frame fits a wider height range, paired with custom fat tires for extra street grip.",
+            "parameter": "[{\"key\":\"Rider Height (X7)\",\"value\":\"5'1'' and up\"},{\"key\":\"Rider Height (X7L)\",\"value\":\"5'3'' and up\"},{\"key\":\"Ultimate Street Grip\",\"value\":\"Custom Fat Tires\"}]"
+          }
+        },
+        "item_eJaYfw": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "slogan": "",
+            "product": "macfox-m16-ebike",
+            "product_name": "M16",
+            "desc": "The all-new Macfox M16 is a compact yet cool electric bike for junior riders, the perfect first step into the e-bike world.",
+            "parameter": "[{\"key\":\"Rider Height\",\"value\":\"3'11'' and up\"},{\"key\":\"Unique point\",\"value\":\"Kids' top choice\"}]"
+          }
+        }
+      },
+      "block_order": [
+        "model_item_t6eFpU",
+        "item_kdBjxR",
+        "item_eJaYfw"
+      ],
+      "name": "Recommended Products (Carousel)",
+      "settings": {
+        "bg_color": "#121212",
+        "topic": "New Arrival",
+        "show_ul": true,
+        "arrow_left_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "arrow_right_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>"
+      }
+    },
+    "custom_home_carousel_upgrade_GnNtcB": {
+      "type": "custom-home-carousel-upgrade",
+      "blocks": {
+        "upgrade_group_dThz9a": {
+          "type": "_upgrade_group",
+          "name": "分类标签",
+          "settings": {
+            "label": "Classic Models",
+            "desc": "Reliable for commutes and casual rides."
+          },
+          "blocks": {
+            "upgrade_product_Pqkqqc": {
+              "type": "_upgrade_product",
+              "name": "产品卡片",
+              "settings": {
+                "product": "macfox-x1",
+                "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"5'3'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"The Popular Classic\"\n    }\n]"
+              },
+              "blocks": {}
+            },
+            "upgrade_product_MEUPip": {
+              "type": "_upgrade_product",
+              "name": "产品卡片",
+              "settings": {
+                "product": "x1s-x-bs-zay",
+                "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"5'3'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"Custom street style\"\n    }\n]"
+              },
+              "blocks": {}
+            },
+            "upgrade_product_Lae9MH": {
+              "type": "_upgrade_product",
+              "name": "产品卡片",
+              "settings": {
+                "product": "macfox-m16-ebike",
+                "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"3'11'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"Junior Riders' top choice\"\n    }\n]"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "upgrade_product_Pqkqqc",
+            "upgrade_product_MEUPip",
+            "upgrade_product_Lae9MH"
+          ]
+        },
+        "upgrade_group_7xLr3V": {
+          "type": "_upgrade_group",
+          "name": "分类标签",
+          "settings": {
+            "label": "Upgrade Models",
+            "desc": "Extra-wide tires. Upgraded throughout."
+          },
+          "blocks": {
+            "upgrade_product_3EEGhQ": {
+              "type": "_upgrade_product",
+              "name": "产品卡片",
+              "settings": {
+                "product": "macfox-x7",
+                "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"5'1'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"Rugged fat tires\"\n    }\n]"
+              },
+              "blocks": {}
+            },
+            "upgrade_product_C3EXmx": {
+              "type": "_upgrade_product",
+              "name": "产品卡片",
+              "settings": {
+                "product": "macfox-x2",
+                "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"5'3'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"Full suspension beast\"\n    }\n]"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "upgrade_product_3EEGhQ",
+            "upgrade_product_C3EXmx"
+          ]
+        }
+      },
+      "block_order": [
+        "upgrade_group_dThz9a",
+        "upgrade_group_7xLr3V"
+      ],
+      "name": "Products Upgrade List",
+      "settings": {
+        "bg_color": "#121212",
+        "topic": "Every Model Is Road-Legal—Adventure Safely with Macfox.",
+        "mobile_display": "list",
+        "arrow_left_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "arrow_right_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "show_ul": true
+      }
+    },
+    "custom_home_carousel_3_pDCBDm": {
+      "type": "custom-home-carousel-3",
+      "blocks": {
+        "item_FWTwYH": {
+          "type": "item",
+          "settings": {
+            "product_name": "X1S",
+            "product_image": "shopify://shop_images/1_a544bdff-5ff6-492c-a4e5-cae89163ef61.webp",
+            "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"5'3'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"The Popular Classic\"\n    }\n]",
+            "link": "shopify://products/macfox-x1"
+          }
+        },
+        "item_cTyLGg": {
+          "type": "item",
+          "settings": {
+            "product_name": "X7",
+            "product_image": "shopify://shop_images/7_50ac1266-818f-434d-bd72-65584efca6fa.webp",
+            "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"5'1'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"Rugged fat tires\"\n    }\n]",
+            "link": "shopify://products/macfox-x7"
+          }
+        },
+        "item_rfBww8": {
+          "type": "item",
+          "settings": {
+            "product_name": "M16",
+            "product_image": "shopify://shop_images/M16_product2.webp",
+            "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"3'11'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"Junior Riders' top choice\"\n    }\n]",
+            "link": "shopify://products/macfox-m16-ebike"
+          }
+        },
+        "item_BGhnjn": {
+          "type": "item",
+          "settings": {
+            "product_name": "X2",
+            "product_image": "shopify://shop_images/2_612f9a7d-ae66-4ee7-88ed-956f79ea473d.webp",
+            "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"5'3'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"Full suspension beast\"\n    }\n]",
+            "link": "shopify://products/macfox-x2"
+          }
+        },
+        "item_ADh7y3": {
+          "type": "item",
+          "settings": {
+            "product_name": "X1S x Bs.zay",
+            "product_image": "shopify://shop_images/2_33c7971a-3e17-450b-a451-79df9f47f97f.webp",
+            "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"5'3'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"Custom street style\"\n    }\n]",
+            "link": "shopify://products/x1s-x-bs-zay"
+          }
+        },
+        "item_4tqRKr": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "product_name": "M19",
+            "product_image": "shopify://shop_images/M19.webp",
+            "parameter": "[\n    {\n        \"key\": \"Height range\",\n        \"value\": \"3'11'' and up\"\n    },\n    {\n        \"key\": \"Unique point\",\n        \"value\": \"First riders' pick\"\n    }\n]",
+            "link": "shopify://products/macfox-m19"
+          }
+        }
+      },
+      "block_order": [
+        "item_FWTwYH",
+        "item_cTyLGg",
+        "item_rfBww8",
+        "item_BGhnjn",
+        "item_ADh7y3",
+        "item_4tqRKr"
+      ],
+      "disabled": true,
+      "name": "All Products List (Carousel)",
+      "settings": {
+        "bg_color": "#121212",
+        "topic": "Discover the Macfox That Fits You Best",
+        "arrow_left_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "arrow_right_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "show_ul": true
+      }
+    },
+    "custom_collections_describe_ymUYDm": {
+      "type": "custom-collections-describe",
+      "name": "Custom Collections Describe",
+      "settings": {
+        "title": "<strong>UL Certification</strong>",
+        "describe": "All Macfox  bikes are certified to applicable UL safety standards for e-bikes and battery systems. These certifications address critical requirements related to electrical performance and battery fire safety.<br><br>UL certification means that key components—such as batteries, chargers, and electrical systems—have been evaluated against established safety standards through independent testing. As a result, Macfox  bikes meet the safety requirements necessary for legal sale in regulated markets, including California,New York City where UL certification is required.<br><br>For more information about UL standards and certifications, please visit the UL official website."
+      }
+    },
+    "custom_home_why_TWpnwg": {
+      "type": "custom-home-why",
+      "blocks": {
+        "item_Mn7aVp": {
+          "type": "item",
+          "settings": {
+            "title": "Street Legal Compliant",
+            "desc_content": "Fully compliant with road laws and speed limits. Ride without worry.",
+            "icon_svg": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 1289 1461\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_103_3)\">\n<path d=\"M736.67 1401.29H115.55C61.19 1401.29 16.97 1357.07 16.97 1302.71V224.91C16.97 170.55 61.19 126.33 115.55 126.33H394.82C398.8 115.69 404.29 103.11 411.64 90.34C423.05 70.51 436.59 54.36 451.88 42.35C472.78 25.94 496.46 17.4 522.26 16.99C548.33 16.56 572.39 24.66 593.76 41.03C609.29 52.92 623.11 69.12 634.85 89.16C642.57 102.35 648.36 115.39 652.52 126.33H943.27C997.63 126.33 1041.85 170.55 1041.85 224.91V768.6H969.2V224.91C969.2 210.61 957.57 198.98 943.27 198.98H596.96L590.64 170.92C590.06 168.61 569.51 89.62 524.07 89.62C523.86 89.62 523.65 89.62 523.44 89.63C477 90.38 457.6 168.16 457.03 170.52L450.92 199.22L421.56 198.98H115.55C101.25 198.98 89.62 210.61 89.62 224.91V1302.71C89.62 1317.01 101.25 1328.64 115.55 1328.64H736.67V1401.29Z\" fill=\"white\" stroke=\"white\" stroke-width=\"33.951\" stroke-miterlimit=\"10\"></path>\n<path d=\"M736.99 379.13H321.83C301.77 379.13 285.5 362.87 285.5 342.8C285.5 322.73 301.76 306.47 321.83 306.47H736.99C757.05 306.47 773.32 322.73 773.32 342.8C773.32 362.87 757.06 379.13 736.99 379.13Z\" fill=\"white\" stroke=\"white\" stroke-width=\"33.951\" stroke-miterlimit=\"10\"></path>\n<path d=\"M903.76 1443.3C854.14 1443.3 805.98 1433.57 760.63 1414.39C716.84 1395.87 677.52 1369.36 643.77 1335.61C610.01 1301.85 583.51 1262.54 564.99 1218.75C545.81 1173.4 536.08 1125.24 536.08 1075.62C536.08 1026 545.81 977.84 564.99 932.49C583.51 888.7 610.02 849.38 643.77 815.63C677.53 781.87 716.84 755.37 760.63 736.85C805.98 717.67 854.14 707.94 903.76 707.94C953.38 707.94 1001.54 717.67 1046.89 736.85C1090.68 755.37 1130 781.88 1163.75 815.63C1197.51 849.39 1224.01 888.7 1242.53 932.49C1261.71 977.84 1271.44 1026 1271.44 1075.62C1271.44 1125.24 1261.71 1173.4 1242.53 1218.75C1224.01 1262.54 1197.5 1301.86 1163.75 1335.61C1130 1369.36 1090.68 1395.87 1046.89 1414.39C1001.54 1433.57 953.38 1443.3 903.76 1443.3ZM903.76 780.58C741.08 780.58 608.73 912.93 608.73 1075.61C608.73 1238.29 741.08 1370.64 903.76 1370.64C1066.44 1370.64 1198.79 1238.29 1198.79 1075.61C1198.79 912.93 1066.44 780.58 903.76 780.58Z\" fill=\"white\" stroke=\"white\" stroke-width=\"33.951\" stroke-miterlimit=\"10\"></path>\n<path d=\"M864.2 1235.72C845.81 1235.72 828.52 1228.56 815.52 1215.56L676.9 1076.94C662.71 1062.75 662.71 1039.75 676.9 1025.57C691.09 1011.38 714.09 1011.38 728.27 1025.57L864.19 1161.5L1079.24 946.45C1093.43 932.26 1116.43 932.26 1130.61 946.45C1144.79 960.64 1144.8 983.64 1130.61 997.82L912.86 1215.57C899.87 1228.56 882.58 1235.72 864.2 1235.72Z\" fill=\"white\" stroke=\"white\" stroke-width=\"33.951\" stroke-miterlimit=\"10\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_103_3\">\n<rect width=\"1288.42\" height=\"1460.27\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>"
+          }
+        },
+        "item_KXGc6W": {
+          "type": "item",
+          "settings": {
+            "title": "Ride Safe",
+            "desc_content": "High-strength carbon steel frame, suspension system, ergonomic seat and handlebars.",
+            "icon_svg": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 1188 1477\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_103_15)\">\n<path d=\"M593.77 1459.1C586.39 1459.1 579 1457.15 572.42 1453.26C559.95 1445.89 265.73 1271.61 146.55 1171.66C16.73 1062.78 17.25 869.54 17.46 855.8V253.36C17.46 242.18 21.92 231.46 29.86 223.58C37.72 215.77 48.35 211.4 59.42 211.4C59.52 211.4 59.63 211.4 59.73 211.4C184.82 212.3 315.98 162.17 404.01 119.94C501.23 73.3 568.82 25.65 569.49 25.17C584.04 14.86 603.53 14.86 618.07 25.18C618.72 25.64 686.31 73.29 783.54 119.93C870.76 161.78 1000.38 211.4 1124.42 211.4C1125.56 211.4 1126.68 211.4 1127.82 211.39C1127.92 211.39 1128.03 211.39 1128.13 211.39C1139.2 211.39 1149.83 215.77 1157.69 223.57C1165.63 231.45 1170.09 242.17 1170.09 253.35V855.8C1170.3 869.54 1170.81 1062.78 1041 1171.65C921.83 1271.6 627.6 1445.88 615.13 1453.25C608.54 1457.15 601.15 1459.1 593.77 1459.1ZM101.38 294.04V856.16C101.38 856.45 101.38 856.74 101.37 857.03C101.34 858.59 99.82 1022.93 200.48 1107.35C296.5 1187.88 523.17 1325.86 593.77 1368.26C664.37 1325.86 891.04 1187.88 987.06 1107.35C1087.72 1022.93 1086.19 858.59 1086.17 856.94C1086.16 856.65 1086.16 856.45 1086.16 856.16V294.05C1035 290.68 980.59 280.66 923.8 264.15C866.54 247.5 806.64 224.2 745.76 194.9C677.09 161.86 623.1 128.9 593.76 109.9C564.42 128.89 510.43 161.86 441.76 194.9C380.9 224.19 321 247.49 263.73 264.14C206.95 280.66 152.53 290.67 101.38 294.04Z\" fill=\"white\" stroke=\"white\" stroke-width=\"34.8767\" stroke-miterlimit=\"10\"></path>\n<path d=\"M544.06 977.42C513.69 977.42 484.83 964.49 464.6 941.74L305.58 762.88C286.4 741.31 288.34 708.29 309.91 689.11C331.48 669.93 364.5 671.87 383.68 693.44L542.7 872.3C542.92 872.55 543.24 872.94 544.11 872.91C544.95 872.89 545.28 872.5 545.49 872.24L802.59 560.26C820.94 537.99 853.87 534.81 876.15 553.17C898.42 571.52 901.6 604.45 883.24 626.72L626.14 938.7C606.36 962.71 577.17 976.81 546.07 977.39C545.4 977.42 544.73 977.42 544.06 977.42Z\" fill=\"white\" stroke=\"white\" stroke-width=\"34.8767\" stroke-miterlimit=\"10\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_103_15\">\n<rect width=\"1187.54\" height=\"1476.54\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>"
+          }
+        },
+        "item_6qAxxg": {
+          "type": "item",
+          "settings": {
+            "title": "Express Yourself",
+            "desc_content": "Commute or stunt ride your way. Fully customizable for your style.",
+            "icon_svg": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 1458 1433\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_103_36)\">\n<path d=\"M1071.52 1054.92L402.33 385.73L745.79 42.27C761.76 26.3 783 17.5 805.59 17.5C828.18 17.5 849.42 26.3 865.39 42.27L1414.97 591.85C1447.95 624.83 1447.95 678.48 1414.97 711.46L1071.52 1054.92ZM502.9 385.73L1071.52 954.35L1364.69 661.18C1368.12 657.75 1368.63 653.74 1368.63 651.66C1368.63 649.58 1368.12 645.57 1364.69 642.14L815.12 92.56C811.69 89.13 807.68 88.62 805.6 88.62C803.52 88.62 799.51 89.13 796.08 92.56L502.9 385.73Z\" fill=\"white\" stroke=\"white\" stroke-width=\"35\" stroke-miterlimit=\"10\"></path>\n<path d=\"M214.72 1415.25C214.39 1415.25 214.07 1415.25 213.74 1415.25C168 1414.94 124.07 1392.79 83.19 1349.41L82 1348.08L76.09 1341.15C35.33 1298.37 15.66 1253.66 17.64 1208.23C19.34 1169.1 36.86 1130.09 71.18 1088.97C98.81 1055.87 133.83 1025.21 167.71 995.56C190.66 975.47 212.34 956.49 230.85 937.62C280.53 886.99 273.26 798.27 266.22 712.47C260.82 646.62 255.72 584.43 277.12 537.73C323.9 435.67 448.73 345.81 454.02 342.04L495.32 399.93C494.19 400.74 380.58 482.67 341.76 567.37C328.11 597.16 332.47 650.35 337.09 706.67C340.97 754.04 344.99 803.02 339.99 850.46C333.83 908.87 314.73 953.68 281.61 987.44C261.2 1008.24 237.48 1029 214.54 1049.08C153.82 1102.23 91.04 1157.19 88.68 1211.34C87.55 1237.24 100.46 1263.86 128.14 1292.71L128.87 1293.47L135.52 1301.28C162.73 1329.95 188.47 1343.98 214.21 1344.16C214.37 1344.16 214.54 1344.16 214.7 1344.16C268.76 1344.16 326.62 1284.4 382.58 1226.61C403.79 1204.71 425.72 1182.06 447.51 1162.73C482.89 1131.34 528.6 1114.52 587.25 1111.3C634.88 1108.69 683.59 1115.16 730.71 1121.42C786.72 1128.86 839.63 1135.89 870.07 1123.75C956.93 1089.11 1044.14 979.9 1045.01 978.8L1100.75 1022.96C1096.71 1028.05 1000.69 1148.21 896.42 1189.81C848.71 1208.84 786.85 1200.62 721.35 1191.92C636.01 1180.58 547.77 1168.86 494.71 1215.94C474.93 1233.49 454.89 1254.18 433.67 1276.09C402.36 1308.43 369.97 1341.87 335.53 1367.8C293.11 1399.71 253.57 1415.25 214.72 1415.25Z\" fill=\"white\" stroke=\"white\" stroke-width=\"35\" stroke-miterlimit=\"10\"></path>\n<path d=\"M823.39 368.78C814.29 368.78 805.19 365.31 798.25 358.37C784.36 344.48 784.36 321.97 798.25 308.09L939.59 166.75C953.48 152.86 975.99 152.86 989.87 166.75C1003.76 180.64 1003.76 203.15 989.87 217.03L848.53 358.36C841.59 365.31 832.48 368.78 823.39 368.78Z\" fill=\"white\" stroke=\"white\" stroke-width=\"35\" stroke-miterlimit=\"10\"></path>\n<path d=\"M973.1 518.49C964 518.49 954.9 515.02 947.96 508.08C934.07 494.19 934.07 471.68 947.96 457.8L1089.3 316.46C1103.19 302.57 1125.7 302.57 1139.58 316.46C1153.47 330.35 1153.47 352.86 1139.58 366.74L998.24 508.08C991.3 515.02 982.2 518.49 973.1 518.49Z\" fill=\"white\" stroke=\"white\" stroke-width=\"35\" stroke-miterlimit=\"10\"></path>\n<path d=\"M1130.12 675.51C1121.02 675.51 1111.92 672.04 1104.98 665.1C1091.09 651.21 1091.09 628.7 1104.98 614.82L1246.32 473.48C1260.21 459.59 1282.72 459.59 1296.6 473.48C1310.49 487.37 1310.49 509.88 1296.6 523.76L1155.26 665.1C1148.32 672.04 1139.22 675.51 1130.12 675.51Z\" fill=\"white\" stroke=\"white\" stroke-width=\"35\" stroke-miterlimit=\"10\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_103_36\">\n<rect width=\"1457.21\" height=\"1432.75\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>"
+          }
+        },
+        "item_QhQC8W": {
+          "type": "item",
+          "settings": {
+            "title": "Worry-Free Support",
+            "desc_content": "Two-year warranty and fast, helpful customer service whenever you need it.",
+            "icon_svg": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 1516 1585\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_103_23)\">\n<mask id=\"mask0_103_23\" style=\"mask-type:luminance\" maskunits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"1516\" height=\"1585\">\n<path d=\"M1515.45 0H0V1584.17H1515.45V0Z\" fill=\"white\"></path>\n</mask>\n<g mask=\"url(#mask0_103_23)\">\n<path d=\"M1098.92 119.31C1128.25 119.31 1156.94 123.52 1184.64 131.84L1035.27 281.2C1009.2 307.32 1009.2 349.63 1035.27 375.75L1140 480.51C1152.47 493.09 1169.45 500.18 1187.17 500.2C1204.88 500.23 1221.88 493.19 1234.4 480.65L1270.1 444.94L1383.94 331.11C1415.76 435.73 1387.18 549.37 1309.65 626.49C1254.09 682.35 1178.49 713.67 1099.7 713.45C1050.26 713.44 1001.59 701.15 958.06 677.68L921.5 657.89L893.34 688.47L258.87 1377.91C248.9 1389.34 234.81 1395.63 219.15 1395.63C202.73 1395.63 186.79 1388.73 174.26 1376.2L139.66 1341.57C126.56 1328.47 119.66 1311.81 120.23 1294.72C120.73 1279.84 127.03 1266.42 138.99 1255.96L827.32 622.41L857.9 594.25L838.11 557.69C775.96 442.96 797 298.37 889.3 206.1C944.79 150.35 1020.26 119.1 1098.92 119.31ZM1098.92 65.92C1006.11 65.78 917.07 102.66 851.53 168.37C739.19 280.72 719.18 450.23 791.15 583.15L102.85 1216.7C55.79 1257.7 54.16 1331.57 101.92 1379.34L136.48 1413.93C158.26 1436.17 188.01 1448.81 219.14 1449.03C249.11 1449.03 278.34 1436.86 299.12 1413L932.67 724.67C983.99 752.42 1041.42 766.94 1099.76 766.89C1192.69 767.02 1281.84 730.1 1347.47 664.3C1451.81 559.97 1476.33 406.4 1421.62 278.58C1416.69 267.15 1405.37 259.8 1392.93 259.92C1384.53 259.9 1376.47 263.23 1370.54 269.17L1196.75 442.96C1194.29 445.45 1190.95 446.84 1187.46 446.84C1183.84 446.82 1180.39 445.38 1177.85 442.82L1073.15 338.1C1070.62 335.57 1069.2 332.14 1069.2 328.56C1069.2 324.98 1070.62 321.55 1073.15 319.02L1246.68 145.49C1262.17 129.86 1257.54 102.91 1237.28 94.26C1193.55 75.56 1146.49 65.91 1098.92 65.92Z\" fill=\"white\" stroke=\"white\" stroke-width=\"35\" stroke-miterlimit=\"10\"></path>\n</g>\n<mask id=\"mask1_103_23\" style=\"mask-type:luminance\" maskunits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"1516\" height=\"1585\">\n<path d=\"M1515.45 0H0V1584.17H1515.45V0Z\" fill=\"white\"></path>\n</mask>\n<g mask=\"url(#mask1_103_23)\">\n<path d=\"M533.22 744C526.14 744.02 519.34 741.2 514.35 736.17L384.46 606.32C383.19 605.04 381.49 604.28 379.69 604.18L271.55 598.8C252.09 597.8 234.27 587.55 223.64 571.21L72.21 337.49C56.77 313.43 60.1 281.87 80.22 261.56L195.94 145.83C216.26 125.77 247.76 122.43 271.84 137.79L505.57 289.22C521.87 299.79 532.2 317.7 533.19 337.09L538.57 445.23C538.65 447.04 539.41 448.74 540.71 450L678.47 587.76C688.9 598.19 688.9 615.1 678.47 625.53C668.04 635.96 651.14 635.96 640.7 625.53L502.93 487.78C492.27 477.15 485.95 462.92 485.24 447.88L479.87 339.77C479.73 337.43 478.49 335.28 476.52 334L242.82 182.64C239.92 180.78 236.12 181.18 233.67 183.6L117.95 299.33C115.55 301.79 115.17 305.59 117.02 308.48L268.41 542.18C269.69 544.14 271.86 545.38 274.21 545.49L382.28 550.87C397.34 551.62 411.5 557.88 422.18 568.56L552.07 698.41C559.73 706.04 562.02 717.53 557.89 727.52C553.77 737.5 544.03 744.01 533.22 744ZM1146.76 1516.56C1130.39 1516.56 1114.01 1510.37 1101.55 1497.95L795.45 1191.82C783.38 1179.71 776.73 1163.66 776.73 1146.58C776.73 1129.49 783.38 1113.44 795.49 1101.37L837.49 1059.33L783.84 1005.68C773.41 995.25 773.41 978.35 783.84 967.91C794.27 957.48 811.18 957.48 821.61 967.91L894.12 1040.42C899.13 1045.42 901.95 1052.22 901.95 1059.31C901.95 1066.39 899.13 1073.19 894.12 1078.19L833.25 1139.09C831.24 1141.06 830.11 1143.74 830.11 1146.55C830.11 1149.35 831.24 1152.04 833.25 1154L1139.31 1460.1C1143.45 1464.19 1150.1 1464.19 1154.23 1460.1L1394.51 1219.82C1398.61 1215.67 1398.6 1209 1394.48 1204.87L1088.41 898.81C1084.28 894.72 1077.63 894.72 1073.5 898.81L1012.59 959.71C1007.59 964.72 1000.79 967.54 993.71 967.54C986.62 967.54 979.83 964.72 974.82 959.71L887.65 872.53C877.22 862.1 877.22 845.2 887.65 834.76C898.08 824.33 914.98 824.33 925.42 834.76L993.73 903.08L1035.77 861.04C1060.76 836.16 1101.15 836.15 1126.15 861L1432.28 1167.13C1457.17 1192.13 1457.17 1232.55 1432.28 1257.54L1192 1497.82C1180.02 1509.85 1163.74 1516.59 1146.76 1516.56Z\" fill=\"white\" stroke=\"white\" stroke-width=\"35\" stroke-miterlimit=\"10\"></path>\n</g>\n</g>\n<defs>\n<clippath id=\"clip0_103_23\">\n<rect width=\"1515.45\" height=\"1584.17\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>"
+          }
+        }
+      },
+      "block_order": [
+        "item_Mn7aVp",
+        "item_KXGc6W",
+        "item_6qAxxg",
+        "item_QhQC8W"
+      ],
+      "disabled": true,
+      "name": "Why",
+      "settings": {
+        "title": "Why Macfox Is Your Ultimate Choice",
+        "bg_color": "#121212",
+        "border_color": "#666666",
+        "tt_color": "#ffffff",
+        "ct_color": "#bcb7b1"
+      }
+    },
+    "custom_home_carousel_4_FRm7KW": {
+      "type": "custom-home-carousel-4",
+      "blocks": {
+        "item_XGydCd": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify://shop_images/electric-bike-report-logo-white-background.png",
+            "content": "Electric Bike Report tested the Macfox X7 and highlighted its stable handling, strong fat-tire grip, predictable throttle response, solid braking, and practical real-world range.",
+            "icon_image": "shopify://shop_images/5-4.webp"
+          }
+        },
+        "item_VNBTcC": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify://shop_images/ELECTREK_LOGO.png",
+            "content": "Electrek reviewed the Macfox X7 as a street-legal, UL-listed e-bike with moped-style presence and everyday ride practicality.",
+            "icon_image": "shopify://shop_images/5-5.webp"
+          }
+        },
+        "item_VYnQTN": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify://shop_images/autoevolution.png",
+            "content": "Macfox fat tire e-bike models such as the Macfox X1S and Macfox X2 have tire sizes of 20″*4.0″ and are known for their excellent stability, traction and comfort.",
+            "icon_image": "shopify://shop_images/5-2.webp"
+          }
+        },
+        "item_dcQEnc": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify://shop_images/usatoday-icon.png",
+            "content": "The Macfox X1S is a moped-inspired commuter electric bike built for urban and neighborhood mobility.",
+            "icon_image": "shopify://shop_images/Group_1.png"
+          }
+        },
+        "item_LG7CgG": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify://shop_images/ELECTREK_LOGO.png",
+            "content": "Electrek highlighted Macfox for its innovative, customizable electric bike designs and rider-driven approach.",
+            "icon_image": "shopify://shop_images/5-3.webp"
+          }
+        },
+        "item_fEDbjD": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "logo_image": "shopify://shop_images/5-7.png",
+            "content": "Macfox X1S offers impressive specs with a 750W peak motor, up to 76-mile range, and robust 4.0\" tires—perfect for urban commutes.",
+            "icon_image": "shopify://shop_images/5-1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "item_XGydCd",
+        "item_VNBTcC",
+        "item_VYnQTN",
+        "item_dcQEnc",
+        "item_LG7CgG",
+        "item_fEDbjD"
+      ],
+      "name": "Public Relations (Carousel)",
+      "settings": {
+        "bg_color": "#121212",
+        "topic": "Macfox in the Media",
+        "rotate_pc": "1.5",
+        "rotate_mb": "1",
+        "bg_card_pc": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 202 367\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_3663_45)\">\n<path d=\"M1.6 364.9C1.5 364.9 1.5 364.8 1.5 364.8C1.5 364.7 1.6 364.7 1.6 364.7C1.7 364.7 1.7 364.8 1.7 364.8C1.7 364.9 1.6 364.9 1.6 364.9ZM1.6 342.9C1.6 342.8 1.5 342.8 1.5 342.8C1.4 342.8 1.4 342.9 1.4 342.9C1.4 343 1.5 343 1.5 343C1.5 343 1.6 343 1.6 342.9ZM1.5 321C1.5 320.9 1.4 320.9 1.4 320.9C1.3 320.9 1.3 321 1.3 321C1.3 321.1 1.4 321.1 1.4 321.1C1.5 321.2 1.5 321.1 1.5 321ZM1.4 299.2C1.4 299.1 1.3 299.1 1.3 299.1C1.2 299.1 1.2 299.2 1.2 299.2L1.3 299.3C1.4 299.3 1.4 299.2 1.4 299.2ZM1.3 277.3C1.3 277.2 1.2 277.2 1.2 277.2C1.1 277.2 1.1 277.3 1.1 277.3C1.1 277.4 1.2 277.4 1.2 277.4C1.3 277.4 1.3 277.4 1.3 277.3ZM1.2 255.4C1.2 255.3 1.1 255.3 1.1 255.3C1 255.3 1 255.4 1 255.4C1 255.5 1.1 255.5 1.1 255.5C1.2 255.5 1.2 255.5 1.2 255.4ZM1.1 233.5C1.1 233.4 1 233.4 1 233.4C0.9 233.4 0.9 233.5 0.9 233.5C0.9 233.6 1 233.6 1 233.6C1.1 233.7 1.1 233.6 1.1 233.5ZM1.1 211.7C1.1 211.6 1 211.6 1 211.6C0.9 211.6 0.9 211.7 0.9 211.7C0.9 211.8 1 211.8 1 211.8L1.1 211.7ZM1 189.8C1 189.7 0.9 189.7 0.9 189.7C0.8 189.7 0.8 189.8 0.8 189.8C0.8 189.9 0.9 189.9 0.9 189.9C0.9 189.9 1 189.9 1 189.8ZM0.9 167.9C0.9 167.8 0.8 167.8 0.8 167.8C0.7 167.8 0.7 167.9 0.7 167.9C0.7 168 0.8 168 0.8 168C0.8 168 0.9 168 0.9 167.9ZM0.8 146C0.8 145.9 0.7 145.9 0.7 145.9C0.6 145.9 0.6 146 0.6 146C0.6 146.1 0.7 146.1 0.7 146.1C0.7 146.2 0.8 146.1 0.8 146ZM0.7 124.2C0.7 124.1 0.6 124.1 0.6 124.1C0.5 124.1 0.5 124.2 0.5 124.2C0.5 124.3 0.6 124.3 0.6 124.3L0.7 124.2ZM0.6 102.3C0.6 102.2 0.5 102.2 0.5 102.2C0.4 102.2 0.4 102.3 0.4 102.3C0.4 102.4 0.5 102.4 0.5 102.4C0.6 102.4 0.6 102.4 0.6 102.3ZM0.5 80.4C0.5 80.3 0.4 80.3 0.4 80.3C0.3 80.3 0.3 80.4 0.3 80.4C0.3 80.5 0.4 80.5 0.4 80.5C0.5 80.5 0.5 80.5 0.5 80.4ZM0.4 58.5C0.4 58.4 0.3 58.4 0.3 58.4C0.2 58.4 0.2 58.5 0.2 58.5C0.2 58.6 0.3 58.6 0.3 58.6C0.4 58.7 0.4 58.6 0.4 58.5ZM0.3 36.7C0.3 36.6 0.2 36.6 0.2 36.6C0.1 36.6 0.1 36.7 0.1 36.7C0.1 36.8 0.2 36.8 0.2 36.8C0.3 36.8 0.3 36.7 0.3 36.7ZM0.2 14.8C0.2 14.7 0.1 14.7 0.1 14.7C0 14.7 0 14.8 0 14.8C0 14.9 0.1 14.9 0.1 14.9C0.2 14.9 0.2 14.9 0.2 14.8ZM23.8 353.8C23.8 353.6 23.6 353.4 23.4 353.4C23.2 353.4 23 353.6 23 353.8C23 354 23.2 354.2 23.4 354.2C23.6 354.1 23.8 354 23.8 353.8ZM23.7 331.9C23.7 331.7 23.5 331.5 23.3 331.5C23.1 331.5 22.9 331.7 22.9 331.9C22.9 332.1 23.1 332.3 23.3 332.3C23.5 332.3 23.7 332.1 23.7 331.9ZM23.6 310C23.6 309.8 23.4 309.6 23.2 309.6C23 309.6 22.8 309.8 22.8 310C22.8 310.2 23 310.4 23.2 310.4C23.4 310.4 23.6 310.2 23.6 310ZM23.5 288.1C23.5 287.9 23.3 287.7 23.1 287.7C22.9 287.7 22.7 287.9 22.7 288.1C22.7 288.3 22.9 288.5 23.1 288.5C23.3 288.5 23.5 288.3 23.5 288.1ZM23.4 266.3C23.4 266.1 23.2 265.9 23 265.9C22.8 265.9 22.6 266.1 22.6 266.3C22.6 266.5 22.8 266.7 23 266.7C23.2 266.6 23.4 266.5 23.4 266.3ZM23.3 244.4C23.3 244.2 23.1 244 22.9 244C22.7 244 22.5 244.2 22.5 244.4C22.5 244.6 22.7 244.8 22.9 244.8C23.1 244.8 23.3 244.6 23.3 244.4ZM23.2 222.5C23.2 222.3 23 222.1 22.8 222.1C22.6 222.1 22.4 222.3 22.4 222.5C22.4 222.7 22.6 222.9 22.8 222.9C23.1 222.9 23.2 222.7 23.2 222.5ZM23.1 200.6C23.1 200.4 22.9 200.2 22.7 200.2C22.5 200.2 22.3 200.4 22.3 200.6C22.3 200.8 22.5 201 22.7 201C23 201 23.1 200.8 23.1 200.6ZM23 178.8C23 178.6 22.8 178.4 22.6 178.4C22.4 178.4 22.2 178.6 22.2 178.8C22.2 179 22.4 179.2 22.6 179.2C22.9 179.1 23 179 23 178.8ZM23 156.9C23 156.7 22.8 156.5 22.6 156.5C22.4 156.5 22.2 156.7 22.2 156.9C22.2 157.1 22.4 157.3 22.6 157.3C22.8 157.3 23 157.1 23 156.9ZM22.9 135C22.9 134.8 22.7 134.6 22.5 134.6C22.3 134.6 22.1 134.8 22.1 135C22.1 135.2 22.3 135.4 22.5 135.4C22.7 135.4 22.9 135.2 22.9 135ZM22.8 113.1C22.8 112.9 22.6 112.7 22.4 112.7C22.2 112.7 22 112.9 22 113.1C22 113.3 22.2 113.5 22.4 113.5C22.6 113.5 22.8 113.3 22.8 113.1ZM22.7 91.3C22.7 91.1 22.5 90.9 22.3 90.9C22.1 90.9 21.9 91.1 21.9 91.3C21.9 91.5 22.1 91.7 22.3 91.7C22.5 91.6 22.7 91.5 22.7 91.3ZM22.6 69.4C22.6 69.2 22.4 69 22.2 69C22 69 21.8 69.2 21.8 69.4C21.8 69.6 22 69.8 22.2 69.8C22.4 69.7 22.6 69.6 22.6 69.4ZM22.5 47.5C22.5 47.3 22.3 47.1 22.1 47.1C21.9 47.1 21.7 47.3 21.7 47.5C21.7 47.7 21.9 47.9 22.1 47.9C22.3 47.9 22.5 47.7 22.5 47.5ZM22.4 25.6C22.4 25.4 22.2 25.2 22 25.2C21.8 25.2 21.6 25.4 21.6 25.6C21.6 25.8 21.8 26 22 26C22.2 26 22.4 25.8 22.4 25.6ZM22.3 3.8C22.3 3.6 22.1 3.4 21.9 3.4C21.7 3.4 21.5 3.6 21.5 3.8C21.5 4 21.7 4.2 21.9 4.2C22.2 4.1 22.3 4 22.3 3.8ZM46 364.6C46 364.2 45.7 363.9 45.3 363.9C44.9 363.9 44.6 364.2 44.6 364.6C44.6 365 44.9 365.3 45.3 365.3C45.7 365.3 46 365 46 364.6ZM45.9 342.7C45.9 342.3 45.6 342 45.2 342C44.8 342 44.5 342.3 44.5 342.7C44.5 343.1 44.8 343.4 45.2 343.4C45.6 343.4 45.9 343.1 45.9 342.7ZM45.8 320.9C45.8 320.5 45.5 320.2 45.1 320.2C44.7 320.2 44.4 320.5 44.4 320.9C44.4 321.3 44.7 321.6 45.1 321.6C45.5 321.5 45.8 321.2 45.8 320.9ZM45.7 299C45.7 298.6 45.4 298.3 45 298.3C44.6 298.3 44.3 298.6 44.3 299C44.3 299.4 44.6 299.7 45 299.7C45.4 299.7 45.7 299.4 45.7 299ZM45.6 277.1C45.6 276.7 45.3 276.4 44.9 276.4C44.5 276.4 44.2 276.7 44.2 277.1C44.2 277.5 44.5 277.8 44.9 277.8C45.3 277.8 45.6 277.5 45.6 277.1ZM45.5 255.2C45.5 254.8 45.2 254.5 44.8 254.5C44.4 254.5 44.1 254.8 44.1 255.2C44.1 255.6 44.4 255.9 44.8 255.9C45.2 255.9 45.5 255.6 45.5 255.2ZM45.4 233.4C45.4 233 45.1 232.7 44.7 232.7C44.3 232.7 44 233 44 233.4C44 233.8 44.3 234.1 44.7 234.1C45.2 234 45.4 233.7 45.4 233.4ZM45.4 211.5C45.4 211.1 45.1 210.8 44.7 210.8C44.3 210.8 44 211.1 44 211.5C44 211.9 44.3 212.2 44.7 212.2C45.1 212.2 45.4 211.9 45.4 211.5ZM45.3 189.6C45.3 189.2 45 188.9 44.6 188.9C44.2 188.9 43.9 189.2 43.9 189.6C43.9 190 44.2 190.3 44.6 190.3C45 190.3 45.3 190 45.3 189.6ZM45.2 167.7C45.2 167.3 44.9 167 44.5 167C44.1 167 43.8 167.3 43.8 167.7C43.8 168.1 44.1 168.4 44.5 168.4C44.9 168.4 45.2 168.1 45.2 167.7ZM45.1 145.9C45.1 145.5 44.8 145.2 44.4 145.2C44 145.2 43.7 145.5 43.7 145.9C43.7 146.3 44 146.6 44.4 146.6C44.8 146.5 45.1 146.2 45.1 145.9ZM45 124C45 123.6 44.7 123.3 44.3 123.3C43.9 123.3 43.6 123.6 43.6 124C43.6 124.4 43.9 124.7 44.3 124.7C44.7 124.7 45 124.3 45 124ZM44.9 102.1C44.9 101.7 44.6 101.4 44.2 101.4C43.8 101.4 43.5 101.7 43.5 102.1C43.5 102.5 43.8 102.8 44.2 102.8C44.6 102.8 44.9 102.5 44.9 102.1ZM44.8 80.2C44.8 79.8 44.5 79.5 44.1 79.5C43.7 79.5 43.4 79.8 43.4 80.2C43.4 80.6 43.7 80.9 44.1 80.9C44.5 80.9 44.8 80.6 44.8 80.2ZM44.7 58.4C44.7 58 44.4 57.7 44 57.7C43.6 57.7 43.3 58 43.3 58.4C43.3 58.8 43.6 59.1 44 59.1C44.4 59 44.7 58.7 44.7 58.4ZM44.6 36.5C44.6 36.1 44.3 35.8 43.9 35.8C43.5 35.8 43.2 36.1 43.2 36.5C43.2 36.9 43.5 37.2 43.9 37.2C44.3 37.1 44.6 36.8 44.6 36.5ZM44.5 14.6C44.5 14.2 44.2 13.9 43.8 13.9C43.4 13.9 43.1 14.2 43.1 14.6C43.1 15 43.4 15.3 43.8 15.3C44.2 15.3 44.5 15 44.5 14.6ZM68.1 353.6C68.1 353.1 67.7 352.6 67.1 352.6C66.6 352.6 66.1 353 66.1 353.6C66.1 354.2 66.5 354.6 67.1 354.6C67.7 354.6 68.1 354.1 68.1 353.6ZM68 331.7C68 331.2 67.6 330.7 67 330.7C66.5 330.7 66 331.1 66 331.7C66 332.2 66.4 332.7 67 332.7C67.6 332.7 68 332.2 68 331.7ZM67.9 309.8C67.9 309.3 67.5 308.8 66.9 308.8C66.4 308.8 65.9 309.2 65.9 309.8C65.9 310.3 66.3 310.8 66.9 310.8C67.5 310.8 67.9 310.4 67.9 309.8ZM67.9 288C67.9 287.5 67.5 287 66.9 287C66.4 287 65.9 287.4 65.9 288C65.9 288.5 66.3 289 66.9 289C67.4 288.9 67.9 288.5 67.9 288ZM67.8 266.1C67.8 265.6 67.4 265.1 66.8 265.1C66.3 265.1 65.8 265.5 65.8 266.1C65.8 266.6 66.2 267.1 66.8 267.1C67.3 267.1 67.8 266.6 67.8 266.1ZM67.7 244.2C67.7 243.7 67.3 243.2 66.7 243.2C66.2 243.2 65.7 243.6 65.7 244.2C65.7 244.7 66.1 245.2 66.7 245.2C67.2 245.2 67.7 244.7 67.7 244.2ZM67.6 222.3C67.6 221.8 67.2 221.3 66.6 221.3C66.1 221.3 65.6 221.7 65.6 222.3C65.6 222.8 66 223.3 66.6 223.3C67.1 223.3 67.6 222.9 67.6 222.3ZM67.5 200.5C67.5 200 67.1 199.5 66.5 199.5C66 199.5 65.5 199.9 65.5 200.5C65.5 201 65.9 201.5 66.5 201.5C67.1 201.4 67.5 201 67.5 200.5ZM67.4 178.6C67.4 178.1 67 177.6 66.4 177.6C65.9 177.6 65.4 178 65.4 178.6C65.4 179.1 65.8 179.6 66.4 179.6C67 179.6 67.4 179.1 67.4 178.6ZM67.3 156.7C67.3 156.2 66.9 155.7 66.3 155.7C65.8 155.7 65.3 156.1 65.3 156.7C65.3 157.2 65.7 157.7 66.3 157.7C66.9 157.7 67.3 157.2 67.3 156.7ZM67.2 134.8C67.2 134.3 66.8 133.8 66.2 133.8C65.7 133.8 65.2 134.2 65.2 134.8C65.2 135.3 65.6 135.8 66.2 135.8C66.8 135.8 67.2 135.4 67.2 134.8ZM67.1 113C67.1 112.5 66.7 112 66.1 112C65.6 112 65.1 112.4 65.1 113C65.1 113.5 65.5 114 66.1 114C66.7 113.9 67.1 113.5 67.1 113ZM67 91.1C67 90.6 66.6 90.1 66 90.1C65.5 90.1 65 90.5 65 91.1C65 91.6 65.4 92.1 66 92.1C66.6 92 67 91.6 67 91.1ZM66.9 69.2C66.9 68.7 66.5 68.2 65.9 68.2C65.4 68.2 64.9 68.6 64.9 69.2C64.9 69.7 65.3 70.2 65.9 70.2C66.5 70.2 66.9 69.7 66.9 69.2ZM66.9 47.3C66.9 46.8 66.5 46.3 65.9 46.3C65.4 46.3 64.9 46.7 64.9 47.3C64.9 47.8 65.3 48.3 65.9 48.3C66.4 48.3 66.9 47.9 66.9 47.3ZM66.8 25.4C66.8 24.9 66.4 24.4 65.8 24.4C65.3 24.4 64.8 24.8 64.8 25.4C64.8 25.9 65.2 26.4 65.8 26.4C66.3 26.4 66.8 26 66.8 25.4ZM66.7 3.6C66.7 3.1 66.3 2.6 65.7 2.6C65.2 2.6 64.7 3 64.7 3.6C64.7 4.1 65.1 4.6 65.7 4.6C66.2 4.5 66.7 4.1 66.7 3.6ZM90.3 364.4C90.3 363.7 89.7 363.1 89 363.1C88.3 363.1 87.7 363.7 87.7 364.4C87.7 365.1 88.3 365.7 89 365.7C89.8 365.7 90.3 365.1 90.3 364.4ZM90.3 342.6C90.3 341.9 89.7 341.3 89 341.3C88.3 341.3 87.7 341.9 87.7 342.6C87.7 343.3 88.3 343.9 89 343.9C89.7 343.8 90.3 343.3 90.3 342.6ZM90.2 320.7C90.2 320 89.6 319.4 88.9 319.4C88.2 319.4 87.6 320 87.6 320.7C87.6 321.4 88.2 322 88.9 322C89.6 322 90.2 321.4 90.2 320.7ZM90.1 298.8C90.1 298.1 89.5 297.5 88.8 297.5C88.1 297.5 87.5 298.1 87.5 298.8C87.5 299.5 88.1 300.1 88.8 300.1C89.5 300.1 90.1 299.5 90.1 298.8ZM90 276.9C90 276.2 89.4 275.6 88.7 275.6C88 275.6 87.4 276.2 87.4 276.9C87.4 277.6 88 278.2 88.7 278.2C89.4 278.2 90 277.6 90 276.9ZM89.9 255.1C89.9 254.4 89.3 253.8 88.6 253.8C87.9 253.8 87.3 254.4 87.3 255.1C87.3 255.8 87.9 256.4 88.6 256.4C89.3 256.3 89.9 255.8 89.9 255.1ZM89.8 233.2C89.8 232.5 89.2 231.9 88.5 231.9C87.8 231.9 87.2 232.5 87.2 233.2C87.2 233.9 87.8 234.5 88.5 234.5C89.2 234.5 89.8 233.9 89.8 233.2ZM89.7 211.3C89.7 210.6 89.1 210 88.4 210C87.7 210 87.1 210.6 87.1 211.3C87.1 212 87.7 212.6 88.4 212.6C89.1 212.6 89.7 212 89.7 211.3ZM89.6 189.4C89.6 188.7 89 188.1 88.3 188.1C87.6 188.1 87 188.7 87 189.4C87 190.1 87.6 190.7 88.3 190.7C89.1 190.7 89.6 190.1 89.6 189.4ZM89.5 167.5C89.5 166.8 88.9 166.2 88.2 166.2C87.5 166.2 86.9 166.8 86.9 167.5C86.9 168.2 87.5 168.8 88.2 168.8C89 168.8 89.5 168.3 89.5 167.5ZM89.4 145.7C89.4 145 88.8 144.4 88.1 144.4C87.4 144.4 86.8 145 86.8 145.7C86.8 146.4 87.4 147 88.1 147C88.9 146.9 89.4 146.4 89.4 145.7ZM89.4 123.8C89.4 123.1 88.8 122.5 88.1 122.5C87.4 122.5 86.8 123.1 86.8 123.8C86.8 124.5 87.4 125.1 88.1 125.1C88.8 125.1 89.4 124.5 89.4 123.8ZM89.3 101.9C89.3 101.2 88.7 100.6 88 100.6C87.3 100.6 86.7 101.2 86.7 101.9C86.7 102.6 87.3 103.2 88 103.2C88.7 103.2 89.3 102.6 89.3 101.9ZM89.2 80C89.2 79.3 88.6 78.7 87.9 78.7C87.2 78.7 86.6 79.3 86.6 80C86.6 80.7 87.2 81.3 87.9 81.3C88.6 81.3 89.2 80.7 89.2 80ZM89.1 58.2C89.1 57.5 88.5 56.9 87.8 56.9C87.1 56.9 86.5 57.5 86.5 58.2C86.5 58.9 87.1 59.5 87.8 59.5C88.5 59.4 89.1 58.9 89.1 58.2ZM89 36.3C89 35.6 88.4 35 87.7 35C87 35 86.4 35.6 86.4 36.3C86.4 37 87 37.6 87.7 37.6C88.4 37.6 89 37 89 36.3ZM88.9 14.4C88.9 13.7 88.3 13.1 87.6 13.1C86.9 13.1 86.3 13.7 86.3 14.4C86.3 15.1 86.9 15.7 87.6 15.7C88.3 15.7 88.9 15.1 88.9 14.4ZM112.5 353.4C112.5 352.5 111.8 351.8 110.9 351.8C110 351.8 109.3 352.5 109.3 353.4C109.3 354.3 110 355 110.9 355C111.8 355 112.5 354.3 112.5 353.4ZM112.5 331.5C112.5 330.6 111.8 329.9 110.9 329.9C110 329.9 109.3 330.6 109.3 331.5C109.3 332.4 110 333.1 110.9 333.1C111.7 333.2 112.5 332.4 112.5 331.5ZM112.4 309.7C112.4 308.8 111.7 308.1 110.8 308.1C109.9 308.1 109.2 308.8 109.2 309.7C109.2 310.6 109.9 311.3 110.8 311.3C111.6 311.3 112.4 310.6 112.4 309.7ZM112.3 287.8C112.3 286.9 111.6 286.2 110.7 286.2C109.8 286.2 109.1 286.9 109.1 287.8C109.1 288.7 109.8 289.4 110.7 289.4C111.5 289.4 112.3 288.7 112.3 287.8ZM112.2 265.9C112.2 265 111.5 264.3 110.6 264.3C109.7 264.3 109 265 109 265.9C109 266.8 109.7 267.5 110.6 267.5C111.5 267.5 112.2 266.8 112.2 265.9ZM112.1 244C112.1 243.1 111.4 242.4 110.5 242.4C109.6 242.4 108.9 243.1 108.9 244C108.9 244.9 109.6 245.6 110.5 245.6C111.4 245.7 112.1 244.9 112.1 244ZM112 222.1C112 221.2 111.3 220.5 110.4 220.5C109.5 220.5 108.8 221.2 108.8 222.1C108.8 223 109.5 223.7 110.4 223.7C111.3 223.8 112 223.1 112 222.1ZM111.9 200.3C111.9 199.4 111.2 198.7 110.3 198.7C109.4 198.7 108.7 199.4 108.7 200.3C108.7 201.2 109.4 201.9 110.3 201.9C111.2 201.9 111.9 201.2 111.9 200.3ZM111.8 178.4C111.8 177.5 111.1 176.8 110.2 176.8C109.3 176.8 108.6 177.5 108.6 178.4C108.6 179.3 109.3 180 110.2 180C111.1 180 111.8 179.3 111.8 178.4ZM111.7 156.5C111.7 155.6 111 154.9 110.1 154.9C109.2 154.9 108.5 155.6 108.5 156.5C108.5 157.4 109.2 158.1 110.1 158.1C111 158.2 111.7 157.4 111.7 156.5ZM111.6 134.6C111.6 133.7 110.9 133 110 133C109.1 133 108.4 133.7 108.4 134.6C108.4 135.5 109.1 136.2 110 136.2C110.9 136.3 111.6 135.5 111.6 134.6ZM111.5 112.8C111.5 111.9 110.8 111.2 109.9 111.2C109 111.2 108.3 111.9 108.3 112.8C108.3 113.7 109 114.4 109.9 114.4C110.8 114.4 111.6 113.7 111.5 112.8ZM111.5 90.9C111.5 90 110.8 89.3 109.9 89.3C109 89.3 108.3 90 108.3 90.9C108.3 91.8 109 92.5 109.9 92.5C110.7 92.5 111.5 91.8 111.5 90.9ZM111.4 69C111.4 68.1 110.7 67.4 109.8 67.4C108.9 67.4 108.2 68.1 108.2 69C108.2 69.9 108.9 70.6 109.8 70.6C110.6 70.7 111.4 69.9 111.4 69ZM111.3 47.1C111.3 46.2 110.6 45.5 109.7 45.5C108.8 45.5 108.1 46.2 108.1 47.1C108.1 48 108.8 48.7 109.7 48.7C110.5 48.8 111.3 48 111.3 47.1ZM111.2 25.3C111.2 24.4 110.5 23.7 109.6 23.7C108.7 23.7 108 24.4 108 25.3C108 26.2 108.7 26.9 109.6 26.9C110.5 26.9 111.2 26.2 111.2 25.3ZM111.1 3.4C111.1 2.5 110.4 1.8 109.5 1.8C108.6 1.8 107.9 2.5 107.9 3.4C107.9 4.3 108.6 5 109.5 5C110.4 5 111.1 4.3 111.1 3.4ZM134.8 364.2C134.8 363.1 133.9 362.3 132.9 362.3C131.8 362.3 131 363.2 131 364.3C131 365.4 131.9 366.2 132.9 366.2C133.9 366.2 134.8 365.3 134.8 364.2ZM134.7 342.4C134.7 341.3 133.8 340.5 132.8 340.5C131.7 340.5 130.9 341.4 130.9 342.4C130.9 343.5 131.8 344.3 132.8 344.3C133.8 344.3 134.7 343.4 134.7 342.4ZM134.6 320.5C134.6 319.4 133.7 318.6 132.7 318.6C131.6 318.6 130.8 319.5 130.8 320.6C130.8 321.7 131.7 322.5 132.7 322.5C133.7 322.4 134.6 321.6 134.6 320.5ZM134.5 298.6C134.5 297.5 133.6 296.7 132.6 296.7C131.5 296.7 130.7 297.6 130.7 298.7C130.7 299.8 131.6 300.6 132.6 300.6C133.6 300.6 134.5 299.7 134.5 298.6ZM134.4 276.7C134.4 275.6 133.5 274.8 132.5 274.8C131.4 274.8 130.6 275.7 130.6 276.8C130.6 277.9 131.5 278.7 132.5 278.7C133.5 278.7 134.4 277.8 134.4 276.7ZM134.3 254.9C134.3 253.8 133.4 253 132.4 253C131.3 253 130.5 253.9 130.5 255C130.5 256.1 131.4 256.9 132.4 256.9C133.5 256.8 134.3 255.9 134.3 254.9ZM134.2 233C134.2 231.9 133.3 231.1 132.3 231.1C131.2 231.1 130.4 232 130.4 233C130.4 234.1 131.3 234.9 132.3 234.9C133.4 234.9 134.2 234.1 134.2 233ZM134.1 211.1C134.1 210 133.2 209.2 132.2 209.2C131.1 209.2 130.3 210.1 130.3 211.2C130.3 212.3 131.2 213.1 132.2 213.1C133.3 213.1 134.1 212.2 134.1 211.1ZM134 189.2C134 188.1 133.1 187.3 132.1 187.3C131 187.3 130.2 188.2 130.2 189.3C130.2 190.4 131.1 191.2 132.1 191.2C133.2 191.2 134 190.3 134 189.2ZM134 167.4C134 166.3 133.1 165.5 132.1 165.5C131 165.5 130.2 166.4 130.2 167.4C130.2 168.5 131.1 169.3 132.1 169.3C133.1 169.3 134 168.4 134 167.4ZM133.9 145.5C133.9 144.4 133 143.6 132 143.6C130.9 143.6 130.1 144.5 130.1 145.6C130.1 146.7 131 147.5 132 147.5C133 147.4 133.9 146.6 133.9 145.5ZM133.8 123.6C133.8 122.5 132.9 121.7 131.9 121.7C130.8 121.7 130 122.6 130 123.6C130 124.7 130.9 125.5 131.9 125.5C132.9 125.6 133.8 124.7 133.8 123.6ZM133.7 101.7C133.7 100.6 132.8 99.8 131.8 99.8C130.7 99.8 129.9 100.7 129.9 101.8C129.9 102.9 130.8 103.7 131.8 103.7C132.8 103.7 133.7 102.8 133.7 101.7ZM133.6 79.9C133.6 78.8 132.7 78 131.7 78C130.6 78 129.8 78.9 129.8 80C129.8 81.1 130.7 81.9 131.7 81.9C132.7 81.8 133.6 80.9 133.6 79.9ZM133.5 58C133.5 56.9 132.6 56.1 131.6 56.1C130.5 56.1 129.7 57 129.7 58.1C129.7 59.2 130.6 60 131.6 60C132.6 59.9 133.5 59.1 133.5 58ZM133.4 36.1C133.4 35 132.5 34.2 131.5 34.2C130.4 34.2 129.6 35.1 129.6 36.2C129.6 37.3 130.5 38.1 131.5 38.1C132.5 38.1 133.4 37.2 133.4 36.1ZM133.3 14.2C133.3 13.1 132.4 12.3 131.4 12.3C130.3 12.3 129.5 13.2 129.5 14.3C129.5 15.4 130.4 16.2 131.4 16.2C132.5 16.2 133.3 15.3 133.3 14.2ZM157 353.2C157 351.9 156 350.9 154.7 350.9C153.4 350.9 152.4 351.9 152.4 353.2C152.4 354.5 153.4 355.5 154.7 355.5C155.9 355.5 157 354.5 157 353.2ZM156.9 331.3C156.9 330 155.9 329 154.6 329C153.3 329 152.3 330 152.3 331.3C152.3 332.6 153.3 333.6 154.6 333.6C155.8 333.7 156.9 332.6 156.9 331.3ZM156.8 309.5C156.8 308.2 155.8 307.2 154.5 307.2C153.2 307.2 152.2 308.2 152.2 309.5C152.2 310.8 153.2 311.8 154.5 311.8C155.8 311.8 156.8 310.7 156.8 309.5ZM156.7 287.6C156.7 286.3 155.7 285.3 154.4 285.3C153.1 285.3 152.1 286.3 152.1 287.6C152.1 288.9 153.1 289.9 154.4 289.9C155.7 289.9 156.7 288.9 156.7 287.6ZM156.6 265.7C156.6 264.4 155.6 263.4 154.3 263.4C153 263.4 152 264.4 152 265.7C152 267 153 268 154.3 268C155.6 268 156.6 267 156.6 265.7ZM156.5 243.8C156.5 242.5 155.5 241.5 154.2 241.5C152.9 241.5 151.9 242.5 151.9 243.8C151.9 245.1 152.9 246.1 154.2 246.1C155.5 246.1 156.5 245.1 156.5 243.8ZM156.4 222C156.4 220.7 155.4 219.7 154.1 219.7C152.8 219.7 151.8 220.7 151.8 222C151.8 223.3 152.8 224.3 154.1 224.3C155.4 224.3 156.4 223.2 156.4 222ZM156.3 200.1C156.3 198.8 155.3 197.8 154 197.8C152.7 197.8 151.7 198.8 151.7 200.1C151.7 201.4 152.7 202.4 154 202.4C155.3 202.4 156.3 201.4 156.3 200.1ZM156.2 178.2C156.2 176.9 155.2 175.9 153.9 175.9C152.6 175.9 151.6 176.9 151.6 178.2C151.6 179.5 152.6 180.5 153.9 180.5C155.2 180.5 156.2 179.5 156.2 178.2ZM156.1 156.3C156.1 155 155.1 154 153.8 154C152.5 154 151.5 155 151.5 156.3C151.5 157.6 152.5 158.6 153.8 158.6C155.1 158.6 156.2 157.6 156.1 156.3ZM156.1 134.5C156.1 133.2 155.1 132.2 153.8 132.2C152.5 132.2 151.5 133.2 151.5 134.5C151.5 135.8 152.5 136.8 153.8 136.8C155 136.8 156.1 135.7 156.1 134.5ZM156 112.6C156 111.3 155 110.3 153.7 110.3C152.4 110.3 151.4 111.3 151.4 112.6C151.4 113.9 152.4 114.9 153.7 114.9C154.9 114.9 156 113.9 156 112.6ZM155.9 90.7C155.9 89.4 154.9 88.4 153.6 88.4C152.3 88.4 151.3 89.4 151.3 90.7C151.3 92 152.3 93 153.6 93C154.9 93 155.9 92 155.9 90.7ZM155.8 68.8C155.8 67.5 154.8 66.5 153.5 66.5C152.2 66.5 151.2 67.5 151.2 68.8C151.2 70.1 152.2 71.1 153.5 71.1C154.8 71.1 155.8 70.1 155.8 68.8ZM155.7 47C155.7 45.7 154.7 44.7 153.4 44.7C152.1 44.7 151.1 45.7 151.1 47C151.1 48.3 152.1 49.3 153.4 49.3C154.7 49.3 155.7 48.2 155.7 47ZM155.6 25.1C155.6 23.8 154.6 22.8 153.3 22.8C152 22.8 151 23.8 151 25.1C151 26.4 152 27.4 153.3 27.4C154.6 27.4 155.6 26.4 155.6 25.1ZM155.5 3.2C155.5 1.9 154.5 0.9 153.2 0.9C151.9 0.9 150.9 1.9 150.9 3.2C150.9 4.5 151.9 5.5 153.2 5.5C154.5 5.5 155.5 4.5 155.5 3.2ZM179.2 364.1C179.2 362.6 178 361.4 176.5 361.4C175 361.4 173.8 362.6 173.8 364.1C173.8 365.6 175 366.8 176.5 366.8C178.1 366.7 179.3 365.5 179.2 364.1ZM179.2 342.2C179.2 340.7 178 339.5 176.5 339.5C175 339.5 173.8 340.7 173.8 342.2C173.8 343.7 175 344.9 176.5 344.9C178 344.9 179.2 343.7 179.2 342.2ZM179.1 320.3C179.1 318.8 177.9 317.6 176.4 317.6C174.9 317.6 173.7 318.8 173.7 320.3C173.7 321.8 174.9 323 176.4 323C177.9 323 179.1 321.8 179.1 320.3ZM179 298.4C179 296.9 177.8 295.7 176.3 295.7C174.8 295.7 173.6 296.9 173.6 298.4C173.6 299.9 174.8 301.1 176.3 301.1C177.8 301.1 179 299.9 179 298.4ZM178.9 276.6C178.9 275.1 177.7 273.9 176.2 273.9C174.7 273.9 173.5 275.1 173.5 276.6C173.5 278.1 174.7 279.3 176.2 279.3C177.7 279.2 178.9 278 178.9 276.6ZM178.8 254.7C178.8 253.2 177.6 252 176.1 252C174.6 252 173.4 253.2 173.4 254.7C173.4 256.2 174.6 257.4 176.1 257.4C177.6 257.4 178.8 256.2 178.8 254.7ZM178.7 232.8C178.7 231.3 177.5 230.1 176 230.1C174.5 230.1 173.3 231.3 173.3 232.8C173.3 234.3 174.5 235.5 176 235.5C177.5 235.5 178.7 234.3 178.7 232.8ZM178.6 210.9C178.6 209.4 177.4 208.2 175.9 208.2C174.4 208.2 173.2 209.4 173.2 210.9C173.2 212.4 174.4 213.6 175.9 213.6C177.4 213.6 178.6 212.4 178.6 210.9ZM178.5 189.1C178.5 187.6 177.3 186.4 175.8 186.4C174.3 186.4 173.1 187.6 173.1 189.1C173.1 190.6 174.3 191.8 175.8 191.8C177.3 191.7 178.5 190.5 178.5 189.1ZM178.4 167.2C178.4 165.7 177.2 164.5 175.7 164.5C174.2 164.5 173 165.7 173 167.2C173 168.7 174.2 169.9 175.7 169.9C177.2 169.9 178.4 168.7 178.4 167.2ZM178.3 145.3C178.3 143.8 177.1 142.6 175.6 142.6C174.1 142.6 172.9 143.8 172.9 145.3C172.9 146.8 174.1 148 175.6 148C177.2 148 178.3 146.8 178.3 145.3ZM178.3 123.4C178.3 121.9 177.1 120.7 175.6 120.7C174.1 120.7 172.9 121.9 172.9 123.4C172.9 124.9 174.1 126.1 175.6 126.1C177.1 126.1 178.3 124.9 178.3 123.4ZM178.2 101.6C178.2 100.1 177 98.9 175.5 98.9C174 98.9 172.8 100.1 172.8 101.6C172.8 103.1 174 104.3 175.5 104.3C177 104.2 178.2 103 178.2 101.6ZM178.1 79.7C178.1 78.2 176.9 77 175.4 77C173.9 77 172.7 78.2 172.7 79.7C172.7 81.2 173.9 82.4 175.4 82.4C176.9 82.4 178.1 81.1 178.1 79.7ZM178 57.8C178 56.3 176.8 55.1 175.3 55.1C173.8 55.1 172.6 56.3 172.6 57.8C172.6 59.3 173.8 60.5 175.3 60.5C176.8 60.5 178 59.3 178 57.8ZM177.9 35.9C177.9 34.4 176.7 33.2 175.2 33.2C173.7 33.2 172.5 34.4 172.5 35.9C172.5 37.4 173.7 38.6 175.2 38.6C176.7 38.6 177.9 37.4 177.9 35.9ZM177.8 14C177.8 12.5 176.6 11.3 175.1 11.3C173.6 11.3 172.4 12.5 172.4 14C172.4 15.5 173.6 16.7 175.1 16.7C176.6 16.7 177.8 15.5 177.8 14ZM201.4 353C201.4 351.3 200 350 198.4 350C196.7 350 195.4 351.4 195.4 353C195.4 354.7 196.8 356 198.4 356C200.1 356.1 201.4 354.7 201.4 353ZM201.3 331.2C201.3 329.5 199.9 328.2 198.3 328.2C196.6 328.2 195.3 329.6 195.3 331.2C195.3 332.9 196.7 334.2 198.3 334.2C200 334.2 201.4 332.8 201.3 331.2ZM201.3 309.3C201.3 307.6 199.9 306.3 198.3 306.3C196.6 306.3 195.3 307.7 195.3 309.3C195.3 311 196.7 312.3 198.3 312.3C199.9 312.3 201.3 311 201.3 309.3ZM201.2 287.4C201.2 285.7 199.8 284.4 198.2 284.4C196.5 284.4 195.2 285.8 195.2 287.4C195.2 289.1 196.6 290.4 198.2 290.4C199.8 290.4 201.2 289.1 201.2 287.4ZM201.1 265.5C201.1 263.8 199.7 262.5 198.1 262.5C196.4 262.5 195.1 263.9 195.1 265.5C195.1 267.2 196.5 268.5 198.1 268.5C199.7 268.6 201.1 267.2 201.1 265.5ZM201 243.7C201 242 199.6 240.7 198 240.7C196.3 240.7 195 242.1 195 243.7C195 245.4 196.4 246.7 198 246.7C199.6 246.7 201 245.3 201 243.7ZM200.9 221.8C200.9 220.1 199.5 218.8 197.9 218.8C196.2 218.8 194.9 220.2 194.9 221.8C194.9 223.5 196.3 224.8 197.9 224.8C199.6 224.8 200.9 223.5 200.9 221.8ZM200.8 199.9C200.8 198.2 199.4 196.9 197.8 196.9C196.1 196.9 194.8 198.3 194.8 199.9C194.8 201.6 196.2 202.9 197.8 202.9C199.5 202.9 200.8 201.6 200.8 199.9ZM200.7 178C200.7 176.3 199.3 175 197.7 175C196 175 194.7 176.4 194.7 178C194.7 179.7 196.1 181 197.7 181C199.4 181.1 200.7 179.7 200.7 178ZM200.6 156.2C200.6 154.5 199.2 153.2 197.6 153.2C195.9 153.2 194.6 154.6 194.6 156.2C194.6 157.9 196 159.2 197.6 159.2C199.3 159.2 200.6 157.8 200.6 156.2ZM200.5 134.3C200.5 132.6 199.1 131.3 197.5 131.3C195.8 131.3 194.5 132.7 194.5 134.3C194.5 136 195.9 137.3 197.5 137.3C199.2 137.3 200.5 135.9 200.5 134.3ZM200.4 112.4C200.4 110.7 199 109.4 197.4 109.4C195.7 109.4 194.4 110.8 194.4 112.4C194.4 114.1 195.8 115.4 197.4 115.4C199.1 115.4 200.5 114.1 200.4 112.4ZM200.4 90.5C200.4 88.8 199 87.5 197.4 87.5C195.7 87.5 194.4 88.9 194.4 90.5C194.4 92.2 195.8 93.5 197.4 93.5C199 93.6 200.4 92.2 200.4 90.5ZM200.3 68.6C200.3 66.9 198.9 65.6 197.3 65.6C195.6 65.6 194.3 67 194.3 68.6C194.3 70.3 195.7 71.6 197.3 71.6C198.9 71.7 200.3 70.3 200.3 68.6ZM200.2 46.8C200.2 45.1 198.8 43.8 197.2 43.8C195.5 43.8 194.2 45.2 194.2 46.8C194.2 48.5 195.6 49.8 197.2 49.8C198.8 49.8 200.2 48.4 200.2 46.8ZM200.1 24.9C200.1 23.2 198.7 21.9 197.1 21.9C195.4 21.9 194.1 23.3 194.1 24.9C194.1 26.6 195.5 27.9 197.1 27.9C198.7 27.9 200.1 26.6 200.1 24.9ZM200 3C200 1.3 198.6 0 197 0C195.3 0 194 1.4 194 3C194 4.7 195.4 6 197 6C198.6 6.1 200 4.7 200 3Z\" fill=\"url(#paint0_linear_3663_45)\"></path>\n</g>\n<defs>\n<lineargradient id=\"paint0_linear_3663_45\" x1=\"109.797\" y1=\"-4.2097\" x2=\"91.7725\" y2=\"369.261\" gradientunits=\"userSpaceOnUse\">\n<stop stop-color=\"#784DE9\"></stop>\n<stop offset=\"1\" stop-color=\"#F2CB04\"></stop>\n</lineargradient>\n<clippath id=\"clip0_3663_45\">\n<rect width=\"201.4\" height=\"366.7\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
+        "bg_card_mobile": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 299 135\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_3664_48)\">\n<path d=\"M1.29844 1.3C1.29844 1.2 1.39844 1.2 1.39844 1.2C1.49844 1.2 1.49844 1.3 1.49844 1.3C1.49844 1.4 1.39844 1.4 1.39844 1.4C1.29844 1.4 1.29844 1.4 1.29844 1.3ZM23.2984 1.3C23.3984 1.3 23.3984 1.2 23.3984 1.2C23.3984 1.1 23.2984 1.1 23.2984 1.1C23.1984 1.1 23.1984 1.2 23.1984 1.2C23.1984 1.3 23.1984 1.3 23.2984 1.3ZM45.0984 1.2C45.1984 1.2 45.1984 1.1 45.1984 1.1C45.2984 1 45.1984 1 45.0984 1L44.9984 1.1C44.9984 1.2 45.0984 1.2 45.0984 1.2ZM66.9984 1.1C67.0984 1.1 67.0984 1 67.0984 1C67.0984 0.9 66.9984 0.9 66.9984 0.9L66.8984 1C66.8984 1.1 66.9984 1.1 66.9984 1.1ZM88.8984 1.1C88.9984 1.1 88.9984 1 88.9984 0.9C88.9984 0.8 88.8984 0.8 88.8984 0.8L88.7984 0.9C88.7984 1 88.7984 1.1 88.8984 1.1ZM110.798 1C110.898 1 110.898 0.9 110.898 0.9C110.898 0.8 110.798 0.8 110.798 0.8C110.698 0.8 110.698 0.9 110.698 0.9C110.698 0.9 110.698 1 110.798 1ZM132.698 0.9C132.798 0.9 132.798 0.8 132.798 0.8C132.798 0.7 132.698 0.7 132.698 0.7C132.598 0.7 132.598 0.8 132.598 0.8C132.498 0.8 132.598 0.9 132.698 0.9ZM154.498 0.8C154.598 0.8 154.598 0.7 154.598 0.7C154.598 0.6 154.498 0.6 154.498 0.6C154.398 0.6 154.398 0.7 154.398 0.7L154.498 0.8ZM176.398 0.7C176.498 0.7 176.498 0.6 176.498 0.6C176.498 0.5 176.398 0.5 176.398 0.5C176.298 0.5 176.298 0.6 176.298 0.6C176.298 0.6 176.298 0.7 176.398 0.7ZM198.298 0.6C198.398 0.6 198.398 0.5 198.398 0.5C198.398 0.4 198.298 0.4 198.298 0.4C198.198 0.4 198.198 0.5 198.198 0.5C198.198 0.6 198.198 0.6 198.298 0.6ZM220.198 0.5C220.298 0.5 220.298 0.4 220.298 0.4C220.298 0.3 220.198 0.3 220.198 0.3C220.098 0.3 220.098 0.4 220.098 0.4C219.998 0.5 220.098 0.5 220.198 0.5ZM241.998 0.4C242.098 0.4 242.098 0.3 242.098 0.3C242.098 0.2 241.998 0.2 241.998 0.2C241.898 0.2 241.898 0.3 241.898 0.3C241.898 0.4 241.998 0.4 241.998 0.4ZM263.898 0.3C263.998 0.3 263.998 0.2 263.998 0.2C263.998 0.1 263.898 0.1 263.898 0.1C263.798 0.1 263.798 0.2 263.798 0.2C263.798 0.3 263.798 0.3 263.898 0.3ZM285.798 0.2C285.898 0.2 285.898 0.1 285.898 0.1C285.898 0 285.798 0 285.798 0C285.698 0 285.698 0.1 285.698 0.1C285.698 0.2 285.698 0.2 285.798 0.2ZM12.3984 23.5C12.5984 23.5 12.7984 23.3 12.7984 23.1C12.7984 22.9 12.5984 22.7 12.3984 22.7C12.1984 22.7 11.9984 22.9 11.9984 23.1C12.0984 23.3 12.1984 23.5 12.3984 23.5ZM34.2984 23.4C34.4984 23.4 34.6984 23.2 34.6984 23C34.6984 22.8 34.4984 22.6 34.2984 22.6C34.0984 22.6 33.8984 22.8 33.8984 23C33.8984 23.2 34.0984 23.4 34.2984 23.4ZM56.1984 23.3C56.3984 23.3 56.5984 23.1 56.5984 22.9C56.5984 22.7 56.3984 22.5 56.1984 22.5C55.9984 22.5 55.7984 22.7 55.7984 22.9C55.7984 23.1 55.9984 23.3 56.1984 23.3ZM78.0984 23.2C78.2984 23.2 78.4984 23 78.4984 22.8C78.4984 22.6 78.2984 22.4 78.0984 22.4C77.8984 22.4 77.6984 22.6 77.6984 22.8C77.6984 23.1 77.8984 23.2 78.0984 23.2ZM99.8984 23.1C100.098 23.1 100.298 22.9 100.298 22.7C100.298 22.5 100.098 22.3 99.8984 22.3C99.6984 22.3 99.4984 22.5 99.4984 22.7C99.5984 23 99.6984 23.1 99.8984 23.1ZM121.798 23C121.998 23 122.198 22.8 122.198 22.6C122.198 22.4 121.998 22.2 121.798 22.2C121.598 22.2 121.398 22.4 121.398 22.6C121.398 22.9 121.598 23 121.798 23ZM143.698 23C143.898 23 144.098 22.8 144.098 22.6C144.098 22.4 143.898 22.2 143.698 22.2C143.498 22.2 143.298 22.4 143.298 22.6C143.298 22.8 143.498 23 143.698 23ZM165.598 22.9C165.798 22.9 165.998 22.7 165.998 22.5C165.998 22.3 165.798 22.1 165.598 22.1C165.398 22.1 165.198 22.3 165.198 22.5C165.198 22.7 165.398 22.9 165.598 22.9ZM187.398 22.8C187.598 22.8 187.798 22.6 187.798 22.4C187.798 22.2 187.598 22 187.398 22C187.198 22 186.998 22.2 186.998 22.4C187.098 22.6 187.198 22.8 187.398 22.8ZM209.298 22.7C209.498 22.7 209.698 22.5 209.698 22.3C209.698 22.1 209.498 21.9 209.298 21.9C209.098 21.9 208.898 22.1 208.898 22.3C208.898 22.5 209.098 22.7 209.298 22.7ZM231.198 22.6C231.398 22.6 231.598 22.4 231.598 22.2C231.598 22 231.398 21.8 231.198 21.8C230.998 21.8 230.798 22 230.798 22.2C230.798 22.4 230.998 22.6 231.198 22.6ZM253.098 22.5C253.298 22.5 253.498 22.3 253.498 22.1C253.498 21.9 253.298 21.7 253.098 21.7C252.898 21.7 252.698 21.9 252.698 22.1C252.698 22.3 252.898 22.5 253.098 22.5ZM274.898 22.4C275.098 22.4 275.298 22.2 275.298 22C275.298 21.8 275.098 21.6 274.898 21.6C274.698 21.6 274.498 21.8 274.498 22C274.598 22.2 274.698 22.4 274.898 22.4ZM296.798 22.3C296.998 22.3 297.198 22.1 297.198 21.9C297.198 21.7 296.998 21.5 296.798 21.5C296.598 21.5 296.398 21.7 296.398 21.9C296.498 22.2 296.598 22.3 296.798 22.3ZM1.59844 45.7C1.99844 45.7 2.29844 45.4 2.29844 45C2.29844 44.6 1.99844 44.3 1.59844 44.3C1.19844 44.3 0.898438 44.6 0.898438 45C0.898438 45.4 1.19844 45.7 1.59844 45.7ZM23.4984 45.6C23.8984 45.6 24.1984 45.3 24.1984 44.9C24.1984 44.5 23.8984 44.2 23.4984 44.2C23.0984 44.2 22.7984 44.5 22.7984 44.9C22.7984 45.3 23.0984 45.6 23.4984 45.6ZM45.2984 45.5C45.6984 45.5 45.9984 45.2 45.9984 44.8C45.9984 44.4 45.6984 44.1 45.2984 44.1C44.8984 44.1 44.5984 44.4 44.5984 44.8C44.6984 45.2 44.9984 45.5 45.2984 45.5ZM67.1984 45.4C67.5984 45.4 67.8984 45.1 67.8984 44.7C67.8984 44.3 67.5984 44 67.1984 44C66.7984 44 66.4984 44.3 66.4984 44.7C66.4984 45.2 66.7984 45.4 67.1984 45.4ZM89.0984 45.4C89.4984 45.4 89.7984 45.1 89.7984 44.7C89.7984 44.3 89.4984 44 89.0984 44C88.6984 44 88.3984 44.3 88.3984 44.7C88.3984 45.1 88.6984 45.4 89.0984 45.4ZM110.998 45.3C111.398 45.3 111.698 45 111.698 44.6C111.698 44.2 111.398 43.9 110.998 43.9C110.598 43.9 110.298 44.2 110.298 44.6C110.298 45 110.598 45.3 110.998 45.3ZM132.798 45.2C133.198 45.2 133.498 44.9 133.498 44.5C133.498 44.1 133.198 43.8 132.798 43.8C132.398 43.8 132.098 44.1 132.098 44.5C132.198 44.9 132.498 45.2 132.798 45.2ZM154.698 45.1C155.098 45.1 155.398 44.8 155.398 44.4C155.398 44 155.098 43.7 154.698 43.7C154.298 43.7 153.998 44 153.998 44.4C153.998 44.8 154.298 45.1 154.698 45.1ZM176.598 45C176.998 45 177.298 44.7 177.298 44.3C177.298 43.9 176.998 43.6 176.598 43.6C176.198 43.6 175.898 43.9 175.898 44.3C175.898 44.7 176.198 45 176.598 45ZM198.498 44.9C198.898 44.9 199.198 44.6 199.198 44.2C199.198 43.8 198.898 43.5 198.498 43.5C198.098 43.5 197.798 43.8 197.798 44.2C197.798 44.6 198.098 44.9 198.498 44.9ZM220.298 44.8C220.698 44.8 220.998 44.5 220.998 44.1C220.998 43.7 220.698 43.4 220.298 43.4C219.898 43.4 219.598 43.7 219.598 44.1C219.698 44.5 219.998 44.8 220.298 44.8ZM242.198 44.7C242.598 44.7 242.898 44.4 242.898 44C242.898 43.6 242.598 43.3 242.198 43.3C241.798 43.3 241.498 43.6 241.498 44C241.498 44.4 241.798 44.7 242.198 44.7ZM264.098 44.6C264.498 44.6 264.798 44.3 264.798 43.9C264.798 43.5 264.498 43.2 264.098 43.2C263.698 43.2 263.398 43.5 263.398 43.9C263.398 44.3 263.698 44.6 264.098 44.6ZM285.998 44.5C286.398 44.5 286.698 44.2 286.698 43.8C286.698 43.4 286.398 43.1 285.998 43.1C285.598 43.1 285.298 43.4 285.298 43.8C285.298 44.2 285.598 44.5 285.998 44.5ZM12.5984 67.9C13.0984 67.9 13.5984 67.5 13.5984 66.9C13.5984 66.4 13.1984 65.9 12.5984 65.9C11.9984 65.9 11.5984 66.3 11.5984 66.9C11.5984 67.4 12.0984 67.9 12.5984 67.9ZM34.4984 67.8C34.9984 67.8 35.4984 67.4 35.4984 66.8C35.4984 66.3 35.0984 65.8 34.4984 65.8C33.9984 65.8 33.4984 66.2 33.4984 66.8C33.4984 67.3 33.9984 67.8 34.4984 67.8ZM56.3984 67.7C56.8984 67.7 57.3984 67.3 57.3984 66.7C57.3984 66.2 56.9984 65.7 56.3984 65.7C55.8984 65.7 55.3984 66.1 55.3984 66.7C55.3984 67.2 55.7984 67.7 56.3984 67.7ZM78.1984 67.6C78.6984 67.6 79.1984 67.2 79.1984 66.6C79.1984 66.1 78.7984 65.6 78.1984 65.6C77.6984 65.6 77.1984 66 77.1984 66.6C77.2984 67.1 77.6984 67.6 78.1984 67.6ZM100.098 67.5C100.598 67.5 101.098 67.1 101.098 66.5C101.098 66 100.698 65.5 100.098 65.5C99.5984 65.5 99.0984 65.9 99.0984 66.5C99.0984 67.1 99.5984 67.5 100.098 67.5ZM121.998 67.4C122.498 67.4 122.998 67 122.998 66.4C122.998 65.9 122.598 65.4 121.998 65.4C121.498 65.4 120.998 65.8 120.998 66.4C120.998 67 121.498 67.4 121.998 67.4ZM143.898 67.3C144.398 67.3 144.898 66.9 144.898 66.3C144.898 65.8 144.498 65.3 143.898 65.3C143.398 65.3 142.898 65.7 142.898 66.3C142.898 66.9 143.298 67.3 143.898 67.3ZM165.698 67.2C166.198 67.2 166.698 66.8 166.698 66.2C166.698 65.7 166.298 65.2 165.698 65.2C165.198 65.2 164.698 65.6 164.698 66.2C164.798 66.8 165.198 67.2 165.698 67.2ZM187.598 67.1C188.098 67.1 188.598 66.7 188.598 66.1C188.598 65.6 188.198 65.1 187.598 65.1C187.098 65.1 186.598 65.5 186.598 66.1C186.598 66.7 187.098 67.1 187.598 67.1ZM209.498 67C209.998 67 210.498 66.6 210.498 66C210.498 65.5 210.098 65 209.498 65C208.998 65 208.498 65.4 208.498 66C208.498 66.6 208.998 67 209.498 67ZM231.398 66.9C231.898 66.9 232.398 66.5 232.398 65.9C232.398 65.4 231.998 64.9 231.398 64.9C230.898 64.9 230.398 65.3 230.398 65.9C230.398 66.5 230.798 66.9 231.398 66.9ZM253.198 66.9C253.698 66.9 254.198 66.5 254.198 65.9C254.198 65.4 253.798 64.9 253.198 64.9C252.698 64.9 252.198 65.3 252.198 65.9C252.298 66.4 252.698 66.9 253.198 66.9ZM275.098 66.8C275.598 66.8 276.098 66.4 276.098 65.8C276.098 65.3 275.698 64.8 275.098 64.8C274.598 64.8 274.098 65.2 274.098 65.8C274.198 66.3 274.598 66.8 275.098 66.8ZM296.998 66.7C297.498 66.7 297.998 66.3 297.998 65.7C297.998 65.2 297.598 64.7 296.998 64.7C296.498 64.7 295.998 65.1 295.998 65.7C295.998 66.2 296.498 66.7 296.998 66.7ZM1.79844 90.1C2.49844 90.1 3.09844 89.5 3.09844 88.8C3.09844 88.1 2.49844 87.5 1.79844 87.5C1.09844 87.5 0.498438 88.1 0.498438 88.8C0.498438 89.5 1.09844 90.1 1.79844 90.1ZM23.5984 90C24.2984 90 24.8984 89.4 24.8984 88.7C24.8984 88 24.2984 87.4 23.5984 87.4C22.8984 87.4 22.2984 88 22.2984 88.7C22.3984 89.4 22.8984 90 23.5984 90ZM45.4984 89.9C46.1984 89.9 46.7984 89.3 46.7984 88.6C46.7984 87.9 46.1984 87.3 45.4984 87.3C44.7984 87.3 44.1984 87.9 44.1984 88.6C44.1984 89.3 44.7984 89.9 45.4984 89.9ZM67.3984 89.8C68.0984 89.8 68.6984 89.2 68.6984 88.5C68.6984 87.8 68.0984 87.2 67.3984 87.2C66.6984 87.2 66.0984 87.8 66.0984 88.5C66.0984 89.2 66.6984 89.8 67.3984 89.8ZM89.2984 89.7C89.9984 89.7 90.5984 89.1 90.5984 88.4C90.5984 87.7 89.9984 87.1 89.2984 87.1C88.5984 87.1 87.9984 87.7 87.9984 88.4C87.9984 89.1 88.5984 89.7 89.2984 89.7ZM111.098 89.6C111.798 89.6 112.398 89 112.398 88.3C112.398 87.6 111.798 87 111.098 87C110.398 87 109.798 87.6 109.798 88.3C109.898 89.1 110.398 89.6 111.098 89.6ZM132.998 89.5C133.698 89.5 134.298 88.9 134.298 88.2C134.298 87.5 133.698 86.9 132.998 86.9C132.298 86.9 131.698 87.5 131.698 88.2C131.698 89 132.298 89.5 132.998 89.5ZM154.898 89.4C155.598 89.4 156.198 88.8 156.198 88.1C156.198 87.4 155.598 86.8 154.898 86.8C154.198 86.8 153.598 87.4 153.598 88.1C153.598 88.9 154.198 89.4 154.898 89.4ZM176.798 89.4C177.498 89.4 178.098 88.8 178.098 88.1C178.098 87.4 177.498 86.8 176.798 86.8C176.098 86.8 175.498 87.4 175.498 88.1C175.498 88.8 176.098 89.4 176.798 89.4ZM198.598 89.3C199.298 89.3 199.898 88.7 199.898 88C199.898 87.3 199.298 86.7 198.598 86.7C197.898 86.7 197.298 87.3 197.298 88C197.398 88.7 197.898 89.3 198.598 89.3ZM220.498 89.2C221.198 89.2 221.798 88.6 221.798 87.9C221.798 87.2 221.198 86.6 220.498 86.6C219.798 86.6 219.198 87.2 219.198 87.9C219.198 88.6 219.798 89.2 220.498 89.2ZM242.398 89.1C243.098 89.1 243.698 88.5 243.698 87.8C243.698 87.1 243.098 86.5 242.398 86.5C241.698 86.5 241.098 87.1 241.098 87.8C241.098 88.5 241.698 89.1 242.398 89.1ZM264.298 89C264.998 89 265.598 88.4 265.598 87.7C265.598 87 264.998 86.4 264.298 86.4C263.598 86.4 262.998 87 262.998 87.7C262.998 88.4 263.598 89 264.298 89ZM286.198 88.9C286.898 88.9 287.498 88.3 287.498 87.6C287.498 86.9 286.898 86.3 286.198 86.3C285.498 86.3 284.898 86.9 284.898 87.6C284.898 88.3 285.498 88.9 286.198 88.9ZM12.7984 112.3C13.6984 112.3 14.3984 111.6 14.3984 110.7C14.3984 109.8 13.6984 109.1 12.7984 109.1C11.8984 109.1 11.1984 109.8 11.1984 110.7C11.1984 111.5 11.8984 112.3 12.7984 112.3ZM34.6984 112.2C35.5984 112.2 36.2984 111.5 36.2984 110.6C36.2984 109.7 35.5984 109 34.6984 109C33.7984 109 33.0984 109.7 33.0984 110.6C32.9984 111.5 33.7984 112.2 34.6984 112.2ZM56.4984 112.1C57.3984 112.1 58.0984 111.4 58.0984 110.5C58.0984 109.6 57.3984 108.9 56.4984 108.9C55.5984 108.9 54.8984 109.6 54.8984 110.5C54.8984 111.4 55.5984 112.1 56.4984 112.1ZM78.3984 112C79.2984 112 79.9984 111.3 79.9984 110.4C79.9984 109.5 79.2984 108.8 78.3984 108.8C77.4984 108.8 76.7984 109.5 76.7984 110.4C76.7984 111.3 77.4984 112 78.3984 112ZM100.298 111.9C101.198 111.9 101.898 111.2 101.898 110.3C101.898 109.4 101.198 108.7 100.298 108.7C99.3984 108.7 98.6984 109.4 98.6984 110.3C98.6984 111.2 99.3984 111.9 100.298 111.9ZM122.198 111.8C123.098 111.8 123.798 111.1 123.798 110.2C123.798 109.3 123.098 108.6 122.198 108.6C121.298 108.6 120.598 109.3 120.598 110.2C120.498 111.1 121.298 111.8 122.198 111.8ZM144.098 111.7C144.998 111.7 145.698 111 145.698 110.1C145.698 109.2 144.998 108.5 144.098 108.5C143.198 108.5 142.498 109.2 142.498 110.1C142.398 111 143.098 111.7 144.098 111.7ZM165.898 111.6C166.798 111.6 167.498 110.9 167.498 110C167.498 109.1 166.798 108.4 165.898 108.4C164.998 108.4 164.298 109.1 164.298 110C164.298 110.9 164.998 111.6 165.898 111.6ZM187.798 111.5C188.698 111.5 189.398 110.8 189.398 109.9C189.398 109 188.698 108.3 187.798 108.3C186.898 108.3 186.198 109 186.198 109.9C186.198 110.8 186.898 111.6 187.798 111.5ZM209.698 111.5C210.598 111.5 211.298 110.8 211.298 109.9C211.298 109 210.598 108.3 209.698 108.3C208.798 108.3 208.098 109 208.098 109.9C207.998 110.7 208.798 111.5 209.698 111.5ZM231.598 111.4C232.498 111.4 233.198 110.7 233.198 109.8C233.198 108.9 232.498 108.2 231.598 108.2C230.698 108.2 229.998 108.9 229.998 109.8C229.898 110.6 230.698 111.4 231.598 111.4ZM253.398 111.3C254.298 111.3 254.998 110.6 254.998 109.7C254.998 108.8 254.298 108.1 253.398 108.1C252.498 108.1 251.798 108.8 251.798 109.7C251.798 110.5 252.498 111.3 253.398 111.3ZM275.298 111.2C276.198 111.2 276.898 110.5 276.898 109.6C276.898 108.7 276.198 108 275.298 108C274.398 108 273.698 108.7 273.698 109.6C273.698 110.5 274.398 111.2 275.298 111.2ZM297.198 111.1C298.098 111.1 298.798 110.4 298.798 109.5C298.798 108.6 298.098 107.9 297.198 107.9C296.298 107.9 295.598 108.6 295.598 109.5C295.498 110.4 296.298 111.1 297.198 111.1ZM1.89844 134.5C2.99844 134.5 3.79844 133.6 3.79844 132.6C3.79844 131.5 2.89844 130.7 1.79844 130.7C0.698437 130.7 -0.101562 131.6 -0.101562 132.6C-0.0015625 133.6 0.898438 134.5 1.89844 134.5ZM23.7984 134.4C24.8984 134.4 25.6984 133.5 25.6984 132.5C25.6984 131.4 24.7984 130.6 23.7984 130.6C22.6984 130.6 21.8984 131.5 21.8984 132.5C21.8984 133.5 22.7984 134.4 23.7984 134.4ZM45.6984 134.3C46.7984 134.3 47.5984 133.4 47.5984 132.4C47.5984 131.3 46.6984 130.5 45.5984 130.5C44.4984 130.5 43.6984 131.4 43.6984 132.4C43.7984 133.5 44.5984 134.3 45.6984 134.3ZM67.5984 134.2C68.6984 134.2 69.4984 133.3 69.4984 132.3C69.4984 131.2 68.5984 130.4 67.4984 130.4C66.3984 130.4 65.5984 131.3 65.5984 132.3C65.5984 133.4 66.4984 134.2 67.5984 134.2ZM89.4984 134.1C90.5984 134.1 91.3984 133.2 91.3984 132.2C91.3984 131.1 90.4984 130.3 89.3984 130.3C88.2984 130.3 87.4984 131.2 87.4984 132.2C87.4984 133.3 88.3984 134.1 89.4984 134.1ZM111.298 134C112.398 134 113.198 133.1 113.198 132.1C113.198 131 112.298 130.2 111.198 130.2C110.098 130.2 109.298 131.1 109.298 132.1C109.398 133.2 110.298 134 111.298 134ZM133.198 134C134.298 134 135.098 133.1 135.098 132.1C135.098 131 134.198 130.2 133.198 130.2C132.098 130.2 131.298 131.1 131.298 132.1C131.298 133.1 132.098 134 133.198 134ZM155.098 133.9C156.198 133.9 156.998 133 156.998 132C156.998 130.9 156.098 130.1 154.998 130.1C153.898 130.1 153.098 131 153.098 132C153.098 133 153.998 133.9 155.098 133.9ZM176.998 133.8C178.098 133.8 178.898 132.9 178.898 131.9C178.898 130.8 177.998 130 176.898 130C175.798 130 174.998 130.9 174.998 131.9C174.998 132.9 175.898 133.8 176.998 133.8ZM198.798 133.7C199.898 133.7 200.698 132.8 200.698 131.8C200.698 130.7 199.798 129.9 198.798 129.9C197.698 129.9 196.898 130.8 196.898 131.8C196.898 132.8 197.798 133.7 198.798 133.7ZM220.698 133.6C221.798 133.6 222.598 132.7 222.598 131.7C222.598 130.6 221.698 129.8 220.598 129.8C219.498 129.8 218.698 130.7 218.698 131.7C218.798 132.7 219.598 133.6 220.698 133.6ZM242.598 133.5C243.698 133.5 244.498 132.6 244.498 131.6C244.498 130.5 243.598 129.7 242.598 129.7C241.498 129.7 240.698 130.6 240.698 131.6C240.598 132.6 241.498 133.5 242.598 133.5ZM264.498 133.4C265.598 133.4 266.398 132.5 266.398 131.5C266.398 130.4 265.498 129.6 264.398 129.6C263.298 129.6 262.498 130.5 262.498 131.5C262.498 132.5 263.398 133.4 264.498 133.4ZM286.298 133.3C287.398 133.3 288.198 132.4 288.198 131.4C288.198 130.3 287.298 129.5 286.198 129.5C285.098 129.5 284.298 130.4 284.298 131.4C284.398 132.5 285.298 133.3 286.298 133.3Z\" fill=\"url(#paint0_linear_3664_48)\"></path>\n</g>\n<defs>\n<lineargradient id=\"paint0_linear_3664_48\" x1=\"300.493\" y1=\"74.8034\" x2=\"-1.5523\" y2=\"60.2261\" gradientunits=\"userSpaceOnUse\">\n<stop stop-color=\"#784DE9\"></stop>\n<stop offset=\"1\" stop-color=\"#F2CB04\"></stop>\n</lineargradient>\n<clippath id=\"clip0_3664_48\">\n<rect width=\"298.8\" height=\"134.5\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
+        "arrow_left_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "arrow_right_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>"
+      }
+    },
+    "custom_html_7mxiei": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "code": "<style>\n.ins-title-wrap{\nwidth:90%;\nmax-width:1600px;\nmargin:0 auto;\npadding:6rem 0 4rem 0;\n}\n.ins-title-wrap h2{\nfont-family: 'Montserrat', Arial, sans-serif !important;\n}\n@media screen and (max-width: 768px){\n.ins-title-wrap{\nwidth:100%;\npadding:0 20px 20px;\n}\n}\n</style>\n<div class=\"ins-title-wrap\">\n  <h2 class=\"!text-white text-wrap !text-[26px] md:!text-6xl leading-[1.3] !font-bold\">Macfoxers' Highlights</h2>\n</div>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#121212",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "1754903064870b6b42": {
+      "type": "apps",
+      "blocks": {
+        "socialwidget_instafeed_base_widget_Hzwazg": {
+          "type": "shopify://apps/socialwidget-instafeed/blocks/base-widget/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "socialwidget_instafeed_base_widget_Hzwazg"
+      ],
+      "settings": {}
+    },
+    "custom_home_carousel_video_bVyWxX": {
+      "type": "custom-home-carousel-video",
+      "blocks": {
+        "video_4PPb6z": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/MacFox X7 - Reel 2.mp4"
+          }
+        },
+        "video_yNT4N3": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/Reel 2_Macfox.mp4"
+          }
+        },
+        "video_YeBMkA": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/Macfox_October_halloween_9x16_AD_V3.mp4"
+          }
+        },
+        "video_UjcRd3": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/10.13_1.mp4"
+          }
+        },
+        "video_paDMBx": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/10.13_3.mp4"
+          }
+        },
+        "video_jyN4nx": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/10.13_2.mp4"
+          }
+        },
+        "video_WfNppk": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/10.13_1.mp4"
+          }
+        },
+        "video_Eefppc": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/9月25日(1).mp4"
+          }
+        },
+        "video_JdDMjP": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/9月25日.mp4"
+          }
+        },
+        "video_zG7pLG": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/8月7日.mp4"
+          }
+        },
+        "video_eXVRYR": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/8月1日 (1).mp4"
+          }
+        },
+        "video_NqdFhB": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/7月30日.mp4"
+          }
+        },
+        "video_3HUM6V": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/8月1日.mp4"
+          }
+        },
+        "video_FEUnUK": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/8月1日 (3).mp4"
+          }
+        },
+        "video_9dRhWa": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/8月1日 (2)(1).mp4"
+          }
+        },
+        "video_RGr4K6": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/8月1日 (2).mp4"
+          }
+        }
+      },
+      "block_order": [
+        "video_4PPb6z",
+        "video_yNT4N3",
+        "video_YeBMkA",
+        "video_UjcRd3",
+        "video_paDMBx",
+        "video_jyN4nx",
+        "video_WfNppk",
+        "video_Eefppc",
+        "video_JdDMjP",
+        "video_zG7pLG",
+        "video_eXVRYR",
+        "video_NqdFhB",
+        "video_3HUM6V",
+        "video_FEUnUK",
+        "video_9dRhWa",
+        "video_RGr4K6"
+      ],
+      "name": "Video (Carousel)",
+      "settings": {
+        "topic": "Macfox in Stunning Action",
+        "play_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 75 75\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_1003_2)\"><path d=\"M55.2 35.9L30.2 21.5C29 20.8 27.5 21.7 27.5 23.1V52C27.5 53.4 29 54.2 30.2 53.6L55.2 39.2C56.4 38.4 56.4 36.6 55.2 35.9Z\" fill=\"white\"></path></g><defs><clippath id=\"clip0_1003_2\"><rect width=\"75\" height=\"75\" fill=\"white\"></rect></clippath></defs></svg>",
+        "btn_title": "Let our feed inspire you",
+        "btn_topic": "Follow Us",
+        "arrow_left_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "arrow_right_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "bg_color": "#121212"
+      }
+    },
+    "custom_home_carousel_discover_jGj9UE": {
+      "type": "custom-home-carousel-discover",
+      "blocks": {
+        "item_TjcGtx": {
+          "type": "item",
+          "settings": {
+            "article_item": "news/youth-electric-bike-style-guide-how-to-stand-out-on-the-streets"
+          }
+        },
+        "item_cQFWhL": {
+          "type": "item",
+          "settings": {
+            "article_item": "news/top-5-reasons-teens-love-riding-fat-tire-ebikes"
+          }
+        },
+        "item_ATV8fX": {
+          "type": "item",
+          "settings": {
+            "article_item": "news/value-guide-youth-electric-bikes-under-1000-vs-2000-models"
+          }
+        },
+        "item_kmCPDy": {
+          "type": "item",
+          "settings": {
+            "article_item": "news/are-youth-electric-bikes-safe-for-daily-school-commutes"
+          }
+        },
+        "item_DFkK77": {
+          "type": "item",
+          "settings": {
+            "article_item": "news/why-choose-the-macfox-m16-youth-electric-bike"
+          }
+        },
+        "item_MXiLeb": {
+          "type": "item",
+          "settings": {
+            "article_item": "news/why-choose-the-macfox-x7-fat-tire-mountain-electric-dirt-bike"
+          }
+        },
+        "item_NXt7Xm": {
+          "type": "item",
+          "settings": {
+            "article_item": "news/how-electric-bikes-help-parents-save-time"
+          }
+        },
+        "item_TFTNRd": {
+          "type": "item",
+          "settings": {
+            "article_item": "knowledge/teenagers-first-ebike"
+          }
+        },
+        "item_UbMic8": {
+          "type": "item",
+          "settings": {
+            "article_item": "knowledge/reduction-ratio"
+          }
+        },
+        "item_ALgRVF": {
+          "type": "item",
+          "settings": {
+            "article_item": "knowledge/gear-ratio-battery-efficiency-impact"
+          }
+        }
+      },
+      "block_order": [
+        "item_TjcGtx",
+        "item_cQFWhL",
+        "item_ATV8fX",
+        "item_kmCPDy",
+        "item_DFkK77",
+        "item_MXiLeb",
+        "item_NXt7Xm",
+        "item_TFTNRd",
+        "item_UbMic8",
+        "item_ALgRVF"
+      ],
+      "name": "Carousel Discover",
+      "settings": {
+        "show_new": true,
+        "bl_handle": "news",
+        "bl_range": 9,
+        "bg_color": "#121212",
+        "topic": "Discover the world of Macfox",
+        "btn": "Read All",
+        "btn_link": "/blogs/news",
+        "arrow_left_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.1 59.1C5.50003 59.1 0.900024 54.5 0.900024 48.9V11.1C0.900024 5.50003 5.50003 0.900024 11.1 0.900024H48.9C54.5 0.900024 59.1 5.50003 59.1 11.1V48.9C59.1 54.5 54.5 59.1 48.9 59.1H11.1Z\" fill=\"#121212\"></path>\n<path d=\"M48.9 1.8C54 1.8 58.2 6 58.2 11.1V48.9C58.2 54 54 58.2 48.9 58.2H11.1C6 58.2 1.8 54 1.8 48.9V11.1C1.8 6 6 1.8 11.1 1.8H48.9ZM48.9 0H11.1C5 0 0 5 0 11.1V48.9C0 55 5 60 11.1 60H48.9C55 60 60 55 60 48.9V11.1C60 5 55 0 48.9 0Z\" fill=\"#666666\"></path>\n<path d=\"M27.7 39.2L18.5 30L27.7 20.8L30 23.1L23.1 30L30 36.9L27.7 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M41.5 28.3H20.8V31.5H41.5V28.3Z\" fill=\"#666666\"></path>\n</svg>",
+        "arrow_right_icon": "<svg width=\"100%\" height=\"100%\" viewbox=\"0 0 61 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M49.5 59.1C55.1 59.1 59.7 54.5 59.7 48.9V11.1C59.7 5.50003 55.1 0.900024 49.5 0.900024H11.7C6.1 0.900024 1.5 5.50003 1.5 11.1V48.9C1.5 54.5 6.1 59.1 11.7 59.1H49.5Z\" fill=\"#121212\"></path>\n<path d=\"M11.7 1.8C6.59997 1.8 2.39998 6 2.39998 11.1V48.9C2.39998 54 6.59997 58.2 11.7 58.2H49.5C54.6 58.2 58.8 54 58.8 48.9V11.1C58.8 6 54.6 1.8 49.5 1.8H11.7ZM11.7 0H49.5C55.6 0 60.6 5 60.6 11.1V48.9C60.6 55 55.6 60 49.5 60H11.7C5.59997 60 0.599976 55 0.599976 48.9V11.1C0.599976 5 5.59997 0 11.7 0Z\" fill=\"#666666\"></path>\n<path d=\"M32.9 39.2L42.1 30L32.9 20.8L30.6 23.1L37.5 30L30.6 36.9L32.9 39.2Z\" fill=\"#666666\"></path>\n<path d=\"M39.8 28.3H19.1V31.5H39.8V28.3Z\" fill=\"#666666\"></path>\n</svg>"
+      }
+    },
+    "social_widget_53816": {
+      "type": "social-widget",
+      "disabled": true,
+      "settings": {
+        "social_widget_id": "53816",
+        "social_product_id": "none",
+        "social_widget_type": "none"
+      }
+    },
+    "custom_liquid_KtYNpF": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"Organization\",\n      \"image\": \"https://macfoxbike.com/cdn/shop/files/favicon-48x48.png\",\n        \"url\": \"https://macfoxbike.com\",\n        \"sameAs\": [\"https://www.youtube.com/@MacfoxBike\", \"https://www.instagram.com/macfoxbike/\", \"https://www.facebook.com/macfoxbikes\", \"https://twitter.com/macfoxbike\", \"https://www.pinterest.com/MacfoxBike/\", \"https://www.tiktok.com/@macfox_official/\"],\n        \"logo\": \"https://macfoxbike.com/cdn/shop/files/favicon-48x48.png\",\n        \"name\": \"Macfox\",\n        \"alternateName\": \"Macfoxbike Official\",\n        \"legalName\": \"Macfox\",\n        \"description\": \"Adventure with Macfox, the popular brand of modified outdoor e-bikes. Our innovative designs offer your riding partner unparalleled performance, durability and style, tailored to meet the needs of every outdoor enthusiast. Click The adventure begins here!\",\n        \"email\": \"customer@macfoxbike.com\",\n        \"telephone\":  [\"(951)393-9081\", \"(949)617-6785\"],\n        \"address\": {\n            \"@type\": \"PostalAddress\",\n            \"streetAddress\": \"1521 Pomona Road\",\n            \"addressLocality\": \"Corona\",\n            \"addressRegion\": \"CA\",\n            \"postalCode\": \"92878\",\n            \"addressCountry\": \"US\"\n        }\n    }\n    </script>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "custom_internal_link_JehphR": {
+      "type": "custom-Internal-link",
+      "name": "Custom Internal Link",
+      "settings": {
+        "internal_links": "internal-links-default",
+        "theme": "black",
+        "title_align": "left"
+      }
+    }
+  },
+  "order": [
+    "custom_video_4f8NNX",
+    "custom_banner_W4C4a7",
+    "custom_brand_compare_9aFPki",
+    "custom_banner_zURk3K",
+    "custom_home_info_qN4WBH",
+    "custom_home_carousel_modify_iLDHLe",
+    "custom_home_carousel_2_qVNCyq",
+    "custom_home_carousel_upgrade_GnNtcB",
+    "custom_home_carousel_3_pDCBDm",
+    "custom_collections_describe_ymUYDm",
+    "custom_home_why_TWpnwg",
+    "custom_home_carousel_4_FRm7KW",
+    "custom_html_7mxiei",
+    "1754903064870b6b42",
+    "custom_home_carousel_video_bVyWxX",
+    "custom_home_carousel_discover_jGj9UE",
+    "social_widget_53816",
+    "custom_liquid_KtYNpF",
+    "custom_internal_link_JehphR"
+  ]
+}

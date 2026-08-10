@@ -1,0 +1,175 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+  assign parametersData = product.metafields.custom.parametersjson.value
+%}
+
+<div class="custom-product-parameters">
+  <div class="parameters-container">
+    <p class="parameters-title">{{ parametersData.short_name }}</p>
+    <div class="parameters-img">
+      <img
+        loading="lazy"
+        width="auto"
+        height="100%"
+        src="{{ parametersData.img_url }}"
+        alt="{{ parametersData.img_alt }}"
+      >
+    </div>
+    <div class="params-box">
+      <div class="params-content">
+        {% for param in parametersData.data %}
+          <div>
+            <span class="param-name">{{ param.name }}</span>
+            <span class="param-value">{{ param.value }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="params-btns">
+        <div class="view_manual" data-url="{{ parametersData.manual_url }}">View Manual</div>
+        <div class="all_add_cart">Add To Cart</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    window.addEventListener('load', function(){
+      if( $(window).width() > 768){
+        $(".custom-product-parameters .parameters-img").css('height', $(".custom-product-parameters .params-box").height());
+      }
+      $(".custom-product-parameters .view_manual").click(function(){
+        const manualUrl = $(".custom-product-parameters .view_manual").data('url');
+        if(manualUrl) window.open(manualUrl, "_blank");
+      });
+    })
+  })()
+</script>
+
+{% schema %}
+{
+  "name": "Custom Product Parameters",
+  "settings": [],
+  "presets": [
+      {
+          "name": "Custom Product Parameters"
+      }
+  ]
+}
+{% endschema %}
+
+<style>
+  .custom-product-parameters {
+    padding: 4vh 0;
+    width: 100%;
+    background-color: #000;
+  }
+  .custom-product-parameters .parameters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 85vw;
+  }
+  .custom-product-parameters .parameters-title {
+    margin-bottom: 5vh;
+    width: 100%;
+    line-height: 1.2;
+    color: #eee;
+    font-size: 50px;
+    text-align: right;
+    font-family: Antonio;
+  }
+  .custom-product-parameters .parameters-img {
+    max-width: 50vw;
+    height: 0;
+  }
+  .custom-product-parameters .parameters-img img {
+    width: auto;
+    height: 100%;
+  }
+  .custom-product-parameters .params-box {
+    padding: 2vw;
+    width: 40%;
+    background-color: #1d1d1d;
+    border-radius: 1vw;
+    font-size: 14px;
+  }
+  .custom-product-parameters .params-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .custom-product-parameters .params-content::after {
+    content: "";
+    flex: auto;
+  }
+  .custom-product-parameters .params-content > div {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 15px 10px;
+  }
+  .custom-product-parameters .param-name {
+    color: #c9c9c9;
+    display: block;
+  }
+  .custom-product-parameters .param-value {
+    color: #838383;
+    display: block;
+  }
+  .custom-product-parameters .params-btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 6vh 0 0;
+    width: 100%;
+  }
+  .custom-product-parameters .view_manual,.custom-product-parameters  .all_add_cart {
+    width: 48%;
+    border: 1px solid #939393;
+    border-radius: 30px;
+    color: #c9c9c9;
+    font-weight: 600;
+    line-height: 3;
+    text-align: center;
+    cursor: pointer;
+  }
+  .custom-product-parameters .all_add_cart {
+    background-color: #f2cb04;
+    border: 1px solid #f2cb04;
+    color: #000;
+  }
+  .custom-product-parameters .all_add_cart[disabled] {
+    background-color: #6d6d6d;
+    border-color: #6d6d6d;
+    color: #212121;
+    cursor: no-drop;
+  }
+  @media screen and (max-width: 768px) {
+    .custom-product-parameters .parameters-container {
+      flex-direction: column;
+      width: 92vw;
+    }
+    .custom-product-parameters .parameters-title {
+      text-align: left;
+      font-size: 30px;
+    }
+    .custom-product-parameters .parameters-img {
+      margin-bottom: 5vh;
+      max-width: none;
+      width: 100%;
+      height: auto;
+    }
+    .custom-product-parameters .parameters-img img {
+      width: 100%;
+      height: auto;
+    }
+    .custom-product-parameters .params-box {
+      width: 100%;
+      padding: 4vw;
+    }
+    .custom-product-parameters .params-content > div {
+      flex: 0 0 calc(50% - 20px);
+    }
+  }
+</style>

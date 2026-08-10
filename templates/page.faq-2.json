@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_faq_search_rfGpnF": {
+      "type": "custom-faq-search",
+      "blocks": {
+        "title_pjWxR9": {
+          "type": "title",
+          "settings": {
+            "title": "FAQS",
+            "t_fcolor": "#fff",
+            "t_fsize": 40,
+            "t_fsize_mb": 24
+          }
+        },
+        "breadcrumbs_UhynGd": {
+          "type": "breadcrumbs",
+          "settings": {
+            "b_fcolor": "#fff",
+            "b_fsize": 18,
+            "b_fsize_mb": 14
+          }
+        },
+        "search_h48yGb": {
+          "type": "search",
+          "settings": {
+            "placeholder": "Enter a product or ask a question.",
+            "s_width": 45,
+            "s_fsize": 16,
+            "s_width_mb": 90,
+            "s_fsize_mb": 14
+          }
+        }
+      },
+      "block_order": [
+        "title_pjWxR9",
+        "breadcrumbs_UhynGd",
+        "search_h48yGb"
+      ],
+      "settings": {
+        "img": "shopify://shop_images/mf-home-vii-7.jpg",
+        "mask_color": "#000",
+        "mask_opacity": 40
+      }
+    },
+    "165214825814e830e7": {
+      "type": "accordion",
+      "blocks": {
+        "1652148258305a99c1-0": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "eye",
+            "title": "Which States Require a License to Ride an Ebike?",
+            "content": "<p>Currently, only those states that define e-bikes and place them in the same category as mopeds and motor scooters require users to register their e-bikes with their respective states; these states include Alabama, Alaska, Massachusetts, Missouri, New Mexico, Wisconsin, and North Dakota. Other states using the three-tiered classification system usually exempt e-bikes from registration, licensure, or insurance requirements.</p>"
+          }
+        },
+        "1652148258305a99c1-1": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "E-Bike Definitions and Classifications by State:",
+            "content": "<p><strong>Alaska:</strong> Alaska classifies e-bikes as “motor-driven cycles” and mandates that owners obtain a license and register their bikes.</p><p><strong>Alabama:</strong> Alabama uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Arkansas:</strong> Arkansas uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Arizona:</strong> Arizona uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>California:</strong> California uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Colorado:</strong> Colorado uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Connecticut:</strong> Connecticut uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Delaware:</strong> Delaware defines e-bikes as regular “bicycle” as long as the motor is under 750w and the bike has a maximum speed of 20 mph.</p><p><strong>Florida</strong>: Florida considers an e-bike as a “bicycle” so long as it is capable of being propelled by human power and has a maximum speed of 20mph.</p><p><strong>Georgia:</strong> Georgia uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Hawaii:</strong> Hawaii classifies e-bikes as “low-speed electric bicycles” when used with a max speed of 20 mph.</p><p><strong>Iowa</strong>: Iowa defines an electric bike as a “bicycle” as long as its motor is under 750w and the bike has a maximum speed of 20 mph.</p><p><strong>Idaho:</strong> Idaho uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Illinois:</strong> Illinois uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Indiana:</strong> Indiana uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Kansas: </strong>Kansas defines an eBike as an “electric-assisted bicycle” as long as its motor is under 1000w and has a maximum speed of 20 mph.</p><p><strong>Kentucky:</strong> In Kentucky, an eBike is considered a “bicycle” as long as it has operable pedals.</p><p><strong>Louisiana: </strong>An eBike is considered a “motorized bicycle” in Louisiana as long as it reaches a maximum speed of 25 mph.</p><p><strong>Massachusetts:</strong> Massachusetts defines e-bikes as a pedal bicycle with a helper motor or a non-pedal bicycle with a motor, with a cylinder capacity not exceeding 50 cc, an automatic transmission, and which is capable of a maximum speed of no more than 30 mph.</p><p><strong>Maryland:</strong> Maryland uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Maine:</strong> Maine uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Michigan: </strong>Michigan uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Minnesota:</strong> Minnesota defines e-bikes as “electric-assisted bicycle.” Bikes in this category must be equipped with a motor under 1000w and a maximum speed of 20 mph.</p><p><strong>Missouri: </strong>Missouri defines an e-bike as a “motorized bicycle” if it reaches a maximum speed of 30 mph.</p><p><strong>Mississippi: </strong>Mississippi defines an e-bike as a “bicycle with a motor attached.”</p><p><strong>Montana:</strong> Montana defines an e-bike as an “electric-assisted bicycle.” An e-bike can be placed in this category if it has a maximum speed of 20 mph.</p><p><strong>North Carolina:</strong> North Carolina defines an e-bike as an “electric-assisted bicycle” if its motor is under 1000w and it has a maximum speed of 20 mph.</p><p><strong>North Dakota:</strong> North Dakota defines an e-bike as a “motorized bicycle.” E-bikes are subject to the same rules, licensing, registration, and insurance requirements as motor vehicles.</p><p><strong>Nebraska: </strong>Nebraska defines e-bikes as “electric-assisted bicycle.” Bikes in this category must have a motor under 750w, and a maximum speed of 20 mph, with pedals operated by human power.</p><p><strong>New Hampshire: </strong>New Hampshire uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>New Jersey:</strong> New Jersey includes only the first two tiers of classifications used by other states. The legislature also defines “motorized bicycles” as a device that operates at over 20 mph with a maximum motor-assisted speed of 28 miles per hour. This definition closely aligns with the Class 3 definition used in other states.</p><p><strong>New Mexico:</strong> New Mexico defines an e-bike as a “moped.” They are subject to the same road rules, licensing, and insurance requirements applicable to motor vehicles.</p><p><strong>Nevada: </strong>Nevada defines an e-bike as an “electric bicycle.” Bikes fall into this category when the motor is under 750w, with a maximum speed of 20 mph, and pedals operated by human power.</p><p><strong>New York:</strong> New York defines e-bikes as bicycles if they have an electric motor of less than 750w and have fully functional pedals.</p><p><strong>Ohio:</strong> Ohio uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Oklahoma:</strong> Oklahoma uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Oregon:</strong> Oregon defines an e-bike as an “electric-assisted bicycle” if the motor is under 1000w and the bike has a max speed of 20 miles per hour.</p><p><strong>Pennsylvania:</strong> Pennsylvania defines an e-bike as a “pedalcycle with electric assist.” An e-bike falls in this category if the motor is under 750w. It must have operable pedals but a maximum speed of 20 mph when powered solely by the engine. Additionally, the bike must weigh no more than 100 pounds and follow the same rules of the road as a traditional bicycle.</p><p><strong>Rhode Island:</strong> Rhode Island defines e-bikes as “electric motorized bicycles.” E-bikes must have fully operable pedals, a max power output of 1491w, and a top speed of 25 mph.</p><p><strong>South Carolina:</strong> South Carolina currently has no specific classification for e-bikes. However, since e-bikes are vehicles, they should follow standard vehicle road rules.</p><p><strong>South Dakota:</strong> South Dakota uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Tennessee:</strong> Tennessee uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Texas:</strong> Texas uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Utah:</strong> Utah uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Virginia:</strong> E-bikes in Virginia are classified as “electric power-assisted bicycles” if they have a motor under 1000w and operable pedals. The max speed for all bicycles and e-bikes is 25 mph.</p><p><strong>Vermont: </strong>Vermont categorizes e-bikes as “motor-assisted bicycles.” E-Bikes are subject to the same laws as traditional bicycles if they have fully operable pedals. The motor should have a max power output of 1000w and a maximum speed of 20 mph.</p><p><strong>Washington:</strong> Washington uses the three-tiered classification of e-bikes. They are regulated like traditional bicycles.</p><p><strong>Wisconsin:</strong> Wisconsin defines an e-bike as a “motor-bicycle” if the motor is under 750w and has a maximum speed of 20 mph. Wisconsin requires e-bikes to be registered, and riders must have a valid license.</p><p><strong>West Virginia:</strong> West Virginia defines an e-bike as a “moped.” E-Bikes must adhere to the exact licensing and insurance requirements that apply to motor vehicles.</p><p><strong>Wyoming: </strong>In Wyoming, e-bikes are regulated like traditional bicycles, and the state uses the three-tiered classification for e-bikes.</p>"
+          }
+        },
+        "1652148258305a99c1-2": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "What Is the Battery Range of the Macfox X1S and X2 Models?",
+            "content": "<p>The Macfox X1S model has a battery range of up to 38 miles on a single charge, and up to 76 miles with dual batteries. The Macfox X2 model can travel up to 42 miles on a single charge, and up to 84 miles with dual batteries.</p>"
+          }
+        },
+        "accor_item_ahBFWp": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "How Long Does It Take to Fully Charge the Macfox Electric Bikes?",
+            "content": "<p>Both the Macfox X1S and X2 models take approximately 5-6 hours to fully charge.</p>"
+          }
+        },
+        "cb973ab0-b192-4c97-b7ba-6b8acbf93e5f": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Can I Change or Cancel My Order?",
+            "content": "<p>Yes. Your order can be canceled or changed if it has not shipped.</p><h4><strong>Before shipping</strong></h4><p><strong>Order Cancellation:</strong> If you cancel the e-bike order that was placed in 2 hours, the processing fee will not be charged. If a customer ordered the wrong model and wants to place a new order, after the second order is received, the original order will not be charged any processing fee.</p><p>No processing fee if you cancel orders that haven't entered the shipping process yet.</p><p>If you cancel the accessory order that was placed in 2 hours, the processing fee will not be charged. If it exceeds 2 hours, 25% of the order amount will be charged as a processing fee. </p><p><strong>Change of Address:</strong> There is no fee for address changes before shipping.</p><p><strong>Replacements and exchanges:</strong> If the customer does not place a new order or the total amount is significantly lower than the original order, a 10% processing fee of the original order will be deducted from the total refund amount.</p><p><em><strong>Customer will be charged 4% fee by cancel the order within one extension, Customer canceled orders that are postponed twice or more will not be charging any fee.</strong></em></p><h4><strong>After shipping</strong></h4><p><strong>Order Cancellation: </strong>If your order is shipped and cannot be modified, you may reject the package and <strong>10%</strong> of the ebike cost will be charged as a cancellation fee.</p><p>The customer is <strong>also</strong> responsible for the return shipping cost of <strong>$150</strong>. Macfox will provide a return shipping label, and the designated carrier will collect the return package.</p><p>Please Note: We do not accept returns for accessories that are not quality problems.</p><p><strong>Change of Address: </strong>If you successfully change your address, $20 will be charged as a processing fee. If you fail to change your address, you may refuse the package and 10% of the ebike cost will be charged as a reshipping fee. And the costomer is also responsible for the return shipping cost of <strong>$150. Total fee are 10% of ebike cost+$150.</strong></p><p><strong>Replacements and exchanges:</strong></p><p>A)If you successfully exchange the item, $20 will be charged as a processing fee.</p><p>B) If you fail to change, you may reject the package and 10% of the ebike cost will be charged as a reshipping fee.</p><p>C) If you fail to reject the item and still want to cancel the order, 10% of the ebike cost will be charged as the processing fees and the costomer is also responsible for the return shipping cost of <strong>$150. Total fee are 10% of ebike cost+$150.</strong></p>"
+          }
+        },
+        "f9fbcebb-a809-4cca-8806-c102d1de1c0b": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Can I Pay More for Expedited Delivery?",
+            "content": "<p>Every parcel will be sent out batch by batch according to the purchase date. We do not support expedited delivery with additional money. This is the same for all customers. We appreciate your patience and understanding.</p>"
+          }
+        },
+        "9aa601e3-a39f-431e-aaa9-de35ae6945fb": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Why Did My Payment Fail?",
+            "content": "<p>If you pay by credit card, your payment could be somehow denied at the checkout by our system in defense against possible credit card fraud. It’s a good idea to call your credit card company or bank ahead of time to let them know about the purchase so that it doesn’t get declined. Under such circumstances, here are 3 solutions for you:</p><ol><li>If you have a PayPal account, please try to pay by PayPal (PayPal credit is available).</li><li>If you do not have a PayPal account, you can still select PayPal at the checkout page & click the \"complete order\" button. You will then be directed to a page with access to both PayPal and Debit/Credit card payment options (for the latter option, you don’t have to register for PayPal).</li><li>Please switch to your other credit/debit cards.</li></ol>"
+          }
+        },
+        "15f6d610-63c6-4503-8a7f-4a1774dcf9ed": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Can I Stack Two Discounts?",
+            "content": "<p>Sorry, but only one coupon can be used on one order. We do not support stacking coupons. Thank you for understanding.</p>"
+          }
+        },
+        "accor_item_iNfirP": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "How Can I Check the Status of My Order?",
+            "content": "<p>Please visit our <a href=\"https://macfoxbike.com/apps/17TRACK\" title=\"order tracking page\"><strong>order tracking page</strong></a>, where you will find two options:</p><ol><li><strong>Enter your order number and email address</strong></li><li><strong>Enter your tracking number</strong></li></ol><p>Simply choose the appropriate option and you'll be able to check your order status.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1652148258305a99c1-0",
+        "1652148258305a99c1-1",
+        "1652148258305a99c1-2",
+        "accor_item_ahBFWp",
+        "cb973ab0-b192-4c97-b7ba-6b8acbf93e5f",
+        "f9fbcebb-a809-4cca-8806-c102d1de1c0b",
+        "9aa601e3-a39f-431e-aaa9-de35ae6945fb",
+        "15f6d610-63c6-4503-8a7f-4a1774dcf9ed",
+        "accor_item_iNfirP"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "#ffffff",
+        "content_align": "t4s-text-start",
+        "layout": "t4s-container-wrap",
+        "custom_width": 1000,
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "80px,,80px,",
+        "pd": "",
+        "mg_mb": "50px,,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "ba0c8e30-c11a-4ab7-97c4-4acc1a053a3e": {
+          "type": "1",
+          "settings": {
+            "heading": "FAQ",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 18,
+            "text_lh": 20,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 20,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "ceaf2fff-8462-4040-83d5-7f7019d65b8d": {
+          "type": "3",
+          "settings": {
+            "breadcrumb_color": "#f2f2f2",
+            "brc_mgb": 5
+          }
+        }
+      },
+      "block_order": [
+        "ba0c8e30-c11a-4ab7-97c4-4acc1a053a3e",
+        "ceaf2fff-8462-4040-83d5-7f7019d65b8d"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 70,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    }
+  },
+  "order": [
+    "custom_faq_search_rfGpnF",
+    "165214825814e830e7",
+    "heading",
+    "main",
+    "sidebar-page"
+  ]
+}

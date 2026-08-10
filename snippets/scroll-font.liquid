@@ -1,0 +1,32 @@
+<div class="cs-scroll-font">
+  <div class="scroll-container">
+    <span style="display: none;">{{ content }}</span>
+    <div class="fir-line"></div>
+    <div class="sec-line"></div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollFontDom = $('.scroll-container');
+      const spanWidth = $(scrollFontDom).children('span').width();
+      const visibleWidth = $(scrollFontDom).parent().width();
+      const mul = Math.ceil(visibleWidth / spanWidth);
+      let html = '';
+      for(let i=0; i<mul; i++){
+        html += `<span>{{ content }}</span>`;
+      }
+      $(scrollFontDom).children('.fir-line').append(html);
+      $(scrollFontDom).children('.sec-line').append(html);
+
+      const pc_speed = "{{ speed }}";
+      const mb_speed = "{{ mb_speed }}";
+      const speed = ($(window).width() < 768) && mb_speed ? mb_speed : (pc_speed ? pc_speed : 10);
+      const timeline = gsap.timeline({repeat: -1, repeatDelay: 0});
+      timeline.fromTo($(scrollFontDom).children('.fir-line'), {x: 0}, {x: "-100%", duration: speed, ease: "linear"})
+      timeline.fromTo($(scrollFontDom).children('.sec-line'), {x: 0}, {x: "-200%", duration: 2*speed, ease: "linear"}, "<")
+      timeline.fromTo($(scrollFontDom).children('.fir-line'), {x: "100%"}, {x: 0, duration: speed, ease: "linear"}, ">-"+speed)
+    })
+  })()
+</script>

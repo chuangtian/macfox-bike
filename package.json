@@ -1,0 +1,17 @@
+{
+  "name": "macfox-bike-shopify-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Macfox Bike Shopify theme development workspace",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "scripts": {
+    "dev": "shopify theme dev --store macfoxebike.myshopify.com --theme 192302088557 --nodelete",
+    "check": "shopify theme check",
+    "list": "shopify theme list --store macfoxebike.myshopify.com",
+    "pull:live": "shopify theme pull --store macfoxebike.myshopify.com --live",
+    "push:dev": "shopify theme push --store macfoxebike.myshopify.com --theme 192302088557 --nodelete",
+    "push:new": "shopify theme push --store macfoxebike.myshopify.com --unpublished"
+  }
+}

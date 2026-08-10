@@ -1,0 +1,77 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="max-w-[1600px] md:w-[90%] !mx-auto !px-[20px] md:!px-[0] !pt-[40px] md:!pt-25">
+  <h2 class="text-left md:text-center !text-white !text-[24px] md:!text-5xl !leading-[1.4] !font-bold md:w-[80%] !mx-auto">{{ se_stts.title }}</h2>
+  <p class="text-left md:text-center !text-[#ccc] !text-[14px] md:!text-xl !leading-[1.6] !font-medium md:w-[75%] !mx-auto !my-[15px] md:!my-8">{{ se_stts.describe }}</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-10 !pt-[15px] md:!pt-10">
+    {% for item in se_blocks %}
+      {% assign i = item.settings %}
+      {% case item.type %}
+        {% when 'describe_card' %}
+          <div class="cs-collection-describe !p-[15px] md:!p-10 rounded-2xl bg-[#1d1d1d]">
+            <h3 class=" !text-white !text-[20px] md:!text-3xl !leading-[1.4] !mb-5">{{ i.title }}</h3>
+            <div class="!text-[14px] md:!text-xl !text-[#ccc] !leading-[1.6] !font-medium">{{ i.content }}</div>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+ #shopify-section-{{sid}}{
+    background-color: #121212;
+    color: #ffffff;
+  }
+  #shopify-section-{{sid}}  strong{
+    color: #f2cb04 !important;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Collection Describe",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "text",
+      "id": "describe",
+      "label": "描述"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "describe_card",
+      "name": "描述卡片",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Describe Card",
+          "label": "标题"
+        },
+        {
+          "type": "html",
+          "id": "content",
+          "default": "Describe Content",
+          "label": "内容"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collections Describe",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

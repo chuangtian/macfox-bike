@@ -1,0 +1,88 @@
+{{ 'custom-page-faq.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+
+  assign t4s_se_class = 't4s_nt_se_' | append: sid
+  if se_stts.use_cus_css and se_stts.code_cus_css != blank
+    render 'se_cus_css', code_cus_css: se_stts.code_cus_css, t4s_se_class: t4s_se_class
+  endif
+-%}
+
+<div class="cs-page-faq">
+  <div class="container">
+    <span class="faq-title">{{ se_stts.title }}</span>
+    <div class="faq-box">
+      {% for block in se_blocks %}
+        {% assign bk_setts = block.settings %}
+        <div class="faq-item {% if forloop.first %}active{% endif %}">
+          <div class="faq-item-title">
+            {{ bk_setts.faq_title }}
+          </div>
+          <div class="faq-item-con">
+            {{ bk_setts.faq_content }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.faq-item-title').on('click', function () {
+    $(this).parent().toggleClass('active');
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Custom Page Faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "id": "use_cus_css",
+      "type": "checkbox",
+      "label": "Use custom css",
+      "default": false,
+      "info": "If you want custom style for this section."
+    },
+    {
+      "id": "code_cus_css",
+      "type": "textarea",
+      "label": "Code custom css",
+      "info": "Use selector .SectionID to style css"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "faq_title",
+          "label": "Title",
+          "default": "Frequently Asked Questions"
+        },
+        {
+          "type": "html",
+          "id": "faq_content",
+          "label": "Content",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat sit amet."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Page Faq"
+    }
+  ]
+}
+{% endschema %}

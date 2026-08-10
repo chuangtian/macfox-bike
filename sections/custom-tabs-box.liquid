@@ -1,0 +1,155 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-tabs-box">
+  {%- for block in se_blocks -%}
+    {%- if block.type == 'tab-item' -%}
+      <div class="tab-item {% if forloop.first %} show {% endif %}">
+        <div class="tab-title" style="color: {{ block.settings.t_color }}">
+          {{ block.settings.t_icon }}
+          {{ block.settings.title }}
+        </div>
+        <div class="tab-content">
+          {{ block.settings.content }}
+        </div>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const isMobile = $(window).width() <= 768;
+    if(!isMobile) $('.cs-tabs-box .tab-item').addClass('show');
+    
+    $('.cs-tabs-box .tab-title').on('click', function () {
+      $(this).parent().toggleClass('show');
+    })
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Custom Tabs Box",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "tab-item",
+      "name": "Tab Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "html",
+          "id": "t_icon",
+          "label": "Title Icon"
+        },
+        {
+          "type": "color",
+          "id": "t_color",
+          "label": "Title Color",
+          "default": "#fff"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Tabs Box"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .cs-tabs-box {
+    display: flex;
+    padding: 2vw;
+    width: 100%;
+    background-color: #000;
+  }
+  .cs-tabs-box .tab-item {
+    flex: 0 0 calc(33.33% - 40px);
+    margin: 20px;
+    padding: 20px;
+    height: fit-content;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    color: #838383;
+  }
+  .cs-tabs-box .tab-title {
+    display: flex;
+    align-items: center;
+    gap: 1.5vh;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+  .cs-tabs-box .tab-title svg {
+    width: 20px;
+    height: 20px;
+  }
+  .cs-tabs-box .tab-title::after {
+    flex: 1;
+    display: block;
+    content: '+';
+    font-size: 30px;
+    font-weight: 400;
+    text-align: right;
+  }
+  .cs-tabs-box .tab-item h6 {
+    color: #c9c9c9;
+    font-size: 14px;
+    line-height: 2.5;
+  }
+  .cs-tabs-box .tab-item p {
+    margin: 0;
+    color: #838383;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .cs-tabs-box .tab-content {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+  }
+  .cs-tabs-box .tab-item.show .tab-title {
+    border-bottom: 1px solid;
+    line-height: 1.5;
+  }
+  .cs-tabs-box .tab-item.show .tab-title::after {
+    content: '-';
+  }
+  .cs-tabs-box .tab-item.show .tab-content {
+    padding: 1.5vh 0;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+  @media screen and (max-width: 768px) {
+    .cs-tabs-box {
+      flex-direction: column;
+    }
+    .cs-tabs-box .tab-item {
+      margin: 10px;
+      padding: 10px 20px;
+    }
+    .cs-tabs-box .tab-item p {
+      font-size: 12px;
+    }
+  }
+</style>

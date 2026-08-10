@@ -1,0 +1,80 @@
+{% liquid
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-affiliate-card-wrapper">
+  {%- for variable in se_blocks -%}
+    {%- case variable.type -%}
+      {%- when 'card_item' -%}
+        <div class="--card-item" data-type="{{ variable.settings.type }}">
+          <div class="--card-info">
+            <p class="--card-title">{{ variable.settings.title }}</p>
+            <ul class="--card-keys">
+              {%- assign keys = variable.settings.keys |  split: ";;" -%}
+              {%- for val in keys -%}
+                <li>{{ val }}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          <div class="--card-img">
+            <img src="{{ variable.settings.img |  image_url  }}" width="{{ variable.settings.width }}" height="{{ variable.settings.height }}" alt="{{ variable.settings.img.alt }}">
+          </div>
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Custom Affiliate Card",
+  "tag": "section",
+  "class": "cs-affiliate-card-section",
+  "blocks": [
+    {
+      "type": "card_item",
+      "name": "卡片",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "title"
+        },
+        {
+          "type": "textarea",
+          "id": "keys",
+          "label": "要点",
+          "default": "key1;;key2;;key3"
+        },
+        {
+          "type": "select",
+          "id": "type",
+          "label": "卡片类型",
+          "options": [
+            {
+              "label": "左文右图",
+              "value": "card_2"
+            },
+            {
+              "label": "上文下图",
+              "value": "card_1"
+            }
+          ],
+          "default": "card_1"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "联盟描述卡片",
+      "category": "Affiliate"
+    }
+  ]
+}
+{% endschema %}

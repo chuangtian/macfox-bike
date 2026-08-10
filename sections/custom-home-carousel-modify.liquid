@@ -1,0 +1,444 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+<div class=" max-w-[1600px] !mx-auto !p-[40px_20px_15px]  md:!py-[6rem_4rem]">
+  <h2 class="!text-[26px] md:!text-6xl leading-[1.3] !text-center !text-white !font-bold !my-[15px] md:!my-6">
+    {{ se_stts.title }}
+  </h2>
+  <p class="!text-[14px] md:!text-2xl !leading-[1.5] !font-medium !text-center !text-[#a8a8a8]">
+    {{ se_stts.subtitle }}
+  </p>
+</div>
+<div class="relative w-full h-screen " style="background-color: {{ se_stts.bg_color }};">
+  <img
+    class="carousel-box-modify-bg bg1 opacity-100 transition-opacity absolute left-0 top-0 w-full !h-full brightness-50 xl:object-fill object-cover"
+    width="100%"
+    height="100%"
+  >
+  <img
+    class="carousel-box-modify-bg bg2 opacity-0 transition-opacity absolute left-0 top-0 w-full !h-full brightness-50 xl:object-fill object-cover"
+    width="100%"
+    height="100%"
+  >
+
+  <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center w-screen h-auto md:h-full overflow-hidden">
+    <div class="carousel-box-modify-left overflow-clip !pr-5 sm:!pr-16 shrink-0 grow-0">
+      <ul class=" !p-0 !m-0 flex !space-x-5 sm:!space-x-16">
+        {% for block in se_blocks %}
+          {% if block.type == 'item' %}
+            <li class="w-full carousel-item shrink-0 grow-0">
+              <h3 class=" text-right !text-[#d1d1d1] !pb-5 hidden lg:block !text-5xl md:!text-2xl">
+                {{ block.settings.title }}
+              </h3>
+              <div>
+                <!-- PC端图片：大于等于sm时显示 -->
+                <img
+                  src="{{ block.settings.product_image_pc | image_url }}"
+                  alt="{{ block.settings.title }}"
+                  class="hidden object-cover w-full h-full sm:block brightness-50"
+                  width="100%"
+                  height="100%"
+                >
+                <!-- 移动端图片：小于sm时显示 -->
+                <img
+                  src="{{ block.settings.product_image_mb | image_url }}"
+                  alt="{{ block.settings.title }}"
+                  class="block object-cover w-full h-full sm:hidden brightness-50"
+                  width="100%"
+                  height="100%"
+                >
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="carousel-box-modify-center bg-[#efefe7] rounded-2xl lg:w-[37%] sm:w-1/2 w-[80vw] overflow-clip h-fit sm:!px-10 !px-5 !py-4 shrink-0 grow-0 ">
+      <div class="w-full !bg-[#efefe7] carousel-box-modify overflow-clip">
+        <ul class=" !p-0 !m-0 flex !space-x-7">
+          {% for block in se_blocks %}
+            {% if block.type == 'item' %}
+              <li
+                class="carousel-item shrink-0 grow-0 !pt-5 !pb-8 !w-full"
+                data-active_alt="{{ block.settings["title"] }}"
+                data-active_pr="{{ block.settings["product_item"]}}"
+              >
+                <h3 class=" !text-[18px] md:!text-3xl !text-[#121212] !font-bold">{{ block.settings.title }}</h3>
+                <div class=" h-px w-full bg-[#121212] !my-5"></div>
+                <div class="flex items-center justify-between !my-4 !px-1">
+                  <div class="flex items-center ">
+                    <div class="size-8 rounded-full overflow-hidden !mr-3">
+                      <img
+                        width="100%"
+                        height="100%"
+                        src="{{ block.settings.avatar | image_url   }}"
+                        alt="{{ block.settings.name }}"
+                      >
+                    </div>
+                    <span class="!text-[14px] md:!text-xl !text-[#121212] !font-semibold">
+                      {{- block.settings.name -}}
+                    </span>
+                  </div>
+                  <p class="!m-0 text-nowrap !text-[12px] md:!text-lg !text-[#121212] !font-medium">
+                    {{ block.settings.base_desc }}
+                  </p>
+                </div>
+                <div class="w-full carousel-item-img">
+                  <!-- PC端图片：大于等于sm时显示 -->
+                  <img
+                    src="{{ block.settings.product_image_pc | image_url }}"
+                    alt="{{ block.settings.title }}"
+                    class="hidden w-full h-full sm:block"
+                    width="100%"
+                    height="100%"
+                  >
+                  <!-- 移动端图片：小于sm时显示 -->
+                  <img
+                    src="{{ block.settings.product_image_mb | image_url }}"
+                    alt="{{ block.settings.title }}"
+                    class="block w-full h-full sm:hidden"
+                    width="100%"
+                    height="100%"
+                  >
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div class=" flex justify-between !items-center !pb-4">
+        <div class="flex items-center ">
+          <div class=" cursor-pointer size-[45px] md:size-15 !mr-[15px] md:!mr-[25px]" onclick="preCarousel()">
+            {{ se_stts.arrow_left_icon }}
+          </div>
+          <div class="cursor-pointer size-[45px] md:size-15" onclick="nextCarousel()">
+            {{ se_stts.arrow_right_icon }}
+          </div>
+        </div>
+        <a
+          target="_blank"
+          id="cs-home-carousel-link"
+          class="!py-[10px] !px-[38px] md:!py-4 md:!px-14 !text-[#121212] bg-[#f2cb04] rounded-lg !text-[14px] md:!text-xl !font-semibold cursor-pointer"
+          >Learn More</a
+        >
+      </div>
+    </div>
+
+    <div class="carousel-box-modify-right overflow-clip sm:!pl-16 !pl-5 shrink-0 grow-0">
+      <ul class=" !p-0 !m-0 flex sm:!gap-x-16 !gap-5 w-full">
+        {% for block in se_blocks %}
+          {% if block.type == 'item' %}
+            <li class="w-full carousel-item shrink-0 grow-0">
+              <h3 class="!text-[#d1d1d1] !pb-5 hidden lg:block !text-5xl md:!text-2xl">
+                {{ block.settings.title }}
+              </h3>
+              <div>
+                <!-- PC端图片：大于等于sm时显示 -->
+                <img
+                  src="{{ block.settings.product_image_pc | image_url }}"
+                  alt="{{ block.settings.title }}"
+                  class="hidden object-cover w-full h-full sm:block brightness-50"
+                  width="100%"
+                  height="100%"
+                >
+                <!-- 移动端图片：小于sm时显示 -->
+                <img
+                  src="{{ block.settings.product_image_mb | image_url }}"
+                  alt="{{ block.settings.title }}"
+                  class="block object-cover w-full h-full sm:hidden brightness-50"
+                  width="100%"
+                  height="100%"
+                >
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div
+    id="carousel-indicators"
+    class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2 !py-14 sm:!py-24 lg:!py-16 z-10"
+  >
+    {% for block in se_blocks %}
+      {% if block.type == 'item' %}
+        <div
+          class="!w-[28px] !h-[4px] transition-all duration-300 bg-gray-400 rounded opacity-50 cursor-pointer xl:w-10 sm:w-18 sm:h-2 xl:h-1"
+          data-index="{{ forloop.index0 }}"
+        ></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .carousel-box-modify-bg {
+    transition: opacity 0.5s;
+    z-index: 0;
+  }
+  .cs-home-carousel-modify-section{
+    background-color: {{ se_stts.bg_color }};
+  }
+</style>
+<script>
+  let currentIndex = 0;
+  let showingFirst = true;
+
+  function setBgImage(newUrl, newAlt) {
+    const img1 = document.querySelector('.carousel-box-modify-bg.bg1');
+    const img2 = document.querySelector('.carousel-box-modify-bg.bg2');
+
+    if (showingFirst) {
+      img2.src = newUrl;
+      img2.alt = newAlt;
+      img2.style.opacity = 1;
+      img1.style.opacity = 0;
+    } else {
+      img1.src = newUrl;
+      img1.alt = newAlt;
+      img1.style.opacity = 1;
+      img2.style.opacity = 0;
+    }
+    showingFirst = !showingFirst;
+  }
+
+  // 为所有三个轮播容器添加首尾克隆
+  const carouselSelectors = [
+    '.carousel-box-modify-left ul',
+    '.carousel-box-modify-center ul',
+    '.carousel-box-modify-right ul',
+  ];
+  carouselSelectors.forEach((selector) => {
+    const ul = document.querySelector(selector);
+    if (!ul) return;
+    const items = ul.querySelectorAll('.carousel-item');
+    if (items.length > 0) {
+      const firstClone = items[0].cloneNode(true);
+      const lastClone = items[items.length - 1].cloneNode(true);
+      ul.appendChild(firstClone);
+      ul.insertBefore(lastClone, items[0]);
+    }
+  });
+
+  // 初始化函数
+  function initializeCarousel() {
+    // 父容器宽度自适应（仅针对中间轮播）
+    let parent = document.querySelector('.carousel-box-modify-center');
+    if (parent) {
+      const centerWidth = parent.offsetWidth + 'px';
+
+      // 设置左右容器的宽度为中间容器的80%
+      const leftContainer = document.querySelector('.carousel-box-modify-left');
+      const rightContainer = document.querySelector('.carousel-box-modify-right');
+
+      if (leftContainer) {
+        leftContainer.style.width = `calc(${centerWidth} * 0.9)`;
+      }
+      if (rightContainer) {
+        rightContainer.style.width = `calc(${centerWidth} * 0.9)`;
+      }
+    }
+    currentIndex = 1; // 从第1个（原始第一个）开始
+    updateCarousel(false);
+
+    // 绑定指示器点击事件
+    document.querySelectorAll('#carousel-indicators > div').forEach((el, idx) => {
+      el.addEventListener('click', function () {
+        currentIndex = idx + 1;
+        updateCarousel();
+      });
+    });
+  }
+
+  // 页面加载时初始化
+  document.addEventListener('DOMContentLoaded', initializeCarousel);
+
+  // 窗口大小改变时重新初始化
+  let resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      initializeCarousel();
+    }, 250); // 250ms防抖延迟
+  });
+
+  function updateCarousel(animate = true) {
+    const selectors = [
+      '.carousel-box-modify-left ul',
+      '.carousel-box-modify-center .carousel-box-modify ul',
+      '.carousel-box-modify-right ul',
+    ];
+    selectors.forEach((selector, idx) => {
+      const ul = document.querySelector(selector);
+      if (!ul) return;
+      const items = ul.querySelectorAll('.carousel-item');
+
+      const ulStyle = window.getComputedStyle(ul);
+      let gap = parseInt(ulStyle.columnGap) || 0;
+      if (!gap && items.length > 1) {
+        const itemStyle = window.getComputedStyle(items[0]);
+        gap = parseInt(itemStyle.marginRight) || 0;
+      }
+      const itemWidth = items[0].offsetWidth;
+      let offsetIndex;
+      if (idx === 0) {
+        offsetIndex = currentIndex - 1;
+      } else if (idx === 1) {
+        offsetIndex = currentIndex;
+      } else {
+        offsetIndex = currentIndex + 1;
+      }
+
+      // 右侧特殊处理：第一个元素没有gap，后面每个元素才有gap
+      let translateX;
+      // 左/中：translateX = -offsetIndex * (itemWidth + gap)
+      translateX = -offsetIndex * (itemWidth + gap);
+
+      ul.style.transition = animate ? 'transform 0.6s' : 'none';
+      ul.style.transform = `translateX(${translateX}px)`;
+    });
+
+    const cbx = document.querySelector('.carousel-box-modify-center .carousel-box-modify ul');
+    const activeItem = cbx.querySelectorAll('li')[currentIndex];
+    const linkBtn = document.querySelector('#cs-home-carousel-link');
+    const bg_element = document.querySelector('.carousel-box-modify-bg');
+    const imgAlt = activeItem.dataset['active_alt'];
+    const product = activeItem.dataset['active_pr'];
+
+    if (bg_element) {
+      setBgImage(activeItem.querySelector('.carousel-item-img img').src, imgAlt);
+    }
+    linkBtn.href = '/products/' + product;
+    updateIndicators(currentIndex);
+  }
+
+  function nextCarousel() {
+    const items = document.querySelectorAll('.carousel-box-modify-center .carousel-box-modify .carousel-item');
+    currentIndex++;
+    updateCarousel();
+    if (currentIndex === items.length - 1) {
+      setTimeout(() => {
+        currentIndex = 1;
+        updateCarousel(false);
+      }, 500);
+    }
+  }
+
+  function preCarousel() {
+    const items = document.querySelectorAll('.carousel-box-modify-center .carousel-box-modify .carousel-item');
+    currentIndex--;
+    updateCarousel();
+    if (currentIndex === 0) {
+      setTimeout(() => {
+        currentIndex = items.length - 2;
+        updateCarousel(false);
+      }, 500);
+    }
+  }
+
+  function updateIndicators(currentIndex) {
+    const indicators = document.querySelectorAll('#carousel-indicators > div');
+    indicators.forEach((el, idx) => {
+      if (idx === currentIndex - 1) {
+        // 注意：currentIndex=1时高亮第0个
+        el.classList.add('bg-amber-400');
+        el.classList.remove('bg-gray-400', 'opacity-50');
+      } else {
+        el.classList.remove('bg-amber-400');
+        el.classList.add('bg-gray-400', 'opacity-50');
+      }
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Modify",
+  "tag": "section",
+  "class": "cs-home-carousel-modify-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主题",
+      "default": "Built to Be Modified"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "副标题",
+      "default": "Each build is one of a kind - custom-crafted by expert modders."
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "html",
+      "id": "arrow_left_icon",
+      "label": "左箭头"
+    },
+    {
+      "type": "html",
+      "id": "arrow_right_icon",
+      "label": "右箭头"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "内容区块",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "title"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "头像"
+        },
+        {
+          "type": "text",
+          "id": "base_desc",
+          "label": "产品出处"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "改装师",
+          "default": "Ethan Cole"
+        },
+        {
+          "type": "product",
+          "id": "product_item",
+          "label": "产品"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image_pc",
+          "label": "产品图片(PC)"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image_mb",
+          "label": "产品图片(Mobile)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Modify (Carousel)",
+      "category": "Custom Home"
+    }
+  ]
+}
+{% endschema %}

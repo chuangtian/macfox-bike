@@ -1,0 +1,195 @@
+{% liquid
+  assign se_stts = section.settings
+%}
+
+<div class="cs-product-recommendations-wrapper">
+  <h3 style="text-align: {{ se_stts.title_align }};">{{ se_stts.title }}</h3>
+  <div
+    class="swiper"
+    data-col_pc="{{ se_stts.col_pc }}"
+    data-col_mb="{{ se_stts.col_mb }}"
+  >
+    <div class="prev-btn cs-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </div>
+    <div class="swiper-wrapper">
+      {% for item in se_stts.col_list.products %}
+        <div
+          class="swiper-slide"
+        >
+          <a href="{{ item.url }}" target="_self">
+            <div class="cs-img-wrapper group">
+              <img
+                src="{{item.featured_image |  image_url }}"
+                width="{{ item.featured_image.width }}"
+                height="{{ item.featured_image.height }}"
+                alt="{{ item.title }}"
+                loading="lazy"
+              >
+              <img
+                class="active-img"
+                src="{{ item.images[1] |  image_url }}"
+                width="{{ item.images[1].width }}"
+                height="{{ item.images[1].height }}"
+                alt="{{ item.images[item.images.size-1].alt }}"
+                loading="lazy"
+              >
+            </div>
+            <div class="cs-info-wrapper">
+              <h4>{{ item.title }}</h4>
+              <div
+                class="loox-rating"
+                data-id="{{ item.id }}"
+                data-rating="{{ item.metafields.loox.avg_rating }}"
+                data-raters="{{ item.metafields.loox.num_reviews }}"
+                data-color-text="#1f1f1f"
+                data-color-star="#f2cb04"
+              ></div>
+              {% if item.price != blank %}
+                <div class="cs-info-money">
+                  <span>{{ item.price_min | money_with_currency }}</span>
+                  {% if item.price_max != blank %}
+                    <span> - {{ item.price_max | money_with_currency }}</span>
+                  {% endif %}
+                </div>
+              {% else %}
+                <div class="cs-info-money">
+                  <span>{{ item.compare_at_price_min | money_with_currency }}</span>
+                  {% if item.compare_at_price_max != blank %}
+                    <span> - {{ item.compare_at_price_max | money_with_currency }}</span>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="next-btn cs-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <path d="M9 6l6 6-6 6"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cs-product-recommendations-section {
+    background-color: {{ se_stts.bg_color }};
+    padding: 100px 0;
+  }
+</style>
+<script type="module" src="{{ "custom-collections-recommendations.min.js"| asset_url }}"></script>
+{% schema %}
+{
+  "name": "Product Recommendations",
+  "tag": "section",
+  "class": "cs-product-recommendations-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Product Recomendations"
+    },
+    {
+      "type": "collection",
+      "id": "col_list",
+      "label": "产品系列"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "label": "标题位置",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_pc",
+      "label": "展示数量(PC端)",
+      "default": "4",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_mb",
+      "label": "展示数量(移动端)",
+      "default": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Custom Collections Recommendations",
+      "category": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

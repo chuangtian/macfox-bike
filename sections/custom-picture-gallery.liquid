@@ -1,0 +1,67 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+{%- assign picture_array = '[' -%}
+{%- assign picture_array_mb = '[' -%}
+
+{%- for block in se_blocks -%}
+  {% case block.type %}
+    {% when 'pics_row' %}
+      {%- unless forloop.last -%}
+        {%- assign picture_array = picture_array | append: block.settings.picture_array | append: ',' -%}
+        {%- assign picture_array_mb = picture_array_mb | append: block.settings.picture_array_mb | append: ',' -%}
+      {%- else -%}
+        {%- assign picture_array = picture_array | append: block.settings.picture_array | append: ']' -%}
+        {%- assign picture_array_mb = picture_array_mb | append: block.settings.picture_array_mb | append: ']' -%}
+      {%- endunless -%}
+  {% endcase %}
+{%- endfor -%}
+
+<div
+  class="custom-picture-gallery"
+  id="{{ "custom-picture-gallery-" | append: sid }}"
+  data-picture_array="{{ picture_array |  escape}}"
+  data-picture_array_mb="{{ picture_array_mb |  escape}}"
+>
+  <div class="pics_container"></div>
+  <h2 class="pics_title">{{ se_stts.title }}</h2>
+</div>
+
+<script type="module" src="{{"custom-picture-gallery.min.js" |  asset_url}}"></script>
+{% schema %}
+{
+  "name": "Custom Picture Gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pics_row",
+      "name": "Picture Row",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "picture_array",
+          "label": "Picture Array"
+        },
+        {
+          "type": "liquid",
+          "id": "picture_array_mb",
+          "label": "Picture Array On Mobile"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Picture Gallery"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,208 @@
+.cs-main-banner {
+            width: 100%;
+            height: 47vw;
+            min-height: 520px;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+
+#d3player_0 {
+  position: relative;
+}
+
+canvas {
+  border: 1px solid #ccc;
+}
+
+.cs_banner_dom {
+  position: relative;
+  width: 100%;
+  height: 47vw;
+  min-height: 520px;
+  background: #eaeaea;
+}
+
+.proPlayers_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.proPlayers_container .d3player_panel {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.proPlayers_container .player_con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.player_con img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.d3player_panel {
+  cursor: pointer;
+}
+
+.cs_banner_bt {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.d3player_0 {
+  position: relative;
+}
+
+.cs-banner-doro {
+  position: absolute;
+  left: 25%;
+  bottom: 10%;
+  width: 50%;
+  height: 5rem;
+  z-index: 98;
+}
+
+.cls-15456 {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 3.55px;
+  opacity: 0.56;
+  stroke: url(#wmm_27);
+}
+
+.cls-14658 {
+  fill: #fff;
+}
+
+.cs-banner-360 {
+  position: absolute;
+  width: 4.3rem;
+  height: 4.3rem;
+  right: 7.1rem;
+  bottom: 10%;
+  z-index: 98;
+}
+
+.cs-banner-name {
+  position: absolute;
+  left: 7.1rem;
+  top: 10%;
+  z-index: 98;
+  font-family: Poppins;
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 4.8rem;
+  color: #fff;
+}
+
+.cs-banner-add {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23.3rem;
+  height: 5.7rem;
+  color: #fff;
+  background-color: #001070;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.cs-banner-add.is--loading {
+  position: absolute !important;
+}
+
+
+@media screen and (max-width: 768px) {
+  .cs-main-banner {
+    height:170vw;
+  }
+
+  .cs-banner-name {
+    left:0;
+    width:100%;
+    text-align:center;
+    top: 10%;
+    font-size:26px;
+  }
+
+  .cs-banner-doro {
+    left: 5%;
+    bottom: 18%;
+    width: 90%;
+  }
+
+  .cs-banner-360 {
+    width:3rem;
+    height:3rem;
+    left:calc(50% - 1.5rem);
+    bottom:12%;
+  }
+
+  .cs-banner-add {
+    bottom:5%;
+    left:5%;
+    width:90%;
+    height:48px;
+  }
+  
+  #d3player_0_0,
+  #d3player_1_0 {
+    height: 70% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cs_banner_dom {
+    position: relative;
+    width: 100%;
+    height: 180vw;
+    background: #eaeaea;
+  }
+
+  .player_con img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cs_banner_bt {
+    display: none;
+  }
+
+  .proPlayers_container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .cs_banner_shop {
+    display: none;
+  }
+
+  /* .proPlayers_container .player_con {
+    top: -30px;
+  } */
+}

@@ -1,0 +1,103 @@
+{% liquid
+  assign se_stts = section.settings
+%}
+
+<div
+  class="cs-product-text-animation-wrapper"
+  style="background-color: {{ se_stts.bg_color }};"
+  data-hover-tolerance="{{ se_stts.hover_tolerance }}"
+>
+  <div class="cs-product-text-animation-content">
+    <h2>{{ se_stts.title }}</h2>
+    <div class="cs-product-text-animation-info">
+      <p
+        class="cs-product-text-animation-center-left"
+        style="color: {{ se_stts.subtitle_1_color }};"
+      >
+        {{ se_stts.subtitle_1 }}
+      </p>
+      <div class="image-container">
+        <div
+          class="image-container-overflow-left"
+          style="background-color: {{ se_stts.bg_color }};"
+        ></div>
+        <img
+          class="cs-product-text-animation-img"
+          src="{{ se_stts.el_image | image_url }}"
+          alt="{{ se_stts.el_image.alt }}"
+          width="{{ se_stts.el_image.width }}"
+          height="{{ se_stts.el_image.height }}"
+          loading="lazy"
+        >
+        <div
+          class="image-container-overflow-right"
+          style="background-color: {{ se_stts.bg_color }};"
+        ></div>
+      </div>
+    </div>
+    <p>
+      {{ se_stts.subtitle_2 }}
+    </p>
+  </div>
+</div>
+
+<script type="module" src="{{"custom-product-text-animation.min.js" |  asset_url}}"></script>
+
+{% schema %}
+{
+  "name": "Text Animation",
+  "tag": "section",
+  "class": "cs-product-text-animation-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "MACFOX Exciting Video Compilation"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_1",
+      "label": "副标题1"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_1_color",
+      "label": "副标题-1颜色",
+      "default": "#f2cb04"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_2",
+      "label": "副标题-2"
+    },
+    {
+      "type": "image_picker",
+      "id": "el_image",
+      "label": "图片"
+    },
+    {
+      "type": "range",
+      "id": "hover_tolerance",
+      "label": "Hover 灵敏度（像素）",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Animation",
+      "category": "Custom Product"
+    }
+  ]
+}
+{% endschema %}

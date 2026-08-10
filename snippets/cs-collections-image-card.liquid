@@ -1,0 +1,30 @@
+{% comment %}
+  产品网格中的图片卡片
+  参数：
+    block - image_card 类型的 section block
+{% endcomment %}
+
+<div
+  class="cs-collections-item cs-collections-item--image-card"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.image != blank %}
+    <img
+      class="cs-collections-item--image-card__img"
+      src="{{ block.settings.image | image_url: width: 800 }}"
+      alt="{{ block.settings.image.alt | default: 'Image card' }}"
+      width="{{ block.settings.image.width }}"
+      height="{{ block.settings.image.height }}"
+      loading="lazy"
+    >
+  {% endif %}
+  <div class="cs-collections-info">
+    <div class="--info-control">
+      <a
+        class="--info-link"
+        href="{{ block.settings.link }}"
+        target="_self"
+      >{{ block.settings.button_text | default: 'Shop Now' }}</a>
+    </div>
+  </div>
+</div>

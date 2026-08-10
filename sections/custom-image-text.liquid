@@ -1,0 +1,436 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+  assign blocks_size = se_blocks | size
+  assign layout_design = se_stts.layout_design
+%}
+
+<style>
+    #shopify-section-{{ sid }} {
+        width: 100%;
+        {%- case layout_design -%}
+        {%- when "drawerCard" -%}
+            height: {{ blocks_size | times: 120 }}vh;
+        {%- when "pokerCard" -%}
+            height: {{ blocks_size | times: 100 }}vh;
+        {%- endcase -%}
+    }
+    @media screen and (max-width: 768px) {
+        #shopify-section-{{ sid }} {
+            {%- case layout_design -%}
+            {%- when "pokerCard" -%}
+                height: auto;
+            {%- endcase -%}
+        }
+    }
+</style>
+
+<div class="custom-image-text {{ layout_design }}" id="custom-image-text-{{ sid }}">
+  <div class="image-text-container">
+    {%- case layout_design -%}
+    {%- when "drawerCard" -%}
+        {%- for block in se_blocks -%}
+            {%- assign img = block.settings.image -%}
+            {%- assign img_mb = block.settings.image_mb | default: img -%}
+            <div class="image-text-item" style="z-index:{{ forloop.index }};--item-img:url({{ img | image_url }});--item-img-mb:url({{ img_mb | image_url }});">
+                <div class="item-left">
+                    <h2 class="item-title">{{ block.settings.title }}</h2>
+                    <div class="item-conternt">{{ block.settings.content }}</div>
+                </div>
+                <div class="item-right">
+                    <h3 class="item-tag"{%- if block.settings.tag_label != blank -%} style="opacity: 1"{%- endif -%}>
+                        {{ block.settings.tag_label }}
+                    </h3>
+                </div>
+            </div>
+        {%- endfor -%}
+    {%- when "pokerCard" -%}
+        {%- for block in se_blocks reversed -%}
+            {%- assign img = block.settings.image -%}
+            <div class="image-text-item">
+                <div class="item-left" style="transform: rotate({{ forloop.index | times: 5 }}deg);">
+                    <img class="cs-image cover" src="{{ img | image_url }}" alt="{{ img.alt }}" width="100%" height="100%" loading="lazy">
+                    <h3 class="item-tag"{%- if block.settings.tag_label != blank -%} style="opacity: 1"{%- endif -%}>
+                        {{ block.settings.tag_label }}
+                    </h3>
+                </div>
+                <div class="item-right"{% if forloop.last %} style="opacity: 1;"{% endif %}>
+                    <h2 class="item-title">{{ block.settings.title }}</h2>
+                    <div class="item-conternt">{{ block.settings.content }}</div>
+                </div>
+            </div>
+        {%- endfor -%}
+        <div class="item-top">
+            {%- for block in se_blocks -%}
+                {%- assign img_mb = block.settings.image_mb | default: block.settings.image -%}
+                <div class="item-top-img" 
+                    data-position="{{ forloop.index }}"
+                    style="z-index:{{ 10 | minus: forloop.index }};transform:rotate({{ 3 | minus: forloop.index0 | times: 5 }}deg);"
+                >
+                    <img class="cs-image cover" src="{{ img_mb | image_url }}" alt="{{ img_mb.alt }}" width="100%" height="100%" loading="lazy">
+                    <h3 class="item-tag"{%- if block.settings.tag_label != blank -%} style="opacity: 1"{%- endif -%}>
+                        {{ block.settings.tag_label }}
+                    </h3>
+                </div>
+            {%- endfor -%}
+        </div>
+        <div class="item-btn">
+            <div class="btn-prev disabled">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_45_2)">
+                        <path d="M45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45C34.9264 45 45 34.9264 45 22.5Z" fill="#784DE9"/>
+                        <path d="M26.96 17.3203L32.14 22.5003L26.96 27.6803" stroke="white" stroke-width="0.75" stroke-miterlimit="10"/>
+                        <path d="M32.1401 22.5H12.0601" stroke="white" stroke-width="0.75" stroke-miterlimit="10"/>
+                    </g>
+                    <defs><clipPath id="clip0_45_2"><rect width="45" height="45" fill="white"/></clipPath></defs>
+                </svg>
+            </div>
+            <div class="btn-next">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_45_2)">
+                        <path d="M45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45C34.9264 45 45 34.9264 45 22.5Z" fill="#784DE9"/>
+                        <path d="M26.96 17.3203L32.14 22.5003L26.96 27.6803" stroke="white" stroke-width="0.75" stroke-miterlimit="10"/>
+                        <path d="M32.1401 22.5H12.0601" stroke="white" stroke-width="0.75" stroke-miterlimit="10"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_45_2">
+                        <rect width="45" height="45" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        <div class="item-bottom">
+            {%- for block in se_blocks -%}
+                <div class="item-bottom-text {% if forloop.first %}active{% endif %}" data-position="{{ forloop.index }}">
+                    <h2 class="item-title">{{ block.settings.title }}</h2>
+                    <div class="item-conternt">{{ block.settings.content }}</div>
+                </div>
+            {%- endfor -%}
+        </div>
+    {%- endcase -%}
+  </div>
+</div>
+
+<script>
+    (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            let isMobile = $(window).width() <= 768;
+            let sectionId = "#shopify-section-{{ sid }}";
+            let domId = "custom-image-text-" + "{{ sid }}";
+            // $(`#${domId} .image-text-container`).html('');
+            let count = 0, image, image_mb, image_alt, image_mb_alt;
+
+        {%- case layout_design -%}
+        {%- when "drawerCard" -%}
+            const $itemDomList = $(`#${domId} .image-text-item`);
+            const timeline = gsap.timeline();
+            for(let i=0; i < $itemDomList.length - 1; i++){
+                if(!isMobile){
+                    timeline.fromTo($itemDomList.eq(i), {opacity: 1, scale: 1}, {opacity: 0, scale: 0.5}, ">")
+                            .fromTo($itemDomList.eq(i+1), {y: "90vh"}, {y: 0}, "<");
+                }else{
+                    timeline.fromTo($itemDomList.eq(i), {opacity: 1, scale: 1}, {opacity: 0, scale: 0.5}, ">")
+                            .fromTo($itemDomList.eq(i+1), {y: "91.47vh"}, {y: 0}, "<");
+                }
+            }
+            ScrollTrigger.create({
+                id: "drawer-card",
+                trigger: sectionId,
+                start: () => 'top+=300 top',
+                end: () => `bottom-=300 bottom`,
+                scrub: 2,
+                markers: false,
+                animation: timeline
+            });
+        {%- when "pokerCard" -%}
+            if(!isMobile){
+                const timeline = gsap.timeline({paused: true});
+                const $itemDomList = $(`#${domId} .image-text-item`);
+                for(let i = $itemDomList.length - 1; i>0; i--){
+                    timeline.to($itemDomList.eq(i).find('.item-left'), {x: '-10vw', y: '-100vh', rotationZ: -30}, ">")
+                            .to($itemDomList.eq(i).find('.item-right'), {opacity: 0}, "<")
+                            .to($itemDomList.eq(i-1).find('.item-right'), {opacity: 1}, "<");
+                }
+                ScrollTrigger.create({
+                    id: "poker-card",
+                    trigger: sectionId,
+                    start: () => "top+=300 top",
+                    end: () => "bottom-=300 bottom",
+                    scrub: 2,
+                    markers: false,
+                    animation: timeline
+                });
+            }else{
+                let $bottonDom = $(`#${domId} .item-bottom`);
+                count = $bottonDom.find('.item-bottom-text').length;
+                $bottonDom.css('height', $bottonDom.find(`.item-bottom-text[data-position="1"]`).height());
+                let activePagination = 1;
+                $(`#${domId} .btn-prev`).click(function(){
+                    if(activePagination <= 1) return;
+                    activePagination--;
+                    $(`#${domId} .item-top-img[data-position="${activePagination}"]`).removeClass('fly');
+                    $(`#${domId} .item-btn div`).removeClass('disabled');
+                    if(activePagination === count){
+                        $(`#${domId} .btn-next`).addClass('disabled');
+                    }else if(activePagination === 1){
+                        $(`#${domId} .btn-prev`).addClass('disabled');
+                    }
+                    let activeTextDom = $(`#${domId} .item-bottom-text[data-position="${activePagination}"]`);
+                    $(`#${domId} .item-bottom`).css('height', $(activeTextDom).height());
+                    $(activeTextDom).addClass('active').siblings().removeClass('active');
+                })
+                $(`#${domId} .btn-next`).click(function(){
+                    if(activePagination >= count) return;
+                    $(`#${domId} .item-top-img[data-position="${activePagination}"]`).addClass('fly');
+                    activePagination++;
+                    $(`#${domId} .item-btn div`).removeClass('disabled');
+                    if(activePagination === count){
+                        $(`#${domId} .btn-next`).addClass('disabled');
+                    }else if(activePagination === 1){
+                        $(`#${domId} .btn-prev`).addClass('disabled');
+                    }
+                    let activeTextDom = $(`#${domId} .item-bottom-text[data-position="${activePagination}"]`);
+                    $(`#${domId} .item-bottom`).css('height', $(activeTextDom).height());
+                    $(activeTextDom).addClass('active').siblings().removeClass('active');
+                })
+            }
+        {%- when "fourGrid" -%}
+            $(`#${domId} .image-text-container`).append(`
+                {%- for block in se_blocks -%}
+                    {%- if block.type == 'image_text_item' -%}
+                        {%- assign img = block.settings.image -%}
+                        {%- if block.settings.content_position == 'right' -%}
+                            <div class="item-col item-img-col">
+                                <img style="opacity: 0;" width="100%" height="auto" alt="{{ img.alt }}" src="{{ img | image_url }}">
+                            </div>
+                        {%- endif -%}
+                        <div class="item-col item-title-col">
+                            <h2 class="item-title">{{ block.settings.title }}</h2>
+                            <h3 class="item-tag" {%- if block.settings.tag_label != blank -%} style="opacity: 1"{%- endif -%}>
+                                {{ block.settings.tag_label }}
+                            </h3>
+                        </div>
+                        <div class="item-col item-img-col">
+                            <img width="100%" height="auto" alt="{{ img.alt }}" src="{{ img | image_url }}">
+                        </div>
+                        <div class="item-col item-content-col">
+                            <div class="item-conternt">{{ block.settings.content }}</div>
+                        </div>
+                        {%- if block.settings.content_position == 'left' -%}
+                            <div class="item-col item-img-col">
+                                <img style="opacity: 0;" width="100%" height="auto" alt="{{ img.alt }}" src="{{ img | image_url }}">
+                            </div>
+                        {%- endif -%}
+                        {%- if forloop.last == false -%}
+                            ${isMobile 
+                                ? '{% for i in (1..2) %}<div class="item-col"></div>{% endfor %}' 
+                                : '{% for i in (1..4) %}<div class="item-col"></div>{% endfor %}'}
+                        {%- endif -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            `);
+        {%- when "threeGrid" -%}
+            if(!isMobile){
+                $(`#${domId} .image-text-container`).append(`
+                    {%- for block in se_blocks -%}
+                        {%- if block.type == 'image_text_item' -%}
+                            {%- liquid 
+                                assign img = block.settings.image
+                                assign title = block.settings.title
+                                assign content = block.settings.content
+                                assign tag_label = block.settings.tag_label
+                            -%}
+                            {%- case block.settings.content_position -%}
+                            {%- when "left" -%}
+                                <div class="item-col item-img-col">
+                                    <img width="100%" height="auto" alt="{{ img.alt }}" src="{{ img| image_url }}">
+                                </div>
+                                <div class="item-col item-title-col">
+                                    <h2 class="item-title">{{ title }}</h2>
+                                    <h3 class="item-tag"{% if tag_label != blank %} style="opacity: 1"{% endif %}>
+                                        {{- tag_label -}}
+                                    </h3>
+                                </div>
+                                <div class="item-col item-content-col">
+                                    <div class="item-conternt">{{ content }}</div>
+                                </div>
+                            {%- when "center" -%}
+                                <div class="item-col item-title-col">
+                                    <h2 class="item-title">{{ title }}</h2>
+                                    <h3 class="item-tag"{% if tag_label != blank %} style="opacity: 1"{% endif %}>
+                                        {{- tag_label -}}
+                                    </h3>
+                                </div>
+                                <div class="item-col item-img-col">
+                                    <img width="100%" height="auto" alt="{{ img.alt }}" src="{{ img | image_url }}">
+                                </div>
+                                <div class="item-col item-content-col">
+                                    <div class="item-conternt">{{ content }}</div>
+                                </div>
+                            {%- when "right" -%}
+                                <div class="item-col item-content-col">
+                                    <div class="item-conternt">{{ content }}</div>
+                                </div>
+                                <div class="item-col item-title-col">
+                                    <h2 class="item-title">{{ title }}</h2>
+                                    <h3 class="item-tag"{% if tag_label != blank %} style="opacity: 1"{% endif %}>
+                                        {{- tag_label -}}
+                                    </h3>
+                                </div>
+                                <div class="item-col item-img-col">
+                                    <img width="100%" height="auto" alt="{{ img.alt }}" src="{{ img | image_url }}">
+                                </div>
+                            {%- endcase -%}
+                            {%- unless forloop.last -%}
+                                {%- for i in (1..3) -%}<div class="item-col"></div>{%- endfor -%}
+                            {%- endunless -%}
+                        {%- endif -%}
+                    {%- endfor -%}
+                `);
+            }else{
+                $(`#${domId} .image-text-container`).append(`
+                    <div class="swiper image-text-swiper">
+                        <div class="swiper-wrapper">
+                            {%- for block in se_blocks -%}
+                                {%- if block.type == 'image_text_item' -%}
+                                    {%- assign img_mb = block.settings.image_mb | default: block.settings.image -%}
+                                    <div class="swiper-slide image-text-item">
+                                        <div class="img-item">
+                                            <img width="100%" height="auto" alt="{{ img_mb.alt }}" src="{{ img_mb | image_url }}">
+                                            <h3 class="item-tag"{% if block.settings.tag_label != blank %} style="opacity: 1"{% endif %}>
+                                                {{- block.settings.tag_label -}}
+                                            </h3>
+                                        </div>
+                                        <div class="text-item">
+                                            <h2 class="item-title">{{ block.settings.title }}</h2>
+                                            <div class="item-conternt">{{ block.settings.content }}</div>
+                                        </div>
+                                    </div>
+                                {%- endif -%}
+                            {%- endfor -%}
+                        </div>
+                        <div class="swiper-button-next">         
+                            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_2)">
+                                    <path d="M45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45C34.9264 45 45 34.9264 45 22.5Z" fill="#784DE9"/>
+                                    <path d="M26.96 17.3203L32.14 22.5003L26.96 27.6803" stroke="white" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    <path d="M32.1401 22.5H12.0601" stroke="white" stroke-width="0.75" stroke-miterlimit="10"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_45_2">
+                                    <rect width="45" height="45" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_2)">
+                                    <path d="M45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45C34.9264 45 45 34.9264 45 22.5Z" fill="#784DE9"/>
+                                    <path d="M26.96 17.3203L32.14 22.5003L26.96 27.6803" stroke="white" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    <path d="M32.1401 22.5H12.0601" stroke="white" stroke-width="0.75" stroke-miterlimit="10"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_45_2">
+                                    <rect width="45" height="45" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                `);
+                let mySwiper = new Swiper (`#${domId} .image-text-swiper`, {
+                    spaceBetween: $(window).width() * 0.04,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }
+                })
+              let maxItemHeight = 0;
+              $(`#${domId} .text-item`).each(function(){
+                if($(this).outerHeight() > maxItemHeight) maxItemHeight = $(this).outerHeight();
+              })
+              $(`#${domId} .swiper-button-next`).css('bottom', maxItemHeight - 65);
+              $(`#${domId} .swiper-button-prev`).css('bottom', maxItemHeight - 65);
+            }
+        {%- endcase -%}
+        })
+    })()
+</script>
+
+{% schema %}
+{
+    "name": "Custom Image Text",
+    "settings": [
+        {
+            "type": "select",
+            "id": "layout_design",
+            "label": "Layout Design",
+            "default": "drawerCard",
+            "options": [
+                {"label": "Drawer Card", "value": "drawerCard"},
+                {"label": "Poker Card", "value": "pokerCard"},
+                {"label": "Four Grid", "value": "fourGrid"},
+                {"label": "Three Grid", "value": "threeGrid"}
+            ]
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image_text_item",
+            "name": "Image Text Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "content",
+                    "label": "Content"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_mb",
+                    "label": "Image On Mobile"
+                },
+                {
+                    "type": "text",
+                    "id": "tag_label",
+                    "label": "Tag Label"
+                },
+                {
+                    "type": "header",
+                    "content": "+ Grid Design Setting"
+                },
+                {
+                    "type": "select",
+                    "id": "content_position",
+                    "label": "Content Position",
+                    "default": "left",
+                    "options": [
+                        {"label": "Left", "value": "left"},
+                        {"label": "Center", "value": "center"},
+                        {"label": "Right", "value": "right"}
+                    ]
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Image Text"
+        }
+    ]
+}
+{% endschema %}
+
+<style></style>

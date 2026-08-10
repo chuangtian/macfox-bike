@@ -1,0 +1,116 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div class="cs-home-info-wrapper">
+  {% for block in se_blocks %}
+    {% if block.settings.image != blank %}
+      <a
+        class="cs-home-info-card group"
+        href="{{ block.settings.go_link }}"
+      >
+        <div class="cs-home-info-content">
+          <h3 style="color: {{ block.settings.txt_color }};">
+            {{ block.settings.title }}
+          </h3>
+          <div class="cs-home-info-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+              <g clip-path="url(#clip0_3650_43)">
+              <path d="M34.4 40H5.6C2.5 40 0 37.5 0 34.4V5.6C0 2.5 2.5 0 5.6 0H34.3C37.5 0 40 2.5 40 5.6V34.3C40 37.5 37.5 40 34.4 40Z" fill="#F2CB04"/>
+              <path d="M21 12.8984L28.1 19.9984L21 27.0984" stroke="black" stroke-width="2.8571" stroke-miterlimit="10"/>
+              <path d="M28.1984 19.8984H9.89844" stroke="black" stroke-width="2.8571" stroke-miterlimit="10"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_3650_43">
+              <rect width="40" height="40" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <picture>
+          <source
+            srcset="{{ block.settings.image | image_url: width: 180 }} 400w, {{ block.settings.image | image_url: width: 264 }} 600w, {{ block.settings.image | image_url: width: 348 }} 768w, "
+            media="(max-width: 768px)"
+          >
+          <source
+            srcset="{{ block.settings.image | image_url: width: 450 }} 900w, {{ block.settings.image | image_url: width: 600 }} 1200w, {{ block.settings.image | image_url: width: 800 }} 1600w, {{ block.settings.image | image_url: width: 960 }} 1920w"
+            media="(min-width: 769px)"
+          >
+          <img
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            src="{{ block.settings.image | image_url: width: 920  }}"
+            alt="{{ block.settings.image_alt }}"
+          >
+        </picture>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<style>
+  .cs-home-info-section{
+    background-color: {{ se_stts.bg_color }};
+    padding: 0 20px;
+  }
+</style>
+{% schema %}
+{
+  "name": "Info",
+  "tag": "section",
+  "class": "cs-home-info-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "内容区块",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "图片描述",
+          "default": "img_alt"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "title"
+        },
+        {
+          "type": "url",
+          "id": "go_link",
+          "label": "跳转链接"
+        },
+        {
+          "type": "color",
+          "id": "txt_color",
+          "label": "标题颜色",
+          "default": "#fff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Info",
+      "category": "Custom Home"
+    }
+  ]
+}
+{% endschema %}

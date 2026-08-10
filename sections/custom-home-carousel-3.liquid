@@ -1,0 +1,272 @@
+{% liquid
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<div
+  id="cs-home-carousel-3"
+  class="cs-home-carousel-3-section"
+>
+  <div class="home-carousel-3-curtain" style="background-color: {{ se_stts.bg_color }};"></div>
+  <h2>
+    {{ se_stts.topic }}
+  </h2>
+  <!-- 轮播容器 -->
+  <div class="cs-home-carousel-3-view w-full overflow-visible">
+    <div class="cs-home-carousel-3-wrapper">
+      {% for block in se_blocks %}
+        <a
+          class="cs-home-carousel-3-box"
+          href="{{ block.settings.link }}"
+        >
+          <div class="relative !pt-5 flex flex-col items-start justify-end">
+            <h3 class="absolute top-0 left-0 !text-[#f2cb04] !text-[25px] md:!text-6xl !font-extrabold !italic">
+              {{ block.settings.product_name }}
+            </h3>
+            <img
+              class="carousel-3-product-img relative z-10"
+              src="{{ block.settings.product_image | image_url }}"
+              alt="{{ block.settings.product_name }}"
+              width="{{ block.settings.product_image.width }}"
+              height="{{ block.settings.product_image.height }}"
+            >
+          </div>
+
+          {% assign carousel3_link = block.settings.link %}
+          {% assign carousel3_handle = carousel3_link | split: '/products/' | last | split: '?' | first %}
+          {% assign carousel3_product = all_products[carousel3_handle] %}
+          {% if carousel3_product != blank and carousel3_product.options_by_name.color != null %}
+            <div class="carousel-3-colors" data-block-id="{{ block.id }}">
+              {% for color in carousel3_product.options_by_name.color.values %}
+                {% assign color_key = color | replace: ' ', '_' | downcase %}
+                {% assign color_value = carousel3_product.metafields.custom.colors.value | map: color_key | first %}
+                {% assign option = 'option' | append: carousel3_product.options_by_name.color.position %}
+                {% assign current_variant = carousel3_product.variants | where: option, color | first %}
+                <div
+                  class="carousel-3-color-item {% if forloop.first %}active{% endif %}"
+                  data-img="{{ current_variant.featured_image.src | image_url }}"
+                  data-alt="{{ current_variant.featured_image.alt | default: carousel3_product.title }}"
+                  title="{{ color }}"
+                >
+                  <div style="background-color: {{ color_value }};"></div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <div
+            class="params-container flex items-center justify-center"
+            data-parameter="{{ block.settings.parameter | escape }}"
+          ></div>
+
+          {% if se_stts.show_ul %}
+            <div class="ul-icon">
+              <img
+                class="w-full! h-auto!"
+                src="https://macfoxbike.com/cdn/shop/files/1_965d3f60-75cf-439d-9631-c8c9e5988b8d.png?v=1764828110"
+                alt="UL Certification"
+                width="200"
+                height="241"
+              >
+            </div>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="xl:hidden flex justify-between items-center !mt-10">
+    <div class=" flex items-center gap-x-[30px]">
+      <div class="cs-home-carousel-3-prev size-[45px] md:size-15 transition-all duration-300 ease-in-out opacity-50 cursor-not-allowed">
+        {{ se_stts.arrow_left_icon }}
+      </div>
+      <div class="cs-home-carousel-3-next size-[45px] md:size-15 transition-all duration-300 ease-in-out opacity-100 cursor-pointer">
+        {{ se_stts.arrow_right_icon }}
+      </div>
+    </div>
+
+    <div class="cs-home-carousel-3-thumb flex items-center gap-x-2">
+      {% for block in se_blocks %}
+        <div class="cs-home-carousel-3-thumb-item w-[28px] h-[4px] bg-[#6a6a6a] rounded-lg"></div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script type="module" src="{{ "custom-home-carousel-3.min.js"| asset_url }}"></script>
+<style>
+  #shopify-section-{{ section.id }} {
+    background-color: {{ se_stts.bg_color}};
+    height: auto;
+    overflow: visible;
+  }
+
+  @media (max-width: 767px) {
+    .cs-home-carousel-3-section {
+      overflow: hidden;
+    }
+  }
+
+  /* 移动端拖拽相关样式 */
+  .cs-home-carousel-3-wrapper {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .cs-home-carousel-3-wrapper.dragging {
+    cursor: grabbing !important;
+  }
+
+  .cs-home-carousel-3-wrapper.dragging * {
+    pointer-events: none;
+  }
+
+  /* 颜色选项样式 */
+  .carousel-3-colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 0 10px 0;
+  }
+
+  .carousel-3-color-item {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 2px;
+    transition: border-color 0.2s ease;
+  }
+
+  .carousel-3-color-item.active {
+    border-color: #784de9;
+  }
+
+  .carousel-3-color-item > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-3-color-item {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .carousel-3-color-item > div {
+      border-radius: 6px;
+    }
+  }
+
+  /* 指示器样式 */
+  .cs-home-carousel-3-thumb-item {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .cs-home-carousel-3-thumb-item:hover {
+    background-color: #f2cb04 !important;
+  }
+
+  /* 按钮状态样式 */
+  .cs-home-carousel-3-prev,
+  .cs-home-carousel-3-next {
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+  }
+
+  .cs-home-carousel-3-prev.active,
+  .cs-home-carousel-3-next.active {
+    opacity: 1 !important;
+    cursor: pointer !important;
+  }
+
+  .cs-home-carousel-3-prev.disabled,
+  .cs-home-carousel-3-next.disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+  }
+
+  .cs-home-carousel-3-prev:hover:not(.disabled),
+  .cs-home-carousel-3-next:hover:not(.disabled) {
+    opacity: 1 !important;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "All Products List",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "topic",
+      "label": "主题",
+      "default": "The Most Popular Products"
+    },
+    {
+      "type": "html",
+      "id": "arrow_left_icon",
+      "label": "左箭头"
+    },
+    {
+      "type": "html",
+      "id": "arrow_right_icon",
+      "label": "右箭头"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_ul",
+      "label": "UL认证展示",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "内容区块",
+      "settings": [
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "产品名称",
+          "default": "product name"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "产品图片"
+        },
+        {
+          "type": "textarea",
+          "id": "parameter",
+          "label": "参数",
+          "default": "[{\"key\":\"Peak Power\",\"value\":\"750W\"},{\"key\":\"Max Range\",\"value\":\"76 MILES\"},{\"key\":\"TopSpeed\",\"value\":\"25 MPH\"}]"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "产品链接"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "All Products List (Carousel)",
+      "category": "Custom Home"
+    }
+  ]
+}
+{% endschema %}
